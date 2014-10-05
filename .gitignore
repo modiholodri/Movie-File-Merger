@@ -35,6 +35,15 @@ Icon
 .Spotlight-V100
 .Trashes
 
+# Temp Files
+.csv
+.slv
+
+# Compile Directories
+bin
+obj
+Images
+
 # Directories potentially created on remote AFP share
 .AppleDB
 .AppleDesktop
