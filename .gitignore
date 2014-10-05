@@ -38,6 +38,7 @@ Icon
 # Temp Files
 .csv
 .slv
+~$
 
 # Compile Directories
 bin
