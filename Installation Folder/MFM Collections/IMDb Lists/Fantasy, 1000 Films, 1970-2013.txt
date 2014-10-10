@@ -1,0 +1,1021 @@
+Title	Genres	Year	Directors	IMDb Rating	Runtime (mins)	URL
+Evil Dead II	comedy, fantasy, horror	1987	Sam Raimi	7.8	84	http://www.imdb.com/title/tt0092991/
+Hancock	action, fantasy	2008	Peter Berg	6.5	92	http://www.imdb.com/title/tt0448157/
+Man of Steel	action, adventure, fantasy, sci_fi	2013	Zack Snyder		143	http://www.imdb.com/title/tt0770828/
+Star Wars	action, adventure, fantasy, sci_fi	1977	George Lucas	8.8	121	http://www.imdb.com/title/tt0076759/
+Toy Story	animation, adventure, comedy, family, fantasy	1995	John Lasseter	8.3	81	http://www.imdb.com/title/tt0114709/
+Star Wars: Episode I - The Phantom Menace	action, adventure, fantasy, sci_fi	1999	George Lucas	6.5	136	http://www.imdb.com/title/tt0120915/
+Harry Potter and the Sorcerer's Stone	adventure, family, fantasy	2001	Chris Columbus	7.3	152	http://www.imdb.com/title/tt0241527/
+The Lord of the Rings: The Fellowship of the Ring	action, adventure, fantasy	2001	Peter Jackson	8.8	178	http://www.imdb.com/title/tt0120737/
+The Lord of the Rings: The Two Towers	action, adventure, fantasy	2002	Peter Jackson	8.7	179	http://www.imdb.com/title/tt0167261/
+The Lord of the Rings: The Return of the King	action, adventure, fantasy	2003	Peter Jackson	8.9	201	http://www.imdb.com/title/tt0167260/
+Star Wars: Episode III - Revenge of the Sith	action, adventure, fantasy, sci_fi	2005	George Lucas	7.7	140	http://www.imdb.com/title/tt0121766/
+V for Vendetta	action, fantasy, sci_fi, thriller	2005	James McTeigue	8.2	132	http://www.imdb.com/title/tt0434409/
+300	action, fantasy, history, war	2006	Zack Snyder	7.7	117	http://www.imdb.com/title/tt0416449/
+Up	animation, adventure, comedy, drama, family, fantasy	2009	Pete Docter, Bob Peterson	8.3	96	http://www.imdb.com/title/tt1049413/
+Avatar	action, adventure, fantasy, sci_fi	2009	James Cameron	8	162	http://www.imdb.com/title/tt0499549/
+How to Train Your Dragon	animation, adventure, comedy, drama, family, fantasy	2010	Dean DeBlois, Chris Sanders	8.2	98	http://www.imdb.com/title/tt0892769/
+Toy Story 3	animation, adventure, comedy, family, fantasy	2010	Lee Unkrich	8.5	103	http://www.imdb.com/title/tt0435761/
+Harry Potter and the Deathly Hallows: Part 2	adventure, family, fantasy, mystery	2011	David Yates	8.1	130	http://www.imdb.com/title/tt1201607/
+Pirates of the Caribbean: On Stranger Tides	action, adventure, fantasy	2011	Rob Marshall	6.6	136	http://www.imdb.com/title/tt1298650/
+Thor	action, adventure, fantasy	2011	Kenneth Branagh	7	115	http://www.imdb.com/title/tt0800369/
+The Amazing Spider-Man	action, adventure, fantasy	2012	Marc Webb	7.1	136	http://www.imdb.com/title/tt0948470/
+Brave	animation, action, adventure, comedy, family, fantasy	2012	Mark Andrews, Brenda Chapman	7.2	93	http://www.imdb.com/title/tt1217209/
+Dark Shadows	comedy, fantasy	2012	Tim Burton	6.3	113	http://www.imdb.com/title/tt1077368/
+The Hobbit: An Unexpected Journey	adventure, fantasy	2012	Peter Jackson	8.1	169	http://www.imdb.com/title/tt0903624/
+John Carter	action, adventure, fantasy, sci_fi	2012	Andrew Stanton	6.6	132	http://www.imdb.com/title/tt0401729/
+Life of Pi	adventure, drama, fantasy	2012	Ang Lee	8.1	127	http://www.imdb.com/title/tt0454876/
+Rise of the Guardians	animation, adventure, family, fantasy	2012	Peter Ramsey	7.2	97	http://www.imdb.com/title/tt1446192/
+Snow White and the Huntsman	adventure, drama, fantasy	2012	Rupert Sanders	6.2	127	http://www.imdb.com/title/tt1735898/
+Ted	comedy, fantasy	2012	Seth MacFarlane	7.1	106	http://www.imdb.com/title/tt1637725/
+Jack the Giant Slayer	adventure, fantasy	2013	Bryan Singer	6.4	114	http://www.imdb.com/title/tt1351685/
+Oz the Great and Powerful	adventure, family, fantasy	2013	Sam Raimi	6.6	130	http://www.imdb.com/title/tt1623205/
+The Hobbit: The Desolation of Smaug	adventure, fantasy	2013	Peter Jackson			http://www.imdb.com/title/tt1170358/
+The Wolverine	action, adventure, fantasy, sci_fi	2013	James Mangold			http://www.imdb.com/title/tt1430132/
+Thor: The Dark World	action, adventure, fantasy	2013	Alan Taylor			http://www.imdb.com/title/tt1981115/
+The Amazing Spider-Man 2	action, adventure, fantasy	2014	Marc Webb			http://www.imdb.com/title/tt1872181/
+Percy Jackson: Sea of Monsters	adventure, family, fantasy	2013	Thor Freudenthal			http://www.imdb.com/title/tt1854564/
+Hansel & Gretel: Witch Hunters	action, fantasy, horror	2013	Tommy Wirkola	6.1	88	http://www.imdb.com/title/tt1428538/
+Willy Wonka & the Chocolate Factory	family, fantasy, musical	1971	Mel Stuart	7.8	100	http://www.imdb.com/title/tt0067992/
+E.T. the Extra-Terrestrial	adventure, family, fantasy, sci_fi	1982	Steven Spielberg	7.9	115	http://www.imdb.com/title/tt0083866/
+Star Wars: Episode VI - Return of the Jedi	action, adventure, fantasy, sci_fi	1983	Richard Marquand	8.4	134	http://www.imdb.com/title/tt0086190/
+Ghostbusters	comedy, family, fantasy	1984	Ivan Reitman	7.8	105	http://www.imdb.com/title/tt0087332/
+Hook	adventure, comedy, family, fantasy	1991	Steven Spielberg	6.4	144	http://www.imdb.com/title/tt0102057/
+The Green Mile	crime, drama, fantasy, mystery	1999	Frank Darabont	8.5	189	http://www.imdb.com/title/tt0120689/
+The Mummy	action, adventure, fantasy	1999	Stephen Sommers	6.9	125	http://www.imdb.com/title/tt0120616/
+Toy Story 2	animation, adventure, comedy, family, fantasy	1999	John Lasseter, Ash Brannon	7.9	92	http://www.imdb.com/title/tt0120363/
+Monsters, Inc.	animation, adventure, comedy, family, fantasy	2001	Pete Docter, David Silverman	8	92	http://www.imdb.com/title/tt0198781/
+Spider-Man	action, fantasy	2002	Sam Raimi	7.3	121	http://www.imdb.com/title/tt0145487/
+Spirited Away	animation, adventure, family, fantasy	2001	Hayao Miyazaki	8.6	125	http://www.imdb.com/title/tt0245429/
+Star Wars: Episode II - Attack of the Clones	action, adventure, fantasy, sci_fi	2002	George Lucas	6.7	142	http://www.imdb.com/title/tt0121765/
+Pirates of the Caribbean: The Curse of the Black Pearl	action, adventure, fantasy	2003	Gore Verbinski	8	143	http://www.imdb.com/title/tt0325980/
+Big Fish	adventure, drama, fantasy	2003	Tim Burton	8	125	http://www.imdb.com/title/tt0319061/
+Harry Potter and the Prisoner of Azkaban	adventure, family, fantasy, mystery	2004	Alfonso Cuarón	7.7	142	http://www.imdb.com/title/tt0304141/
+The Chronicles of Narnia: The Lion, the Witch and the Wardrobe	adventure, family, fantasy	2005	Andrew Adamson	6.9	143	http://www.imdb.com/title/tt0363771/
+Harry Potter and the Goblet of Fire	adventure, family, fantasy, mystery	2005	Mike Newell	7.5	157	http://www.imdb.com/title/tt0330373/
+Pan's Labyrinth	drama, fantasy, war	2006	Guillermo del Toro	8.3	118	http://www.imdb.com/title/tt0457430/
+Superman Returns	action, adventure, fantasy, sci_fi	2006	Bryan Singer	6.2	154	http://www.imdb.com/title/tt0348150/
+Ratatouille	animation, comedy, family, fantasy	2007	Brad Bird, Jan Pinkava	8	111	http://www.imdb.com/title/tt0382932/
+Harry Potter and the Half-Blood Prince	adventure, family, fantasy, mystery	2009	David Yates	7.4	153	http://www.imdb.com/title/tt0417741/
+Alice in Wonderland	adventure, family, fantasy	2010	Tim Burton	6.5	108	http://www.imdb.com/title/tt1014759/
+Clash of the Titans	action, adventure, fantasy	2010	Louis Leterrier	5.8	106	http://www.imdb.com/title/tt0800320/
+Harry Potter and the Deathly Hallows: Part 1	adventure, family, fantasy, mystery	2010	David Yates	7.6	146	http://www.imdb.com/title/tt0926084/
+Percy Jackson & the Olympians: The Lightning Thief	adventure, family, fantasy	2010	Chris Columbus	5.8	118	http://www.imdb.com/title/tt0814255/
+I Am Number Four	drama, romance, sci_fi, thriller	2011	D.J. Caruso	6.1	109	http://www.imdb.com/title/tt1464540/
+Sucker Punch	action, fantasy, thriller	2011	Zack Snyder	6	110	http://www.imdb.com/title/tt0978764/
+Immortals	action, drama, fantasy	2011	Tarsem Singh Dhandwar	6	110	http://www.imdb.com/title/tt1253864/
+Abraham Lincoln: Vampire Hunter	action, fantasy, horror, thriller	2012	Timur Bekmambetov	5.9	105	http://www.imdb.com/title/tt1611224/
+The Lorax	animation, comedy, family, fantasy	2012	Chris Renaud, Kyle Balda	6.3	86	http://www.imdb.com/title/tt1482459/
+The Odd Life of Timothy Green	comedy, drama, fantasy	2012	Peter Hedges	6.4	105	http://www.imdb.com/title/tt1462769/
+ParaNorman	animation, adventure, comedy, family, fantasy	2012	Chris Butler, Sam Fell	7	92	http://www.imdb.com/title/tt1623288/
+Wrath of the Titans	action, adventure, fantasy	2012	Jonathan Liebesman	5.8	99	http://www.imdb.com/title/tt1646987/
+Monsters University	animation, adventure, comedy, family, fantasy	2013	Dan Scanlon	7.8	110	http://www.imdb.com/title/tt1453405/
+Beasts of the Southern Wild	drama, fantasy	2012	Benh Zeitlin	7.3	93	http://www.imdb.com/title/tt2125435/
+John Dies at the End	comedy, fantasy, horror, sci_fi	2012	Don Coscarelli	6.4	99	http://www.imdb.com/title/tt1783732/
+Noah	drama, fantasy	2014	Darren Aronofsky			http://www.imdb.com/title/tt1959490/
+Teenage Mutant Ninja Turtles	animation, action, adventure, comedy, fantasy, sci_fi	2014	Jonathan Liebesman			http://www.imdb.com/title/tt1291150/
+Epic	animation, adventure, family, fantasy	2013	Chris Wedge	6.8	102	http://www.imdb.com/title/tt0848537/
+Who Framed Roger Rabbit	animation, comedy, crime, family, fantasy	1988	Robert Zemeckis	7.7	104	http://www.imdb.com/title/tt0096438/
+The Addams Family	comedy, fantasy	1991	Barry Sonnenfeld	6.7	99	http://www.imdb.com/title/tt0101272/
+Army of Darkness	comedy, fantasy, horror	1992	Sam Raimi	7.6	81	http://www.imdb.com/title/tt0106308/
+The Crow	action, fantasy	1994	Alex Proyas	7.6	102	http://www.imdb.com/title/tt0109506/
+Liar Liar	comedy	1997	Tom Shadyac	6.7	86	http://www.imdb.com/title/tt0119528/
+Jurassic Park III	action, adventure, fantasy, sci_fi, thriller	2001	Joe Johnston	5.8	92	http://www.imdb.com/title/tt0163025/
+Shrek	animation, adventure, comedy, family, fantasy	2001	Andrew Adamson, Vicky Jenson	7.9	90	http://www.imdb.com/title/tt0126029/
+Harry Potter and the Chamber of Secrets	adventure, family, fantasy, mystery	2002	Chris Columbus	7.2	161	http://www.imdb.com/title/tt0295297/
+Underworld	action, fantasy, thriller	2003	Len Wiseman	6.9	121	http://www.imdb.com/title/tt0320691/
+Spider-Man 2	action, adventure, fantasy	2004	Sam Raimi	7.4	127	http://www.imdb.com/title/tt0316654/
+Van Helsing	action, adventure, fantasy, mystery, thriller	2004	Stephen Sommers	5.8	131	http://www.imdb.com/title/tt0338526/
+Charlie and the Chocolate Factory	adventure, comedy, family, fantasy	2005	Tim Burton	6.8	115	http://www.imdb.com/title/tt0367594/
+Fantastic Four	action, adventure, fantasy, sci_fi	2005	Tim Story	5.7	106	http://www.imdb.com/title/tt0120667/
+Pirates of the Caribbean: Dead Man's Chest	action, adventure, fantasy	2006	Gore Verbinski	7.3	151	http://www.imdb.com/title/tt0383574/
+Harry Potter and the Order of the Phoenix	adventure, family, fantasy, mystery	2007	David Yates	7.4	138	http://www.imdb.com/title/tt0373889/
+Pirates of the Caribbean: At World's End	action, adventure, fantasy	2007	Gore Verbinski	7	169	http://www.imdb.com/title/tt0449088/
+Spider-Man 3	action, adventure, fantasy	2007	Sam Raimi	6.3	139	http://www.imdb.com/title/tt0413300/
+The Lovely Bones	drama, fantasy	2009	Peter Jackson	6.6	135	http://www.imdb.com/title/tt0380510/
+The Last Airbender	action, adventure, family, fantasy	2010	M. Night Shyamalan	4.4	103	http://www.imdb.com/title/tt0938283/
+Shrek Forever After	animation, adventure, comedy, family, fantasy	2010	Mike Mitchell	6.4	93	http://www.imdb.com/title/tt0892791/
+Drive Angry	action, crime, fantasy, thriller	2011	Patrick Lussier	5.5	104	http://www.imdb.com/title/tt1502404/
+Red Riding Hood	fantasy, horror, mystery, thriller	2011	Catherine Hardwicke	5.2	100	http://www.imdb.com/title/tt1486185/
+Your Highness	adventure, comedy, fantasy	2011	David Gordon Green	5.5	102	http://www.imdb.com/title/tt1240982/
+Conan the Barbarian	action, adventure, fantasy	2011	Marcus Nispel	5.1	113	http://www.imdb.com/title/tt0816462/
+Journey 2: The Mysterious Island	action, adventure, comedy, family, fantasy, sci_fi	2012	Brad Peyton	5.7	94	http://www.imdb.com/title/tt1397514/
+Mirror Mirror	adventure, comedy, drama, family, fantasy	2012	Tarsem Singh Dhandwar	5.5	106	http://www.imdb.com/title/tt1667353/
+Underworld: Awakening	action, fantasy, horror	2012	Mårlind, Stein	6.3	88	http://www.imdb.com/title/tt1496025/
+The Tree of Life	drama, fantasy	2011	Terrence Malick	6.8	139	http://www.imdb.com/title/tt0478304/
+Monty Python and the Holy Grail	adventure, comedy, fantasy	1975	Terry Gilliam, Terry Jones	8.4	91	http://www.imdb.com/title/tt0071853/
+The NeverEnding Story	adventure, drama, family, fantasy	1984	Wolfgang Petersen	7.4	102	http://www.imdb.com/title/tt0088323/
+Beetlejuice	comedy, fantasy	1988	Tim Burton	7.4	92	http://www.imdb.com/title/tt0094721/
+Batman	action, fantasy	1989	Tim Burton	7.6	126	http://www.imdb.com/title/tt0096895/
+The Secret Garden	drama, family, fantasy	1993	Agnieszka Holland	7.1	101	http://www.imdb.com/title/tt0108071/
+Matilda	comedy, family, fantasy, sci_fi	1996	Danny DeVito	6.6	98	http://www.imdb.com/title/tt0117008/
+The Neverending Story III	adventure, family, fantasy	1994	Peter Macdonald	2.9	95	http://www.imdb.com/title/tt0110647/
+The Mummy Returns	action, adventure, fantasy	2001	Stephen Sommers	6.2	130	http://www.imdb.com/title/tt0209163/
+Lemony Snicket's A Series of Unfortunate Events	adventure, comedy, family, fantasy	2004	Brad Silberling	6.8	108	http://www.imdb.com/title/tt0339291/
+Shrek 2	animation, adventure, comedy, family, fantasy	2004	Andrew Adamson, Kelly Asbury	7.3	93	http://www.imdb.com/title/tt0298148/
+Constantine	fantasy, horror	2005	Francis Lawrence	6.8	121	http://www.imdb.com/title/tt0360486/
+Bridge to Terabithia	adventure, drama, family, fantasy	2007	Gabor Csupo	7.2	96	http://www.imdb.com/title/tt0398808/
+Evan Almighty	comedy, family, fantasy	2007	Tom Shadyac	5.4	96	http://www.imdb.com/title/tt0413099/
+Hellboy II: The Golden Army	action, adventure, fantasy, sci_fi	2008	Guillermo del Toro	7.1	120	http://www.imdb.com/title/tt0411477/
+Journey to the Center of the Earth	action, adventure, family, fantasy, sci_fi	2008	Eric Brevig	5.7	93	http://www.imdb.com/title/tt0373051/
+9	animation, action, adventure, fantasy, mystery, sci_fi, thriller	2009	Shane Acker	7	79	http://www.imdb.com/title/tt0472033/
+Cloudy with a Chance of Meatballs	animation, comedy, family, fantasy	2009	Phil Lord, Chris Miller	7	90	http://www.imdb.com/title/tt0844471/
+The Imaginarium of Doctor Parnassus	adventure, fantasy, mystery	2009	Terry Gilliam	6.9	123	http://www.imdb.com/title/tt1054606/
+The Chronicles of Narnia: The Voyage of the Dawn Treader	adventure, family, fantasy	2010	Michael Apted	6.3	113	http://www.imdb.com/title/tt0980970/
+The Sorcerer's Apprentice	action, adventure, comedy, drama, fantasy	2010	Jon Turteltaub	6.1	109	http://www.imdb.com/title/tt0963966/
+Hop	animation, comedy, family, fantasy	2011	Tim Hill	5.3	95	http://www.imdb.com/title/tt1411704/
+The Smurfs	animation, adventure, comedy, family, fantasy	2011	Raja Gosnell	5.3	103	http://www.imdb.com/title/tt0472181/
+Ghost Rider: Spirit of Vengeance	action, fantasy, thriller	2011	Neveldine, Taylor	4.4	96	http://www.imdb.com/title/tt1071875/
+Perfume: The Story of a Murderer	drama, fantasy	2006	Tom Tykwer	7.5	147	http://www.imdb.com/title/tt0396171/
+The Hobbit: There and Back Again	adventure, fantasy	2014	Peter Jackson			http://www.imdb.com/title/tt2310332/
+Big Trouble in Little China	action, adventure, comedy, fantasy	1986	John Carpenter	7.2	99	http://www.imdb.com/title/tt0090728/
+Labyrinth	adventure, family, fantasy, musical	1986	Jim Henson	7.3	101	http://www.imdb.com/title/tt0091369/
+The Nightmare Before Christmas	animation, family, fantasy, musical	1993	Henry Selick	8	76	http://www.imdb.com/title/tt0107688/
+Jumanji	adventure, family, fantasy, thriller	1995	Joe Johnston	6.6	104	http://www.imdb.com/title/tt0113497/
+Blade	action, fantasy, horror	1998	Stephen Norrington	7	120	http://www.imdb.com/title/tt0120611/
+The Emperor's New Groove	animation, adventure, comedy, family, fantasy	2000	Mark Dindal	7.2	78	http://www.imdb.com/title/tt0120917/
+Bruce Almighty	comedy, drama, fantasy	2003	Tom Shadyac	6.6	101	http://www.imdb.com/title/tt0315327/
+The League of Extraordinary Gentlemen	action, adventure, fantasy, sci_fi	2003	Stephen Norrington	5.6	110	http://www.imdb.com/title/tt0311429/
+Hellboy	action, adventure, fantasy, sci_fi	2004	Guillermo del Toro	6.8	122	http://www.imdb.com/title/tt0167190/
+Underworld: Evolution	action, fantasy, sci_fi, thriller	2006	Len Wiseman	6.7	106	http://www.imdb.com/title/tt0401855/
+Eragon	action, adventure, family, fantasy	2006	Stefen Fangmeier	5	104	http://www.imdb.com/title/tt0449010/
+Night at the Museum	action, adventure, comedy, family, fantasy	2006	Shawn Levy	6.3	108	http://www.imdb.com/title/tt0477347/
+Beowulf	animation, action, adventure, fantasy	2007	Robert Zemeckis	6.3	115	http://www.imdb.com/title/tt0442933/
+Ghost Rider	action, fantasy, thriller	2007	Mark Steven Johnson	5.2	114	http://www.imdb.com/title/tt0259324/
+Shrek the Third	animation, adventure, comedy, family, fantasy	2007	Chris Miller, Raman Hui	6	93	http://www.imdb.com/title/tt0413267/
+Horton Hears a Who!	animation, adventure, comedy, family, fantasy	2008	Jimmy Hayward, Steve Martino	6.9	86	http://www.imdb.com/title/tt0451079/
+The Chronicles of Narnia: Prince Caspian	action, adventure, family, fantasy	2008	Andrew Adamson	6.6	150	http://www.imdb.com/title/tt0499448/
+Coraline	animation, fantasy, thriller	2009	Henry Selick	7.7	100	http://www.imdb.com/title/tt0327597/
+Race to Witch Mountain	action, adventure, family, fantasy, sci_fi, thriller	2009	Andy Fickman	5.7	98	http://www.imdb.com/title/tt1075417/
+Where the Wild Things Are	adventure, drama, family, fantasy	2009	Spike Jonze	6.8	101	http://www.imdb.com/title/tt0386117/
+Legion	action, fantasy, horror	2010	Scott Stewart	5.1	100	http://www.imdb.com/title/tt1038686/
+Cirque du Soleil: Worlds Away	fantasy	2012	Andrew Adamson	6.3	91	http://www.imdb.com/title/tt1792647/
+Field of Dreams	drama, family, fantasy, sport	1989	Phil Alden Robinson	7.5	107	http://www.imdb.com/title/tt0097351/
+Batman Returns	action, fantasy	1992	Tim Burton	7	126	http://www.imdb.com/title/tt0103776/
+The Mask	action, comedy, crime, family, fantasy, romance	1994	Charles Russell	6.8	101	http://www.imdb.com/title/tt0110475/
+Batman Forever	action, adventure, fantasy	1995	Joel Schumacher	5.4	121	http://www.imdb.com/title/tt0112462/
+Mortal Kombat	action, adventure, fantasy, sci_fi, thriller	1995	Paul Anderson	5.6	101	http://www.imdb.com/title/tt0113855/
+Batman & Robin	action, crime, fantasy	1997	Joel Schumacher	3.6	125	http://www.imdb.com/title/tt0118688/
+Practical Magic	comedy, fantasy, romance	1998	Griffin Dunne	5.8	104	http://www.imdb.com/title/tt0120791/
+Dogma	adventure, comedy, fantasy	1999	Kevin Smith	7.3	130	http://www.imdb.com/title/tt0120655/
+The Haunting	fantasy, horror, mystery, thriller	1999	Jan de Bont	4.7	113	http://www.imdb.com/title/tt0171363/
+How the Grinch Stole Christmas	comedy, family, fantasy	2000	Ron Howard	5.8	104	http://www.imdb.com/title/tt0170016/
+Lara Croft: Tomb Raider	action, adventure, fantasy, thriller	2001	Simon West	5.6	100	http://www.imdb.com/title/tt0146316/
+The Hot Chick	comedy, fantasy	2002	Tom Brady	5.3	104	http://www.imdb.com/title/tt0302640/
+Daredevil	action, crime, fantasy, sci_fi, thriller	2003	Mark Steven Johnson	5.4	103	http://www.imdb.com/title/tt0287978/
+Blade: Trinity	action, adventure, fantasy, horror, sci_fi, thriller	2004	David S. Goyer	5.8	113	http://www.imdb.com/title/tt0359013/
+The Polar Express	animation, adventure, family, fantasy	2004	Robert Zemeckis	6.5	100	http://www.imdb.com/title/tt0338348/
+Corpse Bride	animation, fantasy, musical, romance	2005	Tim Burton, Mike Johnson	7.4	77	http://www.imdb.com/title/tt0121164/
+Ice Age: The Meltdown	animation, action, adventure, comedy, family, fantasy, romance, sci_fi	2006	Carlos Saldanha	6.8	91	http://www.imdb.com/title/tt0438097/
+The Golden Compass	adventure, family, fantasy, sci_fi	2007	Chris Weitz	6.1	113	http://www.imdb.com/title/tt0385752/
+The Mummy: Tomb of the Dragon Emperor	action, adventure, fantasy, thriller	2008	Rob Cohen	5.2	112	http://www.imdb.com/title/tt0859163/
+Nim's Island	adventure, comedy, family, fantasy	2008	Jennifer Flackett, Mark Levin	6	96	http://www.imdb.com/title/tt0410377/
+Star Wars: The Clone Wars	animation, action, adventure, fantasy, sci_fi, thriller	2008	Dave Filoni	5.6	98	http://www.imdb.com/title/tt1185834/
+G-Force	action, adventure, comedy, family, fantasy	2009	Hoyt H. Yeatman Jr.	5	88	http://www.imdb.com/title/tt0436339/
+Ghosts of Girlfriends Past	comedy, fantasy, romance	2009	Mark Waters	5.7	100	http://www.imdb.com/title/tt0821640/
+Inkheart	adventure, family, fantasy	2008	Iain Softley	6	106	http://www.imdb.com/title/tt0494238/
+Night at the Museum: Battle of the Smithsonian	action, adventure, comedy, family, fantasy	2009	Shawn Levy	5.8	105	http://www.imdb.com/title/tt1078912/
+Underworld: Rise of the Lycans	action, adventure, fantasy, sci_fi, thriller	2009	Patrick Tatopoulos	6.5	92	http://www.imdb.com/title/tt0834001/
+The Invention of Lying	comedy, fantasy, romance	2009	Ricky Gervais, Matthew Robinson	6.4	100	http://www.imdb.com/title/tt1058017/
+Gulliver's Travels	adventure, comedy, family, fantasy	2010	Rob Letterman	4.8	85	http://www.imdb.com/title/tt1320261/
+Hereafter	drama, fantasy	2010	Clint Eastwood	6.5	129	http://www.imdb.com/title/tt1212419/
+Legend of the Guardians: The Owls of Ga'Hoole	animation, adventure, fantasy	2010	Zack Snyder	6.9	97	http://www.imdb.com/title/tt1219342/
+The Secret World of Arrietty	animation, adventure, family, fantasy	2010	Hiromasa Yonebayashi	7.6	94	http://www.imdb.com/title/tt1568921/
+Valhalla Rising	action, adventure, drama, fantasy	2009	Nicolas Winding Refn	5.9	93	http://www.imdb.com/title/tt0862467/
+Maleficent	fantasy	2014	Robert Stromberg			http://www.imdb.com/title/tt1587310/
+Highlander	action, adventure, fantasy	1986	Russell Mulcahy	7.2	116	http://www.imdb.com/title/tt0091203/
+Being John Malkovich	comedy, drama, fantasy, sci_fi	1999	Spike Jonze	7.8	112	http://www.imdb.com/title/tt0120601/
+Crouching Tiger, Hidden Dragon	action, adventure, drama, fantasy, romance	2000	Ang Lee	7.9	120	http://www.imdb.com/title/tt0190332/
+Freaky Friday	comedy, family, fantasy	2003	Mark Waters	6.1	97	http://www.imdb.com/title/tt0322330/
+Elektra	action, crime, fantasy, thriller	2005	Rob Bowman	4.8	97	http://www.imdb.com/title/tt0357277/
+The Covenant	action, fantasy, horror, thriller	2006	Renny Harlin	5	97	http://www.imdb.com/title/tt0475944/
+Arthur and the Invisibles	animation, adventure, family, fantasy	2006	Luc Besson	5.9	94	http://www.imdb.com/title/tt0344854/
+Fantastic 4: Rise of the Silver Surfer	action, fantasy, sci_fi, thriller	2007	Tim Story	5.6	92	http://www.imdb.com/title/tt0486576/
+In the Name of the King: A Dungeon Siege Tale	action, adventure, drama, fantasy	2006	Uwe Boll	3.8	127	http://www.imdb.com/title/tt0460780/
+The Spiderwick Chronicles	adventure, family, fantasy	2008	Mark Waters	6.6	96	http://www.imdb.com/title/tt0416236/
+Season of the Witch	action, adventure, fantasy	2011	Dominic Sena	5.3	95	http://www.imdb.com/title/tt0479997/
+Winter's Tale	fantasy	2013	Akiva Goldsman			http://www.imdb.com/title/tt1837709/
+Secret of the Wings	animation, family, fantasy	2012	Bobs Gannaway, Peggy Holmes	6.7	75	http://www.imdb.com/title/tt1217213/
+The Fall	adventure, drama, fantasy	2006	Tarsem	7.8	117	http://www.imdb.com/title/tt0460791/
+Brazil	drama, fantasy, sci_fi	1985	Terry Gilliam	8	132	http://www.imdb.com/title/tt0088846/
+The Twilight Saga: Breaking Dawn - Part 2	adventure, drama, fantasy, romance	2012	Bill Condon	5.6	115	http://www.imdb.com/title/tt1673434/
+Twilight	drama, fantasy, romance	2008	Catherine Hardwicke	5.2	122	http://www.imdb.com/title/tt1099212/
+The Mortal Instruments: City of Bones	action, adventure, drama, fantasy, mystery, romance	2013	Harald Zwart			http://www.imdb.com/title/tt1538403/
+Tangled	animation, comedy, family, fantasy, musical, romance	2010	Nathan Greno, Byron Howard	7.8	100	http://www.imdb.com/title/tt0398286/
+The Princess Bride	adventure, comedy, family, fantasy, romance	1987	Rob Reiner	8.1	98	http://www.imdb.com/title/tt0093779/
+Scott Pilgrim vs. the World	action, comedy, fantasy, romance	2010	Edgar Wright	7.5	112	http://www.imdb.com/title/tt0446029/
+Midnight in Paris	comedy, fantasy, romance	2011	Woody Allen	7.7	94	http://www.imdb.com/title/tt1605783/
+Aladdin	animation, adventure, comedy, family, fantasy, musical, romance	1992	Ron Clements, John Musker	7.9	90	http://www.imdb.com/title/tt0103639/
+Weird Science	comedy, fantasy, romance	1985	John Hughes	6.4	94	http://www.imdb.com/title/tt0090305/
+The Twilight Saga: Breaking Dawn - Part 1	adventure, drama, fantasy, romance	2011	Bill Condon	4.8	117	http://www.imdb.com/title/tt1324999/
+Upside Down	drama, fantasy, romance, sci_fi	2012	Juan Diego Solanas	6.3	100	http://www.imdb.com/title/tt1374992/
+Beauty and the Beast	animation, family, fantasy, musical, romance	1991	Gary Trousdale, Kirk Wise	8	84	http://www.imdb.com/title/tt0101414/
+Ruby Sparks	comedy, fantasy, romance	2012	Jonathan Dayton, Valerie Faris	7.1	104	http://www.imdb.com/title/tt1839492/
+Stardust	adventure, family, fantasy, romance	2007	Matthew Vaughn	7.7	127	http://www.imdb.com/title/tt0486655/
+The Twilight Saga: New Moon	adventure, drama, fantasy, romance	2009	Chris Weitz	4.5	130	http://www.imdb.com/title/tt1259571/
+Prince of Persia: The Sands of Time	action, adventure, fantasy, romance	2010	Mike Newell	6.6	116	http://www.imdb.com/title/tt0473075/
+The Curious Case of Benjamin Button	drama, fantasy, romance	2008	David Fincher	7.8	166	http://www.imdb.com/title/tt0421715/
+The Twilight Saga: Eclipse	adventure, drama, fantasy, romance	2010	David Slade	4.8	124	http://www.imdb.com/title/tt1325004/
+17 Again	comedy, drama, fantasy, romance	2009	Burr Steers	6.3	102	http://www.imdb.com/title/tt0974661/
+Groundhog Day	comedy, drama, fantasy, romance	1993	Harold Ramis	8.1	101	http://www.imdb.com/title/tt0107048/
+The Little Mermaid	animation, family, fantasy, musical, romance	1989	Ron Clements, John Musker	7.5	83	http://www.imdb.com/title/tt0097757/
+Legend	fantasy, adventure, romance	1985	Ridley Scott	6.3	94	http://www.imdb.com/title/tt0089469/
+Enchanted	comedy, family, fantasy, musical, romance	2007	Kevin Lima	7.2	107	http://www.imdb.com/title/tt0461770/
+Click	comedy, drama, fantasy, romance	2006	Frank Coraci	6.4	107	http://www.imdb.com/title/tt0389860/
+Edward Scissorhands	drama, fantasy, romance	1990	Tim Burton	8	105	http://www.imdb.com/title/tt0099487/
+Never Let Me Go	drama, fantasy, romance, sci_fi	2010	Mark Romanek	7.1	103	http://www.imdb.com/title/tt1334260/
+Charlie St. Cloud	drama, fantasy, romance	2010	Burr Steers	6.1	99	http://www.imdb.com/title/tt1438254/
+Ghost	drama, fantasy, mystery, romance, thriller	1990	Jerry Zucker	6.9	127	http://www.imdb.com/title/tt0099653/
+Peter Pan	adventure, family, fantasy, romance	2003	P.J. Hogan	6.8	113	http://www.imdb.com/title/tt0316396/
+Hercules	animation, adventure, family, fantasy, musical, romance	1997	Ron Clements, John Musker	7	93	http://www.imdb.com/title/tt0119282/
+Elf	comedy, family, fantasy, romance	2003	Jon Favreau	6.8	97	http://www.imdb.com/title/tt0319343/
+Good Luck Chuck	comedy, drama, fantasy, romance	2007	Mark Helfrich	5.5	96	http://www.imdb.com/title/tt0452625/
+Big	comedy, drama, fantasy, romance	1988	Penny Marshall	7.2	104	http://www.imdb.com/title/tt0094737/
+The Princess and the Frog	animation, family, fantasy, musical, romance	2009	Ron Clements, John Musker	7.1	97	http://www.imdb.com/title/tt0780521/
+13 Going on 30	comedy, fantasy, romance	2004	Gary Winick	6	98	http://www.imdb.com/title/tt0337563/
+Mr. Nobody	drama, fantasy, romance, sci_fi	2009	Jaco Van Dormael	7.8	141	http://www.imdb.com/title/tt0485947/
+Willow	action, adventure, drama, fantasy, romance	1988	Ron Howard	7.1	126	http://www.imdb.com/title/tt0096446/
+The Forbidden Kingdom	action, adventure, fantasy, romance	2008	Rob Minkoff	6.6	104	http://www.imdb.com/title/tt0865556/
+Stranger Than Fiction	comedy, drama, fantasy, romance	2006	Marc Forster	7.7	113	http://www.imdb.com/title/tt0420223/
+Meet Joe Black	drama, fantasy, mystery, romance	1998	Martin Brest	7	178	http://www.imdb.com/title/tt0119643/
+Bedtime Stories	comedy, family, fantasy, romance	2008	Adam Shankman	6	99	http://www.imdb.com/title/tt0960731/
+Beastly	drama, fantasy, romance	2011	Daniel Barnz	5.3	86	http://www.imdb.com/title/tt1152398/
+The Time Traveler's Wife	drama, fantasy, romance, sci_fi	2009	Robert Schwentke	7	107	http://www.imdb.com/title/tt0452694/
+Howl's Moving Castle	animation, action, adventure, family, fantasy, romance	2004	Hayao Miyazaki	8.1	119	http://www.imdb.com/title/tt0347149/
+Shallow Hal	comedy, drama, fantasy, romance	2001	Bobby Farrelly, Peter Farrelly	5.9	114	http://www.imdb.com/title/tt0256380/
+Beautiful Creatures	drama, fantasy, romance	2013	Richard LaGravenese	6.1	124	http://www.imdb.com/title/tt1559547/
+Manborg	action, adventure, comedy, fantasy, horror, sci_fi	2011	Steven Kostanski	5.4	60	http://www.imdb.com/title/tt2060525/
+Byzantium	drama, fantasy, thriller	2012	Neil Jordan	6.9	118	http://www.imdb.com/title/tt1531901/
+Pendragon: Sword of His Father	adventure, fantasy	2008	Chad Burns	3.5		http://www.imdb.com/title/tt1347280/
+Jack the Giant Killer	action, fantasy	2013	Mark Atkins	2	87	http://www.imdb.com/title/tt2552498/
+Sofia the First: Once Upon a Princess	animation, family, fantasy, musical	2012	Jamie Mitchell	6.5	90	http://www.imdb.com/title/tt2137286/
+The Brass Teapot	comedy, fantasy, thriller	2012	Ramaa Mosley	6.2	101	http://www.imdb.com/title/tt1935902/
+Dorian Gray	drama, fantasy, thriller	2009	Oliver Parker	6.2	112	http://www.imdb.com/title/tt1235124/
+Conan the Barbarian	action, fantasy, adventure	1982	John Milius	6.8	129	http://www.imdb.com/title/tt0082198/
+Casper	comedy, family, fantasy	1995	Brad Silberling	5.8	100	http://www.imdb.com/title/tt0112642/
+What Dreams May Come	drama, fantasy, romance	1998	Vincent Ward	6.8	113	http://www.imdb.com/title/tt0120889/
+Dr. Seuss' The Cat in the Hat	adventure, comedy, family, fantasy	2003	Bo Welch	3.6	82	http://www.imdb.com/title/tt0312528/
+Monster House	animation, comedy, family, fantasy, mystery	2006	Gil Kenan	6.7	91	http://www.imdb.com/title/tt0385880/
+Alvin and the Chipmunks	animation, comedy, family, fantasy, music	2007	Tim Hill	5.2	92	http://www.imdb.com/title/tt0952640/
+10,000 BC	action, adventure, drama, fantasy, sci_fi	2008	Roland Emmerich	4.9	109	http://www.imdb.com/title/tt0443649/
+Alvin and the Chipmunks: Chipwrecked	animation, comedy, family, fantasy, music	2011	Mike Mitchell	4.1	87	http://www.imdb.com/title/tt1615918/
+Branded	drama, fantasy, mystery	2012	Jamie Bradshaw, Alexander Doulerain	4.5	106	http://www.imdb.com/title/tt1368440/
+The Many Adventures of Winnie the Pooh	animation, family, fantasy, musical	1977	John Lounsbery, Wolfgang Reitherman	7.5	74	http://www.imdb.com/title/tt0076363/
+Ghostbusters II	action, adventure, comedy, fantasy, sci_fi	1989	Ivan Reitman	6.4	108	http://www.imdb.com/title/tt0097428/
+Addams Family Values	comedy, fantasy, thriller	1993	Barry Sonnenfeld	6.4	94	http://www.imdb.com/title/tt0106220/
+Hocus Pocus	comedy, family, fantasy, horror	1993	Kenny Ortega	6.2	96	http://www.imdb.com/title/tt0107120/
+Rookie of the Year	comedy, family, fantasy, sport	1993	Daniel Stern	5.6	103	http://www.imdb.com/title/tt0107985/
+Babe	adventure, family, fantasy	1995	Chris Noonan	6.9	89	http://www.imdb.com/title/tt0112431/
+DragonHeart	action, adventure, drama, fantasy	1996	Rob Cohen	6.3	103	http://www.imdb.com/title/tt0116136/
+The 13th Warrior	action, adventure, fantasy, horror, mystery, thriller	1999	John McTiernan	6.4	102	http://www.imdb.com/title/tt0120657/
+Stuart Little	animation, adventure, comedy, family, fantasy	1999	Rob Minkoff	5.8	84	http://www.imdb.com/title/tt0164912/
+The Legend of Bagger Vance	drama, fantasy, sport	2000	Robert Redford	6.5	126	http://www.imdb.com/title/tt0146984/
+What Women Want	comedy, fantasy, romance	2000	Nancy Meyers	6.3	127	http://www.imdb.com/title/tt0207201/
+Serendipity	comedy, romance, fantasy	2001	Peter Chelsom	6.7	90	http://www.imdb.com/title/tt0240890/
+Reign of Fire	action, adventure, fantasy, sci_fi, thriller	2002	Rob Bowman	6.1	101	http://www.imdb.com/title/tt0253556/
+The Scorpion King	action, adventure, fantasy, thriller	2002	Chuck Russell	5.4	92	http://www.imdb.com/title/tt0277296/
+Kung Fu Hustle	action, comedy, crime, fantasy	2004	Stephen Chow	7.7	99	http://www.imdb.com/title/tt0373074/
+The Brothers Grimm	action, adventure, comedy, fantasy, thriller	2005	Terry Gilliam	5.9	118	http://www.imdb.com/title/tt0355295/
+Zathura: A Space Adventure	action, adventure, comedy, family, fantasy, sci_fi	2005	Jon Favreau	6.1	113	http://www.imdb.com/title/tt0406375/
+Just My Luck	comedy, fantasy, romance	2006	Donald Petrie	5.1	103	http://www.imdb.com/title/tt0397078/
+The Lake House	drama, fantasy, romance	2006	Alejandro Agresti	6.7	99	http://www.imdb.com/title/tt0410297/
+Nanny McPhee	comedy, family, fantasy	2005	Kirk Jones	6.5	97	http://www.imdb.com/title/tt0396752/
+Charlotte's Web	comedy, family, fantasy	2006	Gary Winick	6.4	97	http://www.imdb.com/title/tt0413895/
+City of Ember	adventure, family, fantasy, sci_fi	2008	Gil Kenan	6.4	90	http://www.imdb.com/title/tt0970411/
+The Spirit	action, comedy, crime, fantasy	2008	Frank Miller	4.8	103	http://www.imdb.com/title/tt0831887/
+Dragonball: Evolution	action, adventure, fantasy, sci_fi, thriller	2009	James Wong	3.1	85	http://www.imdb.com/title/tt1098327/
+Ponyo	animation, adventure, family, fantasy	2008	Hayao Miyazaki	7.7	101	http://www.imdb.com/title/tt0876563/
+A Christmas Carol	animation, comedy, drama, family, fantasy	2009	Robert Zemeckis	6.7	96	http://www.imdb.com/title/tt1067106/
+Jonah Hex	action, drama, fantasy, thriller, western	2010	Jimmy Hayward	4.6	81	http://www.imdb.com/title/tt1075747/
+The Secret Life of Walter Mitty	adventure, comedy, drama, fantasy	2013	Ben Stiller			http://www.imdb.com/title/tt0359950/
+A Little Bit of Heaven	comedy, drama, fantasy, romance	2011	Nicole Kassell	6	106	http://www.imdb.com/title/tt1440161/
+Solomon Kane	action, adventure, fantasy	2009	Michael J. Bassett	6	104	http://www.imdb.com/title/tt0970452/
+Flash Gordon	action, adventure, fantasy, sci_fi	1980	Mike Hodges	6.3	111	http://www.imdb.com/title/tt0080745/
+Stalker	adventure, drama, fantasy, mystery, sci_fi	1979	Andrei Tarkovsky	8.1	163	http://www.imdb.com/title/tt0079944/
+Pee-wee's Big Adventure	adventure, comedy, family, fantasy	1985	Tim Burton	6.8	90	http://www.imdb.com/title/tt0089791/
+The Flintstones	comedy, family, fantasy	1994	Brian Levant	4.7	91	http://www.imdb.com/title/tt0109813/
+James and the Giant Peach	animation, adventure, family, fantasy, musical	1996	Henry Selick	6.7	79	http://www.imdb.com/title/tt0116683/
+Spawn	action, fantasy, horror, thriller	1997	Mark A.Z. Dippé	5.1	96	http://www.imdb.com/title/tt0120177/
+Fallen	crime, drama, fantasy, thriller	1998	Gregory Hoblit	6.9	124	http://www.imdb.com/title/tt0119099/
+Pleasantville	comedy, drama, fantasy	1998	Gary Ross	7.5	124	http://www.imdb.com/title/tt0120789/
+Little Nicky	comedy, fantasy	2000	Steven Brill	5.1	90	http://www.imdb.com/title/tt0185431/
+Brother Bear	animation, adventure, family, fantasy	2003	Aaron Blaise, Robert Walker	6.6	85	http://www.imdb.com/title/tt0328880/
+Just Like Heaven	comedy, fantasy, romance	2005	Mark Waters	6.7	95	http://www.imdb.com/title/tt0425123/
+Aquamarine	comedy, family, fantasy, romance	2006	Elizabeth Allen	4.9	104	http://www.imdb.com/title/tt0429591/
+Premonition	drama, fantasy, mystery, sci_fi, thriller	2007	Mennan Yapo	5.7	96	http://www.imdb.com/title/tt0477071/
+Igor	animation, comedy, family, fantasy	2008	Anthony Leondis	6	87	http://www.imdb.com/title/tt0465502/
+The Tale of Despereaux	adventure, animation, comedy, family, fantasy	2008	Sam Fell, Robert Stevenhagen	6.1	93	http://www.imdb.com/title/tt0420238/
+Cirque du Freak: The Vampire's Assistant	action, adventure, fantasy, thriller	2009	Paul Weitz	5.9	109	http://www.imdb.com/title/tt0450405/
+Tooth Fairy	comedy, family, fantasy	2010	Michael Lembeck	4.9	101	http://www.imdb.com/title/tt0808510/
+The Warrior's Way	action, fantasy, western	2010	Sngmoo Lee	6.2	100	http://www.imdb.com/title/tt1032751/
+Alvin and the Chipmunks: The Squeakquel	animation, comedy, family, fantasy, music	2009	Betty Thomas	4.2	88	http://www.imdb.com/title/tt1231580/
+The Hole	adventure, fantasy, thriller	2009	Joe Dante	5.8	92	http://www.imdb.com/title/tt1085779/
+Lara Croft Tomb Raider: The Cradle of Life	action, adventure, fantasy, thriller	2003	Jan de Bont	5.3	117	http://www.imdb.com/title/tt0325703/
+Clash of the Titans	adventure, fantasy	1981	Desmond Davis	6.7	118	http://www.imdb.com/title/tt0082186/
+How to Catch a Monster	fantasy, thriller	2014	Ryan Gosling			http://www.imdb.com/title/tt2366608/
+The Dark Crystal	animation, adventure, family, fantasy	1982	Jim Henson, Frank Oz	7.1	93	http://www.imdb.com/title/tt0083791/
+Superman III	action, adventure, comedy, fantasy, sci_fi	1983	Richard Lester	4.9	125	http://www.imdb.com/title/tt0086393/
+Splash	comedy, fantasy, romance	1984	Ron Howard	6.2	111	http://www.imdb.com/title/tt0088161/
+Super Mario Bros.	action, adventure, comedy, family, fantasy, sci_fi, thriller	1993	Annabel Jankel, Rocky Morton	3.8	104	http://www.imdb.com/title/tt0108255/
+Last Action Hero	action, adventure, comedy, family, fantasy	1993	John McTiernan	6	130	http://www.imdb.com/title/tt0107362/
+The Craft	drama, fantasy, horror, thriller	1996	Andrew Fleming	6	101	http://www.imdb.com/title/tt0115963/
+Mortal Kombat: Annihilation	action, adventure, fantasy, sci_fi, thriller	1997	John R. Leonetti	3.4	95	http://www.imdb.com/title/tt0119707/
+City of Angels	drama, fantasy, romance	1998	Brad Silberling	6.5	114	http://www.imdb.com/title/tt0120632/
+Bedazzled	comedy, fantasy	2000	Harold Ramis	5.8	93	http://www.imdb.com/title/tt0230030/
+S1m0ne	comedy, drama, fantasy, sci_fi	2002	Andrew Niccol	6	117	http://www.imdb.com/title/tt0258153/
+Catwoman	action, fantasy	2004	Pitof	3.2	104	http://www.imdb.com/title/tt0327554/
+Ella Enchanted	comedy, family, fantasy, romance	2004	Tommy O'Haver	6.2	96	http://www.imdb.com/title/tt0327679/
+TMNT	animation, action, adventure, comedy, family, fantasy, sci_fi	2007	Kevin Munroe	6.3	87	http://www.imdb.com/title/tt0453556/
+Over Her Dead Body	comedy, fantasy, romance	2008	Jeff Lowell	5.1	95	http://www.imdb.com/title/tt0785007/
+Penelope	comedy, fantasy, romance	2006	Mark Palansky	6.8	104	http://www.imdb.com/title/tt0472160/
+Nanny McPhee Returns	comedy, family, fantasy	2010	Susanna White	5.9	109	http://www.imdb.com/title/tt1415283/
+Ramona and Beezus	adventure, comedy, family, fantasy	2010	Elizabeth Allen	6.5	103	http://www.imdb.com/title/tt0493949/
+It's a Boy Girl Thing	comedy, fantasy, romance	2006	Nick Hurran	6.2	95	http://www.imdb.com/title/tt0482527/
+Dead Man	drama, fantasy, western	1995	Jim Jarmusch	7.7	121	http://www.imdb.com/title/tt0112817/
+Naked Lunch	drama, fantasy	1991	David Cronenberg	6.9	115	http://www.imdb.com/title/tt0102511/
+The Rescuers	animation, adventure, crime, drama, family, fantasy, mystery	1977	John Lounsbery, Wolfgang Reitherman	6.9	78	http://www.imdb.com/title/tt0076618/
+Excalibur	adventure, drama, fantasy	1981	John Boorman	7.3	140	http://www.imdb.com/title/tt0082348/
+Conan the Destroyer	action, fantasy, adventure	1984	Richard Fleischer	5.6	103	http://www.imdb.com/title/tt0087078/
+Always	fantasy, romance, drama	1989	Steven Spielberg	6.2	122	http://www.imdb.com/title/tt0096794/
+The New Adventures of Pippi Longstocking	family, adventure, fantasy, musical	1988	Ken Annakin	5.4	100	http://www.imdb.com/title/tt0093744/
+Drop Dead Fred	comedy, drama, fantasy	1991	Ate De Jong	5.3	103	http://www.imdb.com/title/tt0101775/
+Death Becomes Her	comedy, fantasy	1992	Robert Zemeckis	6.2	104	http://www.imdb.com/title/tt0104070/
+FernGully: The Last Rainforest	animation, adventure, family, fantasy, thriller	1992	Bill Kroyer	6.2	76	http://www.imdb.com/title/tt0104254/
+The Santa Clause	comedy, drama, family, fantasy	1994	John Pasquin	6.2	97	http://www.imdb.com/title/tt0111070/
+The Prophecy	horror, thriller, fantasy, mystery	1995	Gregory Widen	6.5	98	http://www.imdb.com/title/tt0114194/
+Mystery Men	action, comedy, fantasy, sci_fi	1999	Kinka Usher	5.9	121	http://www.imdb.com/title/tt0132347/
+Final Fantasy: The Spirits Within	animation, action, adventure, fantasy, sci_fi, thriller	2001	Hironobu Sakaguchi, Motonori Sakakibara	6.4	106	http://www.imdb.com/title/tt0173840/
+Kate & Leopold	comedy, fantasy, romance	2001	James Mangold	6.2	118	http://www.imdb.com/title/tt0035423/
+Queen of the Damned	fantasy, horror, music	2002	Michael Rymer	4.9	101	http://www.imdb.com/title/tt0238546/
+Stuart Little 2	animation, adventure, comedy, family, fantasy	2002	Rob Minkoff	5.4	77	http://www.imdb.com/title/tt0243585/
+Fat Albert	comedy, family, fantasy, romance	2004	Joel Zwick	4.1	93	http://www.imdb.com/title/tt0396592/
+House of Flying Daggers	action, adventure, drama, fantasy, romance	2004	Yimou Zhang	7.5	119	http://www.imdb.com/title/tt0385004/
+The Adventures of Sharkboy and Lavagirl 3-D	action, adventure, family, fantasy	2005	Robert Rodriguez	3.4	93	http://www.imdb.com/title/tt0424774/
+Ghost Town	comedy, fantasy, romance	2008	David Koepp	6.8	102	http://www.imdb.com/title/tt0995039/
+Gabriel	action, fantasy, horror, thriller	2007	Shane Abbess	5.4	114	http://www.imdb.com/title/tt0857376/
+Heavenly Creatures	biography, crime, drama, fantasy	1994	Peter Jackson	7.5	99	http://www.imdb.com/title/tt0110005/
+Eraserhead	fantasy, horror	1977	David Lynch	7.3	85	http://www.imdb.com/title/tt0074486/
+Mannequin	comedy, fantasy, romance	1987	Michael Gottlieb	5.3	90	http://www.imdb.com/title/tt0093493/
+Masters of the Universe	action, adventure, fantasy, sci_fi, thriller	1987	Gary Goddard	5.1	106	http://www.imdb.com/title/tt0093507/
+Superman IV: The Quest for Peace	action, adventure, family, fantasy, sci_fi	1987	Sidney J. Furie	3.6	134	http://www.imdb.com/title/tt0094074/
+The Rescuers Down Under	animation, adventure, crime, drama, family, fantasy, mystery	1990	Hendel Butoy, Mike Gabriel	6.7	77	http://www.imdb.com/title/tt0100477/
+A Little Princess	drama, family, fantasy	1995	Alfonso Cuarón	7.5	97	http://www.imdb.com/title/tt0113670/
+The Gift	crime, drama, fantasy, mystery, thriller	2000	Sam Raimi	6.6	112	http://www.imdb.com/title/tt0219699/
+Black Knight	adventure, comedy, fantasy	2001	Gil Junger	4.4	95	http://www.imdb.com/title/tt0265087/
+Scooby Doo 2: Monsters Unleashed	action, adventure, comedy, family, fantasy, mystery	2004	Raja Gosnell	4.7	93	http://www.imdb.com/title/tt0331632/
+Lady in the Water	fantasy, mystery, thriller	2006	M. Night Shyamalan	5.6	110	http://www.imdb.com/title/tt0452637/
+The Invisible	crime, drama, fantasy, mystery, thriller	2007	David S. Goyer	6.1	102	http://www.imdb.com/title/tt0435670/
+The Last Legion	action, adventure, fantasy, war	2007	Doug Lefler	5.4	102	http://www.imdb.com/title/tt0462396/
+The Water Horse	adventure, family, fantasy	2007	Jay Russell	6.5	112	http://www.imdb.com/title/tt0760329/
+Aliens in the Attic	adventure, comedy, family, fantasy, sci_fi	2009	John Schultz	5.3	86	http://www.imdb.com/title/tt0775552/
+Street Fighter: The Legend of Chun-Li	action, crime, fantasy, thriller	2009	Andrzej Bartkowiak	3.7	96	http://www.imdb.com/title/tt0891592/
+The Tempest	comedy, drama, fantasy, romance	2010	Julie Taymor	5.2	110	http://www.imdb.com/title/tt1274300/
+Tinker Bell and the Lost Treasure	animation, adventure, family, fantasy	2009	Klay Hall	6.4	81	http://www.imdb.com/title/tt1216516/
+Wristcutters: A Love Story	comedy, drama, fantasy, romance	2006	Goran Dukic	7.3	88	http://www.imdb.com/title/tt0477139/
+MirrorMask	adventure, drama, family, fantasy	2005	Dave McKean	6.8	101	http://www.imdb.com/title/tt0366780/
+Sliding Doors	comedy, drama, fantasy, romance, sci_fi	1998	Peter Howitt	6.7	99	http://www.imdb.com/title/tt0120148/
+Time Bandits	adventure, comedy, family, fantasy, sci_fi	1981	Terry Gilliam	6.9	116	http://www.imdb.com/title/tt0081633/
+The Hobbit	animation, adventure, family, fantasy, musical	1977	Jules Bass, Arthur Rankin Jr.	6.5	77	http://www.imdb.com/title/tt0077687/
+Wicked	fantasy, musical, romance	2014	Stephen Daldry			http://www.imdb.com/title/tt1262426/
+Bedknobs and Broomsticks	adventure, family, fantasy, musical	1971	Robert Stevenson	6.8	117	http://www.imdb.com/title/tt0066817/
+Pete's Dragon	adventure, family, fantasy, musical	1977	Don Chaffey	6.1	128	http://www.imdb.com/title/tt0076538/
+The Wiz	adventure, family, fantasy, musical	1978	Sidney Lumet	4.7	134	http://www.imdb.com/title/tt0078504/
+The Dead Zone	fantasy, horror, thriller	1983	David Cronenberg	7.3	103	http://www.imdb.com/title/tt0085407/
+The Hunger	fantasy, horror, romance, thriller	1983	Tony Scott	6.4	97	http://www.imdb.com/title/tt0085701/
+The Black Cauldron	animation, adventure, family, fantasy	1985	Ted Berman, Richard Rich	6.3	80	http://www.imdb.com/title/tt0088814/
+Return to Oz	adventure, family, fantasy, mystery	1985	Walter Murch	6.6	113	http://www.imdb.com/title/tt0089908/
+Teen Wolf	comedy, fantasy, romance	1985	Rod Daniel	5.8	91	http://www.imdb.com/title/tt0090142/
+Harry and the Hendersons	comedy, family, fantasy	1987	William Dear	5.7	110	http://www.imdb.com/title/tt0093148/
+All Dogs Go to Heaven	animation, comedy, drama, fantasy	1989	Don Bluth, Gary Goldman	6.3	89	http://www.imdb.com/title/tt0096787/
+Gremlins 2: The New Batch	comedy, fantasy, horror	1990	Joe Dante	6.2	106	http://www.imdb.com/title/tt0099700/
+The Witches	fantasy, family, horror	1990	Nicolas Roeg	6.7	91	http://www.imdb.com/title/tt0100944/
+Buffy the Vampire Slayer	action, comedy, fantasy, horror	1992	Fran Rubel Kuzui	5.4	86	http://www.imdb.com/title/tt0103893/
+Encino Man	comedy, fantasy	1992	Les Mayfield	5.4	88	http://www.imdb.com/title/tt0104187/
+Angels in the Outfield	comedy, family, fantasy, sport	1994	William Dear	5.7	102	http://www.imdb.com/title/tt0109127/
+Powder	drama, fantasy, mystery, sci_fi, thriller	1995	Victor Salva	6.3	111	http://www.imdb.com/title/tt0114168/
+Jack	comedy, drama, fantasy	1996	Francis Ford Coppola	5.5	113	http://www.imdb.com/title/tt0116669/
+Bicentennial Man	drama, fantasy, romance, sci_fi	1999	Chris Columbus	6.5	132	http://www.imdb.com/title/tt0182789/
+A Midsummer Night's Dream	comedy, fantasy, romance	1999	Michael Hoffman	6.3	116	http://www.imdb.com/title/tt0140379/
+Tuck Everlasting	drama, romance, family, fantasy	2002	Jay Russell	6.5	90	http://www.imdb.com/title/tt0283084/
+Bulletproof Monk	action, comedy, fantasy	2003	Paul Hunter	5.3	104	http://www.imdb.com/title/tt0245803/
+The Haunted Mansion	comedy, family, fantasy, mystery, thriller	2003	Rob Minkoff	4.8	99	http://www.imdb.com/title/tt0338094/
+The Ant Bully	animation, adventure, comedy, family, fantasy	2006	John A. Davis	5.9	88	http://www.imdb.com/title/tt0429589/
+Mr. Magorium's Wonder Emporium	comedy, family, fantasy	2007	Zach Helm	6.1	93	http://www.imdb.com/title/tt0457419/
+Elephant White	action, crime, fantasy, thriller	2011	Prachya Pinkaew	5	91	http://www.imdb.com/title/tt1578882/
+Teen Spirit	comedy, drama, fantasy	2011	Gil Junger	5.4	82	http://www.imdb.com/title/tt1845866/
+Delirium	adventure, fantasy, romance, sci_fi	2014	Rodrigo García			http://www.imdb.com/title/tt1698647/
+The Secret of NIMH	animation, drama, family, fantasy, sci_fi	1982	Don Bluth	7.4	82	http://www.imdb.com/title/tt0084649/
+Ladyhawke	adventure, drama, fantasy	1985	Richard Donner	6.8	121	http://www.imdb.com/title/tt0089457/
+Scrooged	comedy, drama, fantasy	1988	Richard Donner	6.9	101	http://www.imdb.com/title/tt0096061/
+The Fisher King	comedy, drama, fantasy	1991	Terry Gilliam	7.5	137	http://www.imdb.com/title/tt0101889/
+Cool World	animation, comedy, fantasy	1992	Ralph Bakshi	4.5	102	http://www.imdb.com/title/tt0104009/
+Phenomenon	drama, fantasy, romance, sci_fi	1996	Jon Turteltaub	6.3	123	http://www.imdb.com/title/tt0117333/
+The Borrowers	comedy, family, fantasy	1997	Peter Hewitt	5.7	89	http://www.imdb.com/title/tt0118755/
+Doctor Dolittle	comedy, family, fantasy	1998	Betty Thomas	5.2	85	http://www.imdb.com/title/tt0118998/
+Dungeons & Dragons	adventure, fantasy, action	2000	Courtney Solomon	3.6	107	http://www.imdb.com/title/tt0190374/
+Like Mike	comedy, family, fantasy, sport	2002	John Schultz	4.6	99	http://www.imdb.com/title/tt0308506/
+Sinbad: Legend of the Seven Seas	adventure, fantasy, animation, family	2003	Patrick Gilmore, Tim Johnson	6.5	86	http://www.imdb.com/title/tt0165982/
+Bewitched	comedy, fantasy, romance	2005	Nora Ephron	4.7	102	http://www.imdb.com/title/tt0374536/
+Herbie Fully Loaded	adventure, comedy, family, fantasy, romance, sport	2005	Angela Robinson	4.6	101	http://www.imdb.com/title/tt0400497/
+BloodRayne	action, adventure, fantasy, horror	2005	Uwe Boll	2.8	95	http://www.imdb.com/title/tt0383222/
+The Santa Clause 3: The Escape Clause	adventure, comedy, family, fantasy	2006	Michael Lembeck	4.3	97	http://www.imdb.com/title/tt0452681/
+4:44 Last Day on Earth	drama, fantasy, sci_fi	2011	Abel Ferrara	4.5	82	http://www.imdb.com/title/tt1707391/
+Passion Play	drama, fantasy, romance	2010	Mitch Glazer	4.3	94	http://www.imdb.com/title/tt1396221/
+Arthur 3: The War of the Two Worlds	animation, adventure, family, fantasy	2010	Luc Besson	5.3	101	http://www.imdb.com/title/tt0940656/
+Highlander: The Source	action, adventure, fantasy, sci_fi	2007	Brett Leonard	3.1	86	http://www.imdb.com/title/tt0299981/
+If Only	comedy, drama, fantasy, romance	2004	Gil Junger	7	92	http://www.imdb.com/title/tt0332136/
+The Nines	drama, fantasy, mystery, sci_fi, thriller	2007	John August	6.4	100	http://www.imdb.com/title/tt0810988/
+The Hudsucker Proxy	comedy, drama, fantasy	1994	Joel Coen	7.3	111	http://www.imdb.com/title/tt0110074/
+Bill & Ted's Bogus Journey	adventure, comedy, fantasy, sci_fi	1991	Pete Hewitt	6	93	http://www.imdb.com/title/tt0101452/
+The Muppet Christmas Carol	comedy, drama, family, fantasy, music, musical	1992	Brian Henson	7.5	85	http://www.imdb.com/title/tt0104940/
+Teenage Mutant Ninja Turtles III	action, adventure, comedy, family, fantasy, sci_fi	1993	Stuart Gillard	4.6	96	http://www.imdb.com/title/tt0108308/
+The Indian in the Cupboard	family, adventure, fantasy	1995	Frank Oz	5.8	96	http://www.imdb.com/title/tt0113419/
+Quest for Camelot	animation, family, adventure, fantasy, comedy, drama	1998	Frederik Du Chau	5.6	86	http://www.imdb.com/title/tt0120800/
+Dragonfly	drama, fantasy, mystery, romance, thriller	2002	Tom Shadyac	5.8	104	http://www.imdb.com/title/tt0259288/
+The Santa Clause 2	comedy, family, fantasy	2002	Michael Lembeck	5.4	104	http://www.imdb.com/title/tt0304669/
+Son of the Mask	adventure, comedy, family, fantasy	2005	Lawrence Guterman	2.1	94	http://www.imdb.com/title/tt0362165/
+Fred Claus	comedy, family, fantasy	2007	David Dobkin	5.5	116	http://www.imdb.com/title/tt0486583/
+The Seeker: The Dark Is Rising	adventure, drama, fantasy, thriller	2007	David L. Cunningham	4.7	99	http://www.imdb.com/title/tt0484562/
+16 Wishes	family, fantasy	2010	Peter Deluise	5.4		http://www.imdb.com/title/tt1646876/
+The Illusionist	animation, drama, fantasy	2010	Sylvain Chomet	7.5	80	http://www.imdb.com/title/tt0775489/
+The Secret of Kells	animation, adventure, family, fantasy	2009	Tomm Moore, Nora Twomey	7.5	75	http://www.imdb.com/title/tt0485601/
+Bubba Ho-Tep	comedy, drama, fantasy, horror, mystery	2002	Don Coscarelli	7.1	92	http://www.imdb.com/title/tt0281686/
+Fantasia/2000	animation, family, fantasy, music	1999	James Algar, Gaëtan Brizzi	7.1	74	http://www.imdb.com/title/tt0120910/
+Captain America	action, fantasy, sci_fi, thriller, war	1990	Albert Pyun	3	97	http://www.imdb.com/title/tt0103923/
+Somewhere in Time	drama, fantasy, romance, sci_fi	1980	Jeannot Szwarc	7.1	103	http://www.imdb.com/title/tt0081534/
+Heavy Metal	animation, adventure, fantasy, sci_fi	1981	Gerald Potterton	6.5	86	http://www.imdb.com/title/tt0082509/
+Cinderella	fantasy, romance	2014	Kenneth Branagh			http://www.imdb.com/title/tt1661199/
+The Lord of the Rings	animation, adventure, drama, fantasy	1978	Ralph Bakshi	6	132	http://www.imdb.com/title/tt0077869/
+The Last Unicorn	family, animation, fantasy	1982	Jules Bass, Arthur Rankin Jr.	7.1	92	http://www.imdb.com/title/tt0084237/
+Krull	fantasy, action, adventure, sci_fi	1983	Peter Yates	5.9	121	http://www.imdb.com/title/tt0085811/
+Twilight Zone: The Movie	fantasy, horror, sci_fi, thriller	1983	Joe Dante, John Landis	6.4	101	http://www.imdb.com/title/tt0086491/
+The Golden Child	action, adventure, comedy, fantasy, mystery	1986	Michael Ritchie	5.7	94	http://www.imdb.com/title/tt0091129/
+The Monster Squad	action, comedy, fantasy, horror, sci_fi	1987	Fred Dekker	7	82	http://www.imdb.com/title/tt0093560/
+The Witches of Eastwick	comedy, fantasy, horror, thriller	1987	George Miller	6.4	118	http://www.imdb.com/title/tt0094332/
+A Nightmare on Elm Street: The Dream Child	comedy, fantasy, horror, thriller	1989	Stephen Hopkins	4.9	89	http://www.imdb.com/title/tt0097981/
+Thumbelina	animation, family, fantasy, musical, romance	1994	Don Bluth, Gary Goldman	6	86	http://www.imdb.com/title/tt0111419/
+A Life Less Ordinary	comedy, crime, fantasy, romance	1997	Danny Boyle	6.3	103	http://www.imdb.com/title/tt0119535/
+Mighty Joe Young	action, adventure, family, fantasy, sci_fi, thriller	1998	Ron Underwood	5.4	114	http://www.imdb.com/title/tt0120751/
+Osmosis Jones	animation, action, adventure, comedy, family, fantasy	2001	Bobby Farrelly, Peter Farrelly	6.1	95	http://www.imdb.com/title/tt0181739/
+Return to Never Land	animation, adventure, family, fantasy	2002	Robin Budd, Donovan Cook	5.6	72	http://www.imdb.com/title/tt0280030/
+Underdog	action, adventure, comedy, family, fantasy, sci_fi	2007	Frederik Du Chau	4.6	84	http://www.imdb.com/title/tt0467110/
+Bloodrayne: The Third Reich	action, adventure, fantasy, horror	2010	Uwe Boll	2.9	79	http://www.imdb.com/title/tt1153546/
+Ink	action, fantasy, sci_fi	2009	Jamin Winans	6.7	107	http://www.imdb.com/title/tt1071804/
+TiMER	comedy, drama, fantasy, romance, sci_fi	2009	Jac Schaeffer	6.5	99	http://www.imdb.com/title/tt1179794/
+The Secret of Moonacre	adventure, family, fantasy, romance	2008	Gabor Csupo	6	103	http://www.imdb.com/title/tt0396707/
+Tideland	drama	2005	Terry Gilliam	6.5	120	http://www.imdb.com/title/tt0410764/
+Beowulf & Grendel	action, adventure, drama, fantasy	2005	Sturla Gunnarsson	5.9	103	http://www.imdb.com/title/tt0402057/
+The Color of Magic	adventure, comedy, family, fantasy	2008	Vadim Jean	7	191	http://www.imdb.com/title/tt1079959/
+Millions	comedy, crime, drama, family, fantasy	2004	Danny Boyle	7	98	http://www.imdb.com/title/tt0366777/
+Little Monsters	comedy, adventure, family, fantasy	1989	Richard Alan Greenberg	5.6	100	http://www.imdb.com/title/tt0097758/
+The Adventures of Baron Munchausen	action, adventure, comedy, drama, fantasy, sci_fi	1988	Terry Gilliam	7	126	http://www.imdb.com/title/tt0096764/
+The Brave Little Toaster	animation, adventure, comedy, family, fantasy, musical	1987	Jerry Rees	7.1	90	http://www.imdb.com/title/tt0092695/
+Xanadu	fantasy, musical, romance	1980	Robert Greenwald	4.6	93	http://www.imdb.com/title/tt0081777/
+Altered States	drama, fantasy, horror, sci_fi, thriller	1980	Ken Russell	6.8	102	http://www.imdb.com/title/tt0080360/
+Supergirl	action, adventure, fantasy, sci_fi	1984	Jeannot Szwarc	4.2	150	http://www.imdb.com/title/tt0088206/
+House	comedy, fantasy, horror	1986	Steve Miner	6	93	http://www.imdb.com/title/tt0091223/
+Alice in Wonderland	adventure, comedy, family, fantasy	1999	Nick Willing	6	150	http://www.imdb.com/title/tt0164993/
+Arizona Dream	comedy, drama, fantasy, romance	1992	Emir Kusturica	7.2	142	http://www.imdb.com/title/tt0106307/
+Teen Witch	comedy, fantasy, romance	1989	Dorian Walker	5.8	90	http://www.imdb.com/title/tt0098453/
+Lovestruck: The Musical	comedy, fantasy, musical, romance	2013	Sanaa Hamri	5.8		http://www.imdb.com/title/tt2246673/
+Mortal Kombat	action, adventure, fantasy, thriller	????	Kevin Tancharoen			http://www.imdb.com/title/tt0293429/
+Seventh Son	adventure, family, fantasy	2013	Sergei Bodrov			http://www.imdb.com/title/tt1121096/
+Enter the Void	drama, fantasy	2009	Gaspar Noé	7.1	161	http://www.imdb.com/title/tt1191111/
+The Wizards Return: Alex vs. Alex	adventure, comedy, drama, family, fantasy	2013	Victor Gonzalez	6.3	60	http://www.imdb.com/title/tt2448374/
+23 Minutes to Sunrise	drama, fantasy	2012	Jay Kanzler	3.8		http://www.imdb.com/title/tt2009402/
+Knights of Badassdom	adventure, fantasy, horror	2013	Joe Lynch			http://www.imdb.com/title/tt1545660/
+Wonder Woman	action, adventure, fantasy, sci_fi	2011	Jeffrey Reiner	4.1	42	http://www.imdb.com/title/tt1740828/
+The 25th Reich	action, adventure, fantasy, sci_fi	2012	Stephen Amis	3.1	85	http://www.imdb.com/title/tt1931551/
+Rumpelstiltskin	fantasy, family, musical	1987	David Irving	5.1	84	http://www.imdb.com/title/tt0093891/
+Hirokin: The Last Samurai	action, adventure, drama, fantasy, sci_fi	2012	Alejo Mo-Sun	3.6	105	http://www.imdb.com/title/tt1693679/
+Gallowwalkers	action, fantasy, horror, thriller, western	2012	Andrew Goth	6.2	90	http://www.imdb.com/title/tt0829176/
+Sinbad and the Minotaur	adventure, fantasy, sci_fi	2011	Karl Zwicky	3.4	88	http://www.imdb.com/title/tt1577065/
+The Philosophers	drama, fantasy, sci_fi, thriller	2013	John Huddles			http://www.imdb.com/title/tt1928340/
+Werewolves: The Dark Survivors	fantasy	2009	Edward Bazalgette	6.1		http://www.imdb.com/title/tt1525474/
+Rapture-Palooza	comedy, fantasy	2013	Paul Middleditch	5		http://www.imdb.com/title/tt1879032/
+Hideaways	fantasy	2011	Agnès Merlet	5.8	88	http://www.imdb.com/title/tt1692098/
+Sinister Visions	fantasy, horror, thriller	2013	Henric Brandt, Doug Gehl		85	http://www.imdb.com/title/tt1808474/
+Drifter	fantasy, thriller	2008	Roel Reiné	4.4	100	http://www.imdb.com/title/tt0820872/
+Dragon Wars: D-War	action, drama, fantasy, horror, thriller	2007	Hyung-rae Shim	3.7	90	http://www.imdb.com/title/tt0372873/
+In the Name of the King: Two Worlds	action, adventure, drama, fantasy	2011	Uwe Boll	3.1	96	http://www.imdb.com/title/tt1767319/
+Age of the Dragons	action, fantasy, thriller	2011	Ryan Little	3.4	91	http://www.imdb.com/title/tt1594917/
+Zardoz	fantasy, sci_fi	1974	John Boorman	5.7	105	http://www.imdb.com/title/tt0070948/
+Phantasm	fantasy, horror, sci_fi	1979	Don Coscarelli	6.7	88	http://www.imdb.com/title/tt0079714/
+The Beastmaster	fantasy, action, adventure	1982	Don Coscarelli	5.9	118	http://www.imdb.com/title/tt0083630/
+Cat People	drama, fantasy, horror, romance, thriller	1982	Paul Schrader	5.9	118	http://www.imdb.com/title/tt0083722/
+Red Sonja	action, adventure, fantasy	1985	Richard Fleischer	4.7	89	http://www.imdb.com/title/tt0089893/
+*batteries not included	family, fantasy, sci_fi, comedy	1987	Matthew Robbins	6.3	106	http://www.imdb.com/title/tt0092494/
+North	adventure, comedy, drama, family, fantasy	1994	Rob Reiner	4.2	87	http://www.imdb.com/title/tt0110687/
+The Pagemaster	animation, adventure, comedy, family, fantasy, mystery, romance	1994	Maurice Hunt, Joe Johnston	5.4	80	http://www.imdb.com/title/tt0110763/
+Jack Frost	comedy, drama, family, fantasy	1998	Troy Miller	4.9	101	http://www.imdb.com/title/tt0141109/
+In Dreams	drama, fantasy, thriller	1999	Neil Jordan	5.3	100	http://www.imdb.com/title/tt0120710/
+The Kid	comedy, family, fantasy	2000	Jon Turteltaub	5.9	104	http://www.imdb.com/title/tt0219854/
+The Medallion	comedy, action, fantasy, thriller	2003	Gordon Chan	4.9	88	http://www.imdb.com/title/tt0288045/
+The Shaggy Dog	comedy, family, fantasy	2006	Brian Robbins	4.3	98	http://www.imdb.com/title/tt0393735/
+Blood and Chocolate	drama, fantasy, horror, romance	2007	Katja von Garnier	5.2	98	http://www.imdb.com/title/tt0397044/
+Imagine That	comedy, drama, family, fantasy	2009	Karey Kirkpatrick	5.4	107	http://www.imdb.com/title/tt0780567/
+Shorts	comedy, family, fantasy	2009	Robert Rodriguez	4.9	89	http://www.imdb.com/title/tt1100119/
+Franklyn	drama, fantasy, sci_fi, thriller	2008	Gerald McMorrow	6	98	http://www.imdb.com/title/tt0893402/
+Fallen	action, adventure, drama, fantasy, sci_fi	2006	Mikael Salomon	6.6	81	http://www.imdb.com/title/tt0775362/
+Orlando	drama, fantasy, romance	1992	Sally Potter	6.9	94	http://www.imdb.com/title/tt0107756/
+Escape to Witch Mountain	fantasy, family, adventure, sci_fi	1975	John Hough	6.2	97	http://www.imdb.com/title/tt0072951/
+All That Jazz	drama, fantasy, music, musical	1979	Bob Fosse	7.6	123	http://www.imdb.com/title/tt0078754/
+The Company of Wolves	horror, fantasy	1984	Neil Jordan	6.6	95	http://www.imdb.com/title/tt0087075/
+DuckTales: The Movie - Treasure of the Lost Lamp	animation, adventure, comedy, family, fantasy	1990	Bob Hathcock	6.8	74	http://www.imdb.com/title/tt0099472/
+Highlander II: The Quickening	action, fantasy, sci_fi	1991	Russell Mulcahy	3.9	91	http://www.imdb.com/title/tt0102034/
+We're Back! A Dinosaur's Story	animation, adventure, family, fantasy	1993	Phil Nibbelink, Simon Wells	5.7	72	http://www.imdb.com/title/tt0108526/
+Miracle on 34th Street	drama, family, fantasy	1994	Les Mayfield	6.1	114	http://www.imdb.com/title/tt0110527/
+The Swan Princess	animation, comedy, family, fantasy, musical, romance	1994	Richard Rich	6.2	90	http://www.imdb.com/title/tt0111333/
+The Crow: City of Angels	action, fantasy, thriller, crime	1996	Tim Pope	4.2	84	http://www.imdb.com/title/tt0115986/
+Highlander: Endgame	action, fantasy, sci_fi	2000	Douglas Aarniokoski	4.3	87	http://www.imdb.com/title/tt0144964/
+Mockingbird Lane	comedy, drama, fantasy, mystery	2012	Bryan Singer	7.2		http://www.imdb.com/title/tt2130271/
+Dragon Age: Blood mage no seisen	animation, fantasy	2012	Fumihiko Sori	5.7	90	http://www.imdb.com/title/tt1709652/
+The Haunted World of El Superbeasto	animation, action, adventure, comedy, fantasy	2009	Rob Zombie	5.8	77	http://www.imdb.com/title/tt0419724/
+Tamara	horror, fantasy, thriller	2005	Jeremy Haft	5	98	http://www.imdb.com/title/tt0401815/
+Deconstructing Harry	comedy, drama, fantasy, romance	1997	Woody Allen	7.3	96	http://www.imdb.com/title/tt0118954/
+Troll 2	fantasy, horror	1990	Drake Floyd	2.5	95	http://www.imdb.com/title/tt0105643/
+Slaughterhouse-Five	comedy, drama, fantasy, sci_fi, war	1972	George Roy Hill	7	104	http://www.imdb.com/title/tt0069280/
+Tommy	drama, fantasy, musical	1975	Ken Russell	6.4	111	http://www.imdb.com/title/tt0073812/
+King Kong	adventure, fantasy, romance, sci_fi, thriller	1976	John Guillermin	5.7	134	http://www.imdb.com/title/tt0074751/
+Peggy Sue Got Married	comedy, drama, fantasy, music, romance	1986	Francis Coppola	6.3	103	http://www.imdb.com/title/tt0091738/
+Chances Are	comedy, fantasy, romance	1989	Emile Ardolino	6.2	108	http://www.imdb.com/title/tt0097044/
+The Neverending Story II: The Next Chapter	adventure, drama, family, fantasy	1990	George Miller	4.7	90	http://www.imdb.com/title/tt0100240/
+Toys	comedy, drama, family, fantasy	1992	Barry Levinson	4.8	118	http://www.imdb.com/title/tt0105629/
+Leprechaun	comedy, fantasy, horror	1993	Mark Jones	4.4	92	http://www.imdb.com/title/tt0107387/
+The Shadow	action, adventure, crime, fantasy, mystery, thriller	1994	Russell Mulcahy	5.7	108	http://www.imdb.com/title/tt0111143/
+Michael	comedy, drama, fantasy	1996	Nora Ephron	5.5	105	http://www.imdb.com/title/tt0117038/
+The Little Vampire	adventure, comedy, family, fantasy	2000	Uli Edel	5.4	95	http://www.imdb.com/title/tt0192255/
+Happily N'Ever After	animation, adventure, comedy, family, fantasy	2006	Paul J. Bolger, Yvette Kaplan	4.2	75	http://www.imdb.com/title/tt0308353/
+Arthur and the Revenge of Maltazard	animation, adventure, family, fantasy	2009	Luc Besson	5	93	http://www.imdb.com/title/tt0940657/
+From Time to Time	adventure, drama, fantasy	2009	Julian Fellowes	6.3	95	http://www.imdb.com/title/tt1031241/
+The Five People You Meet in Heaven	drama, fantasy	2004	Lloyd Kramer	7.2	180	http://www.imdb.com/title/tt0400435/
+Poison Ivy: The Secret Society	drama, fantasy, thriller	2008	Jason Hreno	4.3	95	http://www.imdb.com/title/tt1131749/
+The Librarian: Quest for the Spear	action, adventure, comedy, drama, fantasy, romance, thriller	2004	Peter Winther	5.9	92	http://www.imdb.com/title/tt0412915/
+The Mists of Avalon	drama, fantasy	2001	Uli Edel	6.7	183	http://www.imdb.com/title/tt0244353/
+Mighty Aphrodite	comedy, fantasy, romance	1995	Woody Allen	7	95	http://www.imdb.com/title/tt0113819/
+Wish Upon a Star	comedy, family, fantasy	1996	Blair Treu	6.7	90	http://www.imdb.com/title/tt0118178/
+Love Potion No. 9	comedy, fantasy, romance	1992	Dale Launer	5.3	92	http://www.imdb.com/title/tt0102343/
+The Philadelphia Experiment	adventure, drama, fantasy, romance, sci_fi, thriller	1984	Stewart Raffill	6.1	102	http://www.imdb.com/title/tt0087910/
+Fallen	drama, fantasy, romance, thriller	2014	Scott Hicks			http://www.imdb.com/title/tt1564777/
+Freaky Friday	comedy, family, fantasy	1976	Gary Nelson	6.2	95	http://www.imdb.com/title/tt0076054/
+Young Sherlock Holmes	action, adventure, family, fantasy, mystery, thriller	1985	Barry Levinson	6.6	109	http://www.imdb.com/title/tt0090357/
+Defending Your Life	comedy, drama, fantasy	1991	Albert Brooks	7.1	112	http://www.imdb.com/title/tt0101698/
+My Boyfriend's Back	comedy, fantasy, horror, romance	1993	Bob Balaban	4.9	85	http://www.imdb.com/title/tt0107626/
+Kazaam	comedy, family, fantasy, musical	1996	Paul M. Glaser	2.6	93	http://www.imdb.com/title/tt0116756/
+Babe: Pig in the City	adventure, comedy, drama, family, fantasy	1998	George Miller	5.9	97	http://www.imdb.com/title/tt0120595/
+Simply Irresistible	comedy, drama, fantasy, romance	1999	Mark Tarlov	4.9	94	http://www.imdb.com/title/tt0145893/
+Woman on Top	comedy, fantasy, romance	2000	Fina Torres	5	92	http://www.imdb.com/title/tt0206420/
+Down to Earth	comedy, romance, fantasy	2001	Chris Weitz, Paul Weitz	5.2	87	http://www.imdb.com/title/tt0231775/
+Skinwalkers	action, fantasy, horror, thriller	2006	Jim Isaac	4.6	110	http://www.imdb.com/title/tt0461703/
+Scooby-Doo! Curse of the Lake Monster	adventure, comedy, family, fantasy, mystery	2010	Brian Levant	4.9	79	http://www.imdb.com/title/tt1618435/
+Going Postal	comedy, fantasy	2010	Jon Jones	7.6	185	http://www.imdb.com/title/tt1219817/
+The Librarian: The Curse of the Judas Chalice	action, adventure, comedy, fantasy	2008	Jonathan Frakes	6.3	90	http://www.imdb.com/title/tt1146438/
+The Curse of King Tut's Tomb	adventure, fantasy, horror	2006	Russell Mulcahy	4.3	170	http://www.imdb.com/title/tt0464799/
+Youth Without Youth	drama, fantasy, mystery, romance, thriller	2007	Francis Ford Coppola	6.2	124	http://www.imdb.com/title/tt0481797/
+Asterix and the Vikings	animation, adventure, comedy, family, fantasy	2006	Stefan Fjeldmark, Jesper Møller	5.9	78	http://www.imdb.com/title/tt0371552/
+The Good Witch	family, fantasy	2008	Craig Pryce	6.7	89	http://www.imdb.com/title/tt1105729/
+Curse of the Ring	drama, action, adventure, fantasy	2004	Uli Edel	6.5	184	http://www.imdb.com/title/tt0387541/
+Interstella 5555: The 5tory of the 5ecret 5tar 5ystem	animation, action, adventure, fantasy, music, sci_fi	2003	Kazuhisa Takenouchi	7.6	68	http://www.imdb.com/title/tt0368667/
+The Devil's Arithmetic	drama, fantasy, war	1999	Donna Deitch	6.2	95	http://www.imdb.com/title/tt0179148/
+Dagon	fantasy, horror, mystery, thriller	2001	Stuart Gordon	6.1	95	http://www.imdb.com/title/tt0264508/
+Interstate 60: Episodes of the Road	adventure, comedy, drama, fantasy, mystery, sci_fi, thriller	2002	Bob Gale	7.5	116	http://www.imdb.com/title/tt0165832/
+Cinderella	musical, romance, fantasy, family	1997	Robert Iscove	5.9	88	http://www.imdb.com/title/tt0128996/
+Phantom of the Paradise	comedy, drama, fantasy, music, thriller	1974	Brian De Palma	7	92	http://www.imdb.com/title/tt0071994/
+Malicious	comedy, fantasy	1973	Salvatore Samperi	6.1	98	http://www.imdb.com/title/tt0070358/
+Heaven Can Wait	comedy, fantasy, romance, sport	1978	Warren Beatty, Buck Henry	6.8	101	http://www.imdb.com/title/tt0077663/
+Heart and Souls	comedy, drama, fantasy, romance	1993	Ron Underwood	6.6	104	http://www.imdb.com/title/tt0107091/
+The Preacher's Wife	comedy, drama, fantasy, romance	1996	Penny Marshall	5.1	123	http://www.imdb.com/title/tt0117372/
+The Adventures of Rocky & Bullwinkle	animation, adventure, comedy, family, fantasy	2000	Des McAnuff	4	92	http://www.imdb.com/title/tt0131704/
+Dr. Dolittle 2	comedy, family, fantasy, romance	2001	Steve Carr	4.5	87	http://www.imdb.com/title/tt0240462/
+Left Behind	action, drama, fantasy, sci_fi, thriller	2001	Vic Sarin	4.4	96	http://www.imdb.com/title/tt0190524/
+Pooh's Heffalump Movie	animation, family, fantasy, mystery	2005	Frank Nissen	6.2	68	http://www.imdb.com/title/tt0407121/
+An American Carol	comedy, fantasy	2008	David Zucker	4.3	83	http://www.imdb.com/title/tt1190617/
+Camille	adventure, comedy, drama, fantasy, romance	2008	Gregory Mackenzie	5.9	94	http://www.imdb.com/title/tt0462219/
+The Crow: Salvation	action, crime, fantasy, mystery, thriller	2000	Bharat Nalluri	4.6	102	http://www.imdb.com/title/tt0132910/
+Snow White: A Tale of Terror	fantasy, horror	1997	Michael Cohn	6.1	100	http://www.imdb.com/title/tt0119227/
+Warlock	action, fantasy, horror, thriller	1989	Steve Miner	5.9	103	http://www.imdb.com/title/tt0098622/
+Vampire's Kiss	comedy, fantasy, horror	1988	Robert Bierman	5.5	103	http://www.imdb.com/title/tt0098577/
+Ewoks: The Battle for Endor	adventure, family, fantasy, sci_fi	1985	Jim Wheat, Ken Wheat	5.3	94	http://www.imdb.com/title/tt0089110/
+Moonwalker	action, crime, family, fantasy, music, sci_fi, thriller	1988	Jerry Kramer, Jim Blashfield	5.4	93	http://www.imdb.com/title/tt0095655/
+Infinity: Chronicles of Nick	fantasy	2014				http://www.imdb.com/title/tt2558568/
+Dragonslayer	action, adventure, fantasy	1981	Matthew Robbins	6.6	108	http://www.imdb.com/title/tt0082288/
+Troll	fantasy, horror	1986	John Carl Buechler	3.9	82	http://www.imdb.com/title/tt0092115/
+The Gate	fantasy, horror	1987	Tibor Takács	5.6	85	http://www.imdb.com/title/tt0093075/
+Mac and Me	adventure, family, fantasy, sci_fi	1988	Stewart Raffill	3.2	95	http://www.imdb.com/title/tt0095560/
+The Seventh Sign	drama, fantasy, horror, thriller	1988	Carl Schultz	5.8	97	http://www.imdb.com/title/tt0096073/
+Nightbreed	fantasy, horror	1990	Clive Barker	6.2	102	http://www.imdb.com/title/tt0100260/
+L.A. Story	comedy, drama, fantasy, romance	1991	Mick Jackson	6.6	95	http://www.imdb.com/title/tt0102250/
+Needful Things	crime, drama, fantasy, horror, thriller	1993	Fraser C. Heston	6	120	http://www.imdb.com/title/tt0107665/
+Highlander: The Final Dimension	fantasy, sci_fi, action	1994	Andrew Morahan	4	99	http://www.imdb.com/title/tt0110027/
+Hideaway	fantasy, horror, thriller	1995	Brett Leonard	5.2	106	http://www.imdb.com/title/tt0113303/
+Tall Tale	adventure, family, fantasy, western	1995	Jeremiah Chechik	5.5	98	http://www.imdb.com/title/tt0111359/
+Just Visiting	comedy, fantasy, sci_fi	2001	Jean-Marie Gaubert	5.6	88	http://www.imdb.com/title/tt0189192/
+Pokémon 3: The Movie	animation, action, adventure, family, fantasy	2000	Michael Haigney, Kunihiko Yuyama	4.6	93	http://www.imdb.com/title/tt0266860/
+Delgo	animation, adventure, comedy, fantasy, romance	2008	Marc F. Adler, Jason Maurer	4.3	94	http://www.imdb.com/title/tt0361500/
+The Good Night	comedy, drama, fantasy, music, romance	2007	Jake Paltrow	5.8	93	http://www.imdb.com/title/tt0484111/
+Hogfather	drama, fantasy, thriller	2006	Vadim Jean	7.4	189	http://www.imdb.com/title/tt0765458/
+The Thief Lord	adventure, family, fantasy	2006	Richard Claus	5.8	98	http://www.imdb.com/title/tt0430674/
+Desperation	drama, fantasy, horror, mystery, thriller	2006	Mick Garris	5.2	131	http://www.imdb.com/title/tt0129871/
+Vampire Hunter D: Bloodlust	animation, action, adventure, fantasy, mystery, sci_fi	2000	Yoshiaki Kawajiri	7.6	103	http://www.imdb.com/title/tt0216651/
+The Luck of the Irish	adventure, comedy, drama, family, fantasy, sport	2001	Paul Hoen	5.8	86	http://www.imdb.com/title/tt0274636/
+Erik the Viking	comedy, adventure, fantasy	1989	Terry Jones	6	107	http://www.imdb.com/title/tt0097289/
+The Purple Rose of Cairo	comedy, fantasy, romance	1985	Woody Allen	7.7	82	http://www.imdb.com/title/tt0089853/
+Waxwork	comedy, fantasy, horror	1988	Anthony Hickox	6	95	http://www.imdb.com/title/tt0096426/
+The Ewok Adventure	adventure, family, fantasy, sci_fi	1984	John Korty	5.3	96	http://www.imdb.com/title/tt0087225/
+Alice in Wonderland	adventure, family, fantasy, musical	1985	Harry Harris	7	187	http://www.imdb.com/title/tt0088693/
+The Discreet Charm of the Bourgeoisie	comedy, drama, fantasy	1972	Luis Bunuel	7.9	102	http://www.imdb.com/title/tt0068361/
+Death in Venice	drama, fantasy	1971	Luchino Visconti	7.5	130	http://www.imdb.com/title/tt0067445/
+Wizards	animation, adventure, fantasy, sci_fi	1977	Ralph Bakshi	6.2	80	http://www.imdb.com/title/tt0076929/
+Arabian Nights	comedy, drama, fantasy	1974	Pier Paolo Pasolini	6.7	130	http://www.imdb.com/title/tt0071502/
+Switch	comedy, fantasy	1991	Blake Edwards	5.4	103	http://www.imdb.com/title/tt0103016/
+Ernest Scared Stupid	comedy, family, fantasy, horror	1991	John Cherry	5.3	91	http://www.imdb.com/title/tt0101821/
+The Sixth Man	comedy, drama, fantasy, romance, sport	1997	Randall Miller	5.1	107	http://www.imdb.com/title/tt0120142/
+Wishmaster	fantasy, horror	1997	Robert Kurtzman	5.4	90	http://www.imdb.com/title/tt0120524/
+Monkeybone	animation, comedy, fantasy	2001	Henry Selick	4.5	93	http://www.imdb.com/title/tt0166276/
+The Crow: Wicked Prayer	action, adventure, fantasy, thriller	2005	Lance Mungia	2.8	99	http://www.imdb.com/title/tt0353324/
+The Librarian: Return to King Solomon's Mines	action, adventure, fantasy	2006	Jonathan Frakes	5.9	92	http://www.imdb.com/title/tt0455596/
+Bathory: Countess of Blood	biography, drama, fantasy, history	2008	Juraj Jakubisko	5.8	141	http://www.imdb.com/title/tt0469640/
+Dungeons & Dragons: Wrath of the Dragon God	action, adventure, fantasy	2005	Gerry Lively	4.7	105	http://www.imdb.com/title/tt0406728/
+Rabbits	comedy, drama, fantasy, horror, mystery	2002	David Lynch	6.8	50	http://www.imdb.com/title/tt0347840/
+The Guru	comedy, fantasy, music, romance	2002	Daisy von Scherler Mayer	5.4	94	http://www.imdb.com/title/tt0280720/
+A Wrinkle in Time	family, fantasy, adventure, sci_fi	2003	John Kent Harrison	5.7	128	http://www.imdb.com/title/tt0290382/
+Halloweentown	adventure, comedy, family, fantasy	1998	Duwayne Dunham	6.4	84	http://www.imdb.com/title/tt0173886/
+Meatballs III: Summer Job	comedy, fantasy, romance	1986	George Mendeluk	2.9	96	http://www.imdb.com/title/tt0093516/
+Mio in the Land of Faraway	adventure, drama, family, fantasy, mystery	1987	Vladimir Grammatikov	6.3	99	http://www.imdb.com/title/tt0093543/
+Zelig	comedy, fantasy	1983	Woody Allen	7.7	79	http://www.imdb.com/title/tt0086637/
+Something Wicked This Way Comes	drama, family, fantasy, mystery, thriller	1983	Jack Clayton	6.6	95	http://www.imdb.com/title/tt0086336/
+All of Me	comedy, fantasy, romance	1984	Carl Reiner	6.5	93	http://www.imdb.com/title/tt0086873/
+Phantasm II	action, fantasy, horror, sci_fi, thriller	1988	Don Coscarelli	6.3	97	http://www.imdb.com/title/tt0095863/
+Kull the Conqueror	fantasy, action, adventure	1997	John Nicolella	4.6	95	http://www.imdb.com/title/tt0119484/
+The Powerpuff Girls	animation, action, adventure, comedy, drama, family, fantasy, sci_fi	2002	Craig McCracken	6	73	http://www.imdb.com/title/tt0289408/
+Santa Claus Is Comin' to Town	animation, family, fantasy, musical	1970	Jules Bass, Arthur Rankin Jr.	7.7	48	http://www.imdb.com/title/tt0066327/
+Strings	adventure, drama, fantasy	2004	Anders Rønnow Klarlund	6.9	88	http://www.imdb.com/title/tt0374248/
+Bad Biology	fantasy, horror	2008	Frank Henenlotter	4.7	84	http://www.imdb.com/title/tt0974977/
+Arabian Nights	family, fantasy, adventure	2000	Steve Barron	7.2	175	http://www.imdb.com/title/tt0181199/
+Versus	action, fantasy, horror	2000	Ryûhei Kitamura	6.5	119	http://www.imdb.com/title/tt0275773/
+Gulliver's Travels	adventure, family, fantasy	1996	Charles Sturridge	6.8	186	http://www.imdb.com/title/tt0115195/
+Street Fighter II: The Animated Movie	animation, action, adventure, fantasy, sci_fi	1994	Gisaburo Sugii	7	98	http://www.imdb.com/title/tt0114563/
+The Milagro Beanfield War	comedy, fantasy, drama	1988	Robert Redford	6.7	117	http://www.imdb.com/title/tt0095638/
+Fire and Ice	animation, fantasy, adventure	1983	Ralph Bakshi	6.5	81	http://www.imdb.com/title/tt0085542/
+Herbie Rides Again	comedy, family, fantasy, romance	1974	Robert Stevenson	5.4	88	http://www.imdb.com/title/tt0071607/
+Sheena: Queen of the Jungle	action, adventure, fantasy	1984	John Guillermin	4.4	117	http://www.imdb.com/title/tt0088103/
+Santa Claus	adventure, family, fantasy	1985	Jeannot Szwarc	5.3	107	http://www.imdb.com/title/tt0089961/
+The Boy Who Could Fly	drama, fantasy	1986	Nick Castle	6.2	114	http://www.imdb.com/title/tt0090768/
+High Spirits	comedy, fantasy, horror, romance	1988	Neil Jordan	5.3	99	http://www.imdb.com/title/tt0095304/
+Ghost Dad	comedy, family, fantasy	1990	Sidney Poitier	4.1	83	http://www.imdb.com/title/tt0099654/
+Mannequin: On the Move	fantasy, comedy, romance	1991	Stewart Raffill	3.4	95	http://www.imdb.com/title/tt0102395/
+Joe's Apartment	comedy, fantasy, musical, sci_fi	1996	John Payson	5.1	80	http://www.imdb.com/title/tt0116707/
+FairyTale: A True Story	drama, family, fantasy, mystery	1997	Charles Sturridge	6.2	99	http://www.imdb.com/title/tt0119095/
+A Simple Wish	family, comedy, fantasy	1997	Michael Ritchie	5	89	http://www.imdb.com/title/tt0120133/
+Turbo: A Power Rangers Movie	action, adventure, family, fantasy, sci_fi, thriller	1997	Shuki Levy, David Winning	2.8	99	http://www.imdb.com/title/tt0120389/
+Thomas and the Magic Railroad	family, fantasy	2000	Britt Allcroft	2.9	85	http://www.imdb.com/title/tt0205461/
+The Wild Thornberrys Movie	adventure, animation, family, comedy, fantasy	2002	Cathy Malkasian, Jeff McGrath	5	85	http://www.imdb.com/title/tt0282120/
+Aqua Teen Hunger Force Colon Movie Film for Theaters	animation, action, adventure, comedy, fantasy, sci_fi	2007	Matt Maiellaro, Dave Willis	6.7	86	http://www.imdb.com/title/tt0455326/
+Slipstream	comedy, drama, fantasy, mystery, sci_fi, thriller	2007	Anthony Hopkins	5	96	http://www.imdb.com/title/tt0499570/
+Neverwas	drama, fantasy, mystery	2005	Joshua Michael Stern	6.6	103	http://www.imdb.com/title/tt0418004/
+The Muppets' Wizard of Oz	adventure, comedy, family, fantasy, music	2005	Kirk R. Thatcher	5.1	120	http://www.imdb.com/title/tt0422778/
+Five Children and It	adventure, family, fantasy	2004	John Stephenson	5.6	89	http://www.imdb.com/title/tt0366450/
+Heavy Metal 2000	action, animation, fantasy, adventure, sci_fi	2000	Michael Coldewey, Michel Lemire	5.2	88	http://www.imdb.com/title/tt0119273/
+Life-Size	comedy, family, fantasy, sport	2000	Mark Rosman	5.3	89	http://www.imdb.com/title/tt0200809/
+The Thirteenth Year	comedy, fantasy	1999	Duwayne Dunham	5.7	95	http://www.imdb.com/title/tt0200208/
+Haunted	drama, fantasy, mystery, romance	1995	Lewis Gilbert	6.1	108	http://www.imdb.com/title/tt0113269/
+Being Human	comedy, fantasy, drama	1994	Bill Forsyth	5	122	http://www.imdb.com/title/tt0106379/
+The BFG	animation, family, fantasy	1989	Brian Cosgrove	6.4	87	http://www.imdb.com/title/tt0096866/
+Truly Madly Deeply	drama, fantasy, music, romance	1990	Anthony Minghella	6.9	106	http://www.imdb.com/title/tt0103129/
+Little Nemo: Adventures in Slumberland	family, animation, adventure, drama, fantasy	1989	Masami Hata, William Hurtz	7	85	http://www.imdb.com/title/tt0104740/
+The Return of the King	animation, action, adventure, fantasy, musical	1980	Jules Bass, Arthur Rankin Jr.	5.5	98	http://www.imdb.com/title/tt0079802/
+The Chronicles of Rick Roll	action, adventure, fantasy	2014				http://www.imdb.com/title/tt1853693/
+The Spirit of the Beehive	drama, fantasy	1973	Víctor Erice	7.9	97	http://www.imdb.com/title/tt0070040/
+Jabberwocky	adventure, comedy, fantasy, horror	1977	Terry Gilliam	6.1	105	http://www.imdb.com/title/tt0076221/
+Bébé's Kids	animation, comedy, musical, fantasy	1992	Bruce Smith	5	70	http://www.imdb.com/title/tt0103783/
+Magic in the Water	adventure, family, fantasy	1995	Rick Stevenson	5.5	98	http://www.imdb.com/title/tt0113737/
+Pinocchio	comedy, family, fantasy	2002	Roberto Benigni	3.8	108	http://www.imdb.com/title/tt0255477/
+Dark Floors	fantasy, horror	2008	Pete Riski	4.6	85	http://www.imdb.com/title/tt0985025/
+Mysterious Island	sci_fi, action, adventure, fantasy	2005	Russell Mulcahy	4.4	172	http://www.imdb.com/title/tt0448965/
+P.S.	comedy, drama, fantasy, romance	2004	Dylan Kidd	6.2	97	http://www.imdb.com/title/tt0380609/
+Northfork	drama, fantasy	2003	Michael Polish	6.2	103	http://www.imdb.com/title/tt0322659/
+Shortcut to Happiness	comedy, drama, fantasy	2003	Harry Kirkpatrick	5.5	106	http://www.imdb.com/title/tt0263265/
+The Secret of Roan Inish	drama, family, fantasy	1994	John Sayles	7.3	103	http://www.imdb.com/title/tt0111112/
+The Night Flier	fantasy, horror, mystery	1997	Mark Pavia	5.7	93	http://www.imdb.com/title/tt0119784/
+A Troll in Central Park	animation, family, fantasy	1994	Don Bluth, Gary Goldman	4.9	76	http://www.imdb.com/title/tt0108395/
+The Princess and the Cobbler	animation, adventure, comedy, fantasy	1993	Richard Williams	7	72	http://www.imdb.com/title/tt0112389/
+The Clan of the Cave Bear	adventure, drama, fantasy, sci_fi	1986	Michael Chapman	5	98	http://www.imdb.com/title/tt0090848/
+Dolls	fantasy, horror	1987	Stuart Gordon	6.2	77	http://www.imdb.com/title/tt0092906/
+Jack and the Beanstalk	adventure, comedy, family, fantasy	2010	Gary J. Tunnicliffe	4.8	94	http://www.imdb.com/title/tt1079968/
+The Flying Machine	animation, adventure, family, fantasy	2011	Martin Clapp, Dorota Kobiela	4.4	85	http://www.imdb.com/title/tt1537314/
+Donovan's Echo	drama, fantasy, mystery, sci_fi, thriller	2011	Jim Cliffe	5.5		http://www.imdb.com/title/tt1743922/
+A Heavenly Vintage	drama, fantasy, romance	2009	Niki Caro	5.2	120	http://www.imdb.com/title/tt0954544/
+Midnight Chronicles	action, adventure, fantasy	2010	Christian T. Petersen	3.7	100	http://www.imdb.com/title/tt1079372/
+Imaginaerum	drama, fantasy, musical	2012	Stobe Harju	5.7		http://www.imdb.com/title/tt1959409/
+Hammer of the Gods	action, adventure, drama, fantasy, horror, thriller	2009	Todor 'Toshko' Chapkanov	3		http://www.imdb.com/title/tt1260572/
+New Order	fantasy, sci_fi, thriller	2012	Marco Rosson	3.3	90	http://www.imdb.com/title/tt1954688/
+Aladdin and the Death Lamp	adventure, fantasy, horror	2012	Mario Azzopardi	3.5	120	http://www.imdb.com/title/tt2415710/
+Malice in Wonderland	fantasy	2009	Simon Fellows	5.8	87	http://www.imdb.com/title/tt0374853/
+Sleepwalking Theo	drama, fantasy, mystery	2010	Linda Hunter	6.6	46	http://www.imdb.com/title/tt1800736/
+Afro Samurai: Resurrection	animation, action, adventure, drama, fantasy, sci_fi	2009	Fuminori Kizaki	7.2	101	http://www.imdb.com/title/tt1265998/
+Dawn of the Dragonslayer	action, adventure, fantasy	2011	Anne K. Black	3.9	97	http://www.imdb.com/title/tt1734582/
+Before You Say 'I Do'	comedy, drama, fantasy, romance	2009	Paul Fox	5.6	87	http://www.imdb.com/title/tt1318522/
+Scooby-Doo! The Mystery Begins	comedy, family, fantasy, mystery	2009	Brian Levant	5.6	120	http://www.imdb.com/title/tt1258157/
+Susie Q	comedy, drama, fantasy	1996	John Grant Weil	7.1		http://www.imdb.com/title/tt0117794/
+Avalon High	drama, family, fantasy	2010	Stuart Gillard	5.4		http://www.imdb.com/title/tt1614950/
+The Mark	action, fantasy, sci_fi, thriller	2012	James Chankin	3.4		http://www.imdb.com/title/tt2058710/
+Lucky	comedy, fantasy, horror	2004	Steve Cuden	5.3	83	http://www.imdb.com/title/tt0299014/
+What If...	drama, fantasy	2010	Dallas Jenkins	6.1	111	http://www.imdb.com/title/tt1468387/
+Nephilim	animation, action, fantasy	2013	Danny Wilson			http://www.imdb.com/title/tt1243946/
+Christmas Cupid	comedy, family, fantasy, romance	2010	Gil Junger	5.3	85	http://www.imdb.com/title/tt1699746/
+Princess	family, fantasy	2008	Mark Rosman	5.3	88	http://www.imdb.com/title/tt1052352/
+Born of Hope	action, adventure, fantasy, romance	2009	Kate Madison	5.9	71	http://www.imdb.com/title/tt1301303/
+Beauty and the Beast	fantasy	2010	David Lister	3.2		http://www.imdb.com/title/tt1410295/
+Mrs. Miracle	comedy, fantasy, romance	2009	Michael M. Scott	6.1	90	http://www.imdb.com/title/tt1431115/
+Looking for Eric	comedy, drama, fantasy, sport	2009	Ken Loach	7.1	116	http://www.imdb.com/title/tt1242545/
+Wizards of Waverly Place: The Movie	adventure, comedy, drama, family, fantasy	2009	Lev L. Spiro	6.3	94	http://www.imdb.com/title/tt1369845/
+20 Years After	drama, fantasy, sci_fi	2008	Jim Torres	3.2	95	http://www.imdb.com/title/tt0825279/
+Dorothy and the Witches of Oz	action, family, fantasy	2012	Leigh Scott	4.3	101	http://www.imdb.com/title/tt2342071/
+Red: Werewolf Hunter	fantasy, horror	2010	Sheldon Wilson	4.3	88	http://www.imdb.com/title/tt1626201/
+The Good Witch's Charm	family, fantasy	2012	Craig Pryce	6.6		http://www.imdb.com/title/tt2273004/
+The Borrowers	comedy, family, fantasy	2011	Tom Harper	6.1	90	http://www.imdb.com/title/tt1975269/
+My Babysitter's a Vampire	adventure, comedy, fantasy, horror	2010	Bruce McDonald	5.7	85	http://www.imdb.com/title/tt1673423/
+Hansel and Gretel in 3D	action, adventure, fantasy	2013				http://www.imdb.com/title/tt1479244/
+Lego Star Wars: The Padawan Menace	animation, family, fantasy, sci_fi	2011	David Scott	7.2	22	http://www.imdb.com/title/tt2005268/
+Monsters vs Aliens: Mutant Pumpkins from Outer Space	animation, comedy, family, fantasy, sci_fi	2009	Peter Ramsey	6.6	30	http://www.imdb.com/title/tt1482967/
+Sands of Oblivion	action, adventure, fantasy	2007	David Flores	3.8	90	http://www.imdb.com/title/tt0977663/
+You Wish!	comedy, family, fantasy, drama	2003	Paul Hoen	6.1	84	http://www.imdb.com/title/tt0329783/
+Wishman	comedy, fantasy	1992	Michael Marvin	1.5	90	http://www.imdb.com/title/tt0103273/
+Dead Awake	fantasy, mystery, romance, thriller	2010	Omar Naim	4.4	93	http://www.imdb.com/title/tt1501652/
+The Nutcracker in 3D	action, family, fantasy, musical	2009	Andrei Konchalovsky	4.3	110	http://www.imdb.com/title/tt1041804/
+Tasmanian Devils	fantasy, horror, sci_fi	2013	Zach Lipovsky	3.6		http://www.imdb.com/title/tt2180543/
+Believe	drama, fantasy	2013				http://www.imdb.com/title/tt2592094/
+Witchville	fantasy	2010	Pearry Reginald Teo	3.8	90	http://www.imdb.com/title/tt1506458/
+The Devil's Rock	fantasy, horror, thriller, war	2011	Paul Campion	5.5	83	http://www.imdb.com/title/tt1712578/
+Under the Mountain	adventure, drama, fantasy	2009	Jonathan King	4.8	90	http://www.imdb.com/title/tt1275861/
+Witchslayer Gretl	fantasy, horror	2012	Mario Azzopardi	3.3		http://www.imdb.com/title/tt1684936/
+Doogal	animation, adventure, comedy, family, fantasy	2006	Dave Borthwick, Jean Duval	2.6	85	http://www.imdb.com/title/tt0763304/
+The Perfect Holiday	comedy, family, fantasy, romance	2007	Lance Rivera	3.7	96	http://www.imdb.com/title/tt0841032/
+Fire & Ice	adventure, fantasy, drama	2008	Jean C. Comar	4.4	84	http://www.imdb.com/title/tt1135493/
+Beowulf	action, adventure, fantasy, horror, sci_fi, thriller	1999	Graham Baker	3.8	95	http://www.imdb.com/title/tt0120604/
+Snow White: The Fairest of Them All	adventure, family, fantasy	2001	Caroline Thompson	5.6	93	http://www.imdb.com/title/tt0255605/
+Seventeen Again	comedy, family, fantasy, sci_fi	2000	Jeffrey W. Byrd	5.4	97	http://www.imdb.com/title/tt0194422/
+Jason and the Argonauts	adventure, fantasy	2000	Nick Willing	5.8	180	http://www.imdb.com/title/tt0217579/
+Sabrina the Teenage Witch	comedy, family, fantasy	1996	Tibor Takacs	5.7	91	http://www.imdb.com/title/tt0117534/
+Man of La Mancha	adventure, comedy, drama, fantasy, musical, romance	1972	Arthur Hiller	6.2	132	http://www.imdb.com/title/tt0068909/
+Three Wishes for Cinderella	drama, fantasy, family, adventure, romance	1973	Václav Vorlícek	7.6	75	http://www.imdb.com/title/tt0070832/
+Oh, God!	comedy, fantasy	1977	Carl Reiner	6.4	98	http://www.imdb.com/title/tt0076489/
+The Incredible Shrinking Woman	sci_fi, comedy, fantasy	1981	Joel Schumacher	5.1	88	http://www.imdb.com/title/tt0082558/
+Sgt. Pepper's Lonely Hearts Club Band	adventure, comedy, fantasy, musical	1978	Michael Schultz	3.5	113	http://www.imdb.com/title/tt0078239/
+House II: The Second Story	fantasy, horror, comedy	1987	Ethan Wiley	5.1	88	http://www.imdb.com/title/tt0093220/
+Teen Wolf Too	comedy, family, fantasy	1987	Christopher Leitch	3	95	http://www.imdb.com/title/tt0094118/
+Stay Tuned	comedy, fantasy	1992	Peter Hyams	5.7	88	http://www.imdb.com/title/tt0105466/
+The Meteor Man	fantasy, sci_fi, comedy	1993	Robert Townsend	4.7	100	http://www.imdb.com/title/tt0107563/
+Fluke	drama, family, fantasy	1995	Carlo Carlei	6.3	96	http://www.imdb.com/title/tt0113089/
+All Dogs Go to Heaven 2	animation, adventure, family, fantasy, romance	1996	Larry Leker, Paul Sabella	5	82	http://www.imdb.com/title/tt0115509/
+Cats Don't Dance	animation, comedy, family, fantasy, musical	1997	Mark Dindal	6.7	75	http://www.imdb.com/title/tt0118829/
+The Phantom Tollbooth	family, adventure, animation, fantasy	1970	Chuck Jones, Abe Levitow	6.6	90	http://www.imdb.com/title/tt0064806/
+Jack and the Beanstalk: The Real Story	drama, adventure, fantasy	2001	Brian Henson	6.6	180	http://www.imdb.com/title/tt0264262/
+The Magical Legend of the Leprechauns	adventure, comedy, family, fantasy, romance	1999	John Henderson	6.6	139	http://www.imdb.com/title/tt0205214/
+The Acid House	comedy, drama, fantasy	1998	Paul McGuigan	6.1	111	http://www.imdb.com/title/tt0122515/
+Fatherland	drama, fantasy, romance, thriller	1994	Christopher Menaul	6.5	106	http://www.imdb.com/title/tt0109779/
+Alice	comedy, fantasy, romance	1990	Woody Allen	6.5	102	http://www.imdb.com/title/tt0099012/
+The Perils of Gwendoline in the Land of the Yik Yak	adventure, fantasy	1984	Just Jaeckin	5	105	http://www.imdb.com/title/tt0087903/
+The Worst Witch	comedy, family, fantasy, musical	1986	Robert Young	6.6	70	http://www.imdb.com/title/tt0092239/
+A Midsummer Night's Sex Comedy	comedy, fantasy, romance	1982	Woody Allen	6.6	88	http://www.imdb.com/title/tt0084329/
+The Flight of Dragons	animation, adventure, family, fantasy, romance	1982	Jules Bass, Arthur Rankin Jr.	7.5	96	http://www.imdb.com/title/tt0083951/
+Black Moon	fantasy, sci_fi	1975	Louis Malle	6.2	95	http://www.imdb.com/title/tt0072709/
+The Golden Voyage of Sinbad	family, adventure, fantasy, action	1973	Gordon Hessler	6.7	105	http://www.imdb.com/title/tt0071569/
+The Land That Time Forgot	adventure, fantasy	1975	Kevin Connor	5.6	90	http://www.imdb.com/title/tt0073260/
+Return from Witch Mountain	family, adventure, sci_fi, fantasy	1978	John Hough	5.6	95	http://www.imdb.com/title/tt0078158/
+The Sword and the Sorcerer	action, fantasy, adventure	1982	Albert Pyun	5.5	100	http://www.imdb.com/title/tt0084749/
+The Care Bears Movie	animation, adventure, comedy, family, fantasy	1985	Arna Selznick	5.1	77	http://www.imdb.com/title/tt0088885/
+If Looks Could Kill	action, comedy, fantasy	1991	William Dear	5.2	88	http://www.imdb.com/title/tt0102095/
+Happily Ever After	family, animation, musical, fantasy	1990	John Howley	3.9	75	http://www.imdb.com/title/tt0099733/
+A Kid in King Arthur's Court	adventure, comedy, family, fantasy, romance	1995	Michael Gottlieb	4.5	89	http://www.imdb.com/title/tt0113538/
+Warriors of Virtue	action, fantasy, adventure	1997	Ronny Yu	4.2	101	http://www.imdb.com/title/tt0120479/
+The Adventures of Elmo in Grouchland	adventure, comedy, family, fantasy, musical	1999	Gary Halvorson	5.5	73	http://www.imdb.com/title/tt0159421/
+Good Boy!	comedy, drama, family, fantasy, sci_fi	2003	John Hoffman	4.9	87	http://www.imdb.com/title/tt0326900/
+Yu-Gi-Oh!: The Movie	animation, action, adventure, family, fantasy, thriller	2004	Hatsuki Tsuji	3.4	90	http://www.imdb.com/title/tt0403703/
+Escape from Tomorrow	drama, fantasy	2013	Randy Moore	7.7	103	http://www.imdb.com/title/tt2187884/
+Leprechaun 2	comedy, fantasy, horror	1994	Rodman Flender	3.8	85	http://www.imdb.com/title/tt0110329/
+Fist of the North Star	action, fantasy, sci_fi, thriller	1995	Tony Randel	3.8	103	http://www.imdb.com/title/tt0113074/
+Subspecies	fantasy, horror	1991	Ted Nicolaou	5.5	90	http://www.imdb.com/title/tt0103002/
+Babes in Toyland	adventure, family, fantasy, musical, romance	1986	Clive Donner	5	140	http://www.imdb.com/title/tt0090683/
+A Christmas Carol	comedy, drama, family, fantasy	1984	Clive Donner	7.7	100	http://www.imdb.com/title/tt0087056/
+The Year Without a Santa Claus	animation, family, fantasy, musical	1974	Jules Bass, Arthur Rankin Jr.	7.7	51	http://www.imdb.com/title/tt0072424/
+The People That Time Forgot	adventure, fantasy, sci_fi	1977	Kevin Connor	5.2	90	http://www.imdb.com/title/tt0076535/
+The Abominable Dr. Phibes	fantasy, horror	1971	Robert Fuest	7.1	94	http://www.imdb.com/title/tt0066740/
+The Little Prince	family, fantasy, musical, sci_fi	1974	Stanley Donen	6.1	88	http://www.imdb.com/title/tt0071762/
+Sinbad and the Eye of the Tiger	action, adventure, family, fantasy	1977	Sam Wanamaker	6.1	113	http://www.imdb.com/title/tt0076716/
+The Chipmunk Adventure	animation, adventure, comedy, family, fantasy, musical	1987	Janice Karman	6.8	77	http://www.imdb.com/title/tt0092752/
+Ernest Saves Christmas	comedy, family, fantasy	1988	John Cherry	5	95	http://www.imdb.com/title/tt0095107/
+Vice Versa	comedy, fantasy	1988	Brian Gilbert	5.5	98	http://www.imdb.com/title/tt0096380/
+To Gillian on Her 37th Birthday	drama, fantasy	1996	Michael Pressman	5.6	93	http://www.imdb.com/title/tt0117924/
+Digimon: The Movie	animation, action, adventure, fantasy, sci_fi, thriller	2000	Mamoru Hosoda, Shigeyasu Yamauchi	5.2	82	http://www.imdb.com/title/tt0259974/
+Pound	fantasy	1970	Robert Downey Sr.	5.9	92	http://www.imdb.com/title/tt0066234/
+A Christmas Carol	drama, fantasy	1999	David Jones	7.2	95	http://www.imdb.com/title/tt0216621/
+A Fish Tale	animation, adventure, comedy, drama, family, fantasy, sci_fi	2000	Stefan Fjeldmark, Michael Hegner	5.7	80	http://www.imdb.com/title/tt0168856/
+Rumpelstiltskin	fantasy, horror	1995	Mark Jones	4.1	87	http://www.imdb.com/title/tt0114306/
+Lady in White	fantasy, horror, mystery, thriller	1988	Frank LaLoggia	6.6	112	http://www.imdb.com/title/tt0095484/
+Alice's Adventures in Wonderland	adventure, family, fantasy, musical	1972	William Sterling	5.4	101	http://www.imdb.com/title/tt0068190/
+One Magic Christmas	family, fantasy	1985	Phillip Borsos	6.3	89	http://www.imdb.com/title/tt0089731/
+18 Again!	comedy, fantasy	1988	Paul Flaherty	5.3	93	http://www.imdb.com/title/tt0094593/
+Warlock: The Armageddon	fantasy, horror	1993	Anthony Hickox	5	98	http://www.imdb.com/title/tt0108517/
+The Adventures of Pinocchio	fantasy, family, adventure, musical	1996	Steve Barron	5.3	96	http://www.imdb.com/title/tt0115472/
+The Batman Superman Movie: World's Finest	animation, action, adventure, family, fantasy, sci_fi	1997	Toshihiko Masuda	7.7	64	http://www.imdb.com/title/tt0169590/
+Starcrash	action, adventure, fantasy, sci_fi	1978	Lewis Coates	3.8	92	http://www.imdb.com/title/tt0079946/
+O Lucky Man!	comedy, drama, fantasy, music	1973	Lindsay Anderson	7.6	178	http://www.imdb.com/title/tt0070464/
+The Heavenly Kid	comedy, fantasy, romance	1985	Cary Medoway	5.7	90	http://www.imdb.com/title/tt0089265/
+My Little Pony: The Movie	animation, family, fantasy	1986	Michael Joens	5.4	86	http://www.imdb.com/title/tt0091584/
+Made in Heaven	comedy, fantasy, romance	1987	Alan Rudolph	6	103	http://www.imdb.com/title/tt0093467/
+Prancer	drama, family, fantasy	1989	John Hancock	5.8	103	http://www.imdb.com/title/tt0098115/
+Snow Queen	family, fantasy	2002	David Wu	6.2	180	http://www.imdb.com/title/tt0210294/
+The Specials	action, comedy, fantasy, sci_fi	2000	Craig Mazin	5.6	82	http://www.imdb.com/title/tt0181836/
+Purgatory	fantasy, western	1999	Uli Edel	6.6	94	http://www.imdb.com/title/tt0158131/
+The Fantastic Four	action, adventure, sci_fi, fantasy	1994	Oley Sassone	3.8	90	http://www.imdb.com/title/tt0109770/
+Waxwork II: Lost in Time	comedy, fantasy, horror, sci_fi	1992	Anthony Hickox	5.3	104	http://www.imdb.com/title/tt0105792/
+Prospero's Books	fantasy, drama	1991	Peter Greenaway	6.6	124	http://www.imdb.com/title/tt0102722/
+Ghoulies	comedy, fantasy, horror	1985	Luca Bercovici	3.5	81	http://www.imdb.com/title/tt0089200/
+Mazes and Monsters	fantasy, drama	1982	Steven Hilliard Stern	4.2	100	http://www.imdb.com/title/tt0084314/
+Resurrection	drama, fantasy	1980	Daniel Petrie	7.1	103	http://www.imdb.com/title/tt0081414/
+Deathstalker	action, fantasy, adventure	1983	John Watson	3.9	80	http://www.imdb.com/title/tt0087127/
+Super Fuzz	action, sci_fi, comedy, fantasy	1980	Sergio Corbucci	6	97	http://www.imdb.com/title/tt0082924/
+Images	drama, fantasy, horror	1972	Robert Altman	7.1	101	http://www.imdb.com/title/tt0068732/
+Taste the Blood of Dracula	drama, fantasy, horror, thriller	1970	Peter Sasdy	6.2	91	http://www.imdb.com/title/tt0065073/
+The Slipper and the Rose: The Story of Cinderella	adventure, family, fantasy, musical, romance	1976	Bryan Forbes	6.5	146	http://www.imdb.com/title/tt0075232/
+Audrey Rose	drama, fantasy, horror, thriller	1977	Robert Wise	5.7	113	http://www.imdb.com/title/tt0075704/
+The Island of Dr. Moreau	adventure, fantasy, horror, romance, sci_fi, thriller	1977	Don Taylor	5.7	99	http://www.imdb.com/title/tt0076210/
+Two of a Kind	comedy, romance, fantasy	1983	John Herzfeld	4.2	88	http://www.imdb.com/title/tt0086494/
+Like Father Like Son	comedy, fantasy	1987	Rod Daniel	4.8	96	http://www.imdb.com/title/tt0093418/
+The Butcher's Wife	comedy, romance, fantasy	1991	Terry Hughes	5	107	http://www.imdb.com/title/tt0101523/
+Delirious	comedy, fantasy	1991	Tom Mankiewicz	5.4	96	http://www.imdb.com/title/tt0101701/
+Prelude to a Kiss	comedy, fantasy, romance	1992	Norman René	5.4	105	http://www.imdb.com/title/tt0105165/
+Destiny Turns on the Radio	crime, comedy, fantasy	1995	Jack Baran	4.3	102	http://www.imdb.com/title/tt0112854/
+The King and I	animation, family, fantasy, musical	1999	Richard Rich	3.4	87	http://www.imdb.com/title/tt0160429/
+Scrooge	fantasy, musical	1970	Ronald Neame	7.2	113	http://www.imdb.com/title/tt0066344/
+Deeply	drama, fantasy, mystery, romance	2000	Sheri Elwood	5.8	101	http://www.imdb.com/title/tt0218141/
+Kaena: The Prophecy	animation, adventure, family, fantasy, sci_fi	2003	Chris Delaporte, Pascal Pinon	6	85	http://www.imdb.com/title/tt0297753/
+Picking Up the Pieces	comedy, fantasy	2000	Alfonso Arau	4.3	95	http://www.imdb.com/title/tt0192455/
+Halloweentown II: Kalabar's Revenge	adventure, family, fantasy	2001	Mary Lambert	6	81	http://www.imdb.com/title/tt0274761/
+The Canterville Ghost	family, drama, fantasy	1996	Syd Macartney	6.2	92	http://www.imdb.com/title/tt0115820/
+Double, Double, Toil and Trouble	adventure, comedy, family, fantasy, horror	1993	Stuart Margolin	5	96	http://www.imdb.com/title/tt0106763/
+How to Get Ahead in Advertising	comedy, fantasy	1989	Bruce Robinson	6.8	90	http://www.imdb.com/title/tt0097531/
+Highway to Hell	adventure, comedy, fantasy, horror	1991	Ate de Jong	5.7	94	http://www.imdb.com/title/tt0104418/
+The Barbarians	fantasy, adventure	1987	Ruggero Deodato	4.3	87	http://www.imdb.com/title/tt0092615/
+Tempest	comedy, drama, fantasy, romance	1982	Paul Mazursky	6.3	140	http://www.imdb.com/title/tt0084776/
+Dracula A.D. 1972	fantasy, horror	1972	Alan Gibson	5.6	96	http://www.imdb.com/title/tt0068505/
+WR: Mysteries of the Organism	comedy, drama, fantasy	1971	Dusan Makavejev	6.8	84	http://www.imdb.com/title/tt0067958/
+Face to Face	drama, fantasy	1976	Ingmar Bergman	7.5	114	http://www.imdb.com/title/tt0074147/
+Lisa and the Devil	fantasy, horror, mystery, thriller	1974	Mario Bava, Mickey Lion	6.2	92	http://www.imdb.com/title/tt0068863/
+Godzilla vs. Mechagodzilla	action, fantasy, horror, sci_fi	1974	Jun Fukuda	6	84	http://www.imdb.com/title/tt0071565/
+Hercules	adventure, fantasy	1983	Lewis Coates	3.2	98	http://www.imdb.com/title/tt0085672/
+Date with an Angel	comedy, fantasy, romance	1987	Tom McLoughlin	5.2	105	http://www.imdb.com/title/tt0092834/
+The Princess and the Goblin	animation, fantasy	1991	József Gémes	6.3	82	http://www.imdb.com/title/tt0107875/
+Gordy	comedy, drama, family, fantasy	1995	Mark Lewis	3.4	90	http://www.imdb.com/title/tt0113199/
+Three Wishes	drama, fantasy	1995	Martha Coolidge	5.8	115	http://www.imdb.com/title/tt0114663/
+On a Clear Day You Can See Forever	comedy, drama, fantasy, musical, romance	1970	Vincente Minnelli	6.4	129	http://www.imdb.com/title/tt0066181/
+Megiddo: The Omega Code 2	thriller, fantasy	2001	Brian Trenchard-Smith	3.9	104	http://www.imdb.com/title/tt0263728/
+Nothing	comedy, fantasy	2003	Vincenzo Natali	6.3	90	http://www.imdb.com/title/tt0298482/
+The Convent	comedy, fantasy, horror	2000	Mike Mendez	4.8	79	http://www.imdb.com/title/tt0217331/
+Motorama	adventure, comedy, crime, drama, fantasy, mystery, sci_fi, thriller	1991	Barry Shils	6	90	http://www.imdb.com/title/tt0104922/
+Evil Toons	animation, comedy, horror, fantasy	1992	Fred Olen Ray	3.1	90	http://www.imdb.com/title/tt0099524/
+Scooby-Doo and the Ghoul School	animation, adventure, comedy, family, fantasy, horror, mystery	1988	Charles A. Nichols, Ray Patterson	6.2	90	http://www.imdb.com/title/tt0189071/
+Paperhouse	drama, fantasy, horror, mystery, romance, thriller	1988	Bernard Rose	6.7	92	http://www.imdb.com/title/tt0098061/
+KISS Meets the Phantom of the Park	fantasy, horror, music, mystery, sci_fi	1978	Gordon Hessler	4	96	http://www.imdb.com/title/tt0077788/
+Lost Horizon	fantasy, musical, adventure, drama, romance	1973	Charles Jarrott	4.7	150	http://www.imdb.com/title/tt0070337/
+Brewster McCloud	comedy, fantasy	1970	Robert Altman	6.8	105	http://www.imdb.com/title/tt0065492/
+Lisztomania	biography, comedy, fantasy, musical	1975	Ken Russell	6	103	http://www.imdb.com/title/tt0073298/
+Oh, God! Book II	comedy, fantasy	1980	Gilbert Cates	4.8	94	http://www.imdb.com/title/tt0081268/
+Eliminators	action, adventure, fantasy, sci_fi, thriller	1986	Peter Manoogian	3.5	96	http://www.imdb.com/title/tt0091003/
+Heart Condition	action, comedy, drama, fantasy	1990	James D. Parriott	5.4	100	http://www.imdb.com/title/tt0099750/
+The Nutcracker	family, fantasy, music	1993	Emile Ardolino	5.3	92	http://www.imdb.com/title/tt0107719/
+Bogus	comedy, family, fantasy	1996	Norman Jewison	4.9	110	http://www.imdb.com/title/tt0115725/
+Tarzan and the Lost City	action, adventure, family, fantasy	1998	Carl Schenkel	3.8	83	http://www.imdb.com/title/tt0120856/
+Riverworld	fantasy, sci_fi	2003	Kari Skogland	5	86	http://www.imdb.com/title/tt0310952/
+Dragon Ball Z: Son Goku Super Star	animation, action, adventure, fantasy, sci_fi	1989	Daisuke Nishio	6.9	41	http://www.imdb.com/title/tt0142235/
+Sword of the Valiant: The Legend of Sir Gawain and the Green Knight	action, adventure, fantasy, romance	1984	Stephen Weeks	4.3	102	http://www.imdb.com/title/tt0084750/
+Absolute Beginners	drama, fantasy, musical, romance	1986	Julien Temple	5.4	108	http://www.imdb.com/title/tt0090585/
+Desperate Living	comedy, crime, fantasy, horror	1977	John Waters	6.8	90	http://www.imdb.com/title/tt0075936/
+The Strongest Man in the World	family, comedy, fantasy	1975	Vincent McEveety	5.7	92	http://www.imdb.com/title/tt0073760/
+The Island at the Top of the World	adventure, family, fantasy, sci_fi	1974	Robert Stevenson	6.1	93	http://www.imdb.com/title/tt0071671/
+Celine and Julie Go Boating	comedy, drama, fantasy, mystery	1974	Jacques Rivette	7.5	193	http://www.imdb.com/title/tt0071381/
+At the Earth's Core	sci_fi, adventure, fantasy	1976	Kevin Connor	5.1	89	http://www.imdb.com/title/tt0074157/
+The Shaggy D.A.	comedy, family, fantasy	1976	Robert Stevenson	5.4	91	http://www.imdb.com/title/tt0075200/
+Yor, the Hunter from the Future	action, adventure, fantasy, sci_fi	1983	Anthony M. Dawson	3.7	88	http://www.imdb.com/title/tt0084935/
+Oh, God! You Devil	comedy, fantasy	1984	Paul Bogart	5.1	97	http://www.imdb.com/title/tt0087835/
+The Bride	fantasy, horror, romance, sci_fi	1985	Franc Roddam	5.1	118	http://www.imdb.com/title/tt0088851/
+Care Bears Movie II: A New Generation	animation, family, fantasy	1986	Dale Schott	4.5	76	http://www.imdb.com/title/tt0090799/
+Hot to Trot	comedy, fantasy	1988	Michael Dinner	3.9	83	http://www.imdb.com/title/tt0095326/
+Teacher's Pet	animation, family, comedy, fantasy, musical	2004	Timothy Björklund	5.5	74	http://www.imdb.com/title/tt0350194/
+Beastmaster 2: Through the Portal of Time	fantasy, action, adventure, sci_fi	1991	Sylvio Tabet	3.4	107	http://www.imdb.com/title/tt0101412/
+Rawhead Rex	fantasy, horror, mystery, thriller	1986	George Pavlou	4.4	89	http://www.imdb.com/title/tt0091829/
+Maid to Order	fantasy, comedy	1987	Amy Jones	5.2	93	http://www.imdb.com/title/tt0093476/
+Despair	drama, fantasy	1978	Rainer Werner Fassbinder	7	119	http://www.imdb.com/title/tt0077421/
+The Blue Bird	adventure, drama, family, fantasy, mystery, thriller	1976	George Cukor	5.1	99	http://www.imdb.com/title/tt0074225/
+Vampire Circus	fantasy, horror	1972	Robert William Young	6.4	87	http://www.imdb.com/title/tt0067924/
+200 Motels	comedy, fantasy, music	1971	Tony Palmer, Frank Zappa	5.3	98	http://www.imdb.com/title/tt0066732/
+Wholly Moses!	comedy, fantasy, history	1980	Gary Weis	3.7	103	http://www.imdb.com/title/tt0081751/
+Hello Again	comedy, drama, fantasy, romance	1987	Frank Perry	4.6	96	http://www.imdb.com/title/tt0093175/
+Wired	biography, comedy, drama, fantasy	1989	Larry Peerce	4.6	112	http://www.imdb.com/title/tt0098660/
+The Navigator: A Mediaeval Odyssey	action, adventure, drama, fantasy, mystery, thriller	1988	Vincent Ward	6.7	90	http://www.imdb.com/title/tt0095709/
+Circle of Iron	action, adventure, fantasy	1978	Richard Moore	5.6	102	http://www.imdb.com/title/tt0078975/
+The Water Babies	animation, adventure, family, fantasy, musical	1978	Lionel Jeffries	5.8	92	http://www.imdb.com/title/tt0078477/
+From Beyond the Grave	fantasy, horror	1974	Kevin Connor	6.6	97	http://www.imdb.com/title/tt0070078/
+Dr. Strange	fantasy	1978	Philip DeGuere	5.4	93	http://www.imdb.com/title/tt0077469/
+Rudolph's Shiny New Year	animation, family, fantasy, musical	1976	Jules Bass, Arthur Rankin Jr.	6.6	60	http://www.imdb.com/title/tt0073640/
+Tales of Beatrix Potter	family, fantasy, musical	1971	Reginald Mills	6.8	90	http://www.imdb.com/title/tt0067570/
+The Ghastly Love of Johnny X	comedy, fantasy, musical, sci_fi	2012	Paul Bunnell	5.5	106	http://www.imdb.com/title/tt1754633/
+Superman: Requiem	action, adventure, drama, fantasy, sci_fi	2011	Gene Fallaize	4.5	82	http://www.imdb.com/title/tt1667443/
+You're So Cupid!	fantasy, romance	2010	John Lyde	5.2		http://www.imdb.com/title/tt1464606/
+Almighty Thor	adventure, fantasy	2011	Christopher Ray	1.9	92	http://www.imdb.com/title/tt1792794/
+Special	drama, fantasy	2006	Hal Haberman, Jeremy Passmore	6.8	81	http://www.imdb.com/title/tt0479162/
+Minotaur	adventure, fantasy, horror	2006	Jonathan English	3.5	93	http://www.imdb.com/title/tt0415160/
+Snowmageddon	adventure, fantasy	2011	Sheldon Wilson	3.8		http://www.imdb.com/title/tt1876446/
+Mandrake	adventure, fantasy, horror	2010	Tripp Reed	3.7	89	http://www.imdb.com/title/tt1523367/
+A Fairly Odd Movie: Grow Up, Timmy Turner!	family, fantasy	2011	Savage Steve Holland	5		http://www.imdb.com/title/tt1696192/
+The Wonder	adventure, family, fantasy	2014	Peter Hewitt			http://www.imdb.com/title/tt2374684/
+Gingerdead Man 3: Saturday Night Cleaver	comedy, fantasy, horror	2011	William Butler, Silvia St. Croix	3.9	78	http://www.imdb.com/title/tt1293561/
+The Swan Princess Christmas	animation, adventure, fantasy, musical	2012	Richard Rich	3.6	90	http://www.imdb.com/title/tt1984279/
+Dragon Lore: Curse of the Shadow	action, fantasy	2013	John Lyde		100	http://www.imdb.com/title/tt2250234/
+Hercules	adventure, drama, fantasy	2005	Roger Young	5.7	240	http://www.imdb.com/title/tt0420408/
+Roadkill	fantasy, horror, sci_fi	2011	Johannes Roberts	3.9	88	http://www.imdb.com/title/tt1637713/
+Kingdom of Gladiators	action, adventure, fantasy	2011	Stefano Milla	1.7	85	http://www.imdb.com/title/tt1786497/
+Reign	drama, fantasy	2013	Brad Silberling			http://www.imdb.com/title/tt2710394/
+The Legends of Nethiah	action, adventure, drama, fantasy, sci_fi	2012	Russ Emanuel, Tomax Aponte	2.7	93	http://www.imdb.com/title/tt1296172/
+Sprung! The Magic Roundabout	animation, adventure, comedy, family, fantasy	2005	Dave Borthwick, Jean Duval	5.2	85	http://www.imdb.com/title/tt0339334/
+A Day Without a Mexican	comedy, drama, fantasy, mystery	2004	Sergio Arau	4.7	100	http://www.imdb.com/title/tt0377744/
+Crusade in Jeans	adventure, family, fantasy, war	2006	Ben Sombogaart	6	125	http://www.imdb.com/title/tt0381111/
+Fading of the Cries	fantasy, horror	2011	Brian A. Metcalf	3.3	94	http://www.imdb.com/title/tt1262406/
+Kim Possible: So the Drama	animation, adventure, comedy, family, fantasy, sci_fi	2005	Steve Loter	7	71	http://www.imdb.com/title/tt0446724/
+Black Forest	fantasy, horror, sci_fi	2012	Patrick Dinhut	4.3		http://www.imdb.com/title/tt1776088/
+Wyvern	fantasy, horror, sci_fi, thriller	2009	Steven R. Monroe	4.8	89	http://www.imdb.com/title/tt1331335/
+The Great Ghost Rescue	family, fantasy, horror	2011	Yann Samuell	4.5	95	http://www.imdb.com/title/tt1185244/
+Happily N'Ever After 2	animation, adventure, comedy, family, fantasy	2009	Steven E. Gordon, Boyd Kirkland	3.8	75	http://www.imdb.com/title/tt1235837/
+Were the World Mine	adventure, comedy, fantasy, musical, romance	2008	Tom Gustafson	6.8	95	http://www.imdb.com/title/tt0476991/
+The Selection	fantasy, sci_fi	2013	Alex Graves			http://www.imdb.com/title/tt2663632/
+Dragon Hunter	action, adventure, fantasy, thriller	2009	Stephen Shimek	3.8	90	http://www.imdb.com/title/tt1290472/
+The Pagan Queen	fantasy, history, romance	2009	Constantin Werner	2.7	99	http://www.imdb.com/title/tt1096997/
+Naughty or Nice	drama, fantasy	2012	David Mackay	6.1	90	http://www.imdb.com/title/tt2417134/
+The Hundred	sci_fi	2013			60	http://www.imdb.com/title/tt2661044/
+Hydra	fantasy, horror, sci_fi	2009	Andrew Prendergast	3.4	94	http://www.imdb.com/title/tt1034447/
+The Gingerdead Man	comedy, fantasy, horror	2005	Charles Band	3.4	70	http://www.imdb.com/title/tt0364376/
+Wolvesbayne	fantasy, horror	2009	Griff Furst	3.8	92	http://www.imdb.com/title/tt1266121/
+Trading Mom	comedy, family, fantasy	1994	Tia Brelis	4.9	82	http://www.imdb.com/title/tt0111470/
+Left Behind: World at War	action, drama, fantasy, sci_fi, thriller	2005	Craig R. Baxley	4.4	95	http://www.imdb.com/title/tt0443567/
+Perfect Creature	action, drama, fantasy, horror, sci_fi	2006	Glenn Standring	5.3	88	http://www.imdb.com/title/tt0403407/
+The Adventures of Chris Fable	action, adventure, drama, family, fantasy	2010	Andrew Wiest	2.3		http://www.imdb.com/title/tt1336619/
+Santa's Slay	comedy, fantasy, horror	2005	David Steiman	5.2	78	http://www.imdb.com/title/tt0393685/
+Thirteen Erotic Ghosts	fantasy	2002	Nicholas Medina	4.3	71	http://www.imdb.com/title/tt0329954/
+Iron Doors	fantasy, mystery, thriller	2010	Stephen Manuel	4.3	80	http://www.imdb.com/title/tt1520956/
+Carny	fantasy, horror, sci_fi, thriller	2009	Sheldon Wilson	4.3	88	http://www.imdb.com/title/tt1397497/
+Hansel and Gretel	family, musical, fantasy	1987	Len Talan	6.7	84	http://www.imdb.com/title/tt0093144/
+Dark Horse	drama, fantasy	2012	Roland Emmerich	2.3		http://www.imdb.com/title/tt2202377/
+Idiots and Angels	animation, comedy, drama, fantasy	2008	Bill Plympton	6.8	78	http://www.imdb.com/title/tt1013607/
+Gingerdead Man 2: Passion of the Crust	comedy, fantasy, horror	2008	Silvia St. Croix	4.4	82	http://www.imdb.com/title/tt1161646/
+Halloweentown High	family, comedy, fantasy	2004	Mark A.Z. Dippé	5.8	82	http://www.imdb.com/title/tt0414078/
+The Stupidest Angel	action, comedy, fantasy, music	2013	Carl Goldstein			http://www.imdb.com/title/tt1470832/
+The Sorcerer's Apprentice	adventure, family, fantasy	2002	David Lister	4.7	86	http://www.imdb.com/title/tt0120166/
+Merlin and the Book of Beasts	fantasy, thriller	2009	Warren Sonoda	3.9		http://www.imdb.com/title/tt1320346/
+Miss Castaway and the Island Girls	adventure, comedy, fantasy	2004	Bryan Michael Stoller	2	90	http://www.imdb.com/title/tt0395669/
+Beyond Sherwood Forest	action, adventure, fantasy	2009	Peter DeLuise	4.8	93	http://www.imdb.com/title/tt1331323/
+Mo	comedy, drama, family, fantasy	2007	Brian Scott Lederman	6.8	105	http://www.imdb.com/title/tt1010027/
+Puppet Master X: Axis Rising	fantasy, horror, sci_fi	2012	Charles Band	3.4	86	http://www.imdb.com/title/tt2301900/
+Chupacabra vs. the Alamo	action, fantasy, horror	2013	Terry Ingram	2.7		http://www.imdb.com/title/tt2247748/
+Goblin	fantasy, horror, sci_fi	2010	Jeffery Lando	4.2	92	http://www.imdb.com/title/tt1512310/
+Ogre	fantasy, horror, sci_fi	2008	Steven R. Monroe	3.9	90	http://www.imdb.com/title/tt0923824/
+Return to Halloweentown	comedy, family, fantasy	2006	David S. Jackson	5.6	88	http://www.imdb.com/title/tt0816520/
+Twitches	comedy, drama, family, fantasy	2005	Stuart Gillard	5.2	86	http://www.imdb.com/title/tt0467421/
+Wound	fantasy, horror	2010	David Blyth	3.2	76	http://www.imdb.com/title/tt1663956/
+King of the Lost World	action, adventure, fantasy, sci_fi	2005	Leigh Scott	2.2	80	http://www.imdb.com/title/tt0478188/
+George and the Dragon	action, adventure, comedy, fantasy, romance	2004	Tom Reeve	5.6	93	http://www.imdb.com/title/tt0306892/
+Dinosaur Island	action, comedy, fantasy	1994	Fred Olen Ray, Jim Wynorski	2.7	85	http://www.imdb.com/title/tt0109627/
+The Gamers: Dorkness Rising	action, adventure, comedy, family, fantasy	2008	Matt Vancil	7	105	http://www.imdb.com/title/tt0447166/
+Strigoi	comedy, drama, fantasy, horror	2009	Faye Jackson	5.6	105	http://www.imdb.com/title/tt1117636/
+Skellig: The Owl Man	drama, family, fantasy, mystery	2009	Aj Jankel	6.3	102	http://www.imdb.com/title/tt0382301/
+Tale of the Mummy	adventure, fantasy, horror, sci_fi	1998	Russell Mulcahy	3.5	88	http://www.imdb.com/title/tt0127919/
+The Bunnyman	animation, fantasy, horror, sci_fi	2011	ScreamerClauz	3.3		http://www.imdb.com/title/tt1691454/
+Don't Look Under the Bed	family, fantasy	1999	Kenneth Johnson	6.4	100	http://www.imdb.com/title/tt0208101/
+Quest for Zhu	animation, adventure, family, fantasy	2011	Bob Doucette	4.8	72	http://www.imdb.com/title/tt2073154/
+Prince Valiant	adventure, fantasy	1997	Anthony Hickox	4.9	91	http://www.imdb.com/title/tt0119947/
+Alice Through the Looking Glass	fantasy, family	1998	John Henderson	5.5	83	http://www.imdb.com/title/tt0167758/
+King Solomon's Mines	action, adventure, fantasy, romance	2004	Steve Boyum	5.9	173	http://www.imdb.com/title/tt0397501/
+Super Capers: The Origins of Ed and the Missing Bullion	action, adventure, comedy, fantasy, sci_fi	2009	Ray Griggs	3.3	98	http://www.imdb.com/title/tt1161064/
+Adventures of a Teenage Dragonslayer	adventure, comedy, family, fantasy	2010	Andrew Lauer	2.7	93	http://www.imdb.com/title/tt1373149/
+Monsterwolf	fantasy, horror	2010	Todor Chapkanov	3.6		http://www.imdb.com/title/tt1535608/
+Hansel & Gretel	comedy, family, fantasy, thriller	2002	Gary J. Tunnicliffe	2.8	89	http://www.imdb.com/title/tt0293832/
+Sole Survivor	drama, fantasy	1970	Paul Stanley	7.5	100	http://www.imdb.com/title/tt0065007/
+Steambath	drama, fantasy	1973	Burt Brinckerhoff	7.5	90	http://www.imdb.com/title/tt0167415/
+A Thief in the Night	drama, fantasy	1972	Donald W. Thompson	4.8	69	http://www.imdb.com/title/tt0070795/
+The Pied Piper	drama, fantasy, musical	1972	Jacques Demy	6.6	90	http://www.imdb.com/title/tt0069086/
+I Never Promised You a Rose Garden	drama, fantasy	1977	Anthony Page	6.3	96	http://www.imdb.com/title/tt0076172/
+The Man Who Wasn't There	action, adventure, comedy, fantasy, romance, sci_fi	1983	Bruce Malmuth	3.2	111	http://www.imdb.com/title/tt0085892/
+Rainbow Brite and the Star Stealer	animation, adventure, family, fantasy	1985	Bernard Deyriès, Kimio Yabuki	6.1	85	http://www.imdb.com/title/tt0089877/
+My Demon Lover	comedy, fantasy, horror	1987	Charlie Loventhal	4.1	90	http://www.imdb.com/title/tt0093589/
+The Nutcracker Prince	animation, adventure, family, fantasy	1990	Paul Schibli	6.4	75	http://www.imdb.com/title/tt0100281/
+Freddie as F.R.O.7.	animation, adventure, fantasy, musical	1992	Jon Acevski	4.6	91	http://www.imdb.com/title/tt0104298/
+The Man Who Haunted Himself	drama, fantasy, horror, mystery, thriller	1970	Basil Dearden	6.2	89	http://www.imdb.com/title/tt0066053/
+Pufnstuf	family, comedy, musical, fantasy	1970	Hollingsworth Morse	6	98	http://www.imdb.com/title/tt0066256/
+Bizarre	fantasy, horror	1970	Antony Balch	4.4	91	http://www.imdb.com/title/tt0066349/
+Zaat	fantasy, sci_fi	1971	Don Barton	2.1	100	http://www.imdb.com/title/tt0072666/
+Shinbone Alley	animation, comedy, fantasy, musical, romance	1971	John David Wilson, David Detiege	5	85	http://www.imdb.com/title/tt0067749/
+A Matter of Time	drama, fantasy, romance	1976	Vincente Minnelli	4.8	97	http://www.imdb.com/title/tt0074878/
+Lovesick	comedy, fantasy, romance	1983	Marshall Brickman	4.7	95	http://www.imdb.com/title/tt0085873/
+Santa and the Three Bears	animation, family, fantasy	1970	Tony Benedict, Barry Mahon	6.6	46	http://www.imdb.com/title/tt0066328/
+The Amazing Transplant	fantasy, mystery	1970	Louis Silverman	3.9	77	http://www.imdb.com/title/tt0065390/
+Flesh Feast	fantasy, mystery, sci_fi, thriller	1970	Brad F. Grinter	1.7	72	http://www.imdb.com/title/tt0065727/

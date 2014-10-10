@@ -1,0 +1,1043 @@
+Title	Genres	Year	Directors	IMDb Rating	Runtime (mins)	URL
+Lincoln	biography, drama, history, war	2012	Steven Spielberg	7.5	150	http://www.imdb.com/title/tt0443272/
+Army of Shadows	drama, war	1969	Jean-Pierre Melville	8.1	145	http://www.imdb.com/title/tt0064040/
+Tae Guk Gi: The Brotherhood of War	action, drama, war	2004	Je-gyu Kang	8	140	http://www.imdb.com/title/tt0386064/
+The Front Line	drama, history, war	2011	Hun Jang	7.1	133	http://www.imdb.com/title/tt2007387/
+J.S.A.: Joint Security Area	drama, thriller, war	2000	Chan-wook Park	7.8	110	http://www.imdb.com/title/tt0260991/
+Tigerland	drama, war	2000	Joel Schumacher	7	101	http://www.imdb.com/title/tt0170691/
+The Quiet American	drama, mystery, romance, thriller, war	2002	Phillip Noyce	7.1	101	http://www.imdb.com/title/tt0258068/
+Rescue Dawn	adventure, biography, drama, war	2006	Werner Herzog	7.4	126	http://www.imdb.com/title/tt0462504/
+Buffalo Soldiers	comedy, crime, drama, thriller, war	2001	Gregor Jordan	6.8	98	http://www.imdb.com/title/tt0252299/
+Cold Mountain	drama, romance, war	2003	Anthony Minghella	7.2	154	http://www.imdb.com/title/tt0159365/
+Ride with the Devil	drama, romance, war, western	1999	Ang Lee	6.6	138	http://www.imdb.com/title/tt0134154/
+Three Kings	action, adventure, comedy, drama, war	1999	David O. Russell	7.2	114	http://www.imdb.com/title/tt0120188/
+Courage Under Fire	drama, mystery, thriller, war	1996	Edward Zwick	6.5	117	http://www.imdb.com/title/tt0115956/
+Jarhead	biography, drama, war	2005	Sam Mendes	7	125	http://www.imdb.com/title/tt0418763/
+Green Zone	action, drama, thriller, war	2010	Paul Greengrass	6.9	115	http://www.imdb.com/title/tt0947810/
+The Unit	action, drama, thriller, war	2006		7.2	60	http://www.imdb.com/title/tt0460690/
+Lions for Lambs	drama, thriller, war	2007	Robert Redford	6.1	92	http://www.imdb.com/title/tt0891527/
+Restrepo	documentary, war	2010	Tim Hetherington, Sebastian Junger	7.5	93	http://www.imdb.com/title/tt1559549/
+Lone Survivor	action, drama, thriller, war	2013	Peter Berg			http://www.imdb.com/title/tt1091191/
+Combat Hospital	drama, war	2011		6.8	42	http://www.imdb.com/title/tt1829891/
+Home of the Brave	action, drama, war	2006	Irwin Winkler	5.5	106	http://www.imdb.com/title/tt0763840/
+Stop-Loss	drama, war	2008	Kimberly Peirce	6.4	112	http://www.imdb.com/title/tt0489281/
+Generation Kill	drama, war	2008		8.6		http://www.imdb.com/title/tt0995832/
+The Hurt Locker	drama, thriller, war	2008	Kathryn Bigelow	7.7	131	http://www.imdb.com/title/tt0887912/
+The Messenger	drama, romance, war	2009	Oren Moverman	7.2	113	http://www.imdb.com/title/tt0790712/
+Taking Chance	drama, war	2009	Ross Katz	7.3	77	http://www.imdb.com/title/tt1019454/
+Special Forces	action, drama, war	2011	Stéphane Rybojad	6.1	109	http://www.imdb.com/title/tt1656192/
+Act of Valor	action, thriller, war	2012	Mouse McCoy, Scott Waugh	6.4	110	http://www.imdb.com/title/tt1591479/
+Arn: The Knight Templar	action, adventure, drama, romance, war	2007	Peter Flinth	6.5	139	http://www.imdb.com/title/tt0837106/
+Mongol: The Rise of Genghis Khan	biography, drama, history, war	2007	Sergey Bodrov	7.2	126	http://www.imdb.com/title/tt0416044/
+Saving Private Ryan	action, drama, war	1998	Steven Spielberg	8.6	169	http://www.imdb.com/title/tt0120815/
+The Pacific	action, adventure, drama, history, war	2010		8.3		http://www.imdb.com/title/tt0374463/
+Sarah's Key	drama, war	2010	Gilles Paquet-Brenner	7.3	111	http://www.imdb.com/title/tt1668200/
+Age of Heroes	action, adventure, drama, thriller, war	2011	Adrian Vitoria	5.5	90	http://www.imdb.com/title/tt1590950/
+Memorial Day	action, drama, history, war	2011	Samuel Fischer	5.6	104	http://www.imdb.com/title/tt1694118/
+War of the Dead	action, adventure, horror, sci_fi, thriller, war	2011	Marko Makilaakso	4	86	http://www.imdb.com/title/tt0780645/
+Fortress	action, drama, war	2012	Mike Phillips	4.6	93	http://www.imdb.com/title/tt1558575/
+In Darkness	drama, war	2011	Agnieszka Holland	7.1	145	http://www.imdb.com/title/tt1417075/
+My Way	action, drama, history, war	2011	Je-gyu Kang	7.3	137	http://www.imdb.com/title/tt1606384/
+The Third Half	drama, history, romance, sport, war	2012	Darko Mitrevski	7.6	113	http://www.imdb.com/title/tt2069100/
+Into the White	action, drama, war	2012	Petter Næss	7	100	http://www.imdb.com/title/tt1876277/
+Flyboys	action, adventure, drama, history, romance, war	2006	Tony Bill	6.5	140	http://www.imdb.com/title/tt0454824/
+Beneath Hill 60	drama, history, war	2010	Jeremy Hartley Sims	6.9	122	http://www.imdb.com/title/tt1418646/
+Joyeux Noel	drama, history, music, romance, war	2005	Christian Carion	7.7	116	http://www.imdb.com/title/tt0424205/
+Passchendaele	drama, history, romance, war	2008	Paul Gross	6.5	114	http://www.imdb.com/title/tt1092082/
+The Red Baron	action, adventure, biography, drama, romance, war	2008	Nikolai Müllerschoen	6.1	106	http://www.imdb.com/title/tt0365675/
+A Very Long Engagement	drama, mystery, romance, war	2004	Jean-Pierre Jeunet	7.7	133	http://www.imdb.com/title/tt0344510/
+War Horse	drama, war	2011	Steven Spielberg	7.2	146	http://www.imdb.com/title/tt1568911/
+Band of Brothers	action, drama, history, war	2001		9.6	705	http://www.imdb.com/title/tt0185906/
+Captain Corelli's Mandolin	drama, music, romance, war	2001	John Madden	5.7	131	http://www.imdb.com/title/tt0238112/
+Conspiracy	drama, history, war	2001	Frank Pierson	7.7	96	http://www.imdb.com/title/tt0266425/
+Enigma	drama, mystery, romance, thriller, war	2001	Michael Apted	6.3	119	http://www.imdb.com/title/tt0157583/
+Uprising	drama, war	2001	Jon Avnet	7.2	177	http://www.imdb.com/title/tt0250798/
+The Pianist	biography, drama, history, war	2002	Roman Polanski	8.5	150	http://www.imdb.com/title/tt0253474/
+Windtalkers	action, history, war	2002	John Woo	5.9	134	http://www.imdb.com/title/tt0245562/
+Pornography	drama, romance, war	2003	Jan Jakub Kolski	6.2	117	http://www.imdb.com/title/tt0357037/
+Saints and Soldiers	action, war, drama, adventure	2003	Ryan Little	6.8	90	http://www.imdb.com/title/tt0373283/
+Downfall	biography, drama, history, war	2004	Oliver Hirschbiegel	8.3	156	http://www.imdb.com/title/tt0363163/
+Sophie Scholl: The Final Days	biography, crime, drama, history, thriller, war	2005	Marc Rothemund	7.6	120	http://www.imdb.com/title/tt0426578/
+The Great Raid	action, drama, war	2005	John Dahl	6.6	132	http://www.imdb.com/title/tt0326905/
+Flags of Our Fathers	drama, history, war	2006	Clint Eastwood	7.1	132	http://www.imdb.com/title/tt0418689/
+Days of Glory	drama, war	2006	Rachid Bouchareb	7	128	http://www.imdb.com/title/tt0444182/
+Letters from Iwo Jima	drama, history, war	2006	Clint Eastwood	7.9	141	http://www.imdb.com/title/tt0498380/
+Black Book	drama, thriller, war	2006	Paul Verhoeven	7.8	145	http://www.imdb.com/title/tt0389557/
+Katyn	drama, history, war	2007	Andrzej Wajda	7	122	http://www.imdb.com/title/tt0879843/
+Lust, Caution	drama, romance, thriller, war	2007	Ang Lee	7.5	157	http://www.imdb.com/title/tt0808357/
+The Counterfeiters	crime, drama, war	2007	Stefan Ruzowitzky	7.6	98	http://www.imdb.com/title/tt0813547/
+A Woman in Berlin	drama, war, history	2008	Max Färberböck	6.9	131	http://www.imdb.com/title/tt1035730/
+Defiance	action, drama, history, thriller, war	2008	Edward Zwick	7.1	137	http://www.imdb.com/title/tt1034303/
+Flame and Citron	drama, history, thriller, war	2008	Ole Christian Madsen	7.2	130	http://www.imdb.com/title/tt0920458/
+Max Manus: Man of War	action, biography, drama, history, war	2008	Joachim Rønning, Espen Sandberg	7.2	118	http://www.imdb.com/title/tt1029235/
+Miracle at St. Anna	action, crime, drama, thriller, war	2008	Spike Lee	6	160	http://www.imdb.com/title/tt1046997/
+Valkyrie	drama, history, thriller, war	2008	Bryan Singer	7.1	121	http://www.imdb.com/title/tt0985699/
+City of Life and Death	drama, history, war	2009	Chuan Lu	7.6	132	http://www.imdb.com/title/tt1124052/
+Inglourious Basterds	adventure, drama, war	2009	Quentin Tarantino	8.3	153	http://www.imdb.com/title/tt0361748/
+John Rabe	biography, drama, history, war	2009	Florian Gallenberger	7.1	134	http://www.imdb.com/title/tt1124377/
+The Edge of Love	biography, drama, romance, war	2008	John Maybury	6.2	110	http://www.imdb.com/title/tt0819714/
+Adam Resurrected	drama, war	2008	Paul Schrader	6.1	106	http://www.imdb.com/title/tt0479341/
+The English Patient	drama, romance, war	1996	Anthony Minghella	7.3	162	http://www.imdb.com/title/tt0116209/
+Michael Collins	biography, drama, thriller, war	1996	Neil Jordan	7	133	http://www.imdb.com/title/tt0117039/
+Seven Years in Tibet	adventure, biography, drama, history, war	1997	Jean-Jacques Annaud	6.8	136	http://www.imdb.com/title/tt0120102/
+Life Is Beautiful	comedy, drama, romance, war	1997	Roberto Benigni, Rod Dean	8.5	116	http://www.imdb.com/title/tt0118799/
+The Thin Red Line	drama, war	1998	Terrence Malick	7.6	170	http://www.imdb.com/title/tt0120863/
+The General's Daughter	crime, drama, mystery, thriller, war	1999	Simon West	6.1	116	http://www.imdb.com/title/tt0144214/
+The Messenger: The Story of Joan of Arc	adventure, biography, drama, history, war	1999	Luc Besson	6.3	158	http://www.imdb.com/title/tt0151137/
+The Patriot	action, drama, war	2000	Roland Emmerich	7	165	http://www.imdb.com/title/tt0187393/
+Rules of Engagement	action, drama, thriller, war	2000	William Friedkin	6.2	128	http://www.imdb.com/title/tt0160797/
+U-571	action, drama, thriller, war	2000	Jonathan Mostow	6.5	116	http://www.imdb.com/title/tt0141926/
+Behind Enemy Lines	action, war, drama, thriller	2001	John Moore	6.2	106	http://www.imdb.com/title/tt0159273/
+Black Hawk Down	drama, history, war	2001	Ridley Scott	7.7	144	http://www.imdb.com/title/tt0265086/
+Enemy at the Gates	drama, history, thriller, war	2001	Jean-Jacques Annaud	7.5	131	http://www.imdb.com/title/tt0215750/
+Pearl Harbor	action, drama, romance, war	2001	Michael Bay	5.8	183	http://www.imdb.com/title/tt0213149/
+The Four Feathers	adventure, drama, romance, war	2002	Shekhar Kapur	6.3	132	http://www.imdb.com/title/tt0240510/
+Hart's War	drama, war	2002	Gregory Hoblit	6.2	125	http://www.imdb.com/title/tt0251114/
+K-19: The Widowmaker	drama, history, thriller, war	2002	Kathryn Bigelow	6.5	138	http://www.imdb.com/title/tt0267626/
+We Were Soldiers	action, drama, history, war	2002	Randall Wallace	7	138	http://www.imdb.com/title/tt0277434/
+Beyond Borders	adventure, drama, romance, war	2003	Martin Campbell	6.2	127	http://www.imdb.com/title/tt0294357/
+Gods and Generals	drama, history, war	2003	Ronald F. Maxwell	6.1	219	http://www.imdb.com/title/tt0279111/
+The Last Samurai	action, drama, history, war	2003	Edward Zwick	7.7	154	http://www.imdb.com/title/tt0325710/
+Master and Commander: The Far Side of the World	action, adventure, drama, war	2003	Peter Weir	7.4	138	http://www.imdb.com/title/tt0311113/
+Tears of the Sun	action, drama, thriller, war	2003	Antoine Fuqua	6.5	121	http://www.imdb.com/title/tt0314353/
+The Alamo	drama, history, war, western	2004	John Lee Hancock	5.9	137	http://www.imdb.com/title/tt0318974/
+Alexander	action, adventure, biography, drama, history, romance, war	2004	Oliver Stone	5.4	175	http://www.imdb.com/title/tt0346491/
+Fahrenheit 9/11	documentary, history, war	2004	Michael Moore	7.5	122	http://www.imdb.com/title/tt0361596/
+Hotel Rwanda	biography, drama, history, war	2004	Terry George	8.2	121	http://www.imdb.com/title/tt0395169/
+King Arthur	action, adventure, drama, history, war	2004	Antoine Fuqua	6.2	126	http://www.imdb.com/title/tt0349683/
+Kingdom of Heaven	action, adventure, drama, history, war	2005	Ridley Scott	7.1	144	http://www.imdb.com/title/tt0320661/
+Valiant	animation, adventure, comedy, family, war	2005	Gary Chapman	5.5	76	http://www.imdb.com/title/tt0361089/
+Pan's Labyrinth	drama, fantasy, war	2006	Guillermo del Toro	8.3	118	http://www.imdb.com/title/tt0457430/
+300	action, fantasy, history, war	2006	Zack Snyder	7.7	117	http://www.imdb.com/title/tt0416449/
+Atonement	drama, mystery, romance, war	2007	Joe Wright	7.8	123	http://www.imdb.com/title/tt0783233/
+The Last Legion	action, adventure, fantasy, war	2007	Doug Lefler	5.4	102	http://www.imdb.com/title/tt0462396/
+A Mighty Heart	biography, drama, history, thriller, war	2007	Michael Winterbottom	6.6	108	http://www.imdb.com/title/tt0829459/
+Pathfinder	action, adventure, drama, history, thriller, war	2007	Marcus Nispel	5.3	99	http://www.imdb.com/title/tt0446013/
+Australia	adventure, drama, history, romance, war	2008	Baz Luhrmann	6.6	165	http://www.imdb.com/title/tt0455824/
+The Boy in the Striped Pajamas	drama, history, war	2008	Mark Herman	7.7	94	http://www.imdb.com/title/tt0914798/
+Meet the Spartans	comedy, war	2008	Jason Friedberg, Aaron Seltzer	2.6	86	http://www.imdb.com/title/tt1073498/
+Rambo	action, thriller, war	2008	Sylvester Stallone	7.1	92	http://www.imdb.com/title/tt0462499/
+Battle for Terra	animation, action, adventure, sci_fi, thriller, war	2007	Aristomenis Tsirbas	6.6	85	http://www.imdb.com/title/tt0858486/
+Brothers	drama, thriller, war	2009	Jim Sheridan	7.1	105	http://www.imdb.com/title/tt0765010/
+The Men Who Stare at Goats	comedy, war	2009	Grant Heslov	6.3	94	http://www.imdb.com/title/tt1234548/
+Dear John	drama, romance, war	2010	Lasse Hallström	6	108	http://www.imdb.com/title/tt0989757/
+Battleship	action, adventure, sci_fi, thriller, war	2012	Peter Berg	5.9	131	http://www.imdb.com/title/tt1440129/
+For Greater Glory: The True Story of Cristiada	drama, history, war	2012	Dean Wright	6.1	145	http://www.imdb.com/title/tt1566501/
+Red Tails	action, adventure, drama, history, war	2012	Anthony Hemingway	5.8	125	http://www.imdb.com/title/tt0485985/
+The Dirty Dozen	action, drama, war	1967	Robert Aldrich	7.8	150	http://www.imdb.com/title/tt0061578/
+Where Eagles Dare	action, adventure, war	1968	Brian G. Hutton	7.6	158	http://www.imdb.com/title/tt0065207/
+Battle of Britain	action, drama, history, war	1969	Guy Hamilton	6.8	132	http://www.imdb.com/title/tt0064072/
+Battle of the Bulge	war, action, drama	1965	Ken Annakin	6.8	167	http://www.imdb.com/title/tt0058947/
+MASH	comedy, war, drama	1970	Robert Altman	7.7	116	http://www.imdb.com/title/tt0066026/
+Platoon	action, drama, war	1986	Oliver Stone	8.2	120	http://www.imdb.com/title/tt0091763/
+Full Metal Jacket	drama, war	1987	Stanley Kubrick	8.4	116	http://www.imdb.com/title/tt0093058/
+Tour of Duty	action, drama, war	1987		7.9	45	http://www.imdb.com/title/tt0092468/
+China Beach	drama, war	1988		7.7	120	http://www.imdb.com/title/tt0094433/
+Born on the Fourth of July	biography, drama, war	1989	Oliver Stone	7.1	145	http://www.imdb.com/title/tt0096969/
+Casualties of War	drama, history, war	1989	Brian DePalma	7	113	http://www.imdb.com/title/tt0097027/
+Dead Presidents	crime, drama, thriller, war	1995	The Hughes Brothers, The Hughes Brothers	6.7	119	http://www.imdb.com/title/tt0112819/
+Apocalypse Now	drama, war	1979	Francis Coppola	8.6	153	http://www.imdb.com/title/tt0078788/
+Coming Home	drama, romance, war	1978	Hal Ashby	7.3	127	http://www.imdb.com/title/tt0077362/
+The Deer Hunter	drama, war	1978	Michael Cimino	8.2	182	http://www.imdb.com/title/tt0077416/
+The Green Berets	drama, war	1968	Ray Kellogg, John Wayne	5.3	142	http://www.imdb.com/title/tt0063035/
+The Killing Fields	drama, history, war	1984	Roland Joffé	7.9	141	http://www.imdb.com/title/tt0087553/
+Threads	drama, sci_fi, war	1984	Mick Jackson	7.9	110	http://www.imdb.com/title/tt0090163/
+Rambo: First Blood Part II	action, adventure, thriller, war	1985	George P. Cosmatos	6.2	96	http://www.imdb.com/title/tt0089880/
+Gettysburg	drama, history, war	1993	Ronald F. Maxwell	7.5	271	http://www.imdb.com/title/tt0107007/
+North and South	drama, history, romance, war	1985		7.9	561	http://www.imdb.com/title/tt0088583/
+The Big Red One	action, drama, war	1980	Samuel Fuller	7.3	113	http://www.imdb.com/title/tt0080437/
+Das Boot	action, adventure, drama, history, war	1981	Wolfgang Petersen	8.4	149	http://www.imdb.com/title/tt0082096/
+Victory	action, drama, sport, war	1981	John Huston	6.4	116	http://www.imdb.com/title/tt0083284/
+Come and See	drama, history, war	1985	E. Klimov	8.1	136	http://www.imdb.com/title/tt0091251/
+Au Revoir Les Enfants	biography, drama, war	1987	Louis Malle	8	104	http://www.imdb.com/title/tt0092593/
+Henry V	action, biography, drama, history, romance, war	1989	Kenneth Branagh	7.7	137	http://www.imdb.com/title/tt0097499/
+Patton	biography, drama, history, war	1970	Franklin J. Schaffner	8	172	http://www.imdb.com/title/tt0066206/
+The Eagle Has Landed	adventure, drama, thriller, war	1976	John Sturges	6.9	135	http://www.imdb.com/title/tt0074452/
+Cross of Iron	action, drama, war	1977	Sam Peckinpah	7.5	132	http://www.imdb.com/title/tt0074695/
+Force 10 from Navarone	action, drama, war	1978	Guy Hamilton	6.2	118	http://www.imdb.com/title/tt0077572/
+Schindler's List	biography, drama, history, war	1993	Steven Spielberg	8.9	195	http://www.imdb.com/title/tt0108052/
+Stalingrad	drama, war	1993	Joseph Vilsmaier	7.4	134	http://www.imdb.com/title/tt0108211/
+Gallipoli	adventure, drama, history, war	1981	Peter Weir	7.5	110	http://www.imdb.com/title/tt0082432/
+Johnny Got His Gun	drama, war	1971	Dalton Trumbo	7.7	111	http://www.imdb.com/title/tt0067277/
+Legends of the Fall	drama, romance, war, western	1994	Edward Zwick	7.3	133	http://www.imdb.com/title/tt0110322/
+Stripes	comedy, war	1981	Ivan Reitman	6.8	106	http://www.imdb.com/title/tt0083131/
+The Year of Living Dangerously	drama, romance, war	1982	Peter Weir	7	115	http://www.imdb.com/title/tt0086617/
+The Delta Force	action, adventure, drama, thriller, war	1986	Menahem Golan	5.3	125	http://www.imdb.com/title/tt0090927/
+Heartbreak Ridge	action, comedy, drama, war	1986	Clint Eastwood	6.6	130	http://www.imdb.com/title/tt0091187/
+Iron Eagle	action, thriller, war	1986	Sidney J. Furie	5	117	http://www.imdb.com/title/tt0091278/
+Empire of the Sun	drama, history, war	1987	Steven Spielberg	7.7	152	http://www.imdb.com/title/tt0092965/
+Good Morning, Vietnam	comedy, drama, war	1987	Barry Levinson	7.2	121	http://www.imdb.com/title/tt0093105/
+Hamburger Hill	drama, war, action	1987	John Irvin	6.6	110	http://www.imdb.com/title/tt0093137/
+Glory	drama, history, war	1989	Edward Zwick	7.9	122	http://www.imdb.com/title/tt0097441/
+Memphis Belle	action, drama, war	1990	Michael Caton-Jones	6.8	107	http://www.imdb.com/title/tt0100133/
+Hot Shots!	action, comedy, war	1991	Jim Abrahams	6.6	84	http://www.imdb.com/title/tt0102059/
+Hellraiser III: Hell on Earth	action, comedy, drama, horror, war	1992	Anthony Hickox	5.2	93	http://www.imdb.com/title/tt0104409/
+The Last of the Mohicans	action, adventure, romance, war	1992	Michael Mann	7.7	112	http://www.imdb.com/title/tt0104691/
+Shining Through	drama, romance, thriller, war	1992	David Seltzer	6	132	http://www.imdb.com/title/tt0105391/
+Hot Shots! Part Deux	action, comedy, war	1993	Jim Abrahams	6.4	86	http://www.imdb.com/title/tt0107144/
+Braveheart	action, biography, drama, history, war	1995	Mel Gibson	8.4	177	http://www.imdb.com/title/tt0112573/
+Barry Lyndon	adventure, drama, romance, war	1975	Stanley Kubrick	8.1	184	http://www.imdb.com/title/tt0072684/
+Midway	action, drama, history, war	1976	Jack Smight	6.6	132	http://www.imdb.com/title/tt0074899/
+A Bridge Too Far	drama, history, war	1977	Richard Attenborough	7.3	175	http://www.imdb.com/title/tt0075784/
+The Tin Drum	drama, war	1979	Volker Schlöndorff	7.6	142	http://www.imdb.com/title/tt0078875/
+1941	action, comedy, drama, romance, war	1979	Steven Spielberg	5.7	118	http://www.imdb.com/title/tt0078723/
+Slaughterhouse-Five	comedy, drama, fantasy, sci_fi, war	1972	George Roy Hill	7	104	http://www.imdb.com/title/tt0069280/
+Catch-22	comedy, war	1970	Mike Nichols	7.1	122	http://www.imdb.com/title/tt0065528/
+Kelly's Heroes	action, adventure, comedy, war	1970	Brian G. Hutton	7.5	144	http://www.imdb.com/title/tt0065938/
+Tora! Tora! Tora!	action, adventure, drama, history, war	1970	Richard Fleischer, Kinji Fukasaku	7.4	144	http://www.imdb.com/title/tt0066473/
+Little Big Man	history, western	1970	Arthur Penn	7.6	139	http://www.imdb.com/title/tt0065988/
+Two Mules for Sister Sara	adventure, comedy, war, western	1970	Don Siegel	6.9	116	http://www.imdb.com/title/tt0065134/
+The Thin Red Line	war, drama	1964	Andrew Marton	6.7	99	http://www.imdb.com/title/tt0058648/
+The Guns of Navarone	action, adventure, drama, war	1961	J. Lee Thompson	7.6	158	http://www.imdb.com/title/tt0054953/
+The Longest Day	action, drama, history, war	1962	Ken Annakin, Andrew Marton	7.8	178	http://www.imdb.com/title/tt0056197/
+The Great Escape	adventure, drama, history, thriller, war	1963	John Sturges	8.3	172	http://www.imdb.com/title/tt0057115/
+Ivan's Childhood	drama, war	1962	Andrei Tarkovsky	8	95	http://www.imdb.com/title/tt0056111/
+The Manchurian Candidate	drama, mystery, romance, thriller, war	1962	John Frankenheimer	8.1	126	http://www.imdb.com/title/tt0056218/
+Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb	comedy, war	1964	Stanley Kubrick	8.6	95	http://www.imdb.com/title/tt0057012/
+The Horse Soldiers	adventure, war, western	1959	John Ford	7	115	http://www.imdb.com/title/tt0052902/
+To Appomattox	biography, drama, history, war	2013				http://www.imdb.com/title/tt2032276/
+El Cid	adventure, biography, drama, history, romance, war	1961	Anthony Mann	7.2	182	http://www.imdb.com/title/tt0054847/
+From Here to Eternity	drama, romance, war	1953	Fred Zinnemann	7.8	118	http://www.imdb.com/title/tt0045793/
+Stalag 17	comedy, drama, thriller, war	1953	Billy Wilder	8.1	120	http://www.imdb.com/title/tt0046359/
+The Diary of Anne Frank	biography, drama, history, war	1959	George Stevens	7.4	180	http://www.imdb.com/title/tt0052738/
+The Bridge on the River Kwai	adventure, drama, history, war	1957	David Lean	8.3	161	http://www.imdb.com/title/tt0050212/
+The 4th Reich	action, horror, war	2013	Shaun Robert Smith		97	http://www.imdb.com/title/tt1456940/
+Lawrence of Arabia	adventure, biography, drama, history, war	1962	David Lean	8.4	216	http://www.imdb.com/title/tt0056172/
+The African Queen	adventure, romance, war	1951	John Huston	8	105	http://www.imdb.com/title/tt0043265/
+Paths of Glory	drama, war	1957	Stanley Kubrick	8.5	88	http://www.imdb.com/title/tt0050825/
+Von Ryan's Express	action, adventure, war	1965	Mark Robson	7.1	117	http://www.imdb.com/title/tt0059885/
+Sahara	action, war	1995	Brian Trenchard-Smith	6.5	106	http://www.imdb.com/title/tt0114324/
+The Beguiled	drama, romance, war, western	1971	Donald Siegel	7.1	105	http://www.imdb.com/title/tt0066819/
+633 Squadron	war, drama	1964	Walter E. Grauman	6.3	102	http://www.imdb.com/title/tt0057811/
+Walking with the Enemy	action, drama, history, romance, war	2013	Mark Schmidt			http://www.imdb.com/title/tt1515208/
+Tomorrow, When the War Began	action, adventure, war	2010	Stuart Beattie	6.1	103	http://www.imdb.com/title/tt1456941/
+Coriolanus	drama, thriller, war	2011	Ralph Fiennes	6.1	123	http://www.imdb.com/title/tt1372686/
+Centurion	action, adventure, drama, history, thriller, war	2010	Neil Marshall	6.4	97	http://www.imdb.com/title/tt1020558/
+Love and Honor	drama, romance, war	2013	Danny Mooney	5.3	100	http://www.imdb.com/title/tt1976989/
+Saints and Soldiers: Airborne Creed	war	2012	Ryan Little	5.4	94	http://www.imdb.com/title/tt2082415/
+The Road to Freedom	adventure, drama, history, war	2011	Brendan Moriarty	4.3	93	http://www.imdb.com/title/tt1469387/
+Emperor	drama, history, war	2012	Peter Webber	6.3	105	http://www.imdb.com/title/tt2103264/
+The Wind That Shakes the Barley	drama, history, war	2006	Ken Loach	7.5	127	http://www.imdb.com/title/tt0460989/
+5 Days of War	action, drama, war	2011	Renny Harlin	5.6	113	http://www.imdb.com/title/tt1486193/
+Bent	drama, history, romance, war	1997	Sean Mathias	7.1	105	http://www.imdb.com/title/tt0118698/
+The Hunting Party	adventure, comedy, drama, thriller, war	2007	Richard Shepard	6.8	101	http://www.imdb.com/title/tt0455782/
+There Be Dragons	biography, drama, war	2011	Roland Joffé	5.6	122	http://www.imdb.com/title/tt1316616/
+Attila	action, adventure, biography, drama, history, romance, war	2001	Dick Lowry	6.6	177	http://www.imdb.com/title/tt0259127/
+Sniper: Reloaded	action, drama, thriller, war	2011	Claudio Fäh	5.1	91	http://www.imdb.com/title/tt1571243/
+Captain America	action, fantasy, sci_fi, thriller, war	1990	Albert Pyun	3	97	http://www.imdb.com/title/tt0103923/
+Goya's Ghosts	biography, drama, war	2006	Milos Forman	6.8	113	http://www.imdb.com/title/tt0455957/
+The Inglorious Bastards	action, adventure, comedy, drama, war	1978	Enzo G. Castellari	6.5	99	http://www.imdb.com/title/tt0076584/
+Hitler: The Rise of Evil	biography, drama, history, war	2003	Christian Duguay	7.2	130	http://www.imdb.com/title/tt0346293/
+The Lucky Ones	comedy, drama, war	2008	Neil Burger	7	115	http://www.imdb.com/title/tt0981072/
+Head in the Clouds	drama, romance, war	2004	John Duigan	6.3	132	http://www.imdb.com/title/tt0338097/
+Triage	drama, mystery, war	2009	Danis Tanovic	6.4	99	http://www.imdb.com/title/tt1217070/
+Seraphim Falls	action, drama, thriller, war, western	2006	David Von Ancken	6.7	115	http://www.imdb.com/title/tt0479537/
+Kingdom of Dust	drama, war	2011	Heath Jones	2.4		http://www.imdb.com/title/tt1613873/
+Glorious 39	drama, history, thriller, war	2009	Stephen Poliakoff	6.3	129	http://www.imdb.com/title/tt1319694/
+Salvador	drama, history, thriller, war	1986	Oliver Stone	7.4	122	http://www.imdb.com/title/tt0091886/
+Bless Me, Ultima	drama, war	2013	Carl Franklin	6.7	106	http://www.imdb.com/title/tt1390398/
+Kundun	biography, drama, history, war	1997	Martin Scorsese	6.9	134	http://www.imdb.com/title/tt0119485/
+The Devil's Arithmetic	drama, fantasy, war	1999	Donna Deitch	6.2	95	http://www.imdb.com/title/tt0179148/
+Good	drama, romance, war	2008	Vicente Amorim	6.1	96	http://www.imdb.com/title/tt0436364/
+The Man Who Cried	drama, music, romance, war	2000	Sally Potter	6	100	http://www.imdb.com/title/tt0206917/
+Bloody Sunday	drama, history, war	2002	Paul Greengrass	7.7	107	http://www.imdb.com/title/tt0280491/
+Eichmann	biography, drama, history, war	2007	Robert Young	5.9	96	http://www.imdb.com/title/tt0901481/
+Ilsa: She Wolf of the SS	horror, war	1975	Don Edmonds	5.1	96	http://www.imdb.com/title/tt0071650/
+Our Girl	drama, war	2013	David Drury	6.5	90	http://www.imdb.com/title/tt2485988/
+Revolution	adventure, drama, history, war	1985	Hugh Hudson	4.9	126	http://www.imdb.com/title/tt0089913/
+Sunshine	drama, history, romance, war	1999	István Szabó	7.3	181	http://www.imdb.com/title/tt0145503/
+Varian's War	drama, war	2001	Lionel Chetwynd	6.3	121	http://www.imdb.com/title/tt0245540/
+The Broken Tower	biography, drama, history, war	2011	James Franco	4.9	99	http://www.imdb.com/title/tt1756791/
+Mrs Henderson Presents	comedy, drama, music, war	2005	Stephen Frears	7	103	http://www.imdb.com/title/tt0413015/
+The Tiger and the Snow	comedy, drama, romance, war	2005	Roberto Benigni	6.9	114	http://www.imdb.com/title/tt0419198/
+Essential Killing	thriller, war	2010	Jerzy Skolimowski	6.1	83	http://www.imdb.com/title/tt1561768/
+The Warrior	action, drama, history, war	2001	Sung-su Kim	7.2	158	http://www.imdb.com/title/tt0275083/
+Fortress of War	drama, action, war, history	2010	Aleksandr Kott	7.3	138	http://www.imdb.com/title/tt1343703/
+La Rafle	drama, history, war	2010	Rose Bosch	6.8	115	http://www.imdb.com/title/tt1382725/
+Pathfinders: In the Company of Strangers	action, drama, history, war	2011	Curt A. Sindelar	3.8		http://www.imdb.com/title/tt1260680/
+USS Seaviper	action, drama, war	2012	Ralph A. Villani	2.3	102	http://www.imdb.com/title/tt1274596/
+In Love and War	biography, drama, romance, war	1996	Richard Attenborough	5.6	113	http://www.imdb.com/title/tt0116621/
+The Grey Zone	drama, war	2001	Tim Blake Nelson	7.1	108	http://www.imdb.com/title/tt0252480/
+To End All Wars	drama, war, action	2001	David L. Cunningham	7	125	http://www.imdb.com/title/tt0243609/
+Amen.	crime, drama, war	2002	Costa-Gavras	7.2	132	http://www.imdb.com/title/tt0280653/
+Before the Fall	drama, sport, war	2004	Dennis Gansel	7.3	117	http://www.imdb.com/title/tt0384369/
+Winter in Wartime	drama, history, war	2008	Martin Koolhoven	7	103	http://www.imdb.com/title/tt0795441/
+Attack on Leningrad	drama, war	2009	Aleksandr Buravskiy	6.1	110	http://www.imdb.com/title/tt0432314/
+Jakob the Liar	comedy, drama, war	1999	Peter Kassovitz	6.2	120	http://www.imdb.com/title/tt0120716/
+Eye of the Needle	romance, thriller, war	1981	Richard Marquand	7	112	http://www.imdb.com/title/tt0082351/
+Merry Christmas Mr. Lawrence	drama, war	1983	Nagisa Ôshima	7.1	123	http://www.imdb.com/title/tt0085933/
+Escape from Sobibor	drama, thriller, war	1987	Jack Gold	7.4	143	http://www.imdb.com/title/tt0092978/
+Europa Europa	drama, history, war	1990	Agnieszka Holland	7.6	112	http://www.imdb.com/title/tt0099776/
+A Midnight Clear	drama, war	1992	Keith Gordon	7.1	108	http://www.imdb.com/title/tt0102443/
+The Tuskegee Airmen	drama, history, war	1995	Robert Markowitz	7.1	106	http://www.imdb.com/title/tt0114745/
+Private Benjamin	comedy, war	1980	Howard Zieff	5.9	109	http://www.imdb.com/title/tt0081375/
+Uncommon Valor	action, drama, thriller, war	1983	Ted Kotcheff	6.2	105	http://www.imdb.com/title/tt0086508/
+Missing in Action	action, adventure, drama, thriller, war	1984	Joseph Zito	5	101	http://www.imdb.com/title/tt0087727/
+Heaven & Earth	action, biography, drama, history, war	1993	Oliver Stone	6.7	140	http://www.imdb.com/title/tt0107096/
+Love and Death	comedy, war	1975	Woody Allen	7.7	85	http://www.imdb.com/title/tt0073312/
+The Wild Geese	action, adventure, drama, thriller, war	1978	Andrew V. McLaglen	6.6	134	http://www.imdb.com/title/tt0078492/
+War and Peace	drama, romance, war	1956	King Vidor	6.7	208	http://www.imdb.com/title/tt0049934/
+Fail-Safe	adventure, drama, thriller, war	1964	Sidney Lumet	7.9	112	http://www.imdb.com/title/tt0058083/
+The Caine Mutiny	drama, romance, war	1954	Edward Dmytryk	7.9	124	http://www.imdb.com/title/tt0046816/
+Hiroshima, mon amour	drama, romance, war	1959	Alain Resnais	7.9	90	http://www.imdb.com/title/tt0052893/
+Over There	action, drama, war	2005	Chris Gerolmo	7.7	60	http://www.imdb.com/title/tt0446241/
+Kokoda	action, drama, war	2006	Alister Grierson	6.1	92	http://www.imdb.com/title/tt0481390/
+In Harm's Way	drama, war	1965	Otto Preminger	7.2	165	http://www.imdb.com/title/tt0059309/
+Birdy	drama, war	1984	Alan Parker	7.1	120	http://www.imdb.com/title/tt0086969/
+All Quiet on the Western Front	war, drama	1979	Delbert Mann	7	150	http://www.imdb.com/title/tt0078753/
+Delta Force 2: The Colombian Connection	action, adventure, thriller, war	1990	Aaron Norris	4.2	111	http://www.imdb.com/title/tt0099399/
+Zulu Dawn	adventure, drama, history, war	1979	Douglas Hickox	6.5	113	http://www.imdb.com/title/tt0080180/
+Redacted	crime, drama, war	2007	Brian De Palma	6.1	90	http://www.imdb.com/title/tt0937237/
+In the Fog	drama, history, war	2012	Sergei Loznitsa	6.8	127	http://www.imdb.com/title/tt2325741/
+The Lost Battalion	action, drama, war	2001	Russell Mulcahy	7	92	http://www.imdb.com/title/tt0287535/
+The Children of Huang Shi	drama, war	2008	Roger Spottiswoode	6.8	125	http://www.imdb.com/title/tt0889588/
+Female Agents	drama, war	2008	Jean-Paul Salomé	6.7	117	http://www.imdb.com/title/tt0824330/
+Fateless	drama, war	2005	Lajos Koltai	7.1	140	http://www.imdb.com/title/tt0367082/
+Shout at the Devil	action, adventure, drama, thriller, war	1976	Peter Hunt	6.1	150	http://www.imdb.com/title/tt0075214/
+Operation Dumbo Drop	action, adventure, comedy, drama, family, war	1995	Simon Wincer	4.7	107	http://www.imdb.com/title/tt0114048/
+Rio Lobo	adventure, western, romance, war	1970	Howard Hawks	6.6	114	http://www.imdb.com/title/tt0066301/
+Mister Roberts	comedy, drama, war	1955	John Ford, Mervyn LeRoy	7.7	123	http://www.imdb.com/title/tt0048380/
+Napoléon	adventure, biography, drama, history, romance, war	2002		7.2	380	http://www.imdb.com/title/tt0253839/
+War and Peace	drama, history, romance, war	2007		6.9	394	http://www.imdb.com/title/tt0495055/
+71: Into the Fire	war	2010	John H. Lee	7.1	120	http://www.imdb.com/title/tt1587729/
+R-Point	action, drama, horror, thriller, war	2004	Su-chang Kong	6.2	107	http://www.imdb.com/title/tt0417072/
+Fail Safe	drama, thriller, war	2000	Stephen Frears	7.2	86	http://www.imdb.com/title/tt0235376/
+Bravo Two Zero	war, adventure, thriller	1999	Tom Clegg	6.7	115	http://www.imdb.com/title/tt0120617/
+The Hamburg Cell	drama, war	2004	Antonia Bird	6.8	106	http://www.imdb.com/title/tt0398093/
+The Mark of Cain	drama, war	2007	Marc Munden	6.6	87	http://www.imdb.com/title/tt0837800/
+Battle for Haditha	drama, history, war	2007	Nick Broomfield	6.9	97	http://www.imdb.com/title/tt0870211/
+House of Saddam	biography, drama, history, war	2008		7.4	232	http://www.imdb.com/title/tt0936453/
+Brothers	drama, war	2004	Susanne Bier	7.5	117	http://www.imdb.com/title/tt0386342/
+1066	action, adventure, drama, history, war	2013	Robin Jacob			http://www.imdb.com/title/tt1018103/
+Arn: The Kingdom at the End of the Road	action, adventure, drama, history, romance, war	2008	Peter Flinth	6.3	128	http://www.imdb.com/title/tt0950739/
+Mother Night	drama, romance, war	1996	Keith Gordon	7	114	http://www.imdb.com/title/tt0117093/
+Paradise Road	drama, history, war	1997	Bruce Beresford	6.5	122	http://www.imdb.com/title/tt0119859/
+When Trumpets Fade	action, drama, war	1998	John Irvin	7.2	95	http://www.imdb.com/title/tt0135706/
+Aimee & Jaguar	romance, drama, war	1999	Max Färberböck	7.1	125	http://www.imdb.com/title/tt0130444/
+All the King's Men	drama, mystery, war	1999	Julian Jarrold	6.9	110	http://www.imdb.com/title/tt0220969/
+My Boy Jack	biography, drama, history, war	2007	Brian Kirk	7.2	93	http://www.imdb.com/title/tt0851430/
+Behind the Lines	biography, drama, history, war	1997	Gillies Mackinnon	7	114	http://www.imdb.com/title/tt0120001/
+The Trench	drama, war	1999	William Boyd	6	98	http://www.imdb.com/title/tt0161010/
+Charlotte Gray	drama, romance, thriller, war	2001	Gillian Armstrong	6.3	121	http://www.imdb.com/title/tt0245046/
+Dark Blue World	war, drama, action, romance	2001	Jan Sverák	7.1	112	http://www.imdb.com/title/tt0244479/
+Island at War	drama, war	2004	Peter Lydon, Thaddeus O'Sullivan	7.2	540	http://www.imdb.com/title/tt0401019/
+Only the Brave	drama, war	2006	Lane Nishikawa	5.5	99	http://www.imdb.com/title/tt0410403/
+The Last Drop	action, adventure, crime, war	2006	Colin Teague	4.7	103	http://www.imdb.com/title/tt0398029/
+The White Countess	drama, history, romance, war	2005	James Ivory	6.5	135	http://www.imdb.com/title/tt0384686/
+Ghetto	history, war	2006	Audrius Juzenas	6.6	110	http://www.imdb.com/title/tt0783522/
+The Last Train	drama, war	2006	Joseph Vilsmaier, Dana Vávrová	6.4	123	http://www.imdb.com/title/tt0460492/
+Army of Crime	drama, history, war	2009	Robert Guédiguian	6.5	139	http://www.imdb.com/title/tt1258120/
+Everyman's War	biography, drama, war	2009	Thad Smith	5	104	http://www.imdb.com/title/tt1209319/
+Into the Storm	biography, drama, history, war	2009	Thaddeus O'Sullivan	7	100	http://www.imdb.com/title/tt0992993/
+Brother's War	history, war	2009	Jerry Buteyn	2.2	100	http://www.imdb.com/title/tt0932661/
+The Night of the Generals	crime, drama, mystery, thriller, war	1967	Anatole Litvak	7.2	148	http://www.imdb.com/title/tt0062038/
+Is Paris Burning?	drama, history, war	1966	René Clément	6.7	175	http://www.imdb.com/title/tt0060814/
+Hell in the Pacific	drama, war	1968	John Boorman	7.3	103	http://www.imdb.com/title/tt0063056/
+The Devil's Brigade	war	1968	Andrew V. McLaglen	6.7	130	http://www.imdb.com/title/tt0062886/
+Play Dirty	adventure, drama, war	1969	Andre De Toth	6.7	118	http://www.imdb.com/title/tt0063443/
+The Bridge at Remagen	action, drama, war	1969	John Guillermin	6.6	115	http://www.imdb.com/title/tt0064110/
+The Hill	drama, war	1965	Sidney Lumet	7.8	123	http://www.imdb.com/title/tt0059274/
+The Heroes of Telemark	action, drama, history, war	1965	Anthony Mann	6.3	131	http://www.imdb.com/title/tt0059263/
+The Train	thriller, war, action	1964	John Frankenheimer	7.8	133	http://www.imdb.com/title/tt0059825/
+The Shop on Main Street	drama, war	1965	Ján Kadár, Elmar Klos	7.9	128	http://www.imdb.com/title/tt0059527/
+Sharpe's Rifles	action, adventure, history, war	1993	Tom Clegg	7.7	102	http://www.imdb.com/title/tt0108108/
+Sharpe's Eagle	action, adventure, history, war	1993	Tom Clegg	7.7	100	http://www.imdb.com/title/tt0108107/
+War and Peace	drama, history, romance, war	1967	Sergey Bondarchuk	7.7	427	http://www.imdb.com/title/tt0063794/
+MacArthur	biography, drama, history, war	1977	Joseph Sargent	6.5	130	http://www.imdb.com/title/tt0076342/
+Combat Shock	drama, war, horror	1984	Buddy Giovinazzo	6.2	85	http://www.imdb.com/title/tt0090866/
+Gardens of Stone	drama, war, romance	1987	Francis Coppola	6.3	111	http://www.imdb.com/title/tt0093073/
+Bat*21	drama, war	1988	Peter Markle	6.3	105	http://www.imdb.com/title/tt0094712/
+Off Limits	action, thriller, war, drama	1988	Christopher Crowe	5.9	102	http://www.imdb.com/title/tt0095774/
+The Siege of Firebase Gloria	action, drama, war	1989	Brian Trenchard-Smith	7.1	99	http://www.imdb.com/title/tt0098328/
+Flight of the Intruder	action, romance, war	1991	John Milius	5.3	115	http://www.imdb.com/title/tt0099587/
+The War Game	drama, sci_fi, war	1965	Peter Watkins	7.9	48	http://www.imdb.com/title/tt0059894/
+Shenandoah	drama, war, western	1965	Andrew V. McLaglen	7.2	105	http://www.imdb.com/title/tt0059711/
+The Blue and the Gray	drama, history, war	1982		7.5	381	http://www.imdb.com/title/tt0083387/
+The Last Metro	drama, romance, war	1980	François Truffaut	7.4	131	http://www.imdb.com/title/tt0080610/
+The Sea Wolves	action, war	1980	Andrew V. McLaglen	6.1	120	http://www.imdb.com/title/tt0081470/
+The Scarlet and the Black	drama, history, war	1983	Jerry London	7.5	143	http://www.imdb.com/title/tt0086251/
+Red Sorghum	drama, war	1987	Yimou Zhang	7.5	91	http://www.imdb.com/title/tt0093206/
+Triumph of the Spirit	biography, drama, history, sport, war	1989	Robert M. Young	6.8	120	http://www.imdb.com/title/tt0098513/
+The Winter War	drama, history, war	1989	Pekka Parikka	7.7	195	http://www.imdb.com/title/tt0098437/
+The Bunker	drama, history, war	1981	George Schaefer	7.1	150	http://www.imdb.com/title/tt0082114/
+Brother Sun, Sister Moon	biography, drama, history, war	1972	Franco Zeffirelli	6.8	135	http://www.imdb.com/title/tt0069824/
+Soldier of Orange	drama, thriller, war	1977	Paul Verhoeven	7.7	152	http://www.imdb.com/title/tt0076734/
+Yanks	romance, drama, war	1979	John Schlesinger	6.2	138	http://www.imdb.com/title/tt0080157/
+The Ascent	drama, war	1977	Larisa Shepitko	8	111	http://www.imdb.com/title/tt0075404/
+Good Evening, Mr. Wallenberg	biography, drama, war	1990	Kjell Grede	6.6	118	http://www.imdb.com/title/tt0099673/
+The Blue Max	adventure, drama, war, action	1966	John Guillermin	6.8	156	http://www.imdb.com/title/tt0060177/
+High Road to China	adventure, drama, romance, war	1983	Brian G. Hutton	5.6	105	http://www.imdb.com/title/tt0085678/
+To Be or Not to Be	drama, war, comedy	1983	Alan Johnson	6.6	107	http://www.imdb.com/title/tt0086450/
+Under Fire	drama, war	1983	Roger Spottiswoode	7	128	http://www.imdb.com/title/tt0086510/
+Best Defense	comedy, war	1984	Willard Huyck	3.3	94	http://www.imdb.com/title/tt0086955/
+The Razor's Edge	drama, romance, war	1984	John Byrum	6.3	128	http://www.imdb.com/title/tt0087980/
+King David	adventure, biography, drama, war	1985	Bruce Beresford	4.9	114	http://www.imdb.com/title/tt0089420/
+Missing in Action 2: The Beginning	action, drama, thriller, war	1985	Lance Hool	4.7	100	http://www.imdb.com/title/tt0089604/
+Braddock: Missing in Action III	action, adventure, drama, thriller, war	1988	Aaron Norris	4.2	101	http://www.imdb.com/title/tt0094792/
+Iron Eagle II	action, drama, romance, war	1988	Sidney J. Furie	3.3	105	http://www.imdb.com/title/tt0095382/
+Fat Man and Little Boy	biography, drama, history, war	1989	Roland Joffé	6.4	127	http://www.imdb.com/title/tt0097336/
+In Country	comedy, drama, romance, war	1989	Norman Jewison	5.8	120	http://www.imdb.com/title/tt0097570/
+Havana	drama, romance, war	1990	Sydney Pollack	5.8	144	http://www.imdb.com/title/tt0099747/
+In the Army Now	comedy, war	1994	Daniel Petrie Jr.	4.3	91	http://www.imdb.com/title/tt0110123/
+Voyage of the Damned	drama, war	1976	Stuart Rosenberg	6.4	155	http://www.imdb.com/title/tt0075406/
+March or Die	drama, war, adventure, romance	1977	Dick Richards	6.1	107	http://www.imdb.com/title/tt0076175/
+The Boys in Company C	drama, war	1978	Sidney J. Furie	6.9	125	http://www.imdb.com/title/tt0077270/
+Escape to Athena	action, adventure, comedy, war	1979	George P. Cosmatos	5.5	125	http://www.imdb.com/title/tt0079117/
+Hanover Street	action, adventure, drama, romance, war	1979	Peter Hyams	5.8	109	http://www.imdb.com/title/tt0079268/
+The Marriage of Maria Braun	drama, war	1979	Rainer Werner Fassbinder	7.7	120	http://www.imdb.com/title/tt0079095/
+More American Graffiti	comedy, drama, war	1979	B.W.L. Norton	5	110	http://www.imdb.com/title/tt0079576/
+Young Winston	biography, drama, war	1972	Richard Attenborough	6.6	157	http://www.imdb.com/title/tt0069528/
+Waterloo	action, drama, history, war	1970	Sergey Bondarchuk	7.1	134	http://www.imdb.com/title/tt0066549/
+Cromwell	biography, drama, history, war	1970	Ken Hughes	6.7	139	http://www.imdb.com/title/tt0065593/
+Sink the Bismarck!	action, drama, history, war	1960	Lewis Gilbert	7	97	http://www.imdb.com/title/tt0054310/
+Two Women	drama, war	1960	Vittorio De Sica	7.7	100	http://www.imdb.com/title/tt0054749/
+Hell Is for Heroes	war	1962	Donald Siegel	7	90	http://www.imdb.com/title/tt0056062/
+Captain Horatio Hornblower R.N.	action, adventure, drama, war	1951	Raoul Walsh	7.3	117	http://www.imdb.com/title/tt0043379/
+The Bridges at Toko-Ri	drama, romance, war	1954	Mark Robson	6.8	102	http://www.imdb.com/title/tt0046806/
+Pork Chop Hill	war, drama, action	1959	Lewis Milestone	7	97	http://www.imdb.com/title/tt0053183/
+Three Came Home	war, drama	1950	Jean Negulesco	7.2	106	http://www.imdb.com/title/tt0043041/
+The Desert Fox: The Story of Rommel	action, biography, drama, history, war	1951	Henry Hathaway	6.9	88	http://www.imdb.com/title/tt0043461/
+Forbidden Games	drama, war	1952	René Clément	7.9	86	http://www.imdb.com/title/tt0043686/
+The Cruel Sea	drama, war	1953	Charles Frend	7.4	126	http://www.imdb.com/title/tt0045659/
+The Desert Rats	action, adventure, drama, war	1953	Robert Wise	6.7	88	http://www.imdb.com/title/tt0045679/
+The Dam Busters	drama, history, war	1955	Michael Anderson	7.3	124	http://www.imdb.com/title/tt0046889/
+The Bridge	drama, war	1959	Bernhard Wicki	7.7	103	http://www.imdb.com/title/tt0052654/
+Ballad of a Soldier	drama, romance, war	1959	Grigoriy Chukhray	7.9	88	http://www.imdb.com/title/tt0052600/
+The Young Lions	action, drama, war	1958	Edward Dmytryk	7.3	167	http://www.imdb.com/title/tt0052415/
+Run Silent Run Deep	war, action, drama	1958	Robert Wise	7.2	93	http://www.imdb.com/title/tt0052151/
+Ashes and Diamonds	drama, war	1958	Andrzej Wajda	7.8	103	http://www.imdb.com/title/tt0052080/
+Ice Cold in Alex	drama, war	1958	J. Lee Thompson	7.7	129	http://www.imdb.com/title/tt0053935/
+Heaven Knows, Mr. Allison	action, adventure, drama, war	1957	John Huston	7.3	108	http://www.imdb.com/title/tt0050490/
+The Enemy Below	action, adventure, drama, thriller, war	1957	Dick Powell	7.5	98	http://www.imdb.com/title/tt0050356/
+The Man Who Never Was	war, drama	1956	Ronald Neame	7.3	103	http://www.imdb.com/title/tt0049471/
+Pursuit of the Graf Spee	action, adventure, drama, history, war	1956	Michael Powell, Emeric Pressburger	6.5	119	http://www.imdb.com/title/tt0048990/
+Reach for the Sky	biography, drama, war	1956	Lewis Gilbert	7	135	http://www.imdb.com/title/tt0049665/
+Kanal	drama, war	1957	Andrzej Wajda	7.8	91	http://www.imdb.com/title/tt0050585/
+A Man Escaped	drama, thriller, war	1956	Robert Bresson	8	99	http://www.imdb.com/title/tt0049902/
+Grace and Danger	war	2013	Rhys Hayward		90	http://www.imdb.com/title/tt1393010/
+Red Rose of Normandy	war	2011	Tino Struckmann	2.8		http://www.imdb.com/title/tt1702587/
+Stalingrad	action, war	2013	Fedor Bondarchuk			http://www.imdb.com/title/tt1966566/
+A Farewell to Arms	drama, romance, war	1957	Charles Vidor	6	152	http://www.imdb.com/title/tt0050379/
+Eagles Over London	drama, war	1969	Enzo G. Castellari	5.4	110	http://www.imdb.com/title/tt0064571/
+Richard III	drama, war	1995	Richard Loncraine	7.4	104	http://www.imdb.com/title/tt0114279/
+Goodnight, Mister Tom	drama, war	1998	Jack Gold	7.7	108	http://www.imdb.com/title/tt0175680/
+Talk to Me	biography, drama, history, music, war	2007	Kasi Lemmons	7.2	118	http://www.imdb.com/title/tt0796368/
+Tea with Mussolini	drama, comedy, war	1999	Franco Zeffirelli	6.7	117	http://www.imdb.com/title/tt0120857/
+Jackboots on Whitehall	animation, comedy, sci_fi, war	2010	Edward McHenry, Rory McHenry	5.1		http://www.imdb.com/title/tt0915463/
+Legionnaire	action, adventure, drama, war	1998	Peter MacDonald	5	99	http://www.imdb.com/title/tt0126388/
+Battle Force	action, war	2012	Scott Martin	3.3	102	http://www.imdb.com/title/tt2103997/
+Houston: The Legend of Texas	biography, drama, history, war, western	1986	Peter Levin	7	144	http://www.imdb.com/title/tt0091224/
+The Keep	action, drama, horror, mystery, romance, thriller, war	1983	Michael Mann	5.7	96	http://www.imdb.com/title/tt0085780/
+Carter's Army	drama, war	1970	George McCowan	5.2	70	http://www.imdb.com/title/tt0064135/
+Major Movie Star	adventure, comedy, drama, war	2008	Steve Miner	3.9	98	http://www.imdb.com/title/tt1034320/
+Return to the Hiding Place	drama, history, thriller, war	2011	Peter C. Spencer, Josiah Spencer	4	102	http://www.imdb.com/title/tt1691153/
+Lion of the Desert	biography, drama, history, war	1981	Moustapha Akkad	7.7	173	http://www.imdb.com/title/tt0081059/
+Zero Dark Dirty	comedy, music, romance, war	2013	Alexander Loy, Joe Walser	3.3		http://www.imdb.com/title/tt1288367/
+Breaker Morant	drama, history, war	1980	Bruce Beresford	7.8	107	http://www.imdb.com/title/tt0080310/
+Little Boy	comedy, drama, war	2013	Alejandro Monteverde			http://www.imdb.com/title/tt1810683/
+A Soldier's Story	drama, mystery, war	1984	Norman Jewison	7.1	101	http://www.imdb.com/title/tt0088146/
+1969	drama, war	1988	Ernest Thompson	5.5	95	http://www.imdb.com/title/tt0094594/
+Max	drama, war	2002	Menno Meyjes	6.5	106	http://www.imdb.com/title/tt0290210/
+The Courageous Heart of Irena Sendler	biography, drama, war	2009	John Kent Harrison	7	95	http://www.imdb.com/title/tt1010278/
+The Walking Dead	drama, war	1995	Preston A. Whitmore II	4.5	88	http://www.imdb.com/title/tt0114888/
+Zaytoun	adventure, drama, thriller, war	2012	Eran Riklis	6.2	110	http://www.imdb.com/title/tt2131698/
+Caesar	biography, drama, history, war	2002	Uli Edel	6.6	240	http://www.imdb.com/title/tt0284741/
+The Beast of War	drama, history, war	1988	Kevin Reynolds	7.2	111	http://www.imdb.com/title/tt0094716/
+The Devil's Rock	fantasy, horror, thriller, war	2011	Paul Campion	5.5	83	http://www.imdb.com/title/tt1712578/
+Attack on Darfur	drama, war	2009	Uwe Boll	5.6	98	http://www.imdb.com/title/tt1236471/
+Deathwatch	drama, horror, war, thriller	2002	Michael J. Bassett	5.9	94	http://www.imdb.com/title/tt0286306/
+Bright Young Things	comedy, drama, war	2003	Stephen Fry	6.5	106	http://www.imdb.com/title/tt0325123/
+Savior	drama, war	1998	Peter Antonijevic	7.1	103	http://www.imdb.com/title/tt0120070/
+The Dogs of War	action, adventure, drama, war	1980	John Irvin	6.2	118	http://www.imdb.com/title/tt0080641/
+When the Wind Blows	animation, comedy, drama, war	1986	Jimmy T. Murakami	7.7	80	http://www.imdb.com/title/tt0090315/
+Vengeance	action, crime, drama, thriller, war	2013	Gil Medina			http://www.imdb.com/title/tt1485141/
+Julius Caesar	drama, history, war	1970	Stuart Burge	6	117	http://www.imdb.com/title/tt0065922/
+Conspiracy	action, drama, mystery, thriller, war	2008	Adam Marcus	4.6	90	http://www.imdb.com/title/tt1043838/
+The Bunker	drama, horror, mystery, thriller, war	2001	Rob Green	5.4	95	http://www.imdb.com/title/tt0252963/
+Land and Freedom	drama, war	1995	Ken Loach	7.4	109	http://www.imdb.com/title/tt0114671/
+C.S.A.: The Confederate States of America	comedy, drama, war	2004	Kevin Willmott	6.3	89	http://www.imdb.com/title/tt0389828/
+Sometimes in April	drama, history, war	2005	Raoul Peck	7.8	140	http://www.imdb.com/title/tt0400063/
+Dogfight	drama, romance, war	1991	Nancy Savoca	7.2	94	http://www.imdb.com/title/tt0101748/
+Nicholas and Alexandra	biography, drama, history, war	1971	Franklin J. Schaffner	7.1	183	http://www.imdb.com/title/tt0067483/
+Death in Love	drama, romance, war	2008	Boaz Yakin	5	97	http://www.imdb.com/title/tt1079980/
+Serbian Scars	action, drama, thriller, war	2009	Brent Huff	3.4	97	http://www.imdb.com/title/tt0892392/
+A Few Days in September	drama, thriller, war	2006	Santiago Amigorena	5.4	116	http://www.imdb.com/title/tt0446442/
+Colditz	drama, war	2005	Stuart Orme	6.6	240	http://www.imdb.com/title/tt0415407/
+Music Within	biography, comedy, drama, music, romance, war	2007	Steven Sawalich	7.2	94	http://www.imdb.com/title/tt0422783/
+1968 Tunnel Rats	action, drama, war	2008	Uwe Boll	4.6	96	http://www.imdb.com/title/tt0970462/
+Crusade in Jeans	adventure, family, fantasy, war	2006	Ben Sombogaart	6	125	http://www.imdb.com/title/tt0381111/
+Deserter	drama, war	2002	Martin Huberty	5.1	90	http://www.imdb.com/title/tt0313608/
+The 34th Battalion	action, drama, war	2013	Luke Sparke			http://www.imdb.com/title/tt2402709/
+Horatio Hornblower: The Duel	adventure, drama, war	1998	Andrew Grieve	7.8	93	http://www.imdb.com/title/tt0129686/
+Invincible	drama, war	2001	Werner Herzog	6.5	133	http://www.imdb.com/title/tt0245171/
+Welcome to Sarajevo	drama, war	1997	Michael Winterbottom	6.8	103	http://www.imdb.com/title/tt0120490/
+Shake Hands with the Devil	drama, history, war	2007	Roger Spottiswoode	7.5	112	http://www.imdb.com/title/tt0472562/
+Iи Traиzit	drama, romance, war	2008	Tom Roberts	5.5	113	http://www.imdb.com/title/tt0785012/
+Hannibal: Rome's Worst Nightmare	action, biography, drama, history, war	2006	Edward Bazalgette	6.8	89	http://www.imdb.com/title/tt0766213/
+Warrior Queen	action, drama, history, war	2003	Bill Anderson	5.1	98	http://www.imdb.com/title/tt0338806/
+The Hiding Place	drama, history, war	1975	James F. Collier	7.1	150	http://www.imdb.com/title/tt0073109/
+An American Girl on the Home Front	drama, family, war	2006	Joyce Chopra	6.5	85	http://www.imdb.com/title/tt0828151/
+Harrison's Flowers	drama, romance, war	2000	Élie Chouraqui	7	130	http://www.imdb.com/title/tt0216799/
+The Soul Keeper	biography, drama, romance, war	2002	Roberto Faenza	6.7	90	http://www.imdb.com/title/tt0349995/
+Sword of War	drama, history, war	2009	Renzo Martinelli	4.3	139	http://www.imdb.com/title/tt1242516/
+Ulysses' Gaze	drama, war	1995	Theodoros Angelopoulos	7.1	176	http://www.imdb.com/title/tt0114863/
+In Enemy Hands	drama, thriller, war, action	2004	Tony Giglio	5.9	94	http://www.imdb.com/title/tt0316824/
+True Women	biography, drama, history, romance, war, western	1997	Karen Arthur	6.5	183	http://www.imdb.com/title/tt0118499/
+Amigo	drama, war	2010	John Sayles	6.2	124	http://www.imdb.com/title/tt1562847/
+Ararat	drama, war	2002	Atom Egoyan	6.5	115	http://www.imdb.com/title/tt0273435/
+The Night Watch	drama, romance, war	2011	Richard Laxton	6.4	89	http://www.imdb.com/title/tt1789074/
+Johnny Mad Dog	drama, war	2008	Jean-Stéphane Sauvaire	6.8	98	http://www.imdb.com/title/tt1042424/
+To Kill a King	drama, war	2003	Mike Barker	6.1	102	http://www.imdb.com/title/tt0302436/
+Walker	adventure, drama, history, war, western	1987	Alex Cox	6.3	94	http://www.imdb.com/title/tt0096409/
+Sharpe's Challenge	action, adventure, history, war	2006	Tom Clegg	7.4	98	http://www.imdb.com/title/tt0480002/
+The Ten Commandments	action, adventure, biography, drama, history, war	2006	Robert Dornhelm	5	167	http://www.imdb.com/title/tt0443412/
+American Son	drama, romance, war	2008	Neil Abramson	5.3	90	http://www.imdb.com/title/tt1037004/
+Blackbeard	adventure, biography, drama, history, war	2006	Kevin Connor	5.6	170	http://www.imdb.com/title/tt0472242/
+Rough Riders	action, drama, history, war	1997	John Milius	7.2	240	http://www.imdb.com/title/tt0118453/
+Sharpe's Peril	action, adventure, drama, history, war	2008	Tom Clegg	7.1	102	http://www.imdb.com/title/tt1181849/
+Warbirds	horror, mystery, sci_fi, thriller, war	2008	Kevin Gendreau	3.5	85	http://www.imdb.com/title/tt1047544/
+The Pentagon Wars	comedy, war	1998	Richard Benjamin	7	104	http://www.imdb.com/title/tt0144550/
+The American Dream	drama, war	2011	Jamil Walker Smith	1.8	80	http://www.imdb.com/title/tt1613046/
+Sand Serpents	action, horror, thriller, war	2009	Jeff Renfroe	4	90	http://www.imdb.com/title/tt1319736/
+Hornblower: Mutiny	adventure, drama, war	2001	Andrew Grieve	7.8	240	http://www.imdb.com/title/tt0273656/
+Horatio Hornblower: Retribution	adventure, drama, war	2001	Andrew Grieve	7.9	98	http://www.imdb.com/title/tt0273657/
+Horatio Hornblower 3	adventure, drama, war	2003	Andrew Grieve	7.7	125	http://www.imdb.com/title/tt0327890/
+Hornblower: Duty	adventure, drama, war	2003	Andrew Grieve	7.7		http://www.imdb.com/title/tt0352410/
+Sharpe's Sword	action, adventure, history, war	1995	Tom Clegg	7.7		http://www.imdb.com/title/tt0114418/
+The Coast Guard	action, drama, war	2002	Ki-duk Kim	6.5	91	http://www.imdb.com/title/tt0341384/
+A Bright Shining Lie	drama, war	1998	Terry George	6.4	118	http://www.imdb.com/title/tt0126220/
+Andersonville	drama, history, war, western	1996	John Frankenheimer	7.4	167	http://www.imdb.com/title/tt0115097/
+Live from Baghdad	drama, war	2002	Mick Jackson	7.3	110	http://www.imdb.com/title/tt0319758/
+Kandahar	biography, drama, war	2001	Mohsen Makhmalbaf	6.7	85	http://www.imdb.com/title/tt0283431/
+The Rogue	action, drama, thriller, war	2014				http://www.imdb.com/title/tt1060269/
+The Lion in Winter	drama, history, romance, war	2003	Andrei Konchalovsky	7	153	http://www.imdb.com/title/tt0319754/
+The Land Girls	drama, romance, war	1998	David Leland	6.1	111	http://www.imdb.com/title/tt0119494/
+Habermann	drama, romance, war	2010	Juraj Herz	6.9	104	http://www.imdb.com/title/tt1380799/
+Lidice	drama, history, war	2011	Petr Nikolaev	6.7	126	http://www.imdb.com/title/tt1754123/
+Ballada o bombere	action, drama, war	2011	Vitaliy Vorobyov	6.1	181	http://www.imdb.com/title/tt2007471/
+Company K	drama, war	2004	Robert Clem	5.9	102	http://www.imdb.com/title/tt0372828/
+El Alamein - The Line of Fire	drama, war	2002	Enzo Monteleone	7.1	117	http://www.imdb.com/title/tt0329042/
+Rosenstrasse	drama, war	2003	Margarethe von Trotta	6.7	136	http://www.imdb.com/title/tt0298131/
+The Fallen	action, drama, war	2004	Ari Taub	5.3	112	http://www.imdb.com/title/tt0382721/
+The Ninth Day	drama, thriller, war	2004	Volker Schlöndorff	6.9	98	http://www.imdb.com/title/tt0411702/
+Ike: Countdown to D-Day	action, adventure, drama, war	2004	Robert Harmon	7	89	http://www.imdb.com/title/tt0401504/
+The Aryan Couple	drama, war	2004	John Daly	6.1	120	http://www.imdb.com/title/tt0407536/
+Straight Into Darkness	action, drama, war	2004	Jeff Burr	5.1	95	http://www.imdb.com/title/tt0287733/
+Operation Valkyrie	drama, history, war	2004	Jo Baier	6.8	92	http://www.imdb.com/title/tt0388437/
+Yamato	war	2005	Jun'ya Satô	6.4	145	http://www.imdb.com/title/tt0451845/
+Bastards	action, drama, war	2006	Aleksandr Atanesyan	6		http://www.imdb.com/title/tt0460012/
+Tobruk	history, war	2008	Václav Marhoul	6	102	http://www.imdb.com/title/tt1224376/
+Joy Division	drama, war	2006	Reg Traviss	6.2	105	http://www.imdb.com/title/tt0462373/
+Anzio	drama, history, war	1968	Edward Dmytryk, Duilio Coletti	5.9	117	http://www.imdb.com/title/tt0062673/
+Operation Crossbow	action, drama, war	1965	Michael Anderson	6.5	115	http://www.imdb.com/title/tt0059549/
+None But the Brave	drama, war	1965	Frank Sinatra	6.5	106	http://www.imdb.com/title/tt0059518/
+Tobruk	war, drama	1967	Arthur Hiller	6.2	107	http://www.imdb.com/title/tt0062377/
+Triple Cross	action, adventure, war, thriller, drama	1966	Terence Young	6.2	140	http://www.imdb.com/title/tt0061647/
+Morituri	drama, war	1965	Bernhard Wicki	6.9	123	http://www.imdb.com/title/tt0059470/
+Castle Keep	drama, romance, war	1969	Sydney Pollack	6.1	105	http://www.imdb.com/title/tt0064137/
+The Battle of Neretva	drama, war	1969	Veljko Bulajic	6.9	175	http://www.imdb.com/title/tt0064091/
+Sharpe's Company	action, adventure, history, war	1994	Tom Clegg	7.7	100	http://www.imdb.com/title/tt0111156/
+Sharpe's Enemy	action, adventure, history, war	1994	Tom Clegg	7.8	90	http://www.imdb.com/title/tt0111157/
+The Hanoi Hilton	drama, war	1987	Lionel Chetwynd	5.6	125	http://www.imdb.com/title/tt0093143/
+84C MoPic	drama, war	1989	Patrick Sheane Duncan	6.9	95	http://www.imdb.com/title/tt0096744/
+Streamers	crime, drama, war	1983	Robert Altman	6.7	118	http://www.imdb.com/title/tt0086377/
+A Rumor of War	biography, drama, war	1980	Richard T. Heffron	6.7	114	http://www.imdb.com/title/tt0081443/
+The Odd Angry Shot	action, comedy, war	1979	Tom Jeffrey	6.4	92	http://www.imdb.com/title/tt0079652/
+Nam's Angels	war, action, drama	1970	Jack Starrett	5.2	95	http://www.imdb.com/title/tt0066126/
+Purple Hearts	drama, war	1984	Sidney J. Furie	5.3	116	http://www.imdb.com/title/tt0087956/
+Attack Force Z	action, drama, history, war	1982	Tim Burstall	5.2	93	http://www.imdb.com/title/tt0083591/
+The White Rose	biography, crime, drama, history, thriller, war	1982	Michael Verhoeven	7.1	123	http://www.imdb.com/title/tt0084897/
+The Assault	drama, history, romance, war	1986	Fons Rademakers	7.2	155	http://www.imdb.com/title/tt0090576/
+Black Rain	drama, history, war	1989	Shôhei Imamura	7.8	123	http://www.imdb.com/title/tt0097694/
+The Night of the Shooting Stars	drama, history, war	1982	Paolo Taviani, Vittorio Taviani	7.4	105	http://www.imdb.com/title/tt0084422/
+La pelle	drama, war	1981	Liliana Cavani	6.8	131	http://www.imdb.com/title/tt0082893/
+Marco Polo	adventure, biography, drama, history, war	1982		7.6	504	http://www.imdb.com/title/tt0083446/
+Hornets' Nest	drama, action, war	1970	Phil Karlson, Franco Cirino	5.2	110	http://www.imdb.com/title/tt0065850/
+Too Late the Hero	action, war, drama	1970	Robert Aldrich	6.7	145	http://www.imdb.com/title/tt0066471/
+Murphy's War	drama, war	1971	Peter Yates	6.8	107	http://www.imdb.com/title/tt0067458/
+Raid on Rommel	drama, war	1971	Henry Hathaway	5.4	99	http://www.imdb.com/title/tt0067650/
+Lacombe, Lucien	drama, war	1974	Louis Malle	7.7	138	http://www.imdb.com/title/tt0071733/
+Operation: Daybreak	adventure, drama, war	1975	Lewis Gilbert	6.7	118	http://www.imdb.com/title/tt0075019/
+Mr. Klein	crime, drama, mystery, thriller, war	1976	Joseph Losey	7.5	123	http://www.imdb.com/title/tt0074916/
+The McKenzie Break	war, drama, action	1970	Lamont Johnson	6.4	108	http://www.imdb.com/title/tt0066064/
+The Burmese Harp	drama, music, war	1956	Kon Ichikawa	7.9	116	http://www.imdb.com/title/tt0049012/
+Prisoners of the Sun	drama, war	1990	Stephen Wallace	6.6	108	http://www.imdb.com/title/tt0100414/
+Aces High	war, drama, action	1976	Jack Gold	6.4	114	http://www.imdb.com/title/tt0075627/
+King of Hearts	drama, comedy, war	1966	Philippe de Broca	7.1	102	http://www.imdb.com/title/tt0060908/
+The Lighthorsemen	war, drama	1987	Simon Wincer	6.5	131	http://www.imdb.com/title/tt0093416/
+Inchon	drama, history, war	1981	Terence Young	2.8	140	http://www.imdb.com/title/tt0084132/
+Farewell to the King	action, adventure, drama, war	1989	John Milius	6	117	http://www.imdb.com/title/tt0097334/
+Jacob the Liar	comedy, crime, drama, war	1975	Frank Beyer	7	100	http://www.imdb.com/title/tt0071688/
+The Old Gun	drama, thriller, war	1975	Robert Enrico	7.6	103	http://www.imdb.com/title/tt0073864/
+Seven Beauties	comedy, drama, war	1975	Lina Wertmüller	7.7	115	http://www.imdb.com/title/tt0075040/
+Black and White in Color	comedy, drama, war	1976	Jean-Jacques Annaud	6.9	90	http://www.imdb.com/title/tt0074972/
+Who'll Stop the Rain	action, crime, drama, war, thriller	1978	Karel Reisz	6.9	126	http://www.imdb.com/title/tt0078490/
+Go Tell the Spartans	drama, war	1978	Ted Post	6.7	114	http://www.imdb.com/title/tt0077617/
+Cuba	adventure, romance, thriller, war	1979	Richard Lester	5.5	122	http://www.imdb.com/title/tt0079013/
+Hitler: The Last Ten Days	biography, drama, history, war	1973	Ennio De Concini	6.5	108	http://www.imdb.com/title/tt0070184/
+Punishment Park	drama, thriller, war	1971	Peter Watkins	7.8	88	http://www.imdb.com/title/tt0067633/
+The Last Valley	adventure, drama, war	1971	James Clavell	7.2	128	http://www.imdb.com/title/tt0065969/
+36 Hours	war, thriller	1965	George Seaton	7.1	115	http://www.imdb.com/title/tt0057809/
+The War Lover	adventure, drama, war	1962	Philip Leacock	6.6	105	http://www.imdb.com/title/tt0056676/
+PT 109	biography, drama, war	1963	Leslie H. Martinson	6.3	140	http://www.imdb.com/title/tt0057393/
+Merrill's Marauders	adventure, war, drama	1962	Samuel Fuller	6.7	98	http://www.imdb.com/title/tt0056234/
+The Hunters	action, drama, romance, war	1958	Dick Powell	6.3	108	http://www.imdb.com/title/tt0051750/
+The Quiet American	drama, romance, thriller, war	1958	Joseph L. Mankiewicz	6.8	120	http://www.imdb.com/title/tt0052106/
+Decision Before Dawn	drama, war	1951	Anatole Litvak	7.4	119	http://www.imdb.com/title/tt0043459/
+Flying Leathernecks	drama, war, action	1951	Nicholas Ray	6.2	102	http://www.imdb.com/title/tt0043547/
+Operation Pacific	drama, war	1951	George Waggner	6.5	111	http://www.imdb.com/title/tt0043887/
+The Purple Plain	adventure, drama, war, action	1954	Robert Parrish	6.5	100	http://www.imdb.com/title/tt0047376/
+Battle Cry	drama, romance, war	1955	Raoul Walsh	6.5	149	http://www.imdb.com/title/tt0047860/
+The Colditz Story	drama, history, war	1955	Guy Hamilton	6.9	94	http://www.imdb.com/title/tt0047945/
+Never So Few	drama, war	1959	John Sturges	5.9	125	http://www.imdb.com/title/tt0053108/
+Il Generale della Rovere	drama, war	1959	Roberto Rossellini	7.7	132	http://www.imdb.com/title/tt0053856/
+The Key	drama, romance, war	1958	Carol Reed	6.6	134	http://www.imdb.com/title/tt0051816/
+Hell, Heaven or Hoboken	drama, history, war	1958	John Guillermin	6.8	101	http://www.imdb.com/title/tt0051759/
+Carve Her Name with Pride	biography, drama, war	1958	Lewis Gilbert	7	119	http://www.imdb.com/title/tt0051454/
+The Wings of Eagles	biography, drama, war	1957	John Ford	6.6	110	http://www.imdb.com/title/tt0051198/
+The One That Got Away	adventure, drama, war	1957	Roy Baker	7	106	http://www.imdb.com/title/tt0050803/
+A Generation	drama, war	1955	Andrzej Wajda	7.2	83	http://www.imdb.com/title/tt0048500/
+A Town Like Alice	crime, drama, romance, war	1956	Jack Lee	6.9	117	http://www.imdb.com/title/tt0049871/
+Sharpe's Gold	action, adventure, history, war	1995	Tom Clegg	7.4		http://www.imdb.com/title/tt0114417/
+The Hunley	action, drama, history, war	1999	John Gray	6.6	94	http://www.imdb.com/title/tt0162897/
+Occupation	drama, war	2009		7.5		http://www.imdb.com/title/tt1253869/
+The Brylcreem Boys	drama, romance, war	1998	Terence Ryan	6.1	106	http://www.imdb.com/title/tt0115770/
+Mosquito Squadron	war, drama	1969	Boris Sagal	5.4	90	http://www.imdb.com/title/tt0064699/
+Sharpe's Honour	action, adventure, history, war	1994	Tom Clegg	7.7		http://www.imdb.com/title/tt0111158/
+Return from the River Kwai	war, drama	1989	Andrew V. McLaglen	4.8	101	http://www.imdb.com/title/tt0095985/
+Breakthrough	drama, war	1979	Andrew V. McLaglen	4.9	115	http://www.imdb.com/title/tt0078320/
+Anzacs	drama, history, war	1985		7.2	165	http://www.imdb.com/title/tt0088479/
+Massacre in Rome	drama, history, war	1973	George Pan Cosmatos	6.3	110	http://www.imdb.com/title/tt0070592/
+Fixed Bayonets!	action, drama, war	1951	Samuel Fuller	7	92	http://www.imdb.com/title/tt0043540/
+The Steel Helmet	action, drama, war	1951	Samuel Fuller	7.5	85	http://www.imdb.com/title/tt0044072/
+Malta Story	drama, history, war	1953	Brian Desmond Hurst	6.4	103	http://www.imdb.com/title/tt0046029/
+The Naked and the Dead	drama, war	1958	Raoul Walsh	6.4	131	http://www.imdb.com/title/tt0051978/
+Dunkirk	drama, history, war	1958	Leslie Norman	6.8	134	http://www.imdb.com/title/tt0051565/
+Fires on the Plain	drama, war	1959	Kon Ichikawa	7.8	108	http://www.imdb.com/title/tt0053121/
+The Great War	comedy, drama, war	1959	Mario Monicelli	7.8	137	http://www.imdb.com/title/tt0052861/
+Sharpe's Regiment	action, adventure, history, war	1996	Tom Clegg	7.7	100	http://www.imdb.com/title/tt0117621/
+Overlord	drama, history, war	1975	Stuart Cooper	7.2	83	http://www.imdb.com/title/tt0073502/
+The Priest	drama, history, war	2009	Vladimir Khotinenko	6.9	130	http://www.imdb.com/title/tt1506452/
+Beach Red	drama, war	1967	Cornel Wilde	6.3	105	http://www.imdb.com/title/tt0061389/
+A Better Tomorrow III: Love and Death in Saigon	action, war	1989	Hark Tsui	5.8	105	http://www.imdb.com/title/tt0098691/
+Winter Soldier	documentary, history, war	1972		7.6	96	http://www.imdb.com/title/tt0204058/
+The Victors	war, drama	1963	Carl Foreman	7	175	http://www.imdb.com/title/tt0057652/
+Go for Broke!	drama, history, war	1951	Robert Pirosh	6.7	92	http://www.imdb.com/title/tt0043590/
+They Who Dare	drama, history, war	1954	Lewis Milestone	5.6	107	http://www.imdb.com/title/tt0046421/
+The Cockleshell Heroes	action, war, drama	1955	José Ferrer	6.6	97	http://www.imdb.com/title/tt0049083/
+Away All Boats	war, drama	1956	Joseph Pevney	6.2	114	http://www.imdb.com/title/tt0048971/
+Sharpe's Battle	action, adventure, history, war	1995	Tom Clegg	7.7	100	http://www.imdb.com/title/tt0114416/
+Sharpe's Siege	action, adventure, history, war	1996	Tom Clegg	7.6		http://www.imdb.com/title/tt0117622/
+The Colt	action, drama, history, war, western	2005	Yelena Lanskaya	6.4	80	http://www.imdb.com/title/tt0416654/
+Ambush	war, drama	1999	Olli Saarela	6.7	123	http://www.imdb.com/title/tt0162625/
+Stryker's War	action, thriller, adventure, war, horror	1985	Josh Becker	5.7	84	http://www.imdb.com/title/tt0090093/
+Journey to Shiloh	drama, war, western	1968	William Hale	5.7	101	http://www.imdb.com/title/tt0063161/
+Monsignor	crime, drama, war	1982	Frank Perry	4.8	121	http://www.imdb.com/title/tt0084351/
+Hell to Eternity	biography, drama, war	1960	Phil Karlson	6.9	131	http://www.imdb.com/title/tt0053901/
+No Man Is an Island	war, drama	1962	Richard Goldstone, John Monks Jr.	6.9	114	http://www.imdb.com/title/tt0056283/
+Black Cross	adventure, drama, history, romance, war	1960	Aleksander Ford	7	166	http://www.imdb.com/title/tt0054004/
+Betrayed	drama, history, romance, thriller, war	1954	Gottfried Reinhardt	5.9	108	http://www.imdb.com/title/tt0046770/
+What Price Glory	comedy, drama, musical, romance, war	1952	John Ford	6.2	111	http://www.imdb.com/title/tt0045323/
+What Price Glory	comedy, drama, musical, romance, war	1952	John Ford	6.2	111	http://www.imdb.com/title/tt0045323/
+California Dreamin'	comedy, drama, war	2007	Cristian Nemescu	7.6	155	http://www.imdb.com/title/tt0449573/
+Coming Home	drama, romance, war	1998	Giles Foster	6.6	199	http://www.imdb.com/title/tt0158653/
+Miss Evers' Boys	drama, war	1997	Joseph Sargent	7	118	http://www.imdb.com/title/tt0119679/
+The Misfit Brigade	action, adventure, drama, war	1987	Gordon Hessler	5.4	99	http://www.imdb.com/title/tt0093546/
+Land of Plenty	drama, war	2004	Wim Wenders	6.4	123	http://www.imdb.com/title/tt0382357/
+And Starring Pancho Villa as Himself	biography, drama, history, war, western	2003	Bruce Beresford	6.6	112	http://www.imdb.com/title/tt0337824/
+A Tale of Two Cities	drama, history, romance, war	1980	Jim Goddard	6.5	162	http://www.imdb.com/title/tt0081595/
+The Haunted Airman	drama, thriller, war	2006	Chris Durlacher	4.4	68	http://www.imdb.com/title/tt0810892/
+Code 207	action, drama, war	2011	Tino Struckmann	2.5	91	http://www.imdb.com/title/tt1295026/
+Spring 1941	drama, war	2008	Uri Barbash	5.5	120	http://www.imdb.com/title/tt1252616/
+Eleni	drama, war	1985	Peter Yates	6.5	114	http://www.imdb.com/title/tt0089079/
+Come See the Paradise	drama, history, romance, war	1990	Alan Parker	6.5	138	http://www.imdb.com/title/tt0099291/
+Map of the Human Heart	adventure, drama, romance, war	1992	Vincent Ward	6.8	109	http://www.imdb.com/title/tt0104812/
+Born to Defense	action, war	1986	Jet Li	5.5	92	http://www.imdb.com/title/tt0096507/
+The Crossing	biography, drama, history, war	2000	Robert Harmon	7	89	http://www.imdb.com/title/tt0210628/
+Edges of the Lord	drama, crime, war	2001	Yurek Bogayevicz	6.8	95	http://www.imdb.com/title/tt0245090/
+Citizen Soldiers	war	2014	Dale Dye			http://www.imdb.com/title/tt2118600/
+The Passage	action, drama, war	1979	J. Lee Thompson	5.8	99	http://www.imdb.com/title/tt0079700/
+Forbidden Ground	war	2013	Johan Earl, Adrian Powers		100	http://www.imdb.com/title/tt2186783/
+Lili Marleen	drama, music, romance, war	1981	Rainer Werner Fassbinder	7.1	120	http://www.imdb.com/title/tt0082661/
+Resurrected	drama, war	1989	Paul Greengrass	5.7	96	http://www.imdb.com/title/tt0098190/
+The Boys of Abu Ghraib	drama, history, thriller, war	2013	Luke Moran			http://www.imdb.com/title/tt1965162/
+Guy X	comedy, war	2005	Saul Metzstein	5.1	101	http://www.imdb.com/title/tt0408828/
+American Soldiers	action, drama, history, war	2005	Sidney J. Furie	2.7	103	http://www.imdb.com/title/tt0425743/
+Sharpe's Waterloo	action, adventure, history, war	1997	Tom Clegg	7.6		http://www.imdb.com/title/tt0120111/
+Taking Sides	drama, music, war	2001	István Szabó	7	108	http://www.imdb.com/title/tt0260414/
+Peacekeepers	drama, war	1999	Peter Kosminsky	7.7	175	http://www.imdb.com/title/tt0119873/
+Biggles: Adventures in Time	adventure, family, sci_fi, war	1986	John Hough	5.5	108	http://www.imdb.com/title/tt0090729/
+The Island on Bird Street	drama, war	1997	Søren Kragh-Jacobsen	6.9	107	http://www.imdb.com/title/tt0119389/
+Spoils of War	action, war	2009	Jean Liberté	3		http://www.imdb.com/title/tt1393003/
+April Morning	drama, history, war	1988	Delbert Mann	6.5	100	http://www.imdb.com/title/tt0094673/
+A Farewell to Fools	drama, war	2013	Bogdan Dreyer	6.2	90	http://www.imdb.com/title/tt1634055/
+The Tulse Luper Suitcases, Part 1: The Moab Story	adventure, biography, drama, romance, thriller, war	2003	Peter Greenaway	6.5	127	http://www.imdb.com/title/tt0307596/
+Che Guevara	biography, drama, history, romance, war	2005	Josh Evans	6.2	102	http://www.imdb.com/title/tt0446667/
+Sword of Honour	drama, war	2001	Bill Anderson	6.5	191	http://www.imdb.com/title/tt0273021/
+A Lonely Place for Dying	action, thriller, war	2009	Justin Evans	6	94	http://www.imdb.com/title/tt1161861/
+Imperium: Augustus	drama, history, romance, war	2003	Roger Young	6.1	200	http://www.imdb.com/title/tt0340529/
+Carla's Song	drama, romance, war	1996	Ken Loach	6.8	127	http://www.imdb.com/title/tt0115832/
+Churchill: The Hollywood Years	comedy, war	2004	Peter Richardson	4.9	84	http://www.imdb.com/title/tt0359078/
+Fighting to Forgive	history, romance, war	2012	Serge Rodnunsky		99	http://www.imdb.com/title/tt2531136/
+Oldest Living Confederate Widow Tells All	drama, war	1994	Ken Cameron	6.7	113	http://www.imdb.com/title/tt0110721/
+The Dirty Dozen: Next Mission	action, war	1985	Andrew V. McLaglen	4.9	95	http://www.imdb.com/title/tt0089026/
+Manticore	action, fantasy, horror, sci_fi, war	2005	Tripp Reed	3.8	88	http://www.imdb.com/title/tt0417943/
+Shogun	action, adventure, drama, history, war	1980	Jerry London	7.7	125	http://www.imdb.com/title/tt0083069/
+Horrors of War	action, drama, horror, sci_fi, war	2006	Peter John Ross, John Whitney	3.3	99	http://www.imdb.com/title/tt0439615/
+The Tenth Man	drama, war	1988	Jack Gold	7	100	http://www.imdb.com/title/tt0096243/
+All the Queen's Men	comedy, war, action, drama	2001	Stefan Ruzowitzky	3.9	99	http://www.imdb.com/title/tt0252223/
+Iron Cross	drama, thriller, war	2009	Joshua Newton	5.4		http://www.imdb.com/title/tt1039614/
+The Zookeeper	drama, war	2001	Ralph Ziman	7.3	108	http://www.imdb.com/title/tt0231001/
+Battle of the Brave	drama, history, romance, war	2004	Jean Beaudin	5.3	143	http://www.imdb.com/title/tt0386669/
+Platoon Leader	war, drama	1988	Aaron Norris	4.9	97	http://www.imdb.com/title/tt0095877/
+Jinnah	biography, drama, war	1998	Jamil Dehlavi	7.1	110	http://www.imdb.com/title/tt0183306/
+Burning Blue	biography, drama, romance, war	2013	D.M.W. Greer		96	http://www.imdb.com/title/tt1811307/
+Copenhagen	drama, history, war	2002	Howard Davies	7.3	90	http://www.imdb.com/title/tt0340057/
+Haven	biography, drama, history, war	2001	John Gray	6.3	180	http://www.imdb.com/title/tt0250862/
+Joe and Max	biography, drama, sport, war	2002	Steve James	6.6	106	http://www.imdb.com/title/tt0281938/
+Darling Lili	comedy, drama, music, war	1970	Blake Edwards	6.1	136	http://www.imdb.com/title/tt0065611/
+War Requiem	drama, war	1989	Derek Jarman	6.5	92	http://www.imdb.com/title/tt0096416/
+Britannic	action, drama, history, mystery, romance, war	2000	Brian Trenchard-Smith	5	93	http://www.imdb.com/title/tt0190281/
+Sisters of War	drama, war	2010	Brendan Maher	5.8	95	http://www.imdb.com/title/tt1633245/
+I'll Remember April	drama, family, war	2000	Bob Clark	6.1	90	http://www.imdb.com/title/tt0155754/
+Heaven and Earth	action, adventure, drama, war	1990	Haruki Kadokawa	6.8	125	http://www.imdb.com/title/tt0099753/
+Missing in America	drama, war	2005	Gabrielle Savage Dockterman	6.5	102	http://www.imdb.com/title/tt0384699/
+For the Moment	romance, war, drama	1993	Aaron Kim Johnston	6	120	http://www.imdb.com/title/tt0109823/
+Kandahar Break	drama, romance, thriller, war	2009	David Whitney	4.9	94	http://www.imdb.com/title/tt1490726/
+Silent Night	biography, drama, war	2002	Rodney Gibbons	7.6	100	http://www.imdb.com/title/tt0338434/
+S.S. Doomtrooper	action, horror, sci_fi, war	2006	David Flores	2.7	90	http://www.imdb.com/title/tt0795457/
+7	crime, drama, horror, mystery, thriller, war	2008	Ingo Storm	4	97	http://www.imdb.com/title/tt1339040/
+Mission of the Shark: The Saga of the U.S.S. Indianapolis	action, drama, history, war	1991	Robert Iscove	6.3	100	http://www.imdb.com/title/tt0102455/
+Beautiful People	comedy, drama, war	1999	Jasmin Dizdar	6.2	107	http://www.imdb.com/title/tt0159272/
+Talk of Angels	drama, romance, war	1998	Nick Hamm	6	96	http://www.imdb.com/title/tt0120271/
+Shot Through the Heart	drama, war	1998	David Attwood	7.1	112	http://www.imdb.com/title/tt0171741/
+Dad's Army	comedy, war	1971	Norman Cohen	6.4	95	http://www.imdb.com/title/tt0066963/
+Berserker	action, adventure, fantasy, war	2004	Paul Matthews	3.7	84	http://www.imdb.com/title/tt0264410/
+Horatio Hornblower: The Fire Ship	adventure, drama, war	1998	Andrew Grieve	7.8	93	http://www.imdb.com/title/tt0194947/
+A Soldier's Sweetheart	drama, war	1998	Thomas Michael Donnelly	6.1	112	http://www.imdb.com/title/tt0129414/
+South Pacific	comedy, drama, musical, romance, war	2001	Richard Pearce	5.8	129	http://www.imdb.com/title/tt0242898/
+Pippin: His Life and Times	history, musical, romance, war	1981	David Sheehan	7.3	112	http://www.imdb.com/title/tt0082909/
+The Truce	drama, history, war	1997	Francesco Rosi	6.6	125	http://www.imdb.com/title/tt0117959/
+One Man's Hero	action, drama, history, romance, war, western	1999	Lance Hool	5.7	121	http://www.imdb.com/title/tt0120775/
+Carry on England	comedy, war	1976	Gerald Thomas	3	89	http://www.imdb.com/title/tt0074286/
+Dog Tags	action, war	1988	Romano Scavolini	4.2	93	http://www.imdb.com/title/tt0099447/
+Last of the Mohicans	action, adventure, war	1977	James L. Conway	6.8	120	http://www.imdb.com/title/tt0076300/
+Red vs. Blue Season 9	animation, action, comedy, sci_fi, war	2011	Burnie Burns, Matt Hullum	7.1	125	http://www.imdb.com/title/tt2114454/
+Niflheim: Blood & Bullets	horror, war	2009	Nathaniel Iwaszko	1.7		http://www.imdb.com/title/tt1327826/
+Second Nature	drama, mystery, sci_fi, thriller, war	2003	Ben Bolt	5.3	90	http://www.imdb.com/title/tt0326121/
+St. Nazaire	drama, war	????	David Yates			http://www.imdb.com/title/tt1647670/
+Lover's Prayer	drama, romance, war	2001	Reverge Anselmo	5.1	106	http://www.imdb.com/title/tt0200422/
+Hiroshima	drama, war	1995	Koreyoshi Kurahara, Roger Spottiswoode	7.6	190	http://www.imdb.com/title/tt0113309/
+Four Saints	action, drama, history, war	2013	Jean-Pierre Isbouts		96	http://www.imdb.com/title/tt1729646/
+First Light	biography, drama, war	2010	Matthew Whiteman	6.4	75	http://www.imdb.com/title/tt1653661/
+Running Free	adventure, drama, family, history, war	1999	Sergey Bodrov	5.1	81	http://www.imdb.com/title/tt0173910/
+Tempo di uccidere	drama, war	1989	Giuliano Montaldo	5.2	110	http://www.imdb.com/title/tt0100762/
+I Am Soldier	action, thriller, war	2013	Ronnie Thompson			http://www.imdb.com/title/tt2717318/
+The Torturer	drama, horror, mystery, thriller, war	2008	Graham Green	4.4	86	http://www.imdb.com/title/tt1245678/
+A Texas Funeral	comedy, drama, fantasy, romance, war, western	1999	William Blake Herron	6.3	98	http://www.imdb.com/title/tt0180242/
+The Blood of Others	drama, history, romance, war	1984	Claude Chabrol	5.2	135	http://www.imdb.com/title/tt0088038/
+Tears in the Rain	drama, romance, war	1988	Don Sharp	5.8	100	http://www.imdb.com/title/tt0096237/
+Florence Nightingale	biography, drama, family, romance, war	1985	Daryl Duke	7.4	140	http://www.imdb.com/title/tt0089157/
+For Love of Country: Approaching Midnight	crime, drama, romance, war	2013	Sam Logan Khaleghi			http://www.imdb.com/title/tt0837559/
+The Attic: The Hiding of Anne Frank	drama, history, war	1988	John Erman	7	95	http://www.imdb.com/title/tt0094685/
+Imperium: Nerone	drama, war	2004	Paul Marcus	5.6	181	http://www.imdb.com/title/tt0383790/
+The Veteran	drama, war	2006	Sidney J. Furie	3.3	90	http://www.imdb.com/title/tt0493322/
+Mata Hari	drama, thriller, war	1985	Curtis Harrington	2.5	108	http://www.imdb.com/title/tt0089565/
+The Wall	drama, war	1998	Joseph Sargent	6.2	95	http://www.imdb.com/title/tt0162041/
+A Bear Named Winnie	drama, war	2004	John Kent Harrison	6.7	90	http://www.imdb.com/title/tt0437088/
+Operation: Sunrise	action, drama, horror, war	2008	Donovan Cerminara	3.1	102	http://www.imdb.com/title/tt1346295/
+Hitler's S.S.: Portrait in Evil	drama, war	1985	Jim Goddard	6.5	135	http://www.imdb.com/title/tt0089279/
+Coronado	action, adventure, comedy, war	2003	Claudio Faeh	4.4	88	http://www.imdb.com/title/tt0337945/
+Crazy Horse	action, biography, drama, war, western	1996	John Irvin	5.9	90	http://www.imdb.com/title/tt0115969/
+Sharpe's Revenge	action, adventure, history, war	1997	Tom Clegg	7.6		http://www.imdb.com/title/tt0120110/
+Weekend at Dunkirk	drama, war	1964	Henri Verneuil	6.7	119	http://www.imdb.com/title/tt0058740/
+Attack on the Iron Coast	action, drama, war	1968	Paul Wendkos	5.4	89	http://www.imdb.com/title/tt0062688/
+Back Door to Hell	war, drama	1964	Monte Hellman	5.3	75	http://www.imdb.com/title/tt0057864/
+Battle at Bloody Beach	drama, war	1961	Herbert Coleman	5.4	83	http://www.imdb.com/title/tt0054671/
+Take the High Ground!	comedy, war, drama	1953	Richard Brooks	6.1	101	http://www.imdb.com/title/tt0046398/
+Odette	drama, war	1950	Herbert Wilcox	6.8	124	http://www.imdb.com/title/tt0043871/
+Sharpe's Mission	action, adventure, history, war	1996	Tom Clegg	7.6	100	http://www.imdb.com/title/tt0117620/
+Going Back	action, drama, war	2001	Sidney J. Furie	5.1	113	http://www.imdb.com/title/tt0243278/
+Faith of My Fathers	biography, drama, war	2005	Peter Markle	6.6	90	http://www.imdb.com/title/tt0444626/
+Long Tan	action, drama, war	2014	Kriv Stenders			http://www.imdb.com/title/tt0441881/
+The Last Confederate: The Story of Robert Adams	action, drama, history, romance, war	2005	A. Blaine Miller, Julian Adams	5.1	96	http://www.imdb.com/title/tt0339743/
+Wicked Spring	drama, war, western	2002	Kevin R. Hershberger	5.7	102	http://www.imdb.com/title/tt0235048/
+Eye of the Eagle	action, drama, family, history, war	1997	Peter Flinth	6.3	91	http://www.imdb.com/title/tt0120565/
+Lucie Aubrac	biography, drama, war	1997	Claude Berri	6.7	115	http://www.imdb.com/title/tt0119586/
+Joanna	drama, war	2010	Feliks Falk	6.7		http://www.imdb.com/title/tt1799110/
+Death and Glory in Changde	action, drama, history, war	2010	Dong Shen	5.3	131	http://www.imdb.com/title/tt1773370/
+Menschen	history, war	2012	Sarah R. Lotfi	5.7		http://www.imdb.com/title/tt2224676/
+Captain Conan	drama, war	1996	Bertrand Tavernier	7.1	129	http://www.imdb.com/title/tt0115822/
+Safe Conduct	biography, drama, history, war	2002	Bertrand Tavernier	6.9	170	http://www.imdb.com/title/tt0269461/
+Spy Sorge	action, thriller, war	2003	Masahiro Shinoda	6.5	182	http://www.imdb.com/title/tt0316665/
+The Edelweiss Pirates	drama, history, war	2004	Niko Brücher	6.1	111	http://www.imdb.com/title/tt0240473/
+Purple Butterfly	drama, history, war	2003	Ye Lou	5.9	127	http://www.imdb.com/title/tt0363290/
+Beyond Enemy Lines	drama, war	2004	Åke Lindman	6.5	127	http://www.imdb.com/title/tt0377935/
+Lorelei: The Witch of the Pacific Ocean	action, drama, sci_fi, thriller, war	2005	Shinji Higuchi, Cellin Gluck	5.2	128	http://www.imdb.com/title/tt0406941/
+The Battle of El Alamein	action, drama, history, war	1969	Calvin Jackson Padget	5.1	96	http://www.imdb.com/title/tt0062714/
+Escape by Night	drama, war	1960	Roberto Rossellini	7.3	138	http://www.imdb.com/title/tt0052781/
+The Iron Triangle	drama, war	1989	Eric Weston	5.9	91	http://www.imdb.com/title/tt0097593/
+L'ultimo cacciatore	drama, thriller, war	1980	Anthony M. Dawson	5.8	95	http://www.imdb.com/title/tt0087594/
+Diên Biên Phú	drama, war	1992	Pierre Schoendoerffer	5.7	125	http://www.imdb.com/title/tt0104105/
+La 317ème section	war	1965	Pierre Schoendoerffer	7.1	100	http://www.imdb.com/title/tt0058863/
+The Last Grenade	drama, war	1970	Gordon Flemyng	5.3	94	http://www.imdb.com/title/tt0065967/
+Code Name: Emerald	action, drama, war	1985	Jonathan Sanger	5.8	95	http://www.imdb.com/title/tt0088934/
+The Unknown Soldier	drama, war	1985	Rauni Mollberg	7.3	195	http://www.imdb.com/title/tt0090215/
+For Those I Loved	biography, drama, war	1983	Robert Enrico	6.8	145	http://www.imdb.com/title/tt0085190/
+The Last Warrior	action, drama, war	1989	Martin Wragge	5	94	http://www.imdb.com/title/tt0097715/
+Mussolini and I	biography, drama, war	1985	Alberto Negrin	6.3	120	http://www.imdb.com/title/tt0089645/
+The One That Got Away	action, drama, thriller, war	1996	Paul Greengrass	6.3	110	http://www.imdb.com/title/tt0117250/
+Richard II	biography, drama, history, war	1978	David Giles	7.3	158	http://www.imdb.com/title/tt0077806/
+Hell Boats	war, drama	1970	Paul Wendkos	4.4	95	http://www.imdb.com/title/tt0065825/
+The Last Escape	war, drama	1970	Walter Grauman	5	90	http://www.imdb.com/title/tt0065966/
+The Train	drama, war	1973	Pierre Granier-Deferre	6.8	95	http://www.imdb.com/title/tt0070826/
+The Biggest Battle	war, drama	1978	Humphrey Longan	4.8	107	http://www.imdb.com/title/tt0076102/
+The Last 4 Days	biography, drama, history, war	1974	Carlo Lizzani	6.3	126	http://www.imdb.com/title/tt0071880/
+The Puppetmaster	biography, drama, war	1993	Hsiao-hsien Hou	7	142	http://www.imdb.com/title/tt0107157/
+Fraulein Doktor	drama, war	1969	Alberto Lattuada	6.3	104	http://www.imdb.com/title/tt0064350/
+Von Richthofen and Brown	war, action, drama	1971	Roger Corman	5.6	97	http://www.imdb.com/title/tt0067658/
+Zeppelin	adventure, drama, war	1971	Etienne Perier	5.9	100	http://www.imdb.com/title/tt0068014/
+Many Wars Ago	drama, war	1970	Francesco Rosi	7.4	101	http://www.imdb.com/title/tt0066511/
+King & Country	drama, war	1964	Joseph Losey	7.5	89	http://www.imdb.com/title/tt0058263/
+Some Kind of Hero	comedy, crime, drama, war	1982	Michael Pressman	5.5	97	http://www.imdb.com/title/tt0083107/
+Sky Bandits	action, adventure, war, western	1986	Zoran Perisic	4.4	105	http://www.imdb.com/title/tt0091963/
+Perceval	drama, music, romance, war	1978	Eric Rohmer	6.9	140	http://www.imdb.com/title/tt0078073/
+Under Ten Flags	drama, war	1960	Duilio Coletti	6.3	92	http://www.imdb.com/title/tt0054328/
+The Four Days of Naples	drama, war	1962	Nanni Loy	7.3	124	http://www.imdb.com/title/tt0056389/
+The Mountain Road	drama, war	1960	Daniel Mann	6.2	102	http://www.imdb.com/title/tt0054095/
+The Gallant Hours	biography, drama, war	1960	Robert Montgomery	6.9	115	http://www.imdb.com/title/tt0053849/
+The Hook	drama, war	1963	George Seaton	6.5	98	http://www.imdb.com/title/tt0057152/
+Battle Circus	romance, war, drama	1953	Richard Brooks	5.7	90	http://www.imdb.com/title/tt0045544/
+All the Young Men	drama, war	1960	Hall Bartlett	6.1	90	http://www.imdb.com/title/tt0053583/
+Hell in Korea	drama, history, war	1956	Julian Amyes	6.2	80	http://www.imdb.com/title/tt0049302/
+Men in War	drama, war	1957	Anthony Mann	7.4	102	http://www.imdb.com/title/tt0050699/
+War Hunt	drama, war	1962	Denis Sanders	6.3	83	http://www.imdb.com/title/tt0056675/
+Time Limit	drama, war	1957	Karl Malden	7.1	96	http://www.imdb.com/title/tt0051083/
+Retreat, Hell!	war, drama	1952	Joseph H. Lewis	6.5	95	http://www.imdb.com/title/tt0045082/
+El Naser Salah el Dine	action, adventure, drama, history, romance, war	1963	Youssef Chahine	7	90	http://www.imdb.com/title/tt0057357/
+American Guerrilla in the Philippines	drama, war	1950	Fritz Lang	6	105	http://www.imdb.com/title/tt0042195/
+The Wooden Horse	drama, history, war	1950	Jack Lee	6.9	101	http://www.imdb.com/title/tt0043147/
+Force of Arms	romance, war, drama	1951	Michael Curtiz	6.1	99	http://www.imdb.com/title/tt0043553/
+Submarine Command	drama, war	1951	John Farrow	6.5	87	http://www.imdb.com/title/tt0044085/
+Angels One Five	drama, war	1952	George More O'Ferrall	6.3	98	http://www.imdb.com/title/tt0046714/
+Raiders in the Sky	drama, war	1953	Philip Leacock	6.2	96	http://www.imdb.com/title/tt0045513/
+Glory at Sea	adventure, drama, war	1952	Compton Bennett	6.1	100	http://www.imdb.com/title/tt0044658/
+Red Ball Express	drama, war	1952	Budd Boetticher	6.1	83	http://www.imdb.com/title/tt0045072/
+Ana-ta-han	drama, war	1953	Josef von Sternberg	7.3	92	http://www.imdb.com/title/tt0046712/
+Destination Gobi	adventure, drama, war	1953	Robert Wise	6.2	90	http://www.imdb.com/title/tt0045682/
+Sailor of the King	action, drama, war	1953	Roy Boulting	6.7	83	http://www.imdb.com/title/tt0046267/
+Paratrooper	drama, war	1953	Terence Young	5.8	88	http://www.imdb.com/title/tt0046161/
+The Sea Shall Not Have Them	drama, war	1954	Lewis Gilbert	6.3	91	http://www.imdb.com/title/tt0047463/
+Above Us the Waves	drama, war	1955	Ralph Thomas	6.5	99	http://www.imdb.com/title/tt0047797/
+Ten Seconds to Hell	action, drama, romance, war	1959	Robert Aldrich	6.5	93	http://www.imdb.com/title/tt0053341/
+Desert Patrol	drama, war	1958	Guy Green	6.6	97	http://www.imdb.com/title/tt0051532/
+Operation Amsterdam	drama, history, war	1959	Michael McCarthy	6.2	104	http://www.imdb.com/title/tt0053140/
+Darby's Rangers	action, war, drama	1958	William A. Wellman	6.4	121	http://www.imdb.com/title/tt0051519/
+Hellcats of the Navy	drama, thriller, war	1957	Nathan Juran	5	82	http://www.imdb.com/title/tt0050500/
+D-Day the Sixth of June	drama, romance, war	1956	Henry Koster	6.1	106	http://www.imdb.com/title/tt0049117/
+Between Heaven and Hell	drama, war	1956	Richard Fleischer	6.6	94	http://www.imdb.com/title/tt0049004/
+Battle of the Coral Sea	drama, war, action, romance	1959	Paul Wendkos	6	86	http://www.imdb.com/title/tt0052606/
+Hong ying tao	drama, war	1995	Daying Ye	7.1	120	http://www.imdb.com/title/tt0114243/
+Hong ying tao	drama, war	1995	Daying Ye	7.1	120	http://www.imdb.com/title/tt0114243/
+Which Way to the Front?	comedy, war	1970	Jerry Lewis	3.5	96	http://www.imdb.com/title/tt0066564/
+This Revolution	drama, romance, thriller, war	2005	Stephen Marshall	5.5	95	http://www.imdb.com/title/tt0423370/
+Pavilion of Women	adventure, drama, romance, war	2001	Ho Yim	5.6	116	http://www.imdb.com/title/tt0244709/
+The Broken Chain	drama, war, action	1993	Lamont Johnson	5.5	93	http://www.imdb.com/title/tt0106486/
+Dirty Dozen: The Deadly Mission	action, war	1987	Lee H. Katzin	5.2	90	http://www.imdb.com/title/tt0092891/
+I Will Fight No More Forever	action, drama, history, war, western	1975	Richard T. Heffron	7.3	105	http://www.imdb.com/title/tt0073138/
+Grey Knight	horror, war	1993	George Hickenlooper	4.7	80	http://www.imdb.com/title/tt0107319/
+Happy New Year	drama, war	2011	K. Lorrel Manning	3.4	104	http://www.imdb.com/title/tt1226274/
+Utu	adventure, drama, history, war	1984	Geoff Murphy	6.9	118	http://www.imdb.com/title/tt0086497/
+My Lai Four	war	2011	Paolo Bertola	3.7	100	http://www.imdb.com/title/tt1813519/
+Inside the Third Reich	biography, drama, history, war	1982	Marvin J. Chomsky	7.4	300	http://www.imdb.com/title/tt0084140/
+Two Men Went to War	comedy, war, drama	2002	John Henderson	6.5	109	http://www.imdb.com/title/tt0304857/
+Two-Fisted Tales	drama, horror, thriller, war, western	1992	Richard Donner, Tom Holland	5.9	88	http://www.imdb.com/title/tt0166002/
+The Plot to Kill Hitler	drama, history, war	1990	Lawrence Schiller	6.2	94	http://www.imdb.com/title/tt0100376/
+Amin: The Rise and Fall	biography, drama, history, thriller, war	1981	Sharad Patel	5.8	101	http://www.imdb.com/title/tt0081430/
+The Falklands Play	drama, war	2002	Michael Samuels	7.1	90	http://www.imdb.com/title/tt0315579/
+Allegiance	action, war	????				http://www.imdb.com/title/tt2364565/
+Friends for Life	drama, war	2008	Michael Spence	5.3		http://www.imdb.com/title/tt1111231/
+Bethune: The Making of a Hero	biography, drama, romance, war	1990	Phillip Borsos	6.6	168	http://www.imdb.com/title/tt0099127/
+Enola Gay: The Men, the Mission, the Atomic Bomb	adventure, drama, history, war	1980	David Lowell Rich	6.7	156	http://www.imdb.com/title/tt0080689/
+The Alamo: Thirteen Days to Glory	action, adventure, drama, history, war, western	1987	Burt Kennedy	6	140	http://www.imdb.com/title/tt0092527/
+Storming Juno	war	2010	Tim Wolochatiuk	6.6	88	http://www.imdb.com/title/tt1776305/
+Tula: The Revolt	drama, history, war	2013	Jeroen Leinders			http://www.imdb.com/title/tt2409418/
+Oliver Sherman	drama, thriller, war	2010	Ryan Redford	6.5		http://www.imdb.com/title/tt1503149/
+The Birdmen	drama, history, war	1971	Philip Leacock	6.2	74	http://www.imdb.com/title/tt0066833/
+David & Layla	comedy, drama, romance	2005	Jay Jonroy	5.9	106	http://www.imdb.com/title/tt0424025/
+Friendly Fire	drama, war	1979	David Greene	7.1	147	http://www.imdb.com/title/tt0079177/
+The Key to Rebecca	drama, romance, war	1985	David Hemmings	6.3	194	http://www.imdb.com/title/tt0089412/
+The Finest Hour	drama, war	1992	Shimon Dotan	4.2	105	http://www.imdb.com/title/tt0101879/
+The Human Shield	action, drama, war	1991	Ted Post	4.4	88	http://www.imdb.com/title/tt0102072/
+The Man Who Captured Eichmann	drama, history, war	1996	William A. Graham	6.6	96	http://www.imdb.com/title/tt0116975/
+Homeland Security	drama, war	2004	Daniel Sackheim	4.1	88	http://www.imdb.com/title/tt0363685/
+An Ungentlemanly Act	history, war	1992	Stuart Urban	7.1	130	http://www.imdb.com/title/tt0134178/
+Sniper: Inside the Crosshairs	war	2009	Emre Sahin	6.8		http://www.imdb.com/title/tt1411248/
+No Better Place to Die	war	2013	Dale Dye			http://www.imdb.com/title/tt2170533/
+The Hot Box	action, adventure, drama, war	1972	Joe Viola	4.4	85	http://www.imdb.com/title/tt0068717/
+Netaji Subhas Chandra Bose: The Forgotten Hero	biography, drama, history, war	2005	Shyam Benegal	6.7	208	http://www.imdb.com/title/tt0349878/
+David & Fatima	drama, romance, war	2008	Alain Zaloum	5.8		http://www.imdb.com/title/tt0993753/
+Captain Battle: Legacy War	action, war	2013	David Palmieri	1.3	90	http://www.imdb.com/title/tt2387413/
+Born of War	action, war	2012	Vicky Jewson			http://www.imdb.com/title/tt1554921/
+MGS: Philanthropy	action, adventure, sci_fi, thriller, war	2009	Giacomo Talamini	6.3	69	http://www.imdb.com/title/tt1543283/
+Transit	comedy, crime, drama, history, war	2006	Aleksandr Rogozhkin	6.3	140	http://www.imdb.com/title/tt0416111/
+The Moon and the Stars	drama, romance, war	2007	John Irvin	6.1	102	http://www.imdb.com/title/tt0460873/
+Rain	family, war, action, drama	2003	Robert J. Wilson	4.8	96	http://www.imdb.com/title/tt0265611/
+Murderers Among Us: The Simon Wiesenthal Story	biography, drama, war	1989	Brian Gibson	7.5	160	http://www.imdb.com/title/tt0097933/
+15 Amore	drama, romance, war	1998	Maurice Murphy	6.8	92	http://www.imdb.com/title/tt0184178/
+Arch of Triumph	drama, romance, war	1984	Waris Hussein	5.3	93	http://www.imdb.com/title/tt0088734/
+World War II: When Lions Roared	drama, history, war	1994	Joseph Sargent	6.5	194	http://www.imdb.com/title/tt0108956/
+The Great Escape II: The Untold Story	drama, action, adventure, war	1988	Jud Taylor, Paul Wendkos	5.7	178	http://www.imdb.com/title/tt0095252/
+Two Deaths	drama, war	1995	Nicolas Roeg	6.8	102	http://www.imdb.com/title/tt0117999/
+Nadia's Promise	action, drama, war	2013	Stephen Bridgewater			http://www.imdb.com/title/tt1493019/
+21 and a Wake-Up	drama, war	2009	Chris McIntyre	4.5	123	http://www.imdb.com/title/tt1268161/
+The Battle of Pussy Willow Creek	comedy, history, war	2010	Wendy Jo Cohen	6.5		http://www.imdb.com/title/tt1329309/
+Chicago Joe and the Showgirl	crime, drama, romance, thriller, war	1990	Bernard Rose	4.7	103	http://www.imdb.com/title/tt0099250/
+Frankie Starlight	drama, romance, war	1995	Michael Lindsay-Hogg	6.6	101	http://www.imdb.com/title/tt0113107/
+Saving Jessica Lynch	drama, war	2003	Peter Markle	4.3	94	http://www.imdb.com/title/tt0377112/
+The Red Machine	adventure, crime, drama, history, mystery, war	2009	Stephanie Argy, Alec Boehm	7	84	http://www.imdb.com/title/tt1218510/
+The Ambassador	drama, war	1984	J. Lee Thompson	5.4	97	http://www.imdb.com/title/tt0086884/
+Wallenberg: A Hero's Story	biography, drama, history, war	1985	Lamont Johnson	7.2	200	http://www.imdb.com/title/tt0090285/
+A Year of the Quiet Sun	drama, romance, war	1984	Krzysztof Zanussi	7.1	106	http://www.imdb.com/title/tt0088009/
+D-Day 6.6.1944	action, drama, history, war	2004	Richard Dale, Kim Bour	6.7	120	http://www.imdb.com/title/tt0412617/
+Joe Maddison's War	drama, war	2010	Patrick Collerton	6.2	110	http://www.imdb.com/title/tt1620822/
+Witness in the War Zone	action, drama, war	1987	Nathaniel Gutman	5.2	100	http://www.imdb.com/title/tt0092844/
+Strike Commando	action, war, adventure	1987	Vincent Dawn	4.4	104	http://www.imdb.com/title/tt0094059/
+In Love and War	drama, romance, war	2001	John Kent Harrison	6.4	90	http://www.imdb.com/title/tt0267693/
+Lobby Lobster	war	2007	Tony Kaye	6.5		http://www.imdb.com/title/tt0863087/
+Anne Frank's Diary	animation, biography, drama, war	1999	Julian Wolff	6.4	88	http://www.imdb.com/title/tt0222724/
+21 Brothers	drama, history, war	2011	Michael McGuire	4.7	96	http://www.imdb.com/title/tt1949106/
+Surface to Air	action, war	1998	Rodney McDonald	3.6	93	http://www.imdb.com/title/tt0120247/
+The Last Tattoo	drama, mystery, romance, thriller, war	1994	John Reid	6	112	http://www.imdb.com/title/tt0110311/
+Too Young the Hero	drama, war	1988	Buzz Kulik	6.3	100	http://www.imdb.com/title/tt0096286/
+Kill Zone	action, war	1993	Cirio H. Santiago	4.5	81	http://www.imdb.com/title/tt0107316/
+The Adventures of Young Indiana Jones: Attack of the Hawkmen	adventure, war	1995	Ben Burtt	6.4	96	http://www.imdb.com/title/tt0154004/
+Resistance Movement	drama, history, war	2013	Kathryn Lee Moss	2.3	93	http://www.imdb.com/title/tt2274538/
+The Wipers Times	war	2013	Andy De Emmony			http://www.imdb.com/title/tt2763790/
+Never Forget	drama, war	1991	Joseph Sargent	6.7	94	http://www.imdb.com/title/tt0102525/
+Universal Soldier	action, drama, war	1971	Cy Endfield	5	94	http://www.imdb.com/title/tt0183948/
+Death Race	action, drama, war	1973	David Lowell Rich	6.8	90	http://www.imdb.com/title/tt0069953/
+The Second Front	action, romance, war	2005	Dmitry Fiks	3.9	88	http://www.imdb.com/title/tt0407297/
+The Tulse Luper Suitcases, Part 3: From Sark to the Finish	adventure, biography, drama, romance, thriller, war	2004	Peter Greenaway	6.6	120	http://www.imdb.com/title/tt0379561/
+Hanna's War	biography, drama, war	1988	Menahem Golan	5.9	148	http://www.imdb.com/title/tt0095275/
+Blitzkrieg: Escape from Stalag 69	horror, war	2008	Keith J. Crocker	4.4	120	http://www.imdb.com/title/tt1104685/
+Battlefield Death Tales	horror, war	2012	James Eaves, Pat Higgins	3.6	87	http://www.imdb.com/title/tt2218924/
+Reign of the Gargoyles	action, adventure, fantasy, sci_fi, war	2007	Ayton Davis	3.9	88	http://www.imdb.com/title/tt0969322/
+Purple Heart	action, drama, thriller, war	2005	Bill Birrell	5.2		http://www.imdb.com/title/tt0449488/
+Rua Alguem 5555: My Father	drama, war	2003	Egidio Eronico	7.1	100	http://www.imdb.com/title/tt0293495/
+Behind Enemy Lines	action, war, adventure, drama	1986	Gideon Amir	4.9	90	http://www.imdb.com/title/tt0091713/
+The Heroes	drama, war	1988	Donald Crombie	7	208	http://www.imdb.com/title/tt0095297/
+The Empty Mirror	drama, history, war	1996	Barry J. Hershey	6	118	http://www.imdb.com/title/tt0116192/
+Saints and Soldiers: The Void	action, drama, war	2013	Ryan Little			http://www.imdb.com/title/tt1270114/
+A Time of Destiny	drama, war	1988	Gregory Nava	5	118	http://www.imdb.com/title/tt0096271/
+Dog Jack	drama, war	2010	Edward T. McDougal	4.6		http://www.imdb.com/title/tt1199552/
+The Raggedy Rawney	drama, war	1988	Bob Hoskins	6.2	103	http://www.imdb.com/title/tt0095951/
+Night of the Fox	adventure, thriller, drama, war	1990	Charles Jarrott	6.1	200	http://www.imdb.com/title/tt0100257/
+Archangel	comedy, romance, war	1991	Guy Maddin	6.6	90	http://www.imdb.com/title/tt0099053/
+The Tulse Luper Suitcases, Part 2: Vaux to the Sea	adventure, biography, comedy, drama, romance, thriller, war	2004	Peter Greenaway	6.7	108	http://www.imdb.com/title/tt0408281/
+The Blockhouse	drama, war	1973	Clive Rees	5.8	93	http://www.imdb.com/title/tt0069803/
+The Wars	drama, war	1983	Robin Phillips	6.1	120	http://www.imdb.com/title/tt0084889/
+The Lost	horror, war	2006	Neil Jones	5.9	72	http://www.imdb.com/title/tt0902301/
+Hindsight 2020	drama, thriller, war	2013	Bryan Dobson		120	http://www.imdb.com/title/tt1837569/
+The Four Feathers	adventure, drama, romance, war	1978	Don Sharp	6.4	100	http://www.imdb.com/title/tt0076047/
+Veteran's Day	drama, horror, thriller, war	2013				http://www.imdb.com/title/tt1830898/
+Death of a Soldier	crime, drama, war	1986	Philippe Mora	5	93	http://www.imdb.com/title/tt0092858/
+Panzer 88	action, fantasy, thriller, war	????	Peter Briggs			http://www.imdb.com/title/tt1596576/
+The Chaos Factor	action, drama, thriller, war	2000	Terry Cunningham	4.8	95	http://www.imdb.com/title/tt0208037/
+The Seekers	drama, history, war	1979	Sidney Hayers	6.8	240	http://www.imdb.com/title/tt0079877/
+Das letzte U-Boot	drama, war	1993	Frank Beyer	5.8	99	http://www.imdb.com/title/tt0100012/
+The Scarlet Tunic	drama, history, romance, war	1998	Stuart St. Paul	5.5		http://www.imdb.com/title/tt0120072/
+The Caine Mutiny Court-Martial	drama, war	1988	Robert Altman	7.1	100	http://www.imdb.com/title/tt0094826/
+The Secret Adversary	action, adventure, comedy, crime, drama, mystery, romance, war	1983	Tony Wharmby	6.9	120	http://www.imdb.com/title/tt0084647/
+The Wall	action, war, drama	1982	Robert Markowitz	6.9	135	http://www.imdb.com/title/tt0084884/
+Delta Zulu	action, drama, war	2013	Chris Hickey			http://www.imdb.com/title/tt1638894/
+Hustler Squad	action, war	1976	Cesor Gallardo	2	98	http://www.imdb.com/title/tt0135465/
+Little Girl in Blue Velvet	drama, romance, war	1978	Alan Bridges	5.4	108	http://www.imdb.com/title/tt0078079/
+Privates on Parade	comedy, drama, war	1983	Michael Blakemore	4.6	107	http://www.imdb.com/title/tt0084538/
+Over Here	comedy, drama, war	1996	Tony Dow	7	185	http://www.imdb.com/title/tt0117274/
+Snow & Ashes	drama, thriller, war	2010	Charles-Olivier Michaud	6.1	110	http://www.imdb.com/title/tt1441084/
+In the Presence of Mine Enemies	drama, war	1997	Joan Micklin Silver	6.2	100	http://www.imdb.com/title/tt0116625/
+Mutiny	drama, war	1999	Kevin Hooks	5.5	89	http://www.imdb.com/title/tt0181769/
+Zone Troopers	war, sci_fi	1985	Danny Bilson	5.2	86	http://www.imdb.com/title/tt0092298/
+The Year That Trembled	drama, romance, war	2002	Jay Craven	5.3	104	http://www.imdb.com/title/tt0288324/
+Eden	drama, romance, war	2001	Amos Gitai	4.6	91	http://www.imdb.com/title/tt0271017/
+The Rebels	drama, history, war	1979	Russ Mayberry	7.2	240	http://www.imdb.com/title/tt0079783/
+The Expendables	action, adventure, war	1988	Cirio H. Santiago	4.1	89	http://www.imdb.com/title/tt0095122/
+My Brother's War	drama, romance, war	2005	Whitney Hamilton	6.3	115	http://www.imdb.com/title/tt0468516/
+Latino	drama, war	1985	Haskell Wexler	6	105	http://www.imdb.com/title/tt0089463/
+Chips, the War Dog	adventure, drama, family, war	1990	Ed Kaplan	6.4	92	http://www.imdb.com/title/tt0099262/
+Nancy Wake	drama, war	1987	Pino Amenta	6.7	250	http://www.imdb.com/title/tt0095707/
+Women of Valor	drama, war	1986	Buzz Kulik	5.7	100	http://www.imdb.com/title/tt0092236/
+The Challenge	drama, war	1970	Alan Smithee, Alan Smithee	7	74	http://www.imdb.com/title/tt0065534/
+Swine	action, sci_fi, war, western	2012	Daniel Levitch	4.6	90	http://www.imdb.com/title/tt1548021/
+Danny Greene: The Rise and Fall of the Irishman	biography, crime, history, war	2009	Tommy Reid	6.9	60	http://www.imdb.com/title/tt1286747/
+Standoff	thriller, war, drama	1998	Andrew Chapman	5.1	91	http://www.imdb.com/title/tt0119931/
+Incident in a Small Town	drama, war	1994	Delbert Mann	6.3	85	http://www.imdb.com/title/tt0110132/
+Private War	war	1988	Frank De Palma	3.4	95	http://www.imdb.com/title/tt0100416/
+Sadat	biography, drama, history, war	1983	Richard Michaels	6.7	195	http://www.imdb.com/title/tt0086229/
+Kapyong	war	2011	Dennis K. Smith	5.8	54	http://www.imdb.com/title/tt1865421/
+Gitmek: My Marlon and Brando	drama, romance, war	2008	Huseyin Karabey	6.4	93	http://www.imdb.com/title/tt0920460/
+The Last Bullet	action, drama, war	1995	Michael Pattinson	6.8	90	http://www.imdb.com/title/tt0113606/
+The Fog of War	horror, thriller, war	2011	Les Norris		83	http://www.imdb.com/title/tt2365007/
+For Valour	war	2009	Serge Ou		55	http://www.imdb.com/title/tt1645986/
+When Soldiers Cry	action, war	2010	Joe Black	2.1	120	http://www.imdb.com/title/tt1378811/
+I cavalieri che fecero l'impresa	adventure, drama, fantasy, war	2001	Pupi Avati	5.7	147	http://www.imdb.com/title/tt0240659/
+Stalag Luft	comedy, drama, war	1993	Adrian Shergold	6.5		http://www.imdb.com/title/tt0108210/
+Rhineland	drama, war	2007	Chris Grega	3.4		http://www.imdb.com/title/tt0884173/
+Happy Christmas, Miss King	drama, family, romance, war	1998	Stefan Scaini	6.9	120	http://www.imdb.com/title/tt0181570/
+Retreat!	comedy, drama, war	2012	Scott Slone			http://www.imdb.com/title/tt0838194/
+Frankie's House	biography, drama, war	1992	Peter Fisk	6.4	185	http://www.imdb.com/title/tt0104294/
+Heroes II: The Return	drama, war	1991	Donald Crombie	7.1	240	http://www.imdb.com/title/tt0099765/
+Invaders of the Lost Gold	adventure, horror, war	1982	Alan Birkinshaw	2.2	90	http://www.imdb.com/title/tt0123915/
+The Ascent	adventure, war	1994	Donald Shebib	5.7	96	http://www.imdb.com/title/tt0109157/
+Ironclads	war	1991	Delbert Mann	6		http://www.imdb.com/title/tt0102129/
+Impolex	adventure, comedy, drama, history, sci_fi, war	2009	Alex Ross Perry	3.9	73	http://www.imdb.com/title/tt1457742/
+Gmar Gavi'a	drama, war	1992	Eran Riklis	6.6	105	http://www.imdb.com/title/tt0101959/
+Henry V	biography, drama, war	1979	David Giles	7.2	170	http://www.imdb.com/title/tt0079289/
+Bomber Harris	drama, war	1989	Michael Darlow	7.3	85	http://www.imdb.com/title/tt0310777/
+Nam Angels	action, adventure, war	1989	Cirio H. Santiago	5	91	http://www.imdb.com/title/tt0097954/
+Countdown to War	drama, history, war	1989	Patrick Lau	7.3	90	http://www.imdb.com/title/tt0204980/
+The Triple Echo	drama, war	1972	Michael Apted	6.3	94	http://www.imdb.com/title/tt0070835/
+The Somnambulists	drama, war	2012	Richard Jobson	4.6		http://www.imdb.com/title/tt1913172/
+Héroes de otra patria	drama, war	1998	Iván Dariel Ortiz	6.5	80	http://www.imdb.com/title/tt0179211/
+Ambrose Bierce: Civil War Stories	biography, drama, history, war	2006	Don Maxwell, Brian James Egen	5.5	93	http://www.imdb.com/title/tt0476053/
+Dawn of the World	drama, romance, war	2008	Abbas Fahdel	6.6	95	http://www.imdb.com/title/tt1242842/
+A Line in the Sand	drama, war	2009	Rob Botts	7.1		http://www.imdb.com/title/tt0470846/
+Children of Hiroshima	drama, war	1952	Kaneto Shindô	7.1	97	http://www.imdb.com/title/tt0044497/
+Franz + Polina	drama, romance, war	2006	Mikhail Segal	7	119	http://www.imdb.com/title/tt0899242/
+The Last Days	action, drama, war	2005	Eric Bryan	5.2		http://www.imdb.com/title/tt0478195/
+The Ashes	drama, war	1965	Andrzej Wajda	6.8	234	http://www.imdb.com/title/tt0060847/
+Field of Honor	drama, war	1986	Dae-hie Kim, Hans Scheepmaker	5.3	95	http://www.imdb.com/title/tt0091045/
+White Badge	war	1992	Ji-yeong Jeong	6.9	124	http://www.imdb.com/title/tt0111700/
+Firehawk	action, adventure, war	1993	Cirio H. Santiago	5	92	http://www.imdb.com/title/tt0106914/
+The Red Badge of Courage	drama, war, western	1974	Lee Philips	6.4	74	http://www.imdb.com/title/tt0072069/
+De leeuw van Vlaanderen	war, drama	1985	Hugo Claus	5.7	90	http://www.imdb.com/title/tt0085829/
+Speed	drama, war	1959	Andrzej Wajda	6.1	90	http://www.imdb.com/title/tt0053019/
+Warszawa. Année 5703	drama, romance, war	1992	Janusz Kijowski	7	110	http://www.imdb.com/title/tt0105783/
+Wielki tydzien	drama, war	1995	Andrzej Wajda	6.4	97	http://www.imdb.com/title/tt0114934/
+It Happened in '43	drama, history, romance, war	1960	Florestano Vancini	6.4	105	http://www.imdb.com/title/tt0054039/
+Cry of Battle	action, war, adventure, drama	1963	Irving Lerner	5.6	99	http://www.imdb.com/title/tt0056967/
+Everybody Go Home	war, drama	1960	Luigi Comencini	7.1	120	http://www.imdb.com/title/tt0054413/
+Hold Back the Night	war, drama	1956	Allan Dwan	6.5	80	http://www.imdb.com/title/tt0049319/
+Hell's Horizon	drama, war	1955	Tom Gries	6.5	80	http://www.imdb.com/title/tt0048159/
+The Glory Brigade	action, drama, war	1953	Robert D. Webb	6	82	http://www.imdb.com/title/tt0045827/
+The Nun and the Sergeant	drama, war	1962	Franklin Adreon	5.3	74	http://www.imdb.com/title/tt0056296/
+War Is Hell	war	1962	Burt Topper	7	81	http://www.imdb.com/title/tt0052376/
+Under the Gray	action, biography, drama, history, war	????				http://www.imdb.com/title/tt1500484/
+Attention! Bandits!	drama, war	1951	Carlo Lizzani	6.3	90	http://www.imdb.com/title/tt0043261/
+Target Unknown	war, drama	1951	George Sherman	6.3	90	http://www.imdb.com/title/tt0044108/
+Break to Freedom	drama, war	1953	Lewis Gilbert	6.7	88	http://www.imdb.com/title/tt0045487/
+China Venture	adventure, drama, war	1953	Don Siegel	5.4	83	http://www.imdb.com/title/tt0045624/
+El Alaméin	war, drama	1953	Fred F. Sears	6.1	66	http://www.imdb.com/title/tt0045725/
+Fighter Attack	war	1953	Lesley Selander	6.4	80	http://www.imdb.com/title/tt0045765/
+The Camp on Blood Island	action, drama, history, war	1958	Val Guest	6.1	81	http://www.imdb.com/title/tt0051444/
+The Steel Bayonet	drama, war	1957	Michael Carreras	5.7	85	http://www.imdb.com/title/tt0051009/
+The Bold and the Brave	war, drama	1956	Lewis R. Foster	6.1	87	http://www.imdb.com/title/tt0049022/
+The Black Tent	drama, war, romance	1956	Brian Desmond Hurst	5	93	http://www.imdb.com/title/tt0049014/
+Battle Stations	drama, war	1956	Lewis Seiler	6.2	81	http://www.imdb.com/title/tt0048989/
+The Eternal Sea	war, drama	1955	John H. Auer	6.6	103	http://www.imdb.com/title/tt0048047/
+It Happened on July 20th	drama, history, thriller, war	1955	G.W. Pabst	6.6	75	http://www.imdb.com/title/tt0048040/
+Search and Destroy	action, drama, thriller, war	1979	William Fruet	5.2	92	http://www.imdb.com/title/tt0083040/
+Mister Kingstreet's War	adventure, drama, thriller, war	1971	Percival Rubens	4.6	92	http://www.imdb.com/title/tt0070416/
+Last Stand at Lang Mei	action, adventure, war	1989	Cirio H. Santiago	4.7	90	http://www.imdb.com/title/tt0099988/
+The Last Reunion	action, adventure, drama, war	1980	Jay Wertz	4.5	98	http://www.imdb.com/title/tt0139418/

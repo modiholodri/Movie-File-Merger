@@ -1,0 +1,1058 @@
+Title	Genres	Year	Directors	IMDb Rating	Runtime (mins)	URL
+The Legend of the Lone Ranger	action, adventure, western	1981	William A. Fraker	4.5	98	http://www.imdb.com/title/tt0082648/
+Bronco Billy	action, adventure, comedy, drama, romance, western	1980	Clint Eastwood	6	116	http://www.imdb.com/title/tt0080472/
+Bad Girls	western	1994	Jonathan Kaplan	4.8	99	http://www.imdb.com/title/tt0109198/
+Almost Heroes	adventure, comedy, western	1998	Christopher Guest	5.4	90	http://www.imdb.com/title/tt0119053/
+Shanghai Noon	action, adventure, comedy, western	2000	Tom Dey	6.5	110	http://www.imdb.com/title/tt0184894/
+American Outlaws	action, western	2001	Les Mayfield	5.7	94	http://www.imdb.com/title/tt0244000/
+Spirit: Stallion of the Cimarron	animation, adventure, comedy, family, romance, western	2002	Kelly Asbury, Lorna Cook	6.7	83	http://www.imdb.com/title/tt0166813/
+Around the World in 80 Days	action, adventure, comedy, family, romance, western	2004	Frank Coraci	5.7	120	http://www.imdb.com/title/tt0327437/
+The Legend of Zorro	action, adventure, western	2005	Martin Campbell	5.8	129	http://www.imdb.com/title/tt0386140/
+Rango	animation, adventure, comedy, family, western	2011	Gore Verbinski	7.3	107	http://www.imdb.com/title/tt1192628/
+Rooster Cogburn	western	1975	Stuart Millar	6.6	108	http://www.imdb.com/title/tt0073636/
+My Name Is Nobody	western, comedy	1973	Tonino Valerii	7.3	117	http://www.imdb.com/title/tt0070215/
+Trinity Is STILL My Name!	comedy, western	1971	E.B. Clucher	7	117	http://www.imdb.com/title/tt0068154/
+Soldier Blue	history, western	1970	Ralph Nelson	6.7	112	http://www.imdb.com/title/tt0066390/
+Chisum	biography, western	1970	Andrew V. McLaglen	6.6	111	http://www.imdb.com/title/tt0065547/
+Guns of Paradise	drama, western	1988	Richard M. Rawlings Jr.	7.5	60	http://www.imdb.com/title/tt0094473/
+The Young Riders	romance, western	1989		7.6	60	http://www.imdb.com/title/tt0096732/
+Hud	drama	1963	Martin Ritt	7.9	112	http://www.imdb.com/title/tt0057163/
+For a Few Dollars More	western	1965	Sergio Leone	8.3	132	http://www.imdb.com/title/tt0059578/
+Django	western	1966	Sergio Corbucci	7.2	92	http://www.imdb.com/title/tt0060315/
+Death Rides a Horse	western	1967	Giulio Petroni	7	120	http://www.imdb.com/title/tt0064208/
+The Great Silence	western	1968	Sergio Corbucci	7.7	105	http://www.imdb.com/title/tt0063032/
+Charro!	western	1969	Charles Marquis Warren	5.4	98	http://www.imdb.com/title/tt0064155/
+Death of a Gunfighter	western	1969	Allen Smithee, Allen Smithee	6.3	100	http://www.imdb.com/title/tt0064217/
+The Undefeated	western	1969	Andrew V. McLaglen	6.4	119	http://www.imdb.com/title/tt0065150/
+3:10 to Yuma	action, crime, drama, western	2007	James Mangold	7.8	122	http://www.imdb.com/title/tt0381849/
+Bury My Heart at Wounded Knee	drama, history, western	2007	Yves Simoneau	7.1	133	http://www.imdb.com/title/tt0821638/
+Blackthorn	western	2011	Mateo Gil	6.5	102	http://www.imdb.com/title/tt1629705/
+The Legend of Hell's Gate: An American Conspiracy	action, adventure, history, western	2011	Tanner Beard	3.8	108	http://www.imdb.com/title/tt1220217/
+Django Unchained	adventure, western	2012	Quentin Tarantino	8.5	165	http://www.imdb.com/title/tt1853728/
+The Lone Ranger	action, adventure, western	2013	Gore Verbinski		149	http://www.imdb.com/title/tt1210819/
+El Topo	western	1970	Alexandro Jodorowsky	7.3	125	http://www.imdb.com/title/tt0067866/
+Big Jake	action, crime, drama, western	1971	George Sherman	6.9	110	http://www.imdb.com/title/tt0066831/
+Duck, You Sucker	adventure, western	1971	Sergio Leone	7.6	157	http://www.imdb.com/title/tt0067140/
+Man in the Wilderness	adventure, western	1971	Richard C. Sarafian	6.8	104	http://www.imdb.com/title/tt0067388/
+Cahill U.S. Marshal	drama, western	1973	Andrew V. McLaglen	6.2	103	http://www.imdb.com/title/tt0069834/
+Bite the Bullet	action, adventure, western	1975	Richard Brooks	6.7	132	http://www.imdb.com/title/tt0072705/
+The Good, the Bad and the Ugly	adventure, western	1966	Sergio Leone	9	161	http://www.imdb.com/title/tt0060196/
+A Fistful of Dollars	western	1964	Sergio Leone	8	99	http://www.imdb.com/title/tt0058461/
+Butch Cassidy and the Sundance Kid	adventure, biography, crime, western	1969	George Roy Hill	8.2	110	http://www.imdb.com/title/tt0064115/
+Ride the High Country	adventure, drama, romance, western	1962	Sam Peckinpah	7.5	94	http://www.imdb.com/title/tt0056412/
+Shenandoah	drama, war, western	1965	Andrew V. McLaglen	7.2	105	http://www.imdb.com/title/tt0059711/
+Gunless	action, comedy, drama, western	2010	William Phillips	6.3	89	http://www.imdb.com/title/tt1376195/
+Joe Kidd	western	1972	John Sturges	6.4	88	http://www.imdb.com/title/tt0068768/
+All the Pretty Horses	drama, romance, western	2000	Billy Bob Thornton	5.7	116	http://www.imdb.com/title/tt0149624/
+Silverado	action, crime, drama, western	1985	Lawrence Kasdan	7.1	133	http://www.imdb.com/title/tt0090022/
+Appaloosa	crime, drama, western	2008	Ed Harris	6.8	115	http://www.imdb.com/title/tt0800308/
+Little House on the Prairie	drama, family, romance, western	1974		6.8	60	http://www.imdb.com/title/tt0071007/
+Vegas	action, crime, drama, mystery, western	2012		6.9		http://www.imdb.com/title/tt2262383/
+Cowboys & Aliens	action, sci_fi, thriller, western	2011	Jon Favreau	6.1	119	http://www.imdb.com/title/tt0409847/
+Unforgiven	western	1992	Clint Eastwood	8.3	131	http://www.imdb.com/title/tt0105695/
+True Grit	adventure, drama, western	2010	Ethan Coen, Joel Coen	7.7	110	http://www.imdb.com/title/tt1403865/
+Guns of the Magnificent Seven	western	1969	Paul Wendkos	5.4	105	http://www.imdb.com/title/tt0064395/
+The Way West	adventure, western	1967	Andrew V. McLaglen	6.1	122	http://www.imdb.com/title/tt0062479/
+The Magnificent Seven Ride!	western	1972	George McCowan	5.3	100	http://www.imdb.com/title/tt0068897/
+Oklahoma!	musical, romance, western	1999	Trevor Nunn	7.5	180	http://www.imdb.com/title/tt0216048/
+Evil Roy Slade	comedy, western	1972	Jerry Paris	6.9	97	http://www.imdb.com/title/tt0067072/
+Comanche Station	drama, western	1960	Budd Boetticher	7.1	74	http://www.imdb.com/title/tt0053729/
+Brothers in Arms	action, western	2005	Jean-Claude La Marre	2.1	85	http://www.imdb.com/title/tt0439504/
+The Rare Breed	drama, romance, western	1966	Andrew V. McLaglen	6.2	97	http://www.imdb.com/title/tt0060884/
+Firecreek	western	1968	Vincent McEveety	6.7	104	http://www.imdb.com/title/tt0062975/
+Hour of the Gun	western	1967	John Sturges	6.6	100	http://www.imdb.com/title/tt0061787/
+The Wild Wild West	action, comedy, drama, fantasy, sci_fi, thriller, western	1965		7.8	50	http://www.imdb.com/title/tt0058855/
+4 for Texas	western, comedy	1963	Robert Aldrich	5.6	124	http://www.imdb.com/title/tt0057071/
+Centennial	action, adventure, drama, romance, western	1978		7.6	1256	http://www.imdb.com/title/tt0076993/
+Love's Enduring Promise	drama, western	2004	Michael Landon Jr.	6.8	120	http://www.imdb.com/title/tt0402348/
+Comanche Moon	drama, western	2008		7.2	360	http://www.imdb.com/title/tt0783328/
+The Unsinkable Molly Brown	biography, comedy, musical, romance, western	1964	Charles Walters	6.5	128	http://www.imdb.com/title/tt0058708/
+Return of the Seven	western	1966	Burt Kennedy	5.3	95	http://www.imdb.com/title/tt0060897/
+Sergeant Rutledge	western, crime	1960	John Ford	7.3	111	http://www.imdb.com/title/tt0054292/
+Lawman	western	1971	Michael Winner	6.8	99	http://www.imdb.com/title/tt0067333/
+There Was a Crooked Man...	action, comedy, drama, western	1970	Joseph L. Mankiewicz	7	126	http://www.imdb.com/title/tt0066448/
+Tall Tale	adventure, family, fantasy, western	1995	Jeremiah Chechik	5.5	98	http://www.imdb.com/title/tt0111359/
+The Train Robbers	western	1973	Burt Kennedy	6.2	92	http://www.imdb.com/title/tt0070825/
+The Apple Dumpling Gang	family, comedy, western	1975	Norman Tokar	6	100	http://www.imdb.com/title/tt0072653/
+Sunset	crime, action, comedy, thriller, western	1988	Blake Edwards	5.6	102	http://www.imdb.com/title/tt0096193/
+Kung Fu	adventure, drama, western	1972		7.6	60	http://www.imdb.com/title/tt0068093/
+Fallout: New Vegas	action, adventure, sci_fi, thriller, western	2010	Josh Sawyer	8.1		http://www.imdb.com/title/tt1706601/
+Wagons East	adventure, comedy, western	1994	Peter Markle	4.4	107	http://www.imdb.com/title/tt0111653/
+Love Comes Softly	romance, western, drama	2003	Michael Landon Jr.	7.2	84	http://www.imdb.com/title/tt0345591/
+Last of the Dogmen	adventure, western	1995	Tab Murphy	6.6	118	http://www.imdb.com/title/tt0113617/
+Extreme Prejudice	action, crime, drama, western	1987	Walter Hill	6.4	96	http://www.imdb.com/title/tt0092997/
+Goin' South	comedy, western	1978	Jack Nicholson	6.2	105	http://www.imdb.com/title/tt0077621/
+Broken Trail	western	2006		7.6	184	http://www.imdb.com/title/tt0482857/
+Longmire	action, crime, drama, western	2012		7.7	60	http://www.imdb.com/title/tt1836037/
+Wild Bill	action, biography, western	1995	Walter Hill	5.8	98	http://www.imdb.com/title/tt0114938/
+North to Alaska	comedy, western	1960	Henry Hathaway	6.8	122	http://www.imdb.com/title/tt0054127/
+The Villain	comedy, western	1979	Hal Needham	5.1	89	http://www.imdb.com/title/tt0080097/
+Red Sun	action, thriller, western	1971	Terence Young	6.8	112	http://www.imdb.com/title/tt0067770/
+The Unforgiven	drama, romance, western	1960	John Huston	6.7	125	http://www.imdb.com/title/tt0054428/
+Major Dundee	adventure, war, western	1965	Sam Peckinpah	6.7	123	http://www.imdb.com/title/tt0059418/
+Texas Rangers	action, adventure, drama, thriller, western	2001	Steve Miner	5	90	http://www.imdb.com/title/tt0193560/
+The Life and Times of Judge Roy Bean	comedy, romance, western	1972	John Huston	6.9	120	http://www.imdb.com/title/tt0068853/
+Nevada Smith	western	1966	Henry Hathaway	6.9	128	http://www.imdb.com/title/tt0060748/
+The Comancheros	action, western, adventure, romance	1961	Michael Curtiz	6.7	107	http://www.imdb.com/title/tt0054757/
+Lightning Jack	comedy, western	1994	Simon Wincer	5	98	http://www.imdb.com/title/tt0110353/
+The Electric Horseman	comedy, western, drama, romance	1979	Sydney Pollack	6	122	http://www.imdb.com/title/tt0079100/
+The Adventures of Brisco County Jr.	action, sci_fi, western, adventure, comedy	1993	Tom Chehak, Kevin Bright	8.2	45	http://www.imdb.com/title/tt0105932/
+Lonely Are the Brave	drama, western	1962	David Miller	7.6	107	http://www.imdb.com/title/tt0056195/
+Mackenna's Gold	romance, western	1969	J. Lee Thompson	6.5	128	http://www.imdb.com/title/tt0064615/
+The War Wagon	western	1967	Burt Kennedy	6.7	96	http://www.imdb.com/title/tt0062472/
+Honkytonk Man	comedy, drama, music, western	1982	Clint Eastwood	6.5	122	http://www.imdb.com/title/tt0084088/
+Dr. Quinn, Medicine Woman	drama, family, western	1993	Chuck Bowman, Jerry Jameson	6.2	60	http://www.imdb.com/title/tt0103405/
+The Burrowers	horror, thriller, western	2008	J.T. Petty	5.7	96	http://www.imdb.com/title/tt0445939/
+The Man from Snowy River	adventure, drama, family, romance, western	1982	George Miller	7	102	http://www.imdb.com/title/tt0084296/
+Into the West	western, adventure, drama	2005		7.8	552	http://www.imdb.com/title/tt0409572/
+The Claim	drama, romance, western	2000	Michael Winterbottom	6.4	120	http://www.imdb.com/title/tt0218378/
+A Man Called Horse	adventure, drama, western	1970	Elliot Silverstein	6.9	114	http://www.imdb.com/title/tt0066049/
+Rio Lobo	adventure, western, romance, war	1970	Howard Hawks	6.6	114	http://www.imdb.com/title/tt0066301/
+Geronimo: An American Legend	drama, history, western	1993	Walter Hill	6.3	115	http://www.imdb.com/title/tt0107004/
+Tremors 4: The Legend Begins	action, comedy, horror, sci_fi, thriller, western	2004	S.S. Wilson	5.2	101	http://www.imdb.com/title/tt0334541/
+Even Cowgirls Get the Blues	comedy, drama, romance, western	1993	Gus Van Sant Jr.	4	95	http://www.imdb.com/title/tt0106834/
+The Missouri Breaks	drama, western	1976	Arthur Penn	6.5	126	http://www.imdb.com/title/tt0074906/
+The Frisco Kid	comedy, western	1979	Robert Aldrich	6.1	114	http://www.imdb.com/title/tt0079180/
+Red Hill	thriller, western	2010	Patrick Hughes	6.4	95	http://www.imdb.com/title/tt1530983/
+Tom and Huck	adventure, comedy, drama, family, western	1995	Peter Hewitt	5.5	97	http://www.imdb.com/title/tt0112302/
+One-Eyed Jacks	western	1961	Marlon Brando	7.1	141	http://www.imdb.com/title/tt0055257/
+The Long Riders	history, western	1980	Walter Hill	7	100	http://www.imdb.com/title/tt0081071/
+Lone Wolf McQuade	action, crime, drama, thriller, western	1983	Steve Carver	6	107	http://www.imdb.com/title/tt0085862/
+Meek's Cutoff	drama, western	2010	Kelly Reichardt	6.5	104	http://www.imdb.com/title/tt1518812/
+Support Your Local Sheriff!	comedy, western	1969	Burt Kennedy	7.4	92	http://www.imdb.com/title/tt0065051/
+Hombre	western	1967	Martin Ritt	7.3	111	http://www.imdb.com/title/tt0061770/
+The Newton Boys	action, crime, drama, history, western	1998	Richard Linklater	5.8	113	http://www.imdb.com/title/tt0120769/
+McLintock!	comedy, romance, western	1963	Andrew V. McLaglen	7	127	http://www.imdb.com/title/tt0057298/
+Red Dead Redemption	action, adventure, western	2010	Rod Edge, John Zurhellen	9.3		http://www.imdb.com/title/tt1479962/
+Dead Birds	horror, thriller, western	2004	Alex Turner	5.6	91	http://www.imdb.com/title/tt0377749/
+The Beguiled	drama, romance, war, western	1971	Donald Siegel	7.1	105	http://www.imdb.com/title/tt0066819/
+Heaven's Gate	drama, history, romance, western	1980	Michael Cimino	6.6	219	http://www.imdb.com/title/tt0080855/
+The Sons of Katie Elder	western	1965	Henry Hathaway	7.1	122	http://www.imdb.com/title/tt0059740/
+Paint Your Wagon	comedy, drama, musical, romance, western	1969	Joshua Logan	6.5	158	http://www.imdb.com/title/tt0064782/
+From Dusk Till Dawn 3: The Hangman's Daughter	horror, thriller, western	1999	P.J. Pesce	4.7	94	http://www.imdb.com/title/tt0120695/
+The Professionals	action, adventure, western	1966	Richard Brooks	7.3	117	http://www.imdb.com/title/tt0060862/
+The Cowboys	adventure, comedy, drama, western	1972	Mark Rydell	7.1	131	http://www.imdb.com/title/tt0068421/
+BloodRayne: Deliverance	action, fantasy, western	2007	Uwe Boll	2.7	99	http://www.imdb.com/title/tt0896036/
+Urban Cowboy	drama, western	1980	James Bridges	5.9	132	http://www.imdb.com/title/tt0081696/
+Renegade	adventure, western	2004	Jan Kounen	5.1	124	http://www.imdb.com/title/tt0276830/
+Cat Ballou	comedy, musical, western	1965	Elliot Silverstein	6.8	97	http://www.imdb.com/title/tt0059017/
+The Alamo	adventure, drama, history, war, western	1960	John Wayne	6.7	167	http://www.imdb.com/title/tt0053580/
+Walker, Texas Ranger	action, crime, drama, western	1993	Joe Coppoletta, Jerry Jameson	5	43	http://www.imdb.com/title/tt0106168/
+Coogan's Bluff	action, crime, drama, thriller, western	1968	Donald Siegel	6.5	93	http://www.imdb.com/title/tt0062824/
+Cannibal! The Musical	biography, comedy, musical, thriller, western	1993	Trey Parker	7	95	http://www.imdb.com/title/tt0115819/
+Home on the Range	animation, comedy, family, music, western	2004	Will Finn, John Sanford	5.3	76	http://www.imdb.com/title/tt0299172/
+Ride with the Devil	drama, romance, war, western	1999	Ang Lee	6.6	138	http://www.imdb.com/title/tt0134154/
+Hatfields & McCoys	drama, history, romance, war, western	2012		8	290	http://www.imdb.com/title/tt1985443/
+Tin Man	adventure, fantasy, sci_fi, western	2007		7	270	http://www.imdb.com/title/tt0910812/
+Bring Me the Head of Alfredo Garcia	action, crime, drama, thriller, western	1974	Sam Peckinpah	7.5	112	http://www.imdb.com/title/tt0071249/
+The Misfits	drama	1961	John Huston	7.3	124	http://www.imdb.com/title/tt0055184/
+Pat Garrett & Billy the Kid	drama, history, western	1973	Sam Peckinpah	7.3	122	http://www.imdb.com/title/tt0070518/
+How the West Was Won	western	1962	John Ford, Henry Hathaway	7	164	http://www.imdb.com/title/tt0056085/
+Harley Davidson and the Marlboro Man	action, crime, drama, thriller, western	1991	Simon Wincer	5.6	98	http://www.imdb.com/title/tt0102005/
+Lonesome Dove	adventure, drama, western	1989		8.6	384	http://www.imdb.com/title/tt0096639/
+Sukiyaki Western Django	action, western	2007	Takashi Miike	6.1	121	http://www.imdb.com/title/tt0906665/
+Quigley Down Under	adventure, drama, romance, western	1990	Simon Wincer	6.6	119	http://www.imdb.com/title/tt0102744/
+An American Tail: Fievel Goes West	animation, adventure, comedy, family, musical, western	1991	Phil Nibbelink, Simon Wells	6.2	75	http://www.imdb.com/title/tt0101329/
+Two Mules for Sister Sara	adventure, comedy, war, western	1970	Don Siegel	6.9	116	http://www.imdb.com/title/tt0065134/
+City Slickers II: The Legend of Curly's Gold	adventure, comedy, western	1994	Paul Weiland	5.3	116	http://www.imdb.com/title/tt0109439/
+McCabe & Mrs. Miller	drama, western	1971	Robert Altman	7.6	120	http://www.imdb.com/title/tt0067411/
+El Dorado	western	1966	Howard Hawks	7.6	126	http://www.imdb.com/title/tt0061619/
+The Shootist	drama, western	1976	Don Siegel	7.6	100	http://www.imdb.com/title/tt0075213/
+The Alamo	drama, history, war, western	2004	John Lee Hancock	5.9	137	http://www.imdb.com/title/tt0318974/
+Jeremiah Johnson	adventure, drama, western	1972	Sydney Pollack	7.5	108	http://www.imdb.com/title/tt0068762/
+Hell on Wheels	drama, western	2011		8.2		http://www.imdb.com/title/tt1699748/
+Hang 'Em High	crime, thriller, western	1968	Ted Post	6.9	114	http://www.imdb.com/title/tt0061747/
+Ned Kelly	action, adventure, biography, crime, history, western	2003	Gregor Jordan	6.4	110	http://www.imdb.com/title/tt0277941/
+Westworld	action, sci_fi, western	1973	Michael Crichton	7	88	http://www.imdb.com/title/tt0070909/
+The Warrior's Way	action, fantasy, western	2010	Sngmoo Lee	6.2	100	http://www.imdb.com/title/tt1032751/
+Seraphim Falls	action, drama, thriller, war, western	2006	David Von Ancken	6.7	115	http://www.imdb.com/title/tt0479537/
+Little Big Man	history, western	1970	Arthur Penn	7.6	139	http://www.imdb.com/title/tt0065988/
+Bandidas	action, comedy, crime, western	2006	Joachim Rønning, Espen Sandberg	5.6	93	http://www.imdb.com/title/tt0416496/
+The Missing	adventure, thriller, western	2003	Ron Howard	6.4	137	http://www.imdb.com/title/tt0338188/
+True Grit	adventure, western, drama	1969	Henry Hathaway	7.3	128	http://www.imdb.com/title/tt0065126/
+High Plains Drifter	western	1973	Clint Eastwood	7.6	105	http://www.imdb.com/title/tt0068699/
+The Horse Whisperer	drama, romance, western	1998	Robert Redford	6.4	170	http://www.imdb.com/title/tt0119314/
+Pale Rider	western	1985	Clint Eastwood	7.2	115	http://www.imdb.com/title/tt0089767/
+The Three Burials of Melquiades Estrada	adventure, crime, drama, mystery, western	2005	Tommy Lee Jones	7.5	121	http://www.imdb.com/title/tt0419294/
+City Slickers	comedy, western	1991	Ron Underwood	6.7	113	http://www.imdb.com/title/tt0101587/
+Jonah Hex	action, drama, fantasy, thriller, western	2010	Jimmy Hayward	4.6	81	http://www.imdb.com/title/tt1075747/
+Last Man Standing	action, crime, drama, thriller, western	1996	Walter Hill	6.2	101	http://www.imdb.com/title/tt0116830/
+The Proposition	crime, drama, western	2005	John Hillcoat	7.4	104	http://www.imdb.com/title/tt0421238/
+Far and Away	adventure, drama, romance, western	1992	Ron Howard	6.3	140	http://www.imdb.com/title/tt0104231/
+The Outlaw Josey Wales	western	1976	Clint Eastwood	7.9	135	http://www.imdb.com/title/tt0075029/
+Deadwood	crime, drama, history, western	2004		8.9	60	http://www.imdb.com/title/tt0348914/
+The Man Who Shot Liberty Valance	drama, romance, western	1962	John Ford	8.1	123	http://www.imdb.com/title/tt0056217/
+Open Range	action, romance, western	2003	Kevin Costner	7.4	139	http://www.imdb.com/title/tt0316356/
+The Magnificent Seven	action, adventure, drama, thriller, western	1960	John Sturges	7.8	128	http://www.imdb.com/title/tt0054047/
+The Wild Bunch	western	1969	Sam Peckinpah	8.1	145	http://www.imdb.com/title/tt0065214/
+The Quick and the Dead	action, thriller, western	1995	Sam Raimi	6.3	107	http://www.imdb.com/title/tt0114214/
+Hidalgo	action, adventure, western	2004	Joe Johnston	6.6	136	http://www.imdb.com/title/tt0317648/
+Dead Man	drama, fantasy, western	1995	Jim Jarmusch	7.7	121	http://www.imdb.com/title/tt0112817/
+Shanghai Knights	action, adventure, comedy, western	2003	David Dobkin	6.1	114	http://www.imdb.com/title/tt0300471/
+Maverick	action, adventure, comedy, thriller, western	1994	Richard Donner	6.9	127	http://www.imdb.com/title/tt0110478/
+Blazing Saddles	comedy, western	1974	Mel Brooks	7.7	93	http://www.imdb.com/title/tt0071230/
+Tombstone	action, drama, history, romance, western	1993	George P. Cosmatos	7.7	130	http://www.imdb.com/title/tt0108358/
+Legends of the Fall	drama, romance, war, western	1994	Edward Zwick	7.3	133	http://www.imdb.com/title/tt0110322/
+The Mask of Zorro	action, adventure, romance, western	1998	Martin Campbell	6.7	136	http://www.imdb.com/title/tt0120746/
+The Assassination of Jesse James by the Coward Robert Ford	biography, crime, drama, history, western	2007	Andrew Dominik	7.6	160	http://www.imdb.com/title/tt0443680/
+Dances with Wolves	adventure, drama, western	1990	Kevin Costner	8	181	http://www.imdb.com/title/tt0099348/
+Once Upon a Time in the West	adventure, western	1968	Sergio Leone	8.7	175	http://www.imdb.com/title/tt0064116/
+Back to the Future Part III	adventure, comedy, sci_fi, western	1990	Robert Zemeckis	7.3	118	http://www.imdb.com/title/tt0099088/
+Zorro: The Gay Blade	action, adventure, comedy, romance, western	1981	Peter Medak	5.6	93	http://www.imdb.com/title/tt0083366/
+Young Guns II	adventure, western	1990	Geoff Murphy	6.1	104	http://www.imdb.com/title/tt0100994/
+Wyatt Earp	action, adventure, biography, romance, western	1994	Lawrence Kasdan	6.5	191	http://www.imdb.com/title/tt0111756/
+Young Guns	action, crime, drama, thriller, western	1988	Christopher Cain	6.6	107	http://www.imdb.com/title/tt0096487/
+¡Three Amigos!	adventure, comedy, western	1986	John Landis	6.2	104	http://www.imdb.com/title/tt0092086/
+Wild Wild West	action, western, comedy, sci_fi	1999	Barry Sonnenfeld	4.6	106	http://www.imdb.com/title/tt0120891/
+The Big Valley	western	1965		7.7	60	http://www.imdb.com/title/tt0058791/
+Gallowwalkers	action, fantasy, horror, thriller, western	2012	Andrew Goth	6.2	90	http://www.imdb.com/title/tt0829176/
+Alien Showdown: The Day the Old West Stood Still	action, adventure, horror, sci_fi, western	2013	Rene Perez	2.1	80	http://www.imdb.com/title/tt2349142/
+The High Chaparral	western	1967		7.7	60	http://www.imdb.com/title/tt0061263/
+Goodnight for Justice: Queen of Hearts	western	2013	Martin Wood	5.3		http://www.imdb.com/title/tt2007388/
+Dawn Rider	western	2012	Terry Miles	4.5	94	http://www.imdb.com/title/tt2014202/
+The Virginian	western	1962		7.6	75	http://www.imdb.com/title/tt0055710/
+Six Gun Savior	action, adventure, drama, sci_fi, western	2013	Kirk Murray			http://www.imdb.com/title/tt2027215/
+Stagecoach	action, drama, western	1986	Ted Post	5.9	100	http://www.imdb.com/title/tt0092003/
+Love's Everlasting Courage	western	2011	Bradford May	5.8		http://www.imdb.com/title/tt1672621/
+Daniel Boone	adventure, history, western	1964	Nathan Juran, George Marshall	7.4	60	http://www.imdb.com/title/tt0057742/
+Shadow on the Mesa	western	2013	David S. Cass Sr.	6.1		http://www.imdb.com/title/tt2195666/
+Our Wild Hearts	family, western	2013	Rick Schroder	5.4		http://www.imdb.com/title/tt1838735/
+Hannah's Law	western	2012	Rachel Talalay	4.8	88	http://www.imdb.com/title/tt2082289/
+Good for Nothing	western	2011	Mike Wallis	5.3	92	http://www.imdb.com/title/tt1783285/
+The Life and Times of Grizzly Adams	adventure, family, western	1977		7.1	60	http://www.imdb.com/title/tt0075525/
+Houston: The Legend of Texas	biography, drama, history, war, western	1986	Peter Levin	7	144	http://www.imdb.com/title/tt0091224/
+The Way of the West	drama, western	2011	Wyeth Clarkson	4.5	81	http://www.imdb.com/title/tt1591496/
+Alias Smith and Jones	comedy, western	1971	Bruce Wilson	7.4	60	http://www.imdb.com/title/tt0066625/
+Sweet Vengeance	western	2013	Logan Miller	5.5	95	http://www.imdb.com/title/tt2224004/
+The Last Days of Frank and Jesse James	western	1986	William A. Graham	6.4	120	http://www.imdb.com/title/tt0091382/
+Return of the Gunfighter	romance, western	1967	James Neilson	6.2	98	http://www.imdb.com/title/tt0062194/
+The Man Who Came Back	action, drama, western	2008	Glen Pitre	4.9	112	http://www.imdb.com/title/tt1013651/
+Goodnight for Justice	western	2011	Jason Priestley	5.5	88	http://www.imdb.com/title/tt1716743/
+The Last Rites of Ransom Pride	adventure, drama, thriller, western	2010	Tiller Russell	4.2		http://www.imdb.com/title/tt1268970/
+Yellow Rock	western	2011	Nick Vallelonga	4.1	89	http://www.imdb.com/title/tt1714176/
+Wild Boys	adventure, drama, western	2011		7	60	http://www.imdb.com/title/tt1865572/
+Buffalo Rider	adventure, drama, western	1978	John Fabian, Dick Robinson	4.4	90	http://www.imdb.com/title/tt0198346/
+F Troop	comedy, war, western	1965		7.3	30	http://www.imdb.com/title/tt0058800/
+When the Storm God Rides	western	2014	Michael Preece			http://www.imdb.com/title/tt2723790/
+The Shooter	western	1997	Ed Raymond	4.8	91	http://www.imdb.com/title/tt0120121/
+Pistols 'n' Petticoats	comedy, western	1966		7.2	30	http://www.imdb.com/title/tt0060016/
+Rose Hill	western	1997	Christopher Cain	6.4	99	http://www.imdb.com/title/tt0117515/
+Heathens and Thieves	mystery, thriller, western	2012	Megan Peterson, John Douglas Sinclair	4.3		http://www.imdb.com/title/tt1510983/
+Eldorado	comedy, horror, musical, western	2012	Richard Driscoll	2.1	94	http://www.imdb.com/title/tt1514043/
+Here Come the Brides	adventure, western, comedy	1968		7	60	http://www.imdb.com/title/tt0062569/
+Snowy River: The McGregor Saga	drama, western	1993		6.7	60	http://www.imdb.com/title/tt0106136/
+Streets of Laredo	drama, western	1995	Joseph Sargent	7.2	300	http://www.imdb.com/title/tt0112041/
+Palo Pinto Gold	western	2009	Anthony Henslee	3.8	105	http://www.imdb.com/title/tt1152835/
+Dead Man's Burden	drama, western	2012	Jared Moshe	4.8	93	http://www.imdb.com/title/tt2094155/
+The Magnificent Seven	western	1998	Christopher Cain	7.2	60	http://www.imdb.com/title/tt0129695/
+Return to Lonesome Dove	drama, western	1993	Mike Robe	7	322	http://www.imdb.com/title/tt0106112/
+Zorro	adventure, family, romance, western	1990		6.6	30	http://www.imdb.com/title/tt0098957/
+Dream Wagon	action, western	2013	Asad Farr		97	http://www.imdb.com/title/tt1828172/
+The Sixth Gun	sci_fi, western	2013	Jeffrey Reiner		60	http://www.imdb.com/title/tt2655456/
+September Dawn	drama, history, western	2007	Christopher Cain	5.5	111	http://www.imdb.com/title/tt0473700/
+The Apple Dumpling Gang Rides Again	family, comedy, western	1979	Vincent McEveety	5.5	88	http://www.imdb.com/title/tt0078790/
+Bad Company	drama, western	1972	Robert Benton	7	93	http://www.imdb.com/title/tt0068245/
+The Hunting Party	drama, western, action	1971	Don Medford	5.9	111	http://www.imdb.com/title/tt0067224/
+The Big Gundown	western	1966	Sergio Sollima	7.2	110	http://www.imdb.com/title/tt0063501/
+Navajo Joe	western	1966	Sergio Corbucci	6.2	93	http://www.imdb.com/title/tt0061587/
+Custer of the West	biography, drama, history, war, western	1967	Robert Siodmak	5.6	140	http://www.imdb.com/title/tt0062844/
+Django Kill... If You Live, Shoot!	horror, western	1967	Giulio Questi	6.4	100	http://www.imdb.com/title/tt0062082/
+Bandolero!	action, crime, drama, romance, western	1968	Andrew V. McLaglen	6.4	106	http://www.imdb.com/title/tt0062708/
+100 Rifles	adventure, war, western	1969	Tom Gries	5.8	110	http://www.imdb.com/title/tt0063970/
+Grey Owl	biography, drama, western	1999	Richard Attenborough	5.8	118	http://www.imdb.com/title/tt0128239/
+Catlow	comedy, western	1971	Sam Wanamaker	5.5	101	http://www.imdb.com/title/tt0066900/
+Montana Sky	drama, romance, thriller, western	2007	Mike Robe	5.7	96	http://www.imdb.com/title/tt0860467/
+The Mountain Men	adventure, western	1980	Richard Lang	6.1	102	http://www.imdb.com/title/tt0081187/
+The Outrage	drama, western, crime	1964	Martin Ritt	6.2	96	http://www.imdb.com/title/tt0058437/
+Circus World	drama, western	1964	Henry Hathaway	6	135	http://www.imdb.com/title/tt0057952/
+The Shakiest Gun in the West	comedy, western	1968	Alan Rafkin	6.1	101	http://www.imdb.com/title/tt0063591/
+True Women	biography, drama, history, romance, war, western	1997	Karen Arthur	6.5	183	http://www.imdb.com/title/tt0118499/
+Return to Snowy River	adventure, drama, western	1988	Geoff Burrowes	6.2	110	http://www.imdb.com/title/tt0095993/
+Crossfire Trail	action, western	2001	Simon Wincer	6.7	92	http://www.imdb.com/title/tt0218127/
+Boss Nigger	western	1975	Jack Arnold	6.5	87	http://www.imdb.com/title/tt0072725/
+The Appaloosa	western	1966	Sidney J. Furie	6.2	98	http://www.imdb.com/title/tt0060120/
+Straight to Hell	action, comedy, western	1987	Alex Cox	5.5	86	http://www.imdb.com/title/tt0094048/
+Flaming Star	western	1960	Don Siegel	6.3	101	http://www.imdb.com/title/tt0053825/
+Missionary Man	action, drama, thriller, western	2007	Dolph Lundgren	4.9	93	http://www.imdb.com/title/tt0926110/
+The Scalphunters	comedy, western	1968	Sydney Pollack	6.7	102	http://www.imdb.com/title/tt0063557/
+The White Buffalo	western	1977	J. Lee Thompson	5.8	97	http://www.imdb.com/title/tt0076915/
+Ace High	comedy, western	1968	Giuseppe Colizzi	6.4	132	http://www.imdb.com/title/tt0064860/
+Lucky Luke	comedy, western	1991	Terence Hill	4.7	92	http://www.imdb.com/title/tt0102351/
+Walker	adventure, drama, history, war, western	1987	Alex Cox	6.3	94	http://www.imdb.com/title/tt0096409/
+Once Upon a Time in China and America	action, adventure, history, western	1997	Sammo Hung	6.4	102	http://www.imdb.com/title/tt0120530/
+Purgatory	fantasy, western	1999	Uli Edel	6.6	94	http://www.imdb.com/title/tt0158131/
+And Starring Pancho Villa as Himself	biography, drama, history, war, western	2003	Bruce Beresford	6.6	112	http://www.imdb.com/title/tt0337824/
+Chato's Land	western	1972	Michael Winner	6.4	110	http://www.imdb.com/title/tt0066907/
+Tom Horn	crime, drama, romance, western	1980	William Wiard	6.7	98	http://www.imdb.com/title/tt0080031/
+Ulzana's Raid	adventure, western	1972	Robert Aldrich	7	103	http://www.imdb.com/title/tt0069436/
+7 Faces of Dr. Lao	fantasy, mystery, western	1964	George Pal	7	100	http://www.imdb.com/title/tt0057812/
+Support Your Local Gunfighter	comedy, romance, western	1971	Burt Kennedy	6.8	91	http://www.imdb.com/title/tt0067809/
+Cheyenne Autumn	drama, history, western	1964	John Ford	6.8	154	http://www.imdb.com/title/tt0057940/
+Two Rode Together	western	1961	John Ford	6.8	109	http://www.imdb.com/title/tt0055558/
+The Hi-Lo Country	drama, romance, western	1998	Stephen Frears	6	114	http://www.imdb.com/title/tt0120699/
+The Jack Bull	western	1999	John Badham	6.8	116	http://www.imdb.com/title/tt0171410/
+The Ballad of Cable Hogue	comedy, drama, romance, western	1970	Sam Peckinpah	7.3	121	http://www.imdb.com/title/tt0065446/
+Rancho Deluxe	comedy, romance, western	1975	Frank Perry	6.3	93	http://www.imdb.com/title/tt0073605/
+The Last Hard Men	western	1976	Andrew V. McLaglen	6	98	http://www.imdb.com/title/tt0074776/
+Comes a Horseman	drama, western, romance	1978	Alan J. Pakula	6.1	118	http://www.imdb.com/title/tt0077360/
+Hot Lead and Cold Feet	family, western, action, comedy	1978	Robert Butler	5.6	90	http://www.imdb.com/title/tt0077698/
+Butch and Sundance: The Early Days	comedy, western	1979	Richard Lester	5.4	115	http://www.imdb.com/title/tt0078919/
+A Reason to Live, a Reason to Die	western	1972	Tonino Valerii	6	119	http://www.imdb.com/title/tt0069159/
+Greaser's Palace	comedy, drama, western	1972	Robert Downey Sr.	5.7	91	http://www.imdb.com/title/tt0068659/
+Hannie Caulder	comedy, crime, drama, western	1971	Burt Kennedy	6.2	85	http://www.imdb.com/title/tt0068675/
+Shoot Out	western	1971	Henry Hathaway	5.8	95	http://www.imdb.com/title/tt0067750/
+Wild Rovers	western	1971	Blake Edwards	6.5	136	http://www.imdb.com/title/tt0067989/
+Dirty Dingus Magee	comedy, western	1970	Burt Kennedy	5.2	91	http://www.imdb.com/title/tt0065642/
+Father Murphy	drama, family, western	1981	Victor French	6.1	48	http://www.imdb.com/title/tt0081861/
+The Deadly Companions	western	1961	Sam Peckinpah	6.2	93	http://www.imdb.com/title/tt0054795/
+Invitation to a Gunfighter	western	1964	Richard Wilson	6.3	92	http://www.imdb.com/title/tt0058238/
+Massacre Time	action, drama, western	1966	Lucio Fulci	6.4	92	http://www.imdb.com/title/tt0061074/
+The Night of the Grizzly	adventure, western	1966	Joseph Pevney	6.3	102	http://www.imdb.com/title/tt0060754/
+Ride in the Whirlwind	western	1965	Monte Hellman	6.4	82	http://www.imdb.com/title/tt0059653/
+A Bullet for the General	western	1966	Damiano Damiani	7	135	http://www.imdb.com/title/tt0061429/
+Day of Anger	western	1967	Tonino Valerii	7	95	http://www.imdb.com/title/tt0061709/
+Face to Face	adventure, western	1967	Sergio Sollima	7	107	http://www.imdb.com/title/tt0061636/
+Rough Night in Jericho	romance, western	1967	Arnold Laven	6.1	104	http://www.imdb.com/title/tt0062218/
+If You Meet Sartana Pray for Your Death	western	1968	Frank Kramer	6.2	95	http://www.imdb.com/title/tt0063568/
+A Professional Gun	comedy, western	1968	Sergio Corbucci	7	110	http://www.imdb.com/title/tt0063293/
+Run, Man, Run	adventure, comedy, western	1968	Sergio Sollima	6.7	120	http://www.imdb.com/title/tt0062825/
+Villa Rides	war, western	1968	Buzz Kulik	6.2	125	http://www.imdb.com/title/tt0063775/
+Miracle at Sage Creek	western, action, family	2005	James Intveld	5.4	90	http://www.imdb.com/title/tt0444669/
+High Midnight	action, horror, thriller, western	????	Mary Lambert			http://www.imdb.com/title/tt0473493/
+Companeros	western, comedy	1970	Sergio Corbucci	7.3	118	http://www.imdb.com/title/tt0066612/
+El Condor	action, adventure, romance, western	1970	John Guillermin	5.7	102	http://www.imdb.com/title/tt0065570/
+Monte Walsh	western	1970	William A. Fraker	6.9	106	http://www.imdb.com/title/tt0066093/
+Adios Sabata	action, war, western	1970	Frank Kramer	5.8	104	http://www.imdb.com/title/tt0066745/
+'Doc'	western	1971	Frank Perry	6	96	http://www.imdb.com/title/tt0067003/
+The Great Northfield Minnesota Raid	western	1972	Philip Kaufman	6.2	91	http://www.imdb.com/title/tt0068661/
+Pocket Money	western, comedy	1972	Stuart Rosenberg	5.5	102	http://www.imdb.com/title/tt0069103/
+The Grand Duel	western	1972	Giancarlo Santi	6.3	98	http://www.imdb.com/title/tt0068657/
+The Wrath of God	western	1972	Ralph Nelson	6	111	http://www.imdb.com/title/tt0069515/
+Chino	action, drama, western	1973	John Sturges, Duilio Coletti	5.7	98	http://www.imdb.com/title/tt0069833/
+Zandy's Bride	western	1974	Jan Troell	5.9	116	http://www.imdb.com/title/tt0072435/
+Against a Crooked Sky	family, western	1975	Earl Bellamy	5.4	89	http://www.imdb.com/title/tt0072615/
+Take a Hard Ride	western	1975	Anthony M. Dawson	5.8	103	http://www.imdb.com/title/tt0073784/
+Buffalo Bill and the Indians, or Sitting Bull's History Lesson	western, comedy	1976	Robert Altman	6.1	123	http://www.imdb.com/title/tt0074254/
+Keoma	drama, western, action	1976	Enzo G. Castellari	7	105	http://www.imdb.com/title/tt0074740/
+The Return of a Man Called Horse	western, drama	1976	Irvin Kershner	5.9	129	http://www.imdb.com/title/tt0075132/
+China 9, Liberty 37	western	1978	Monte Hellman, Tony Brandt	5.9	102	http://www.imdb.com/title/tt0077327/
+Barquero	western	1970	Gordon Douglas	5.9	115	http://www.imdb.com/title/tt0065451/
+The Stalking Moon	western	1968	Robert Mulligan	6.6	109	http://www.imdb.com/title/tt0065032/
+5 Card Stud	western, mystery	1968	Henry Hathaway	6.4	103	http://www.imdb.com/title/tt0062626/
+Old Gringo	adventure, history, romance	1989	Luis Puenzo	5.7	119	http://www.imdb.com/title/tt0098022/
+Lewis & Clark: Great Journey West	adventure, drama, history, western	2002	Bruce Neibaur	6.7	42	http://www.imdb.com/title/tt0317874/
+Windwalker	adventure, drama, western	1981	Kieth Merrill	6.8	108	http://www.imdb.com/title/tt0081760/
+Andersonville	drama, history, war, western	1996	John Frankenheimer	7.4	167	http://www.imdb.com/title/tt0115097/
+Alvarez Kelly	western	1966	Edward Dmytryk	6.2	116	http://www.imdb.com/title/tt0060095/
+The Last Outlaw	western	1993	Geoff Murphy	6.1	93	http://www.imdb.com/title/tt0110307/
+From Noon Till Three	comedy, romance, western	1976	Frank D. Gilroy	6.6	99	http://www.imdb.com/title/tt0074553/
+The Last Sunset	western	1961	Robert Aldrich	6.7	112	http://www.imdb.com/title/tt0055073/
+The Tracker	drama, history, western	2002	Rolf de Heer	7.5	90	http://www.imdb.com/title/tt0212132/
+Rustlers' Rhapsody	comedy, western	1985	Hugh Wilson	5.8	88	http://www.imdb.com/title/tt0089945/
+The Hired Hand	drama, western	1971	Peter Fonda	7	90	http://www.imdb.com/title/tt0067204/
+Duel at Diablo	action, war, western	1966	Ralph Nelson	6.6	103	http://www.imdb.com/title/tt0060355/
+Cimarron	drama, western	1960	Anthony Mann	6.3	147	http://www.imdb.com/title/tt0053715/
+Tell Them Willie Boy Is Here	drama, western	1969	Abraham Polonsky	6.4	98	http://www.imdb.com/title/tt0065079/
+The New Land	drama, western	1972	Jan Troell	7.7	204	http://www.imdb.com/title/tt0069035/
+Shalako	western	1968	Edward Dmytryk	5.4	113	http://www.imdb.com/title/tt0063592/
+Dust	drama, western	2001	Milcho Manchevski	6.1	127	http://www.imdb.com/title/tt0243232/
+Undead or Alive: A Zombedy	comedy, horror, western	2007	Glasgow Phillips	5		http://www.imdb.com/title/tt0795505/
+Valdez Is Coming	western	1971	Edwin Sherin	6.6	90	http://www.imdb.com/title/tt0067921/
+The Shooting	western	1966	Monte Hellman	6.7	82	http://www.imdb.com/title/tt0062262/
+The Night Before Christmas	comedy, family, western	1994	Terence Hill	5.8	107	http://www.imdb.com/title/tt0109321/
+The Valley of Gwangi	western, sci_fi, thriller	1969	James O'Connolly	6	96	http://www.imdb.com/title/tt0065163/
+Viva Maria!	adventure, comedy, romance, western	1965	Louis Malle	6.3	120	http://www.imdb.com/title/tt0059956/
+Lust in the Dust	comedy, western	1985	Paul Bartel	5.4	84	http://www.imdb.com/title/tt0089523/
+The Hallelujah Trail	comedy, western	1965	John Sturges	6.5	165	http://www.imdb.com/title/tt0059250/
+Sabata	western	1969	Frank Kramer	6.7	111	http://www.imdb.com/title/tt0064916/
+A Big Hand for the Little Lady	comedy, drama, western	1966	Fielder Cook	7.2	95	http://www.imdb.com/title/tt0060165/
+The Cheyenne Social Club	comedy, western	1970	Gene Kelly	6.7	103	http://www.imdb.com/title/tt0065542/
+Breakheart Pass	mystery, western	1975	Tom Gries	6.6	95	http://www.imdb.com/title/tt0072735/
+Junior Bonner	comedy, drama, western	1972	Sam Peckinpah	6.7	100	http://www.imdb.com/title/tt0068786/
+Zorro	action, adventure, comedy, western	1975	Duccio Tessari	6.1	124	http://www.imdb.com/title/tt0072448/
+Will Penny	romance, western	1968	Tom Gries	7.1	108	http://www.imdb.com/title/tt0063811/
+The Shadow Riders	romance, western	1982	Andrew V. McLaglen	6.7	100	http://www.imdb.com/title/tt0084666/
+Barbarosa	western	1982	Fred Schepisi	6.5	90	http://www.imdb.com/title/tt0083619/
+Monte Walsh	western	2003	Simon Wincer	7.1	117	http://www.imdb.com/title/tt0329390/
+Geronimo	action, biography, history, western	1962	Arnold Laven	5.7	101	http://www.imdb.com/title/tt0056016/
+The Gundown	western	2011	Dustin Rikert	4.3	97	http://www.imdb.com/title/tt1555110/
+Siringo	western	1995	Kevin G. Cremin	5.4	90	http://www.imdb.com/title/tt0111202/
+The Meanest Men in the West	western	1967	Charles S. Dubin, Samuel Fuller	4.3	91	http://www.imdb.com/title/tt0061962/
+Posse	western	1993	Mario Van Peebles	5.2	111	http://www.imdb.com/title/tt0107863/
+Pharaoh's Army	western	1995	Robby Henson	6.9	90	http://www.imdb.com/title/tt0114122/
+The Ballad of Lucy Whipple	drama, family, western	2001	Jeremy Kagan	6.2	96	http://www.imdb.com/title/tt0262259/
+The Sacketts	western	1979	Robert Totten	7.6	240	http://www.imdb.com/title/tt0079840/
+Branded	action, western	1965		7.6	30	http://www.imdb.com/title/tt0058792/
+The Hard Ride	action, drama, western	2013	Thadd Turner			http://www.imdb.com/title/tt0490138/
+A Vampire's Tale	horror, western	2009	Drew Cullingham	3.1	90	http://www.imdb.com/title/tt1349486/
+Doc West	western	2009	Giulio Base, Terence Hill	5.8	180	http://www.imdb.com/title/tt1282147/
+Conagher	western	1991	Reynaldo Villalobos	7.3	94	http://www.imdb.com/title/tt0101609/
+Laredo	comedy, western	1965		7.8	60	http://www.imdb.com/title/tt0058819/
+The Quick Gun	western	1964	Sidney Salkow	5.4	87	http://www.imdb.com/title/tt0058507/
+How the West Was Won	western	1978	Bernard McEveety	7.4	60	http://www.imdb.com/title/tt0077027/
+Timerider: The Adventure of Lyle Swann	action, adventure, sci_fi, western	1982	William Dear	5.1	94	http://www.imdb.com/title/tt0086443/
+Love Finds a Home	family, western	2009	David S. Cass Sr.	6.2		http://www.imdb.com/title/tt1307064/
+Love's Long Journey	drama, western	2005	Michael Landon Jr.	6.9	120	http://www.imdb.com/title/tt0486420/
+Blood River	horror, thriller, western	2009	Adam Mason	5.2	104	http://www.imdb.com/title/tt1137999/
+The Rounders	comedy, western	1965	Burt Kennedy	6	85	http://www.imdb.com/title/tt0059661/
+The Last Ride of the Dalton Gang	action, western	1979	Dan Curtis	5.6	142	http://www.imdb.com/title/tt0079440/
+Looney, Looney, Looney Bugs Bunny Movie	family, animation, comedy, music, crime, western	1981	Friz Freleng	7	79	http://www.imdb.com/title/tt0082679/
+The Lone Ranger	action, western	2003	Jack Bender	5.3	120	http://www.imdb.com/title/tt0323100/
+Love Takes Wing	western	2009	Lou Diamond Phillips	6.1		http://www.imdb.com/title/tt1269560/
+Ghost Town	horror, sci_fi, western	2009	Todor Chapkanov	3.3	85	http://www.imdb.com/title/tt1421035/
+Revelation Trail	horror, western	2013	John P. Gibson	3.9	108	http://www.imdb.com/title/tt2370410/
+Killer Women	drama, western	2014			60	http://www.imdb.com/title/tt2657258/
+Big Money Rustlas	comedy, western	2010	Paul Andresen	3.7	95	http://www.imdb.com/title/tt1380784/
+Goodnight for Justice: The Measure of a Man	western	2012	Kristoffer Tabori	5.6		http://www.imdb.com/title/tt2007389/
+Dust Up	action, adventure, comedy, horror, thriller, western	2012	Ward Roberts	4.7	90	http://www.imdb.com/title/tt1991034/
+Thomasine & Bushrod	action, crime, western	1974	Gordon Parks Jr.	5.7	95	http://www.imdb.com/title/tt0072278/
+Sam Whiskey	comedy, western	1969	Arnold Laven	5.7	96	http://www.imdb.com/title/tt0064923/
+Lancer	western	1968	Robert Butler	7.1	60	http://www.imdb.com/title/tt0062577/
+The Fastest Guitar Alive	comedy, music, western	1967	Michael Moore	4.2	87	http://www.imdb.com/title/tt0061652/
+The Outsider	drama, romance, western	2002	Randa Haines	6.5	119	http://www.imdb.com/title/tt0289374/
+South of Heaven, West of Hell	drama, western	2000	Dwight Yoakam	4.1	104	http://www.imdb.com/title/tt0179473/
+Love's Unending Legacy	drama, family, romance, western	2007	Mark Griffiths	6.4		http://www.imdb.com/title/tt0929864/
+You Know My Name	drama, western	1999	John Kent Harrison	6.4	94	http://www.imdb.com/title/tt0163913/
+Dead Man's Walk	western	1996		7.1	272	http://www.imdb.com/title/tt0115238/
+The Quick and the Dead	western	1987	Robert Day	6.9	91	http://www.imdb.com/title/tt0093811/
+Cowboy Up	drama, romance, western	2001	Xavier Koller	5.4	105	http://www.imdb.com/title/tt0186202/
+Gumby: The Movie	animation, action, adventure, comedy, family, fantasy, music, mystery, sci_fi, western	1995	Art Clokey	5.9	90	http://www.imdb.com/title/tt0113234/
+Dr. Quinn Medicine Woman: The Movie	drama, western	1999	James Keach	6.1	86	http://www.imdb.com/title/tt0196512/
+The Timber	drama, western	2013	Anthony O'Brien			http://www.imdb.com/title/tt2215673/
+BraveStarr	animation, action, family, sci_fi, western	1987		7.1	30	http://www.imdb.com/title/tt0127471/
+Savage Pampas	adventure, drama, western	1966	Hugo Fregonese	5.9	112	http://www.imdb.com/title/tt0060942/
+Three Priests	drama, western	2008	Jim Comas Cole	4.8	89	http://www.imdb.com/title/tt0486029/
+A Fistful of Fingers	comedy, western	1995	Edgar Wright	6.1	78	http://www.imdb.com/title/tt0131396/
+High Plains Invaders	sci_fi, western	2009	K. T. Donaldson	4.6	85	http://www.imdb.com/title/tt1388432/
+Children of the Dust	western	1995	David Greene	6.4	175	http://www.imdb.com/title/tt0113195/
+Lonesome Dove: The Outlaw Years	western	1995		7.7	42	http://www.imdb.com/title/tt0131176/
+Frank & Jesse	biography, western	1995	Robert Boris	5.7	105	http://www.imdb.com/title/tt0109835/
+Buffalo Girls	western	1995	Rod Hardy	6.7	180	http://www.imdb.com/title/tt0111903/
+Stay Away, Joe	comedy, musical, western	1968	Peter Tewksbury	4.5	102	http://www.imdb.com/title/tt0063643/
+Cowboys and Vampires	action, horror, western	2010		2.3	94	http://www.imdb.com/title/tt1648062/
+Day of the Evil Gun	western	1968	Jerry Thorpe	6.2	95	http://www.imdb.com/title/tt0062865/
+How the West Was Fun	family, western	1994	Stuart Margolin	3.6	96	http://www.imdb.com/title/tt0110068/
+The Ransom of Red Chief	comedy, western	1998	Bob Clark	5.5	90	http://www.imdb.com/title/tt0117439/
+Left for Dead	action, horror, western	2007	Albert Pyun	4.1	84	http://www.imdb.com/title/tt0918645/
+Blood Red	drama, romance, western	1989	Peter Masterson	2.8	91	http://www.imdb.com/title/tt0096951/
+A Cold Day in Hell	western	2011	Christopher Forbes	2.2	95	http://www.imdb.com/title/tt1843834/
+The Man Who Shook the Hand of Vicente Fernandez	comedy, drama, western	2012	Elia Petridis	6.2		http://www.imdb.com/title/tt1977953/
+The Bull of the West	western	1972	Jerry Hopper, Paul Stanley	5.2	90	http://www.imdb.com/title/tt0066869/
+Stagecoach	western	1966	Gordon Douglas	5.7	115	http://www.imdb.com/title/tt0061024/
+In Pursuit of Honor	drama, western	1995	Ken Olin	7.2	111	http://www.imdb.com/title/tt0113399/
+Lonesome Dove: The Series	western	1994	George Mendeluk, Mark Sobel	6.8	42	http://www.imdb.com/title/tt0108839/
+Son of the Morning Star	history, western	1991	Mike Robe	7.3	187	http://www.imdb.com/title/tt0102962/
+The Last Cowboy	drama, western	2003	Joyce Chopra	6	100	http://www.imdb.com/title/tt0325706/
+Black Fox	western	1995	Steven Hilliard Stern	6	92	http://www.imdb.com/title/tt0109282/
+Love's Unfolding Dream	family, western	2007	Harvey Frost	6.2		http://www.imdb.com/title/tt0960143/
+The Virginian	western	2013	Thomas Makowski			http://www.imdb.com/title/tt2788332/
+Tickle Me	comedy, musical, romance, western	1965	Norman Taurog	5.4	90	http://www.imdb.com/title/tt0056585/
+Defiance	western	2002	Doveed Linder	3.1	72	http://www.imdb.com/title/tt0337972/
+Last Stand at Saber River	action, drama, western	1997	Dick Lowry	6.8	96	http://www.imdb.com/title/tt0119501/
+Straight to Hell Returns	western	2010	Alex Cox	3.6	91	http://www.imdb.com/title/tt1844777/
+Vengeance	western	1977	Joseph Manduke	4.6	94	http://www.imdb.com/title/tt0076261/
+The One and Only, Genuine, Original Family Band	comedy, drama, family, musical, western	1968	Michael O'Herlihy	6.3	110	http://www.imdb.com/title/tt0063389/
+Savage Sam	western, family, adventure, drama	1963	Norman Tokar	5.9	103	http://www.imdb.com/title/tt0057473/
+The Avenging Angel	western	1995	Craig R. Baxley	6	91	http://www.imdb.com/title/tt0112423/
+Outlaw Trail: The Treasure of Butch Cassidy	adventure, family, western	2006	Ryan Little	5.6	90	http://www.imdb.com/title/tt0485956/
+The Good Old Boys	adventure, western	1995	Tommy Lee Jones	6.5	130	http://www.imdb.com/title/tt0113196/
+Dark Frontier	drama, history, thriller, western	2009	Kriv Stenders	4.9	96	http://www.imdb.com/title/tt1270090/
+Cimarron Strip	western	1967		7.3	90	http://www.imdb.com/title/tt0061241/
+Mail Order Bride	western	2008	Anne Wheeler	5.4		http://www.imdb.com/title/tt1320431/
+The Righteous and the Wicked	western	2010	Craig A. Butler	3.4	96	http://www.imdb.com/title/tt1478856/
+The Gambler Returns: The Luck of the Draw	western	1991	Dick Lowry	6.5	240	http://www.imdb.com/title/tt0101933/
+Stingray Sam	comedy, musical, sci_fi, western	2009	Cory McAbee	6.8	61	http://www.imdb.com/title/tt1355599/
+Wild Gals of the Naked West	comedy, western	1962	Russ Meyer	4	65	http://www.imdb.com/title/tt0056692/
+Silent Tongue	drama, horror, western	1993	Sam Shepard	4.9	102	http://www.imdb.com/title/tt0108135/
+Timestalkers	adventure, western, sci_fi	1987	Michael Schultz	5.6	100	http://www.imdb.com/title/tt0094154/
+Ned Kelly	biography, crime, drama, history, western	1970	Tony Richardson	4.9	99	http://www.imdb.com/title/tt0066130/
+The Ballad of Little Jo	drama, romance, western	1993	Maggie Greenwald	6.8	121	http://www.imdb.com/title/tt0106350/
+Gang of Roses	action, drama, western	2003	Jean-Claude La Marre	1.9	94	http://www.imdb.com/title/tt0339091/
+The Legend of the Golden Gun	fantasy, western	1979	Alan J. Levi	5.1	100	http://www.imdb.com/title/tt0079455/
+Stolen Women, Captured Hearts	drama, romance, western	1997	Jerry London	6.5	87	http://www.imdb.com/title/tt0120216/
+Redemption: For Robbing the Dead	western	2011	Thomas Russell	4.7	105	http://www.imdb.com/title/tt1623660/
+Dead Man's Gun	western	1997		6.8	60	http://www.imdb.com/title/tt0140735/
+Kung Fu: The Movie	adventure, western	1986	Richard Lang	6.2	89	http://www.imdb.com/title/tt0091361/
+A Time for Killing	western	1967	Phil Karlson	5.4	88	http://www.imdb.com/title/tt0062373/
+Seven Alone	adventure, family, western	1974	Earl Bellamy	5.5	97	http://www.imdb.com/title/tt0073686/
+The Adventures of Bullwhip Griffin	action, comedy, family, western	1967	James Neilson	6.8	108	http://www.imdb.com/title/tt0061333/
+Incident at Phantom Hill	adventure, western	1966	Earl Bellamy	6	88	http://www.imdb.com/title/tt0060537/
+The Long Ride Home	western	2003	Rob Marcarelli	5.1	87	http://www.imdb.com/title/tt0283452/
+One Man's Hero	action, drama, history, romance, war, western	1999	Lance Hool	5.7	121	http://www.imdb.com/title/tt0120775/
+The Legend of Nigger Charley	western	1972	Martin Goldman	5.8	98	http://www.imdb.com/title/tt0068838/
+Legend	western, sci_fi, adventure, comedy	1995		6.9	60	http://www.imdb.com/title/tt0112045/
+The Cherokee Kid	comedy, western	1996	Paris Barclay	5.7	91	http://www.imdb.com/title/tt0115875/
+Texas Across the River	comedy, western	1966	Michael Gordon	6.2	101	http://www.imdb.com/title/tt0061080/
+Lone Rider	western	2008	David S. Cass Sr.	5.1		http://www.imdb.com/title/tt1092014/
+Skin Game	comedy, romance, western	1971	Paul Bogart	6.9	102	http://www.imdb.com/title/tt0067763/
+The Great Scout & Cathouse Thursday	comedy, western	1976	Don Taylor	5.9	102	http://www.imdb.com/title/tt0074588/
+The Virginian	western	2000	Bill Pullman	5.7	95	http://www.imdb.com/title/tt0164962/
+Little House: The Last Farewell	drama, western	1984	Michael Landon	7.4	100	http://www.imdb.com/title/tt0087631/
+Something Big	western	1971	Andrew V. McLaglen	5.4	108	http://www.imdb.com/title/tt0068022/
+The Duchess and the Dirtwater Fox	comedy, western	1976	Melvin Frank	5.4	103	http://www.imdb.com/title/tt0074441/
+A Father for Charlie	drama, western	1995	Jeff Bleckner	6.8	90	http://www.imdb.com/title/tt0113040/
+Cowboys & Indians	adventure, family, western	2011	Aaron Burk, Tyler Burk	2.9	86	http://www.imdb.com/title/tt1886504/
+Six Black Horses	drama, romance, western	1962	Harry Keller	6.2	80	http://www.imdb.com/title/tt0056496/
+Ghost Town: The Movie	western	2007	Jeff Kennedy, Dean West	4	115	http://www.imdb.com/title/tt0849441/
+The Last Confession of Alexander Pearce	biography, drama, history, horror, western	2008	Michael James Rowland	6.3		http://www.imdb.com/title/tt1099204/
+The Trap	adventure, drama, romance, western	1966	Sidney Hayers	6.9	106	http://www.imdb.com/title/tt0061115/
+Hot Bath an' a Stiff Drink	western	2013	Matthew Gratzner			http://www.imdb.com/title/tt2741626/
+Queen of Swords	action, adventure, western	2000		6.7	30	http://www.imdb.com/title/tt0252781/
+Little House: Look Back to Yesterday	drama, family, romance, western	1983	Victor French	7	120	http://www.imdb.com/title/tt0085855/
+Sky Bandits	action, adventure, war, western	1986	Zoran Perisic	4.4	105	http://www.imdb.com/title/tt0091963/
+My Heroes Have Always Been Cowboys	drama, western	1991	Stuart Rosenberg	6.1	106	http://www.imdb.com/title/tt0102493/
+Hearts of the West	western, comedy	1975	Howard Zieff	6.2	102	http://www.imdb.com/title/tt0073096/
+Posse	western	1975	Kirk Douglas	6.4	92	http://www.imdb.com/title/tt0073559/
+Heartland	western, drama	1979	Richard Pearce	7	96	http://www.imdb.com/title/tt0082508/
+Wanda Nevada	comedy, mystery, romance, western	1979	Peter Fonda	5.2	107	http://www.imdb.com/title/tt0080116/
+The Life and Times of Grizzly Adams	adventure, family, western	1974	Richard Friedenberg	6	93	http://www.imdb.com/title/tt0074797/
+Nichols	western	1971	William Ward	7.7	60	http://www.imdb.com/title/tt0066690/
+Hec Ramsey	western	1972		7.7	90	http://www.imdb.com/title/tt0068077/
+Barbary Coast	comedy, western	1975	Hal De Windt	6.7	60	http://www.imdb.com/title/tt0072470/
+The Quest	western	1976		6.7	60	http://www.imdb.com/title/tt0074041/
+Bret Maverick	drama, western	1981		7.6	60	http://www.imdb.com/title/tt0081837/
+Best of the West	comedy, western	1981	James Burrows, Jeff Chambers	6.9	30	http://www.imdb.com/title/tt0081832/
+Harts of the West	comedy, drama, western	1993	Bill D'Elia	6.5	60	http://www.imdb.com/title/tt0106022/
+A Distant Trumpet	western	1964	Raoul Walsh	6.2	117	http://www.imdb.com/title/tt0058019/
+Blood for a Silver Dollar	action, romance, western	1965	Calvin Jackson Padget	6.3	99	http://www.imdb.com/title/tt0059114/
+The Glory Guys	romance, western	1965	Arnold Laven	6	112	http://www.imdb.com/title/tt0059232/
+Minnesota Clay	action, romance, war, western	1964	Sergio Corbucci	5.8	90	http://www.imdb.com/title/tt0058202/
+The Return of Ringo	action, drama, romance, western	1965	Duccio Tessari	6.7	95	http://www.imdb.com/title/tt0060903/
+A Pistol for Ringo	action, drama, western	1965	Duccio Tessari	6.5	98	http://www.imdb.com/title/tt0059601/
+The Hills Run Red	action, western	1966	Lee W. Beaver	5.8	89	http://www.imdb.com/title/tt0060416/
+Goodbye Texas	action, western	1966	Ferdinando Baldi	6.1	93	http://www.imdb.com/title/tt0060143/
+Any Gun Can Play	action, adventure, western	1967	Enzo G. Castellari	5.8	105	http://www.imdb.com/title/tt0062429/
+Hellbenders	action, adventure, drama, romance, western	1967	Sergio Corbucci	6.7	90	http://www.imdb.com/title/tt0060261/
+Johnny Yuma	western, action, drama	1966	Romolo Guerrieri	6	100	http://www.imdb.com/title/tt0061846/
+The Last Challenge	western	1967	Richard Thorpe	5.7	105	http://www.imdb.com/title/tt0061893/
+Welcome to Hard Times	drama, western	1967	Burt Kennedy	6.1	103	http://www.imdb.com/title/tt0062482/
+Blue	romance, western	1968	Silvio Narizzano	5.8	113	http://www.imdb.com/title/tt0062742/
+Guns for San Sebastian	action, adventure, drama, western	1968	Henri Verneuil	6.3	111	http://www.imdb.com/title/tt0062713/
+Tepepa	action, adventure, drama, western	1969	Giulio Petroni	6.5	136	http://www.imdb.com/title/tt0063679/
+The Five Man Army	western	1969	Don Taylor, Italo Zingarelli	6.4	105	http://www.imdb.com/title/tt0064300/
+Young Billy Young	romance, western	1969	Burt Kennedy	5.7	89	http://www.imdb.com/title/tt0065230/
+The Journeyman	western	2001	James Crowley	6.1	93	http://www.imdb.com/title/tt0269408/
+The Far Side of Jericho	western	2006	Tim Hunter	4.8	99	http://www.imdb.com/title/tt0463984/
+The Scarlet Worm	western	2011	Michael Fredianelli	4.2	93	http://www.imdb.com/title/tt1711510/
+Cannon for Cordoba	western	1970	Paul Wendkos	5.5	104	http://www.imdb.com/title/tt0065520/
+A Man Called Sledge	western	1970	Vic Morrow	5.8	93	http://www.imdb.com/title/tt0066050/
+The Deserter	western	1971	Niksa Fulgosi, Burt Kennedy	5.5	100	http://www.imdb.com/title/tt0066984/
+A Gunfight	western	1971	Lamont Johnson	6.2	89	http://www.imdb.com/title/tt0067168/
+Yuma	western	1971	Ted Post	6.2	73	http://www.imdb.com/title/tt0066599/
+Zachariah	comedy, drama, musical, western	1971	George Englund	5.3	93	http://www.imdb.com/title/tt0068011/
+Buck and the Preacher	adventure, comedy, drama, western	1972	Sidney Poitier	6.1	102	http://www.imdb.com/title/tt0068323/
+The Culpepper Cattle Co.	western	1972	Dick Richards	6.7	92	http://www.imdb.com/title/tt0068435/
+Dirty Little Billy	western	1972	Stan Dragoti	5.8	93	http://www.imdb.com/title/tt0068487/
+Deaf Smith & Johnny Ears	western	1973	Paolo Cavara	5.3	91	http://www.imdb.com/title/tt0068454/
+Man and Boy	adventure, western	1971	E.W. Swackhamer	5.1	98	http://www.imdb.com/title/tt0068907/
+Shanghai Joe	action, drama, western	1973	Mario Caiano	6.3	98	http://www.imdb.com/title/tt0068954/
+The Revengers	western	1972	Daniel Mann	5.5	106	http://www.imdb.com/title/tt0069179/
+The Deadly Trackers	western, drama	1973	Barry Shear	5.6	110	http://www.imdb.com/title/tt0069951/
+Oklahoma Crude	comedy, drama	1973	Stanley Kramer	6.1	108	http://www.imdb.com/title/tt0070472/
+Billy Two Hats	romance, western	1974	Ted Kotcheff	6	99	http://www.imdb.com/title/tt0069786/
+The Spikes Gang	western	1974	Richard Fleischer	6.1	96	http://www.imdb.com/title/tt0072198/
+Mad Dog Morgan	action, crime, drama, history, western	1976	Philippe Mora	6	102	http://www.imdb.com/title/tt0074836/
+The Chant of Jimmie Blacksmith	biography, crime, drama, history	1978	Fred Schepisi	7.1	120	http://www.imdb.com/title/tt0077318/
+Eagle's Wing	western	1979	Anthony Harvey	5.7	111	http://www.imdb.com/title/tt0079094/
+Whity	drama, western	1971	Rainer Werner Fassbinder	6.6	95	http://www.imdb.com/title/tt0067979/
+Chuka	western	1967	Gordon Douglas	6.2	105	http://www.imdb.com/title/tt0061477/
+The Real West	documentary, western	1992		7	50	http://www.imdb.com/title/tt0103519/
+The Grey Fox	biography, drama, western	1982	Phillip Borsos	7.5	110	http://www.imdb.com/title/tt0085622/
+Triumphs of a Man Called Horse	western	1983	John Hough	5.2	86	http://www.imdb.com/title/tt0084826/
+Carry on Cowboy	comedy, western	1966	Gerald Thomas	6	93	http://www.imdb.com/title/tt0059014/
+Jesse James Meets Frankenstein's Daughter	horror, sci_fi, western	1966	William Beaudine	2.6	88	http://www.imdb.com/title/tt0060558/
+The Quick and the Undead	action, horror, western	2006	Gerald Nott	2.6	80	http://www.imdb.com/title/tt0495747/
+Peacemakers	western, action, crime, drama	2003	Richard Compton, Jean de Segonzac	7.7		http://www.imdb.com/title/tt0353867/
+Kenny Rogers as The Gambler	western	1980	Dick Lowry	6	94	http://www.imdb.com/title/tt0080993/
+All Hat	comedy, western	2007	Leonard Farlinger	5.3	89	http://www.imdb.com/title/tt0903131/
+Bullet for a Badman	western	1964	R.G. Springsteen	6.3	80	http://www.imdb.com/title/tt0057905/
+Riders of the Purple Sage	drama, romance, western	1996	Charles Haid	6.4	98	http://www.imdb.com/title/tt0117476/
+Hard Country	drama, western	1981	David Greene	5.5	104	http://www.imdb.com/title/tt0082499/
+The Guns of Will Sonnett	western	1967		7.2	30	http://www.imdb.com/title/tt0061259/
+Gunsmoke: Return to Dodge	adventure, western	1987	Vincent McEveety	6.7	100	http://www.imdb.com/title/tt0093130/
+Cole Younger & The Black Train	western	2012	Christopher Forbes	2.4	90	http://www.imdb.com/title/tt2197881/
+The Retrieval	drama, history, western	2013	Chris Eska	4.3	92	http://www.imdb.com/title/tt2635006/
+Texas	adventure, history, western	1994	Richard Lang	5.9	180	http://www.imdb.com/title/tt0108316/
+A Texas Funeral	comedy, drama, fantasy, romance, war, western	1999	William Blake Herron	6.3	98	http://www.imdb.com/title/tt0180242/
+The Legend of Butch & Sundance	action, drama, western	2006	Sergio Mimica-Gezzan	5.2	86	http://www.imdb.com/title/tt0366709/
+Buffalo Soldiers	drama, history, western	1997	Charles Haid	6.1	100	http://www.imdb.com/title/tt0118790/
+Stone Fox	western, drama, family	1987	Harvey Hart	6.3	100	http://www.imdb.com/title/tt0094043/
+Ghost Town	horror, western	1988	Richard Governor	4.9	85	http://www.imdb.com/title/tt0095215/
+El Diablo	comedy, western	1990	Peter Markle	5.8	115	http://www.imdb.com/title/tt0099493/
+Ride the Wanted Trail	western	2013	Rick Groat		90	http://www.imdb.com/title/tt2555694/
+Blind Justice	action, western	1994	Richard Spence	5.6	85	http://www.imdb.com/title/tt0109294/
+Blindman	western	1971	Ferdinando Baldi	6.3	105	http://www.imdb.com/title/tt0066844/
+The Colt	action, drama, history, war, western	2005	Yelena Lanskaya	6.4	80	http://www.imdb.com/title/tt0416654/
+King of Texas	drama, western	2002	Uli Edel	6.3	95	http://www.imdb.com/title/tt0282659/
+The North Star	action, adventure, crime, drama, western	1996	Nils Gaup	4.6	90	http://www.imdb.com/title/tt0114622/
+Sergeants 3	comedy, western	1962	John Sturges	6.1	112	http://www.imdb.com/title/tt0056470/
+The Gold Retrievers	adventure, comedy, family, western	2009	James D.R. Hickox	4.5	90	http://www.imdb.com/title/tt1311093/
+Journey to Shiloh	drama, war, western	1968	William Hale	5.7	101	http://www.imdb.com/title/tt0063161/
+Redemption	western	2009	Robert Conway	4	90	http://www.imdb.com/title/tt1307002/
+Crazy Horse	action, biography, drama, war, western	1996	John Irvin	5.9	90	http://www.imdb.com/title/tt0115969/
+Aces 'N' Eights	action, adventure, drama, romance, western	2008	Craig R. Baxley	5.3		http://www.imdb.com/title/tt1087828/
+The Man Who Loved Cat Dancing	western	1973	Richard C. Sarafian	5.8	114	http://www.imdb.com/title/tt0070363/
+The Dream Chasers	adventure, drama, family, western	1982	Arthur R. Dubs, David E. Jackson	3.9	95	http://www.imdb.com/title/tt0083852/
+Stoney Burke	sport, western	1962	Tom Gries, Leslie Stevens	7.7	60	http://www.imdb.com/title/tt0055705/
+The Rowdy Girls	comedy, romance, western	2000	Steve Nevius	3.8	90	http://www.imdb.com/title/tt0177185/
+Once Upon a Texas Train	action, comedy, romance, western	1988	Burt Kennedy	5.6	96	http://www.imdb.com/title/tt0095781/
+Cipolla Colt	comedy, western	1975	Enzo Girolami	5.5	92	http://www.imdb.com/title/tt0072785/
+Dollar for the Dead	western	1998	Gene Quintano	5.2	94	http://www.imdb.com/title/tt0172341/
+I Will Fight No More Forever	action, drama, history, war, western	1975	Richard T. Heffron	7.3	105	http://www.imdb.com/title/tt0073138/
+The Erotic Adventures of Zorro	action, adventure, comedy, western	1972	Col. Robert Freeman	4.4	102	http://www.imdb.com/title/tt0068545/
+Chinaman's Chance: America's Other Slaves	action, drama, history, western	2008	Aki Aleong	4.8	90	http://www.imdb.com/title/tt0493406/
+Forgiven	western	2011	Alan Autry	2.6	90	http://www.imdb.com/title/tt1773432/
+Escape to Grizzly Mountain	family, western	2004	Anthony Dalesandro	5.9	95	http://www.imdb.com/title/tt0198460/
+Angel and the Bad Man	western	2009	Terry Ingram	4.7	95	http://www.imdb.com/title/tt1335977/
+Bullfighter	action, fantasy, western	2000	Rune Bendixen	2.4	90	http://www.imdb.com/title/tt0176579/
+Heaven with a Gun	western	1969	Lee H. Katzin	6	101	http://www.imdb.com/title/tt0064409/
+Johnson County War	western	2002	David S. Cass Sr.	6.7	240	http://www.imdb.com/title/tt0280264/
+Two-Fisted Tales	drama, horror, thriller, war, western	1992	Richard Donner, Tom Holland	5.9	88	http://www.imdb.com/title/tt0166002/
+Point of Entry	action, drama, mystery, sci_fi, sport, thriller, western	2007	Stephen Bridgewater	5	90	http://www.imdb.com/title/tt1034405/
+Pancho Villa	biography, drama, western	1972	Eugenio Martín	4.4	92	http://www.imdb.com/title/tt0069057/
+The Monroes	western	1966		7.6	60	http://www.imdb.com/title/tt0060011/
+The Ballad of Josie	comedy, western	1967	Andrew V. McLaglen	5.4	102	http://www.imdb.com/title/tt0061380/
+Provenance	western	2013	Dexter Fletcher			http://www.imdb.com/title/tt2236064/
+Rio Conchos	action, drama, romance, war, western	1964	Gordon Douglas	6.6	107	http://www.imdb.com/title/tt0058525/
+The Ranger, the Cook and a Hole in the Sky	western	1995	John Kent Harrison	6.4	94	http://www.imdb.com/title/tt0114235/
+Showdown	western	1973	George Seaton	5.8	99	http://www.imdb.com/title/tt0070687/
+The Good, the Bad, and Huckleberry Hound	animation, family, western	1988	Bob Goe, John Kimball	6.9	94	http://www.imdb.com/title/tt0192080/
+The Alamo: Thirteen Days to Glory	action, adventure, drama, history, war, western	1987	Burt Kennedy	6	140	http://www.imdb.com/title/tt0092527/
+The Quest: The Longest Drive	western	1976	Bernard McEveety	6.1	89	http://www.imdb.com/title/tt0328300/
+Dark Canyon	western	2012	Dustin Rikert	5.4	90	http://www.imdb.com/title/tt1887923/
+The Frontier	western	2012	Thomas Schlamme	6.1	60	http://www.imdb.com/title/tt2188909/
+Thousand Pieces of Gold	romance, western	1991	Nancy Kelly	6.8	105	http://www.imdb.com/title/tt0100774/
+Adiós Amigo	comedy, western	1976	Fred Williamson	4.1	87	http://www.imdb.com/title/tt0072604/
+One Little Indian	comedy, family, western	1973	Bernard McEveety	6.4	90	http://www.imdb.com/title/tt0070481/
+Ned	action, comedy, western	2003	Abe Forsythe	6.1	81	http://www.imdb.com/title/tt0338280/
+Son of a Gunfighter	western	1965	Paul Landres	4.7	91	http://www.imdb.com/title/tt0059737/
+Saxon	comedy, drama, mystery, thriller, western	2007	Greg Loftin	5.5	92	http://www.imdb.com/title/tt0811056/
+The Over-the-Hill Gang	comedy, western	1969	Jean Yarbrough	5.9	75	http://www.imdb.com/title/tt0064780/
+Bounty	western	2009	Jared Isham	3.1	90	http://www.imdb.com/title/tt0985049/
+Nude Django	comedy, western	1968	B. Ron Elliott	3.4	73	http://www.imdb.com/title/tt0131985/
+The Good Guys and the Bad Guys	comedy, western	1969	Burt Kennedy	6	91	http://www.imdb.com/title/tt0064379/
+Across the Great Divide	family, western	1976	Stewart Raffill	5.9	100	http://www.imdb.com/title/tt0075629/
+Redemption	adventure, drama, romance, western	2011	Joseph Paul Stachura	3.8	97	http://www.imdb.com/title/tt1350546/
+Hard Bounty	western	1995	Jim Wynorski	3.9	88	http://www.imdb.com/title/tt0113259/
+Hondo and the Apaches	western	1967	Lee H. Katzin	5.5	85	http://www.imdb.com/title/tt0061779/
+The Macahans	western	1976	Bernard McEveety	7.6	119	http://www.imdb.com/title/tt0074834/
+Waterhole #3	comedy, western	1967	William Graham	6.4	95	http://www.imdb.com/title/tt0062477/
+Dusty's Trail	comedy, western	1973		5.6	22	http://www.imdb.com/title/tt0069577/
+Grayeagle	adventure, drama, romance, western	1977	Charles B. Pierce	5.3	104	http://www.imdb.com/title/tt0077630/
+Surrogate	western	2009	Sean Eisele	5.1		http://www.imdb.com/title/tt1373240/
+Bordertown	adventure, western	1989	Didier Albert, Rene Bonniere	6.5	30	http://www.imdb.com/title/tt0096551/
+Ghost Rock	action, drama, western	2003	Dustin Rikert	3.6	101	http://www.imdb.com/title/tt0337626/
+Posse from Hell	western	1961	Herbert Coleman	6.6	89	http://www.imdb.com/title/tt0055318/
+Lonesome Cowboys	western	1968	Andy Warhol	5.4	109	http://www.imdb.com/title/tt0063236/
+Summer Love	western	2006	Piotr Uklanski	3.8	94	http://www.imdb.com/title/tt0486020/
+The Ride	drama, family, sport, western	1997	Michael O. Sajbel	6.3	101	http://www.imdb.com/title/tt0127247/
+Gone with the West	western, action	1975	Bernard Girard	3.3	92	http://www.imdb.com/title/tt0073059/
+Any Last Words?	action, western	2011	Vaughn Taylor	2.4	90	http://www.imdb.com/title/tt2116909/
+Ecstasy of Gold	western	2009	Adam Oxsen	2.1	89	http://www.imdb.com/title/tt1404677/
+Legacy	drama, history, western	1990	Kieth Merrill	6.8	53	http://www.imdb.com/title/tt0099996/
+Apache Rifles	western	1964	William H. Witney	5.8	92	http://www.imdb.com/title/tt0057851/
+Durango Kids	family, fantasy, western	1999	Ashton Root	4.9	102	http://www.imdb.com/title/tt0267455/
+Stranger on My Land	drama, western	1988	Larry Elikann	5.9	94	http://www.imdb.com/title/tt0096181/
+Jericho	mystery, western	2000	Merlin Miller	6.3	101	http://www.imdb.com/title/tt0285242/
+McLeod's Daughters	drama, western	1996	Michael Offer	6	60	http://www.imdb.com/title/tt0112068/
+Heller in Pink Tights	adventure, drama, romance, western	1960	George Cukor	5.7	100	http://www.imdb.com/title/tt0053902/
+The Master Gunfighter	western	1975	Frank Laughlin	4.7	121	http://www.imdb.com/title/tt0073357/
+A Town Called Hell	action, comedy, drama, western	1971	Robert Parrish	4.7	95	http://www.imdb.com/title/tt0067870/
+The Mark of Zorro	western, action, adventure	1974	Don McDougall	5.7	78	http://www.imdb.com/title/tt0071817/
+The Only Good Indian	western	2009	Kevin Willmott	5.2	114	http://www.imdb.com/title/tt1078917/
+One More Train to Rob	western	1971	Andrew V. McLaglen	5.3	108	http://www.imdb.com/title/tt0067531/
+The Work and the Glory II: American Zion	drama, western	2005	Sterling Van Wagenen	5.7	100	http://www.imdb.com/title/tt0457530/
+The Outlaws Is Coming	comedy, western	1965	Norman Maurer	6	88	http://www.imdb.com/title/tt0059558/
+Cattle Annie and Little Britches	drama, western	1981	Lamont Johnson	6	97	http://www.imdb.com/title/tt0082145/
+Avenging Angel	drama, western	2007	David S. Cass Sr.	5.3	81	http://www.imdb.com/title/tt1001491/
+Tecumseh: The Last Warrior	western	1995	Larry Elikann	6.6	92	http://www.imdb.com/title/tt0114643/
+Eyes of Fire	horror, western	1983	Avery Crounse	5.9	90	http://www.imdb.com/title/tt0085515/
+The Lazarus Man	western	1996	Kevin Connor, Jerry Jameson	7.3	60	http://www.imdb.com/title/tt0115241/
+Wind River	western, drama	2000	Tom Shell	6	97	http://www.imdb.com/title/tt0135707/
+Timemaster	adventure, sci_fi, western	1995	James Glickenhaus	3.5	100	http://www.imdb.com/title/tt0114676/
+The Manhunt	action, western, drama	1984	Larry Ludman	4.9	91	http://www.imdb.com/title/tt0088881/
+Ponderosa	western, drama, family	2001	Chris Thomson	4.5	60	http://www.imdb.com/title/tt0287260/
+How the West Was Won	western	1977	Burt Kennedy, Daniel Mann	7.4		http://www.imdb.com/title/tt0146379/
+High Noon	drama, western	2000	Rod Hardy	5.4	88	http://www.imdb.com/title/tt0244536/
+Copperhead	action, horror, western	2008	Todor 'Toshko' Chapkanov	3.9	90	http://www.imdb.com/title/tt1027806/
+The Meeksville Ghost	adventure, western	2001	David Lister	4.8	95	http://www.imdb.com/title/tt0247133/
+Shiloh Falls	thriller, western	2007	Adrian Fulle	3.6	90	http://www.imdb.com/title/tt0804541/
+The Proud and Damned	action, adventure, drama, western	1972	Ferde Grofe Jr.	4.2	92	http://www.imdb.com/title/tt0070569/
+Billy the Kid	western	1989	William A. Graham	5.8	96	http://www.imdb.com/title/tt0097450/
+The Redemption of Henry Myers	western	2013	Clayton Miller			http://www.imdb.com/title/tt2175016/
+Cockeyed Cowboys of Calico County	comedy, western	1970	Anton Leader, Ranald MacDougall	6	99	http://www.imdb.com/title/tt0065560/
+40 Guns to Apache Pass	western, adventure, romance	1967	William Witney	5.5	95	http://www.imdb.com/title/tt0060048/
+A Thunder of Drums	western	1961	Joseph Newman	5.7	97	http://www.imdb.com/title/tt0055524/
+Deathwork	action, crime, mystery, thriller, western	1971	Alexander Singer	4.4	89	http://www.imdb.com/title/tt0066886/
+Pioneer Woman	western	1973	Buzz Kulik	5.9	74	http://www.imdb.com/title/tt0070538/
+Hell to Pay	western	2005	Chris McIntyre	4.5	100	http://www.imdb.com/title/tt0473043/
+Glory Glory	action, western	2002	Paul Matthews	4.2	102	http://www.imdb.com/title/tt0225865/
+Broken Fences	drama, western	2008	Troy McGatlin	4.2	101	http://www.imdb.com/title/tt1196595/
+Red Headed Stranger	western	1986	Bill Wittliff	6.1	105	http://www.imdb.com/title/tt0091834/
+A Sierra Nevada Gunfight	western	2013	Vernon E. Mortensen			http://www.imdb.com/title/tt1879078/
+Hondo	western	1967	Alan Crosland Jr., Harry Harris	7.2	60	http://www.imdb.com/title/tt0061264/
+The Ramrodder	western	1969	Van Guylder	3.9	92	http://www.imdb.com/title/tt0127207/
+The Wild Wild West Revisited	action, adventure, comedy, crime, drama, mystery, sci_fi, thriller, western	1979	Burt Kennedy	6.1	96	http://www.imdb.com/title/tt0080132/
+The Aurora Encounter	biography, comedy, drama, family, sci_fi, western	1986	Jim McCullough Sr.	4.4	90	http://www.imdb.com/title/tt0090675/
+A Man Called Shenandoah	western	1965		7.5	30	http://www.imdb.com/title/tt0058825/
+Desperado	western	1987	Virgil W. Vogel	6.8	93	http://www.imdb.com/title/tt0092876/
+The Gambler, the Girl and the Gunslinger	comedy, western	2009	Anne Wheeler	4.7	95	http://www.imdb.com/title/tt1434457/
+Grim Prairie Tales: Hit the Trail... to Terror	horror, western	1990	Wayne Coe	5.1	86	http://www.imdb.com/title/tt0099704/
+Petticoat Planet	comedy, sci_fi, western	1996	Ellen Cabot	2.1	78	http://www.imdb.com/title/tt0117330/
+The Travels of Jaimie McPheeters	western	1963		7.7	60	http://www.imdb.com/title/tt0056791/
+Advance to the Rear	comedy, war, western	1964	George Marshall	5.8	100	http://www.imdb.com/title/tt0057820/
+The Work and the Glory III: A House Divided	drama, western	2006	Sterling Van Wagenen	5.6	89	http://www.imdb.com/title/tt0460611/
+The Great Bank Robbery	comedy, western	1969	Hy Averback	5.4	98	http://www.imdb.com/title/tt0064391/
+More Wild Wild West	comedy, western, adventure, action	1980	Burt Kennedy	6.1	94	http://www.imdb.com/title/tt0081180/
+True Grit	western	1978	Richard T. Heffron	5.7	100	http://www.imdb.com/title/tt0078422/
+Treasure of Matecumbe	adventure, family, western	1976	Vincent McEveety	5.9	117	http://www.imdb.com/title/tt0075347/
+The Great Sioux Massacre	western	1965	Sidney Salkow	5.2	91	http://www.imdb.com/title/tt0059244/
+Red on Yella, Kill a Fella	horror, mystery, western	2013	Duane Graves, Justin Meeks			http://www.imdb.com/title/tt2364774/
+Guns of Diablo	western	1965	Boris Sagal	5.7	91	http://www.imdb.com/title/tt0058167/
+Wicked Spring	drama, war, western	2002	Kevin R. Hershberger	5.7	102	http://www.imdb.com/title/tt0235048/
+Billy the Kid vs. Dracula	action, drama, horror, western	1966	William Beaudine	2.6	73	http://www.imdb.com/title/tt0060168/
+Gunpoint	western	1966	Earl Bellamy	6.4	86	http://www.imdb.com/title/tt0060483/
+BraveStarr: The Legend	adventure, animation, sci_fi, western	1988	Tom Tataranowicz	6.7	91	http://www.imdb.com/title/tt0353261/
+Clearcut	drama, thriller, western	1991	Ryszard Bugajski	6.5	100	http://www.imdb.com/title/tt0101592/
+3 Tickets to Paradise	action, adventure, western	2013	Isaac Piche		105	http://www.imdb.com/title/tt2829242/
+Gunsmoke: One Man's Justice	western	1994	Jerry Jameson	7	91	http://www.imdb.com/title/tt0109961/
+The Reckoning	crime, thriller, western	2013	James McDonald		45	http://www.imdb.com/title/tt1629759/
+The Gun Hawk	western	1963	Edward Ludwig	6.3	92	http://www.imdb.com/title/tt0057121/
+Beyond the Prairie, Part 2: The True Story of Laura Ingalls Wilder	biography, western	2002	Marcus Cole	5.9	100	http://www.imdb.com/title/tt0281654/
+Hell at My Heels	western	2011	Brett Kelly	1.6	80	http://www.imdb.com/title/tt1980134/
+Two for Texas	crime, western	1998	Rod Hardy	6	96	http://www.imdb.com/title/tt0135017/
+Gunfighter's Moon	romance, western	1997	Larry Ferguson	6.4	95	http://www.imdb.com/title/tt0113238/
+Gunsmoke: The Last Apache	western	1990	Charles Correll	6.9	94	http://www.imdb.com/title/tt0099721/
+Blazing Stewardesses	comedy, western	1975	Al Adamson	1.8	95	http://www.imdb.com/title/tt0071231/
+The Tall Man	western	1960		7.6	30	http://www.imdb.com/title/tt0053544/
+The Staircase	drama, western	1998	Karen Arthur	6.7	94	http://www.imdb.com/title/tt0152588/
+Cheyenne Warrior	action, western	1994	Mark Griffiths	6.2	90	http://www.imdb.com/title/tt0109408/
+A Gunfighter's Pledge	action, drama, western	2008	Armand Mastroianni	5.4	84	http://www.imdb.com/title/tt1146439/
+Joshua	drama, western	1976	Larry Spangler	4.3	90	http://www.imdb.com/title/tt0074719/
+Scalawag	adventure, western	1973	Kirk Douglas	5	92	http://www.imdb.com/title/tt0070642/
+Gunfighter	western	1999	Christopher Coppola	3.6	94	http://www.imdb.com/title/tt0155732/
+Hot Spur	western	1968	R.L. Frost	3.8	91	http://www.imdb.com/title/tt0063095/
+Jessi's Girls	western	1975	Al Adamson	3.4	80	http://www.imdb.com/title/tt0073202/
+Cry Blood, Apache	western	1970	Jack Starrett	2.5	82	http://www.imdb.com/title/tt0065596/
+Winterhawk	western	1975	Charles B. Pierce	5.7	98	http://www.imdb.com/title/tt0075432/
+The Loner	western	1965		7.2	30	http://www.imdb.com/title/tt0058822/
+Hawmps!	family, comedy, western	1976	Joe Camp	5	113	http://www.imdb.com/title/tt0074614/
+Belle Starr	western	1980	John A. Alonzo	6	97	http://www.imdb.com/title/tt0080424/
+Harry Tracy, Desperado	drama, western	1982	William A. Graham	6.2	107	http://www.imdb.com/title/tt0084052/
+Hungry Hills	drama, western	2009	Rob W. King	8	92	http://www.imdb.com/title/tt1487257/
+The Giant of Thunder Mountain	drama, family, western	1991	James Roberson	5.5	88	http://www.imdb.com/title/tt0101951/
+The Wild Country	adventure, western, family	1970	Robert Totten	6.1	100	http://www.imdb.com/title/tt0067985/
+Winchester 73	western	1967	Herschel Daugherty	6.2	97	http://www.imdb.com/title/tt0062496/
+The Texican	adventure, western	1966	Lesley Selander	5.9	91	http://www.imdb.com/title/tt0061081/
+Outlaws	western	1960		6.9	60	http://www.imdb.com/title/tt0053527/
+The Tracker	western	1988	John Guillermin	6.1	98	http://www.imdb.com/title/tt0096295/
+Everything That Rises	drama, western, adventure, family	1998	Dennis Quaid	6.7	95	http://www.imdb.com/title/tt0144907/
+Tales of the Frontier	western	2012		6	30	http://www.imdb.com/title/tt2315355/
+Ruby Jean and Joe	drama, western	1996	Geoffrey Sax	6.6	99	http://www.imdb.com/title/tt0117522/
+The Oregon Trail	western	1976		7.3	60	http://www.imdb.com/title/tt0075552/
+Young Maverick	western	1979	Don McDougall	6.1	60	http://www.imdb.com/title/tt0078715/
+Gold of the Seven Saints	adventure, western	1961	Gordon Douglas	6.2	88	http://www.imdb.com/title/tt0054934/
+Adiós gringo	western	1965	George Finley	5.6	100	http://www.imdb.com/title/tt0060067/
+The Ugly Ones	western	1967	Eugenio Martín	6.3	95	http://www.imdb.com/title/tt0060853/
+Find a Place to Die	action, romance, western	1968	A. Ascot	5.4	89	http://www.imdb.com/title/tt0063158/
+The Price of Power	western	1969	Tonino Valerii	6.2	108	http://www.imdb.com/title/tt0066105/
+Truce	drama, western	2005	Matthew Marconi	5.8		http://www.imdb.com/title/tt0395795/
+Macho Callahan	western	1970	Bernard Kowalski	4.8	99	http://www.imdb.com/title/tt0066033/
+The McMasters	western	1970	Alf Kjellin	5.8	90	http://www.imdb.com/title/tt0064649/
+The Honkers	western, action, comedy, drama	1972	Steve Ihnat	5.6	102	http://www.imdb.com/title/tt0068711/
+Molly and Lawless John	western	1972	Gary Nelson	5.5	98	http://www.imdb.com/title/tt0068962/
+The Gatling Gun	action, western, drama	1973	Robert Gordon	5	93	http://www.imdb.com/title/tt0070091/
+Santee	western	1973	Gary Nelson	5.8	93	http://www.imdb.com/title/tt0070630/
+Robbery Under Arms	action, adventure, crime, drama, history, western	1985	Donald Crombie, Ken Hannam	6.3	141	http://www.imdb.com/title/tt0089925/
+Sacred Ground	drama, western	1983	Charles B. Pierce	6.1	100	http://www.imdb.com/title/tt0086227/
+Draw!	comedy, western	1984	Steven Hilliard Stern	6.1	98	http://www.imdb.com/title/tt0087174/
+Apache Blood	western	1975	Tom Quillen	2.8	86	http://www.imdb.com/title/tt0072651/
+Gambler V: Playing for Keeps	western	1994	Jack Bender	6.3	91	http://www.imdb.com/title/tt0109868/
+The Shadow of Chikara	horror, western	1977	Earl E. Smith	5.2	114	http://www.imdb.com/title/tt0078240/
+Kenny Rogers as The Gambler, Part III: The Legend Continues	western	1987	Dick Lowry	5.2	240	http://www.imdb.com/title/tt0093339/
+The Outcasts	western	1968		6.9	60	http://www.imdb.com/title/tt0062596/
+Outlaws	crime, sci_fi, western, action	1986	Phil Bondelli, Don Chaffey	7.1	60	http://www.imdb.com/title/tt0090498/
+Gunfight in Abilene	western	1967	William Hale	5.6	86	http://www.imdb.com/title/tt0061738/
+Tonight for Sure	comedy, western	1962	Francis Ford Coppola	3.4	69	http://www.imdb.com/title/tt0153167/
+The Trail to Hope Rose	western	2004	David S. Cass Sr.	5.5	89	http://www.imdb.com/title/tt0402260/
+A Man Will Rise	action, adventure, comedy, western	2013	Tony Jaa, Vitidnan Rojanapanich			http://www.imdb.com/title/tt2836208/
+The Castaway Cowboy	family, comedy, western	1974	Vincent McEveety	5.8	91	http://www.imdb.com/title/tt0071288/
+Gunfight at Comanche Creek	western	1963	Frank McDonald	6.2	90	http://www.imdb.com/title/tt0058165/
+Land Raiders	action, western	1969	Nathan H. Juran	5.1	101	http://www.imdb.com/title/tt0065962/
+The Man Called Noon	western	1973	Peter Collinson	5.4	98	http://www.imdb.com/title/tt0068870/
+Shoot First and Pray You Live (Because Luck Has Nothing to Do with It)	action, adventure, western	2008	Lance Doty	4.2	110	http://www.imdb.com/title/tt0818226/
+Gunsmoke: To the Last Man	western	1992	Jerry Jameson	6.7	91	http://www.imdb.com/title/tt0104379/
+Ride Beyond Vengeance	western	1966	Bernard McEveety	6	101	http://www.imdb.com/title/tt0060899/
+Johnny Reno	western	1966	R.G. Springsteen	5.5	83	http://www.imdb.com/title/tt0060564/
+Deadlock	thriller, western	1970	Roland Klick	6.8	85	http://www.imdb.com/title/tt0065620/
+Border Shootout	western	1990	C.T. McIntyre	4.1	110	http://www.imdb.com/title/tt0097720/
+Indian Paint	western	1965	Norman Foster	5.1	91	http://www.imdb.com/title/tt0057182/
+Frontier Circus	drama, western	1961		7.1	60	http://www.imdb.com/title/tt0054540/
+Dead Man's Cards	western, thriller	2006	James Marquand	5.6	110	http://www.imdb.com/title/tt0455933/
+Bonanza: Under Attack	western	1995	Mark Tinker	6.2	89	http://www.imdb.com/title/tt0112554/
+Cain's Cutthroats	action, comedy, drama, western	1971	Kent Osborne	4.7	95	http://www.imdb.com/title/tt0066879/
+Return of Django	western	1967	Osvaldo Civirani	5.4	95	http://www.imdb.com/title/tt0061664/
+When the Legends Die	western, drama	1972	Stuart Millar	6.6	107	http://www.imdb.com/title/tt0069496/
+The Last of the Mohicans	adventure, drama, war, western	1971		6.8		http://www.imdb.com/title/tt0066678/
+Iron Horse	western	1966		7.2	60	http://www.imdb.com/title/tt0059996/
+Hell Bent for Leather	western	1960	George Sherman	6.4	82	http://www.imdb.com/title/tt0053899/
+Smith!	family, western, drama	1969	Michael O'Herlihy	6.3	112	http://www.imdb.com/title/tt0065003/
+Rio Diablo	western	1993	Rod Hardy	5.1	92	http://www.imdb.com/title/tt0107964/
+Jory	western	1973	Jorge Fons	5.3	97	http://www.imdb.com/title/tt0068773/
+Black Spurs	western	1965	R.G. Springsteen	5.4	81	http://www.imdb.com/title/tt0058976/
+Baker's Hawk	western	1976	Lyman D. Dayton	5.5	105	http://www.imdb.com/title/tt0074176/
+Injun	action, western	2013	Bob Cook		93	http://www.imdb.com/title/tt2831038/
+Inn of the Damned	horror, western, thriller	1975	Terry Bourke	4.8	118	http://www.imdb.com/title/tt0071661/
+Dirty Sally	western	1974	Irving J. Moore	6.6	30	http://www.imdb.com/title/tt0070983/
+Hard Ground	western	2003	Frank Q. Dobbs	5.8	93	http://www.imdb.com/title/tt0349529/
+Another Man, Another Chance	western	1977	Claude Lelouch	5.7	130	http://www.imdb.com/title/tt0076847/
+The Traveling Executioner	comedy, drama, western	1970	Jack Smight	6	95	http://www.imdb.com/title/tt0066485/
+The Over-the-Hill Gang Rides Again	comedy, western, family	1970	George McCowan	5.2	75	http://www.imdb.com/title/tt0066194/
+The Gun and the Pulpit	western	1974	Daniel Petrie	5.5	74	http://www.imdb.com/title/tt0071589/
+High Noon, Part II: The Return of Will Kane	drama, western	1980	Jerry Jameson	5	96	http://www.imdb.com/title/tt0080870/
+More Dead Than Alive	romance, western	1969	Robert Sparr	6.3	101	http://www.imdb.com/title/tt0064695/
+Ned Blessing: The True Story of My Life	western	1992	Peter Werner	5.9	97	http://www.imdb.com/title/tt0104977/
+The Bounty Killer	western	1965	Spencer G. Bennet	6.2	92	http://www.imdb.com/title/tt0058988/
+Red River	western	1988	Richard Michaels	6	96	http://www.imdb.com/title/tt0095965/
+Bonanza: The Return	western	1993	Jerry Jameson	5	93	http://www.imdb.com/title/tt0106460/
+Arizona Raiders	western	1965	William Witney	5.8	88	http://www.imdb.com/title/tt0058917/
+Paper Hearts	drama, romance, western	1993	Rod McCall	4.8	88	http://www.imdb.com/title/tt0107773/
+The Long Kill	western	1999	Bill Corcoran	5.5	96	http://www.imdb.com/title/tt0165905/
+Whispering Smith	western	1961		7.5	30	http://www.imdb.com/title/tt0054578/
+The Dakotas	western	1963		7.1	60	http://www.imdb.com/title/tt0056747/
+Black Fox: The Price of Peace	western	1995	Steven H. Stern	5.2	96	http://www.imdb.com/title/tt0112517/
+The Broken Land	western	1962	John Bushelman	4.9	70	http://www.imdb.com/title/tt0055811/
+Four Eyes and Six-Guns	comedy, western	1992	Piers Haggard	5.5	92	http://www.imdb.com/title/tt0104293/
+Buckaroo: The Movie	family, western	2005	James A. Brooks	4.3		http://www.imdb.com/title/tt0460729/
+Curio Shop	drama, fantasy, mystery, thriller, western	2013	Eric S. Anderson			http://www.imdb.com/title/tt2292626/
+Fievel's American Tails	animation, family, western, adventure	1992		6.6	30	http://www.imdb.com/title/tt0221172/
+The Singer Not the Song	drama, western	1961	Roy Baker	6.2	132	http://www.imdb.com/title/tt0054740/
+Seven Ways from Sundown	action, adventure, western	1960	Harry Keller	6.8	96	http://www.imdb.com/title/tt0054296/
+J.W. Coop	drama, western	1971	Cliff Robertson	6.4	112	http://www.imdb.com/title/tt0067258/
+The Intruders	western	1970	William Graham	5.7	100	http://www.imdb.com/title/tt0065896/
+The Hanged Man	western	1974	Michael Caffey	5.6	73	http://www.imdb.com/title/tt0071593/
+Arizona Bushwhackers	western	1968	Lesley Selander	4.8	87	http://www.imdb.com/title/tt0062676/
+The Female Bunch	action, crime, drama, western	1971	Al Adamson	3.4	86	http://www.imdb.com/title/tt0064321/
+Black Fox: Good Men and Bad	western	1995	Steven H. Stern	5.4	90	http://www.imdb.com/title/tt0112516/
+Swine	action, sci_fi, war, western	2012	Daniel Levitch	4.6	90	http://www.imdb.com/title/tt1548021/
+Bad Jim	western	1990	Clyde Ware	4.2	90	http://www.imdb.com/title/tt0099092/
+Yellow Hair and the Fortress of Gold	adventure, western	1984	Matt Cimber	4.1	102	http://www.imdb.com/title/tt0088427/
+Waco	action, romance, western	1966	R.G. Springsteen	5.8	85	http://www.imdb.com/title/tt0061169/
+Prototype	action, fantasy, sci_fi, thriller, western	2009	Michael Reilly	4.6		http://www.imdb.com/title/tt1510929/
+Rango	comedy, western	1967		6.6	30	http://www.imdb.com/title/tt0061288/
+Kid Blue	comedy, western	1973	James Frawley	5.8	100	http://www.imdb.com/title/tt0070267/
+Gunsmoke: The Long Ride	western	1993	Jerry Jameson	6.7	94	http://www.imdb.com/title/tt0107062/
+The Gunfighters	western	1987	Clay Borris	5	96	http://www.imdb.com/title/tt0093129/
+A Talent for Loving	comedy, western	1969	Richard Quine	4.5	110	http://www.imdb.com/title/tt0065065/
+Lady Godiva Rides	comedy, western	1969	A.C. Stephen	3.6	104	http://www.imdb.com/title/tt0125332/
+The Animals	western	1970	Ron Joy	2.9	86	http://www.imdb.com/title/tt0065407/
+Dances with Werewolves	action, horror, western	2013				http://www.imdb.com/title/tt1688639/
+Wyatt Earp: Return to Tombstone	western	1994	Paul Landres, Frank McDonald	5.5	100	http://www.imdb.com/title/tt0111757/
+The Tramplers	western	1965	Albert Band, Anthony Wileys	5.5	105	http://www.imdb.com/title/tt0061144/
+Comin' at Ya!	western	1981	Ferdinando Baldi	3.9	91	http://www.imdb.com/title/tt0082193/
+Backtrack!	drama, western, romance	1969	Earl Bellamy	5.7	95	http://www.imdb.com/title/tt0064059/
+Stagecoach West	western	1960		7.7	60	http://www.imdb.com/title/tt0053537/
+Bonanza: The Next Generation	western	1988	William F. Claxton	5.4	93	http://www.imdb.com/title/tt0094778/
+Dead Aim	drama, fantasy, thriller, western	1975	José Antonio Balanos	4.7	97	http://www.imdb.com/title/tt0269492/
+Dream West	biography, drama, western	1986	Dick Lowry	6.6		http://www.imdb.com/title/tt0090422/
+The New Maverick	western	1978	Hy Averback	5.7	100	http://www.imdb.com/title/tt0077985/
+Fistful of Brains	horror, western	2008	Christine Parker	2.7		http://www.imdb.com/title/tt1204898/
+The Wide Country	drama, sport, western	1962		7.3	60	http://www.imdb.com/title/tt0055713/
+The Ghosts of Edendale	horror, western, thriller	2003	Stefan Avalos	4	90	http://www.imdb.com/title/tt0301184/
+Into the Badlands	horror, western	1991	Sam Pillsbury	5.2	89	http://www.imdb.com/title/tt0102125/
+Taggart	western	1964	R.G. Springsteen	5.8	85	http://www.imdb.com/title/tt0058633/
+The Cisco Kid	comedy, western	1994	Luis Valdez	5.7	91	http://www.imdb.com/title/tt0109437/
+Five Bloody Graves	western	1970	Al Adamson	1.6	88	http://www.imdb.com/title/tt0065723/
+Black Bart	comedy, western	1975	Robert Butler	3.7	25	http://www.imdb.com/title/tt0121113/
+Kenny Rogers as The Gambler: The Adventure Continues	western	1983	Dick Lowry	6	195	http://www.imdb.com/title/tt0085782/
+Custer	western	1967		6.8	60	http://www.imdb.com/title/tt0061244/
+Apache Uprising	western	1965	R.G. Springsteen	5.1	90	http://www.imdb.com/title/tt0060117/
+Secret of Giving	drama, western	1999	Sam Pillsbury	6.3	96	http://www.imdb.com/title/tt0215167/
+The Desperados	western	1969	Henry Levin	4.4	91	http://www.imdb.com/title/tt0064227/
+Desperado: The Outlaw Wars	western	1989	E.W. Swackhamer	6.2	120	http://www.imdb.com/title/tt0097190/
+A Time for Dying	western	1969	Budd Boetticher	6.5	67	http://www.imdb.com/title/tt0058660/
+Mad at the Moon	horror, western	1992	Martin Donovan	5.9	98	http://www.imdb.com/title/tt0104787/
+Mail Order Bride	comedy, western	1964	Burt Kennedy	5.9	83	http://www.imdb.com/title/tt0058318/
+Guns of the Timberland	western	1960	Robert D. Webb	5.4	91	http://www.imdb.com/title/tt0053884/
+Mr. Horn	western	1979	Jack Starrett	6.5	180	http://www.imdb.com/title/tt0079582/
+Overland Trail	western, adventure, action	1960		6.7	60	http://www.imdb.com/title/tt0053528/
+Space Rage	sci_fi, western	1985	Conrad E. Palmisano	3.5	77	http://www.imdb.com/title/tt0090054/
+Alien Thunder	western	1974	Claude Fournier	4.2	93	http://www.imdb.com/title/tt0069688/
+The Rose and the Jackal	adventure, western	1990	Jack Gold	5.6	100	http://www.imdb.com/title/tt0098831/
+Geronimo	biography, western	1993	Roger Young	6	100	http://www.imdb.com/title/tt0107003/
+Vengeance	western	1968	Anthony M. Dawson	6.1	81	http://www.imdb.com/title/tt0063159/
+A Man Called Gannon	western	1968	James Goldstone	4.9	105	http://www.imdb.com/title/tt0064629/
+The Second Time Around	family, western	1961	Vincent Sherman	6.2	99	http://www.imdb.com/title/tt0055421/
+The Englishman's Boy	drama, western	2008	John N. Smith	6.7		http://www.imdb.com/title/tt0871134/
+Pony Express Rider	western	1976	Robert Totten	5.3	100	http://www.imdb.com/title/tt0075087/
+Destry	western	1964		7.4	60	http://www.imdb.com/title/tt0057743/
+Jonathan degli orsi	action, western	1994	Enzo G. Castellari	6.3	88	http://www.imdb.com/title/tt0110207/
+The Gunslinger Grifter Logan	adventure, fantasy, sci_fi, western	2012	Stephen Rubac		73	http://www.imdb.com/title/tt1357413/
+Renegade	drama, family, romance, western	2011	Michael Dohrmann	5.8	115	http://www.imdb.com/title/tt1631365/
+Shaughnessy	western	1996	Michael Rhodes	5.7	95	http://www.imdb.com/title/tt0117625/
+Elfego Baca: Six Gun Law	western	1966	Christian Nyby	6.9		http://www.imdb.com/title/tt0055951/
+The Chisholms	western	1979		6.8	60	http://www.imdb.com/title/tt0078585/
+Walk Like a Dragon	western	1960	James Clavell	5.9	95	http://www.imdb.com/title/tt0054457/
+The Plunderers	western	1960	Joseph Pevney	6.2	94	http://www.imdb.com/title/tt0054190/
+Ten Who Dared	family, western	1960	William Beaudine	5.2	92	http://www.imdb.com/title/tt0054372/
+The Scavengers	drama, western, war	1969	R.L. Frost	4.9	94	http://www.imdb.com/title/tt0067714/
+The Brothers O'Toole	western, comedy	1973	Richard Erdman	4.2	95	http://www.imdb.com/title/tt0069825/
+The Devil's Mistress	western, horror	1966	Orville Wanzer	3.5	66	http://www.imdb.com/title/tt0126865/
+Calamity Jane	biography, western	1984	James Goldstone	6.7	100	http://www.imdb.com/title/tt0087021/
+Wildside	western	1985	Tom Greene	7	60	http://www.imdb.com/title/tt0088642/
+The Lone Ranger	animation, family, western	1966	Art Babbitt, Cam Ford	7	30	http://www.imdb.com/title/tt0060002/
+Across Five Aprils	drama, history, war, western	1990	Kevin Meyer	6		http://www.imdb.com/title/tt0099275/
+Temple Houston	western	1963		7.3	60	http://www.imdb.com/title/tt0056788/
+Legend of the Phantom Rider	action, western, fantasy, horror	2002	Alex Erkiletian	5.3	100	http://www.imdb.com/title/tt0210223/
+Cattle King	western	1963	Tay Garnett	5.5	88	http://www.imdb.com/title/tt0056914/
+Welcome to Blood City	sci_fi, western	1977	Peter Sasdy	5	96	http://www.imdb.com/title/tt0076909/
+Town Tamer	action, romance, western	1965	Lesley Selander	5.7	89	http://www.imdb.com/title/tt0059824/
+The Wild West	biography, drama, war, western	2006		6.6	180	http://www.imdb.com/title/tt0968732/
+Mackintosh and T.J.	drama, western	1975	Marvin J. Chomsky	6.3	96	http://www.imdb.com/title/tt0073328/
+The Soul of Nigger Charley	western	1973	Larry G. Spangler	4.8	109	http://www.imdb.com/title/tt0070721/
+Shane	drama, western	1966		6.5	60	http://www.imdb.com/title/tt0060024/
+The Daughters of Joshua Cabe	western	1972	Philip Leacock	5.9	73	http://www.imdb.com/title/tt0068447/
+Blood River	drama, western	1991	Mel Damski	5.2	92	http://www.imdb.com/title/tt0101476/
+The Battle for Bunker Hill	drama, western	2008	Kevin Willmott	6.1		http://www.imdb.com/title/tt0841012/
+Journey to the West	action, sport, war, western	2011	Brendon Culliton, Joe Hatoum			http://www.imdb.com/title/tt2477866/
+Shroud	action, drama, horror, mystery, thriller, western	2009	David Jetre	2.7	90	http://www.imdb.com/title/tt0963948/
+The Capture of Grizzly Adams	adventure, family, western	1982	Don Keeslar	6.6	93	http://www.imdb.com/title/tt0083718/
+Hawken's Breed	action, drama, romance, western	1987	Charles B. Pierce	1.8	89	http://www.imdb.com/title/tt0093158/
+Desert Kickboxer	action, drama, western	1992	Isaac Florentine	3.2	86	http://www.imdb.com/title/tt0104087/
+Dead Man's Revenge	western	1994	Alan J. Levi	4.9	100	http://www.imdb.com/title/tt0109568/
+The Legend of Jesse James	western	1965	Richard A. Colla	7.1	30	http://www.imdb.com/title/tt0058820/
+Fort Utah	western	1967	Lesley Selander	5.2	84	http://www.imdb.com/title/tt0062989/
+Six Reasons Why	sci_fi, western	2008	Jeff Campagna, Matthew Campagna	2.2	88	http://www.imdb.com/title/tt1202044/
+The Man from Button Willow	animation, adventure, family, western	1965	David Detiege	5.3	81	http://www.imdb.com/title/tt0059422/
+Go Go Gophers	animation, comedy, family, western	1968		6.5	30	http://www.imdb.com/title/tt0062566/
+Africa: Texas Style	adventure, western	1967	Andrew Marton	5.3	109	http://www.imdb.com/title/tt0061334/
+The Quest	western	1976	Lee H. Katzin	5.8	93	http://www.imdb.com/title/tt0075117/
+Dual	drama, western	2008	Steven R. Monroe	2.2		http://www.imdb.com/title/tt0482497/
+The Raiders	action, drama, western	1963	Herschel Daugherty	5.6	75	http://www.imdb.com/title/tt0057446/
+Trigger Fast	western	1994	David Lister	2.1	96	http://www.imdb.com/title/tt0111492/
+Convict Cowboy	action, drama, western	1995	Rod Holcomb	5.8	98	http://www.imdb.com/title/tt0112719/
+The Attic Door	drama, family, thriller, western	2009	Danny Daneau	5.7	85	http://www.imdb.com/title/tt1098358/
+The Trackers	western	1971	Earl Bellamy	5.9	73	http://www.imdb.com/title/tt0067872/
+Ride to Hangman's Tree	western	1967	Alan Rafkin	5.1	90	http://www.imdb.com/title/tt0062198/
+Smoky	western	1966	George Sherman	6.3	103	http://www.imdb.com/title/tt0060994/
+Mexican Gold	western	2009	Chuck Walker	3.2		http://www.imdb.com/title/tt0830593/
+Hope Ranch	family, western	2002	Rex Piano	5.7	100	http://www.imdb.com/title/tt0327888/
+Desperado: Avalanche at Devil's Ridge	western	1988	Richard Compton	5.2	100	http://www.imdb.com/title/tt0095004/
+The Road West	western	1966		7.7	60	http://www.imdb.com/title/tt0060020/
+Shoot the Sun Down	western	1978	David Leeds	3.2		http://www.imdb.com/title/tt0083070/
+One Foot in Hell	western	1960	James B. Clark	6.2	90	http://www.imdb.com/title/tt0054142/
+West of Thunder	drama, mystery, western	2012	Jody Marriott Bar-Lev, Steve Russell	2.5		http://www.imdb.com/title/tt2378585/
+Lock, Stock and Barrel	western	1971	Jerry Thorpe	5.9	90	http://www.imdb.com/title/tt0065993/
+Warden of Red Rock	western	2001	Stephen Gyllenhaal	5.8	89	http://www.imdb.com/title/tt0220847/
+The Legend of God's Gun	western	2007	Mike Bruce	3.5	78	http://www.imdb.com/title/tt1073221/
+Scandalous John	comedy, drama, family, romance, western	1971	Robert Butler	5.8	113	http://www.imdb.com/title/tt0067712/
+Empire	western, drama	1962		7.2	60	http://www.imdb.com/title/tt0055663/
+The Westerner	action, western	1960		7.7	30	http://www.imdb.com/title/tt0053551/
+Four Rode Out	western	1970	John Peyser	4.6	99	http://www.imdb.com/title/tt0064343/
+Young Fury	western	1965	Christian Nyby	6.3	80	http://www.imdb.com/title/tt0059932/
+Poker Alice	romance, western	1987	Arthur Allan Seidelman	5.8	92	http://www.imdb.com/title/tt0093755/
+Kill Zone	action, adventure, crime, drama, western	2008	Vitor Santos	4.9	110	http://www.imdb.com/title/tt0972878/
+Hell's Fury: Wanted Dead or Alive	western	2009	Alan Chan	2.9	90	http://www.imdb.com/title/tt1498567/
+Whiplash	western	1960	Peter Maxwell, John Meredyth Lucas	7.3	30	http://www.imdb.com/title/tt0054577/
+The Winds of Autumn	western	1976	Charles B. Pierce	5.7	100	http://www.imdb.com/title/tt0075431/
+Charley-One-Eye	western	1973	Don Chaffey	6.1	96	http://www.imdb.com/title/tt0068358/
+Peter Lundy and the Medicine Hat Stallion	western	1977	Michael O'Herlihy	6	85	http://www.imdb.com/title/tt0076539/
+The Cowboys	western	1974		5.4	30	http://www.imdb.com/title/tt0070978/
+Louis L'Amour's Down the Long Hills	western	1986	Burt Kennedy	6.9		http://www.imdb.com/title/tt0091436/
+The Savage Guns	romance, western	1962	Michael Carreras	4.7	83	http://www.imdb.com/title/tt0056448/
+The Plot to Kill: Jesse James	drama, history, western	2006	Mike Loades	6.6	45	http://www.imdb.com/title/tt0892424/
+Wild Times	western	1980		6.7	195	http://www.imdb.com/title/tt0081755/
+Luke and the Tenderfoot	western	1965	Herman Hoffman, Montgomery Pittman	6.2	30	http://www.imdb.com/title/tt0450028/
+Drifters	animation, drama, thriller, western	2012	Ethan Clarke		9	http://www.imdb.com/title/tt2257744/
+El magnifico extranjero	western	1967	Justus Addis, Herschel Daugherty	6.8	93	http://www.imdb.com/title/tt0368852/
+The Canadians	western	1961	Burt Kennedy	5.1	85	http://www.imdb.com/title/tt0054715/
+Shadows of the Past	drama, western	2009	Warren Ryan	2.8	104	http://www.imdb.com/title/tt1344659/
+Deadwood '76	western	1965	James Landis	3.8	97	http://www.imdb.com/title/tt0059093/
+Gunfight at Black Horse Canyon	western	1961	R.G. Springsteen	4.9	100	http://www.imdb.com/title/tt0054952/
+Desolation Canyon	western	2006	David S. Cass Sr.	5.5		http://www.imdb.com/title/tt0463959/
+One-Eyed Horse	drama, western	2008	Wayne Shipley	3.1	137	http://www.imdb.com/title/tt1043696/
+The Desperate Mission	action, adventure, drama, western	1969	Earl Bellamy	6.6	96	http://www.imdb.com/title/tt0066987/
+The Legend of Walks Far Woman	western, drama	1982	Mel Damski	5.6	111	http://www.imdb.com/title/tt0084239/
+Black Noon	horror, western	1971	Bernard L. Kowalski	5.7	74	http://www.imdb.com/title/tt0066836/
+The Decoy	western	2006	Justin Kreinbrink	4.4	109	http://www.imdb.com/title/tt0490878/
+Stanley's Dinosaur Round-Up	animation, family, western	2006	Jeff Buckland	7.3	71	http://www.imdb.com/title/tt0493306/
+Showdown	drama, romance, western	1963	R.G. Springsteen	6.2	79	http://www.imdb.com/title/tt0057497/
+The Academy	action, drama, western	2010	Kenneth Barr	4.8	91	http://www.imdb.com/title/tt1612069/
+The Return of Josey Wales	western	1986	Michael Parks	4.2	90	http://www.imdb.com/title/tt0331327/
+The Red Badge of Courage	drama, war, western	1974	Lee Philips	6.4	74	http://www.imdb.com/title/tt0072069/
+Riders in the Storm	western	1995	Charles Biggs	7.3		http://www.imdb.com/title/tt0114283/
+Lyddie	drama, history, romance, western	1996	Stefan Scaini	5.3		http://www.imdb.com/title/tt0116945/
+Un minuto per pregare, un instante per morire	action, crime, drama, thriller, western	1968	Franco Giraldi	6.3	118	http://www.imdb.com/title/tt0063308/
+King of the Grizzlies	western, family	1970	Ron Kelly	6.1	93	http://www.imdb.com/title/tt0065943/
+Justin Morgan Had a Horse	family, drama, western	1972	Hollingsworth Morse	6.6	91	http://www.imdb.com/title/tt0068789/
+Savage Journey	drama, history, western	1983	Tom McGowan	3.1	96	http://www.imdb.com/title/tt0464185/
+Six Gun	comedy, western	2008	Scott Perry	3.3	91	http://www.imdb.com/title/tt1188484/
+Lakota Moon	western	1992	Christopher Cain	5.4	85	http://www.imdb.com/title/tt0104674/
+Daniel Boone: Frontier Trail Rider	western	1966	George Sherman	6.1	91	http://www.imdb.com/title/tt0911019/
+Vampire Junction	horror, western	2001	Jess Franco	2.3	94	http://www.imdb.com/title/tt0274189/
+An Eye for an Eye	western	1966	Michael Moore	5.9	106	http://www.imdb.com/title/tt0060386/
+Billy the Kid and the Green Baize Vampire	comedy, horror, musical, sport, western	1987	Alan Clarke	5.4	121	http://www.imdb.com/title/tt0088807/
+Cheyenne	western	1996	Dimitri Logothetis	4.8		http://www.imdb.com/title/tt0219588/
+Hostile Guns	western	1967	R.G. Springsteen	4.8	91	http://www.imdb.com/title/tt0061783/
+Brotherhood of the Gun	comedy, western	1991	Vern Gillum	5.4	88	http://www.imdb.com/title/tt0101512/
+Desperado: Badlands Justice	western	1989	E.W. Swackhamer	6.3	100	http://www.imdb.com/title/tt0097189/
+This Savage Land	western	1969	Vincent McEveety	5.5	97	http://www.imdb.com/title/tt0065092/
+The Pavilion	drama, western	2004	C. Grant Mitchell	5.8	94	http://www.imdb.com/title/tt0183639/
+Stranger on the Run	drama, thriller, western	1967	Don Siegel	6.6	97	http://www.imdb.com/title/tt0062309/
+The Wild Westerners	western	1962	Oscar Rudolph	5.2	107	http://www.imdb.com/title/tt0056695/
+Renegade Riders	western	1967	E.G. Rowland	5.2	98	http://www.imdb.com/title/tt0063587/
+Cry for Me, Billy	crime, western, drama, romance	1972	William A. Graham	5.4	93	http://www.imdb.com/title/tt0068429/
+Joe Panther	drama	1976	Paul Krasny	5.4	110	http://www.imdb.com/title/tt0074716/
+Promise the Moon	adventure, drama, western	1997	Ken Jubenvill	5.7	97	http://www.imdb.com/title/tt0127742/
+Uninvited	horror, western	1993	Michael Derek Bohusz	4.2	90	http://www.imdb.com/title/tt0108445/
+The Reward	drama, western	1965	Serge Bourguignon	4.2	92	http://www.imdb.com/title/tt0059651/
+The Forsaken	drama, western	2013	Justin Kreinbrink			http://www.imdb.com/title/tt2077877/
+The Preacher and the Gun	western	2013	Ransom Scott Hester		78	http://www.imdb.com/title/tt2821318/
+Bubblegum & Broken Fingers	crime, drama, western	2011	Sean Jackson	6.8	110	http://www.imdb.com/title/tt1821355/
+Stageghost	horror, thriller, western	2000	Stephen Furst	4.2	104	http://www.imdb.com/title/tt0251412/
+Ballad of a Gunfighter	western	1964	Bill Ward	5.1	84	http://www.imdb.com/title/tt0057868/
+The True Story of Eskimo Nell	comedy, western	1975	Richard Franklin	4	103	http://www.imdb.com/title/tt0131078/
+Montana	western	1990	William A. Graham	5.3	100	http://www.imdb.com/title/tt0100180/
+The Double-Barrelled Detective Story	comedy, western	1965	Adolfas Mekas	5.1	90	http://www.imdb.com/title/tt0189485/
+Campa carogna... la taglia cresce	western	1973	Giuseppe Rosati	5.2	83	http://www.imdb.com/title/tt0069837/
+Where the Hell's That Gold?!!?	western	1988	Burt Kennedy	5.3	91	http://www.imdb.com/title/tt0096434/
+Blood Loss	crime, drama, western	2008	Isaac Pingree	2.6	90	http://www.imdb.com/title/tt0831277/
+Río de oro	western	2010	Pablo Aldrete	6.5		http://www.imdb.com/title/tt0840789/
+Ride or Die	action, western	2005	Chris W. Hill	1.7		http://www.imdb.com/title/tt0468538/
+The Plainsman	western	1966	David Lowell Rich	4.9	92	http://www.imdb.com/title/tt0060842/
+13 Fighting Men	western	1960	Harry W. Gerstad	5	69	http://www.imdb.com/title/tt0053558/
+Tate	western	1960		7.6	30	http://www.imdb.com/title/tt0053545/
+Song of the Loon	drama, romance, western	1970	Andrew Herbert	6	79	http://www.imdb.com/title/tt0258191/
+She Came to the Valley	western	1979	Albert Band	4.6	92	http://www.imdb.com/title/tt0076697/
+Alien Outlaw	sci_fi, western	1985	Phil Smoot	5.4	90	http://www.imdb.com/title/tt0190229/
+The Young Country	western	1970	Roy Huggins	5.5	74	http://www.imdb.com/title/tt0066595/
+Gunslinger	western	1961		7.6	60	http://www.imdb.com/title/tt0054543/
+Cooper	drama, western	2012	Matthew Smaglik	2.1		http://www.imdb.com/title/tt2123169/
+Samurai Cowboy	western	1994	Michael Keusch	5.4	96	http://www.imdb.com/title/tt0108035/
+Three Guns for Texas	western	1968	Earl Bellamy, David Lowell Rich	6.1	99	http://www.imdb.com/title/tt0063691/
+The Young Pioneers	western	1978	Irving J. Moore	7.7	60	http://www.imdb.com/title/tt0128014/
+Menace on the Mountain	family, history, war, western	1970	Vincent McEveety	6	81	http://www.imdb.com/title/tt0066068/
+Mrs. Sundance	western	1974	Marvin Chomsky	5.9	75	http://www.imdb.com/title/tt0071868/
+The Legend of Earl Durand	western	1974	John D. Patterson	5.8	110	http://www.imdb.com/title/tt0071745/
+The Bounty Man	western	1972	John Llewellyn Moxey	6	73	http://www.imdb.com/title/tt0068308/
+The Wackiest Wagon Train in the West	western, comedy	1976	Jack Arnold, Earl Bellamy	2.7	86	http://www.imdb.com/title/tt0295018/
+Here We Go Again, Eh Providence?	western, adventure, comedy	1973	Alberto De Martino	5.7	99	http://www.imdb.com/title/tt0069826/
+Scape	action, adventure, mystery, western	2010	Taegen Carter	4.6	80	http://www.imdb.com/title/tt1665762/
+The Hellions	adventure, drama, western	1961	Irving Allen, Ken Annakin	6.4	80	http://www.imdb.com/title/tt0054968/
+Banjo Hackett: Roamin' Free	western	1976	Andrew V. McLaglen	5.7	100	http://www.imdb.com/title/tt0074181/
+Hex	drama, horror, western	1973	Leo Garen	4.2	92	http://www.imdb.com/title/tt0070174/
+Birth of a Legend: Billy the Kid & The Lincoln County War	western	2011	Andrew A Wilkinson			http://www.imdb.com/title/tt1847552/
+Outlaws: The Legend of O.B. Taggart	western	1994	Rupert Hitzig	7.6	98	http://www.imdb.com/title/tt0113630/
+Buckskin	western	1968	Michael Moore	4.8	97	http://www.imdb.com/title/tt0062764/
+Trash and Progress	drama, sci_fi, western	2012	Abraham Dieckman		94	http://www.imdb.com/title/tt2150534/
+Ebenezer	drama, fantasy, western, family	1998	Ken Jubenvill	5.3	89	http://www.imdb.com/title/tt0133727/
+Sugar Creek	western	2007	James Cotten	3.6	95	http://www.imdb.com/title/tt0811091/
+The Best Bar in America	adventure, western	2009	Damon Ristau, Eric W. Ristau			http://www.imdb.com/title/tt1388390/
+Louisiana	drama, history, romance, war, western	1984	Philippe de Broca	5.2	186	http://www.imdb.com/title/tt0087641/
+A Mother's Gift	western	1995	Jerry London	6.4	90	http://www.imdb.com/title/tt0113859/
+Dead Man's Gun	western	1997	Neill Fearnley, Joseph L. Scanlan	6.3	130	http://www.imdb.com/title/tt0118940/
+Blood on the Arrow	western	1964	Sidney Salkow	4.7	91	http://www.imdb.com/title/tt0057891/
+Gunfighters of Casa Grande	western	1964	Roy Rowland	4.3	90	http://www.imdb.com/title/tt0057122/
+The Secret of Navajo Cave	adventure, western, family	1976	James T. Flocker	6.5	87	http://www.imdb.com/title/tt0075180/
+The NBC Tuesday Mystery Movie	crime, drama, mystery, western	1971		7.2	120	http://www.imdb.com/title/tt0165051/
+Green River Road	action, drama, western	2012	Louie Iaccarino	3	114	http://www.imdb.com/title/tt2233492/

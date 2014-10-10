@@ -1,0 +1,1003 @@
+Title	Year	Directors	IMDb Rating	Runtime (mins)	URL
+42	2013	Brian Helgeland	7.6	128	http://www.imdb.com/title/tt0453562/
+Warrior	2011	Gavin O'Connor	8.2	140	http://www.imdb.com/title/tt1291584/
+Remember the Titans	2000	Boaz Yakin	7.6	113	http://www.imdb.com/title/tt0210945/
+Dodgeball: A True Underdog Story	2004	Rawson Marshall Thurber	6.6	92	http://www.imdb.com/title/tt0364725/
+Cars	2006	John Lasseter, Joe Ranft	7.3	117	http://www.imdb.com/title/tt0317219/
+Talladega Nights: The Ballad of Ricky Bobby	2006	Adam McKay	6.4	108	http://www.imdb.com/title/tt0415306/
+The Blind Side	2009	John Lee Hancock	7.6	129	http://www.imdb.com/title/tt0878804/
+Moneyball	2011	Bennett Miller	7.6	133	http://www.imdb.com/title/tt1210166/
+Real Steel	2011	Shawn Levy	7.1	127	http://www.imdb.com/title/tt0433035/
+Chasing Mavericks	2012	Michael Apted, Curtis Hanson	6.8	116	http://www.imdb.com/title/tt1629757/
+Rush	2013	Ron Howard		123	http://www.imdb.com/title/tt1979320/
+The Sandlot	1993	David Mickey Evans	7.6	101	http://www.imdb.com/title/tt0108037/
+Million Dollar Baby	2004	Clint Eastwood	8.1	132	http://www.imdb.com/title/tt0405159/
+The Fighter	2010	David O. Russell	7.9	116	http://www.imdb.com/title/tt0964517/
+The Karate Kid	2010	Harald Zwart	6.2	140	http://www.imdb.com/title/tt1155076/
+Trouble with the Curve	2012	Robert Lorenz	6.7	111	http://www.imdb.com/title/tt2083383/
+Rocky	1976	John G. Avildsen	8.1	119	http://www.imdb.com/title/tt0075148/
+The Karate Kid	1984	John G. Avildsen	7.1	126	http://www.imdb.com/title/tt0087538/
+Never Back Down	2008	Jeff Wadlow	6.4	110	http://www.imdb.com/title/tt1023111/
+Goon	2011	Michael Dowse	6.8	92	http://www.imdb.com/title/tt1456635/
+A League of Their Own	1992	Penny Marshall	7	128	http://www.imdb.com/title/tt0104694/
+The Longest Yard	2005	Peter Segal	6.2	113	http://www.imdb.com/title/tt0398165/
+Invictus	2009	Clint Eastwood	7.3	134	http://www.imdb.com/title/tt1057500/
+Soul Surfer	2011	Sean McNamara	6.9	106	http://www.imdb.com/title/tt1596346/
+Green Street Hooligans	2005	Lexi Alexander	7.5	109	http://www.imdb.com/title/tt0385002/
+Caddyshack	1980	Harold Ramis	7.2	98	http://www.imdb.com/title/tt0080487/
+The Natural	1984	Barry Levinson	7.4	134	http://www.imdb.com/title/tt0087781/
+Field of Dreams	1989	Phil Alden Robinson	7.5	107	http://www.imdb.com/title/tt0097351/
+Space Jam	1996	Joe Pytka	5.9	88	http://www.imdb.com/title/tt0117705/
+Bring It On	2000	Peyton Reed	5.8	98	http://www.imdb.com/title/tt0204946/
+Friday Night Lights	2004	Peter Berg	7.1	118	http://www.imdb.com/title/tt0390022/
+Cinderella Man	2005	Ron Howard	7.9	144	http://www.imdb.com/title/tt0352248/
+Coach Carter	2005	Thomas Carter	7.1	136	http://www.imdb.com/title/tt0393162/
+Raging Bull	1980	Martin Scorsese	8.3	129	http://www.imdb.com/title/tt0081398/
+Rocky IV	1985	Sylvester Stallone	6.4	91	http://www.imdb.com/title/tt0089927/
+Days of Thunder	1990	Tony Scott	5.7	107	http://www.imdb.com/title/tt0099371/
+Kingpin	1996	Bobby Farrelly, Peter Farrelly	6.8	113	http://www.imdb.com/title/tt0116778/
+The Waterboy	1998	Frank Coraci	5.9	90	http://www.imdb.com/title/tt0120484/
+Any Given Sunday	1999	Oliver Stone	6.7	150	http://www.imdb.com/title/tt0146838/
+The Greatest Game Ever Played	2005	Bill Paxton	7.3	120	http://www.imdb.com/title/tt0388980/
+Rocky Balboa	2006	Sylvester Stallone	7.2	102	http://www.imdb.com/title/tt0479143/
+Blades of Glory	2007	Josh Gordon, Will Speck	6.3	93	http://www.imdb.com/title/tt0445934/
+Surf's Up	2007	Ash Brannon, Chris Buck	6.8	85	http://www.imdb.com/title/tt0423294/
+The Bad News Bears	1976	Michael Ritchie	7.1	102	http://www.imdb.com/title/tt0074174/
+Rocky III	1982	Sylvester Stallone	6.4	99	http://www.imdb.com/title/tt0084602/
+Major League	1989	David Ward	7	107	http://www.imdb.com/title/tt0097815/
+The Mighty Ducks	1992	Stephen Herek	6.1	100	http://www.imdb.com/title/tt0104868/
+White Men Can't Jump	1992	Ron Shelton	6.5	115	http://www.imdb.com/title/tt0105812/
+Rookie of the Year	1993	Daniel Stern	5.6	103	http://www.imdb.com/title/tt0107985/
+The Hurricane	1999	Norman Jewison	7.4	146	http://www.imdb.com/title/tt0174856/
+Varsity Blues	1999	Brian Robbins	6.2	106	http://www.imdb.com/title/tt0139699/
+The Legend of Bagger Vance	2000	Robert Redford	6.5	126	http://www.imdb.com/title/tt0146984/
+Ali	2001	Michael Mann	6.7	157	http://www.imdb.com/title/tt0248667/
+Miracle	2004	Gavin O'Connor	7.4	135	http://www.imdb.com/title/tt0349825/
+Lords of Dogtown	2005	Catherine Hardwicke	6.9	107	http://www.imdb.com/title/tt0355702/
+Invincible	2006	Ericson Core	7	105	http://www.imdb.com/title/tt0445990/
+The Game Plan	2007	Andy Fickman	6.1	110	http://www.imdb.com/title/tt0492956/
+Semi-Pro	2008	Kent Alterman	5.7	91	http://www.imdb.com/title/tt0839980/
+Speed Racer	2008	The Wachowski Brothers, The Wachowski Brothers	6	135	http://www.imdb.com/title/tt0811080/
+Whip It	2009	Drew Barrymore	6.9	111	http://www.imdb.com/title/tt1172233/
+Win Win	2011	Thomas McCarthy	7.2	106	http://www.imdb.com/title/tt1606392/
+The Basketball Diaries	1995	Scott Kalvert	7.1	102	http://www.imdb.com/title/tt0112461/
+Rocky II	1979	Sylvester Stallone	6.9	119	http://www.imdb.com/title/tt0079817/
+The Benchwarmers	2006	Dennis Dugan	5.4	80	http://www.imdb.com/title/tt0437863/
+Glory Road	2006	James Gartner	7	118	http://www.imdb.com/title/tt0385726/
+Nacho Libre	2006	Jared Hess	5.6	92	http://www.imdb.com/title/tt0457510/
+We Are Marshall	2006	McG	7	131	http://www.imdb.com/title/tt0758794/
+Balls of Fury	2007	Robert Ben Garant	5.2	90	http://www.imdb.com/title/tt0424823/
+The Express	2008	Gary Fleder	7.1	130	http://www.imdb.com/title/tt0469903/
+Secretariat	2010	Randall Wallace	7.1	123	http://www.imdb.com/title/tt1028576/
+Over the Top	1987	Menahem Golan	5.2	93	http://www.imdb.com/title/tt0093692/
+Rocky V	1990	John G. Avildsen	4.8	104	http://www.imdb.com/title/tt0100507/
+Cool Runnings	1993	Jon Turteltaub	6.7	98	http://www.imdb.com/title/tt0106611/
+Rudy	1993	David Anspaugh	7.4	114	http://www.imdb.com/title/tt0108002/
+The Replacements	2000	Howard Deutch	6.3	118	http://www.imdb.com/title/tt0191397/
+Bad News Bears	2005	Richard Linklater	5.8	113	http://www.imdb.com/title/tt0408524/
+Gridiron Gang	2006	Phil Joanou	6.8	125	http://www.imdb.com/title/tt0421206/
+Stick It	2006	Jessica Bendinger	6.1	103	http://www.imdb.com/title/tt0430634/
+Run, Fatboy, Run	2007	David Schwimmer	6.6	100	http://www.imdb.com/title/tt0425413/
+Fighting	2009	Dito Montiel	5.4	105	http://www.imdb.com/title/tt1082601/
+Never Back Down 2: The Beatdown	2011	Michael Jai White	5.5	90	http://www.imdb.com/title/tt1754264/
+Touchback	2011	Don Handfield	6	118	http://www.imdb.com/title/tt1628055/
+Undisputed 3: Redemption	2010	Isaac Florentine	7.2	96	http://www.imdb.com/title/tt1156466/
+Bloodsport	1988	Newt Arnold	6.5	92	http://www.imdb.com/title/tt0092675/
+Back to School	1986	Alan Metter	6.3	96	http://www.imdb.com/title/tt0090685/
+Hoosiers	1986	David Anspaugh	7.5	114	http://www.imdb.com/title/tt0091217/
+Bull Durham	1988	Ron Shelton	7	108	http://www.imdb.com/title/tt0094812/
+Seabiscuit	2003	Gary Ross	7.3	140	http://www.imdb.com/title/tt0329575/
+Wimbledon	2004	Richard Loncraine	6.3	98	http://www.imdb.com/title/tt0360201/
+Fever Pitch	2005	Bobby Farrelly, Peter Farrelly	6.1	104	http://www.imdb.com/title/tt0332047/
+The Ringer	2005	Barry W. Blaustein	5.7	94	http://www.imdb.com/title/tt0267891/
+Fearless	2006	Ronny Yu	7.6	104	http://www.imdb.com/title/tt0446059/
+The Love Guru	2008	Marco Schnabel	3.8	87	http://www.imdb.com/title/tt0811138/
+Undisputed II: Last Man Standing	2006	Isaac Florentine	6.8	98	http://www.imdb.com/title/tt0443676/
+Slap Shot	1977	George Roy Hill	7.2	123	http://www.imdb.com/title/tt0076723/
+The Karate Kid, Part II	1986	John G. Avildsen	5.6	113	http://www.imdb.com/title/tt0091326/
+Above the Rim	1994	Jeff Pollack	6.2	96	http://www.imdb.com/title/tt0109035/
+D2: The Mighty Ducks	1994	Sam Weisman	5.4	106	http://www.imdb.com/title/tt0109520/
+Tin Cup	1996	Ron Shelton	6.2	135	http://www.imdb.com/title/tt0117918/
+He Got Game	1998	Spike Lee	6.8	136	http://www.imdb.com/title/tt0124718/
+BASEketball	1998	David Zucker	6.4	103	http://www.imdb.com/title/tt0131857/
+Love & Basketball	2000	Gina Prince-Bythewood	6.8	124	http://www.imdb.com/title/tt0199725/
+Blue Crush	2002	John Stockwell	5.5	104	http://www.imdb.com/title/tt0300532/
+Kicking & Screaming	2005	Jesse Dylan	5.4	95	http://www.imdb.com/title/tt0384642/
+Goal! The Dream Begins	2005	Danny Cannon	6.7	118	http://www.imdb.com/title/tt0380389/
+Redbelt	2008	David Mamet	6.8	99	http://www.imdb.com/title/tt1012804/
+The World's Fastest Indian	2005	Roger Donaldson	7.8	127	http://www.imdb.com/title/tt0412080/
+Peaceful Warrior	2006	Victor Salva	7	120	http://www.imdb.com/title/tt0438315/
+The Color of Money	1986	Martin Scorsese	6.9	119	http://www.imdb.com/title/tt0090863/
+Angels in the Outfield	1994	William Dear	5.7	102	http://www.imdb.com/title/tt0109127/
+Driven	2001	Renny Harlin	4.3	116	http://www.imdb.com/title/tt0132245/
+Out Cold	2001	The Malloys, The Malloys	6	89	http://www.imdb.com/title/tt0253798/
+Undisputed	2002	Walter Hill	5.9	94	http://www.imdb.com/title/tt0281322/
+Annapolis	2006	Justin Lin	5.4	108	http://www.imdb.com/title/tt0417433/
+Chariots of Fire	1981	Hugh Hudson	7.2	124	http://www.imdb.com/title/tt0082158/
+The Karate Kid, Part III	1989	John G. Avildsen	4.6	112	http://www.imdb.com/title/tt0097647/
+Kickboxer	1989	Mark DiSalle, David Worth	5.9	97	http://www.imdb.com/title/tt0097659/
+Lionheart	1990	Sheldon Lettich	5.7	105	http://www.imdb.com/title/tt0100029/
+Alive	1993	Frank Marshall	6.9	120	http://www.imdb.com/title/tt0106246/
+For Love of the Game	1999	Sam Raimi	6.3	137	http://www.imdb.com/title/tt0126916/
+Like Mike	2002	John Schultz	4.6	99	http://www.imdb.com/title/tt0308506/
+The Rookie	2002	John Lee Hancock	6.9	127	http://www.imdb.com/title/tt0265662/
+Radio	2003	Michael Tollin	6.8	109	http://www.imdb.com/title/tt0316465/
+Herbie Fully Loaded	2005	Angela Robinson	4.6	101	http://www.imdb.com/title/tt0400497/
+Two for the Money	2005	D.J. Caruso	6.1	122	http://www.imdb.com/title/tt0417217/
+Leatherheads	2008	George Clooney	6	114	http://www.imdb.com/title/tt0379865/
+All Things Fall Apart	2011	Mario Van Peebles	4.8		http://www.imdb.com/title/tt1606390/
+Facing the Giants	2006	Alex Kendrick	6.2	111	http://www.imdb.com/title/tt0805526/
+The Longest Yard	1974	Robert Aldrich	7.1	121	http://www.imdb.com/title/tt0071771/
+The Bad News Bears in Breaking Training	1977	Michael Pressman	5.1	100	http://www.imdb.com/title/tt0075718/
+Vision Quest	1985	Harold Becker	6.2	105	http://www.imdb.com/title/tt0090270/
+Little Giants	1994	Duwayne Dunham	6	107	http://www.imdb.com/title/tt0110364/
+Major League II	1994	David S. Ward	5.2	105	http://www.imdb.com/title/tt0110442/
+Ice Princess	2005	Tim Fywell	5.9	98	http://www.imdb.com/title/tt0396652/
+Lucky You	2007	Curtis Hanson	5.8	124	http://www.imdb.com/title/tt0338216/
+The Damned United	2009	Tom Hooper	7.5	98	http://www.imdb.com/title/tt1226271/
+Shelter	2007	Jonah Markowitz	7.6	97	http://www.imdb.com/title/tt0942384/
+Forever Strong	2008	Ryan Little	6.9	112	http://www.imdb.com/title/tt0840322/
+Goal II: Living the Dream	2007	Jaume Collet-Serra	5.8	115	http://www.imdb.com/title/tt0473360/
+Mean Machine	2001	Barry Skolnick	6.3	99	http://www.imdb.com/title/tt0291341/
+Death Race 2000	1975	Paul Bartel	6.2	80	http://www.imdb.com/title/tt0072856/
+Breaking Away	1979	Peter Yates	7.6	101	http://www.imdb.com/title/tt0078902/
+3 Ninjas	1992	Jon Turteltaub	4.8	84	http://www.imdb.com/title/tt0103596/
+The Cutting Edge	1992	Paul M. Glaser	6.6	101	http://www.imdb.com/title/tt0104040/
+The Next Karate Kid	1994	Christopher Cain	4	107	http://www.imdb.com/title/tt0110657/
+Higher Learning	1995	John Singleton	6.2	127	http://www.imdb.com/title/tt0113305/
+D3: The Mighty Ducks	1996	Robert Lieberman	4.8	104	http://www.imdb.com/title/tt0116000/
+The Fan	1996	Tony Scott	5.7	116	http://www.imdb.com/title/tt0116277/
+Rollerball	2002	John McTiernan	2.9	98	http://www.imdb.com/title/tt0246894/
+Grind	2003	Casey La Scala	5.5	105	http://www.imdb.com/title/tt0338077/
+The Comebacks	2007	Tom Brady	3.9	84	http://www.imdb.com/title/tt0790804/
+The Boxer	1997	Jim Sheridan	7	113	http://www.imdb.com/title/tt0118760/
+Rollerball	1975	Norman Jewison	6.5	125	http://www.imdb.com/title/tt0073631/
+Little Big League	1994	Andrew Scheinman	5.8	119	http://www.imdb.com/title/tt0110363/
+Hard Ball	2001	Brian Robbins	6.1	106	http://www.imdb.com/title/tt0180734/
+Racing Stripes	2005	Frederik Du Chau	5.1	102	http://www.imdb.com/title/tt0376105/
+Mr. Woodcock	2007	Craig Gillespie	5.1	87	http://www.imdb.com/title/tt0419984/
+All the Right Moves	1983	Michael Chapman	5.7	91	http://www.imdb.com/title/tt0085154/
+Mystery, Alaska	1999	Jay Roach	6.5	119	http://www.imdb.com/title/tt0134618/
+Summer Catch	2001	Mike Tollin	4.7	108	http://www.imdb.com/title/tt0234829/
+Supercross	2005	Steve Boyum	3.3	80	http://www.imdb.com/title/tt0403016/
+Everyone's Hero	2006	Colin Brady, Christopher Reeve	5.7	88	http://www.imdb.com/title/tt0430779/
+Resurrecting the Champ	2007	Rod Lurie	6.7	112	http://www.imdb.com/title/tt0416185/
+Love Ranch	2010	Taylor Hackford	5.4	117	http://www.imdb.com/title/tt1125929/
+Kickboxer 2: The Road Back	1991	Albert Pyun	3.7	89	http://www.imdb.com/title/tt0102202/
+Hands of Stone	2014	Jonathan Jakubowicz			http://www.imdb.com/title/tt1781827/
+Pumping Iron	1977	George Butler, Robert Fiore	7.3	85	http://www.imdb.com/title/tt0076578/
+Youngblood	1986	Peter Markle	5.7	110	http://www.imdb.com/title/tt0092272/
+Airborne	1993	Rob Bowman	5.6	91	http://www.imdb.com/title/tt0106233/
+The Program	1993	David S. Ward	6.2	112	http://www.imdb.com/title/tt0107889/
+Play It to the Bone	1999	Ron Shelton	5.2	124	http://www.imdb.com/title/tt0196857/
+My Dog Skip	2000	Jay Russell	6.8	95	http://www.imdb.com/title/tt0156812/
+Rebound	2005	Steve Carr	4.8	103	http://www.imdb.com/title/tt0376108/
+Legendary	2010	Mel Damski	5.8	107	http://www.imdb.com/title/tt1563704/
+The Perfect Game	2009	William Dear	6.6	118	http://www.imdb.com/title/tt0473102/
+Beer League	2006	Frank Sebastiano	5.8	86	http://www.imdb.com/title/tt0453453/
+Fab Five: The Texas Cheerleader Scandal	2008	Tom McLoughlin	5.9	88	http://www.imdb.com/title/tt1191113/
+Air Bud	1997	Charles Martin Smith	4.7	98	http://www.imdb.com/title/tt0118570/
+Snow Dogs	2002	Brian Levant	4.9	99	http://www.imdb.com/title/tt0281373/
+Dreamer: Inspired by a True Story	2005	John Gatins	6.7	106	http://www.imdb.com/title/tt0418647/
+Who's Your Caddy?	2007	Don Michael Paul	1.9	93	http://www.imdb.com/title/tt0785077/
+Hole in One	2010	Drew Ann Rosenberg	2.7	100	http://www.imdb.com/title/tt1263800/
+61*	2001	Billy Crystal	7.7	129	http://www.imdb.com/title/tt0250934/
+Across the Tracks	1990	Sandy Tung	5.5	100	http://www.imdb.com/title/tt0101268/
+Eight Men Out	1988	John Sayles	7.2	119	http://www.imdb.com/title/tt0095082/
+Victory	1981	John Huston	6.4	116	http://www.imdb.com/title/tt0083284/
+Heaven Can Wait	1978	Warren Beatty, Buck Henry	6.8	101	http://www.imdb.com/title/tt0077663/
+The Champ	1979	Franco Zeffirelli	6.3	121	http://www.imdb.com/title/tt0078950/
+The Black Stallion	1979	Carroll Ballard	7.1	118	http://www.imdb.com/title/tt0078872/
+Best of the Best	1989	Bob Radler	6	97	http://www.imdb.com/title/tt0096913/
+Major League: Back to the Minors	1998	John Warren	4.2	100	http://www.imdb.com/title/tt0120742/
+Ready to Rumble	2000	Brian Robbins	5	107	http://www.imdb.com/title/tt0217756/
+Against the Ropes	2004	Charles S. Dutton	5.1	111	http://www.imdb.com/title/tt0312329/
+Mr 3000	2004	Charles Stone III	5.5	104	http://www.imdb.com/title/tt0339412/
+The Longshots	2008	Fred Durst	4.4	94	http://www.imdb.com/title/tt1091751/
+Brink!	1998	Greg Beeman	6.9	99	http://www.imdb.com/title/tt0162212/
+Kickboxer 3: The Art of War	1992	Rick King	3.1	92	http://www.imdb.com/title/tt0104609/
+American Ninja	1985	Sam Firstenberg	4.9	95	http://www.imdb.com/title/tt0088708/
+Gladiator	1992	Rowdy Herrington	6.1	101	http://www.imdb.com/title/tt0104346/
+Blue Chips	1994	William Friedkin	5.8	108	http://www.imdb.com/title/tt0109305/
+The Luck of the Irish	2001	Paul Hoen	5.8	86	http://www.imdb.com/title/tt0274636/
+Le Mans	1971	Lee H. Katzin	6.5	106	http://www.imdb.com/title/tt0067334/
+Johnny Be Good	1988	Bud Smith	4.2	91	http://www.imdb.com/title/tt0095409/
+Mr. Baseball	1992	Fred Schepisi	5.6	108	http://www.imdb.com/title/tt0104926/
+8 Seconds	1994	John G. Avildsen	6.1	105	http://www.imdb.com/title/tt0109021/
+The Big Green	1995	Holly Goldberg Sloan	5.1	100	http://www.imdb.com/title/tt0112499/
+The Sixth Man	1997	Randall Miller	5.1	107	http://www.imdb.com/title/tt0120142/
+Go Figure	2005	Francine McDougall	5.6	88	http://www.imdb.com/title/tt0447987/
+The Slaughter Rule	2002	Alex Smith, Andrew J. Smith	5.9	112	http://www.imdb.com/title/tt0266971/
+Girlfight	2000	Karyn Kusama	6.7	110	http://www.imdb.com/title/tt0210075/
+Brian's Song	1971	Buzz Kulik	7.6	73	http://www.imdb.com/title/tt0068315/
+Oxford Blues	1984	Robert Boris	5	97	http://www.imdb.com/title/tt0087866/
+Wildcats	1986	Michael Ritchie	5.7	106	http://www.imdb.com/title/tt0092214/
+Caddyshack II	1988	Allan Arkush	3.5	98	http://www.imdb.com/title/tt0094824/
+The Babe	1992	Arthur Hiller	5.7	115	http://www.imdb.com/title/tt0103747/
+Ladybugs	1992	Sidney J. Furie	4.7	90	http://www.imdb.com/title/tt0104670/
+Bobby Jones: Stroke of Genius	2004	Rowdy Herrington	6.4	120	http://www.imdb.com/title/tt0375104/
+Gracie	2007	Davis Guggenheim	6.1	95	http://www.imdb.com/title/tt0441007/
+Game 6	2005	Michael Hoffman	5.8	87	http://www.imdb.com/title/tt0425055/
+Jump In!	2007	Paul Hoen	5.1	85	http://www.imdb.com/title/tt0805559/
+The Hammer	2007	Charles Herman-Wurmfeld	7.1	88	http://www.imdb.com/title/tt0814130/
+Without Limits	1998	Robert Towne	6.9	117	http://www.imdb.com/title/tt0119934/
+The Mighty Macs	2009	Tim Chambers	6	99	http://www.imdb.com/title/tt1034324/
+Dynamo	2014				http://www.imdb.com/title/tt2494326/
+Playing for Keeps	2012	Gabriele Muccino	5.5	105	http://www.imdb.com/title/tt1540128/
+Happy Gilmore	1996	Dennis Dugan	6.9	92	http://www.imdb.com/title/tt0116483/
+The Wrestler	2008	Darren Aronofsky	8	109	http://www.imdb.com/title/tt1125849/
+Bend It Like Beckham	2002	Gurinder Chadha	6.7	112	http://www.imdb.com/title/tt0286499/
+Jerry Maguire	1996	Cameron Crowe	7.2	139	http://www.imdb.com/title/tt0116695/
+Home Run	2013	David Boyd	6.8		http://www.imdb.com/title/tt2051894/
+Counterpunch	2013	Kenneth Castillo	4.5	97	http://www.imdb.com/title/tt2051850/
+Drift	2013	Ben Nott, Morgan O'Neill	5.4		http://www.imdb.com/title/tt1714833/
+Crooked Arrows	2012	Steve Rash	5.1	105	http://www.imdb.com/title/tt1954352/
+A Warrior's Heart	2011	Mike Sears	4.7	86	http://www.imdb.com/title/tt1341340/
+United	2011	James Strong	7.2	90	http://www.imdb.com/title/tt1777034/
+The Philly Kid	2012	Jason Connery	5.2	90	http://www.imdb.com/title/tt1937506/
+Seven Days in Utopia	2011	Matthew Dean Russell	5.5		http://www.imdb.com/title/tt1699147/
+Fast Girls	2012	Regan Hall	5.7	91	http://www.imdb.com/title/tt1700808/
+Ice Castles	2010	Donald Wrye	5.7	95	http://www.imdb.com/title/tt1411276/
+Madison	2005	William Bindley	6.2	94	http://www.imdb.com/title/tt0206113/
+Balls Out: Gary the Tennis Coach	2009	Danny Leiner	5.4	92	http://www.imdb.com/title/tt0787470/
+Will	2011	Ellen Perry	6.5	102	http://www.imdb.com/title/tt1636844/
+Going to the Mat	2004	Stuart Gillard	7	120	http://www.imdb.com/title/tt0399104/
+Backwards	2012	Ben Hickernell	4.8	89	http://www.imdb.com/title/tt2005153/
+Hurricane Season	2009	Tim Story	6.3		http://www.imdb.com/title/tt1172998/
+Looking for Eric	2009	Ken Loach	7.1	116	http://www.imdb.com/title/tt1242545/
+The 5th Quarter	2010	Rick Bieber	5.2	90	http://www.imdb.com/title/tt1130964/
+Division III: Football's Finest	2011	Marshall Cook	5.2	98	http://www.imdb.com/title/tt1562849/
+Big Fan	2009	Robert D. Siegel	6.7	88	http://www.imdb.com/title/tt1228953/
+Phantom Punch	2008	Robert Townsend	5.2		http://www.imdb.com/title/tt1131747/
+The Best of Times	1986	Roger Spottiswoode	5.7	104	http://www.imdb.com/title/tt0090713/
+Necessary Roughness	1991	Stan Dragoti	5.7	108	http://www.imdb.com/title/tt0102517/
+The Scout	1994	Michael Ritchie	5.2	101	http://www.imdb.com/title/tt0111094/
+Pride	2007	Sunu Gonera	5.1	104	http://www.imdb.com/title/tt0475355/
+Her Best Move	2007	Norm Hunter	5.5	101	http://www.imdb.com/title/tt0469429/
+The Cutting Edge 3: Chasing the Dream	2008	Stuart Gillard	6.1	90	http://www.imdb.com/title/tt1110626/
+Life-Size	2000	Mark Rosman	5.3	89	http://www.imdb.com/title/tt0200809/
+Hot Dog... The Movie	1984	Peter Markle	4.2	96	http://www.imdb.com/title/tt0087425/
+North Shore	1987	William Phelps	5.9	96	http://www.imdb.com/title/tt0093648/
+The Great White Hype	1996	Reginald Hudlin	5.3	91	http://www.imdb.com/title/tt0116448/
+The Game of Their Lives	2005	David Anspaugh	6	101	http://www.imdb.com/title/tt0354595/
+Futuresport	1998	Ernest Dickerson	4	91	http://www.imdb.com/title/tt0158409/
+Fever Pitch	1997	David Evans	6.5	102	http://www.imdb.com/title/tt0119114/
+Cornbread, Earl and Me	1975	Joseph Manduke	6.3	95	http://www.imdb.com/title/tt0072822/
+Ice Castles	1978	Donald Wrye	6.1	108	http://www.imdb.com/title/tt0077716/
+Six Pack	1982	Daniel Petrie	5.3	108	http://www.imdb.com/title/tt0084690/
+Eddie	1996	Steve Rash	4.7	100	http://www.imdb.com/title/tt0116168/
+Gutterballs	2008	Ryan Nicholson	4.7	96	http://www.imdb.com/title/tt1087853/
+The Gymnast	2006	Ned Farr	6.5	96	http://www.imdb.com/title/tt0473074/
+Bang the Drum Slowly	1973	John Hancock	6.8	96	http://www.imdb.com/title/tt0069765/
+The Air Up There	1994	Paul M. Glaser	5.3	107	http://www.imdb.com/title/tt0109067/
+Juwanna Mann	2002	Jesse Vaughan	4.2	91	http://www.imdb.com/title/tt0247444/
+Crossover	2006	Preston A. Whitmore II	1.9	95	http://www.imdb.com/title/tt0473024/
+Pumpkin	2002	Anthony Abrams, Adam Larson Broder	6.1	113	http://www.imdb.com/title/tt0265591/
+The Broken Hearts Club: A Romantic Comedy	2000	Greg Berlanti	6.6	94	http://www.imdb.com/title/tt0222850/
+Cobb	1994	Ron Shelton	6.3	128	http://www.imdb.com/title/tt0109450/
+The Bingo Long Traveling All-Stars & Motor Kings	1976	John Badham	6.5	110	http://www.imdb.com/title/tt0074207/
+Big Wednesday	1978	John Milius	6.9	120	http://www.imdb.com/title/tt0077235/
+Diggstown	1992	Michael Ritchie	6.7	98	http://www.imdb.com/title/tt0104107/
+Ed	1996	Bill Couturié	2.4	94	http://www.imdb.com/title/tt0116165/
+London 2012 Olympic Opening Ceremony: Isles of Wonder	2012	Danny Boyle	7.6	352	http://www.imdb.com/title/tt2305700/
+There's Only One Jimmy Grimble	2000	John Hay	6.5	106	http://www.imdb.com/title/tt0238660/
+Prefontaine	1997	Steve James	6.4	106	http://www.imdb.com/title/tt0119937/
+American Flyers	1985	John Badham	6	113	http://www.imdb.com/title/tt0088707/
+Taking Care of Business	1990	Arthur Hiller	6.1	107	http://www.imdb.com/title/tt0103035/
+The Final Season	2007	David Mickey Evans	6.5	119	http://www.imdb.com/title/tt0449018/
+Blackball	2003	Mel Smith	5.3	96	http://www.imdb.com/title/tt0337879/
+Men with Brooms	2002	Paul Gross	5.7	102	http://www.imdb.com/title/tt0263734/
+Kickboxer 4: The Aggressor	1994	Albert Pyun	3.2	90	http://www.imdb.com/title/tt0110255/
+Rebound: The Legend of Earl 'The Goat' Manigault	1996	Eriq La Salle	7.5	120	http://www.imdb.com/title/tt0117450/
+The Blood of Heroes	1989	David Peoples	6.2	90	http://www.imdb.com/title/tt0094764/
+Stealing Home	1988	Steven Kampmann, Will Aldis	6.5	98	http://www.imdb.com/title/tt0096171/
+Celtic Pride	1996	Tom DeCerchio	4.9	91	http://www.imdb.com/title/tt0115851/
+A Shot at Glory	2000	Michael Corrente	6.1	114	http://www.imdb.com/title/tt0193854/
+Johnny Tsunami	1999	Steve Boyum	6.2		http://www.imdb.com/title/tt0206064/
+Bloodsport 2	1996	Alan Mehrez	4.4	90	http://www.imdb.com/title/tt0112536/
+Side Out	1990	Peter Israelson	4.9	100	http://www.imdb.com/title/tt0100613/
+Fat City	1972	John Huston	7.4	100	http://www.imdb.com/title/tt0068575/
+My Giant	1998	Michael Lehmann	4.7	103	http://www.imdb.com/title/tt0120765/
+Air Bud: Golden Receiver	1998	Richard Martin	4.1	90	http://www.imdb.com/title/tt0140796/
+MVP: Most Valuable Primate	2000	Robert Vince	3.1	93	http://www.imdb.com/title/tt0196106/
+Going Greek	2001	Justin Zackham	4.7	90	http://www.imdb.com/title/tt0263386/
+Double Teamed	2002	Duwayne Dunham	5.9	120	http://www.imdb.com/title/tt0281905/
+Swimming Upstream	2003	Russell Mulcahy	7	114	http://www.imdb.com/title/tt0326664/
+Triumph of the Spirit	1989	Robert M. Young	6.8	120	http://www.imdb.com/title/tt0098513/
+The Bad News Bears Go to Japan	1978	John Berry	3.2	91	http://www.imdb.com/title/tt0077199/
+The Main Event	1979	Howard Zieff	5.4	112	http://www.imdb.com/title/tt0079510/
+North Dallas Forty	1979	Ted Kotcheff	6.9	119	http://www.imdb.com/title/tt0079640/
+American Anthem	1986	Albert Magnoli	2.9	102	http://www.imdb.com/title/tt0090631/
+Wind	1992	Carroll Ballard	6	126	http://www.imdb.com/title/tt0105824/
+Switching Goals	1999	David Steinberg	4.6	85	http://www.imdb.com/title/tt0217074/
+Gus	1976	Vincent McEveety	5.6	96	http://www.imdb.com/title/tt0074599/
+Stroker Ace	1983	Hal Needham	4.3	96	http://www.imdb.com/title/tt0086379/
+The Great White Hope	1970	Martin Ritt	6.9	103	http://www.imdb.com/title/tt0065797/
+One on One	1977	Lamont Johnson	6.2	98	http://www.imdb.com/title/tt0076500/
+Winter Comes Early	1971	George McCowan	6.2	112	http://www.imdb.com/title/tt0068564/
+The Last American Hero	1973	Lamont Johnson	6.2	95	http://www.imdb.com/title/tt0070287/
+Semi-Tough	1977	Michael Ritchie	5.8	108	http://www.imdb.com/title/tt0078227/
+Making the Grade	1984	Dorian Walker	5.2	105	http://www.imdb.com/title/tt0087666/
+Everybody's All-American	1988	Taylor Hackford	6.1	127	http://www.imdb.com/title/tt0095119/
+Sunset Park	1996	Steve Gomer	5.2	99	http://www.imdb.com/title/tt0117784/
+Homeboy	1988	Michael Seresin	5.6	116	http://www.imdb.com/title/tt0095316/
+Greased Lightning	1977	Michael Schultz	5.8	96	http://www.imdb.com/title/tt0076106/
+The Cheerleaders	1973	Paul Glickler	5.3	84	http://www.imdb.com/title/tt0068364/
+The Greatest	1977	Tom Gries	5.3	101	http://www.imdb.com/title/tt0076111/
+International Velvet	1978	Bryan Forbes	5.6	127	http://www.imdb.com/title/tt0077743/
+Price of Glory	2000	Carlos Avila	5.9	118	http://www.imdb.com/title/tt0188160/
+The World's Greatest Athlete	1973	Robert Scheerer	5.4	93	http://www.imdb.com/title/tt0070928/
+The Slugger's Wife	1985	Hal Ashby	4.2	105	http://www.imdb.com/title/tt0090036/
+Streets of Gold	1986	Joe Roth	5.7	95	http://www.imdb.com/title/tt0092022/
+The Games	1970	Michael Winner	5.8	100	http://www.imdb.com/title/tt0065757/
+Monster Brawl	2011	Jesse T. Cook	3.7	89	http://www.imdb.com/title/tt1716753/
+The Winning Season	2009	James C. Strouse	6.6	104	http://www.imdb.com/title/tt1293842/
+Soul of the Game	1996	Kevin Rodney Sullivan	7.3	94	http://www.imdb.com/title/tt0115631/
+No One Would Tell	1996	Noel Nosseck	6.2	96	http://www.imdb.com/title/tt0117191/
+The Hammer	2010	Oren Kaplan	7	108	http://www.imdb.com/title/tt1094666/
+School of Life	2005	William Dear	6.3	111	http://www.imdb.com/title/tt0340331/
+Saint Ralph	2004	Michael McGowan	7.3	98	http://www.imdb.com/title/tt0384488/
+The Race	2009	André F. Nebe	5.8	84	http://www.imdb.com/title/tt1319032/
+Unrivaled	2010	Warren P. Sonoda	3.7	109	http://www.imdb.com/title/tt1426325/
+Coach	2010	Will Frears	5.1		http://www.imdb.com/title/tt1334521/
+Brian's Song	2001	John Gray	6.5	88	http://www.imdb.com/title/tt0289873/
+The Boxer	2009	Thomas Jahn	4.8	94	http://www.imdb.com/title/tt1198189/
+Perfect Body	1997	Douglas Barr	5.9	100	http://www.imdb.com/title/tt0119881/
+Mr Hockey: The Gordie Howe Story	2013	Andy Mikita	6.2		http://www.imdb.com/title/tt0883391/
+Surf School	2006	Joel Silverman	2		http://www.imdb.com/title/tt0456014/
+Soccer Mom	2008	Gregory McClatchy	5.1	92	http://www.imdb.com/title/tt1059980/
+Note to Self	2012	Trey Haley	3.9	100	http://www.imdb.com/title/tt2140189/
+Underdogs	2013	Doug Dearth	4.2	102	http://www.imdb.com/title/tt2123342/
+The Flying Scotsman	2006	Douglas Mackinnon	7	96	http://www.imdb.com/title/tt0472268/
+Ping Pong Playa	2007	Jessica Yu	5.9	96	http://www.imdb.com/title/tt0991167/
+All You've Got	2006	Neema Barnette	4.1	95	http://www.imdb.com/title/tt0458465/
+Fast Track: No Limits	2008	Axel Sand	4.7	96	http://www.imdb.com/title/tt1043635/
+Hitting the Wall	2011	Jack Skyyler, Joel Brook	5.4	67	http://www.imdb.com/title/tt1930355/
+Home Run Showdown	2012	Oz Scott	4.2	94	http://www.imdb.com/title/tt1680311/
+Cloud 9	2006	Harry Basil	4.1	93	http://www.imdb.com/title/tt0403946/
+Tyson	1995	Uli Edel	6.1	104	http://www.imdb.com/title/tt0114759/
+Home of the Giants	2007	Rusty Gorman	6		http://www.imdb.com/title/tt0471005/
+7-10 Split	2007	Tommy Reid	4.5	94	http://www.imdb.com/title/tt0784962/
+Believe in Me	2006	Robert Collector	6.7	131	http://www.imdb.com/title/tt0419491/
+From the Rough	2012	Pierre Bagley	4.7		http://www.imdb.com/title/tt1704586/
+Blue Juice	1995	Carl Prechezer	5	90	http://www.imdb.com/title/tt0112537/
+One Hit from Home	2012	Johnny Meier, David Aaron Stone	3.7		http://www.imdb.com/title/tt1422916/
+Chasing 3000	2010	Gregory J. Lanesey	5.9		http://www.imdb.com/title/tt0483586/
+Wiener Dog Nationals	2013	Kevan Peterson	4.9	82	http://www.imdb.com/title/tt1535975/
+Wilma	1977	Bud Greenspan	5.8	100	http://www.imdb.com/title/tt0076923/
+Isolated	2013	Justin Le Pera	6	85	http://www.imdb.com/title/tt1280010/
+Miracle on Ice	1981	Steven Hilliard Stern	6.7	150	http://www.imdb.com/title/tt0082754/
+Breakfast with Scot	2007	Laurie Lynd	6.5	90	http://www.imdb.com/title/tt0910847/
+Beyond the Mat	2013	Van M. Pham			http://www.imdb.com/title/tt1207922/
+Personal Best	1982	Robert Towne	6.2	124	http://www.imdb.com/title/tt0084489/
+Alley Cats Strike	2000	Rod Daniel	6	103	http://www.imdb.com/title/tt0217990/
+The Boy in Blue	1986	Charles Jarrott	5.3	100	http://www.imdb.com/title/tt0090769/
+Breaking the Surface: The Greg Louganis Story	1997	Steven Hilliard Stern	5.9	95	http://www.imdb.com/title/tt0115750/
+Hillsborough	1996	Charles McDougall	7.5	101	http://www.imdb.com/title/tt0116533/
+Mike Bassett: England Manager	2001	Steve Barron	6.5	89	http://www.imdb.com/title/tt0282744/
+Johnny Kapahala: Back on Board	2007	Eric Bross	5.6	90	http://www.imdb.com/title/tt0942378/
+In God's Hands	1998	Zalman King	4.9	96	http://www.imdb.com/title/tt0140282/
+Twenty Four Seven	1997	Shane Meadows	6.9	96	http://www.imdb.com/title/tt0120391/
+Soccer Dog: The Movie	1999	Tony Giglio	2.6	98	http://www.imdb.com/title/tt0134969/
+Spring Fever	1982	Joseph L. Scanlan	4.1	100	http://www.imdb.com/title/tt0084718/
+On a Clear Day	2005	Gaby Dellal	6.8	98	http://www.imdb.com/title/tt0410400/
+Just for Kicks	2003	Sydney J. Bartholomew Jr.	2.2	92	http://www.imdb.com/title/tt0308443/
+Arena	1989	Peter Manoogian	4.9	115	http://www.imdb.com/title/tt0101366/
+The Frontier Boys	2012	John Grooters	3.8	113	http://www.imdb.com/title/tt1613056/
+Penitentiary	1979	Jamaa Fanaka	5.6	99	http://www.imdb.com/title/tt0079709/
+The Match	1999	Mick Davis	6	95	http://www.imdb.com/title/tt0165384/
+The Pistol: The Birth of a Legend	1991	Frank C. Schröder	6.8	90	http://www.imdb.com/title/tt0102674/
+When Saturday Comes	1996	Maria Giese	5.9	98	http://www.imdb.com/title/tt0114917/
+A Gentleman's Game	2002	J. Mills Goodloe	6.2	112	http://www.imdb.com/title/tt0260924/
+Pucked	2006	Arthur Hiller	4	83	http://www.imdb.com/title/tt0407038/
+Maximum Thrust	2003	Martin Sieracki	5.4	90	http://www.imdb.com/title/tt0339371/
+3: The Dale Earnhardt Story	2004	Russell Mulcahy	6.6	92	http://www.imdb.com/title/tt0401088/
+Crossing the Line	1990	David Leland	5.7	116	http://www.imdb.com/title/tt0099136/
+Freestyle	2010	Kolton Lee	1.8		http://www.imdb.com/title/tt1381406/
+Phar Lap	1983	Simon Wincer	7	107	http://www.imdb.com/title/tt0086102/
+Tapped	2013	Allan Ungar		105	http://www.imdb.com/title/tt2361184/
+Snowboard Academy	1996	John Shepphird	2.2	88	http://www.imdb.com/title/tt0117676/
+Australian Rules	2002	Paul Goldman	7	95	http://www.imdb.com/title/tt0285006/
+Wondrous Oblivion	2003	Paul Morrison	6.9	106	http://www.imdb.com/title/tt0334725/
+American Kickboxer	1991	Frans Nel	3.1	92	http://www.imdb.com/title/tt0101325/
+Gridiron UK	2013	Gary Delaney		99	http://www.imdb.com/title/tt2361150/
+The Minis	2007	Valerio Zanoli	3		http://www.imdb.com/title/tt1009017/
+Heart Like a Wheel	1983	Jonathan Kaplan	6.5	113	http://www.imdb.com/title/tt0085656/
+The Jericho Mile	1979	Michael Mann	7.3	97	http://www.imdb.com/title/tt0079366/
+A Child's Wish	1997	Waris Hussein	6.2	96	http://www.imdb.com/title/tt0118846/
+American Pastime	2007	Desmond Nakano	6.4	105	http://www.imdb.com/title/tt0825225/
+Joe and Max	2002	Steve James	6.6	106	http://www.imdb.com/title/tt0281938/
+The Fish That Saved Pittsburgh	1979	Gilbert Moses	4.6	102	http://www.imdb.com/title/tt0079154/
+Silver Dream Racer	1980	David Wickes	4.6	111	http://www.imdb.com/title/tt0081517/
+Long Gone	1987	Martin Davidson	7.3	110	http://www.imdb.com/title/tt0093433/
+Extreme Days	2001	Eric Hannah	5.2	93	http://www.imdb.com/title/tt0245891/
+Mickey	2004	Hugh Wilson	6.5	105	http://www.imdb.com/title/tt0277895/
+Animalympics	1980	Steven Lisberger	6.2	78	http://www.imdb.com/title/tt0078780/
+Puck Hogs	2009	Warren P. Sonoda	3.5	90	http://www.imdb.com/title/tt1249307/
+The King of the Kickboxers	1990	Lucas Lowe	5.1	99	http://www.imdb.com/title/tt0102217/
+Flying	1986	Paul Lynch	5.1		http://www.imdb.com/title/tt0091065/
+Running	1979	Steven Hilliard Stern	5.4	102	http://www.imdb.com/title/tt0079832/
+Fast Girl	2008	Daniel Zirilli	4.1	95	http://www.imdb.com/title/tt0915458/
+Muay Thai Giant	2008		5.4		http://www.imdb.com/title/tt1251761/
+Nadia	1984	Alan Cooke	6.9	100	http://www.imdb.com/title/tt0087774/
+Quarterback Princess	1983	Noel Black	6	96	http://www.imdb.com/title/tt0086161/
+The Blue Yonder	1985	Mark Rosman	6.6	92	http://www.imdb.com/title/tt0088831/
+Streetballers	2009	Matt Krentz	4.4		http://www.imdb.com/title/tt0847221/
+Bloodfist	1989	Terence H. Winkless	3.9	85	http://www.imdb.com/title/tt0096952/
+Tough Enough	1983	Richard O. Fleischer	5.2	106	http://www.imdb.com/title/tt0086461/
+Amazing Grace and Chuck	1987	Mike Newell	5.5	114	http://www.imdb.com/title/tt0092545/
+Rocky Marciano	1999	Charles Winkler	6.4	99	http://www.imdb.com/title/tt0183718/
+My Brother's Keeper	2004	Jordan Barker	5.5	96	http://www.imdb.com/title/tt0376784/
+The Adventure Scouts	2010	Jim Fitzpatrick	6.8	83	http://www.imdb.com/title/tt0994917/
+The Swinging Cheerleaders	1974	Jack Hill	4.9	91	http://www.imdb.com/title/tt0072236/
+Two Fists, One Heart	2008	Shawn Seet	5.7	105	http://www.imdb.com/title/tt1082881/
+The Drifter	2009	Taylor Steele	6.8	60	http://www.imdb.com/title/tt1462768/
+Dead Solid Perfect	1988	Bobby Roth	6.4	93	http://www.imdb.com/title/tt0094965/
+KickOff	2010	Rikki Beadle-Blair	4.2	99	http://www.imdb.com/title/tt1450326/
+Golf Digest U.S. Open Challenge	2009				http://www.imdb.com/title/tt1450323/
+Running Brave	1983	D.S. Everett, Donald Shebib	6.5	106	http://www.imdb.com/title/tt0086220/
+Miracle in Lane 2	2000	Greg Beeman	6.1	120	http://www.imdb.com/title/tt0218440/
+Undefeated	2003	John Leguizamo	5.4	92	http://www.imdb.com/title/tt0327951/
+Ruffian	2007	Yves Simoneau	6.6	85	http://www.imdb.com/title/tt0499558/
+The Junction Boys	2002	Mike Robe	6.1	93	http://www.imdb.com/title/tt0338619/
+Matilda	1978	Daniel Mann	3.1	105	http://www.imdb.com/title/tt0077917/
+Coach	1978	Bud Townsend	4.5	100	http://www.imdb.com/title/tt0077351/
+The Tiger Woods Story	1998	LeVar Burton	4.1	90	http://www.imdb.com/title/tt0153080/
+Battle B-Boy	2012	Frank Lin	2.3	89	http://www.imdb.com/title/tt1947969/
+Revenge of the Cheerleaders	1976	Richard Lerner	4.5	88	http://www.imdb.com/title/tt0075137/
+Running on Empty	1982	John Clark	5.2	83	http://www.imdb.com/title/tt0084616/
+El Mascarado Massacre	2006	Jesse Baget	4.5	75	http://www.imdb.com/title/tt0497477/
+Shergar	1999	Dennis C. Lewiston	5.2	95	http://www.imdb.com/title/tt0121744/
+Pastime	1990	Robin B. Armstrong	6.9	94	http://www.imdb.com/title/tt0105109/
+Code Breakers	2005	Rod Holcomb	6.1	88	http://www.imdb.com/title/tt0463944/
+Champions	1984	John Irvin	6.4	106	http://www.imdb.com/title/tt0085320/
+Kevin of the North	2001	Bob Spiers	4.3	86	http://www.imdb.com/title/tt0251174/
+Defying Gravity	1997	John Keitel	6.4	92	http://www.imdb.com/title/tt0156460/
+Jocks	1986	Steve Carver	2.7	91	http://www.imdb.com/title/tt0093315/
+Go Now	1995	Michael Winterbottom	7	81	http://www.imdb.com/title/tt0113184/
+Endurance	1999	Leslie Woodhead, Bud Greenspan	6.1	83	http://www.imdb.com/title/tt0120659/
+Body Slam	1986	Hal Needham	4.7	89	http://www.imdb.com/title/tt0092684/
+Schizo	1976	Pete Walker	5.3	109	http://www.imdb.com/title/tt0076670/
+Don King: Only in America	1997	John Herzfeld	7	121	http://www.imdb.com/title/tt0119838/
+Dishdogz	2006	Mikey Hilb	5.2		http://www.imdb.com/title/tt0416688/
+DGK: Parental Advisory	2012	Randal Kirk II	6.8		http://www.imdb.com/title/tt2557182/
+Deathsport	1978	Allan Arkush, Henry Suso	3.3	82	http://www.imdb.com/title/tt0077414/
+Fighting Tommy Riley	2004	Eddie O'Flaherty	6.5	109	http://www.imdb.com/title/tt0366444/
+The Great American Girl Robbery	1979	Jeff Werner	2.6	87	http://www.imdb.com/title/tt0078960/
+H2O Extreme	2009	Bill Scharpf	3.2	95	http://www.imdb.com/title/tt1135089/
+Hometown Legend	2002	James Anderson	5.3	120	http://www.imdb.com/title/tt0260695/
+Young Again	2013	Roger Lim		105	http://www.imdb.com/title/tt1303678/
+Don't Go Breaking My Heart	1999	Willi Patterson	5.2	95	http://www.imdb.com/title/tt0120876/
+True Blue	1996	Ferdinand Fairfax	6.1	118	http://www.imdb.com/title/tt0117973/
+By the Sword	1991	Jeremy Paul Kagan	6.1	91	http://www.imdb.com/title/tt0101524/
+Angels in the Endzone	1997	Gary Nadeau	4.7	88	http://www.imdb.com/title/tt0118618/
+The Sensei	2008	D. Lee Inosanto	6.6	103	http://www.imdb.com/title/tt0454941/
+Ernest Goes to School	1994	Coke Sams	4.2	89	http://www.imdb.com/title/tt0109739/
+The Terry Fox Story	1983	Ralph L. Thomas	6.8	97	http://www.imdb.com/title/tt0086427/
+The Garbage Picking Field Goal Kicking Philadelphia Phenomenon	1998	Tim Kelleher	4.8	78	http://www.imdb.com/title/tt0142306/
+Michael Jordan: An American Hero	1999	Alan Metzger	4.5		http://www.imdb.com/title/tt0196751/
+Chasing the Green	2009	Russ Emanuel	4.4	102	http://www.imdb.com/title/tt1090312/
+The Circuit	2008	Peter Werner	5	88	http://www.imdb.com/title/tt1071780/
+Penitentiary III	1987	Jamaa Fanaka	2.7	91	http://www.imdb.com/title/tt0093714/
+The Club	1980	Bruce Beresford	6.6	96	http://www.imdb.com/title/tt0080546/
+Ring of Fire	1991	Richard W. Munchkin, Rick Jacobson	4.1	100	http://www.imdb.com/title/tt0102793/
+Footy Legends	2006	Khoa Do	5.6	90	http://www.imdb.com/title/tt0477647/
+9-Ball	2012	Anthony Palma	3.9	85	http://www.imdb.com/title/tt1934166/
+Playoff	2011	Eran Riklis	5.2	107	http://www.imdb.com/title/tt1632722/
+Ronnie & Julie	1997	Philip Spink	6	99	http://www.imdb.com/title/tt0117510/
+Maggie and Annie	2002	Kimberly K. Wilson	4.3	105	http://www.imdb.com/title/tt0426089/
+21 Hours at Munich	1976	William A. Graham	6.2	101	http://www.imdb.com/title/tt0074085/
+Life of the Party	2005	Barra Grant	5.4		http://www.imdb.com/title/tt0382717/
+Cooperstown	1993	Charles Haid	6.2		http://www.imdb.com/title/tt0106612/
+Second String	2002	Robert Lieberman	5.7	100	http://www.imdb.com/title/tt0194342/
+Point of Entry	2007	Stephen Bridgewater	5	90	http://www.imdb.com/title/tt1034405/
+A Little Inside	1999	Kara Harshbarger	5.8	95	http://www.imdb.com/title/tt0256150/
+Soccer Dog: European Cup	2004	Sandy Tung	3.4	88	http://www.imdb.com/title/tt0365770/
+Among Dead Men	2008	James Richards	4.3	94	http://www.imdb.com/title/tt1318819/
+The Loneliest Runner	1976	Michael Landon	6.9	74	http://www.imdb.com/title/tt0074814/
+Progressive Skating & Gymnastics Spectacular	2013				http://www.imdb.com/title/tt2411150/
+Winners Take All	1987	Fritz Kiersch	6.3	102	http://www.imdb.com/title/tt0092222/
+Hustle	2004	Peter Bogdanovich	4.2		http://www.imdb.com/title/tt0405980/
+Slammed	2004	Brian Thomas Jones	3.8	99	http://www.imdb.com/title/tt0308905/
+Goldengirl	1979	Joseph Sargent	4.3	104	http://www.imdb.com/title/tt0079225/
+Players	1979	Anthony Harvey	3.9	120	http://www.imdb.com/title/tt0079723/
+Fast Break	1979	Jack Smight	5.6	107	http://www.imdb.com/title/tt0079136/
+The Bear	1984	Richard C. Sarafian	5.8	110	http://www.imdb.com/title/tt0086945/
+X Games 3D: The Movie	2009	Steve Lawrence	5.7	92	http://www.imdb.com/title/tt1440770/
+The Yankles	2009	David R. Brooks	4	115	http://www.imdb.com/title/tt1326277/
+Chasing a Dream	2009	David Burton Morris	6.2	120	http://www.imdb.com/title/tt1264894/
+Minor League: A Football Story	2010	Clenet Verdi-Rose	5		http://www.imdb.com/title/tt1416341/
+Tennis, Anyone...?	2005	Donal Logue	5.4		http://www.imdb.com/title/tt0413356/
+Casey's Shadow	1978	Martin Ritt	5.9	117	http://www.imdb.com/title/tt0077303/
+Monday Night Mayhem	2002	Ernest R. Dickerson	6.7	98	http://www.imdb.com/title/tt0268466/
+Touch and Go	1986	Robert Mandel	5.6	101	http://www.imdb.com/title/tt0092104/
+Chicks with Sticks	2004	Kari Skogland	4.8	86	http://www.imdb.com/title/tt0387114/
+Bloodfist II	1990	Andy Blumenthal	3.7	85	http://www.imdb.com/title/tt0099155/
+The Ride	1997	Michael O. Sajbel	6.3	101	http://www.imdb.com/title/tt0127247/
+Babe	1975	Buzz Kulik	7	106	http://www.imdb.com/title/tt0072677/
+The Hopeful	2011	Brendan Kirsch	6.2	90	http://www.imdb.com/title/tt1461432/
+Trapped in a Purple Haze	2000	Eric Laneuville	6.8	120	http://www.imdb.com/title/tt0200992/
+Passing Glory	1999	Steve James	6.5	100	http://www.imdb.com/title/tt0178821/
+Screwball: The Ted Whitfield Story	2010	Tommy Reid	4.9	90	http://www.imdb.com/title/tt1262978/
+Hansie: A True Story	2008	Regardt van den Bergh	4.1		http://www.imdb.com/title/tt1099200/
+Dummy Hoy: A Deaf Hero	2007	David Risotto	6.2	50	http://www.imdb.com/title/tt1027039/
+Hockey Night	1984	Paul Shapiro	6.9	74	http://www.imdb.com/title/tt0087416/
+Kickboxing Academy	1997	Richard Gabai	2	84	http://www.imdb.com/title/tt0119456/
+The Stranger I Married	2005	Helen Shaver	5.7	90	http://www.imdb.com/title/tt0465535/
+A Season on the Brink	2002	Robert Mandel	5.1	87	http://www.imdb.com/title/tt0296185/
+Talent for the Game	1991	Robert M. Young	5.7	91	http://www.imdb.com/title/tt0103036/
+Victory	2009	Ajit Pal Mangat	4.1		http://www.imdb.com/title/tt1170411/
+A Triumph of the Heart: The Ricky Bell Story	1991	Richard Michaels	7.2	100	http://www.imdb.com/title/tt0103123/
+Carman: The Champion	2001	Lee Stanley	5	82	http://www.imdb.com/title/tt0262462/
+Up 'n' Under	1998	John Godber	5.2	99	http://www.imdb.com/title/tt0120422/
+The Independents	2013	Charlie Anderson			http://www.imdb.com/title/tt2243593/
+Take Down	1979	Kieth Merrill	6.1	107	http://www.imdb.com/title/tt0078358/
+Ice Angel	2000	George Erschbamer	5.7		http://www.imdb.com/title/tt0211426/
+Four Minutes	2005	Charles Beeson	6.6		http://www.imdb.com/title/tt0457350/
+Church Ball	2006	Kurt Hale	3.9	91	http://www.imdb.com/title/tt0457303/
+Duel of Legends	2013	Hector Echavarria			http://www.imdb.com/title/tt0849437/
+White Air	2007	U. Wolfgang Wagenknecht	3.8	81	http://www.imdb.com/title/tt0462611/
+Beyond the Ring	2008	Gerson Sanginitto	3.5	86	http://www.imdb.com/title/tt0910993/
+Foolin' Around	1980	Richard T. Heffron	5.5	111	http://www.imdb.com/title/tt0080750/
+The Fastest Man Who Has Ever Lived	2010		5.9	60	http://www.imdb.com/title/tt1654752/
+Wait Until Spring, Bandini	1989	Dominique Deruddere	6	100	http://www.imdb.com/title/tt0098615/
+Offside	2006	Mårten Klingberg	5.8	103	http://www.imdb.com/title/tt0774755/
+They Call Me Sirr	2001	Robert Munic	5.5		http://www.imdb.com/title/tt0256394/
+Training Day	2010	Florence Vinger		6	http://www.imdb.com/title/tt1762377/
+The Sheldon Kennedy Story	1999	Norma Bailey	5.5		http://www.imdb.com/title/tt0192598/
+Bad As I Wanna Be: The Dennis Rodman Story	1998	Jean de Segonzac	4.3	120	http://www.imdb.com/title/tt0140829/
+The Long Run	2001	Jean Stewart	5.4	112	http://www.imdb.com/title/tt0218411/
+Something for Joey	1977	Lou Antonio	7.3	96	http://www.imdb.com/title/tt0076738/
+Gibsonburg	2013	Jonathon Kimble, Bob Mahaffey	2.5	90	http://www.imdb.com/title/tt2345555/
+Hattrick	2007	Milan Luthria	4	110	http://www.imdb.com/title/tt0979891/
+Canada Russia '72	2006	T.W. Peacocke	7.3	180	http://www.imdb.com/title/tt0484098/
+When Billie Beat Bobby	2001	Jane Anderson	6	90	http://www.imdb.com/title/tt0258446/
+Sportkill	2007	Craig McMahon	3.9		http://www.imdb.com/title/tt0491166/
+Don't Look Back: The Story of Leroy 'Satchel' Paige	1981	Richard A. Colla	6.9	98	http://www.imdb.com/title/tt0082277/
+My Brother... Nikhil	2005	Onir	7	120	http://www.imdb.com/title/tt0419992/
+Prep School	2013	Sean Nichols Lynch			http://www.imdb.com/title/tt2577668/
+All in the Game	2006	Jim O'Hanlon	6.4	120	http://www.imdb.com/title/tt0757148/
+On Edge	2001	Karl Slovin	5.1	93	http://www.imdb.com/title/tt0206184/
+Little Girls in Pretty Boxes	1997	Christopher Leitch	5.7	96	http://www.imdb.com/title/tt0119551/
+Sweet Lorraine	2013	Christopher C. Frieri			http://www.imdb.com/title/tt1527837/
+Tiger Town	1983	Alan Shapiro	6.5	95	http://www.imdb.com/title/tt0086439/
+A Mother's Courage: The Mary Thomas Story	1989	John Patterson	6.6	100	http://www.imdb.com/title/tt0097915/
+Road to Victory	2007	Mike Reilly	5.2	99	http://www.imdb.com/title/tt0982922/
+Blood Sport	1973	Jerrold Freedman	6.1	90	http://www.imdb.com/title/tt0069804/
+The Break	1995	Lee H. Katzin	4.9	104	http://www.imdb.com/title/tt0112574/
+The Deadliest Season	1977	Robert Markowitz	6.8	98	http://www.imdb.com/title/tt0075918/
+Skateboard	1978	George Gage	5.2	97	http://www.imdb.com/title/tt0076721/
+Ring of Fire II: Blood and Steel	1993	Richard W. Munchkin	2.6	94	http://www.imdb.com/title/tt0107962/
+The First of May	1999	Paul Sirmons	6.8	111	http://www.imdb.com/title/tt0132160/
+Jaguar Lives!	1979	Ernest Pintoff	4	90	http://www.imdb.com/title/tt0079362/
+Father and Scout	1994	Richard Michaels	4.9	92	http://www.imdb.com/title/tt0109778/
+Victor	2008	Jerry Ciccoritti	5.8		http://www.imdb.com/title/tt0840024/
+Ready to Run	2000	Duwayne Dunham	5.4	96	http://www.imdb.com/title/tt0253550/
+A Love Affair: The Eleanor and Lou Gehrig Story	1978	Fielder Cook	6.6	96	http://www.imdb.com/title/tt0077870/
+Blue Skies Again	1983	Richard Michaels	5	96	http://www.imdb.com/title/tt0085254/
+Night of the Warrior	1991	Rafal Zielinski	2.6	99	http://www.imdb.com/title/tt0102535/
+Below the Belt	1980	Robert Fowler	5.4	91	http://www.imdb.com/title/tt0080427/
+Game Day	1999	Steve Klein	5.5	106	http://www.imdb.com/title/tt0146786/
+Rough Hustle	2013	Delaney Dragon			http://www.imdb.com/title/tt1319734/
+Spirit of Love: The Mike Glenn Story	2013	Darla Rae	2.5	118	http://www.imdb.com/title/tt2362354/
+For the Glory	2012	Donald Leow	4.6	105	http://www.imdb.com/title/tt1832354/
+Southside	2003	Billy Hayes	5.6	106	http://www.imdb.com/title/tt0271798/
+The Comeback Kid	1980	Peter Levin	6.1	97	http://www.imdb.com/title/tt0083747/
+See How She Runs	1978	Richard T. Heffron	5.6	96	http://www.imdb.com/title/tt0078221/
+Frankie & Hazel	2000	JoBeth Williams	5.7	92	http://www.imdb.com/title/tt0217769/
+Full Contact	1993	Rick Jacobson	5.6	96	http://www.imdb.com/title/tt0106979/
+Possums	1998	J. Max Burnett	5.1	97	http://www.imdb.com/title/tt0145404/
+Annie O	1996	J. Michael McClary	4.6	93	http://www.imdb.com/title/tt0115550/
+Birdie and Bogey	2004	Mike Norris	6.2		http://www.imdb.com/title/tt0373726/
+No Rules	2005	Gerry Anderson	5.5	96	http://www.imdb.com/title/tt0446010/
+A Promise Kept: The Oksana Baiul Story	1994	Charles Jarrott	5.7	89	http://www.imdb.com/title/tt0110902/
+Just Another Romantic Wrestling Comedy	2006	Kim Sky, Evan Seplow	1.6	105	http://www.imdb.com/title/tt0427415/
+Royal Rumble	2000	Kevin Dunn	7.5	180	http://www.imdb.com/title/tt0261260/
+Studs	2006	Paul Mercier	5.7	90	http://www.imdb.com/title/tt0452866/
+Fatal Games	1984	Michael Elliot	4.6	88	http://www.imdb.com/title/tt0087243/
+Diving In	1990	Strathford Hamilton	3.7	93	http://www.imdb.com/title/tt0101741/
+Veer!	2012	P. Barry	6		http://www.imdb.com/title/tt1748280/
+King Lines	2007	Josh Lowell, Peter Mortimer	7	60	http://www.imdb.com/title/tt1144805/
+Body and Soul	2000	Sam Henry Kass	4	91	http://www.imdb.com/title/tt0159293/
+The Loretta Claiborne Story	2000	Lee Grant	6.2	100	http://www.imdb.com/title/tt0232002/
+Season of Miracles	2013	Dave Moody, Josh Moody			http://www.imdb.com/title/tt2173768/
+The Four Minute Mile	1988	Jim Goddard	6.7		http://www.imdb.com/title/tt0095171/
+Hope for the Broken Contender	2008	Chris Scheuerman	7.3	110	http://www.imdb.com/title/tt1006855/
+The Cyclist	2012	John Lawrence	5.6	94	http://www.imdb.com/title/tt1705933/
+Reggie's Prayer	1996	Paul McKellips	5.4	94	http://www.imdb.com/title/tt0117457/
+The Harlem Globetrotters on Gilligan's Island	1981	Peter Baldwin	3.6	120	http://www.imdb.com/title/tt0082502/
+Jumping for Joy	2002	Timothy J. Nelson	5.9	94	http://www.imdb.com/title/tt0251163/
+Heroes of Dirt	2013	Eric Bugbee	4.6		http://www.imdb.com/title/tt1934172/
+Big and Hairy	1998	Philip Spink	3.4	94	http://www.imdb.com/title/tt0134316/
+Safari 3000	1982	Harry Hurwitz	4.3	92	http://www.imdb.com/title/tt0084625/
+On the Edge	1986	Rob Nilsson	6.4	95	http://www.imdb.com/title/tt0091677/
+Into the Mind	2013	Eric Crosland, Dave Mossop			http://www.imdb.com/title/tt2673812/
+The Comrades of Summer	1992	Tommy Lee Wallace	5.4		http://www.imdb.com/title/tt0103997/
+The Final Winter	2007	Brian Andrews, Jane Forrest	6.1		http://www.imdb.com/title/tt0938303/
+Rose Against the Odds	1991	John Dixon	6.2		http://www.imdb.com/title/tt0114298/
+Summer League	2013	Lex Lybrand	4.8	95	http://www.imdb.com/title/tt2585078/
+Blue Moon Rising	2010	Stewart Sugg	5.3		http://www.imdb.com/title/tt1641390/
+Strike Force	1975	Barry Shear	3.7	73	http://www.imdb.com/title/tt0073758/
+Paperback Hero	1973	Peter Pearson	5.6	93	http://www.imdb.com/title/tt0071966/
+Tetherball: The Movie	2010	Chris Nickin	3.8		http://www.imdb.com/title/tt1705787/
+White Mile	1994	Robert Butler	6.2	96	http://www.imdb.com/title/tt0111704/
+Down and Distance	2010	Brian J. De Palma	5.3		http://www.imdb.com/title/tt1058519/
+The Greatest Game Ever Played	2008	Marc Kinderman	6.9	120	http://www.imdb.com/title/tt1405378/
+30 Days	2006	Jamal Joseph	3.6	93	http://www.imdb.com/title/tt0321858/
+More Than Just a Game	2007	Junaid Ahmed	5.1	89	http://www.imdb.com/title/tt1144914/
+On Thin Ice: The Tai Babilonia Story	1990	Zale Dalen	5.3	95	http://www.imdb.com/title/tt0100292/
+Just a Walk in the Park	2002	Steven Schachter	5.4	87	http://www.imdb.com/title/tt0330504/
+Broad Street Bullies	2010	George Roy	6.6		http://www.imdb.com/title/tt1922562/
+Final Shot: The Hank Gathers Story	1992	Charles Braverman	6.4	92	http://www.imdb.com/title/tt0104270/
+Gross Misconduct: The Life of Brian Spencer	1993	Atom Egoyan	5.5	120	http://www.imdb.com/title/tt0107047/
+The Jersey Devil	2011	John Casala	3.4	103	http://www.imdb.com/title/tt1320098/
+Derek Jeter 3K	2011	David Check, David Gavant	6.3		http://www.imdb.com/title/tt2007405/
+The Circuit	2002	Jalal Merhi	3.3	91	http://www.imdb.com/title/tt0309452/
+Fist Fighter	1989	Frank Zuniga	4.3	97	http://www.imdb.com/title/tt0094599/
+Rowing Through	1996	Masato Harada	6	116	http://www.imdb.com/title/tt0117518/
+The Ultimate Game	2001	Jack Kaprielian	4	92	http://www.imdb.com/title/tt0364722/
+Reversal	2001	Alan Vint	6.3		http://www.imdb.com/title/tt0226379/
+Grand Slam	1978	John Hefin	7.1	62	http://www.imdb.com/title/tt0363653/
+Here Come the Tigers	1978	Sean S. Cunningham	2.7	87	http://www.imdb.com/title/tt0077668/
+Rocksteady	2010	Mustapha Khan	5.5	90	http://www.imdb.com/title/tt1530996/
+Bleacher Bums	2001	Saul Rubinek	6.2	115	http://www.imdb.com/title/tt0289092/
+Please Don't Hit Me, Mom	1981	Gwen Arner	6.3	60	http://www.imdb.com/title/tt0082918/
+A Saintly Switch	1999	Peter Bogdanovich	5.5	88	http://www.imdb.com/title/tt0164683/
+A Winner Never Quits	1986	Mel Damski	6.8	105	http://www.imdb.com/title/tt0092221/
+Delivery Boys	1985	Ken Handler	3.4	91	http://www.imdb.com/title/tt0087134/
+Finding Buck McHenry	2000	Charles Burnett	5.9	94	http://www.imdb.com/title/tt0244512/
+The Kid	1997	John Hamilton	5.6	90	http://www.imdb.com/title/tt0159507/
+The Jesse Owens Story	1984	Richard Irving	6.7	174	http://www.imdb.com/title/tt0087501/
+Never Give Up: The Jimmy V Story	1996	Marcus Cole	6.1	90	http://www.imdb.com/title/tt0117166/
+Second Serve	1986	Anthony Page	7.1	120	http://www.imdb.com/title/tt0091913/
+Grambling's White Tiger	1981	Georg Stanford Brown	5.7	92	http://www.imdb.com/title/tt0082468/
+Race Across the Sky: The Leadville Trail 100	2009	Frank Matson	6.3	73	http://www.imdb.com/title/tt1667897/
+The Catcher	1998	Guy Crawford, Yvette Hoffman	3.1	77	http://www.imdb.com/title/tt0191869/
+Turkey Bowl	2011	Kyle Smith	6.3	62	http://www.imdb.com/title/tt1800401/
+The Greater Meaning of Water	2010	Sky Christopherson	4.2	60	http://www.imdb.com/title/tt0479051/
+Heart: The Marilyn Bell Story	2001	Manon Briand	7		http://www.imdb.com/title/tt0215835/
+Golf Punks	1998	F. Harvey Frost	3.9		http://www.imdb.com/title/tt0165306/
+Superdome	1978	Jerry Jameson	2.9	100	http://www.imdb.com/title/tt0078345/
+Dawn!	1979	Ken Hannam	6.3	109	http://www.imdb.com/title/tt0079029/
+Wildfire: The Arabian Heart	2010	Michael Vincent	4.8	88	http://www.imdb.com/title/tt1482957/
+The Last Home Run	1996	Bob Gosse	6	93	http://www.imdb.com/title/tt0158719/
+Royal Rumble	2003	Kevin Dunn	6.9	180	http://www.imdb.com/title/tt0350067/
+Blonde Fist	1991	Frank Clarke	3.6	102	http://www.imdb.com/title/tt0101473/
+The Kid from Left Field	1979	Adell Aldrich	5.7	100	http://www.imdb.com/title/tt0079399/
+Journey to the West	2011	Brendon Culliton, Joe Hatoum			http://www.imdb.com/title/tt2477866/
+Custody of the Heart	2000	David Jones	5.3	91	http://www.imdb.com/title/tt0246543/
+Net Worth	1995	Jerry Ciccoritti	6.9	120	http://www.imdb.com/title/tt0113956/
+The Boy Who Drank Too Much	1980	Jerrold Freedman	6.9	99	http://www.imdb.com/title/tt0080467/
+Off the Lip	2004	Robert Mickelson	3.4	87	http://www.imdb.com/title/tt0223828/
+My Summer with Des	1998	Simon Curtis	6.6	82	http://www.imdb.com/title/tt0144397/
+Pigs vs. Freaks	1984	Dick Lowry	5.7	120	http://www.imdb.com/title/tt0087834/
+Grunt! The Wrestling Movie	1985	Allan Holzman	4.7	90	http://www.imdb.com/title/tt0089233/
+The Opponent	2000	Eugene Jarecki	5.3	90	http://www.imdb.com/title/tt0223856/
+Miracle on the 17th Green	1999	Michael Switzer	5.1	100	http://www.imdb.com/title/tt0227060/
+One in a Million: The Ron LeFlore Story	1977	William A. Graham	6.1	100	http://www.imdb.com/title/tt0078035/
+Rodeo Girl	1980	Jackie Cooper	4.9	96	http://www.imdb.com/title/tt0081434/
+Alex	1992	Megan Simpson	5.5	90	http://www.imdb.com/title/tt0106240/
+Fighting Back	1980	Robert Lieberman	6.5	95	http://www.imdb.com/title/tt0080733/
+The Abduction of Kari Swenson	1987	Stephen Gyllenhaal	5.7	104	http://www.imdb.com/title/tt0092506/
+Full Throttle	1995	Mark Chapman	6.2	50	http://www.imdb.com/title/tt0212959/
+Sports Illustrated: Swimsuit 2006	2006	Jonathan Hutchison	5.7	60	http://www.imdb.com/title/tt0933167/
+The Gold and the Glory	1984	Igor Auzins	5.2	112	http://www.imdb.com/title/tt0087085/
+Karate Killer	1976	Ivan Hall	4.3	90	http://www.imdb.com/title/tt0080999/
+Play On	2010	David Story	5.1	99	http://www.imdb.com/title/tt1345506/
+Fairway to Heaven	2007	Ryan Tower, Brandon Worswick	6.9	90	http://www.imdb.com/title/tt0844847/
+Racquet	1979	David Winters	2.3	87	http://www.imdb.com/title/tt0079771/
+Champion of Glory	2013	Desmond Dolly		80	http://www.imdb.com/title/tt1762244/
+Boys of Summerville	2008	Brooks Benjamin	5	96	http://www.imdb.com/title/tt0940584/
+WE: A Collection of Individuals	2012	Peter Alport, Cody Carter	2.8		http://www.imdb.com/title/tt2312300/
+Golden Goal!	2008	Mirwan Suwarso	2.5	98	http://www.imdb.com/title/tt1202516/
+The Sporting Club	1971	Larry Peerce	3.3	107	http://www.imdb.com/title/tt0067783/
+Such Is Life	2008	Sky Pinnick		61	http://www.imdb.com/title/tt2055749/
+Fully Loaded	1998	Kevin Dunn	6	180	http://www.imdb.com/title/tt0311170/
+Tonya & Nancy: The Inside Story	1994	Larry Shaw	4.9	95	http://www.imdb.com/title/tt0111456/
+Run for Your Life	1988	Terence Young	3.9		http://www.imdb.com/title/tt0093496/
+Champions: A Love Story	1979	John A. Alonzo	6.5	100	http://www.imdb.com/title/tt0078951/
+Crossing the Line	2002	Graeme Clifford	5.8	91	http://www.imdb.com/title/tt0323109/
+Leaf	2008	Tim Carr	7		http://www.imdb.com/title/tt0923771/
+Dare to Dream: The Story of the U.S. Women's Soccer Team	2007		7.4	77	http://www.imdb.com/title/tt1146435/
+Waking Up Wally: The Walter Gretzky Story	2005	Dean Bennett	6.8		http://www.imdb.com/title/tt0446070/
+Space Riders	1988	Joe Massot	2.9	99	http://www.imdb.com/title/tt0316649/
+The First Kangaroos	1988	Frank Cvitanovich	7.1		http://www.imdb.com/title/tt0172455/
+The Girl with Brains in Her Feet	1997	Roberto Bangura	6.3	98	http://www.imdb.com/title/tt0124653/
+The Sports Pages	2001	Richard Benjamin	5	90	http://www.imdb.com/title/tt0218624/
+Finish Line	1989	John Nicolella	5		http://www.imdb.com/title/tt0097358/
+The World Awaits: De La Hoya vs. Mayweather	2007		6.2		http://www.imdb.com/title/tt1028577/
+Footsteps	1972	Paul Wendkos	5.3	90	http://www.imdb.com/title/tt0068602/
+The Ride	2003		7	87	http://www.imdb.com/title/tt0484187/
+It's Good to Be Alive	1974	Michael Landon	6.8	100	http://www.imdb.com/title/tt0071676/
+Tae-Bo Workout: Basic	1999		6.1		http://www.imdb.com/title/tt0194425/
+Chinatown Film Project	2009	Miguel Arteta, Patty Chang	3.7	75	http://www.imdb.com/title/tt1512746/
+Aunt Mary	1979	Peter Werner	6.7	98	http://www.imdb.com/title/tt0078810/
+Inside Story	2011	Rolie Nikiwe	5.9	98	http://www.imdb.com/title/tt2231299/
+Eleven Men Against Eleven	1995	Andy Hamilton	6	70	http://www.imdb.com/title/tt0127535/
+Any Place But Home	1997	Rob Hedden	5.5	92	http://www.imdb.com/title/tt0118630/
+The All-American Boy	1973	Charles Eastman	4.7	118	http://www.imdb.com/title/tt0069689/
+Billy the Kid and the Green Baize Vampire	1987	Alan Clarke	5.4	121	http://www.imdb.com/title/tt0088807/
+40 Minutes of Hell	2012	Kenan K. Holley	6.9		http://www.imdb.com/title/tt2302491/
+3D Bikini Beach Babes Issue #4	2012	David S. Sterling		192	http://www.imdb.com/title/tt2400269/
+Little Mo	1978	Daniel Haller	6	150	http://www.imdb.com/title/tt0077859/
+Deuce Coupe	1992	Mark Deimel	4.6	106	http://www.imdb.com/title/tt0104094/
+Dreamer	1979	Noel Nosseck	5.2	90	http://www.imdb.com/title/tt0079080/
+Rise and Walk: The Dennis Byrd Story	1994	Michael Dinner	5.8	88	http://www.imdb.com/title/tt0110993/
+Guarding Eddy	2004	Scott McKinsey	6.6	96	http://www.imdb.com/title/tt0417731/
+Assisted Fishing	2012	Joe Crouch	7.1		http://www.imdb.com/title/tt1843107/
+Foul Shot	2007	Danilo Mancinelli	3.6	75	http://www.imdb.com/title/tt0976035/
+Past the Bleachers	1995	Michael Switzer	6.6	97	http://www.imdb.com/title/tt0114100/
+Fists of Steel	1991	Jerry Schafer	6.1		http://www.imdb.com/title/tt0101890/
+Vengeance	2011		6.6		http://www.imdb.com/title/tt2106745/
+The Golden Moment: An Olympic Love Story	1980	Richard C. Sarafian	6.2	199	http://www.imdb.com/title/tt0080805/
+Tempting Fate	1998	Peter Werner	5.6	96	http://www.imdb.com/title/tt0137156/
+Murder Inside of Me	2009	David Sauers	7.3		http://www.imdb.com/title/tt0483746/
+One Special Victory	1991	Stuart Cooper	5.8	96	http://www.imdb.com/title/tt0102596/
+Bostock's Cup	1999	Marcus Mortimer	6.6	75	http://www.imdb.com/title/tt0201378/
+A Charlie Brown Celebration	1982	Bill Melendez	7.3	60	http://www.imdb.com/title/tt0173721/
+The Dreyfus Affair	????				http://www.imdb.com/title/tt0763838/
+Dynasty	2009	Max Bervy	5.7		http://www.imdb.com/title/tt1585979/
+The Playbook	2013	Darran Scott		107	http://www.imdb.com/title/tt2187139/
+Soldiers of Paint	2013	Michael DeChant, Doug Gritzmacher	1.5		http://www.imdb.com/title/tt1634139/
+A Minor Miracle	1983	Terrell Tannen	4.7	100	http://www.imdb.com/title/tt0085943/
+Joe Torre: Curveballs Along the Way	1997	Sturla Gunnarsson	5.4	95	http://www.imdb.com/title/tt0128285/
+The Goal	2005	Darla Rae	6.5	99	http://www.imdb.com/title/tt0479049/
+Crossbar	1979	John Trent	5.6	78	http://www.imdb.com/title/tt0079012/
+Second Wind	1976	Donald Shebib	5.2	93	http://www.imdb.com/title/tt0145459/
+The Rhino Brothers	2002	Dwayne Beaver	5.6	93	http://www.imdb.com/title/tt0286922/
+Slednecks 13	2010	Jason Moriarty	6.4	50	http://www.imdb.com/title/tt1784629/
+AmerAsian	2009	Roger Lim	4	103	http://www.imdb.com/title/tt0437065/
+Initial D: Third Stage	2001	Noboru Mitsusawa, Shishi Yamaguchi	7	100	http://www.imdb.com/title/tt0388130/
+Tournament of Dreams	2007	Don Abernathy	3.3	88	http://www.imdb.com/title/tt0416263/
+Big Brother Trouble	2000	Ralph Portillo	3.6	105	http://www.imdb.com/title/tt0243927/
+Legend in Granite	1973		6.1	48	http://www.imdb.com/title/tt0186300/
+The Baron and the Kid	1984	Gary Nelson	5.1	94	http://www.imdb.com/title/tt0086937/
+Zalman King's Sex, Y & Z	2003	Zalman King		75	http://www.imdb.com/title/tt2574084/
+MTV Sports & Music Festival 2	1998		3		http://www.imdb.com/title/tt0783240/
+A Shining Season	1979	Stuart Margolin	6.9	100	http://www.imdb.com/title/tt0079905/
+43: The Richard Petty Story	1972	Edward J. Lakso	6	83	http://www.imdb.com/title/tt0071085/
+Striker	2011	Rishad Dastur, Ian Fisher	4.6	30	http://www.imdb.com/title/tt1802818/
+Sports Illustrated: Swimsuit 2009	2009		6.5	22	http://www.imdb.com/title/tt1389377/
+Harder They Fall	2005	Lee Cipolla	4.7	103	http://www.imdb.com/title/tt0464039/
+Back Nine at Cherry Hills: The Legends of the 1960 U.S. Open	2008		6.2		http://www.imdb.com/title/tt1646955/
+The St. Tammany Miracle	1994	Joy N. Houck Jr., Jim McCullough Sr.	3.5	90	http://www.imdb.com/title/tt0111273/
+Duke-Carolina: The Blue Blood Rivalry	2013	Jason Rem		94	http://www.imdb.com/title/tt2780790/
+Thin Ice	1995	Fiona Cunningham-Reid	6.7	78	http://www.imdb.com/title/tt0111413/
+The Super Fight	1970	Murray Woroner	6.5		http://www.imdb.com/title/tt0065050/
+Struck by Lightning	1990	Jerzy Domaradzki	6.9	105	http://www.imdb.com/title/tt0100709/
+Coming Unglued	1999	Fred Gerber	5		http://www.imdb.com/title/tt0195605/
+Run for the Dream: The Gail Devers Story	1996	Neema Barnette	5.8	99	http://www.imdb.com/title/tt0117527/
+Steel Arena	1973	Mark L. Lester	5.4	98	http://www.imdb.com/title/tt0070730/
+Heart of a Champion: The Ray Mancini Story	1985	Richard Michaels	5.2	94	http://www.imdb.com/title/tt0089261/
+Busted Up	1986	Conrad E. Palmisano	3	93	http://www.imdb.com/title/tt0090782/
+Ali: An American Hero	2000	Leon Ichaso	5.4	85	http://www.imdb.com/title/tt0229973/
+Better Than Chocolate	2011	Haroun Souirji	7.5	61	http://www.imdb.com/title/tt2010919/
+The Fix	1997	Paul Greengrass	7.4	90	http://www.imdb.com/title/tt0126303/
+Mulligan	2000	Tim VandeSteeg	1.6		http://www.imdb.com/title/tt0216011/
+Shirts/Skins	1973	William A. Graham	7.1	74	http://www.imdb.com/title/tt0070686/
+Freedom Park	2004	Jon Artigo, Chad Meserve	4.5		http://www.imdb.com/title/tt0386474/
+Bugs Bunny's Wild World of Sports	1989	Greg Ford, Terry Lennon	6.6	24	http://www.imdb.com/title/tt0155572/
+Offside	2009	Gian Carlo Petraccaro	4.7	101	http://www.imdb.com/title/tt1693814/
+Dear Mr. Fidrych	2009	Mike Cramer		118	http://www.imdb.com/title/tt1540847/
+Game Theory	2009	Meredith Finkelstein, Paul Vlachos			http://www.imdb.com/title/tt1316048/
+The Last Wild Race	2011	Brian J. Leitten		44	http://www.imdb.com/title/tt1901009/
+The Great MacArthy	1975	David Baker	3.3	106	http://www.imdb.com/title/tt0073074/
+Through Eyes of a Caddy, Golf Tips DVD, Featuring Carl Jackson	2012	Cathy Durant		58	http://www.imdb.com/title/tt2828234/
+TLC: Tables, Ladders & Chairs	2011		7		http://www.imdb.com/title/tt2147533/
+Golf Etiquette	1973		6.7		http://www.imdb.com/title/tt0228338/
+Blades of Courage	1988	Randy Bradshaw	6.4	98	http://www.imdb.com/title/tt0094757/
+Hit for Six	2007	Alison Saunders-Franklyn	3.7	99	http://www.imdb.com/title/tt1016184/
+Inside Wrestling School	2000	Rick Bassman	4.7		http://www.imdb.com/title/tt1593289/
+Mean Streak	1999	Tim Hunter	5.2	95	http://www.imdb.com/title/tt0182310/
+Goodbye, Franklin High	1978	Mike MacFarland	5.5	94	http://www.imdb.com/title/tt0077623/
+Win by Fall	2012	Chris Nickin	1		http://www.imdb.com/title/tt1694510/
+tt2669620	????				http://www.imdb.com/title/tt2669620/
+The Wrestling Road Diaries	2009	Eric Santamaria	6.8	180	http://www.imdb.com/title/tt2299573/
+Power Play	1994	Rocky Lane	3.4	60	http://www.imdb.com/title/tt0162558/
+One Leg Kicking	2001	Khoo Koh	4.4	90	http://www.imdb.com/title/tt0253399/
+A Mancunian Story	2012	Craig Quinn	4	90	http://www.imdb.com/title/tt2223918/
+Cast Alaska	2011	Kevin Morris, Sean Morris		80	http://www.imdb.com/title/tt2033965/
+Three Strikes	2006	Lev L. Spiro	5.9		http://www.imdb.com/title/tt0844349/
+California Girls	1983	William Webb	5.5	83	http://www.imdb.com/title/tt0230063/
+Unflinching Triumph: The Philip Rockhammer Story	2007	Mark Decena	3.9	118	http://www.imdb.com/title/tt1068976/
+Switch	2010	Ashley Glasser		90	http://www.imdb.com/title/tt1709809/
+Who Shot Mamba?	2009	Dustin Pearlman	4	118	http://www.imdb.com/title/tt1153545/
+Hey Rookie, Welcome to the NFL	2003		5.6		http://www.imdb.com/title/tt1466344/
+You Must Remember This	1992	Helaine Head	5.3	103	http://www.imdb.com/title/tt0105876/
+Strikeforce: Fedor vs. Silva	2011	Bob Dunphy, Craig Farrell	7.3		http://www.imdb.com/title/tt1841849/
+Fight of the Century	1971		4.5		http://www.imdb.com/title/tt1076809/
+Murder at the World Series	1977	Andrew V. McLaglen	6.3	100	http://www.imdb.com/title/tt0076424/
+A Beachcombers Christmas	2004	Anne Wheeler	6.3	120	http://www.imdb.com/title/tt0440084/
+The Streak	2008	Jonathan Hock	6.7		http://www.imdb.com/title/tt1161653/
+Attack of La Niña	2011	Scott Gaffney, Murray Wais	7.6	73	http://www.imdb.com/title/tt2521086/
+Champions Forever: The Latin Legends	1997	Lee Librado	3.3	93	http://www.imdb.com/title/tt0289109/
+Crazy Canucks	2004	Randy Bradshaw	4.5		http://www.imdb.com/title/tt0391890/
+Royal Rumble	2010		7.2	180	http://www.imdb.com/title/tt1706693/
+The Flintstones Little Big League	1978		6.9	58	http://www.imdb.com/title/tt0193165/
+The Way I See It	2010	Scott Gaffney		75	http://www.imdb.com/title/tt2524628/
+Marciano	1979	Bernard L. Kowalski	4.8	104	http://www.imdb.com/title/tt0079528/
+Forgotten Warrior	1986	Nick Cacas, Charlie Ordoñez	4	76	http://www.imdb.com/title/tt0291913/
+Fame Whore	1997	Jon Moritsugu	6.5	73	http://www.imdb.com/title/tt0126902/
+Stingers Rule!	2009	Martin Tempest	4.7	90	http://www.imdb.com/title/tt1451420/
+Golden Will: The Silken Laumann Story	1996	Eric Till	3.7		http://www.imdb.com/title/tt0124682/
+Walking on Air	1987	Ed Kaplan	6.7	55	http://www.imdb.com/title/tt0192769/
+Official 2011 World Series Film	2011	Matthew Anderton, David Check	5	87	http://www.imdb.com/title/tt2147449/
+Maurie	1973	Daniel Mann	5.8	113	http://www.imdb.com/title/tt0070377/
+Into the Try Zone	????			120	http://www.imdb.com/title/tt2495276/
+Flip a Coin	2011	Maarten Kempen, Henk van den Doel			http://www.imdb.com/title/tt1861331/
+Girls Fight Club	2007	Uri Schwarz	4.5	60	http://www.imdb.com/title/tt1264089/
+Lake Placid	2010	Steve Bellamy			http://www.imdb.com/title/tt2215233/
+Bobby Cannon	2005	Barry Kemp	5.2		http://www.imdb.com/title/tt0887877/
+The Greatest Thing That Almost Happened	1977	Gilbert Moses	6.2	100	http://www.imdb.com/title/tt0076110/
+Shattered Glory: The Tonya Harding and Nancy Kerrigan Story	1994	Harold C. Whiteley		60	http://www.imdb.com/title/tt0926143/
+Going for the Gold: The Bill Johnson Story	1985	Don Taylor	5.5	104	http://www.imdb.com/title/tt0089212/
+Waldo the Dog	2010	Kris Canonizado	5.5	115	http://www.imdb.com/title/tt1615908/
+The King and Us	2002	Derek Wax	6	30	http://www.imdb.com/title/tt0285263/
+Clay Marzo: Just Add Water	2009	Quicksilver	4		http://www.imdb.com/title/tt1918738/
+US Against the World	1977	Don Ohlmeyer		120	http://www.imdb.com/title/tt1358280/
+Summer Nuts	2006	Mickey Fisher	5.1	90	http://www.imdb.com/title/tt0479310/
+Untitled Women's Boxing Documentary	2013	Amy Berg			http://www.imdb.com/title/tt2406068/
+Run for the Roses	1977	Henry Levin	4.9	93	http://www.imdb.com/title/tt0073643/
+The United States of Football	2012	Sean Pamphilon		120	http://www.imdb.com/title/tt2311078/
+Generation	1985	Michael J. Tuchner	4.9	120	http://www.imdb.com/title/tt0089193/
+Unsalted: A Great Lakes Experience	2005	Vince Deur	6.7	57	http://www.imdb.com/title/tt1235813/
+Sports Illustrated: Swimsuit 2008	2008	Jonathan Hutchison	6	30	http://www.imdb.com/title/tt1295915/
+King Mo: Unrivaled	2013				http://www.imdb.com/title/tt2675458/
+The Surfer	2011	Michael Yates		84	http://www.imdb.com/title/tt1980287/
+Jeremy Jones' Further	2012		5.2	85	http://www.imdb.com/title/tt2713886/
+The Players Club	2012	Jim Horkey			http://www.imdb.com/title/tt2380273/
+JumpRopeSprint	2011	Stephen Ihli		81	http://www.imdb.com/title/tt2012599/
+Nagano '98 Olympics: Bud Greenspan's Stories of Honor and Glory	1998	Bud Greenspan	6.2		http://www.imdb.com/title/tt0230560/
+Ice Pawn	1989	Barry Samson	2.7	100	http://www.imdb.com/title/tt0167205/
+The Monday Night Miracle	2007			190	http://www.imdb.com/title/tt1039977/
+Small Town Hero	2010	Lawrence Kopelman		108	http://www.imdb.com/title/tt1189904/
+Breaking Trail	2011	Noah Howell		65	http://www.imdb.com/title/tt2337736/
+Challenge of a Lifetime	1985	Russ Mayberry	5.7	100	http://www.imdb.com/title/tt0088899/
+Munich the Documentary	2008	Phil Matthews		90	http://www.imdb.com/title/tt1596327/
+Loose Cannons: The Movie	2008	Andy Schlachtenhaufen	5.3	97	http://www.imdb.com/title/tt1224444/
+Cheap Ski Movie	2010	Jack Turner		61	http://www.imdb.com/title/tt1605674/
+Henry O!	2009	Ziad H. Hamzeh	4.7	76	http://www.imdb.com/title/tt1312974/
+Softballs	2012	Matt O'Neil, Steve Shilson	2.1	89	http://www.imdb.com/title/tt2279538/
+Arsenal Season Review 2009/2010	2010				http://www.imdb.com/title/tt1670625/
+Mordy to the Max	2012	Marc Morgan		96	http://www.imdb.com/title/tt2369666/
+Pitching Hope	2013	Tony Mendoza		90	http://www.imdb.com/title/tt1724969/
+Flex	1988	Harry Grant, Pat Domenico		97	http://www.imdb.com/title/tt2076202/
+The Demo Crew	2001	John E. Vitali	3.1	108	http://www.imdb.com/title/tt0159378/
+Drop Zone: Fiji	2010	Greg Browning		53	http://www.imdb.com/title/tt1929239/
+Knock on Wood	2008	Anthony Cupaiuolo		45	http://www.imdb.com/title/tt1322332/
+Sunchasers	2011	Irvin Coffee			http://www.imdb.com/title/tt2011258/
+Double Top	2012	Christopher Bolton			http://www.imdb.com/title/tt2145674/
+Survive and Advance	2013	Jonathan Hock	7.4		http://www.imdb.com/title/tt2773038/
+Wimbledon Official Film 2009	2009	Cathy Jones	5.2	52	http://www.imdb.com/title/tt1786765/
+The Untouchables of Kentucky	2010	Alan Maffett Jr.		120	http://www.imdb.com/title/tt1864551/
+Tash Force	2012	Michael Booth	4.4	84	http://www.imdb.com/title/tt1688701/
+Death Match	2013	Raphael Socha			http://www.imdb.com/title/tt2230938/
+Race Across the Sky 2010	2010	Frank Matson	6.4		http://www.imdb.com/title/tt1880310/
+The Dream Factory	2012			88	http://www.imdb.com/title/tt2713938/
+Spiker	1986	Roger Tilton	4.1	104	http://www.imdb.com/title/tt0091995/
+An Epic Tale	2012	Katherine Millar, James Walsh		78	http://www.imdb.com/title/tt2148924/
+Winter	2011	Steve Bellamy			http://www.imdb.com/title/tt2215765/
+The Pugilist	2012	Jim Sonzero			http://www.imdb.com/title/tt2243617/
+Shadowboxing	2013	Joshua Durham			http://www.imdb.com/title/tt2252716/
+In the Wings	2010	Sarah Barbulesco		81	http://www.imdb.com/title/tt1722581/
+The Alive Tribe	1997	Stephen Amis	4.1	90	http://www.imdb.com/title/tt0185855/
+The Soccer Momster	2013			90	http://www.imdb.com/title/tt1555215/
+Winter's Wind	2012	Matt Herriger		60	http://www.imdb.com/title/tt2306875/
+tt2210885	????				http://www.imdb.com/title/tt2210885/
+The Last Season	1986	Allan King	5.2	145	http://www.imdb.com/title/tt0125342/
+Naseem Hamed	2011			100	http://www.imdb.com/title/tt1906433/
+WWE Homecoming	2005	Kevin Dunn	5.5	185	http://www.imdb.com/title/tt0818143/
+Glass Love	2004	Andrew Kidman	5.1	111	http://www.imdb.com/title/tt0482087/
+Raven Fork	2010	Thomas Oliver		108	http://www.imdb.com/title/tt1704223/
+Spirit of Snow	2002	Dave O'Leske		46	http://www.imdb.com/title/tt0483998/
+Jake's How-To	2008	Vincent Buckley	2.7	93	http://www.imdb.com/title/tt1286559/
+False Start	2001	Charlie Minn	2.5	90	http://www.imdb.com/title/tt0246409/
+Wrestlemaniac	2008	Matthew James Sheridan	1.8	71	http://www.imdb.com/title/tt1598872/
+TNA Wrestling: The Best of Jeff Hardy - Enigma	2005	Craig Leathers	6.9		http://www.imdb.com/title/tt1764624/
+The Kings	2009	Alec Helm	4.3	129	http://www.imdb.com/title/tt1470691/
+Beyond Gravity	2000	Aaron Black, Aaron Jackson	5.4	49	http://www.imdb.com/title/tt0481989/
+Bollywood Aerobics: At Home with Rahul Nath	2011	Rahul Nath		65	http://www.imdb.com/title/tt2006698/
+Carving the White	1993	James Angrove, Jon Long	4.5	80	http://www.imdb.com/title/tt0178300/
+Lucid Dreams	2009			31	http://www.imdb.com/title/tt1547003/
+Yougottagetthat!	2010	Brett Abramsky		38	http://www.imdb.com/title/tt1808696/
+The Storming	2010	Travis Robb		45	http://www.imdb.com/title/tt1830862/
+Throws of Passion	2010	Todd M. Jones	1.6	72	http://www.imdb.com/title/tt1528825/
+How to Stoppie	2006	Drew Umland		90	http://www.imdb.com/title/tt1826694/
+Cheeracise: Cheer Like a Pro	2006	Johnny Yong Bosch			http://www.imdb.com/title/tt0893318/
+More Than a Game	1992	Joe Angio, Joel Cohen		48	http://www.imdb.com/title/tt1633225/
+4th and Goal	2009	Todd Culberhouse	4.6		http://www.imdb.com/title/tt1265293/
+The Man with the Perfect Swing	1995	Michael Hovis	6.3	95	http://www.imdb.com/title/tt0113759/
+Smoke City	2012	Andrew P. Aguilar, Rick Chapman		57	http://www.imdb.com/title/tt2720854/
+Redemption Ride	2011	Mike Dornbirer		109	http://www.imdb.com/title/tt2484690/
+Perfect Profile	1989	Jim C. Harris	3.2		http://www.imdb.com/title/tt0098079/
+Yoga Journal's Yoga for Beginners	1988	Steven Adams, Martin Pitts	5.9		http://www.imdb.com/title/tt0235078/
+The Indy Wrestler	2011		7.4		http://www.imdb.com/title/tt2022562/
+A Giant Awakens	2009	Sylvain Doreau	5.2	52	http://www.imdb.com/title/tt1541598/
+Red Bull Rampage	2010	Derek Westerlund	6.3		http://www.imdb.com/title/tt2521738/
+Inside Teahupoo	2008	Rob Bruce			http://www.imdb.com/title/tt2419392/
+Xtreme Backyard Wrestling: The Reunion	2010	Aaron Saia		163	http://www.imdb.com/title/tt1774680/
+Something Between	2013	Antonin Michaud Soret			http://www.imdb.com/title/tt2664068/
+Hoops: It's Not Just a Game	2010	Ford Austin, Marc Wasserman		81	http://www.imdb.com/title/tt1602525/
+Pump It Up: The Warrior's Path	2012	Joseph William Greene		70	http://www.imdb.com/title/tt2508468/
+Dirk Hartog Island Unleashed	2012	Richard Connery			http://www.imdb.com/title/tt2210560/
+2076 Olympiad	1977	James R. Martin	6	90	http://www.imdb.com/title/tt0259826/
+Enjoy	2007	Sky Pinnick		61	http://www.imdb.com/title/tt2053355/
+The Adversary	1970	Larry Klein		75	http://www.imdb.com/title/tt0185845/
+WWE: TLC - Tables Ladders Chairs	2000	Kevin Dunn	7.8		http://www.imdb.com/title/tt1459018/
+Parkour Race	2013	Pierre Schantz		14	http://www.imdb.com/title/tt2720084/
+Dexter Jackson: Unbreakable	2010	Alex Ardenti			http://www.imdb.com/title/tt1876295/
+Re: Session	2009			65	http://www.imdb.com/title/tt2714402/
+Bolo	2013	Mickey Reece		70	http://www.imdb.com/title/tt2545558/
+Mort	2005	Kyle B. Thompson	6.1		http://www.imdb.com/title/tt0135986/
+Floyd Patterson vs. Oscar Bonavena	1972				http://www.imdb.com/title/tt2360694/
+The Bowling Club	2009	Luca Rocchini		10	http://www.imdb.com/title/tt1686800/
+Ice Dancing the Raw Edge	2013	Jim Ford		86	http://www.imdb.com/title/tt2359750/
+Arsenal - Arsène's Eleven	2007		5.8	78	http://www.imdb.com/title/tt1356514/
+Return2Sender	2005	Peter Mortimer	5.4	90	http://www.imdb.com/title/tt0483993/
+Nowhere Johnny	2012	Vijet D. Teng		85	http://www.imdb.com/title/tt2507176/
+HSBC Champions WGC Official Film	2009	Cathy Jones			http://www.imdb.com/title/tt1845229/
+Find	2010	Mark Huskisson			http://www.imdb.com/title/tt1787697/
+Extreme Surfing	1992	Warren Miller	5.2	46	http://www.imdb.com/title/tt0475580/
+Road to London: Reid Coolsaet	2012	Paul Trebilcock			http://www.imdb.com/title/tt2291256/
+Pittsburgh Passion	2008	Jennifer Yee		48	http://www.imdb.com/title/tt1313878/
+Curse of Good	2012	Brandon Ransbottom		89	http://www.imdb.com/title/tt2123923/
+A Day on the Force: Women's Professional Tackle Football	2004	Ronit Bezalel, Laurie Little	1.4	60	http://www.imdb.com/title/tt0407715/
+Home Run: Baseball in the Movies	1994	Susan F. Walker			http://www.imdb.com/title/tt0142374/
+For the Title	2005	Josh Long	5.3	90	http://www.imdb.com/title/tt0769515/
+Indulgence: 1000 Miles Under the Colorado Sky	2007	Brennan Galloway, Alex Nichols	5.2	45	http://www.imdb.com/title/tt1552062/
+Mania	2008	Dan Schaefer	7.2	120	http://www.imdb.com/title/tt1326160/
+Distance Runners	2009	Robert Vicencio	1.9	95	http://www.imdb.com/title/tt1205476/
+Mike Tyson vs. Steve Zouski	1986				http://www.imdb.com/title/tt2281359/
+There's Something About McConkey	2000				http://www.imdb.com/title/tt2188929/
+Free	2011	Timothy Schweitzer		76	http://www.imdb.com/title/tt2296771/
+Arsenal End of Season Review 2010/11	2011			131	http://www.imdb.com/title/tt2273074/
+Fornicritters	2010	Burt Gross, Keith Michael		60	http://www.imdb.com/title/tt2327462/
+Michael Moorer	2011			100	http://www.imdb.com/title/tt1906427/
+Semper Ride	2009	Dirk Collins			http://www.imdb.com/title/tt2066058/
+Bluegrass Kingdom: The Gospel of Kentucky Basketball	2013	Michael Tolajian		46	http://www.imdb.com/title/tt2845432/
+Playbyplaymen and the Art of the Perfect Call	2007	Ziad H. Hamzeh	6.6	76	http://www.imdb.com/title/tt1077259/
+Four Dimensions	2009	Peter Svensson	6.2		http://www.imdb.com/title/tt1534023/
+Sidecar: The Race 2 Road America	2008	Jeremy Major		54	http://www.imdb.com/title/tt1329436/
+Kid Gloves 2013	2013	Adam Simcox		80	http://www.imdb.com/title/tt2711518/
+Roy Jones, Jr.: Heart of a Champion	2005	Devaughn Hughson	6.3	112	http://www.imdb.com/title/tt1706618/
+Racing Colors	1976	Stephen Iadereste		90	http://www.imdb.com/title/tt0256295/
+Down Days	2008	Sky Pinnick		60	http://www.imdb.com/title/tt2053353/
+The 2010 General Tire Mint 400	2011	The Martelli Brothers, The Martelli Brothers			http://www.imdb.com/title/tt1941687/
+The Sun Ship Game	1971	Robert Drew		83	http://www.imdb.com/title/tt2012091/
+Kallang Roar the Movie	2008	Cheng Ding An			http://www.imdb.com/title/tt2385900/
+Red Asphalt	2010	Joel Jutagir			http://www.imdb.com/title/tt2125595/
+My Eyes Won't Dry	2005	Brian Conley			http://www.imdb.com/title/tt2814862/
+Gymnocide	2009	Stephanie Wuertz		4	http://www.imdb.com/title/tt1478387/
+Wimbledon 2012 Official Film	2012	Cathy Jones			http://www.imdb.com/title/tt2501994/
+I'm a Top Prospect	2011	Gary Ravet			http://www.imdb.com/title/tt2145745/
+The Speed Odyssey	2008	Robert Nevison		94	http://www.imdb.com/title/tt1331328/
+American Surf Design	2010	Benjamin Scott		6	http://www.imdb.com/title/tt1635413/
+Mac Foster vs. Jerry Quarry	1970				http://www.imdb.com/title/tt2338546/
+Rock the 40oz 2	2008	Christopher C. Fisher		124	http://www.imdb.com/title/tt1866236/
+No Guts, No Glory	1989	Steve Munro			http://www.imdb.com/title/tt1675178/
+When the Final Whistle Blows	2013	Jose H. Garofalo		90	http://www.imdb.com/title/tt2343823/
+Shuttlecock	2013	Vincent Pearase		108	http://www.imdb.com/title/tt2798968/
+Touching the Game, Alaska	2009	Jim Carroll		100	http://www.imdb.com/title/tt1440357/
+Rocket Dreams	2002	Craig Caryl			http://www.imdb.com/title/tt0795453/
+Beyond Grass	2010	Chris Rose		20	http://www.imdb.com/title/tt1517159/
+Stompin' Stu: The Story of BMX Legend Stu Thomsen	2009	John Swarr			http://www.imdb.com/title/tt2425476/
+Winter in Peru: A Visual Ode to the Waves of Peru	2008			50	http://www.imdb.com/title/tt1338707/
+Arsenal Robin Van Persie 100 Goals	2011			116	http://www.imdb.com/title/tt2272700/
+LA Underground	2012	Peter Leon	3.3	50	http://www.imdb.com/title/tt2378986/
+McGilvray: The Game is Not the Same	1985	Bill Phillips	3.6	90	http://www.imdb.com/title/tt1972710/
+The Revolution	2006	Nick Brocha, Adam Burtle		80	http://www.imdb.com/title/tt1071233/
+Great Wimbledon Rivalries	2003	Cathy Jones	5.1	52	http://www.imdb.com/title/tt1842372/
+Jock: The Jock Stein Story	1992	Graeme Moore			http://www.imdb.com/title/tt2023543/
+Not Guilty	2002	Dave Haderlien		60	http://www.imdb.com/title/tt1990295/
+Out of the Pond	2009	Chris Heffner			http://www.imdb.com/title/tt2066035/
+My Eyes Won't Dry 2: Tube Vision	2010	Brian Conley			http://www.imdb.com/title/tt2814840/
+Pro Wrestling's Ultimate Insiders Vol 2	2005	Miles Long			http://www.imdb.com/title/tt2793322/
+Downhill: The Bill Johnson Story	2010	Zeke Piestrup			http://www.imdb.com/title/tt2214985/
+Oceanside	2012	Josh Wolk		70	http://www.imdb.com/title/tt2705544/
+Wheelies	2002	Drew Umland		90	http://www.imdb.com/title/tt1826949/
+Sight Sound	2011	Mikey DeTemple			http://www.imdb.com/title/tt2552630/
+Consolidated Goin' Bananas	2007	Jim LaLonde			http://www.imdb.com/title/tt2323503/
+Belly Dance School: Beginners Class with Cara	2007	Eddie Haselden		95	http://www.imdb.com/title/tt1815610/
+Unspoken Rules	2009	Michael Hamilton			http://www.imdb.com/title/tt2100678/
+Record Breakers	2005	Cathy Jones	5.2	52	http://www.imdb.com/title/tt1842451/
+Martina: Farewell to a Champion	1994	Cathy Jones	5.1	52	http://www.imdb.com/title/tt1817211/

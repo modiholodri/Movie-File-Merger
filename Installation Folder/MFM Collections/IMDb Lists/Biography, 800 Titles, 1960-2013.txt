@@ -1,0 +1,829 @@
+Title	Genres	Year	Directors	IMDb Rating	Runtime (mins)	URL
+The Aviator	biography, drama	2004	Martin Scorsese	7.5	170	http://www.imdb.com/title/tt0338751/
+The Social Network	biography, drama	2010	David Fincher	7.9	120	http://www.imdb.com/title/tt1285016/
+Goodfellas	biography, crime, drama, thriller	1990	Martin Scorsese	8.8	146	http://www.imdb.com/title/tt0099685/
+Schindler's List	biography, drama, history, war	1993	Steven Spielberg	8.9	195	http://www.imdb.com/title/tt0108052/
+Lincoln	biography, drama, history, war	2012	Steven Spielberg	7.5	150	http://www.imdb.com/title/tt0443272/
+The Intouchables	biography, comedy, drama	2011	Olivier Nakache, Eric Toledano	8.5	112	http://www.imdb.com/title/tt1675434/
+Hitchcock	biography, drama	2012	Sacha Gervasi	6.9	98	http://www.imdb.com/title/tt0975645/
+42	biography, drama, sport	2013	Brian Helgeland	7.6	128	http://www.imdb.com/title/tt0453562/
+Remember the Titans	biography, drama, sport	2000	Boaz Yakin	7.6	113	http://www.imdb.com/title/tt0210945/
+A Beautiful Mind	biography, drama	2001	Ron Howard	8.1	135	http://www.imdb.com/title/tt0268978/
+The Blind Side	biography, drama, sport	2009	John Lee Hancock	7.6	129	http://www.imdb.com/title/tt0878804/
+The King's Speech	biography, drama, history	2010	Tom Hooper	8.1	118	http://www.imdb.com/title/tt1504320/
+Moneyball	biography, drama, sport	2011	Bennett Miller	7.6	133	http://www.imdb.com/title/tt1210166/
+My Week with Marilyn	biography, drama	2011	Simon Curtis	7	99	http://www.imdb.com/title/tt1655420/
+Rush	action, biography, drama, sport	2013	Ron Howard		123	http://www.imdb.com/title/tt1979320/
+Blow	biography, crime, drama	2001	Ted Demme	7.5	124	http://www.imdb.com/title/tt0221027/
+Catch Me If You Can	biography, comedy, crime, drama	2002	Steven Spielberg	7.9	141	http://www.imdb.com/title/tt0264464/
+The Pianist	biography, drama, history, war	2002	Roman Polanski	8.5	150	http://www.imdb.com/title/tt0253474/
+The Pursuit of Happyness	biography, drama	2006	Gabriele Muccino	7.8	117	http://www.imdb.com/title/tt0454921/
+American Gangster	biography, crime, drama	2007	Ridley Scott	7.8	157	http://www.imdb.com/title/tt0765429/
+Public Enemies	biography, crime, drama, history	2009	Michael Mann	7	140	http://www.imdb.com/title/tt1152836/
+127 Hours	adventure, biography, drama, thriller	2010	Danny Boyle	7.7	94	http://www.imdb.com/title/tt1542344/
+The Fighter	biography, drama, sport	2010	David O. Russell	7.9	116	http://www.imdb.com/title/tt0964517/
+J. Edgar	biography, crime, drama, history	2011	Clint Eastwood	6.6	137	http://www.imdb.com/title/tt1616195/
+The Wolf of Wall Street	biography, crime, drama	2013	Martin Scorsese			http://www.imdb.com/title/tt0993846/
+Hyde Park on Hudson	biography, comedy, drama, history	2012	Roger Michell	5.7	94	http://www.imdb.com/title/tt1477855/
+The Iron Lady	biography, drama, history	2011	Phyllida Lloyd	6.3	105	http://www.imdb.com/title/tt1007029/
+Casino	biography, crime, drama	1995	Martin Scorsese	8.2	178	http://www.imdb.com/title/tt0112641/
+Lovelace	biography, drama	2013	Rob Epstein, Jeffrey Friedman	6.6	92	http://www.imdb.com/title/tt1426329/
+A Dangerous Method	biography, drama, thriller	2011	David Cronenberg	6.5	99	http://www.imdb.com/title/tt1571222/
+Behind the Candelabra	biography, drama, romance	2013	Steven Soderbergh	7.1	118	http://www.imdb.com/title/tt1291580/
+Amadeus	biography, drama, music	1984	Milos Forman	8.4	160	http://www.imdb.com/title/tt0086879/
+In the Name of the Father	biography, drama, thriller	1993	Jim Sheridan	8.1	133	http://www.imdb.com/title/tt0107207/
+Donnie Brasco	biography, crime, drama, thriller	1997	Mike Newell	7.8	127	http://www.imdb.com/title/tt0119008/
+Hotel Rwanda	biography, drama, history, war	2004	Terry George	8.2	121	http://www.imdb.com/title/tt0395169/
+The Soloist	drama, biography, music	2009	Joe Wright	6.6	117	http://www.imdb.com/title/tt0821642/
+Invictus	biography, drama, history, sport	2009	Clint Eastwood	7.3	134	http://www.imdb.com/title/tt1057500/
+Soul Surfer	biography, drama, sport	2011	Sean McNamara	6.9	106	http://www.imdb.com/title/tt1596346/
+Jobs	biography, drama	2013	Joshua Michael Stern	5.7	122	http://www.imdb.com/title/tt2357129/
+The Look of Love	biography, comedy, drama	2013	Michael Winterbottom	6.3	101	http://www.imdb.com/title/tt1951216/
+The Sapphires	biography, comedy, drama, musical	2012	Wayne Blair	6.8	103	http://www.imdb.com/title/tt1673697/
+Machine Gun Preacher	action, biography, crime, drama	2011	Marc Forster	6.7	129	http://www.imdb.com/title/tt1586752/
+Chaplin	biography, drama	1992	Richard Attenborough	7.4	143	http://www.imdb.com/title/tt0103939/
+Monster	biography, crime, drama	2003	Patty Jenkins	7.3	109	http://www.imdb.com/title/tt0340855/
+Finding Neverland	biography, drama, family	2004	Marc Forster	7.8	106	http://www.imdb.com/title/tt0308644/
+Cinderella Man	biography, drama, romance, sport	2005	Ron Howard	7.9	144	http://www.imdb.com/title/tt0352248/
+The New World	biography, drama, history, romance	2005	Terrence Malick	6.7	135	http://www.imdb.com/title/tt0402399/
+Alpha Dog	biography, crime, drama	2006	Nick Cassavetes	6.8	122	http://www.imdb.com/title/tt0426883/
+Milk	biography, drama, history	2008	Gus Van Sant	7.6	128	http://www.imdb.com/title/tt1013753/
+The Last King of Scotland	biography, drama, history	2006	Kevin Macdonald	7.7	121	http://www.imdb.com/title/tt0455590/
+Hunger	biography, drama, history	2008	Steve McQueen	7.6	96	http://www.imdb.com/title/tt0986233/
+Thirteen	biography, drama	2003	Catherine Hardwicke	6.9	100	http://www.imdb.com/title/tt0328538/
+Raging Bull	biography, drama, sport	1980	Martin Scorsese	8.3	129	http://www.imdb.com/title/tt0081398/
+The Elephant Man	biography, drama	1980	David Lynch	8.3	124	http://www.imdb.com/title/tt0080678/
+Elizabeth	biography, drama, history	1998	Shekhar Kapur	7.5	124	http://www.imdb.com/title/tt0127536/
+Man on the Moon	biography, comedy, drama	1999	Milos Forman	7.4	118	http://www.imdb.com/title/tt0125664/
+Erin Brockovich	biography, drama	2000	Steven Soderbergh	7.2	131	http://www.imdb.com/title/tt0195685/
+Ray	biography, drama, music	2004	Taylor Hackford	7.7	152	http://www.imdb.com/title/tt0350258/
+Jarhead	biography, drama, war	2005	Sam Mendes	7	125	http://www.imdb.com/title/tt0418763/
+Marie Antoinette	biography, drama, history	2006	Sofia Coppola	6.3	123	http://www.imdb.com/title/tt0422720/
+Charlie Wilson's War	biography, comedy, drama, history	2007	Mike Nichols	7.1	102	http://www.imdb.com/title/tt0472062/
+Kill the Irishman	action, biography, crime, drama, thriller	2011	Jonathan Hensleigh	7.1	106	http://www.imdb.com/title/tt1416801/
+The Assassination of Jesse James by the Coward Robert Ford	biography, crime, drama, history, western	2007	Andrew Dominik	7.6	160	http://www.imdb.com/title/tt0443680/
+Papillon	biography, crime, drama	1973	Franklin J. Schaffner	8	151	http://www.imdb.com/title/tt0070511/
+Mask	biography, drama	1985	Peter Bogdanovich	7	120	http://www.imdb.com/title/tt0089560/
+Malcolm X	biography, drama, history	1992	Spike Lee	7.6	202	http://www.imdb.com/title/tt0104797/
+What's Love Got to Do with It	biography, drama, music	1993	Brian Gibson	6.9	118	http://www.imdb.com/title/tt0108551/
+The Hurricane	biography, drama, sport	1999	Norman Jewison	7.4	146	http://www.imdb.com/title/tt0174856/
+The Insider	biography, drama, thriller	1999	Michael Mann	7.9	157	http://www.imdb.com/title/tt0140352/
+Lords of Dogtown	biography, drama, sport	2005	Catherine Hardwicke	6.9	107	http://www.imdb.com/title/tt0355702/
+Domino	action, biography, crime, drama, thriller	2005	Tony Scott	5.9	127	http://www.imdb.com/title/tt0421054/
+Invincible	biography, drama, sport	2006	Ericson Core	7	105	http://www.imdb.com/title/tt0445990/
+Elizabeth: The Golden Age	biography, drama, history	2007	Shekhar Kapur	6.8	114	http://www.imdb.com/title/tt0414055/
+Julie & Julia	biography, drama, romance	2009	Nora Ephron	7	123	http://www.imdb.com/title/tt1135503/
+Kill Your Darlings	biography, drama, romance, thriller	2013	John Krokidas	7.5		http://www.imdb.com/title/tt1311071/
+Fair Game	biography, drama, thriller	2010	Doug Liman	6.8	108	http://www.imdb.com/title/tt0977855/
+The Runaways	biography, drama, music	2010	Floria Sigismondi	6.5	106	http://www.imdb.com/title/tt1017451/
+Rescue Dawn	adventure, biography, drama, war	2006	Werner Herzog	7.4	126	http://www.imdb.com/title/tt0462504/
+The Basketball Diaries	biography, crime, drama, sport	1995	Scott Kalvert	7.1	102	http://www.imdb.com/title/tt0112461/
+Born on the Fourth of July	biography, drama, war	1989	Oliver Stone	7.1	145	http://www.imdb.com/title/tt0096969/
+Ed Wood	biography, comedy, drama	1994	Tim Burton	8	127	http://www.imdb.com/title/tt0109707/
+October Sky	biography, drama, family	1999	Joe Johnston	7.7	108	http://www.imdb.com/title/tt0132477/
+Confessions of a Dangerous Mind	biography, comedy, crime, drama, thriller	2002	George Clooney	7.1	113	http://www.imdb.com/title/tt0270288/
+The Queen	biography, drama	2006	Stephen Frears	7.4	103	http://www.imdb.com/title/tt0436697/
+The Great Debaters	biography, drama	2007	Denzel Washington	7.5	126	http://www.imdb.com/title/tt0427309/
+The Express	biography, drama, sport	2008	Gary Fleder	7.1	130	http://www.imdb.com/title/tt0469903/
+W.	biography, drama, history	2008	Oliver Stone	6.4	129	http://www.imdb.com/title/tt1175491/
+Notorious	biography, drama, music	2009	George Tillman Jr.	6.4	122	http://www.imdb.com/title/tt0472198/
+Conviction	biography, drama	2010	Tony Goldwyn	7.1	107	http://www.imdb.com/title/tt1244754/
+You Don't Know Jack	biography, drama	2010	Barry Levinson	7.7	134	http://www.imdb.com/title/tt1132623/
+The Young Victoria	biography, drama, history, romance	2009	Jean-Marc Vallée	7.2	105	http://www.imdb.com/title/tt0962736/
+I'm Not There.	biography, drama, music	2007	Todd Haynes	6.9	135	http://www.imdb.com/title/tt0368794/
+Midnight Express	biography, crime, drama	1978	Alan Parker	7.6	121	http://www.imdb.com/title/tt0077928/
+Awakenings	biography, drama	1990	Penny Marshall	7.6	121	http://www.imdb.com/title/tt0099077/
+Rudy	biography, drama, sport	1993	David Anspaugh	7.4	114	http://www.imdb.com/title/tt0108002/
+Patch Adams	biography, comedy, drama	1998	Tom Shadyac	6.3	115	http://www.imdb.com/title/tt0129290/
+Men of Honor	biography, drama	2000	George Tillman Jr.	6.9	129	http://www.imdb.com/title/tt0203019/
+Becoming Jane	biography, drama, romance	2007	Julian Jarrold	6.9	120	http://www.imdb.com/title/tt0416508/
+Breach	biography, crime, drama, history, thriller	2007	Billy Ray	7	110	http://www.imdb.com/title/tt0401997/
+The Duchess	biography, drama, history, romance	2008	Saul Dibb	6.8	110	http://www.imdb.com/title/tt0864761/
+Game Change	biography, drama, history	2012	Jay Roach	7.4	118	http://www.imdb.com/title/tt1848902/
+Temple Grandin	biography, drama	2010	Mick Jackson	8.2	107	http://www.imdb.com/title/tt1278469/
+Nowhere Boy	biography, drama, music	2009	Sam Taylor-Wood	7.1	98	http://www.imdb.com/title/tt1266029/
+My Left Foot	biography, drama	1989	Jim Sheridan	7.8	103	http://www.imdb.com/title/tt0097937/
+Bloodsport	action, biography, drama, sport	1988	Newt Arnold	6.5	92	http://www.imdb.com/title/tt0092675/
+Out of Africa	biography, drama, romance	1985	Sydney Pollack	7	161	http://www.imdb.com/title/tt0089755/
+La Bamba	biography, drama, music	1987	Luis Valdez	6.6	108	http://www.imdb.com/title/tt0093378/
+Frida	biography, drama, romance	2002	Julie Taymor	7.3	123	http://www.imdb.com/title/tt0120679/
+Girl with a Pearl Earring	biography, drama, romance	2003	Peter Webber	6.9	100	http://www.imdb.com/title/tt0335119/
+Cadillac Records	biography, drama, history, music, romance	2008	Darnell Martin	6.7	109	http://www.imdb.com/title/tt1042877/
+Flash of Genius	biography, drama	2008	Marc Abraham	6.8	119	http://www.imdb.com/title/tt1054588/
+Control	biography, drama, music	2007	Anton Corbijn	7.7	122	http://www.imdb.com/title/tt0421082/
+Rise of the Footsoldier	biography, crime, drama	2007	Julian Gilbey	6.8	119	http://www.imdb.com/title/tt0901507/
+24 Hour Party People	biography, comedy, drama, music	2002	Michael Winterbottom	7.2	117	http://www.imdb.com/title/tt0274309/
+Gia	biography, drama	1998	Michael Cristofer	6.8	120	http://www.imdb.com/title/tt0123865/
+Heavenly Creatures	biography, crime, drama, fantasy	1994	Peter Jackson	7.5	99	http://www.imdb.com/title/tt0110005/
+This Boy's Life	biography, drama	1993	Michael Caton-Jones	7.2	115	http://www.imdb.com/title/tt0108330/
+Selena	biography, drama, music	1997	Gregory Nava	6.3	127	http://www.imdb.com/title/tt0120094/
+Get Rich or Die Tryin'	biography, crime, drama, music	2005	Jim Sheridan	4.4	117	http://www.imdb.com/title/tt0430308/
+Captain Phillips	action, biography, drama, thriller	2013	Paul Greengrass			http://www.imdb.com/title/tt1535109/
+Liz & Dick	biography, drama	2012	Lloyd Kramer	3.7	88	http://www.imdb.com/title/tt2375255/
+Casino Jack	biography, comedy, crime, drama	2010	George Hickenlooper	6.2	108	http://www.imdb.com/title/tt1194417/
+Made in Dagenham	biography, comedy, drama, history	2010	Nigel Cole	7.1	113	http://www.imdb.com/title/tt1371155/
+Bright Star	biography, drama, romance	2009	Jane Campion	6.9	119	http://www.imdb.com/title/tt0810784/
+Pirates of Silicon Valley	biography, drama	1999	Martyn Burke	7.1	95	http://www.imdb.com/title/tt0168122/
+Patton	biography, drama, history, war	1970	Franklin J. Schaffner	8	172	http://www.imdb.com/title/tt0066206/
+Dangerous Minds	biography, crime, drama, thriller	1995	John N. Smith	6.1	99	http://www.imdb.com/title/tt0112792/
+The People vs. Larry Flynt	biography, drama	1996	Milos Forman	7.3	129	http://www.imdb.com/title/tt0117318/
+The Messenger: The Story of Joan of Arc	adventure, biography, drama, history, war	1999	Luc Besson	6.3	158	http://www.imdb.com/title/tt0151137/
+Amazing Grace	biography, drama, history, romance	2006	Michael Apted	7.4	117	http://www.imdb.com/title/tt0454776/
+Amelia	adventure, biography, drama, romance	2009	Mira Nair	5.7	111	http://www.imdb.com/title/tt1129445/
+Factory Girl	biography, drama	2006	George Hickenlooper	6.2	90	http://www.imdb.com/title/tt0432402/
+The Red Baron	action, adventure, biography, drama, romance, war	2008	Nikolai Müllerschoen	6.1	106	http://www.imdb.com/title/tt0365675/
+Alive	action, adventure, biography, drama, sport, thriller	1993	Frank Marshall	6.9	120	http://www.imdb.com/title/tt0106246/
+Dragon: The Bruce Lee Story	action, biography, drama	1993	Rob Cohen	6.8	120	http://www.imdb.com/title/tt0106770/
+Wyatt Earp	action, adventure, biography, romance, western	1994	Lawrence Kasdan	6.5	191	http://www.imdb.com/title/tt0111756/
+Antwone Fisher	biography, drama, romance	2002	Denzel Washington	7.1	120	http://www.imdb.com/title/tt0168786/
+A Mighty Heart	biography, drama, history, thriller, war	2007	Michael Winterbottom	6.6	108	http://www.imdb.com/title/tt0829459/
+The Lady	biography, drama, history, romance	2011	Luc Besson	6.9	132	http://www.imdb.com/title/tt1802197/
+Infamous	biography, crime, drama	2006	Douglas McGrath	7	110	http://www.imdb.com/title/tt0420609/
+Kinsey	biography, drama	2004	Bill Condon	7.1	118	http://www.imdb.com/title/tt0362269/
+Chopper	biography, comedy, crime, drama	2000	Andrew Dominik	7.1	94	http://www.imdb.com/title/tt0221073/
+Before Night Falls	biography, drama	2000	Julian Schnabel	7.1	133	http://www.imdb.com/title/tt0247196/
+Attila	action, adventure, biography, drama, history, romance, war	2001	Dick Lowry	6.6	177	http://www.imdb.com/title/tt0259127/
+The Lover	biography, drama, romance	1992	Jean-Jacques Annaud	6.7	115	http://www.imdb.com/title/tt0101316/
+Shine	biography, drama, music, romance	1996	Scott Hicks	7.6	105	http://www.imdb.com/title/tt0117631/
+Howl	biography, drama	2010	Rob Epstein, Jeffrey Friedman	6.6	84	http://www.imdb.com/title/tt1049402/
+The Damned United	biography, comedy, drama, sport	2009	Tom Hooper	7.5	98	http://www.imdb.com/title/tt1226271/
+The Last Station	biography, drama, romance	2009	Michael Hoffman	7	112	http://www.imdb.com/title/tt0824758/
+The Edge of Love	biography, drama, romance, war	2008	John Maybury	6.2	110	http://www.imdb.com/title/tt0819714/
+Miss Potter	biography, drama	2006	Chris Noonan	6.9	92	http://www.imdb.com/title/tt0482546/
+Find Me Guilty	biography, comedy, crime, drama	2006	Sidney Lumet	7	125	http://www.imdb.com/title/tt0419749/
+American Splendor	biography, comedy, drama	2003	Shari Springer Berman, Robert Pulcini	7.5	101	http://www.imdb.com/title/tt0305206/
+Henry & June	biography, drama	1990	Philip Kaufman	6.2	136	http://www.imdb.com/title/tt0099762/
+American Me	biography, crime, drama, romance	1992	Edward James Olmos	6.9	125	http://www.imdb.com/title/tt0103671/
+Riding in Cars with Boys	biography, comedy, drama	2001	Penny Marshall	6.2	132	http://www.imdb.com/title/tt0200027/
+Hollywoodland	biography, crime, drama, history, mystery, romance, thriller	2006	Allen Coulter	6.5	126	http://www.imdb.com/title/tt0427969/
+Toast	biography, comedy, drama	2010	S J Clarkson	6.5	96	http://www.imdb.com/title/tt1658851/
+Mr. Nice	biography, comedy, crime, drama	2010	Bernard Rose	6.2	121	http://www.imdb.com/title/tt1183911/
+My One and Only	adventure, biography, comedy, drama, romance	2009	Richard Loncraine	6.5	108	http://www.imdb.com/title/tt1185431/
+Goya's Ghosts	biography, drama, war	2006	Milos Forman	6.8	113	http://www.imdb.com/title/tt0455957/
+Hitler: The Rise of Evil	biography, drama, history, war	2003	Christian Duguay	7.2	130	http://www.imdb.com/title/tt0346293/
+The Straight Story	biography, drama	1999	David Lynch	8	112	http://www.imdb.com/title/tt0166896/
+Sid and Nancy	biography, drama, music	1986	Alex Cox	7	112	http://www.imdb.com/title/tt0091954/
+Henry: Portrait of a Serial Killer	biography, crime, drama, horror, thriller	1986	John McNaughton	7.1	83	http://www.imdb.com/title/tt0099763/
+The Message	adventure, biography, drama, history	1977	Moustapha Akkad	8	177	http://www.imdb.com/title/tt0074896/
+Reds	biography, drama, history, romance	1981	Warren Beatty	7.3	195	http://www.imdb.com/title/tt0082979/
+Michael Collins	biography, drama, thriller, war	1996	Neil Jordan	7	133	http://www.imdb.com/title/tt0117039/
+Evita	biography, drama, history, musical, thriller	1996	Alan Parker	6.1	135	http://www.imdb.com/title/tt0116250/
+Creation	drama, biography	2009	Jon Amiel	6.6	108	http://www.imdb.com/title/tt0974014/
+Ned Kelly	action, adventure, biography, crime, history, western	2003	Gregor Jordan	6.4	110	http://www.imdb.com/title/tt0277941/
+Pollock	biography, drama	2000	Ed Harris	7	122	http://www.imdb.com/title/tt0183659/
+Henry V	action, biography, drama, history, romance, war	1989	Kenneth Branagh	7.7	137	http://www.imdb.com/title/tt0097499/
+Coal Miner's Daughter	biography, drama, music	1980	Michael Apted	7.3	125	http://www.imdb.com/title/tt0080549/
+Sybil	biography, drama	1976	Daniel Petrie	7.7	198	http://www.imdb.com/title/tt0075296/
+Gotti: In the Shadow of My Father	biography, crime, drama	2014	Joe Johnston			http://www.imdb.com/title/tt1801552/
+1492: Conquest of Paradise	adventure, biography, drama, history	1992	Ridley Scott	6.3	154	http://www.imdb.com/title/tt0103594/
+Nixon	biography, drama	1995	Oliver Stone	7	192	http://www.imdb.com/title/tt0113987/
+Desert Flower	biography, drama	2009	Sherry Hormann	7.1	120	http://www.imdb.com/title/tt1054580/
+Prayers for Bobby	biography, drama	2009	Russell Mulcahy	7.8	90	http://www.imdb.com/title/tt1073510/
+Last Days	biography, drama, music	2005	Gus Van Sant	5.7	97	http://www.imdb.com/title/tt0403217/
+The Notorious Bettie Page	biography, drama	2005	Mary Harron	6.6	91	http://www.imdb.com/title/tt0404802/
+Sylvia	biography, drama, romance	2003	Christine Jeffs	6.1	110	http://www.imdb.com/title/tt0325055/
+Immortal Beloved	biography, drama, music, romance	1994	Bernard Rose	7.2	121	http://www.imdb.com/title/tt0110116/
+Total Eclipse	biography, drama, romance	1995	Agnieszka Holland	6.3	111	http://www.imdb.com/title/tt0114702/
+My Dinner with Andre	biography, drama	1981	Louis Malle	7.4	110	http://www.imdb.com/title/tt0082783/
+Fab Five: The Texas Cheerleader Scandal	biography, drama, sport	2008	Tom McLoughlin	5.9	88	http://www.imdb.com/title/tt1191113/
+Hemingway & Gellhorn	biography, drama, romance	2012	Philip Kaufman	6.1	155	http://www.imdb.com/title/tt0423455/
+Alexander	action, adventure, biography, drama, history, romance, war	2004	Oliver Stone	5.4	175	http://www.imdb.com/title/tt0346491/
+Walk the Line	biography, drama, music, romance	2005	James Mangold	7.8	136	http://www.imdb.com/title/tt0358273/
+The Other Boleyn Girl	biography, drama, history, romance	2008	Justin Chadwick	6.7	115	http://www.imdb.com/title/tt0467200/
+Braveheart	action, biography, drama, history, war	1995	Mel Gibson	8.4	177	http://www.imdb.com/title/tt0112573/
+Into the Wild	adventure, biography, drama	2007	Sean Penn	8.2	148	http://www.imdb.com/title/tt0758758/
+Girl, Interrupted	biography, drama	1999	James Mangold	7.2	127	http://www.imdb.com/title/tt0172493/
+Gandhi	biography, drama, history	1982	Richard Attenborough	8.1	191	http://www.imdb.com/title/tt0083987/
+The Devil's Double	biography, drama, thriller	2011	Lee Tamahori	7.1	109	http://www.imdb.com/title/tt1270262/
+Bronson	action, biography, crime, drama	2008	Nicolas Winding Refn	7	92	http://www.imdb.com/title/tt1172570/
+Freedom Writers	biography, crime, drama	2007	Richard LaGravenese	7.4	123	http://www.imdb.com/title/tt0463998/
+Ali	biography, drama, sport	2001	Michael Mann	6.7	157	http://www.imdb.com/title/tt0248667/
+The Whistleblower	biography, crime, drama, thriller	2010	Larysa Kondracki	7.1	112	http://www.imdb.com/title/tt0896872/
+An American Crime	biography, crime, drama	2007	Tommy O'Haver	7.3	97	http://www.imdb.com/title/tt0802948/
+Capote	biography, crime, drama	2005	Bennett Miller	7.4	114	http://www.imdb.com/title/tt0379725/
+Butch Cassidy and the Sundance Kid	adventure, biography, crime, western	1969	George Roy Hill	8.2	110	http://www.imdb.com/title/tt0064115/
+Serpico	biography, crime, drama	1973	Sidney Lumet	7.8	130	http://www.imdb.com/title/tt0070666/
+The Last Emperor	biography, drama, history	1987	Bernardo Bertolucci	7.8	163	http://www.imdb.com/title/tt0093389/
+The Doors	biography, drama, music	1991	Oliver Stone	7.1	140	http://www.imdb.com/title/tt0101761/
+Seven Years in Tibet	adventure, biography, drama, history, war	1997	Jean-Jacques Annaud	6.8	136	http://www.imdb.com/title/tt0120102/
+The World's Fastest Indian	biography, drama, sport	2005	Roger Donaldson	7.8	127	http://www.imdb.com/title/tt0412080/
+Rob Roy	action, adventure, biography	1995	Michael Caton-Jones	6.8	139	http://www.imdb.com/title/tt0114287/
+Private Parts	biography, comedy, drama	1997	Betty Thomas	6.6	109	http://www.imdb.com/title/tt0119951/
+There Be Dragons	biography, drama, war	2011	Roland Joffé	5.6	122	http://www.imdb.com/title/tt1316616/
+Quills	biography, drama	2000	Philip Kaufman	7.2	124	http://www.imdb.com/title/tt0180073/
+Fire in the Sky	biography, drama, horror, mystery, sci_fi	1993	Robert Lieberman	6.4	109	http://www.imdb.com/title/tt0106912/
+Party Monster	biography, crime, drama, thriller	2003	Fenton Bailey, Randy Barbato	5.9	98	http://www.imdb.com/title/tt0320244/
+Dangerous Beauty	biography, drama, romance	1998	Marshall Herskovitz	7	111	http://www.imdb.com/title/tt0118892/
+Bonnie and Clyde	biography, crime, drama	1967	Arthur Penn	8	112	http://www.imdb.com/title/tt0061418/
+A Man for All Seasons	biography, drama, history	1966	Fred Zinnemann	7.9	120	http://www.imdb.com/title/tt0060665/
+Max Manus: Man of War	action, biography, drama, history, war	2008	Joachim Rønning, Espen Sandberg	7.2	118	http://www.imdb.com/title/tt1029235/
+Funny Girl	biography, comedy, drama, musical, romance	1968	William Wyler	7.2	151	http://www.imdb.com/title/tt0062994/
+Cleopatra	biography, drama, history, romance	1963	Joseph L. Mankiewicz	6.8	192	http://www.imdb.com/title/tt0056937/
+Mommie Dearest	biography, drama	1981	Frank Perry	6.3	129	http://www.imdb.com/title/tt0082766/
+The Day the Music Died	biography, drama, music	2010	Bruno Miotto	6.3		http://www.imdb.com/title/tt1576473/
+Searching for Sugar Man	documentary, biography, music	2012	Malik Bendjelloul	8.1	86	http://www.imdb.com/title/tt2125608/
+The Imposter	documentary, biography	2012	Bart Layton	7.5	99	http://www.imdb.com/title/tt1966604/
+Mission to Lars	documentary, adventure, biography, music	2012	James Moore, William Spicer	5.6	74	http://www.imdb.com/title/tt1865450/
+The Sound of Music	biography, drama, family, musical, romance	1965	Robert Wise	7.9	174	http://www.imdb.com/title/tt0059742/
+Lawrence of Arabia	adventure, biography, drama, history, war	1962	David Lean	8.4	216	http://www.imdb.com/title/tt0056172/
+Spartacus	adventure, biography, drama, history	1960	Stanley Kubrick	8	197	http://www.imdb.com/title/tt0054331/
+Senna	documentary, biography, sport	2010	Asif Kapadia	8.5	106	http://www.imdb.com/title/tt1424432/
+Devil's Knot	biography, crime, drama, thriller	2013	Atom Egoyan			http://www.imdb.com/title/tt0804463/
+Marley	documentary, biography, music	2012	Kevin Macdonald	7.8	144	http://www.imdb.com/title/tt1183919/
+Lenny Cooke	documentary, biography, drama, sport	2012	Ben Safdie, Joshua Safdie	6	88	http://www.imdb.com/title/tt2606924/
+Fur: An Imaginary Portrait of Diane Arbus	biography, drama, mystery, romance	2006	Steven Shainberg	6.2	122	http://www.imdb.com/title/tt0422295/
+Grace of Monaco	biography, drama	2013	Olivier Dahan			http://www.imdb.com/title/tt2095649/
+Chasing Ice	documentary, biography	2012	Jeff Orlowski	7.4	75	http://www.imdb.com/title/tt1579361/
+Counterpunch	action, biography, drama, sport	2013	Kenneth Castillo	4.5	97	http://www.imdb.com/title/tt2051850/
+Summer in February	biography, drama, romance	2013	Christopher Menaul		100	http://www.imdb.com/title/tt2184287/
+iSteve	biography, comedy	2013	Ryan Perez	5.4		http://www.imdb.com/title/tt2782834/
+PT 109	biography, drama, war	1963	Leslie H. Martinson	6.3	140	http://www.imdb.com/title/tt0057393/
+Grizzly Man	documentary, biography	2005	Werner Herzog	7.8	103	http://www.imdb.com/title/tt0427312/
+Man on Wire	documentary, biography	2008	James Marsh	7.9	94	http://www.imdb.com/title/tt1155592/
+Diana	biography, drama	2013	Oliver Hirschbiegel			http://www.imdb.com/title/tt1758595/
+El Cid	adventure, biography, drama, history, romance, war	1961	Anthony Mann	7.2	182	http://www.imdb.com/title/tt0054847/
+Up from Slavery	documentary, biography, history	2011	Kevin Hershberger	6.4	315	http://www.imdb.com/title/tt1935942/
+Your Cheatin' Heart	biography, drama, music	1964	Gene Nelson	6.5	99	http://www.imdb.com/title/tt0058765/
+The King of Kong: A Fistful of Quarters	documentary, biography, sport	2007	Seth Gordon	8.1	79	http://www.imdb.com/title/tt0923752/
+The Last of Robin Hood	biography, drama	2013	Richard Glatzer, Wash Westmoreland			http://www.imdb.com/title/tt2450440/
+Luther	biography, drama, history	2003	Eric Till	6.6	123	http://www.imdb.com/title/tt0309820/
+Crazy Sexy Cool: The TLC Story	biography	2013	Charles Stone III			http://www.imdb.com/title/tt2137442/
+Good Vibrations	biography, drama, music	2012	Lisa Barros D'Sa, Glenn Leyburn	7.6	103	http://www.imdb.com/title/tt1920945/
+Mesrine: Public Enemy #1	action, biography, crime, drama, thriller	2008	Jean-François Richet	7.4	133	http://www.imdb.com/title/tt0411272/
+Grey Gardens	biography, drama	2009	Michael Sucsy	7.3	104	http://www.imdb.com/title/tt0758751/
+Hands of Stone	action, biography, drama, sport	2014	Jonathan Jakubowicz			http://www.imdb.com/title/tt1781827/
+Silkwood	biography, drama, thriller	1983	Mike Nichols	7.1	131	http://www.imdb.com/title/tt0086312/
+The Entity	biography, horror, sci_fi, thriller	1982	Sidney J. Furie	6.4	125	http://www.imdb.com/title/tt0082334/
+61*	biography, drama, history, sport	2001	Billy Crystal	7.7	129	http://www.imdb.com/title/tt0250934/
+Kundun	biography, drama, history, war	1997	Martin Scorsese	6.9	134	http://www.imdb.com/title/tt0119485/
+The Mirror	biography, drama	1975	Andrei Tarkovsky	7.9	108	http://www.imdb.com/title/tt0072443/
+Shadowlands	biography, drama, romance	1993	Richard Attenborough	7.3	131	http://www.imdb.com/title/tt0108101/
+Sex & Drugs & Rock & Roll	biography, drama, music	2010	Mat Whitecross	6.3	115	http://www.imdb.com/title/tt1393020/
+James Dean	biography, drama	2001	Mark Rydell	7.2	120	http://www.imdb.com/title/tt0240628/
+Mrs Brown	biography, drama, history, romance	1997	John Madden	7.2	105	http://www.imdb.com/title/tt0119280/
+Cry Freedom	biography, drama, history	1987	Richard Attenborough	7.3	157	http://www.imdb.com/title/tt0092804/
+The Enigma of Kaspar Hauser	biography, drama	1974	Werner Herzog	7.8	110	http://www.imdb.com/title/tt0071691/
+Beyond the Sea	biography, drama, music, musical	2004	Kevin Spacey	6.6	118	http://www.imdb.com/title/tt0363473/
+The Other Side of Heaven	adventure, biography, drama	2001	Mitch Davis	6.3	113	http://www.imdb.com/title/tt0250371/
+Veronica Guerin	biography, crime, drama, thriller	2003	Joel Schumacher	6.8	98	http://www.imdb.com/title/tt0312549/
+Joan of Arc	adventure, biography, drama, history	1999	Christian Duguay	6.6	140	http://www.imdb.com/title/tt0178145/
+Restoration	biography, drama, history, romance	1995	Michael Hoffman	6.5	117	http://www.imdb.com/title/tt0114272/
+Lady Jane	biography, drama, history, romance	1986	Trevor Nunn	7	142	http://www.imdb.com/title/tt0091374/
+Hoffa	biography, crime, drama	1992	Danny DeVito	6.5	140	http://www.imdb.com/title/tt0104427/
+8 Seconds	biography, drama, sport	1994	John G. Avildsen	6.1	105	http://www.imdb.com/title/tt0109021/
+Something the Lord Made	biography, drama	2004	Joseph Sargent	8	110	http://www.imdb.com/title/tt0386792/
+Bathory: Countess of Blood	biography, drama, fantasy, history	2008	Juraj Jakubisko	5.8	141	http://www.imdb.com/title/tt0469640/
+Skin	biography, drama	2008	Anthony Fabian	6.7	107	http://www.imdb.com/title/tt0964586/
+Brian's Song	biography, drama, sport	1971	Buzz Kulik	7.6	73	http://www.imdb.com/title/tt0068315/
+De-Lovely	biography, drama, music, musical	2004	Irwin Winkler	6.4	125	http://www.imdb.com/title/tt0352277/
+Dahmer	biography, crime, drama, horror, thriller	2002	David Jacobson	5.5	101	http://www.imdb.com/title/tt0285728/
+Mao's Last Dancer	biography, drama, music, romance	2009	Bruce Beresford	7.1	117	http://www.imdb.com/title/tt1071812/
+The Krays	biography, crime, drama, thriller	1990	Peter Medak	6.6	119	http://www.imdb.com/title/tt0099951/
+Bound for Glory	biography, drama, music	1976	Hal Ashby	7.2	147	http://www.imdb.com/title/tt0074235/
+I Am a Sex Addict	biography, comedy, romance	2005	Caveh Zahedi	6	98	http://www.imdb.com/title/tt0428649/
+Against the Ropes	biography, drama, romance, sport	2004	Charles S. Dutton	5.1	111	http://www.imdb.com/title/tt0312329/
+Eichmann	biography, drama, history, war	2007	Robert Young	5.9	96	http://www.imdb.com/title/tt0901481/
+Great Balls of Fire!	biography, drama, music	1989	Jim McBride	6	108	http://www.imdb.com/title/tt0097457/
+Tucker: The Man and His Dream	biography, drama	1988	Francis Ford Coppola	6.8	110	http://www.imdb.com/title/tt0096316/
+Heaven & Earth	action, biography, drama, history, war	1993	Oliver Stone	6.7	140	http://www.imdb.com/title/tt0107096/
+The Madness of King George	biography, comedy, drama, history	1994	Nicholas Hytner	7.2	107	http://www.imdb.com/title/tt0110428/
+Gods and Monsters	biography, drama	1998	Bill Condon	7.5	105	http://www.imdb.com/title/tt0120684/
+The Odessa File	biography, drama, thriller	1974	Ronald Neame	6.9	130	http://www.imdb.com/title/tt0071935/
+Reversal of Fortune	biography, drama, mystery	1990	Barbet Schroeder	7.1	111	http://www.imdb.com/title/tt0100486/
+Goodbye Bafana	biography, drama, history	2007	Bille August	7	118	http://www.imdb.com/title/tt0438859/
+Talk to Me	biography, drama, history, music, war	2007	Kasi Lemmons	7.2	118	http://www.imdb.com/title/tt0796368/
+Little Ashes	biography, drama, romance	2008	Paul Morrison	6.2	112	http://www.imdb.com/title/tt1104083/
+Tuesdays with Morrie	biography, drama	1999	Mick Jackson	7.3	89	http://www.imdb.com/title/tt0207805/
+Citizen X	biography, crime, drama, history, thriller	1995	Chris Gerolmo	7.6	105	http://www.imdb.com/title/tt0112681/
+The General	biography, crime, drama, thriller	1998	John Boorman	7.2	124	http://www.imdb.com/title/tt0120706/
+Where the Buffalo Roam	biography, comedy	1980	Art Linson	6.5	96	http://www.imdb.com/title/tt0081748/
+Chisum	biography, western	1970	Andrew V. McLaglen	6.6	111	http://www.imdb.com/title/tt0065547/
+Gorillas in the Mist	biography, drama	1988	Michael Apted	6.9	129	http://www.imdb.com/title/tt0095243/
+The Babe	biography, drama, sport	1992	Arthur Hiller	5.7	115	http://www.imdb.com/title/tt0103747/
+In Love and War	biography, drama, romance, war	1996	Richard Attenborough	5.6	113	http://www.imdb.com/title/tt0116621/
+Bobby Jones: Stroke of Genius	biography, drama, romance, sport	2004	Rowdy Herrington	6.4	120	http://www.imdb.com/title/tt0375104/
+Gracie	biography, drama, sport	2007	Davis Guggenheim	6.1	95	http://www.imdb.com/title/tt0441007/
+Cass	biography, crime, drama	2008	Jon S. Baird	6.4	108	http://www.imdb.com/title/tt0954981/
+The Ron Clark Story	biography, drama	2006	Randa Haines	7.4	90	http://www.imdb.com/title/tt0473389/
+Bird	biography, drama, music	1988	Clint Eastwood	7.1	161	http://www.imdb.com/title/tt0094747/
+Lion of the Desert	biography, drama, history, war	1981	Moustapha Akkad	7.7	173	http://www.imdb.com/title/tt0081059/
+Fat Man and Little Boy	biography, drama, history, war	1989	Roland Joffé	6.4	127	http://www.imdb.com/title/tt0097336/
+The Life and Death of Peter Sellers	biography, drama, romance	2004	Stephen Hopkins	6.9	122	http://www.imdb.com/title/tt0352520/
+Modigliani	biography, drama	2004	Mick Davis	6.9	128	http://www.imdb.com/title/tt0367188/
+Topsy-Turvy	biography, comedy, drama, music, musical	1999	Mike Leigh	7.2	160	http://www.imdb.com/title/tt0151568/
+Caravaggio	biography, drama, history	1986	Derek Jarman	6.7	93	http://www.imdb.com/title/tt0090798/
+Fellini's Casanova	biography, drama, history, romance	1976	Federico Fellini	6.9	155	http://www.imdb.com/title/tt0074291/
+Tupac: Resurrection	documentary, biography, music	2003	Lauren Lazin	7.7	112	http://www.imdb.com/title/tt0343121/
+Catch a Fire	biography, drama, history	2006	Phillip Noyce	6.6	101	http://www.imdb.com/title/tt0437232/
+The Assassination of Richard Nixon	biography, drama	2004	Niels Mueller	7	95	http://www.imdb.com/title/tt0364961/
+Jesus	biography, drama, history	1999	Roger Young	5.7	240	http://www.imdb.com/title/tt0199232/
+Caesar	biography, drama, history, war	2002	Uli Edel	6.6	240	http://www.imdb.com/title/tt0284741/
+Auto Focus	biography, crime, drama	2002	Paul Schrader	6.6	105	http://www.imdb.com/title/tt0298744/
+Vatel	biography, drama, romance	2000	Roland Joffé	6.5	103	http://www.imdb.com/title/tt0190861/
+Homeless to Harvard: The Liz Murray Story	biography, drama	2003	Peter Levin	7	104	http://www.imdb.com/title/tt0338109/
+Permanent Midnight	biography, drama, romance	1998	David Veloz	6.1	88	http://www.imdb.com/title/tt0120788/
+Hilary and Jackie	biography, drama, music	1998	Anand Tucker	7.1	121	http://www.imdb.com/title/tt0150915/
+Communion	biography, drama, horror, sci_fi, thriller	1989	Philippe Mora	5.6	107	http://www.imdb.com/title/tt0097100/
+Romero	biography, drama	1989	John Duigan	7.1	102	http://www.imdb.com/title/tt0098219/
+Lenny	biography, comedy, drama	1974	Bob Fosse	7.6	111	http://www.imdb.com/title/tt0071746/
+Wild Bill	action, biography, western	1995	Walter Hill	5.8	98	http://www.imdb.com/title/tt0114938/
+My Boy Jack	biography, drama, history, war	2007	Brian Kirk	7.2	93	http://www.imdb.com/title/tt0851430/
+Henry VIII	biography, drama, romance	2003	Pete Travis	7	193	http://www.imdb.com/title/tt0382737/
+The Audrey Hepburn Story	biography, drama	2000	Steven Robman	5.6	133	http://www.imdb.com/title/tt0163887/
+The Visual Bible: The Gospel of John	biography, drama, history	2003	Philip Saville	7	125	http://www.imdb.com/title/tt0377992/
+Gotti	biography, crime, drama	1996	Robert Harmon, Robert Harmon	7	116	http://www.imdb.com/title/tt0116441/
+Cobb	biography, drama, sport	1994	Ron Shelton	6.3	128	http://www.imdb.com/title/tt0109450/
+The Jacksons: An American Dream	biography, drama, music	1992	Karen Arthur	6.8	240	http://www.imdb.com/title/tt0104541/
+Cannibal! The Musical	biography, comedy, musical, thriller, western	1993	Trey Parker	7	95	http://www.imdb.com/title/tt0115819/
+Mary, Queen of Scots	biography, drama, history	1971	Charles Jarrott	7.3	128	http://www.imdb.com/title/tt0067402/
+Lady Sings the Blues	biography, drama, music, romance	1972	Sidney J. Furie	6.8	144	http://www.imdb.com/title/tt0068828/
+Sweet Dreams	biography, drama, music, musical	1985	Karel Reisz	6.9	115	http://www.imdb.com/title/tt0090110/
+Nowhere in Africa	biography, drama	2001	Caroline Link	7.5	141	http://www.imdb.com/title/tt0161860/
+Stander	action, biography, crime, drama	2003	Bronwen Hughes	7.1	111	http://www.imdb.com/title/tt0326208/
+Prefontaine	biography, drama, romance, sport	1997	Steve James	6.4	106	http://www.imdb.com/title/tt0119937/
+Surviving Picasso	biography, drama, romance	1996	James Ivory	6.1	125	http://www.imdb.com/title/tt0117791/
+Stalin	biography, drama, history	1992	Ivan Passer	7.1	166	http://www.imdb.com/title/tt0105462/
+Nicholas and Alexandra	biography, drama, history, war	1971	Franklin J. Schaffner	7.1	183	http://www.imdb.com/title/tt0067483/
+10 Rillington Place	biography, crime, drama, thriller	1971	Richard Fleischer	7.5	111	http://www.imdb.com/title/tt0066730/
+Christopher Columbus: The Discovery	adventure, biography, drama, history	1992	John Glen	4.2	120	http://www.imdb.com/title/tt0103962/
+Saving Lincoln	biography	2013	Salvador Litvak	4.7		http://www.imdb.com/title/tt2034098/
+I Shot Andy Warhol	biography, drama	1996	Mary Harron	6.4	103	http://www.imdb.com/title/tt0116594/
+Backbeat	biography, drama, music	1994	Iain Softley	6.4	100	http://www.imdb.com/title/tt0106339/
+Norma Jean & Marilyn	biography, drama	1996	Tim Fywell	5.9	139	http://www.imdb.com/title/tt0117201/
+Joseph	adventure, biography, drama, history	1995	Roger Young	7.5	185	http://www.imdb.com/title/tt0113483/
+Rebound: The Legend of Earl 'The Goat' Manigault	biography, drama, sport	1996	Eriq La Salle	7.5	120	http://www.imdb.com/title/tt0117450/
+Star 80	biography, drama	1983	Bob Fosse	6.5	103	http://www.imdb.com/title/tt0086355/
+The Hunter	action, biography, thriller	1980	Buzz Kulik	6.1	97	http://www.imdb.com/title/tt0080907/
+Cromwell	biography, drama, history, war	1970	Ken Hughes	6.7	139	http://www.imdb.com/title/tt0065593/
+MacArthur	biography, drama, history, war	1977	Joseph Sargent	6.5	130	http://www.imdb.com/title/tt0076342/
+Why Do Fools Fall in Love	biography, drama, music	1998	Gregory Nava	5.9	116	http://www.imdb.com/title/tt0123324/
+Introducing Dorothy Dandridge	biography, drama, music, romance	1999	Martha Coolidge	6.9	120	http://www.imdb.com/title/tt0172348/
+Grey Owl	biography, drama, western	1999	Richard Attenborough	5.8	118	http://www.imdb.com/title/tt0128239/
+The Last Time I Committed Suicide	biography, drama	1997	Stephen T. Kay	5.7	92	http://www.imdb.com/title/tt0119502/
+Love Is the Devil: Study for a Portrait of Francis Bacon	biography, drama	1998	John Maybury	6.5	90	http://www.imdb.com/title/tt0119577/
+84 Charing Cross Road	biography, drama, romance	1987	David Jones	7.3	100	http://www.imdb.com/title/tt0090570/
+King David	adventure, biography, drama, war	1985	Bruce Beresford	4.9	114	http://www.imdb.com/title/tt0089420/
+Shackleton	adventure, biography, drama	2002	Charles Sturridge	7.7	206	http://www.imdb.com/title/tt0272839/
+The Three Stooges	biography, comedy, drama	2000	James Frawley	6.6	88	http://www.imdb.com/title/tt0214698/
+Double Teamed	biography, family, sport	2002	Duwayne Dunham	5.9	120	http://www.imdb.com/title/tt0281905/
+Swimming Upstream	biography, drama, sport	2003	Russell Mulcahy	7	114	http://www.imdb.com/title/tt0326664/
+Baadasssss!	biography, drama	2003	Mario Van Peebles	7.3	109	http://www.imdb.com/title/tt0367790/
+Carrington	biography, drama	1995	Christopher Hampton	6.6	121	http://www.imdb.com/title/tt0112637/
+An Angel at My Table	biography, drama	1990	Jane Campion	7.3	158	http://www.imdb.com/title/tt0099040/
+Triumph of the Spirit	biography, drama, history, sport, war	1989	Robert M. Young	6.8	120	http://www.imdb.com/title/tt0098513/
+Buster	adventure, biography, comedy, crime, drama, romance	1988	David Green	5.5	102	http://www.imdb.com/title/tt0094819/
+Capone	biography, crime, drama	1975	Steve Carver	5.5	101	http://www.imdb.com/title/tt0072761/
+My Brilliant Career	biography, drama, romance	1979	Gillian Armstrong	7.2	100	http://www.imdb.com/title/tt0079596/
+Blaze	biography, drama	1989	Ron Shelton	5.7	120	http://www.imdb.com/title/tt0096943/
+Steal This Movie	biography, drama, romance	2000	Robert Greenwald	6.3	107	http://www.imdb.com/title/tt0161216/
+My Life So Far	biography, comedy, drama	1999	Hugh Hudson	6.4	98	http://www.imdb.com/title/tt0120899/
+Barbarians at the Gate	biography, comedy, drama	1993	Glenn Jordan	7.2	107	http://www.imdb.com/title/tt0106356/
+Another Country	biography, drama, romance	1984	Marek Kanievska	6.9	90	http://www.imdb.com/title/tt0086904/
+Prick Up Your Ears	biography, drama	1987	Stephen Frears	7.1	111	http://www.imdb.com/title/tt0093776/
+Lisztomania	biography, comedy, fantasy, musical	1975	Ken Russell	6	103	http://www.imdb.com/title/tt0073298/
+Mahler	biography, drama, music	1974	Ken Russell	6.8	115	http://www.imdb.com/title/tt0071797/
+Jo Jo Dancer, Your Life Is Calling	biography, comedy, drama	1986	Richard Pryor	5.7	97	http://www.imdb.com/title/tt0091295/
+Greased Lightning	action, biography, comedy, drama, sport	1977	Michael Schultz	5.8	96	http://www.imdb.com/title/tt0076106/
+Squanto: A Warrior's Tale	adventure, biography, drama, family	1994	Xavier Koller	6	102	http://www.imdb.com/title/tt0111271/
+Romulus, My Father	biography, drama	2007	Richard Roxburgh	6.5	104	http://www.imdb.com/title/tt0462023/
+Copying Beethoven	biography, drama, music	2006	Agnieszka Holland	6.7	104	http://www.imdb.com/title/tt0424908/
+Ed Gein	biography, crime, drama, horror, thriller	2000	Chuck Parello	5.5	89	http://www.imdb.com/title/tt0230169/
+Without Limits	biography, drama, sport	1998	Robert Towne	6.9	117	http://www.imdb.com/title/tt0119934/
+A Matador's Mistress	biography, drama, romance	2008	Menno Meyjes	5.4	92	http://www.imdb.com/title/tt0491046/
+Frances	biography, drama, romance	1982	Graeme Clifford	7.2	140	http://www.imdb.com/title/tt0083967/
+The Gospel According to St. Matthew	biography, drama, history	1964	Pier Paolo Pasolini	7.7	137	http://www.imdb.com/title/tt0058715/
+Brother Sun, Sister Moon	biography, drama, history, war	1972	Franco Zeffirelli	6.8	135	http://www.imdb.com/title/tt0069824/
+Impromptu	biography, comedy, music, romance	1991	James Lapine	6.9	107	http://www.imdb.com/title/tt0102103/
+Dillinger	action, biography, crime, drama	1973	John Milius	6.8	107	http://www.imdb.com/title/tt0069976/
+The Story of Adele H	biography, drama, history	1975	François Truffaut	7.3	96	http://www.imdb.com/title/tt0073114/
+Vincent & Theo	biography, drama	1990	Robert Altman	7.1	138	http://www.imdb.com/title/tt0100873/
+A Home of Our Own	biography, drama	1993	Tony Bill	6.6	104	http://www.imdb.com/title/tt0107130/
+Yankee Doodle Dandy	biography, drama, musical	1942	Michael Curtiz	7.6	126	http://www.imdb.com/title/tt0035575/
+I Want to Live!	biography, crime, drama, film_noir	1958	Robert Wise	7.4	120	http://www.imdb.com/title/tt0051758/
+The Color of Pomegranates	biography, drama, music	1968	Sergei Parajanov	7.4	79	http://www.imdb.com/title/tt0063555/
+Lust for Life	biography, drama	1956	Vincente Minnelli	7.3	122	http://www.imdb.com/title/tt0049456/
+The Inn of the Sixth Happiness	biography, drama, war	1958	Mark Robson	7.1	158	http://www.imdb.com/title/tt0051776/
+The Song of Bernadette	biography, drama	1943	Henry King	7.4	156	http://www.imdb.com/title/tt0036377/
+The Tillman Story	documentary, biography, mystery, war	2010	Amir Bar-Lev	7.6	94	http://www.imdb.com/title/tt1568334/
+Bugsy	biography, crime, drama, history	1991	Barry Levinson	6.7	136	http://www.imdb.com/title/tt0101516/
+The Miracle Worker	biography, drama	1962	Arthur Penn	7.9	106	http://www.imdb.com/title/tt0056241/
+Underground: The Julian Assange Story	biography, drama	2012	Robert Connolly	6.4	89	http://www.imdb.com/title/tt2357453/
+Ted Bundy	biography, crime, drama, thriller	2002	Matthew Bright	5.8	99	http://www.imdb.com/title/tt0284929/
+Basquiat	biography, drama	1996	Julian Schnabel	6.7	108	http://www.imdb.com/title/tt0115632/
+Porn Star: The Legend of Ron Jeremy	documentary, biography	2001	Scott J. Gill	6.3	80	http://www.imdb.com/title/tt0282856/
+Mr Hockey: The Gordie Howe Story	biography, drama, sport	2013	Andy Mikita	6.2		http://www.imdb.com/title/tt0883391/
+Holy Rollers	biography, crime, drama, history	2010	Kevin Asch	5.8	89	http://www.imdb.com/title/tt1143896/
+The Longshots	biography, comedy, drama, family, sport	2008	Fred Durst	4.4	94	http://www.imdb.com/title/tt1091751/
+I Am Bruce Lee	documentary, biography	2012	Pete McCormack	7.4	94	http://www.imdb.com/title/tt1954299/
+Van Diemen's Land	biography, drama, history	2009	Jonathan auf der Heide	5.8	104	http://www.imdb.com/title/tt1361843/
+Iris	biography, drama, romance	2001	Richard Eyre	7	91	http://www.imdb.com/title/tt0280778/
+The Buddy Holly Story	biography, drama, music	1978	Steve Rash	7.1	114	http://www.imdb.com/title/tt0077280/
+Wilde	biography, drama, history	1997	Brian Gilbert	6.8	118	http://www.imdb.com/title/tt0120514/
+George Harrison: Living in the Material World	documentary, biography, music	2011	Martin Scorsese	7.9	208	http://www.imdb.com/title/tt1113829/
+Lemmy	documentary, biography, music	2010	Greg Olliver, Wes Orshoski	7.6	116	http://www.imdb.com/title/tt1236472/
+The Broken Tower	biography, drama, history, war	2011	James Franco	4.9	99	http://www.imdb.com/title/tt1756791/
+Sunrise at Campobello	biography, drama	1960	Vincent J. Donehue	7	144	http://www.imdb.com/title/tt0054354/
+The Last Ride	biography, drama, music	2012	Harry Thomason	4.6	102	http://www.imdb.com/title/tt1605803/
+Vivaldi	biography, drama, history, music	2013	Boris Damast		120	http://www.imdb.com/title/tt0469879/
+The Times of Harvey Milk	documentary, biography, history	1984	Robert Epstein	8.1	90	http://www.imdb.com/title/tt0088275/
+28 Up	documentary, biography	1984	Michael Apted	8	136	http://www.imdb.com/title/tt0088650/
+Stanley Kubrick: A Life in Pictures	documentary, biography	2001	Jan Harlan	7.9	142	http://www.imdb.com/title/tt0278736/
+Becket	biography, drama, history	1964	Peter Glenville	7.9	148	http://www.imdb.com/title/tt0057877/
+Seven Up!	documentary, biography	1964	Paul Almond	7.9	39	http://www.imdb.com/title/tt0058578/
+Anvil: The Story of Anvil	documentary, biography, music	2008	Sacha Gervasi	7.9	80	http://www.imdb.com/title/tt1157605/
+Capturing the Friedmans	documentary, biography	2003	Andrew Jarecki	7.9	107	http://www.imdb.com/title/tt0342172/
+Crumb	documentary, biography	1994	Terry Zwigoff	7.8	119	http://www.imdb.com/title/tt0109508/
+Bruce Lee: A Warrior's Journey	documentary, action, biography	2000	John Little, Bruce Lee	7.7	100	http://www.imdb.com/title/tt0297814/
+The Lost Prince	biography, drama	2003	Stephen Poliakoff	7.6	180	http://www.imdb.com/title/tt0349747/
+The Devil and Daniel Johnston	documentary, biography, music	2005	Jeff Feuerzeig	7.8	110	http://www.imdb.com/title/tt0436231/
+Bill Cunningham New York	documentary, biography	2010	Richard Press	7.8	84	http://www.imdb.com/title/tt1621444/
+Birdman of Alcatraz	biography, drama	1962	John Frankenheimer	7.8	147	http://www.imdb.com/title/tt0055798/
+American: The Bill Hicks Story	documentary, animation, biography, comedy	2009	Matt Harlock, Paul Thomas	7.7	102	http://www.imdb.com/title/tt1179947/
+Gonzo: The Life and Work of Dr. Hunter S. Thompson	documentary, biography, music	2008	Alex Gibney	7.7	120	http://www.imdb.com/title/tt0479468/
+Ethel	documentary, biography	2012	Rory Kennedy	7.2	97	http://www.imdb.com/title/tt2076844/
+Imagine: John Lennon	documentary, biography, music	1988	Andrew Solt	7.7	100	http://www.imdb.com/title/tt0095360/
+Hawking	biography, drama	2004	Philip Martin	7.6	90	http://www.imdb.com/title/tt0395571/
+Marina Abramovic: The Artist Is Present	documentary, biography, history	2012	Matthew Akers, Jeff Dupre	7.6	106	http://www.imdb.com/title/tt2073029/
+Under African Skies	documentary, biography, history, music	2012	Joe Berlinger	7.3	108	http://www.imdb.com/title/tt2112868/
+Abel Raises Cain	documentary, biography	2005	Jenny Abel, Jeff Hockett	7.3	82	http://www.imdb.com/title/tt0437780/
+Longford	biography, crime, drama	2006	Tom Hooper	7.6	93	http://www.imdb.com/title/tt0759612/
+Warm Springs	biography, drama	2005	Joseph Sargent	7.6	121	http://www.imdb.com/title/tt0423510/
+Jason Becker: Not Dead Yet	documentary, biography, music	2012	Jesse Vile	7.4	87	http://www.imdb.com/title/tt2120779/
+Life with Judy Garland: Me and My Shadows	biography, drama, music	2001	Robert Allan Ackerman	7.5	170	http://www.imdb.com/title/tt0250581/
+The White Diamond	documentary, biography	2004	Werner Herzog	7.5	88	http://www.imdb.com/title/tt0435776/
+Woody Allen: A Documentary	documentary, biography	2012	Robert B. Weide	7.5	113	http://www.imdb.com/title/tt2397619/
+The Gathering Storm	biography, drama, history	2002	Richard Loncraine	7.5	96	http://www.imdb.com/title/tt0314097/
+Marwencol	documentary, biography, fantasy	2010	Jeff Malmberg	7.5	83	http://www.imdb.com/title/tt1391092/
+Inocente	documentary, biography, drama, news	2012	Sean Fine, Andrea Nix	7.2	40	http://www.imdb.com/title/tt2123210/
+God Bless Ozzy Osbourne	documentary, biography, music	2011	Mike Fleiss, Mike Piscitelli	7.3	120	http://www.imdb.com/title/tt1785389/
+The Kid Stays in the Picture	documentary, biography	2002	Nanette Burstein, Brett Morgen	7.4	93	http://www.imdb.com/title/tt0303353/
+Pierrepoint: The Last Hangman	biography, crime, drama, history	2005	Adrian Shergold	7.3	90	http://www.imdb.com/title/tt0462477/
+Bobby Fischer Against the World	documentary, biography, history, sport	2011	Liz Garbus	7.3	93	http://www.imdb.com/title/tt1777551/
+The U.S. vs. John Lennon	documentary, biography, music	2006	David Leaf, John Scheinfeld	7.3	99	http://www.imdb.com/title/tt0478049/
+My Architect	documentary, biography	2003	Nathaniel Kahn	7.3	116	http://www.imdb.com/title/tt0373175/
+Beyond the Mat	documentary, biography, sport	1999	Barry W. Blaustein	7.3	102	http://www.imdb.com/title/tt0218043/
+Killing Lincoln	biography, drama, history, war	2013	Adrian Moat	6.8		http://www.imdb.com/title/tt2299248/
+Truman	biography, drama	1995	Frank Pierson	7.2	135	http://www.imdb.com/title/tt0114738/
+N Is a Number: A Portrait of Paul Erdös	documentary, biography	1993	George Paul Csicsery	6.7	57	http://www.imdb.com/title/tt0125425/
+Elvis	biography, drama, music	2005	James Steven Sadwith	7.2	173	http://www.imdb.com/title/tt0437714/
+In the Realms of the Unreal	documentary, biography	2004	Jessica Yu	7.2	81	http://www.imdb.com/title/tt0390123/
+The Wildest Dream	documentary, adventure, biography	2010	Anthony Geffen	7.2	94	http://www.imdb.com/title/tt1509276/
+Music Within	biography, comedy, drama, music, romance, war	2007	Steven Sawalich	7.2	94	http://www.imdb.com/title/tt0422783/
+The Brandon Teena Story	documentary, biography	1998	Susan Muska, Greta Olafsdottir	7.2	89	http://www.imdb.com/title/tt0144801/
+Crossfire Hurricane	documentary, biography, music	2012	Brett Morgen	7.2	111	http://www.imdb.com/title/tt2370140/
+Houston: The Legend of Texas	biography, drama, history, war, western	1986	Peter Levin	7	144	http://www.imdb.com/title/tt0091224/
+Margaret Thatcher: The Long Walk to Finchley	biography, drama	2008	Niall MacCormick	7.1	84	http://www.imdb.com/title/tt1067578/
+Winnebago Man	documentary, biography, comedy	2009	Ben Steinbauer	7.1	85	http://www.imdb.com/title/tt1396557/
+Shine a Light	documentary, biography, music	2008	Martin Scorsese	7.1	122	http://www.imdb.com/title/tt0893382/
+The Whole Wide World	biography, drama, romance	1996	Dan Ireland	7.1	111	http://www.imdb.com/title/tt0118163/
+The Prize Winner of Defiance, Ohio	biography, drama	2005	Jane Anderson	7.1	99	http://www.imdb.com/title/tt0406158/
+If a Tree Falls: A Story of the Earth Liberation Front	documentary, biography, crime, drama, history, news, thriller	2011	Marshall Curry, Sam Cullman	7.1	85	http://www.imdb.com/title/tt1787725/
+The First Grader	biography, drama	2010	Justin Chadwick	7.1	103	http://www.imdb.com/title/tt0790663/
+Miss Austen Regrets	biography, drama	2008	Jeremy Lovering	7.1	90	http://www.imdb.com/title/tt1076240/
+The Executioner's Song	biography, crime, drama	1982	Lawrence Schiller	7.1	157	http://www.imdb.com/title/tt0083909/
+The Courageous Heart of Irena Sendler	biography, drama, war	2009	John Kent Harrison	7	95	http://www.imdb.com/title/tt1010278/
+RKO 281	biography, drama	1999	Benjamin Ross	7	83	http://www.imdb.com/title/tt0120801/
+Gypsy	biography, comedy, drama, musical	1962	Mervyn LeRoy	7	143	http://www.imdb.com/title/tt0056048/
+The Arbor	documentary, biography	2010	Clio Barnard	7	94	http://www.imdb.com/title/tt1623008/
+Gypsy	biography, comedy, drama, musical	1993	Emile Ardolino	7	153	http://www.imdb.com/title/tt0107065/
+The Hammer	biography, drama, sport	2010	Oren Kaplan	7	108	http://www.imdb.com/title/tt1094666/
+Tarnation	documentary, biography	2003	Jonathan Caouette	7	88	http://www.imdb.com/title/tt0390538/
+Into the Storm	biography, drama, history, war	2009	Thaddeus O'Sullivan	7	100	http://www.imdb.com/title/tt0992993/
+The Race for the Double Helix	biography, drama	1987	Mick Jackson	6.9	97	http://www.imdb.com/title/tt0093815/
+China Cry: A True Story	biography, drama	1990	James F. Collier	6.9	101	http://www.imdb.com/title/tt0101578/
+The Miracle Maker	animation, biography, drama	2000	Derek W. Hayes, Stanislav Sokolov	7	90	http://www.imdb.com/title/tt0208298/
+Behind the Lines	biography, drama, history, war	1997	Gillies Mackinnon	7	114	http://www.imdb.com/title/tt0120001/
+The Mystery of Natalie Wood	biography, drama, mystery	2004	Peter Bogdanovich	6.9	172	http://www.imdb.com/title/tt0389121/
+Biggie and Tupac	documentary, biography, crime, music	2002	Nick Broomfield	6.9	108	http://www.imdb.com/title/tt0303356/
+About Face: Supermodels Then and Now	documentary, biography, comedy	2012	Timothy Greenfield-Sanders	6.9	75	http://www.imdb.com/title/tt2085741/
+Rasputin	biography, drama, history	1996	Uli Edel	6.9	135	http://www.imdb.com/title/tt0117442/
+The Brooke Ellison Story	biography, drama	2004	Christopher Reeve	6.9	91	http://www.imdb.com/title/tt0407612/
+Sing Your Song	documentary, biography, music	2011	Susanne Rostock	6.9	103	http://www.imdb.com/title/tt1787797/
+Young Winston	biography, drama, war	1972	Richard Attenborough	6.6	157	http://www.imdb.com/title/tt0069528/
+The Cross and the Switchblade	biography, crime, drama	1970	Don Murray	5.6	106	http://www.imdb.com/title/tt0068428/
+Valentino	biography, drama	1977	Ken Russell	6	128	http://www.imdb.com/title/tt0076868/
+Lucky Luciano	biography, crime, drama	1973	Francesco Rosi	6.4	105	http://www.imdb.com/title/tt0071782/
+Hitler: The Last Ten Days	biography, drama, history, war	1973	Ennio De Concini	6.5	108	http://www.imdb.com/title/tt0070184/
+Isn't She Great	biography, comedy, romance	2000	Andrew Bergman	4.9	95	http://www.imdb.com/title/tt0141399/
+Song of Norway	biography, drama, musical, romance	1970	Andrew L. Stone	3.3	138	http://www.imdb.com/title/tt0066393/
+The Assassination of Trotsky	biography, drama, history, thriller	1972	Joseph Losey	5.7	103	http://www.imdb.com/title/tt0068226/
+The Greatest	biography, drama, sport	1977	Tom Gries	5.3	101	http://www.imdb.com/title/tt0076111/
+Viva Knievel!	action, adventure, biography, crime	1977	Gordon Douglas	2.3	106	http://www.imdb.com/title/tt0076890/
+Wired	biography, comedy, drama, fantasy	1989	Larry Peerce	4.6	112	http://www.imdb.com/title/tt0098660/
+Ruby	drama	1992	John Mackenzie	5.3	110	http://www.imdb.com/title/tt0105291/
+Ned Kelly	biography, crime, drama, history, western	1970	Tony Richardson	4.9	99	http://www.imdb.com/title/tt0066130/
+Dance with a Stranger	biography, crime, drama	1985	Mike Newell	6.8	102	http://www.imdb.com/title/tt0088987/
+Sunshine	biography, drama	1973	Joseph Sargent	7.2	121	http://www.imdb.com/title/tt0070751/
+Savage Messiah	biography, drama	1972	Ken Russell	6.8	103	http://www.imdb.com/title/tt0069225/
+The Happy Hooker	biography, comedy	1975	Nicholas Sgarro	2.6	96	http://www.imdb.com/title/tt0073091/
+The Chant of Jimmie Blacksmith	biography, crime, drama, history	1978	Fred Schepisi	7.1	120	http://www.imdb.com/title/tt0077318/
+Martin Lawrence Live: Runteldat	documentary, biography, comedy	2002	David Raynr	5.1	113	http://www.imdb.com/title/tt0327036/
+Tropic of Cancer	biography, drama	1970	Joseph Strick	5.8	87	http://www.imdb.com/title/tt0066494/
+Evel Knievel	action, biography, drama	1971	Marvin Chomsky	5.1	88	http://www.imdb.com/title/tt0067069/
+Stevie	biography, drama	1978	Robert Enders	6.7	102	http://www.imdb.com/title/tt0078321/
+Meetings with Remarkable Men	biography, drama	1979	Peter Brook	6.8	108	http://www.imdb.com/title/tt0079542/
+The Bear	biography, drama, family, sport	1984	Richard C. Sarafian	5.8	110	http://www.imdb.com/title/tt0086945/
+The Music Lovers	biography, drama, music	1970	Ken Russell	7	123	http://www.imdb.com/title/tt0066109/
+Walking Tall Part II	action, biography, crime, drama, thriller	1975	Earl Bellamy	5.9	109	http://www.imdb.com/title/tt0073880/
+Galileo	biography, drama	1975	Joseph Losey	6.6	145	http://www.imdb.com/title/tt0073029/
+Leadbelly	biography, drama, music	1976	Gordon Parks	6.7	126	http://www.imdb.com/title/tt0074781/
+The Christine Jorgensen Story	biography, drama	1970	Irving Rapper	5.4	98	http://www.imdb.com/title/tt0065549/
+Freak	biography, comedy	1998	Spike Lee	7.6	89	http://www.imdb.com/title/tt0174666/
+Thirty Two Short Films About Glenn Gould	biography, drama, music	1993	François Girard	7.2	98	http://www.imdb.com/title/tt0108328/
+Carve Her Name with Pride	biography, drama, war	1958	Lewis Gilbert	7	119	http://www.imdb.com/title/tt0051454/
+The Five Pennies	biography, drama, music	1959	Melville Shavelson	7	117	http://www.imdb.com/title/tt0052809/
+Dreamchild	biography, comedy, drama, fantasy, romance	1985	Gavin Millar	7	94	http://www.imdb.com/title/tt0089052/
+42: Forty Two Up	documentary, biography	1998	Michael Apted	8	139	http://www.imdb.com/title/tt0164312/
+35 Up	documentary, biography	1991	Michael Apted	7.9	123	http://www.imdb.com/title/tt0101254/
+49 Up	documentary, biography	2005	Michael Apted, Paul Almond	7.9	180	http://www.imdb.com/title/tt0473434/
+Charlie: The Life and Art of Charles Chaplin	documentary, biography	2003	Richard Schickel	7.8	132	http://www.imdb.com/title/tt0379730/
+Little Dieter Needs to Fly	documentary, biography, drama, war	1997	Werner Herzog	7.9	80	http://www.imdb.com/title/tt0145046/
+21	documentary, biography	1977	Michael Apted	7.9	100	http://www.imdb.com/title/tt0075610/
+7 Plus Seven	documentary, biography	1970	Michael Apted	7.9	52	http://www.imdb.com/title/tt0066356/
+Hitman Hart: Wrestling with Shadows	documentary, biography, sport	1998	Paul Jay	7.7	93	http://www.imdb.com/title/tt0179218/
+Manufacturing Consent: Noam Chomsky and the Media	documentary, biography, war	1992	Mark Achbar, Peter Wintonick	7.8	167	http://www.imdb.com/title/tt0104810/
+I Knew It Was You: Rediscovering John Cazale	documentary, biography	2009	Richard Shepard	7.7	39	http://www.imdb.com/title/tt1352717/
+Hôtel Terminus	documentary, biography	1988	Marcel Ophüls	7.7	267	http://www.imdb.com/title/tt0095341/
+Unforgivable Blackness: The Rise and Fall of Jack Johnson	documentary, biography, sport	2004	Ken Burns	7.7	214	http://www.imdb.com/title/tt0413615/
+End of the Century	documentary, biography, music	2003	Jim Fields, Michael Gramaglia	7.8	110	http://www.imdb.com/title/tt0368711/
+Tesla: Master of Lightning	documentary, biography, history	2000	Robert Uth	7.5	87	http://www.imdb.com/title/tt0272884/
+The Naked Civil Servant	biography, comedy, drama	1975	Jack Gold	7.7	77	http://www.imdb.com/title/tt0073438/
+Be Here to Love Me: A Film About Townes Van Zandt	documentary, biography, music	2004	Margaret Brown	7.7	99	http://www.imdb.com/title/tt0423853/
+Frank Lloyd Wright	documentary, biography, history	1998	Ken Burns, Lynn Novick	7.4	146	http://www.imdb.com/title/tt0144937/
+The Pink Floyd and Syd Barrett Story	documentary, biography, music	2003	John Edginton	7.6	50	http://www.imdb.com/title/tt0368147/
+The Fearless Freaks	documentary, biography, music	2005	Bradley Beesley	7.7	103	http://www.imdb.com/title/tt0441758/
+A Woman Called Golda	biography, drama, history	1982	Alan Gibson	7.6	200	http://www.imdb.com/title/tt0084914/
+Bill	biography, drama	1981	Anthony Page	7.7	100	http://www.imdb.com/title/tt0082075/
+Jimi Hendrix	documentary, biography, music	1973	Joe Boyd, John Head	7.7	98	http://www.imdb.com/title/tt0070242/
+John Huston: The Man, the Movies, the Maverick	documentary, biography	1989	Frank Martin	7.5	126	http://www.imdb.com/title/tt0095408/
+No Distance Left to Run	documentary, biography, music	2010	Will Lovelace, Dylan Southern	7.6	104	http://www.imdb.com/title/tt1565434/
+The Disappearance of Aimee	biography, drama	1976	Anthony Harvey	7.6	100	http://www.imdb.com/title/tt0074411/
+Dreams with Sharp Teeth	documentary, biography	2008	Erik Nelson	7.7	96	http://www.imdb.com/title/tt1018887/
+Marilyn Monroe: The Final Days	documentary, biography	2001	Patty Ivins	7.6	90	http://www.imdb.com/title/tt0286809/
+Boogie Man: The Lee Atwater Story	documentary, biography	2008	Stefan Forbes	7.7	86	http://www.imdb.com/title/tt1262863/
+Bukowski: Born into This	documentary, biography	2003	John Dullaghan	7.7	130	http://www.imdb.com/title/tt0342150/
+Boy Interrupted	documentary, biography, drama	2009	Dana Perry	7.7	92	http://www.imdb.com/title/tt1327819/
+Chris & Don. A Love Story	documentary, biography, romance	2007	Tina Mascara, Guido Santi	7.6	90	http://www.imdb.com/title/tt1138002/
+An Unreasonable Man	documentary, biography	2006	Henriette Mantel, Steve Skrovan	7.7	122	http://www.imdb.com/title/tt0492499/
+Carmen Miranda: Bananas Is My Business	documentary, biography, music	1995	Helena Solberg	7.3	91	http://www.imdb.com/title/tt0109381/
+Honest Man: The Life of R. Budd Dwyer	documentary, biography, drama, news	2010	James Dirschberger	7	76	http://www.imdb.com/title/tt1623777/
+Hitchcock: Shadow of a Genius	documentary, biography	1999	Ted Haimes	7.6	101	http://www.imdb.com/title/tt0202907/
+Scorsese on Scorsese	documentary, biography	2004	Richard Schickel	7.4	86	http://www.imdb.com/title/tt0440780/
+Mo	biography, drama	2010	Philip Martin	7.4	101	http://www.imdb.com/title/tt1591585/
+Silent Night	biography, drama, war	2002	Rodney Gibbons	7.6	100	http://www.imdb.com/title/tt0338434/
+Lenny Bruce: Swear to Tell the Truth	documentary, biography	1998	Robert B. Weide	7.6	100	http://www.imdb.com/title/tt0175844/
+Young Catherine	biography, drama, history	1991	Michael Anderson	7.6		http://www.imdb.com/title/tt0103311/
+The Day After Trinity	documentary, biography	1981	Jon Else	7.4	88	http://www.imdb.com/title/tt0080594/
+Genghis Khan	biography, drama	2005	Edward Bazalgette	7.5	58	http://www.imdb.com/title/tt0460806/
+The Execution of Private Slovik	biography, drama	1974	Lamont Johnson	7.6	120	http://www.imdb.com/title/tt0071477/
+As I Was Moving Ahead Occasionally I Saw Brief Glimpses of Beauty	documentary, biography	2000	Jonas Mekas	7.3	320	http://www.imdb.com/title/tt0262240/
+Wings of Hope	documentary, adventure, biography, history	2000	Werner Herzog	7.6	65	http://www.imdb.com/title/tt0249248/
+American Radical: The Trials of Norman Finkelstein	documentary, history, biography, mystery, news, war	2009	David Ridgen, Nicolas Rossier	7.5	84	http://www.imdb.com/title/tt1475191/
+Cameraman: The Life and Work of Jack Cardiff	documentary, biography	2010	Craig McCall	7.7	86	http://www.imdb.com/title/tt1626811/
+Eleanor and Franklin	biography, drama, romance	1976	Daniel Petrie	7.5	240	http://www.imdb.com/title/tt0074464/
+Stardust: The Bette Davis Story	documentary, biography	2006	Peter Jones, Mark Catalena	7.5	88	http://www.imdb.com/title/tt0800219/
+Directed by John Ford	documentary, biography	1971	Peter Bogdanovich	7.6	99	http://www.imdb.com/title/tt0066997/
+Best Boy	documentary, biography	1979	Ira Wohl	7.5	111	http://www.imdb.com/title/tt0078850/
+Anne Frank Remembered	documentary, biography, war	1995	Jon Blair	7.6	122	http://www.imdb.com/title/tt0112373/
+Vito	documentary, biography	2011	Jeffrey Schwarz	6.9	93	http://www.imdb.com/title/tt1444284/
+Brando	documentary, biography	2007	Mimi Freedman, Leslie Greif	7.5	165	http://www.imdb.com/title/tt1023144/
+Eleanor and Franklin: The White House Years	biography, drama	1977	Daniel Petrie	7.6	180	http://www.imdb.com/title/tt0075981/
+Freddie Mercury, the Untold Story	documentary, biography, music	2000	Rudi Dolezal, Hannes Rossacher	7.2	59	http://www.imdb.com/title/tt0272620/
+Prisoner of Paradise	documentary, biography	2002	Malcolm Clarke, Stuart Sender	7.6	96	http://www.imdb.com/title/tt0316013/
+Bill: On His Own	biography, drama	1983	Anthony Page	7.6	100	http://www.imdb.com/title/tt0085247/
+Shadowlands	biography, drama, romance	1985	Norman Stone	7.6	92	http://www.imdb.com/title/tt0090005/
+Common Threads: Stories from the Quilt	documentary, biography, history	1989	Rob Epstein, Jeffrey Friedman	7.5	79	http://www.imdb.com/title/tt0097099/
+Pope John Paul II	biography, drama	1984	Herbert Wise	7.4	150	http://www.imdb.com/title/tt0087931/
+This Way of Life	documentary, action, adventure, biography, family	2009	Thomas Burstyn	7.2	84	http://www.imdb.com/title/tt1480692/
+Hey, Mr. Producer! The Musical World of Cameron Mackintosh	documentary, biography, music	1998	Gavin Taylor	7.2	164	http://www.imdb.com/title/tt0179846/
+Huey Long	documentary, biography	1985	Ken Burns	7.5	88	http://www.imdb.com/title/tt0089310/
+Stanley Kubrick's Boxes	documentary, biography	2008	Jon Ronson	7.6	48	http://www.imdb.com/title/tt1263704/
+Fidel	documentary, biography	2001	Estela Bravo	7.4	91	http://www.imdb.com/title/tt0292508/
+Without Lying Down: Frances Marion and the Power of Women in Hollywood	documentary, biography	2000	Bridget Terry	7.1	56	http://www.imdb.com/title/tt0268037/
+Murderers Among Us: The Simon Wiesenthal Story	biography, drama, war	1989	Brian Gibson	7.5	160	http://www.imdb.com/title/tt0097933/
+Richard II	biography, drama, history, war	1978	David Giles	7.3	158	http://www.imdb.com/title/tt0077806/
+Mark Twain	documentary, biography	2001	Ken Burns	7.4	212	http://www.imdb.com/title/tt0306355/
+The Best of Men	biography	2012	Tim Whitby	7	90	http://www.imdb.com/title/tt2374835/
+Rock n Roll Nerd	documentary, biography, comedy	2008	Rhian Skirving	7.2	89	http://www.imdb.com/title/tt1297297/
+Ryan	documentary, animation, biography, drama, fantasy	2004	Chris Landreth	7.6	14	http://www.imdb.com/title/tt0414469/
+A Short Stay in Switzerland	biography, drama	2009	Simon Curtis	7.4	90	http://www.imdb.com/title/tt1273813/
+Marlene	documentary, biography	1984	Maximilian Schell	7.6	94	http://www.imdb.com/title/tt0085905/
+Garbo	documentary, biography	2005	Christopher Bird, Kevin Brownlow	7.3	85	http://www.imdb.com/title/tt0471003/
+Barnum!	biography, musical	1986	Peter Coe, Terry Hughes	7.3	113	http://www.imdb.com/title/tt0090702/
+Thelonious Monk: Straight, No Chaser	documentary, biography, music	1988	Charlotte Zwerin	7.6	90	http://www.imdb.com/title/tt0098465/
+Dzi Croquettes	documentary, biography, drama, music, musical	2009	Raphael Alvarez, Tatiana Issa	6.9	110	http://www.imdb.com/title/tt1532945/
+Einstein's Big Idea	biography, drama, history	2005	Gary Johnstone	7.5	120	http://www.imdb.com/title/tt0476209/
+Michael Jordan: His Airness	documentary, biography, sport	1999		7.3		http://www.imdb.com/title/tt0202471/
+Peter and Paul	biography, drama, history	1981	Robert Day	7.4	198	http://www.imdb.com/title/tt0082900/
+The Filth and the Fury	documentary, biography, history, music	2000	Julien Temple	7.5	108	http://www.imdb.com/title/tt0236216/
+U.F.O. ABDUCTION	documentary, biography, sci_fi, thriller	1989	Dean Alioto	6.7	60	http://www.imdb.com/title/tt0169005/
+In the Mirror of Maya Deren	documentary, biography	2002	Martina Kudlácek	7.3	103	http://www.imdb.com/title/tt0284203/
+Still Bill	documentary, biography, music	2009	Damani Baker, Alex Vlack	7.4	78	http://www.imdb.com/title/tt1333117/
+Spine Tingler! The William Castle Story	documentary, biography	2007	Jeffrey Schwarz	7.4	82	http://www.imdb.com/title/tt0795473/
+The Mindscape of Alan Moore	documentary, biography	2005	Dez Vylenz, Moritz Winkler	7.4	80	http://www.imdb.com/title/tt0410321/
+Florence Nightingale	biography, drama, family, romance, war	1985	Daryl Duke	7.4	140	http://www.imdb.com/title/tt0089157/
+Janis	documentary, biography, music	1974	Howard Alk	7.4	96	http://www.imdb.com/title/tt0073193/
+General Idi Amin Dada	documentary, biography, war	1974	Barbet Schroeder	7.5	90	http://www.imdb.com/title/tt0071544/
+Shut Up & Sing	documentary, biography, music	2006	Barbara Kopple, Cecilia Peck	7.5	93	http://www.imdb.com/title/tt0811136/
+The Grey Fox	biography, drama, western	1982	Phillip Borsos	7.5	110	http://www.imdb.com/title/tt0085622/
+Time Will Tell	documentary, biography, music	1992	Declan Lowney	7	90	http://www.imdb.com/title/tt0105596/
+Mr. Death: The Rise and Fall of Fred A. Leuchter, Jr.	documentary, biography	1999	Errol Morris	7.5	91	http://www.imdb.com/title/tt0192335/
+Inside the Third Reich	biography, drama, history, war	1982	Marvin J. Chomsky	7.4	300	http://www.imdb.com/title/tt0084140/
+From the Journals of Jean Seberg	documentary, biography	1995	Mark Rappaport	7.3	97	http://www.imdb.com/title/tt0113125/
+Not Only But Always	biography, drama	2004	Terry Johnson	7.2	120	http://www.imdb.com/title/tt0408046/
+Chuck Berry Hail! Hail! Rock 'n' Roll	documentary, biography, music	1987	Taylor Hackford	7.5	120	http://www.imdb.com/title/tt0092758/
+Bhutto	documentary, biography	2010	Duane Baughman, Johnny O'Hara	7.3	111	http://www.imdb.com/title/tt1524095/
+Trumbo	documentary, biography	2007	Peter Askin	7.4	96	http://www.imdb.com/title/tt0889671/
+Herb & Dorothy	documentary, biography	2008	Megumi Sasaki	7.4	87	http://www.imdb.com/title/tt1227929/
+Marjoe	documentary, biography	1972	Sarah Kernochan, Howard Smith	7.4	88	http://www.imdb.com/title/tt0068924/
+Guyana Tragedy: The Story of Jim Jones	biography, drama	1980	William A. Graham	7.4	192	http://www.imdb.com/title/tt0080832/
+AFI Life Achievement Award: A Tribute to Al Pacino	biography	2007	Louis J. Horvitz	7.4	90	http://www.imdb.com/title/tt1147705/
+A Constant Forge	documentary, biography	2000	Charles Kiselyak	7.3	200	http://www.imdb.com/title/tt0346794/
+Victoria & Albert	biography, drama, history, romance	2001	John Erman	7.4	200	http://www.imdb.com/title/tt0262995/
+Kill Me If You Can	biography, drama	1977	Buzz Kulik	7.4	100	http://www.imdb.com/title/tt0076262/
+You Can Heal Your Life	documentary, biography	2007	Michael A. Goorjian	6.7	87	http://www.imdb.com/title/tt1277154/
+A Brief History of Time	documentary, biography	1991	Errol Morris	7.4	80	http://www.imdb.com/title/tt0103882/
+Wild Bill: Hollywood Maverick	documentary, biography	1995	Todd Robinson	7.2	95	http://www.imdb.com/title/tt0114939/
+The Life and Times of Hank Greenberg	documentary, biography, sport	1998	Aviva Kempner	7.4	90	http://www.imdb.com/title/tt0208261/
+A Triumph of the Heart: The Ricky Bell Story	biography, drama, sport	1991	Richard Michaels	7.2	100	http://www.imdb.com/title/tt0103123/
+Shadows in the Dark: The Val Lewton Legacy	documentary, biography	2005	Constantine Nasr	7.3	53	http://www.imdb.com/title/tt0475144/
+Reagan	documentary, biography	2011	Eugene Jarecki	7.3	105	http://www.imdb.com/title/tt1822382/
+Jeff Buckley: Everybody Here Wants You	documentary, biography, music	2002	Serena Cross	6.8	60	http://www.imdb.com/title/tt0351127/
+To Catch a Killer	biography, crime, drama, thriller	1992	Eric Till	7.4	182	http://www.imdb.com/title/tt0105604/
+Sherman's March	documentary, biography	1985	Ross McElwee	7.3	157	http://www.imdb.com/title/tt0091943/
+Malcolm X	documentary, biography	1972	Arnold Perl	7.1	91	http://www.imdb.com/title/tt0068903/
+Henri Cartier-Bresson: The Impassioned Eye	documentary, biography	2003	Heinz Bütler	7.1	72	http://www.imdb.com/title/tt0369523/
+The Secret Life of Mrs. Beeton	biography	2006	Jon Jones	7.1	85	http://www.imdb.com/title/tt0815233/
+Hubert Selby Jr: It/ll Be Better Tomorrow	documentary, biography	2005	Michael W. Dean, Kenneth Shiffrin	7	79	http://www.imdb.com/title/tt0437236/
+The Agronomist	documentary, biography, history	2003	Jonathan Demme	7.3	90	http://www.imdb.com/title/tt0377031/
+Bruce Springsteen: The Complete Video Anthology 1978-2000	documentary, biography, music	2001	Meiert Avis, Adam Bernstein	6.9	165	http://www.imdb.com/title/tt0363491/
+George Wallace	biography, drama	1997	John Frankenheimer	7.3	178	http://www.imdb.com/title/tt0119189/
+The Untold Story of Emmett Louis Till	documentary, biography	2005	Keith A. Beauchamp	7.1	70	http://www.imdb.com/title/tt0475420/
+Maya Lin: A Strong Clear Vision	documentary, biography	1994	Freida Lee Mock	7.1	105	http://www.imdb.com/title/tt0110480/
+In Search of Beethoven	documentary, biography, music	2009	Phil Grabsky	7	139	http://www.imdb.com/title/tt1308123/
+A Skin Too Few: The Days of Nick Drake	documentary, biography	2002	Jeroen Berkvens	7.2	48	http://www.imdb.com/title/tt0264013/
+Garbo: The Spy	documentary, biography, history	2009	Edmon Roch	7.1	88	http://www.imdb.com/title/tt1344315/
+Of Time and the City	documentary, biography, history	2008	Terence Davies	7.3	74	http://www.imdb.com/title/tt1232790/
+The Soul of a Man	documentary, biography, history, music	2003	Wim Wenders	7.2	103	http://www.imdb.com/title/tt0368287/
+Wallenberg: A Hero's Story	biography, drama, history, war	1985	Lamont Johnson	7.2	200	http://www.imdb.com/title/tt0090285/
+The Rosa Parks Story	biography, drama	2002	Julie Dash	7.2	97	http://www.imdb.com/title/tt0293562/
+Mandela	documentary, biography, history	1996	Angus Gibson, Jo Menell	7.1	118	http://www.imdb.com/title/tt0116980/
+The Brothers Warner	documentary, biography, history	2007	Cass Warner Sperling	7.1	90	http://www.imdb.com/title/tt1023499/
+Walt: The Man Behind the Myth	documentary, biography	2001	Jean-Pierre Isbouts	6.9	119	http://www.imdb.com/title/tt0296273/
+Phil Ochs: There But for Fortune	documentary, biography, history, music	2010	Kenneth Bowser	7	96	http://www.imdb.com/title/tt1597089/
+Hated: GG Allin & the Murder Junkies	documentary, biography, music	1993	Todd Phillips	7.2	90	http://www.imdb.com/title/tt0107086/
+The Burning Season	biography, drama	1994	John Frankenheimer	7.2	123	http://www.imdb.com/title/tt0109351/
+A Harlot's Progress	biography, drama, history	2006	Justin Hardy	6.9	120	http://www.imdb.com/title/tt0906016/
+Manson	documentary, biography, crime	1973	Robert Hendrickson, Laurence Merrick	7.2	83	http://www.imdb.com/title/tt0068918/
+Glass: A Portrait of Philip in Twelve Parts	documentary, biography, music	2007	Scott Hicks	7.1	119	http://www.imdb.com/title/tt1092004/
+Kenneth Williams: Fantabulosa!	biography, comedy, drama	2006	Andy de Emmony	7.1	79	http://www.imdb.com/title/tt0490126/
+The Nomi Song	documentary, biography, music	2004	Andrew Horn	7.1	98	http://www.imdb.com/title/tt0402406/
+Steve Jobs: Billion Dollar Hippy	documentary, biography	2011	Laura Craig Gray, Tristan Quinn	6.5	50	http://www.imdb.com/title/tt2132457/
+Filth: The Mary Whitehouse Story	biography, comedy, drama	2008	Andy de Emmony	7.1	90	http://www.imdb.com/title/tt1046922/
+Bonhoeffer	documentary, biography, history, war	2003	Martin Doblmeier	7	93	http://www.imdb.com/title/tt0371583/
+The Long Day Closes	biography, drama, family	1992	Terence Davies	7.1	85	http://www.imdb.com/title/tt0104753/
+Pretty as a Picture: The Art of David Lynch	documentary, biography	1997	Toby Keeler	7.1	85	http://www.imdb.com/title/tt0192470/
+Wrangler: Anatomy of an Icon	documentary, biography, romance	2008	Jeffrey Schwarz	6.9	85	http://www.imdb.com/title/tt1053951/
+Joan Rivers: A Piece of Work	documentary, biography, comedy	2010	Ricki Stern, Annie Sundberg	7.2	84	http://www.imdb.com/title/tt1568150/
+Theremin: An Electronic Odyssey	documentary, biography, history, music	1994	Steven M. Martin	7.1	83	http://www.imdb.com/title/tt0108323/
+For Love or Country: The Arturo Sandoval Story	biography, drama, music	2000	Joseph Sargent	7.1	120	http://www.imdb.com/title/tt0236285/
+Big Boys Gone Bananas!*	documentary, biography, drama, news	2011	Fredrik Gertten	7	90	http://www.imdb.com/title/tt2090463/
+Rita	documentary, biography	2003	Elaina Archer	6.9	59	http://www.imdb.com/title/tt0380673/
+Jupiter's Wife	documentary, biography, mystery	1995	Michel Negroponte	6.9	87	http://www.imdb.com/title/tt0110217/
+Jinnah	biography, drama, war	1998	Jamil Dehlavi	7.1	110	http://www.imdb.com/title/tt0183306/
+Constantine's Sword	documentary, biography	2007	Oren Jacoby	7.1	93	http://www.imdb.com/title/tt0902270/
+Mama Africa	documentary, biography, music	2011	Mika Kaurismäki	6.7	90	http://www.imdb.com/title/tt1543029/
+Scott Walker: 30 Century Man	documentary, biography, music	2006	Stephen Kijak	7.1	95	http://www.imdb.com/title/tt0486541/
+The Diary of Anne Frank	biography, drama	1980	Boris Sagal	7	109	http://www.imdb.com/title/tt0080625/
+Where I Stand: The Hank Greenspun Story	documentary, biography, crime	2008	Scott Goldstein	6.3	98	http://www.imdb.com/title/tt1408343/
+Anton Corbijn Inside Out	documentary, biography	2012	Klaartje Quirijns	6.8	85	http://www.imdb.com/title/tt2101314/
+Breaking the Code	biography, drama	1996	Herbert Wise	7	75	http://www.imdb.com/title/tt0115749/
+Eames: The Architect & The Painter	documentary, biography	2011	Jason Cohn, Bill Jersey	7	85	http://www.imdb.com/title/tt1972646/
+Time Indefinite	biography	1993	Ross McElwee	7.1	114	http://www.imdb.com/title/tt0108341/
+Isadora	biography, drama, music, romance	1968	Karel Reisz	7.1	131	http://www.imdb.com/title/tt0063141/
+Through the Fire	documentary, biography, sport	2005	Alistair Christopher, Jonathan Hock	7	103	http://www.imdb.com/title/tt0457502/
+Fellini: I'm a Born Liar	documentary, biography	2002	Damian Pettigrew	7	105	http://www.imdb.com/title/tt0314062/
+Harvard Beats Yale 29-29	documentary, biography, sport, war	2008	Kevin Rafferty	7	105	http://www.imdb.com/title/tt1286800/
+I Know Why the Caged Bird Sings	biography, drama	1979	Fielder Cook	6.9	96	http://www.imdb.com/title/tt0079321/
+The Eyes of Tammy Faye	documentary, biography	2000	Fenton Bailey, Randy Barbato	7	79	http://www.imdb.com/title/tt0233687/
+The Dreamer of Oz	biography, drama, family, fantasy	1990	Jack Bender	7	100	http://www.imdb.com/title/tt0099464/
+Babe	biography, drama, sport	1975	Buzz Kulik	7	106	http://www.imdb.com/title/tt0072677/
+Clara Bow: Discovering the It Girl	documentary, biography	1999	Hugh Munro Neely	6.8	57	http://www.imdb.com/title/tt0255060/
+Hey, Boo: Harper Lee and 'To Kill a Mockingbird'	documentary, biography, history, news	2010	Mary McDonagh Murphy	6.9	78	http://www.imdb.com/title/tt1638979/
+Party Monster	documentary, biography	1998	Fenton Bailey, Randy Barbato	7	57	http://www.imdb.com/title/tt0141716/
+Karol: A Man Who Became Pope	biography, drama	2005	Giacomo Battiato	7	186	http://www.imdb.com/title/tt0435100/
+Phar Lap	biography, drama, family, history, sport	1983	Simon Wincer	7	107	http://www.imdb.com/title/tt0086102/
+Carol Channing: Larger Than Life	documentary, biography, comedy, music	2012	Dori Berinstein	6.8	87	http://www.imdb.com/title/tt1737122/
+Jimmy Carter Man from Plains	documentary, biography	2007	Jonathan Demme	7	125	http://www.imdb.com/title/tt0913958/
+Freud	biography, drama	1962	John Huston	7	140	http://www.imdb.com/title/tt0055998/
+New York Beat Movie	biography, comedy, drama	1981	Edo Bertoglio	7	72	http://www.imdb.com/title/tt0208993/
+Don King: Only in America	biography, drama, sport	1997	John Herzfeld	7	121	http://www.imdb.com/title/tt0119838/
+Cazuza: Time Doesn't Stop	biography	2004	Walter Carvalho, Sandra Werneck	7	98	http://www.imdb.com/title/tt0318590/
+Without Bias	biography	2009	Kirk Fraser	6.9	96	http://www.imdb.com/title/tt1205503/
+One Against the Wind	biography, drama	1991	Larry Elikann	7	96	http://www.imdb.com/title/tt0102591/
+The Man Who Broke 1,000 Chains	biography, drama	1987	Daniel Mann	7	115	http://www.imdb.com/title/tt0093485/
+This Is Elvis	biography, music	1981	Malcolm Leo, Andrew Solt	7	101	http://www.imdb.com/title/tt0083193/
+The Marva Collins Story	biography, drama	1981	Peter Levin	6.8	100	http://www.imdb.com/title/tt0082719/
+Mayor of the Sunset Strip	documentary, biography, music	2003	George Hickenlooper	6.9	94	http://www.imdb.com/title/tt0230512/
+The Vernon Johns Story	biography, drama	1994	Kenneth Fink	6.8	100	http://www.imdb.com/title/tt0111611/
+The Haunted World of Edward D. Wood Jr.	documentary, biography	1995	Brett Thompson	6.9	89	http://www.imdb.com/title/tt0113270/
+The Redemption of General Butt Naked	documentary, biography, drama, war	2011	Daniele Anastasion, Eric Strauss	6.7	85	http://www.imdb.com/title/tt1733679/
+A Dream Is a Wish Your Heart Makes: The Annette Funicello Story	biography, drama	1995	Bill Corcoran	6.9	120	http://www.imdb.com/title/tt0112898/
+Second Serve	biography, drama, sport	1986	Anthony Page	7.1	120	http://www.imdb.com/title/tt0091913/
+Air Guitar Nation	documentary, biography, music	2006	Alexandra Lipsitz	6.9	81	http://www.imdb.com/title/tt0799915/
+Black White + Gray: A Portrait of Sam Wagstaff and Robert Mapplethorpe	documentary, biography	2007	James Crump	6.9	77	http://www.imdb.com/title/tt1003113/
+Vincent	animation, biography, drama	1987	Paul Cox	6.9	105	http://www.imdb.com/title/tt0094269/
+The Gallant Hours	biography, drama, war	1960	Robert Montgomery	6.9	115	http://www.imdb.com/title/tt0053849/
+Sally Hemings: An American Scandal	biography, drama, history, romance	2000	Charles Haid	6.9	251	http://www.imdb.com/title/tt0206951/
+Testimony	biography, drama, history, music	1988	Tony Palmer	6.9	157	http://www.imdb.com/title/tt0096250/
+Genius Within: The Inner Life of Glenn Gould	documentary, biography, music	2009	Michèle Hozer, Peter Raymont	6.8	109	http://www.imdb.com/title/tt1503774/
+A Huey P. Newton Story	documentary, biography	2001	Spike Lee	6.9	86	http://www.imdb.com/title/tt0278490/
+Blue	biography, drama	1993	Derek Jarman	6.9	79	http://www.imdb.com/title/tt0106438/
+Serving in Silence: The Margarethe Cammermeyer Story	biography, drama	1995	Jeff Bleckner	6.9	91	http://www.imdb.com/title/tt0114395/
+The Gospel According to Matthew	biography, drama, history	1993	Regardt van den Bergh	6.9	258	http://www.imdb.com/title/tt0301359/
+Madre Teresa	biography, drama	2003	Fabrizio Costa	6.9	180	http://www.imdb.com/title/tt0375986/
+With Great Power: The Stan Lee Story	documentary, biography	2010	Terry Dougas, Nikki Frakes	7	80	http://www.imdb.com/title/tt1091863/
+The Trials of Oscar Wilde	biography, drama, history	1960	Ken Hughes	6.9	123	http://www.imdb.com/title/tt0054403/
+Joe Hill	biography, drama, history	1971	Bo Widerberg	6.8	117	http://www.imdb.com/title/tt0067276/
+Sadat	biography, drama, history, war	1983	Richard Michaels	6.7	195	http://www.imdb.com/title/tt0086229/
+A Matter of Taste: Serving Up Paul Liebrandt	documentary, biography	2011	Sally Rowe	6.9	68	http://www.imdb.com/title/tt1746136/
+Obscene	documentary, biography	2007	Daniel O'Connor, Neil Ortenberg	6.9	97	http://www.imdb.com/title/tt1093849/
+Hell to Eternity	biography, drama, war	1960	Phil Karlson	6.9	131	http://www.imdb.com/title/tt0053901/
+My Way Home	biography, drama	1978	Bill Douglas	7.1	71	http://www.imdb.com/title/tt0077964/
+The Belle of Amherst	biography, drama	1976	Charles S. Dubin	7.3	90	http://www.imdb.com/title/tt0202812/
+Martin Luther	biography, drama, history	2002	Cassian Harrison	6.9	115	http://www.imdb.com/title/tt0378331/
+The John Garfield Story	documentary, biography	2003	David Heeley	7.6	58	http://www.imdb.com/title/tt0352468/
+The Life of Reilly	documentary, biography, comedy	2006	Frank L. Anderson, Barry Poltermann	7.4	84	http://www.imdb.com/title/tt0498366/
+Life of Python	documentary, biography, comedy	1990	Mark Redhead	7.4	57	http://www.imdb.com/title/tt0329296/
+Alter Egos	documentary, biography	2004	Laurence Green	7.4	52	http://www.imdb.com/title/tt0431607/
+George Stevens: A Filmmaker's Journey	documentary, biography	1984	George Stevens Jr.	7.5	110	http://www.imdb.com/title/tt0087322/
+The Ku Klux Klan: A Secret History	documentary, biography, crime, history	1998	Bill Brummel	7.2	89	http://www.imdb.com/title/tt0307072/
+The Men Who Made the Movies: Howard Hawks	documentary, biography	1973	Richard Schickel	7.5	57	http://www.imdb.com/title/tt0070199/
+Louise Brooks: Looking for Lulu	documentary, biography	1998	Hugh Munro Neely	7.5	60	http://www.imdb.com/title/tt0157938/
+The Unknown Peter Sellers	documentary, biography	2000	David Leaf, John Scheinfeld	7.2	52	http://www.imdb.com/title/tt0243637/
+All About Bette	documentary, biography	1994	Susan F. Walker	7.2	48	http://www.imdb.com/title/tt0106247/
+The Doors Collection	documentary, biography, music	1999	Ray Manzarek, Rick Schmidlin	7.1	172	http://www.imdb.com/title/tt0500122/
+The Government Inspector	biography, drama	2005	Peter Kosminsky	7.6	125	http://www.imdb.com/title/tt0449030/
+We Jam Econo: The Story of the Minutemen	documentary, biography, music	2005	Tim Irwin	7.6	91	http://www.imdb.com/title/tt0446071/
+Marlene Dietrich: Her Own Song	documentary, biography	2001	J. David Riva	7.4	100	http://www.imdb.com/title/tt0268443/
+The Muppets Celebrate Jim Henson	documentary, animation, action, biography, family	1990	Don Mischer	7.2	78	http://www.imdb.com/title/tt0251874/
+The Ballad of Ramblin' Jack	documentary, biography, music	2000	Aiyana Elliott	7.3	112	http://www.imdb.com/title/tt0236008/
+Atatürk: Founder of Modern Turkey	documentary, biography	1999	Tarquin Olivier	7	52	http://www.imdb.com/title/tt0296513/
+Katharine Hepburn: All About Me	documentary, biography	1993	David Heeley	7.4	70	http://www.imdb.com/title/tt0104597/
+The Tramp and the Dictator	documentary, biography, history, war	2002	Kevin Brownlow, Michael Kloft	7.6	56	http://www.imdb.com/title/tt0311929/
+Going Upriver: The Long War of John Kerry	documentary, biography, history	2004	George Butler	7.6	87	http://www.imdb.com/title/tt0407263/
+George Stevens: D-Day to Berlin	documentary, biography, war	1994		7	46	http://www.imdb.com/title/tt0162344/
+Ultimate Gretzky	documentary, biography, sport	2003		7.2	120	http://www.imdb.com/title/tt0395797/
+I'm King Kong!: The Exploits of Merian C. Cooper	documentary, biography	2005	Christopher Bird, Kevin Brownlow	7.4	57	http://www.imdb.com/title/tt0492060/
+Woody Allen: A Life in Film	documentary, biography	2002	Richard Schickel	7.5	90	http://www.imdb.com/title/tt0320769/
+For Neda	documentary, biography, history	2010	Antony Thomas	7.1		http://www.imdb.com/title/tt1671630/
+The Line King: The Al Hirschfeld Story	documentary, biography	1996	Susan Warms Dryfoos	7.3	86	http://www.imdb.com/title/tt0116886/
+The Last Dispatch	documentary, biography, music	2005	Helmut Schleppi	6.7	81	http://www.imdb.com/title/tt0453508/
+Who Are the DeBolts? [And Where Did They Get 19 Kids?]	documentary, biography	1977	John Korty	7	72	http://www.imdb.com/title/tt0076918/
+KISSology: The Ultimate KISS Collection	documentary, biography, music	2006		7		http://www.imdb.com/title/tt0901493/
+Mantle	documentary, biography, sport	2005	George Roy	7.2	60	http://www.imdb.com/title/tt0470857/
+Hard Knocks: The Chris Benoit Story	documentary, biography, sport	2004	Kevin Dunn	7.2	360	http://www.imdb.com/title/tt0425088/
+Paul Robeson: Tribute to an Artist	documentary, biography	1979	Saul J. Turell	7.3	30	http://www.imdb.com/title/tt0079704/
+The Typewriter, the Rifle & the Movie Camera	documentary, biography	1996	Adam Simon	7.3	55	http://www.imdb.com/title/tt0118004/
+The Curse of Steptoe	biography, drama	2008	Michael Samuels	7.2	67	http://www.imdb.com/title/tt1179838/
+Mr. Conservative: Goldwater on Goldwater	documentary, biography	2006	Julie Anderson	7.2	90	http://www.imdb.com/title/tt0835046/
+Derailroaded	documentary, biography, music	2005	Josh Rubin	7.2	86	http://www.imdb.com/title/tt0441000/
+If I Should Fall from Grace: The Shane MacGowan Story	documentary, biography, music	2001	Sarah Share	7.2	91	http://www.imdb.com/title/tt0362751/
+Buster Keaton Rides Again	documentary, biography	1965	John Spotton	7.3	55	http://www.imdb.com/title/tt0059000/
+The Men Who Made the Movies: Alfred Hitchcock	documentary, biography	1973	Richard Schickel	7.3	57	http://www.imdb.com/title/tt0069686/
+Scream Greats, Vol. 1: Tom Savini, Master of Horror Effects	documentary, biography, horror	1986	Damon Santostefano	6.8	60	http://www.imdb.com/title/tt0241929/
+Lon Chaney: A Thousand Faces	documentary, biography	2000	Kevin Brownlow	7.3	85	http://www.imdb.com/title/tt0264804/
+Pie in the Sky: The Brigid Berlin Story	documentary, biography	2000	Shelly Dunn Fremont, Vincent Fremont	7.3	75	http://www.imdb.com/title/tt0261174/
+Lasseter's Bones	documentary, biography, history, mystery	2012	Luke Walker	6.2	101	http://www.imdb.com/title/tt2465378/
+Lonely Boy	documentary, biography, music	1962	Wolf Koenig, Roman Kroitor	7.2	27	http://www.imdb.com/title/tt0183416/
+Wingspan	documentary, biography, music	2001	Alistair Donald	6.8	120	http://www.imdb.com/title/tt0281372/
+Cheating Death, Stealing Life: The Eddie Guerrero Story	documentary, biography, sport	2004		6.9	360	http://www.imdb.com/title/tt0471614/
+Maybe Logic: The Lives and Ideas of Robert Anton Wilson	documentary, biography	2003	Lance Bauscher	6.8	82	http://www.imdb.com/title/tt0398191/
+Budd Boetticher: A Man Can Do That	documentary, biography	2005	Bruce Ricker	6.9	86	http://www.imdb.com/title/tt0486560/
+Ladies and Gentlemen, Mr. Leonard Cohen	documentary, biography	1965	Donald Brittain, Don Owen	7	45	http://www.imdb.com/title/tt0126376/
+Superstar in a Housedress	documentary, biography	2004	Craig Highberger	6.9	95	http://www.imdb.com/title/tt0396240/
+So Funny It Hurt: Buster Keaton & MGM	documentary, biography	2004	Christopher Bird, Kevin Brownlow	7.1	38	http://www.imdb.com/title/tt0440814/
+Elia Kazan: A Director's Journey	documentary, biography	1995	Richard Schickel	7.1	75	http://www.imdb.com/title/tt0246601/
+Nasseredin Shah and His 84 Wives	documentary, animation, biography, history	2011	Beate Petersen	6.5	59	http://www.imdb.com/title/tt1918973/
+The Men Who Made the Movies: William A. Wellman	documentary, biography	1973	Richard Schickel	6.9	58	http://www.imdb.com/title/tt0070922/
+Gary Cooper: American Life, American Legend	documentary, biography	1989	Richard Schickel	7	47	http://www.imdb.com/title/tt0121314/
+Eastwood on Eastwood	documentary, biography	1997	Richard Schickel	7	68	http://www.imdb.com/title/tt0129897/
+Spielberg on Spielberg	documentary, biography	2007	Richard Schickel	7	86	http://www.imdb.com/title/tt1073515/
+Frank Capra's American Dream	documentary, biography	1997	Kenneth Bowser	6.9	115	http://www.imdb.com/title/tt0119147/
+The Murder of Fred Hampton	documentary, biography, crime	1971	Howard Alk	6.9	88	http://www.imdb.com/title/tt0067456/
+Govt. vs Green	documentary, biography, comedy, crime, drama, family, history, news	2009	Andrew Cappelletti	6.4	28	http://www.imdb.com/title/tt1470600/
+Nico Icon	documentary, biography, music	1995	Susanne Ofteringer	7.1	70	http://www.imdb.com/title/tt0113973/
+Vivien Leigh: Scarlett and Beyond	documentary, biography	1990	Gene Feldman	6.9	46	http://www.imdb.com/title/tt0443284/
+Small Wonders	documentary, biography, music	1995	Allan Miller	7	77	http://www.imdb.com/title/tt0117669/
+The Elephant Man	biography, drama	1982	Jack Hofsiss	7.1	90	http://www.imdb.com/title/tt0166593/
+My Ain Folk	biography, drama	1973	Bill Douglas	7	55	http://www.imdb.com/title/tt0070424/
+The Beach Boys: An American Band	documentary, biography, history, music	1985	Malcolm Leo	6.9	103	http://www.imdb.com/title/tt0175471/
+O Lucky Malcolm!	biography	2006	Jan Harlan	7	86	http://www.imdb.com/title/tt0847187/
+The Lady in Question Is Charles Busch	documentary, biography	2005	John Catania, Charles D. Ignacio	6.9	90	http://www.imdb.com/title/tt0426508/
+The Desert of Forbidden Art	documentary, adventure, biography, drama, history, war	2010	Tchavdar Georgiev, Amanda Pope	6.8	80	http://www.imdb.com/title/tt1536458/
+Give 'em Hell, Harry!	biography, comedy, drama	1975	Steve Binder	7	104	http://www.imdb.com/title/tt0073053/
+I Don't Know Jack	documentary, biography	2002	Chris Leavens	6.9	96	http://www.imdb.com/title/tt0292553/
+The Hero's Journey: The World of Joseph Campbell	documentary, biography	1987	Janelle Balnicke, David Kennard	6.7	58	http://www.imdb.com/title/tt0093183/
+Bright Leaves	documentary, biography, comedy	2003	Ross McElwee	6.9	107	http://www.imdb.com/title/tt0372806/
+Heart: The Marilyn Bell Story	adventure, biography, drama, sport	2001	Manon Briand	7		http://www.imdb.com/title/tt0215835/
+Forever James Dean	documentary, biography	1988	Ara Chekmayan	6.9	60	http://www.imdb.com/title/tt0268312/

@@ -1,0 +1,542 @@
+Title	Genres	Year	Directors	IMDb Rating	Runtime (mins)	URL
+The Good Shepherd	drama, history, thriller	2006	Robert De Niro	6.7	167	http://www.imdb.com/title/tt0343737/
+300	action, fantasy, history, war	2006	Zack Snyder	7.7	117	http://www.imdb.com/title/tt0416449/
+Argo	drama, history, thriller	2012	Ben Affleck	7.9	120	http://www.imdb.com/title/tt1024648/
+Zero Dark Thirty	drama, history, thriller	2012	Kathryn Bigelow	7.5	157	http://www.imdb.com/title/tt1790885/
+The Impossible	drama, history, thriller	2012	J.A. Bayona	7.6	114	http://www.imdb.com/title/tt1649419/
+Defiance	action, drama, history, thriller, war	2008	Edward Zwick	7.1	137	http://www.imdb.com/title/tt1034303/
+Troy	adventure, drama	2004	Wolfgang Petersen	7.1	163	http://www.imdb.com/title/tt0332452/
+The Untouchables	crime, drama, history, thriller	1987	Brian De Palma	8	119	http://www.imdb.com/title/tt0094226/
+The Last Samurai	action, drama, history, war	2003	Edward Zwick	7.7	154	http://www.imdb.com/title/tt0325710/
+Kingdom of Heaven	action, adventure, drama, history, war	2005	Ridley Scott	7.1	144	http://www.imdb.com/title/tt0320661/
+The Boy in the Striped Pajamas	drama, history, war	2008	Mark Herman	7.7	94	http://www.imdb.com/title/tt0914798/
+Red Tails	action, adventure, drama, history, war	2012	Anthony Hemingway	5.8	125	http://www.imdb.com/title/tt0485985/
+Gangs of New York	crime, drama, history	2002	Martin Scorsese	7.5	167	http://www.imdb.com/title/tt0217505/
+Valkyrie	drama, history, thriller, war	2008	Bryan Singer	7.1	121	http://www.imdb.com/title/tt0985699/
+The Way Back	adventure, drama, history	2010	Peter Weir	7.3	133	http://www.imdb.com/title/tt1023114/
+King Arthur	action, adventure, drama, history, war	2004	Antoine Fuqua	6.2	126	http://www.imdb.com/title/tt0349683/
+Changeling	drama, history, mystery, thriller	2008	Clint Eastwood	7.8	141	http://www.imdb.com/title/tt0824747/
+Into the White	action, drama, war	2012	Petter Næss	7	100	http://www.imdb.com/title/tt1876277/
+Apollo 13	drama, history	1995	Ron Howard	7.5	140	http://www.imdb.com/title/tt0112384/
+Les Misérables	crime, drama, history, romance	1998	Bille August	7.3	134	http://www.imdb.com/title/tt0119683/
+Enemy at the Gates	drama, history, thriller, war	2001	Jean-Jacques Annaud	7.5	131	http://www.imdb.com/title/tt0215750/
+Munich	drama, history, thriller	2005	Steven Spielberg	7.6	164	http://www.imdb.com/title/tt0408306/
+Letters from Iwo Jima	drama, history, war	2006	Clint Eastwood	7.9	141	http://www.imdb.com/title/tt0498380/
+W.E.	drama, history, romance	2011	Madonna	5.5	119	http://www.imdb.com/title/tt1536048/
+Glory	drama, history, war	1989	Edward Zwick	7.9	122	http://www.imdb.com/title/tt0097441/
+The Prince of Egypt	animation, adventure, drama, family, history, musical	1998	Brenda Chapman, Steve Hickner	6.8	99	http://www.imdb.com/title/tt0120794/
+Hero	action, drama, history	2002	Yimou Zhang	7.9	99	http://www.imdb.com/title/tt0299977/
+The Greatest Game Ever Played	drama, history, sport	2005	Bill Paxton	7.3	120	http://www.imdb.com/title/tt0388980/
+Frost/Nixon	drama, history	2008	Ron Howard	7.7	122	http://www.imdb.com/title/tt0870111/
+Anonymous	drama, history, thriller	2011	Roland Emmerich	6.8	130	http://www.imdb.com/title/tt1521197/
+Kama Sutra: A Tale of Love	crime, drama, history, romance	1996	Mira Nair	5.6	117	http://www.imdb.com/title/tt0116743/
+Empire of the Sun	drama, history, war	1987	Steven Spielberg	7.7	152	http://www.imdb.com/title/tt0092965/
+Miracle	drama, family, history, sport	2004	Gavin O'Connor	7.4	135	http://www.imdb.com/title/tt0349825/
+Flags of Our Fathers	drama, history, war	2006	Clint Eastwood	7.1	132	http://www.imdb.com/title/tt0418689/
+The Killing Fields	drama, history, war	1984	Roland Joffé	7.9	141	http://www.imdb.com/title/tt0087553/
+JFK	drama, history, thriller	1991	Oliver Stone	8	189	http://www.imdb.com/title/tt0102138/
+Secretariat	drama, family, history, sport	2010	Randall Wallace	7.1	123	http://www.imdb.com/title/tt1028576/
+Agora	adventure, drama, history, romance	2009	Alejandro Amenábar	7.1	127	http://www.imdb.com/title/tt1186830/
+Amistad	drama, history, mystery	1997	Steven Spielberg	7.1	155	http://www.imdb.com/title/tt0118607/
+Good Night, and Good Luck.	drama, history	2005	George Clooney	7.6	93	http://www.imdb.com/title/tt0433383/
+United 93	crime, drama, history	2006	Paul Greengrass	7.6	111	http://www.imdb.com/title/tt0475276/
+Texas Killing Fields	crime, drama, history, thriller	2011	Ami Canaan Mann	5.7	105	http://www.imdb.com/title/tt1389127/
+The Wind That Shakes the Barley	drama, history, war	2006	Ken Loach	7.5	127	http://www.imdb.com/title/tt0460989/
+Thirteen Days	drama, history, thriller	2000	Roger Donaldson	7.2	145	http://www.imdb.com/title/tt0146309/
+K-19: The Widowmaker	drama, history, thriller, war	2002	Kathryn Bigelow	6.5	138	http://www.imdb.com/title/tt0267626/
+Seabiscuit	drama, history, sport	2003	Gary Ross	7.3	140	http://www.imdb.com/title/tt0329575/
+Flyboys	action, adventure, drama, history, romance, war	2006	Tony Bill	6.5	140	http://www.imdb.com/title/tt0454824/
+Bobby	drama, history	2006	Emilio Estevez	7	120	http://www.imdb.com/title/tt0308055/
+Pathfinder	action, adventure, drama, history, thriller, war	2007	Marcus Nispel	5.3	99	http://www.imdb.com/title/tt0446013/
+The Crucible	drama, history	1996	Nicholas Hytner	6.8	124	http://www.imdb.com/title/tt0115988/
+Gettysburg	drama, history, war	1993	Ronald F. Maxwell	7.5	271	http://www.imdb.com/title/tt0107007/
+A Bridge Too Far	drama, history, war	1977	Richard Attenborough	7.3	175	http://www.imdb.com/title/tt0075784/
+The Right Stuff	adventure, drama, history, sci_fi	1983	Philip Kaufman	7.9	193	http://www.imdb.com/title/tt0086197/
+Quiz Show	drama, history	1994	Robert Redford	7.5	133	http://www.imdb.com/title/tt0110932/
+Sicko	documentary, drama, history	2007	Michael Moore	8	123	http://www.imdb.com/title/tt0386032/
+Bent	drama, history, romance, war	1997	Sean Mathias	7.1	105	http://www.imdb.com/title/tt0118698/
+In the Realm of the Senses	drama, history, romance	1976	Nagisa Ôshima	6.6	109	http://www.imdb.com/title/tt0074102/
+Fahrenheit 9/11	documentary, history, war	2004	Michael Moore	7.5	122	http://www.imdb.com/title/tt0361596/
+For Greater Glory: The True Story of Cristiada	drama, history, war	2012	Dean Wright	6.1	145	http://www.imdb.com/title/tt1566501/
+Chariots of Fire	drama, history, sport	1981	Hugh Hudson	7.2	124	http://www.imdb.com/title/tt0082158/
+History of the World: Part I	comedy, history, musical	1981	Mel Brooks	6.7	92	http://www.imdb.com/title/tt0082517/
+Little Big Man	history, western	1970	Arthur Penn	7.6	139	http://www.imdb.com/title/tt0065988/
+Beneath Hill 60	drama, history, war	2010	Jeremy Hartley Sims	6.9	122	http://www.imdb.com/title/tt1418646/
+Jesus Christ Superstar	drama, history, musical	1973	Norman Jewison	7	108	http://www.imdb.com/title/tt0070239/
+1900	drama, history	1976	Bernardo Bertolucci	7.6	317	http://www.imdb.com/title/tt0074084/
+The Bounty	action, adventure, drama, history	1984	Roger Donaldson	6.9	132	http://www.imdb.com/title/tt0086993/
+The Alamo	drama, history, war, western	2004	John Lee Hancock	5.9	137	http://www.imdb.com/title/tt0318974/
+Shattered Glass	drama, history	2003	Billy Ray	7.2	94	http://www.imdb.com/title/tt0323944/
+54	drama, history	1998	Mark Christopher	5.6	93	http://www.imdb.com/title/tt0120577/
+Heaven's Gate	drama, history, romance, western	1980	Michael Cimino	6.6	219	http://www.imdb.com/title/tt0080855/
+Tora! Tora! Tora!	action, adventure, drama, history, war	1970	Richard Fleischer, Kinji Fukasaku	7.4	144	http://www.imdb.com/title/tt0066473/
+Casualties of War	drama, history, war	1989	Brian DePalma	7	113	http://www.imdb.com/title/tt0097027/
+Anna and the King	comedy, drama, history, romance	1999	Andy Tennant	6.5	148	http://www.imdb.com/title/tt0166485/
+Titus	drama, history, thriller	1999	Julie Taymor	7.1	162	http://www.imdb.com/title/tt0120866/
+Aguirre: The Wrath of God	adventure, drama, history	1972	Werner Herzog	8	93	http://www.imdb.com/title/tt0068182/
+Gods and Generals	drama, history, war	2003	Ronald F. Maxwell	6.1	219	http://www.imdb.com/title/tt0279111/
+Glorious 39	drama, history, thriller, war	2009	Stephen Poliakoff	6.3	129	http://www.imdb.com/title/tt1319694/
+Beyond the Gates	drama, history	2005	Michael Caton-Jones	7.5	115	http://www.imdb.com/title/tt0420901/
+Conspiracy	drama, history, war	2001	Frank Pierson	7.7	96	http://www.imdb.com/title/tt0266425/
+Missing	drama, history, mystery, thriller	1982	Costa-Gavras	7.7	122	http://www.imdb.com/title/tt0084335/
+Iron Jawed Angels	drama, history	2004	Katja von Garnier	7.3	123	http://www.imdb.com/title/tt0338139/
+Bloody Sunday	drama, history, war	2002	Paul Greengrass	7.7	107	http://www.imdb.com/title/tt0280491/
+Sunshine	drama, history, romance, war	1999	István Szabó	7.3	181	http://www.imdb.com/title/tt0145503/
+Revolution	adventure, drama, history, war	1985	Hugh Hudson	4.9	126	http://www.imdb.com/title/tt0089913/
+The Devils	drama, history	1971	Ken Russell	7.6	111	http://www.imdb.com/title/tt0066993/
+Passchendaele	drama, history, romance, war	2008	Paul Gross	6.5	114	http://www.imdb.com/title/tt1092082/
+1776	drama, family, history, musical	1972	Peter H. Hunt	7.2	142	http://www.imdb.com/title/tt0068156/
+The Newton Boys	action, crime, drama, history, western	1998	Richard Linklater	5.8	113	http://www.imdb.com/title/tt0120769/
+King of the Hill	drama, history	1993	Steven Soderbergh	7.3	103	http://www.imdb.com/title/tt0107322/
+Zulu Dawn	adventure, drama, history, war	1979	Douglas Hickox	6.5	113	http://www.imdb.com/title/tt0080180/
+Geronimo: An American Legend	drama, history, western	1993	Walter Hill	6.3	115	http://www.imdb.com/title/tt0107004/
+The Tuskegee Airmen	drama, history, war	1995	Robert Markowitz	7.1	106	http://www.imdb.com/title/tt0114745/
+Titanic	action, drama, history, romance	1996	Robert Lieberman	5.9	173	http://www.imdb.com/title/tt0115392/
+Scandal	drama, history	1989	Michael Caton-Jones	6.3	115	http://www.imdb.com/title/tt0098260/
+The Winter Queen	action, crime, drama, history, thriller	2014	Fedor Bondarchuk			http://www.imdb.com/title/tt0937380/
+Bury My Heart at Wounded Knee	drama, history, western	2007	Yves Simoneau	7.1	133	http://www.imdb.com/title/tt0821638/
+Battle for Haditha	drama, history, war	2007	Nick Broomfield	6.9	97	http://www.imdb.com/title/tt0870211/
+Recount	drama, history	2008	Jay Roach	7.4	116	http://www.imdb.com/title/tt1000771/
+Rogue Trader	crime, drama, history, thriller	1999	James Dearden	6.1	101	http://www.imdb.com/title/tt0131566/
+Some Mother's Son	drama, history	1996	Terry George	7	112	http://www.imdb.com/title/tt0117690/
+Paradise Road	drama, history, war	1997	Bruce Beresford	6.5	122	http://www.imdb.com/title/tt0119859/
+Breaker Morant	drama, history, war	1980	Bruce Beresford	7.8	107	http://www.imdb.com/title/tt0080310/
+Pat Garrett & Billy the Kid	drama, history, western	1973	Sam Peckinpah	7.3	122	http://www.imdb.com/title/tt0070518/
+Coco Chanel	history, romance	2008	Christian Duguay	6.7	139	http://www.imdb.com/title/tt1094661/
+The Baby of Mâcon	drama, history	1993	Peter Greenaway	6.5	122	http://www.imdb.com/title/tt0106335/
+The Beast of War	drama, history, war	1988	Kevin Reynolds	7.2	111	http://www.imdb.com/title/tt0094716/
+Julius Caesar	drama, history, war	1970	Stuart Burge	6	117	http://www.imdb.com/title/tt0065922/
+A Royal Affair	drama, history, romance	2012	Nikolaj Arcel	7.5	137	http://www.imdb.com/title/tt1276419/
+Tombstone	action, drama, history, romance, western	1993	George P. Cosmatos	7.7	130	http://www.imdb.com/title/tt0108358/
+Walking with the Enemy	action, drama, history, romance, war	2013	Mark Schmidt			http://www.imdb.com/title/tt1515208/
+The Count of Monte Cristo	action, adventure, drama, history, romance, thriller	2002	Kevin Reynolds	7.6	131	http://www.imdb.com/title/tt0245844/
+Pocahontas	animation, adventure, drama, family, history, musical, romance	1995	Mike Gabriel, Eric Goldberg	6.3	81	http://www.imdb.com/title/tt0114148/
+Australia	adventure, drama, history, romance, war	2008	Baz Luhrmann	6.6	165	http://www.imdb.com/title/tt0455824/
+Black Hawk Down	drama, history, war	2001	Ridley Scott	7.7	144	http://www.imdb.com/title/tt0265086/
+Centurion	action, adventure, drama, history, thriller, war	2010	Neil Marshall	6.4	97	http://www.imdb.com/title/tt1020558/
+We Were Soldiers	action, drama, history, war	2002	Randall Wallace	7	138	http://www.imdb.com/title/tt0277434/
+The Conspirator	crime, drama, history	2010	Robert Redford	6.9	122	http://www.imdb.com/title/tt0968264/
+Escape from Alcatraz	crime, drama, history, thriller	1979	Donald Siegel	7.6	112	http://www.imdb.com/title/tt0079116/
+All the President's Men	drama, history, mystery, thriller	1976	Alan J. Pakula	8	138	http://www.imdb.com/title/tt0074119/
+The Mission	adventure, drama, history	1986	Roland Joffé	7.4	125	http://www.imdb.com/title/tt0091530/
+Das Boot	action, adventure, drama, history, war	1981	Wolfgang Petersen	8.4	149	http://www.imdb.com/title/tt0082096/
+Windtalkers	action, history, war	2002	John Woo	5.9	134	http://www.imdb.com/title/tt0245562/
+Gallipoli	adventure, drama, history, war	1981	Peter Weir	7.5	110	http://www.imdb.com/title/tt0082432/
+Kagemusha	drama, history, war	1980	Akira Kurosawa	7.9	180	http://www.imdb.com/title/tt0080979/
+Red Cliff	action, adventure, drama, history, war	2008	John Woo	7.3	146	http://www.imdb.com/title/tt0425637/
+9th Company	action, drama, history, war	2005	Fedor Bondarchuk	7	139	http://www.imdb.com/title/tt0417397/
+The Warlords	action, drama, history, war	2007	Peter Chan, Wai Man Yip	7	126	http://www.imdb.com/title/tt0913968/
+A Passage to India	adventure, drama, history	1984	David Lean	7.3	164	http://www.imdb.com/title/tt0087892/
+Rosewood	action, drama, history	1997	John Singleton	6.9	140	http://www.imdb.com/title/tt0120036/
+North Face	adventure, drama, history, sport	2008	Philipp Stölzl	7.3	126	http://www.imdb.com/title/tt0844457/
+Europa Europa	drama, history, war	1990	Agnieszka Holland	7.6	112	http://www.imdb.com/title/tt0099776/
+Eight Men Out	drama, history, sport	1988	John Sayles	7.2	119	http://www.imdb.com/title/tt0095082/
+Schindler's List	biography, drama, history, war	1993	Steven Spielberg	8.9	195	http://www.imdb.com/title/tt0108052/
+Lincoln	biography, drama, history, war	2012	Steven Spielberg	7.5	150	http://www.imdb.com/title/tt0443272/
+The King's Speech	biography, drama, history	2010	Tom Hooper	8.1	118	http://www.imdb.com/title/tt1504320/
+The Pianist	biography, drama, history, war	2002	Roman Polanski	8.5	150	http://www.imdb.com/title/tt0253474/
+Public Enemies	biography, crime, drama, history	2009	Michael Mann	7	140	http://www.imdb.com/title/tt1152836/
+J. Edgar	biography, crime, drama, history	2011	Clint Eastwood	6.6	137	http://www.imdb.com/title/tt1616195/
+Hyde Park on Hudson	biography, comedy, drama, history	2012	Roger Michell	5.7	94	http://www.imdb.com/title/tt1477855/
+The Iron Lady	biography, drama, history	2011	Phyllida Lloyd	6.3	105	http://www.imdb.com/title/tt1007029/
+Hotel Rwanda	biography, drama, history, war	2004	Terry George	8.2	121	http://www.imdb.com/title/tt0395169/
+Invictus	biography, drama, history, sport	2009	Clint Eastwood	7.3	134	http://www.imdb.com/title/tt1057500/
+The New World	biography, drama, history, romance	2005	Terrence Malick	6.7	135	http://www.imdb.com/title/tt0402399/
+Milk	biography, drama, history	2008	Gus Van Sant	7.6	128	http://www.imdb.com/title/tt1013753/
+The Last King of Scotland	biography, drama, history	2006	Kevin Macdonald	7.7	121	http://www.imdb.com/title/tt0455590/
+Hunger	biography, drama, history	2008	Steve McQueen	7.6	96	http://www.imdb.com/title/tt0986233/
+Marie Antoinette	biography, drama, history	2006	Sofia Coppola	6.3	123	http://www.imdb.com/title/tt0422720/
+Charlie Wilson's War	biography, comedy, drama, history	2007	Mike Nichols	7.1	102	http://www.imdb.com/title/tt0472062/
+The Assassination of Jesse James by the Coward Robert Ford	biography, crime, drama, history, western	2007	Andrew Dominik	7.6	160	http://www.imdb.com/title/tt0443680/
+Malcolm X	biography, drama, history	1992	Spike Lee	7.6	202	http://www.imdb.com/title/tt0104797/
+Elizabeth: The Golden Age	biography, drama, history	2007	Shekhar Kapur	6.8	114	http://www.imdb.com/title/tt0414055/
+W.	biography, drama, history	2008	Oliver Stone	6.4	129	http://www.imdb.com/title/tt1175491/
+The Young Victoria	biography, drama, history, romance	2009	Jean-Marc Vallée	7.2	105	http://www.imdb.com/title/tt0962736/
+Breach	biography, crime, drama, history, thriller	2007	Billy Ray	7	110	http://www.imdb.com/title/tt0401997/
+The Duchess	biography, drama, history, romance	2008	Saul Dibb	6.8	110	http://www.imdb.com/title/tt0864761/
+Game Change	biography, drama, history	2012	Jay Roach	7.4	118	http://www.imdb.com/title/tt1848902/
+Cadillac Records	biography, drama, history, music, romance	2008	Darnell Martin	6.7	109	http://www.imdb.com/title/tt1042877/
+Made in Dagenham	biography, comedy, drama, history	2010	Nigel Cole	7.1	113	http://www.imdb.com/title/tt1371155/
+Patton	biography, drama, history, war	1970	Franklin J. Schaffner	8	172	http://www.imdb.com/title/tt0066206/
+The Messenger: The Story of Joan of Arc	adventure, biography, drama, history, war	1999	Luc Besson	6.3	158	http://www.imdb.com/title/tt0151137/
+Amazing Grace	biography, drama, history, romance	2006	Michael Apted	7.4	117	http://www.imdb.com/title/tt0454776/
+A Mighty Heart	biography, drama, history, thriller, war	2007	Michael Winterbottom	6.6	108	http://www.imdb.com/title/tt0829459/
+The Lady	biography, drama, history, romance	2011	Luc Besson	6.9	132	http://www.imdb.com/title/tt1802197/
+Attila	action, adventure, biography, drama, history, romance, war	2001	Dick Lowry	6.6	177	http://www.imdb.com/title/tt0259127/
+Hollywoodland	biography, crime, drama, history, mystery, romance, thriller	2006	Allen Coulter	6.5	126	http://www.imdb.com/title/tt0427969/
+Hitler: The Rise of Evil	biography, drama, history, war	2003	Christian Duguay	7.2	130	http://www.imdb.com/title/tt0346293/
+The Message	adventure, biography, drama, history	1977	Moustapha Akkad	8	177	http://www.imdb.com/title/tt0074896/
+Reds	biography, drama, history, romance	1981	Warren Beatty	7.3	195	http://www.imdb.com/title/tt0082979/
+Evita	biography, drama, history, musical, thriller	1996	Alan Parker	6.1	135	http://www.imdb.com/title/tt0116250/
+Ned Kelly	action, adventure, biography, crime, history, western	2003	Gregor Jordan	6.4	110	http://www.imdb.com/title/tt0277941/
+Henry V	action, biography, drama, history, romance, war	1989	Kenneth Branagh	7.7	137	http://www.imdb.com/title/tt0097499/
+1492: Conquest of Paradise	adventure, biography, drama, history	1992	Ridley Scott	6.3	154	http://www.imdb.com/title/tt0103594/
+Alexander	action, adventure, biography, drama, history, romance, war	2004	Oliver Stone	5.4	175	http://www.imdb.com/title/tt0346491/
+The Other Boleyn Girl	biography, drama, history, romance	2008	Justin Chadwick	6.7	115	http://www.imdb.com/title/tt0467200/
+Braveheart	action, biography, drama, history, war	1995	Mel Gibson	8.4	177	http://www.imdb.com/title/tt0112573/
+Gandhi	biography, drama, history	1982	Richard Attenborough	8.1	191	http://www.imdb.com/title/tt0083987/
+The Last Emperor	biography, drama, history	1987	Bernardo Bertolucci	7.8	163	http://www.imdb.com/title/tt0093389/
+Seven Years in Tibet	adventure, biography, drama, history, war	1997	Jean-Jacques Annaud	6.8	136	http://www.imdb.com/title/tt0120102/
+Max Manus: Man of War	action, biography, drama, history, war	2008	Joachim Rønning, Espen Sandberg	7.2	118	http://www.imdb.com/title/tt1029235/
+Up from Slavery	documentary, biography, history	2011	Kevin Hershberger	6.4	315	http://www.imdb.com/title/tt1935942/
+Luther	biography, drama, history	2003	Eric Till	6.6	123	http://www.imdb.com/title/tt0309820/
+61*	biography, drama, history, sport	2001	Billy Crystal	7.7	129	http://www.imdb.com/title/tt0250934/
+Kundun	biography, drama, history, war	1997	Martin Scorsese	6.9	134	http://www.imdb.com/title/tt0119485/
+Mrs Brown	biography, drama, history, romance	1997	John Madden	7.2	105	http://www.imdb.com/title/tt0119280/
+Cry Freedom	biography, drama, history	1987	Richard Attenborough	7.3	157	http://www.imdb.com/title/tt0092804/
+Joan of Arc	adventure, biography, drama, history	1999	Christian Duguay	6.6	140	http://www.imdb.com/title/tt0178145/
+Restoration	biography, drama, history, romance	1995	Michael Hoffman	6.5	117	http://www.imdb.com/title/tt0114272/
+Lady Jane	biography, drama, history, romance	1986	Trevor Nunn	7	142	http://www.imdb.com/title/tt0091374/
+Bathory: Countess of Blood	biography, drama, fantasy, history	2008	Juraj Jakubisko	5.8	141	http://www.imdb.com/title/tt0469640/
+Eichmann	biography, drama, history, war	2007	Robert Young	5.9	96	http://www.imdb.com/title/tt0901481/
+Heaven & Earth	action, biography, drama, history, war	1993	Oliver Stone	6.7	140	http://www.imdb.com/title/tt0107096/
+The Madness of King George	biography, comedy, drama, history	1994	Nicholas Hytner	7.2	107	http://www.imdb.com/title/tt0110428/
+Goodbye Bafana	biography, drama, history	2007	Bille August	7	118	http://www.imdb.com/title/tt0438859/
+Talk to Me	biography, drama, history, music, war	2007	Kasi Lemmons	7.2	118	http://www.imdb.com/title/tt0796368/
+Citizen X	biography, crime, drama, history, thriller	1995	Chris Gerolmo	7.6	105	http://www.imdb.com/title/tt0112681/
+Lion of the Desert	biography, drama, history, war	1981	Moustapha Akkad	7.7	173	http://www.imdb.com/title/tt0081059/
+Fat Man and Little Boy	biography, drama, history, war	1989	Roland Joffé	6.4	127	http://www.imdb.com/title/tt0097336/
+Catch a Fire	biography, drama, history	2006	Phillip Noyce	6.6	101	http://www.imdb.com/title/tt0437232/
+My Boy Jack	biography, drama, history, war	2007	Brian Kirk	7.2	93	http://www.imdb.com/title/tt0851430/
+Bugsy	biography, crime, drama, history	1991	Barry Levinson	6.7	136	http://www.imdb.com/title/tt0101516/
+Holy Rollers	biography, crime, drama, history	2010	Kevin Asch	5.8	89	http://www.imdb.com/title/tt1143896/
+Van Diemen's Land	biography, drama, history	2009	Jonathan auf der Heide	5.8	104	http://www.imdb.com/title/tt1361843/
+Wilde	biography, drama, history	1997	Brian Gilbert	6.8	118	http://www.imdb.com/title/tt0120514/
+The Broken Tower	biography, drama, history, war	2011	James Franco	4.9	99	http://www.imdb.com/title/tt1756791/
+Vivaldi	biography, drama, history, music	2013	Boris Damast		120	http://www.imdb.com/title/tt0469879/
+The Times of Harvey Milk	documentary, biography, history	1984	Robert Epstein	8.1	90	http://www.imdb.com/title/tt0088275/
+Marina Abramovic: The Artist Is Present	documentary, biography, history	2012	Matthew Akers, Jeff Dupre	7.6	106	http://www.imdb.com/title/tt2073029/
+Killing Lincoln	biography, drama, history, war	2013	Adrian Moat	6.8		http://www.imdb.com/title/tt2299248/
+Salvador	drama, history, thriller, war	1986	Oliver Stone	7.4	122	http://www.imdb.com/title/tt0091886/
+United	drama, history, sport	2011	James Strong	7.2	90	http://www.imdb.com/title/tt1777034/
+Oranges and Sunshine	drama, history	2010	Jim Loach	6.9		http://www.imdb.com/title/tt1438216/
+17 Miracles	adventure, history	2011	T.C. Christensen	5.2	113	http://www.imdb.com/title/tt1909270/
+The Road to Freedom	adventure, drama, history, war	2011	Brendan Moriarty	4.3	93	http://www.imdb.com/title/tt1469387/
+Emperor	drama, history, war	2012	Peter Webber	6.3	105	http://www.imdb.com/title/tt2103264/
+Night of the Templar	action, comedy, drama, history, horror, mystery, sci_fi, thriller	2012	Paul Sampson	3.1	101	http://www.imdb.com/title/tt0768222/
+Memorial Day	action, drama, history, war	2011	Samuel Fischer	5.6	104	http://www.imdb.com/title/tt1694118/
+Snow Flower and the Secret Fan	drama, history	2011	Wayne Wang	5.7	104	http://www.imdb.com/title/tt1541995/
+Endgame	drama, history	2009	Pete Travis	6.1	109	http://www.imdb.com/title/tt1217616/
+The Mill and the Cross	drama, history	2011	Lech Majewski	6.6	92	http://www.imdb.com/title/tt1324055/
+Midway	action, drama, history, war	1976	Jack Smight	6.6	132	http://www.imdb.com/title/tt0074899/
+The Legend of Hell's Gate: An American Conspiracy	action, adventure, history, western	2011	Tanner Beard	3.8	108	http://www.imdb.com/title/tt1220217/
+Pathfinders: In the Company of Strangers	action, drama, history, war	2011	Curt A. Sindelar	3.8		http://www.imdb.com/title/tt1260680/
+The Countess	biography, drama, history, horror, thriller	2009	Julie Delpy	6.1	98	http://www.imdb.com/title/tt0496634/
+Once Upon a Time in China and America	action, adventure, history, western	1997	Sammo Hung	6.4	102	http://www.imdb.com/title/tt0120530/
+Hatfields and McCoys: Bad Blood	drama, history	2012	Fred Olen Ray	3.8	82	http://www.imdb.com/title/tt2136759/
+Return to the Hiding Place	drama, history, thriller, war	2011	Peter C. Spencer, Josiah Spencer	4	102	http://www.imdb.com/title/tt1691153/
+Lawrence of Arabia	adventure, biography, drama, history, war	1962	David Lean	8.4	216	http://www.imdb.com/title/tt0056172/
+The Great Escape	adventure, drama, history, thriller, war	1963	John Sturges	8.3	172	http://www.imdb.com/title/tt0057115/
+Judgment at Nuremberg	drama, history, war	1961	Stanley Kramer	8.2	186	http://www.imdb.com/title/tt0055031/
+Inherit the Wind	drama, history	1960	Stanley Kramer	8.1	128	http://www.imdb.com/title/tt0053946/
+The Lion in Winter	drama, history	1968	Anthony Harvey	8	134	http://www.imdb.com/title/tt0063227/
+Spartacus	adventure, biography, drama, history	1960	Stanley Kubrick	8	197	http://www.imdb.com/title/tt0054331/
+In Cold Blood	crime, drama, history	1967	Richard Brooks	8	134	http://www.imdb.com/title/tt0061809/
+Becket	biography, drama, history	1964	Peter Glenville	7.9	148	http://www.imdb.com/title/tt0057877/
+A Man for All Seasons	biography, drama, history	1966	Fred Zinnemann	7.9	120	http://www.imdb.com/title/tt0060665/
+The Longest Day	action, drama, history, war	1962	Ken Annakin, Andrew Marton	7.8	178	http://www.imdb.com/title/tt0056197/
+Zulu	drama, history, war	1964	Cy Endfield	7.7	138	http://www.imdb.com/title/tt0058777/
+El Cid	adventure, biography, drama, history, romance, war	1961	Anthony Mann	7.2	182	http://www.imdb.com/title/tt0054847/
+Mutiny on the Bounty	adventure, drama, history, romance	1962	Lewis Milestone	7.1	178	http://www.imdb.com/title/tt0056264/
+Damn the Defiant!	adventure, drama, history	1962	Lewis Gilbert	7	101	http://www.imdb.com/title/tt0055884/
+King of Kings	biography, drama, history	1961	Nicholas Ray	6.8	168	http://www.imdb.com/title/tt0055047/
+Cheyenne Autumn	drama, history, western	1964	John Ford	6.8	154	http://www.imdb.com/title/tt0057940/
+Cleopatra	biography, drama, history, romance	1963	Joseph L. Mankiewicz	6.8	192	http://www.imdb.com/title/tt0056937/
+Battle of Britain	action, drama, history, war	1969	Guy Hamilton	6.8	132	http://www.imdb.com/title/tt0064072/
+Exodus	action, drama, history, war	1960	Otto Preminger	6.8	208	http://www.imdb.com/title/tt0053804/
+The Alamo	adventure, drama, history, war, western	1960	John Wayne	6.7	167	http://www.imdb.com/title/tt0053580/
+The Fall of the Roman Empire	drama, history, war	1964	Anthony Mann	6.7	188	http://www.imdb.com/title/tt0058085/
+The 300 Spartans	adventure, drama, history, war	1962	Rudolph Maté	6.6	114	http://www.imdb.com/title/tt0055719/
+The Greatest Story Ever Told	biography, drama, history	1965	George Stevens	6.4	225	http://www.imdb.com/title/tt0059245/
+The Heroes of Telemark	action, drama, history, war	1965	Anthony Mann	6.3	131	http://www.imdb.com/title/tt0059263/
+Waterloo	action, drama, history, war	1970	Sergey Bondarchuk	7.1	134	http://www.imdb.com/title/tt0066549/
+The White Countess	drama, history, romance, war	2005	James Ivory	6.5	135	http://www.imdb.com/title/tt0384686/
+The Game of Their Lives	drama, history, sport	2005	David Anspaugh	6	101	http://www.imdb.com/title/tt0354595/
+The Affair of the Necklace	drama, history	2001	Charles Shyer	5.9	118	http://www.imdb.com/title/tt0242252/
+Young Einstein	comedy, history	1988	Yahoo Serious	4.7	91	http://www.imdb.com/title/tt0096486/
+The Manson Family	crime, drama, history, horror, thriller	2003	Jim Van Bebber	5.3	95	http://www.imdb.com/title/tt0118840/
+Sharpe's Rifles	action, adventure, history, war	1993	Tom Clegg	7.7	102	http://www.imdb.com/title/tt0108108/
+The Molly Maguires	drama, history	1970	Martin Ritt	6.9	124	http://www.imdb.com/title/tt0066090/
+Rapa Nui	action, adventure, drama, history, romance	1994	Kevin Reynolds	6.1	107	http://www.imdb.com/title/tt0110944/
+The Long Walk Home	drama, history	1990	Richard Pearce	7.1	97	http://www.imdb.com/title/tt0100046/
+A Dry White Season	drama, history, thriller	1989	Euzhan Palcy	6.8	97	http://www.imdb.com/title/tt0097243/
+Matewan	drama, history	1987	John Sayles	7.7	135	http://www.imdb.com/title/tt0093509/
+Helter Skelter	crime, drama, history, horror, thriller	1976	Tom Gries	7.3	119	http://www.imdb.com/title/tt0074621/
+The Hiding Place	drama, history, war	1975	James F. Collier	7.1	150	http://www.imdb.com/title/tt0073109/
+Les Miserables	drama, history	1978	Glenn Jordan	7.2	150	http://www.imdb.com/title/tt0077936/
+Raid on Entebbe	action, drama, history	1976	Irvin Kershner	6.7	145	http://www.imdb.com/title/tt0076594/
+September Dawn	drama, history, western	2007	Christopher Cain	5.5	111	http://www.imdb.com/title/tt0473700/
+Come See the Paradise	drama, history, romance, war	1990	Alan Parker	6.5	138	http://www.imdb.com/title/tt0099291/
+Soldier Blue	history, western	1970	Ralph Nelson	6.7	112	http://www.imdb.com/title/tt0066390/
+Sebastiane	drama, history, thriller	1976	Paul Humfress, Derek Jarman	6.1	90	http://www.imdb.com/title/tt0075177/
+Let Him Have It	crime, drama, history	1991	Peter Medak	7.1	115	http://www.imdb.com/title/tt0102288/
+Caravaggio	biography, drama, history	1986	Derek Jarman	6.7	93	http://www.imdb.com/title/tt0090798/
+Fellini's Casanova	biography, drama, history, romance	1976	Federico Fellini	6.9	155	http://www.imdb.com/title/tt0074291/
+Jesus	biography, drama, history	1999	Roger Young	5.7	240	http://www.imdb.com/title/tt0199232/
+Caesar	biography, drama, history, war	2002	Uli Edel	6.6	240	http://www.imdb.com/title/tt0284741/
+The Visual Bible: The Gospel of John	biography, drama, history	2003	Philip Saville	7	125	http://www.imdb.com/title/tt0377992/
+Mary, Queen of Scots	biography, drama, history	1971	Charles Jarrott	7.3	128	http://www.imdb.com/title/tt0067402/
+Stalin	biography, drama, history	1992	Ivan Passer	7.1	166	http://www.imdb.com/title/tt0105462/
+Nicholas and Alexandra	biography, drama, history, war	1971	Franklin J. Schaffner	7.1	183	http://www.imdb.com/title/tt0067483/
+Christopher Columbus: The Discovery	adventure, biography, drama, history	1992	John Glen	4.2	120	http://www.imdb.com/title/tt0103962/
+Joseph	adventure, biography, drama, history	1995	Roger Young	7.5	185	http://www.imdb.com/title/tt0113483/
+Cromwell	biography, drama, history, war	1970	Ken Hughes	6.7	139	http://www.imdb.com/title/tt0065593/
+MacArthur	biography, drama, history, war	1977	Joseph Sargent	6.5	130	http://www.imdb.com/title/tt0076342/
+Brother Sun, Sister Moon	biography, drama, history, war	1972	Franco Zeffirelli	6.8	135	http://www.imdb.com/title/tt0069824/
+The Gathering Storm	biography, drama, history	2002	Richard Loncraine	7.5	96	http://www.imdb.com/title/tt0314097/
+Pierrepoint: The Last Hangman	biography, crime, drama, history	2005	Adrian Shergold	7.3	90	http://www.imdb.com/title/tt0462477/
+Bobby Fischer Against the World	documentary, biography, history, sport	2011	Liz Garbus	7.3	93	http://www.imdb.com/title/tt1777551/
+Houston: The Legend of Texas	biography, drama, history, war, western	1986	Peter Levin	7	144	http://www.imdb.com/title/tt0091224/
+If a Tree Falls: A Story of the Earth Liberation Front	documentary, biography, crime, drama, history, news, thriller	2011	Marshall Curry, Sam Cullman	7.1	85	http://www.imdb.com/title/tt1787725/
+Into the Storm	biography, drama, history, war	2009	Thaddeus O'Sullivan	7	100	http://www.imdb.com/title/tt0992993/
+Behind the Lines	biography, drama, history, war	1997	Gillies Mackinnon	7	114	http://www.imdb.com/title/tt0120001/
+Rasputin	biography, drama, history	1996	Uli Edel	6.9	135	http://www.imdb.com/title/tt0117442/
+Walker	adventure, drama, history, war, western	1987	Alex Cox	6.3	94	http://www.imdb.com/title/tt0096409/
+Mark of the Devil	drama, history, horror, thriller	1970	Michael Armstrong	5.9	96	http://www.imdb.com/title/tt0065491/
+The Hindenburg	adventure, drama, history, thriller	1975	Robert Wise	6.1	125	http://www.imdb.com/title/tt0073113/
+The Tree of Wooden Clogs	drama, history	1978	Ermanno Olmi	7.7	186	http://www.imdb.com/title/tt0077138/
+Mountains of the Moon	adventure, drama, history, mystery	1990	Bob Rafelson	7.1	136	http://www.imdb.com/title/tt0100196/
+Sharpe's Eagle	action, adventure, history, war	1993	Tom Clegg	7.7	100	http://www.imdb.com/title/tt0108107/
+The Brink's Job	comedy, crime, drama, history	1978	William Friedkin	6.4	104	http://www.imdb.com/title/tt0077275/
+Get on the Bus	drama, history	1996	Spike Lee	6.7	120	http://www.imdb.com/title/tt0116404/
+The Count of Monte-Cristo	adventure, drama, history	1975	David Greene	6.9	119	http://www.imdb.com/title/tt0072824/
+Executive Action	crime, drama, history, thriller	1973	David Miller	6.5	91	http://www.imdb.com/title/tt0070046/
+Antony and Cleopatra	drama, history	1972	Charlton Heston	5.9	138	http://www.imdb.com/title/tt0068920/
+The Advocate	crime, drama, history, mystery	1993	Leslie Megahey	6.6	112	http://www.imdb.com/title/tt0107146/
+Edward II	drama, history	1991	Derek Jarman	6.7	90	http://www.imdb.com/title/tt0101798/
+Blackadder's Christmas Carol	comedy, history	1988	Richard Boden	7.9	43	http://www.imdb.com/title/tt0094754/
+Start the Revolution Without Me	comedy, history	1970	Bud Yorkin	6.4	90	http://www.imdb.com/title/tt0066402/
+American Hot Wax	drama, history, music	1978	Floyd Mutrux	6.8	91	http://www.imdb.com/title/tt0077158/
+Wholly Moses!	comedy, fantasy, history	1980	Gary Weis	3.7	103	http://www.imdb.com/title/tt0081751/
+Inchon	drama, history, war	1981	Terence Young	2.8	140	http://www.imdb.com/title/tt0084132/
+Victory at Entebbe	action, drama, history, thriller	1976	Marvin J. Chomsky	6	119	http://www.imdb.com/title/tt0075391/
+Kidnapped	adventure, drama, history, romance	1971	Delbert Mann	6	107	http://www.imdb.com/title/tt0067302/
+Winter Soldier	documentary, history, war	1972		7.6	96	http://www.imdb.com/title/tt0204058/
+Massacre in Rome	drama, history, war	1973	George Pan Cosmatos	6.3	110	http://www.imdb.com/title/tt0070592/
+Violette	crime, drama, history, thriller	1978	Claude Chabrol	7.1	124	http://www.imdb.com/title/tt0078467/
+Overlord	drama, history, war	1975	Stuart Cooper	7.2	83	http://www.imdb.com/title/tt0073502/
+The Marquise of O	drama, history	1976	Eric Rohmer	7	102	http://www.imdb.com/title/tt0074870/
+The Judge and the Assassin	crime, drama, history	1976	Bertrand Tavernier	7.1	128	http://www.imdb.com/title/tt0073219/
+Newsfront	drama, history	1978	Phillip Noyce	6.9	110	http://www.imdb.com/title/tt0077986/
+The Sun	drama, history	2005	Aleksandr Sokurov	7.3	110	http://www.imdb.com/title/tt0439817/
+Triumph of the Spirit	biography, drama, history, sport, war	1989	Robert M. Young	6.8	120	http://www.imdb.com/title/tt0098513/
+The Story of Adele H	biography, drama, history	1975	François Truffaut	7.3	96	http://www.imdb.com/title/tt0073114/
+Under African Skies	documentary, biography, history, music	2012	Joe Berlinger	7.3	108	http://www.imdb.com/title/tt2112868/
+Hitler: The Last Ten Days	biography, drama, history, war	1973	Ennio De Concini	6.5	108	http://www.imdb.com/title/tt0070184/
+The Assassination of Trotsky	biography, drama, history, thriller	1972	Joseph Losey	5.7	103	http://www.imdb.com/title/tt0068226/
+Ned Kelly	biography, crime, drama, history, western	1970	Tony Richardson	4.9	99	http://www.imdb.com/title/tt0066130/
+The Chant of Jimmie Blacksmith	biography, crime, drama, history	1978	Fred Schepisi	7.1	120	http://www.imdb.com/title/tt0077318/
+Tesla: Master of Lightning	documentary, biography, history	2000	Robert Uth	7.5	87	http://www.imdb.com/title/tt0272884/
+Frank Lloyd Wright	documentary, biography, history	1998	Ken Burns, Lynn Novick	7.4	146	http://www.imdb.com/title/tt0144937/
+A Woman Called Golda	biography, drama, history	1982	Alan Gibson	7.6	200	http://www.imdb.com/title/tt0084914/
+Young Catherine	biography, drama, history	1991	Michael Anderson	7.6		http://www.imdb.com/title/tt0103311/
+Wings of Hope	documentary, adventure, biography, history	2000	Werner Herzog	7.6	65	http://www.imdb.com/title/tt0249248/
+American Radical: The Trials of Norman Finkelstein	documentary, history, biography, mystery, news, war	2009	David Ridgen, Nicolas Rossier	7.5	84	http://www.imdb.com/title/tt1475191/
+Common Threads: Stories from the Quilt	documentary, biography, history	1989	Rob Epstein, Jeffrey Friedman	7.5	79	http://www.imdb.com/title/tt0097099/
+Richard II	biography, drama, history, war	1978	David Giles	7.3	158	http://www.imdb.com/title/tt0077806/
+Einstein's Big Idea	biography, drama, history	2005	Gary Johnstone	7.5	120	http://www.imdb.com/title/tt0476209/
+Peter and Paul	biography, drama, history	1981	Robert Day	7.4	198	http://www.imdb.com/title/tt0082900/
+The Filth and the Fury	documentary, biography, history, music	2000	Julien Temple	7.5	108	http://www.imdb.com/title/tt0236216/
+Inside the Third Reich	biography, drama, history, war	1982	Marvin J. Chomsky	7.4	300	http://www.imdb.com/title/tt0084140/
+Victoria & Albert	biography, drama, history, romance	2001	John Erman	7.4	200	http://www.imdb.com/title/tt0262995/
+The Agronomist	documentary, biography, history	2003	Jonathan Demme	7.3	90	http://www.imdb.com/title/tt0377031/
+Garbo: The Spy	documentary, biography, history	2009	Edmon Roch	7.1	88	http://www.imdb.com/title/tt1344315/
+Of Time and the City	documentary, biography, history	2008	Terence Davies	7.3	74	http://www.imdb.com/title/tt1232790/
+The Soul of a Man	documentary, biography, history, music	2003	Wim Wenders	7.2	103	http://www.imdb.com/title/tt0368287/
+Wallenberg: A Hero's Story	biography, drama, history, war	1985	Lamont Johnson	7.2	200	http://www.imdb.com/title/tt0090285/
+Mandela	documentary, biography, history	1996	Angus Gibson, Jo Menell	7.1	118	http://www.imdb.com/title/tt0116980/
+The Brothers Warner	documentary, biography, history	2007	Cass Warner Sperling	7.1	90	http://www.imdb.com/title/tt1023499/
+A Harlot's Progress	biography, drama, history	2006	Justin Hardy	6.9	120	http://www.imdb.com/title/tt0906016/
+Bonhoeffer	documentary, biography, history, war	2003	Martin Doblmeier	7	93	http://www.imdb.com/title/tt0371583/
+Theremin: An Electronic Odyssey	documentary, biography, history, music	1994	Steven M. Martin	7.1	83	http://www.imdb.com/title/tt0108323/
+Hey, Boo: Harper Lee and 'To Kill a Mockingbird'	documentary, biography, history, news	2010	Mary McDonagh Murphy	6.9	78	http://www.imdb.com/title/tt1638979/
+Phar Lap	biography, drama, family, history, sport	1983	Simon Wincer	7	107	http://www.imdb.com/title/tt0086102/
+Sally Hemings: An American Scandal	biography, drama, history, romance	2000	Charles Haid	6.9	251	http://www.imdb.com/title/tt0206951/
+The Gospel According to Matthew	biography, drama, history	1993	Regardt van den Bergh	6.9	258	http://www.imdb.com/title/tt0301359/
+Joe Hill	biography, drama, history	1971	Bo Widerberg	6.8	117	http://www.imdb.com/title/tt0067276/
+Sadat	biography, drama, history, war	1983	Richard Michaels	6.7	195	http://www.imdb.com/title/tt0086229/
+Sharpe's Enemy	action, adventure, history, war	1994	Tom Clegg	7.8	90	http://www.imdb.com/title/tt0111157/
+Sharpe's Sword	action, adventure, history, war	1995	Tom Clegg	7.7		http://www.imdb.com/title/tt0114418/
+Sharpe's Regiment	action, adventure, history, war	1996	Tom Clegg	7.7	100	http://www.imdb.com/title/tt0117621/
+Sharpe's Mission	action, adventure, history, war	1996	Tom Clegg	7.6	100	http://www.imdb.com/title/tt0117620/
+Sharpe's Siege	action, adventure, history, war	1996	Tom Clegg	7.6		http://www.imdb.com/title/tt0117622/
+Sharpe's Battle	action, adventure, history, war	1995	Tom Clegg	7.7	100	http://www.imdb.com/title/tt0114416/
+Sharpe's Company	action, adventure, history, war	1994	Tom Clegg	7.7	100	http://www.imdb.com/title/tt0111156/
+Sometimes in April	drama, history, war	2005	Raoul Peck	7.8	140	http://www.imdb.com/title/tt0400063/
+Sharpe's Waterloo	action, adventure, history, war	1997	Tom Clegg	7.6		http://www.imdb.com/title/tt0120111/
+Sharpe's Revenge	action, adventure, history, war	1997	Tom Clegg	7.6		http://www.imdb.com/title/tt0120110/
+Longitude	drama, history	2000	Charles Sturridge	7.7	200	http://www.imdb.com/title/tt0192263/
+Sharpe's Honour	action, adventure, history, war	1994	Tom Clegg	7.7		http://www.imdb.com/title/tt0111158/
+Goltzius and the Pelican Company	biography, history	2012	Peter Greenaway	7.7	128	http://www.imdb.com/title/tt1851006/
+The Missiles of October	drama, history, thriller	1974	Anthony Page	7.6	150	http://www.imdb.com/title/tt0071847/
+Hiroshima	history	2005	Paul Wilmshurst	7.5	90	http://www.imdb.com/title/tt0475296/
+Shogun	action, adventure, drama, history, war	1980	Jerry London	7.7	125	http://www.imdb.com/title/tt0083069/
+True Caribbean Pirates	history	2006	Tim Prokop	7.4	120	http://www.imdb.com/title/tt0785065/
+Pippin: His Life and Times	history, musical, romance, war	1981	David Sheehan	7.3	112	http://www.imdb.com/title/tt0082909/
+The Scarlet and the Black	drama, history, war	1983	Jerry London	7.5	143	http://www.imdb.com/title/tt0086251/
+The Leaving of Liverpool	drama, history	1992	Michael Jenkins	7	180	http://www.imdb.com/title/tt0103471/
+The Tracker	drama, history, western	2002	Rolf de Heer	7.5	90	http://www.imdb.com/title/tt0212132/
+Shake Hands with the Devil	drama, history, war	2007	Roger Spottiswoode	7.5	112	http://www.imdb.com/title/tt0472562/
+Julius Caesar	drama, history	1979	Herbert Wise	7.2	150	http://www.imdb.com/title/tt0079378/
+Andersonville	drama, history, war, western	1996	John Frankenheimer	7.4	167	http://www.imdb.com/title/tt0115097/
+Sharpe's Gold	action, adventure, history, war	1995	Tom Clegg	7.4		http://www.imdb.com/title/tt0114417/
+Canada Russia '72	drama, history, sport	2006	T.W. Peacocke	7.3	180	http://www.imdb.com/title/tt0484098/
+Comic Relief: Uptown Downstairs Abbey	comedy, history	2011	Adrian Edmondson	7		http://www.imdb.com/title/tt1867525/
+Separate But Equal	drama, history	1991	George Stevens Jr.	7.3	186	http://www.imdb.com/title/tt0102879/
+The Rebels	drama, history, war	1979	Russ Mayberry	7.2	240	http://www.imdb.com/title/tt0079783/
+Sharpe's Challenge	action, adventure, history, war	2006	Tom Clegg	7.4	98	http://www.imdb.com/title/tt0480002/
+Copenhagen	drama, history, war	2002	Howard Davies	7.3	90	http://www.imdb.com/title/tt0340057/
+Pompeii: The Last Day	drama, history	2003	Peter Nicholson	7.3	120	http://www.imdb.com/title/tt0369838/
+Day One	drama, history	1989	Joseph Sargent	7.3	141	http://www.imdb.com/title/tt0097159/
+Soul of the Game	drama, history, sport	1996	Kevin Rodney Sullivan	7.3	94	http://www.imdb.com/title/tt0115631/
+I Will Fight No More Forever	action, drama, history, war, western	1975	Richard T. Heffron	7.3	105	http://www.imdb.com/title/tt0073138/
+Gideon's Trumpet	drama, history	1980	Robert L. Collins	7.3	104	http://www.imdb.com/title/tt0080789/
+An Ungentlemanly Act	history, war	1992	Stuart Urban	7.1	130	http://www.imdb.com/title/tt0134178/
+Son of the Morning Star	history, western	1991	Mike Robe	7.3	187	http://www.imdb.com/title/tt0102962/
+Rough Riders	action, drama, history, war	1997	John Milius	7.2	240	http://www.imdb.com/title/tt0118453/
+Gunpowder, Treason & Plot	drama, history	2004	Gillies MacKinnon	7.2	205	http://www.imdb.com/title/tt0377184/
+Kent State	drama, history	1981	James Goldstone	7.1	180	http://www.imdb.com/title/tt0082608/
+Einstein and Eddington	drama, history	2008	Philip Martin	7.2	90	http://www.imdb.com/title/tt0995036/
+The Bunker	drama, history, war	1981	George Schaefer	7.1	150	http://www.imdb.com/title/tt0082114/
+Crisis at Central High	drama, history	1981	Lamont Johnson	7.1	125	http://www.imdb.com/title/tt0082215/
+Sharpe's Peril	action, adventure, drama, history, war	2008	Tom Clegg	7.1	102	http://www.imdb.com/title/tt1181849/
+Shadow Magic	drama, history, romance	2000	Ann Hu	7.1	116	http://www.imdb.com/title/tt0238588/
+The Lion in Winter	drama, history, romance, war	2003	Andrei Konchalovsky	7	153	http://www.imdb.com/title/tt0319754/
+Love Leads the Way: A True Story	drama, family, history	1984	Delbert Mann	6.9	99	http://www.imdb.com/title/tt0087642/
+Antony and Cleopatra	drama, history, romance	1974	Jon Scoffield	6.6	161	http://www.imdb.com/title/tt0175447/
+Inside the Twin Towers	drama, history	2006	Richard Dale	7	98	http://www.imdb.com/title/tt0808138/
+The Crossing	biography, drama, history, war	2000	Robert Harmon	7	89	http://www.imdb.com/title/tt0210628/
+Rurôni Kenshin: Ishin shishi e no Requiem	animation, action, drama, fantasy, history, romance	1997	Tsuji Hajiki	7	90	http://www.imdb.com/title/tt0184872/
+Black Field	history	2009	Danishka Esterhazy	7		http://www.imdb.com/title/tt1393009/
+The Attic: The Hiding of Anne Frank	drama, history, war	1988	John Erman	7	95	http://www.imdb.com/title/tt0094685/
+The Red Machine	adventure, crime, drama, history, mystery, war	2009	Stephanie Argy, Alec Boehm	7	84	http://www.imdb.com/title/tt1218510/
+The Bastard	drama, history, romance	1978	Lee H. Katzin	6.9	240	http://www.imdb.com/title/tt0077212/
+Utu	adventure, drama, history, war	1984	Geoff Murphy	6.9	118	http://www.imdb.com/title/tt0086497/
+Old Man	drama, history	1997	John Kent Harrison	6.9	98	http://www.imdb.com/title/tt0119823/
+Heat Wave	drama, history	1990	Kevin Hooks	6.8	100	http://www.imdb.com/title/tt0099751/
+The Fifteen Streets	drama, history, romance	1989	David Wheatley	6.7	104	http://www.imdb.com/title/tt0097352/
+Stonewall	comedy, drama, history, romance	1995	Nigel Finch	6.9	99	http://www.imdb.com/title/tt0114550/
+Joseph Smith: Prophet of the Restoration	biography, drama, history	2005	T.C. Christensen, Gary Cook	6.9	60	http://www.imdb.com/title/tt0431170/
+The Day Lincoln Was Shot	biography, drama, history	1998	John Gray	6.8	95	http://www.imdb.com/title/tt0140613/
+Legacy	drama, history, western	1990	Kieth Merrill	6.8	53	http://www.imdb.com/title/tt0099996/
+Wittgenstein	biography, comedy, drama, history	1993	Derek Jarman	6.8	75	http://www.imdb.com/title/tt0108583/
+Netaji Subhas Chandra Bose: The Forgotten Hero	biography, drama, history, war	2005	Shyam Benegal	6.7	208	http://www.imdb.com/title/tt0349878/
+Hannibal: Rome's Worst Nightmare	action, biography, drama, history, war	2006	Edward Bazalgette	6.8	89	http://www.imdb.com/title/tt0766213/
+Path to Paradise: The Untold Story of the World Trade Center Bombing.	drama, history	1997	Leslie Libman, Larry Williams	6.7	91	http://www.imdb.com/title/tt0119867/
+The Seekers	drama, history, war	1979	Sidney Hayers	6.8	240	http://www.imdb.com/title/tt0079877/
+The Josephine Baker Story	biography, drama, history, music, romance	1991	Brian Gibson	6.7	130	http://www.imdb.com/title/tt0102167/
+A Friendship in Vienna	drama, history	1988	Arthur Allan Seidelman	6.7	100	http://www.imdb.com/title/tt0095181/
+The UFO Incident	biography, drama, history, romance, sci_fi	1975	Richard A. Colla	6.7	92	http://www.imdb.com/title/tt0073834/
+Beau Brummell: This Charming Man	drama, history	2006	Philippa Lowthorpe	6.7	78	http://www.imdb.com/title/tt0788026/
+The Special Relationship	drama, history	2010	Richard Loncraine	6.7	93	http://www.imdb.com/title/tt1117646/
+Jock: A True Tale of Friendship	adventure, family, history	1992	Danie Joubert	6.7	94	http://www.imdb.com/title/tt0104563/
+Jesus	biography, family, drama, history	1979	John Krish, Peter Sykes	6.7	117	http://www.imdb.com/title/tt0079368/
+Roadkill	adventure, comedy, drama, history	1989	Bruce McDonald	6.7	80	http://www.imdb.com/title/tt0098209/
+We of the Never Never	drama, history	1982	Igor Auzins	6.7	134	http://www.imdb.com/title/tt0084893/
+Escape from Iran: The Canadian Caper	drama, history, thriller	1981	Lamont Johnson	6.7	97	http://www.imdb.com/title/tt0082339/
+Enola Gay: The Men, the Mission, the Atomic Bomb	adventure, drama, history, war	1980	David Lowell Rich	6.7	156	http://www.imdb.com/title/tt0080689/
+The Magician	crime, drama, history, mystery, thriller	1993	Terry Winsor	6.7	105	http://www.imdb.com/title/tt0137090/
+Manson	crime, drama, history	2009	Neil Rawles	6.7	90	http://www.imdb.com/title/tt1489917/
+Swing Out, Sweet Land	comedy, family, history, music	1970	Stan Harris	6.7	73	http://www.imdb.com/title/tt0262030/
+Honeydripper	crime, drama, history, music, musical	2007	John Sayles	6.7	124	http://www.imdb.com/title/tt0829193/
+Winchell	biography, drama, history	1998	Paul Mazursky	6.6	105	http://www.imdb.com/title/tt0149380/
+Shattered City: The Halifax Explosion	drama, history	2003	Bruce Pittman	6.7	175	http://www.imdb.com/title/tt0368542/
+The Day of the Siege: September Eleven 1683	adventure, drama, history	2012	Renzo Martinelli	3.1		http://www.imdb.com/title/tt1899285/
+The Pagan Queen	fantasy, history, romance	2009	Constantin Werner	2.7	99	http://www.imdb.com/title/tt1096997/
+Warrior Queen	action, drama, history, war	2003	Bill Anderson	5.1	98	http://www.imdb.com/title/tt0338806/
+Nightwatching	biography, drama, history, mystery	2007	Peter Greenaway	6.4	134	http://www.imdb.com/title/tt0446750/
+Blackbeard	adventure, biography, drama, history, war	2006	Kevin Connor	5.6	170	http://www.imdb.com/title/tt0472242/
+True Women	biography, drama, history, romance, war, western	1997	Karen Arthur	6.5	183	http://www.imdb.com/title/tt0118499/
+Jefferson in Paris	biography, drama, history, romance	1995	James Ivory	5.6	139	http://www.imdb.com/title/tt0113463/
+Sword of War	drama, history, war	2009	Renzo Martinelli	4.3	139	http://www.imdb.com/title/tt1242516/
+History of the World in 2 Hours	history	2011	Douglas J. Cohen	6.3	120	http://www.imdb.com/title/tt2086853/
+Salem Witch Trials	drama, history	2002	Joseph Sargent	6	240	http://www.imdb.com/title/tt0284450/
+The Ten Commandments	action, adventure, biography, drama, history, war	2006	Robert Dornhelm	5	167	http://www.imdb.com/title/tt0443412/
+Jacob	biography, crime, drama, history	1994	Peter Hall	6.2	91	http://www.imdb.com/title/tt0110175/
+And Starring Pancho Villa as Himself	biography, drama, history, war, western	2003	Bruce Beresford	6.6	112	http://www.imdb.com/title/tt0337824/
+Brother's War	history, war	2009	Jerry Buteyn	2.2	100	http://www.imdb.com/title/tt0932661/
+Ghetto	history, war	2006	Audrius Juzenas	6.6	110	http://www.imdb.com/title/tt0783522/
+A Tale of Two Cities	drama, history, romance, war	1980	Jim Goddard	6.5	162	http://www.imdb.com/title/tt0081595/
+Moses	adventure, biography, crime, drama, history	1995	Roger Young	6.4	188	http://www.imdb.com/title/tt0117086/
+Alleged	drama, history, romance	2010	Tom Hines	4	94	http://www.imdb.com/title/tt1516009/
+Catherine the Great	biography, drama, history, romance	1996	Marvin J. Chomsky, John Goldsmith	6	100	http://www.imdb.com/title/tt0112031/
+Princess Caraboo	comedy, drama, history, mystery, romance	1994	Michael Austin	5.6	97	http://www.imdb.com/title/tt0110892/
+The Path to 9/11	drama, history	2006	David L. Cunningham	6	240	http://www.imdb.com/title/tt0473404/
+Che Guevara	biography, drama, history, romance, war	2005	Josh Evans	6.2	102	http://www.imdb.com/title/tt0446667/
+D.C. Sniper: 23 Days of Fear	drama, history, thriller	2003	Tom McLoughlin	5.8	85	http://www.imdb.com/title/tt0381116/
+American Soldiers	action, drama, history, war	2005	Sidney J. Furie	2.7	103	http://www.imdb.com/title/tt0425743/
+In Cold Blood	crime, drama, history	1996	Jonathan Kaplan	6.3	240	http://www.imdb.com/title/tt0116619/
+Dreamtime's Over	history, horror, thriller	2009	Oscar D'Roccster	2.1		http://www.imdb.com/title/tt1024232/
+The Last September	drama, history, romance	1999	Deborah Warner	6	103	http://www.imdb.com/title/tt0180793/
+Anne of the Thousand Days	drama, history	1969	Charles Jarrott	7.4	145	http://www.imdb.com/title/tt0064030/
+Marat/Sade	drama, history, music	1967	Peter Brook	7.2	116	http://www.imdb.com/title/tt0060668/
+Sink the Bismarck!	action, drama, history, war	1960	Lewis Gilbert	7	97	http://www.imdb.com/title/tt0054310/
+The Agony and the Ecstasy	drama, history	1965	Carol Reed	7	138	http://www.imdb.com/title/tt0058886/
+The War Lord	drama, history	1965	Franklin S. Schaffner	6.9	123	http://www.imdb.com/title/tt0059896/
+The Trials of Oscar Wilde	biography, drama, history	1960	Ken Hughes	6.9	123	http://www.imdb.com/title/tt0054403/
+Barabbas	adventure, biography, drama, history	1961	Richard Fleischer	6.8	137	http://www.imdb.com/title/tt0055774/
+Khartoum	action, adventure, drama, history, war	1966	Basil Dearden, Eliot Elisofon	6.8	134	http://www.imdb.com/title/tt0060588/
+The Rise and Fall of Legs Diamond	crime, history	1960	Budd Boetticher	6.7	101	http://www.imdb.com/title/tt0054243/
+55 Days at Peking	drama, history, war	1963	Nicholas Ray	6.7	154	http://www.imdb.com/title/tt0056800/
+The Charge of the Light Brigade	drama, history, war	1968	Tony Richardson	6.6	139	http://www.imdb.com/title/tt0062790/
+The Cardinal	drama, history, war	1963	Otto Preminger	6.6	175	http://www.imdb.com/title/tt0056907/
+The St. Valentine's Day Massacre	crime, drama, history	1967	Roger Corman	6.5	100	http://www.imdb.com/title/tt0062301/
+Oscar Wilde	biography, drama, history	1960	Gregory Ratoff	6.5	98	http://www.imdb.com/title/tt0053149/
+Nine Hours to Rama	drama, history	1963	Mark Robson	6.4	124	http://www.imdb.com/title/tt0057362/
+The Fighting Prince of Donegal	adventure, biography, family, history, romance	1966	Michael O'Herlihy	6.2	110	http://www.imdb.com/title/tt0060408/
+Cast a Giant Shadow	adventure, drama, history, war	1966	Melville Shavelson	6.2	146	http://www.imdb.com/title/tt0060218/
+Tower of London	drama, history, horror, thriller	1962	Roger Corman	6.1	79	http://www.imdb.com/title/tt0056606/
+Kings of the Sun	adventure, drama, history, thriller	1963	J. Lee Thompson	6	108	http://www.imdb.com/title/tt0057225/
+Alfred the Great	drama, history, war	1969	Clive Donner	6	122	http://www.imdb.com/title/tt0064000/
+Anzio	drama, history, war	1968	Edward Dmytryk, Duilio Coletti	5.9	117	http://www.imdb.com/title/tt0062673/
+The Colossus of Rhodes	adventure, drama, history	1961	Sergio Leone	5.9	127	http://www.imdb.com/title/tt0054756/
+The Secret Invasion	action, drama, history, war	1964	Roger Corman	5.8	95	http://www.imdb.com/title/tt0058561/
+Mayerling	drama, history, romance	1968	Terence Young	5.8	140	http://www.imdb.com/title/tt0064645/
+Genghis Khan	adventure, drama, history, war	1965	Henry Levin	5.8	127	http://www.imdb.com/title/tt0059219/
+Geronimo	action, biography, history, western	1962	Arnold Laven	5.7	101	http://www.imdb.com/title/tt0056016/
+Sodom and Gomorrah	adventure, drama, history	1962	Robert Aldrich	5.7	154	http://www.imdb.com/title/tt0056504/
+Custer of the West	biography, drama, history, war, western	1967	Robert Siodmak	5.6	140	http://www.imdb.com/title/tt0062844/
+David and Goliath	drama, history	1960	Ferdinando Baldi, Richard Pottier	4.7	113	http://www.imdb.com/title/tt0054788/
+Che!	biography, drama, history	1969	Richard Fleischer	4.6	96	http://www.imdb.com/title/tt0064158/
+De Sade	biography, drama, history, thriller	1969	Cy Endfield	3	113	http://www.imdb.com/title/tt0064212/
+Northern Lights	drama, history	1978	John Hanson, Rob Nilsson	7	95	http://www.imdb.com/title/tt0078008/
+Phil Ochs: There But for Fortune	documentary, biography, history, music	2010	Kenneth Bowser	7	96	http://www.imdb.com/title/tt1597089/
+Testimony	biography, drama, history, music	1988	Tony Palmer	6.9	157	http://www.imdb.com/title/tt0096250/
+Martin Luther	biography, drama, history	2002	Cassian Harrison	6.9	115	http://www.imdb.com/title/tt0378331/
+The Ku Klux Klan: A Secret History	documentary, biography, crime, history	1998	Bill Brummel	7.2	89	http://www.imdb.com/title/tt0307072/
+The Tramp and the Dictator	documentary, biography, history, war	2002	Kevin Brownlow, Michael Kloft	7.6	56	http://www.imdb.com/title/tt0311929/
+Going Upriver: The Long War of John Kerry	documentary, biography, history	2004	George Butler	7.6	87	http://www.imdb.com/title/tt0407263/
+For Neda	documentary, biography, history	2010	Antony Thomas	7.1		http://www.imdb.com/title/tt1671630/
+Lasseter's Bones	documentary, biography, history, mystery	2012	Luke Walker	6.2	101	http://www.imdb.com/title/tt2465378/
+Nasseredin Shah and His 84 Wives	documentary, animation, biography, history	2011	Beate Petersen	6.5	59	http://www.imdb.com/title/tt1918973/
+Govt. vs Green	documentary, biography, comedy, crime, drama, family, history, news	2009	Andrew Cappelletti	6.4	28	http://www.imdb.com/title/tt1470600/
+The Beach Boys: An American Band	documentary, biography, history, music	1985	Malcolm Leo	6.9	103	http://www.imdb.com/title/tt0175471/
+The Desert of Forbidden Art	documentary, adventure, biography, drama, history, war	2010	Tchavdar Georgiev, Amanda Pope	6.8	80	http://www.imdb.com/title/tt1536458/
+Precious Bane	drama, history, romance	1989	Christopher Menaul	7.5	120	http://www.imdb.com/title/tt0098117/
+Countdown to War	drama, history, war	1989	Patrick Lau	7.3	90	http://www.imdb.com/title/tt0204980/
+The Mayflower	history	2006	Lisa Wolfinger	7.1	180	http://www.imdb.com/title/tt0493146/
+Nuremberg: Goering's Last Stand	drama, history, war	2006	Peter Nicholson	7.3	99	http://www.imdb.com/title/tt0843290/
+Eleanor, First Lady of the World	biography, drama, history	1982	John Erman	7.2	120	http://www.imdb.com/title/tt0083875/
+George Washington II: The Forging of a Nation	biography, drama, history	1986	William A. Graham	7.4	240	http://www.imdb.com/title/tt0090437/
+The Fix	drama, history, sport	1997	Paul Greengrass	7.4	90	http://www.imdb.com/title/tt0126303/
+The Ordeal of Dr. Mudd	biography, drama, history	1980	Paul Wendkos	7.3	145	http://www.imdb.com/title/tt0081281/
+The Tragedy of Coriolanus	drama, history	1984	Elijah Moshinsky	7.2	145	http://www.imdb.com/title/tt0086467/
+Hearts and Minds	drama, history, thriller, war	1995	Ralph Ziman	7.1	113	http://www.imdb.com/title/tt0116506/
+Mondo Plympton	animation, biography, history	1999	Bill Plympton	7	53	http://www.imdb.com/title/tt0127030/
+The Adventures of Young Indiana Jones: Passion for Life	history	2000	René Manzor, Carl Schultz	7	94	http://www.imdb.com/title/tt1194566/
+681 AD: The Glory of Khan	action, adventure, drama, history, war	1984	Ludmil Staikov	7	95	http://www.imdb.com/title/tt0444982/
+John Wycliffe: The Morning Star	biography, drama, history	1984	Tony Tew	7	75	http://www.imdb.com/title/tt0390145/
+One Dead Indian	drama, history	2006	Tim Southam	6.9	120	http://www.imdb.com/title/tt0437380/
+The Business of Show Business	history	1983	Tom Logan	6.9	55	http://www.imdb.com/title/tt2281499/
+Snowy Love Fall in Spring	drama, history, romance	2005	Isao Yukisada	6.8	150	http://www.imdb.com/title/tt0468753/
+The Tokyo Trial	crime, drama, history, war	2006	Qunshu Gao	6.7	111	http://www.imdb.com/title/tt0884868/
+Breaking the Mould	drama, history	2009	Peter Hoar	6.7	80	http://www.imdb.com/title/tt1434927/
+The Jesse Owens Story	biography, drama, history, sport	1984	Richard Irving	6.7	174	http://www.imdb.com/title/tt0087501/
+Lena: My 100 Children	drama, history	1987	Edwin Sherin	6.7	100	http://www.imdb.com/title/tt0093404/
+D-Day 6.6.1944	action, drama, history, war	2004	Richard Dale, Kim Bour	6.7	120	http://www.imdb.com/title/tt0412617/
+God's Outlaw	biography, drama, history	1986	Tony Tew	6.7	93	http://www.imdb.com/title/tt0091126/
+The Four Minute Mile	biography, drama, history, sport	1988	Jim Goddard	6.7		http://www.imdb.com/title/tt0095171/
+Dieppe	history, war	1993	John N. Smith	6.7		http://www.imdb.com/title/tt0106720/
+Where's Jack?	adventure, biography, crime, drama, history	1969	James Clavell	5.4	120	http://www.imdb.com/title/tt0065209/
+Young Rebel	adventure, biography, drama, history	1967	Vincent Sherman	5	127	http://www.imdb.com/title/tt0060227/
+Siege of the Saxons	adventure, history	1963	Nathan Juran	4.4	85	http://www.imdb.com/title/tt0057500/

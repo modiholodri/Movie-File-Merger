@@ -1,0 +1,1031 @@
+Title	Genres	Year	Directors	IMDb Rating	Runtime (mins)	URL
+Shutter Island	mystery, thriller	2010	Martin Scorsese	8	138	http://www.imdb.com/title/tt1130884/
+Oblivion	action, adventure, sci_fi	2013	Joseph Kosinski	7.1	124	http://www.imdb.com/title/tt1483013/
+Se7en	crime, mystery, thriller	1995	David Fincher	8.7	127	http://www.imdb.com/title/tt0114369/
+The Prestige	drama, mystery, thriller	2006	Christopher Nolan	8.4	130	http://www.imdb.com/title/tt0482571/
+Shooter	action, crime, drama, mystery, thriller	2007	Antoine Fuqua	7.1	124	http://www.imdb.com/title/tt0822854/
+Inception	action, adventure, mystery, sci_fi, thriller	2010	Christopher Nolan	8.8	148	http://www.imdb.com/title/tt1375666/
+Harry Potter and the Deathly Hallows: Part 2	adventure, family, fantasy, mystery	2011	David Yates	8.1	130	http://www.imdb.com/title/tt1201607/
+Limitless	mystery, sci_fi, thriller	2011	Neil Burger	7.3	105	http://www.imdb.com/title/tt1219289/
+The Girl with the Dragon Tattoo	crime, drama, mystery, thriller	2011	David Fincher	7.9	158	http://www.imdb.com/title/tt1568346/
+The Bourne Legacy	action, adventure, mystery, thriller	2012	Tony Gilroy	6.7	135	http://www.imdb.com/title/tt1194173/
+The Cabin in the Woods	horror, mystery, thriller	2011	Drew Goddard	7.1	95	http://www.imdb.com/title/tt1259521/
+Cloud Atlas	adventure, drama, sci_fi	2012	Tom Tykwer, Andy Wachowski	7.7	172	http://www.imdb.com/title/tt1371111/
+Prometheus	adventure, mystery, sci_fi	2012	Ridley Scott	7.2	124	http://www.imdb.com/title/tt1446714/
+Sinister	horror, mystery, thriller	2012	Scott Derrickson	6.7	110	http://www.imdb.com/title/tt1922777/
+The Usual Suspects	crime, mystery, thriller	1995	Bryan Singer	8.7	106	http://www.imdb.com/title/tt0114814/
+The Green Mile	crime, drama, fantasy, mystery	1999	Frank Darabont	8.5	189	http://www.imdb.com/title/tt0120689/
+The Sixth Sense	drama, mystery, thriller	1999	M. Night Shyamalan	8.2	107	http://www.imdb.com/title/tt0167404/
+Harry Potter and the Prisoner of Azkaban	adventure, family, fantasy, mystery	2004	Alfonso Cuarón	7.7	142	http://www.imdb.com/title/tt0304141/
+Harry Potter and the Goblet of Fire	adventure, family, fantasy, mystery	2005	Mike Newell	7.5	157	http://www.imdb.com/title/tt0330373/
+Harry Potter and the Half-Blood Prince	adventure, family, fantasy, mystery	2009	David Yates	7.4	153	http://www.imdb.com/title/tt0417741/
+Watchmen	action, drama, mystery, sci_fi	2009	Zack Snyder	7.6	162	http://www.imdb.com/title/tt0409459/
+Sherlock Holmes	action, adventure, crime, mystery, thriller	2009	Guy Ritchie	7.6	128	http://www.imdb.com/title/tt0988045/
+Black Swan	drama, mystery, thriller	2010	Darren Aronofsky	8.1	108	http://www.imdb.com/title/tt0947798/
+Harry Potter and the Deathly Hallows: Part 1	adventure, family, fantasy, mystery	2010	David Yates	7.6	146	http://www.imdb.com/title/tt0926084/
+Salt	action, crime, mystery, thriller	2010	Phillip Noyce	6.4	100	http://www.imdb.com/title/tt0944835/
+Scream 4	horror, mystery	2011	Wes Craven	6.2	111	http://www.imdb.com/title/tt1262416/
+Source Code	mystery, sci_fi, thriller	2011	Duncan Jones	7.5	93	http://www.imdb.com/title/tt0945513/
+Super 8	mystery, sci_fi, thriller	2011	J.J. Abrams	7.1	112	http://www.imdb.com/title/tt1650062/
+Hugo	adventure, drama, family, mystery	2011	Martin Scorsese	7.6	126	http://www.imdb.com/title/tt0970179/
+Sherlock Holmes: A Game of Shadows	action, adventure, crime, mystery, thriller	2011	Guy Ritchie	7.4	129	http://www.imdb.com/title/tt1515091/
+Tinker Tailor Soldier Spy	drama, mystery, thriller	2011	Tomas Alfredson	7.1	127	http://www.imdb.com/title/tt1340800/
+Alex Cross	action, crime, mystery, thriller	2012	Rob Cohen	4.9	101	http://www.imdb.com/title/tt1712170/
+The Raven	mystery, thriller	2012	James McTeigue	6.3	110	http://www.imdb.com/title/tt1486192/
+Safe House	action, crime, mystery, thriller	2012	Daniel Espinosa	6.8	115	http://www.imdb.com/title/tt1599348/
+Silent Hill: Revelation 3D	horror, mystery, thriller	2012	Michael J. Bassett	5	94	http://www.imdb.com/title/tt0938330/
+Stoker	drama, mystery, thriller	2013	Chan-wook Park	7.2	99	http://www.imdb.com/title/tt1682180/
+Oldboy	action, drama, mystery, thriller	2013	Spike Lee			http://www.imdb.com/title/tt1321511/
+The Tall Man	crime, drama, mystery, thriller	2012	Pascal Laugier	5.9	106	http://www.imdb.com/title/tt1658837/
+Memento	mystery, thriller	2000	Christopher Nolan	8.6	113	http://www.imdb.com/title/tt0209144/
+Donnie Darko	drama, sci_fi	2001	Richard Kelly	8.1	113	http://www.imdb.com/title/tt0246578/
+The Shining	horror, mystery	1980	Stanley Kubrick	8.5	146	http://www.imdb.com/title/tt0081505/
+Twelve Monkeys	mystery, sci_fi, thriller	1995	Terry Gilliam	8.1	129	http://www.imdb.com/title/tt0114746/
+L.A. Confidential	crime, drama, mystery, thriller	1997	Curtis Hanson	8.4	138	http://www.imdb.com/title/tt0119488/
+The Bourne Identity	action, mystery, thriller	2002	Doug Liman	7.9	119	http://www.imdb.com/title/tt0258463/
+Harry Potter and the Chamber of Secrets	adventure, family, fantasy, mystery	2002	Chris Columbus	7.2	161	http://www.imdb.com/title/tt0295297/
+Minority Report	action, mystery, sci_fi, thriller	2002	Steven Spielberg	7.7	145	http://www.imdb.com/title/tt0181689/
+Mystic River	crime, drama, mystery, thriller	2003	Clint Eastwood	8	138	http://www.imdb.com/title/tt0327056/
+I, Robot	action, mystery, sci_fi, thriller	2004	Alex Proyas	7	115	http://www.imdb.com/title/tt0343818/
+Van Helsing	action, adventure, fantasy, mystery, thriller	2004	Stephen Sommers	5.8	131	http://www.imdb.com/title/tt0338526/
+Silent Hill	horror, mystery	2006	Christophe Gans	6.5	125	http://www.imdb.com/title/tt0384537/
+Harry Potter and the Order of the Phoenix	adventure, family, fantasy, mystery	2007	David Yates	7.4	138	http://www.imdb.com/title/tt0373889/
+Zodiac	crime, drama, mystery, thriller	2007	David Fincher	7.7	157	http://www.imdb.com/title/tt0443706/
+Angels & Demons	mystery, thriller	2009	Ron Howard	6.6	138	http://www.imdb.com/title/tt0808151/
+Knowing	drama, mystery, sci_fi, thriller	2009	Alex Proyas	6.2	121	http://www.imdb.com/title/tt0448011/
+Red Riding Hood	fantasy, horror, mystery, thriller	2011	Catherine Hardwicke	5.2	100	http://www.imdb.com/title/tt1486185/
+Unknown	action, mystery, thriller	2011	Jaume Collet-Serra	6.9	113	http://www.imdb.com/title/tt1401152/
+Abduction	action, drama, mystery, thriller	2011	John Singleton	4.8	106	http://www.imdb.com/title/tt1600195/
+The Adventures of Tintin	animation, action, adventure, family, mystery	2011	Steven Spielberg	7.4	107	http://www.imdb.com/title/tt0983193/
+Extremely Loud & Incredibly Close	adventure, drama, mystery	2011	Stephen Daldry	6.8	129	http://www.imdb.com/title/tt0477302/
+Gone	drama, mystery, thriller	2012	Heitor Dhalia	5.7	94	http://www.imdb.com/title/tt1838544/
+Red Lights	drama, mystery, thriller	2012	Rodrigo Cortés	6.1	113	http://www.imdb.com/title/tt1748179/
+Like Minds	crime, horror, mystery, thriller	2006	Gregory J. Read	6.2	110	http://www.imdb.com/title/tt0425196/
+The Thing	horror, mystery, sci_fi, thriller	1982	John Carpenter	8.2	109	http://www.imdb.com/title/tt0084787/
+The Godfather: Part III	crime, drama, mystery, thriller	1990	Francis Ford Coppola	7.6	162	http://www.imdb.com/title/tt0099674/
+Basic Instinct	mystery, thriller	1992	Paul Verhoeven	6.9	127	http://www.imdb.com/title/tt0103772/
+A Few Good Men	crime, drama, mystery, thriller	1992	Rob Reiner	7.6	138	http://www.imdb.com/title/tt0104257/
+Scream	crime, horror, mystery	1996	Wes Craven	7.2	111	http://www.imdb.com/title/tt0117571/
+The Game	drama, mystery, thriller	1997	David Fincher	7.7	129	http://www.imdb.com/title/tt0119174/
+Eyes Wide Shut	drama, mystery, thriller	1999	Stanley Kubrick	7.2	159	http://www.imdb.com/title/tt0120663/
+Super Troopers	comedy, crime, mystery	2001	Jay Chandrasekhar	6.9	100	http://www.imdb.com/title/tt0247745/
+The Ring	horror, mystery, thriller	2002	Gore Verbinski	7.1	115	http://www.imdb.com/title/tt0298130/
+Identity	mystery, thriller	2003	James Mangold	7.2	90	http://www.imdb.com/title/tt0309698/
+Saw	crime, horror, mystery	2004	James Wan	7.7	103	http://www.imdb.com/title/tt0387564/
+The Amityville Horror	drama, horror, mystery, thriller	2005	Andrew Douglas	5.8	90	http://www.imdb.com/title/tt0384806/
+The Da Vinci Code	mystery, thriller	2006	Ron Howard	6.4	149	http://www.imdb.com/title/tt0382625/
+Lucky Number Slevin	crime, drama, mystery, thriller	2006	Paul McGuigan	7.7	110	http://www.imdb.com/title/tt0425210/
+Gone Baby Gone	crime, drama, mystery, thriller	2007	Ben Affleck	7.7	114	http://www.imdb.com/title/tt0452623/
+The Number 23	drama, mystery, thriller	2007	Joel Schumacher	6.2	101	http://www.imdb.com/title/tt0481369/
+Paranormal Activity	horror, mystery	2007	Oren Peli	6.4	86	http://www.imdb.com/title/tt1179904/
+9	animation, action, adventure, fantasy, mystery, sci_fi, thriller	2009	Shane Acker	7	79	http://www.imdb.com/title/tt0472033/
+The Imaginarium of Doctor Parnassus	adventure, fantasy, mystery	2009	Terry Gilliam	6.9	123	http://www.imdb.com/title/tt1054606/
+Orphan	mystery, thriller	2009	Jaume Collet-Serra	6.9	123	http://www.imdb.com/title/tt1148204/
+The Thing	horror, mystery, sci_fi, thriller	2011	Matthijs van Heijningen	6.2	103	http://www.imdb.com/title/tt0905372/
+The Factory	crime, mystery, thriller	2012	Morgan O'Neill	5.4	108	http://www.imdb.com/title/tt1132285/
+Kiss Kiss Bang Bang	action, comedy, crime, mystery, thriller	2005	Shane Black	7.7	103	http://www.imdb.com/title/tt0373469/
+Mulholland Dr.	drama, mystery, thriller	2001	David Lynch	7.9	147	http://www.imdb.com/title/tt0166924/
+The Maze Runner	mystery, sci_fi, thriller	2014	Wes Ball			http://www.imdb.com/title/tt1790864/
+The Devil's Advocate	drama, mystery, thriller	1997	Taylor Hackford	7.4	144	http://www.imdb.com/title/tt0118971/
+Dark City	mystery, sci_fi	1998	Alex Proyas	7.7	100	http://www.imdb.com/title/tt0118929/
+Wild Things	crime, mystery, thriller	1998	John McNaughton	6.5	108	http://www.imdb.com/title/tt0120890/
+Sleepy Hollow	adventure, mystery	1999	Tim Burton	7.5	105	http://www.imdb.com/title/tt0162661/
+Dude, Where's My Car?	comedy, mystery, sci_fi	2000	Danny Leiner	5.3	83	http://www.imdb.com/title/tt0242423/
+Unbreakable	drama, mystery, sci_fi, thriller	2000	M. Night Shyamalan	7.2	106	http://www.imdb.com/title/tt0217869/
+Insomnia	crime, mystery, thriller	2002	Christopher Nolan	7.2	118	http://www.imdb.com/title/tt0278504/
+Scooby-Doo	adventure, comedy, family, mystery	2002	Raja Gosnell	4.8	86	http://www.imdb.com/title/tt0267913/
+Signs	drama, sci_fi, thriller	2002	M. Night Shyamalan	6.7	106	http://www.imdb.com/title/tt0286106/
+Phone Booth	mystery, thriller	2002	Joel Schumacher	7.1	81	http://www.imdb.com/title/tt0183649/
+National Treasure	action, adventure, mystery, thriller	2004	Jon Turteltaub	6.8	131	http://www.imdb.com/title/tt0368891/
+1408	horror, mystery	2007	Mikael Håfström	6.8	104	http://www.imdb.com/title/tt0450385/
+Fracture	crime, drama, mystery, thriller	2007	Gregory Hoblit	7.1	113	http://www.imdb.com/title/tt0488120/
+Michael Clayton	crime, drama, mystery, thriller	2007	Tony Gilroy	7.3	119	http://www.imdb.com/title/tt0465538/
+Changeling	drama, history, mystery, thriller	2008	Clint Eastwood	7.8	141	http://www.imdb.com/title/tt0824747/
+Eagle Eye	action, mystery, thriller	2008	D.J. Caruso	6.6	118	http://www.imdb.com/title/tt1059786/
+Max Payne	action, crime, drama, mystery, thriller	2008	John Moore	5.3	100	http://www.imdb.com/title/tt0467197/
+State of Play	drama, mystery	2009	Kevin Macdonald	7.1	127	http://www.imdb.com/title/tt0473705/
+The Uninvited	drama, horror, mystery, thriller	2009	The Guard Brothers, The Guard Brothers	6.2	87	http://www.imdb.com/title/tt0815245/
+The Fourth Kind	mystery, sci_fi, thriller	2009	Olatunde Osunsanmi	5.8	98	http://www.imdb.com/title/tt1220198/
+Let Me In	drama, horror, mystery	2010	Matt Reeves	7.2	116	http://www.imdb.com/title/tt1228987/
+A Nightmare on Elm Street	horror, mystery, thriller	2010	Samuel Bayer	5.1	95	http://www.imdb.com/title/tt1179056/
+Final Destination 5	horror, mystery	2011	Steven Quale	5.8	92	http://www.imdb.com/title/tt1622979/
+Bad Kids Go to Hell	comedy, mystery, thriller	2012	Matthew Spradlin	4.2	91	http://www.imdb.com/title/tt1865573/
+The Clinic	crime, horror, mystery, thriller	2010	James Rabbitts	5.3	94	http://www.imdb.com/title/tt1345772/
+Chinatown	crime, drama, mystery, thriller	1974	Roman Polanski	8.4	130	http://www.imdb.com/title/tt0071315/
+The Fugitive	action, adventure, crime, mystery, thriller	1993	Andrew Davis	7.8	130	http://www.imdb.com/title/tt0106977/
+Contact	drama, mystery, sci_fi, thriller	1997	Robert Zemeckis	7.3	150	http://www.imdb.com/title/tt0118884/
+Psycho	horror, mystery, thriller	1998	Gus Van Sant	4.6	105	http://www.imdb.com/title/tt0155975/
+The Haunting	fantasy, horror, mystery, thriller	1999	Jan de Bont	4.7	113	http://www.imdb.com/title/tt0171363/
+The Ninth Gate	mystery, thriller	1999	Roman Polanski	6.7	133	http://www.imdb.com/title/tt0142688/
+Final Destination	horror, mystery	2000	James Wong	6.7	98	http://www.imdb.com/title/tt0195714/
+The Others	drama, horror, mystery, thriller	2001	Alejandro Amenábar	7.6	101	http://www.imdb.com/title/tt0230600/
+Paycheck	sci_fi, thriller, action, mystery	2003	John Woo	6.1	119	http://www.imdb.com/title/tt0338337/
+The Village	drama, mystery, thriller	2004	M. Night Shyamalan	6.5	108	http://www.imdb.com/title/tt0368447/
+Four Brothers	action, crime, drama, mystery, thriller	2005	John Singleton	6.8	109	http://www.imdb.com/title/tt0430105/
+Disturbia	drama, mystery, thriller	2007	D.J. Caruso	6.9	105	http://www.imdb.com/title/tt0486822/
+Eastern Promises	crime, mystery, thriller	2007	David Cronenberg	7.7	100	http://www.imdb.com/title/tt0765443/
+Mr. Brooks	crime, drama, mystery, thriller	2007	Bruce A. Evans	7.4	120	http://www.imdb.com/title/tt0780571/
+National Treasure: Book of Secrets	action, adventure, mystery, thriller	2007	Jon Turteltaub	6.5	124	http://www.imdb.com/title/tt0465234/
+The Strangers	horror, mystery, thriller	2008	Bryan Bertino	6.1	86	http://www.imdb.com/title/tt0482606/
+The International	action, crime, drama, mystery, thriller	2009	Tom Tykwer	6.5	118	http://www.imdb.com/title/tt0963178/
+The Crazies	horror, mystery, thriller	2010	Breck Eisner	6.6	101	http://www.imdb.com/title/tt0455407/
+Devil	horror, mystery, thriller	2010	John Erick Dowdle	6.3	80	http://www.imdb.com/title/tt1314655/
+From Paris with Love	action, crime, thriller	2010	Pierre Morel	6.4	92	http://www.imdb.com/title/tt1179034/
+The Ghost Writer	mystery, thriller	2010	Roman Polanski	7.3	128	http://www.imdb.com/title/tt1139328/
+The Losers	action, crime, drama, mystery, thriller	2010	Sylvain White	6.3	97	http://www.imdb.com/title/tt0480255/
+Dream House	drama, mystery, thriller	2011	Jim Sheridan	5.8	92	http://www.imdb.com/title/tt1462041/
+Atlas Shrugged II: The Strike	drama, mystery, sci_fi	2012	John Putch	5.2	111	http://www.imdb.com/title/tt1985017/
+The East	action, drama, mystery, thriller	2013	Zal Batmanglij	7.4	116	http://www.imdb.com/title/tt1869716/
+The Pact	horror, mystery, thriller	2012	Nicholas McCarthy	5.7	89	http://www.imdb.com/title/tt2040560/
+The Double	action, crime, drama, mystery, thriller	2011	Michael Brandt	5.9	98	http://www.imdb.com/title/tt1646980/
+Chloe	drama, mystery, thriller	2009	Atom Egoyan	6.3	96	http://www.imdb.com/title/tt1352824/
+Clue	comedy, crime, mystery, thriller	1985	Jonathan Lynn	7.2	94	http://www.imdb.com/title/tt0088930/
+Primal Fear	crime, drama, mystery, thriller	1996	Gregory Hoblit	7.6	129	http://www.imdb.com/title/tt0117381/
+I Know What You Did Last Summer	horror, mystery, thriller	1997	Jim Gillespie	5.5	100	http://www.imdb.com/title/tt0119345/
+Along Came a Spider	action, crime, mystery, thriller	2001	Lee Tamahori	6.2	104	http://www.imdb.com/title/tt0164334/
+Original Sin	drama, mystery, romance	2001	Michael Cristofer	5.8	116	http://www.imdb.com/title/tt0218922/
+The Grudge	horror, mystery	2004	Takashi Shimizu	5.8	92	http://www.imdb.com/title/tt0391198/
+Taking Lives	mystery, thriller	2004	D.J. Caruso	6	103	http://www.imdb.com/title/tt0364045/
+Flightplan	drama, mystery, thriller	2005	Robert Schwentke	6.1	98	http://www.imdb.com/title/tt0408790/
+Monster House	animation, comedy, family, fantasy, mystery	2006	Gil Kenan	6.7	91	http://www.imdb.com/title/tt0385880/
+A Perfect Getaway	adventure, mystery, thriller	2009	David Twohy	6.5	98	http://www.imdb.com/title/tt0971209/
+The Unborn	horror, mystery, thriller	2009	David S. Goyer	4.6	88	http://www.imdb.com/title/tt1139668/
+Case 39	horror, mystery, thriller	2009	Christian Alvart	6.1	109	http://www.imdb.com/title/tt0795351/
+Edge of Darkness	crime, drama, mystery, thriller	2010	Martin Campbell	6.6	117	http://www.imdb.com/title/tt1226273/
+Passion	drama, mystery, thriller	2012	Brian De Palma	6	100	http://www.imdb.com/title/tt1829012/
+Branded	drama, fantasy, mystery	2012	Jamie Bradshaw, Alexander Doulerain	4.5	106	http://www.imdb.com/title/tt1368440/
+Atlas Shrugged: Part I	drama, mystery, sci_fi	2011	Paul Johansson	5.5	97	http://www.imdb.com/title/tt0480239/
+6 Souls	horror, mystery, thriller	2010	Mårlind & Stein, Mårlind & Stein	6	112	http://www.imdb.com/title/tt1179069/
+Buried	drama, mystery, thriller	2010	Rodrigo Cortés	7	95	http://www.imdb.com/title/tt1462758/
+The Poughkeepsie Tapes	horror, mystery, thriller	2007	John Erick Dowdle	6.1	86	http://www.imdb.com/title/tt1010271/
+Cube	horror, mystery, sci_fi, thriller	1997	Vincenzo Natali	7.4	90	http://www.imdb.com/title/tt0123755/
+Blue Velvet	crime, mystery, thriller	1986	David Lynch	7.8	120	http://www.imdb.com/title/tt0090756/
+Star Trek: The Motion Picture	adventure, mystery, sci_fi	1979	Robert Wise	6.3	132	http://www.imdb.com/title/tt0079945/
+Manhunter	crime, mystery, thriller	1986	Michael Mann	7.2	119	http://www.imdb.com/title/tt0091474/
+Angel Heart	mystery, thriller	1987	Alan Parker	7.3	113	http://www.imdb.com/title/tt0092563/
+Kiss the Girls	crime, drama, mystery, thriller	1997	Gary Fleder	6.4	115	http://www.imdb.com/title/tt0119468/
+Scream 2	horror, mystery	1997	Wes Craven	6	120	http://www.imdb.com/title/tt0120082/
+Beloved	drama, horror, mystery	1998	Jonathan Demme	5.6	172	http://www.imdb.com/title/tt0120603/
+The 13th Warrior	action, adventure, fantasy, horror, mystery, thriller	1999	John McTiernan	6.4	102	http://www.imdb.com/title/tt0120657/
+The Blair Witch Project	horror, mystery	1999	Daniel Myrick, Eduardo Sanchez	6.3	81	http://www.imdb.com/title/tt0185937/
+Scream 3	horror, mystery	2000	Wes Craven	5.4	116	http://www.imdb.com/title/tt0134084/
+From Hell	crime, horror, mystery, thriller	2001	The Hughes Brothers, The Hughes Brothers	6.8	122	http://www.imdb.com/title/tt0120681/
+Joe Dirt	adventure, comedy, drama, mystery, romance	2001	Dennie Gordon	5.5	91	http://www.imdb.com/title/tt0245686/
+The Manchurian Candidate	drama, mystery, thriller	2004	Jonathan Demme	6.6	129	http://www.imdb.com/title/tt0368008/
+The Constant Gardener	drama, mystery, thriller	2005	Fernando Meirelles	7.5	129	http://www.imdb.com/title/tt0387131/
+The Skeleton Key	drama, mystery, thriller	2005	Iain Softley	6.4	104	http://www.imdb.com/title/tt0397101/
+The Black Dahlia	crime, drama, mystery, thriller	2006	Brian De Palma	5.6	121	http://www.imdb.com/title/tt0387877/
+Final Destination 3	horror, mystery	2006	James Wong	5.7	93	http://www.imdb.com/title/tt0414982/
+The Orphanage	drama, mystery, thriller	2007	J.A. Bayona	7.5	105	http://www.imdb.com/title/tt0464141/
+Blindness	drama, mystery, sci_fi, thriller	2008	Fernando Meirelles	6.6	121	http://www.imdb.com/title/tt0861689/
+Doubt	drama, mystery	2008	John Patrick Shanley	7.5	104	http://www.imdb.com/title/tt0918927/
+Mirrors	horror, mystery, thriller	2008	Alexandre Aja	6	110	http://www.imdb.com/title/tt0790686/
+The Final Destination	horror, mystery	2009	David R. Ellis	5	82	http://www.imdb.com/title/tt1144884/
+The Box	drama, mystery, sci_fi, thriller	2009	Richard Kelly	5.6	115	http://www.imdb.com/title/tt0362478/
+Freelancers	action, crime, drama, mystery	2012	Jessy Terrero	4.4	96	http://www.imdb.com/title/tt1815708/
+Black Death	action, drama, horror, mystery	2010	Christopher Smith	6.4	102	http://www.imdb.com/title/tt1181791/
+Triangle	mystery, thriller	2009	Christopher Smith	6.8	99	http://www.imdb.com/title/tt1187064/
+Revolver	crime, drama, mystery, thriller	2005	Guy Ritchie	6.3	115	http://www.imdb.com/title/tt0365686/
+Brick	drama, mystery	2005	Rian Johnson	7.4	110	http://www.imdb.com/title/tt0393109/
+Session 9	horror, mystery	2001	Brad Anderson	6.6	100	http://www.imdb.com/title/tt0261983/
+Following	crime, drama, mystery, thriller	1998	Christopher Nolan	7.6	69	http://www.imdb.com/title/tt0154506/
+Veronica Mars	comedy, drama, mystery	2014	Rob Thomas			http://www.imdb.com/title/tt2771372/
+Stalker	adventure, drama, fantasy, mystery, sci_fi	1979	Andrei Tarkovsky	8.1	163	http://www.imdb.com/title/tt0079944/
+The Firm	drama, mystery, thriller	1993	Sydney Pollack	6.7	154	http://www.imdb.com/title/tt0106918/
+The Faculty	horror, mystery, sci_fi, thriller	1998	Robert Rodriguez	6.3	104	http://www.imdb.com/title/tt0133751/
+8MM	crime, mystery, thriller	1999	Joel Schumacher	6.4	123	http://www.imdb.com/title/tt0134273/
+Arlington Road	mystery, thriller	1999	Mark Pellington	7.1	117	http://www.imdb.com/title/tt0137363/
+The Bone Collector	crime, drama, mystery, thriller	1999	Phillip Noyce	6.5	118	http://www.imdb.com/title/tt0145681/
+The Thirteenth Floor	mystery, sci_fi, thriller	1999	Josef Rusnak	6.8	100	http://www.imdb.com/title/tt0139809/
+Ghost Ship	horror, mystery, thriller	2002	Steve Beck	5.3	91	http://www.imdb.com/title/tt0288477/
+Final Destination 2	horror, mystery	2003	David R. Ellis	6.2	90	http://www.imdb.com/title/tt0309593/
+Secret Window	mystery, thriller	2004	David Koepp	6.5	96	http://www.imdb.com/title/tt0363988/
+The Jacket	drama, mystery, sci_fi, thriller	2005	John Maybury	7	103	http://www.imdb.com/title/tt0366627/
+Mindhunters	crime, mystery, thriller	2004	Renny Harlin	6.3	106	http://www.imdb.com/title/tt0297284/
+Stay	drama, mystery, thriller	2005	Marc Forster	6.7	99	http://www.imdb.com/title/tt0371257/
+Awake	crime, mystery, thriller	2007	Joby Harold	6.4	84	http://www.imdb.com/title/tt0211933/
+Dead Silence	horror, mystery, thriller	2007	James Wan	6	89	http://www.imdb.com/title/tt0455760/
+In the Valley of Elah	crime, drama, mystery, thriller	2007	Paul Haggis	7.2	121	http://www.imdb.com/title/tt0478134/
+Premonition	drama, fantasy, mystery, sci_fi, thriller	2007	Mennan Yapo	5.7	96	http://www.imdb.com/title/tt0477071/
+Righteous Kill	action, crime, drama, mystery, thriller	2008	Jon Avnet	5.9	101	http://www.imdb.com/title/tt1034331/
+Meeting Evil	crime, drama, mystery, thriller	2012	Chris Fisher	5.2	89	http://www.imdb.com/title/tt1810697/
+Sound of My Voice	drama, mystery, sci_fi	2011	Zal Batmanglij	6.6	85	http://www.imdb.com/title/tt1748207/
+Exam	mystery, thriller	2009	Stuart Hazeldine	6.8	101	http://www.imdb.com/title/tt1258197/
+The Long Kiss Goodnight	action, crime, drama, mystery, thriller	1996	Renny Harlin	6.7	121	http://www.imdb.com/title/tt0116908/
+The Name of the Rose	drama, mystery, thriller, crime	1986	Jean-Jacques Annaud	7.7	130	http://www.imdb.com/title/tt0091605/
+All the President's Men	drama, history, mystery, thriller	1976	Alan J. Pakula	8	138	http://www.imdb.com/title/tt0074119/
+The Omen	horror, mystery	1976	Richard Donner	7.6	111	http://www.imdb.com/title/tt0075005/
+Child's Play	horror, mystery, thriller	1988	Tom Holland	6.4	87	http://www.imdb.com/title/tt0094862/
+Jacob's Ladder	drama, horror, mystery	1990	Adrian Lyne	7.5	113	http://www.imdb.com/title/tt0099871/
+Presumed Innocent	crime, drama, mystery, thriller	1990	Alan J. Pakula	6.8	127	http://www.imdb.com/title/tt0100404/
+Child's Play 3	horror, mystery, thriller	1991	Jack Bender	4.6	90	http://www.imdb.com/title/tt0103956/
+Strange Days	crime, drama, mystery, sci_fi, thriller	1995	Kathryn Bigelow	7.1	145	http://www.imdb.com/title/tt0114558/
+Amistad	drama, history, mystery	1997	Steven Spielberg	7.1	155	http://www.imdb.com/title/tt0118607/
+What Lies Beneath	drama, horror, mystery, thriller	2000	Robert Zemeckis	6.5	130	http://www.imdb.com/title/tt0161081/
+Hide and Seek	horror, mystery, thriller	2005	John Polson	5.7	101	http://www.imdb.com/title/tt0382077/
+Hostage	crime, drama, mystery, thriller	2005	Florent Siri	6.6	113	http://www.imdb.com/title/tt0340163/
+The Interpreter	mystery, thriller	2005	Sydney Pollack	6.4	128	http://www.imdb.com/title/tt0373926/
+Deception	crime, drama, mystery, thriller	2008	Marcel Langenegger	5.9	107	http://www.imdb.com/title/tt0800240/
+Whiteout	action, crime, mystery, thriller	2009	Dominic Sena	5.4	101	http://www.imdb.com/title/tt0365929/
+Saw VI	horror, mystery	2009	Kevin Greutert	5.9	90	http://www.imdb.com/title/tt1233227/
+Wish You Were Here	drama, mystery	2012	Kieran Darcy-Smith	5.9	89	http://www.imdb.com/title/tt1684925/
+After.Life	drama, horror, mystery, thriller	2009	Agnieszka Wojtowicz-Vosloo	5.9	104	http://www.imdb.com/title/tt0838247/
+Lost Highway	drama, mystery, thriller	1997	David Lynch	7.6	134	http://www.imdb.com/title/tt0116922/
+Safe Haven	drama, mystery, romance, thriller	2013	Lasse Hallström	6.4	115	http://www.imdb.com/title/tt1702439/
+The Mortal Instruments: City of Bones	action, adventure, drama, fantasy, mystery, romance	2013	Harald Zwart			http://www.imdb.com/title/tt1538403/
+The Words	drama, mystery, romance	2012	Brian Klugman, Lee Sternthal	6.9	102	http://www.imdb.com/title/tt1840417/
+Vanilla Sky	mystery, romance, sci_fi, thriller	2001	Cameron Crowe	6.8	136	http://www.imdb.com/title/tt0259711/
+Atonement	drama, mystery, romance, war	2007	Joe Wright	7.8	123	http://www.imdb.com/title/tt0783233/
+The Illusionist	drama, mystery, romance, thriller	2006	Neil Burger	7.6	110	http://www.imdb.com/title/tt0443543/
+Ghost	drama, fantasy, mystery, romance, thriller	1990	Jerry Zucker	6.9	127	http://www.imdb.com/title/tt0099653/
+All Good Things	crime, drama, mystery, romance, thriller	2010	Andrew Jarecki	6.3	101	http://www.imdb.com/title/tt1175709/
+Holes	adventure, comedy, drama, family, mystery, romance	2003	Andrew Davis	7	117	http://www.imdb.com/title/tt0311289/
+Meet Joe Black	drama, fantasy, mystery, romance	1998	Martin Brest	7	178	http://www.imdb.com/title/tt0119643/
+Resolution	horror, mystery, thriller	2012	Justin Benson, Aaron Moorhead	6.1	93	http://www.imdb.com/title/tt1977895/
+Endeavour	crime, drama, mystery	2012	Colm McCarthy	7.7	98	http://www.imdb.com/title/tt2039333/
+The Philadelphia Experiment	adventure, mystery, sci_fi, thriller	2012	Paul Ziller	3.8		http://www.imdb.com/title/tt2039399/
+Night of the Templar	action, comedy, drama, history, horror, mystery, sci_fi, thriller	2012	Paul Sampson	3.1	101	http://www.imdb.com/title/tt0768222/
+The Colombian Connection	action, crime, mystery	2011	Julian Higgins	3.1		http://www.imdb.com/title/tt1742682/
+Jeepers Creepers 3: Cathedral	horror, mystery, thriller	2013	Victor Salva			http://www.imdb.com/title/tt1139592/
+Inescapable	drama, mystery, romance, thriller	2012	Ruba Nadda	4.8	93	http://www.imdb.com/title/tt1844203/
+The Immigrant	drama, mystery, romance, thriller	2013	James Gray	6.2	120	http://www.imdb.com/title/tt1951181/
+Soylent Green	mystery, sci_fi, thriller	1973	Richard Fleischer	7	97	http://www.imdb.com/title/tt0070723/
+Gosford Park	drama, mystery	2001	Robert Altman	7.3	137	http://www.imdb.com/title/tt0280707/
+Solaris	drama, mystery, romance, sci_fi	2002	Steven Soderbergh	6.1	99	http://www.imdb.com/title/tt0307479/
+Volver	comedy, crime, drama, mystery	2006	Pedro Almodóvar	7.6	121	http://www.imdb.com/title/tt0441909/
+Perfect Stranger	crime, drama, mystery, thriller	2007	James Foley	5.5	109	http://www.imdb.com/title/tt0457433/
+The Midnight Meat Train	horror, mystery, thriller	2008	Ryuhei Kitamura	6.2	98	http://www.imdb.com/title/tt0805570/
+Jeepers Creepers	horror, mystery	2001	Victor Salva	5.9	90	http://www.imdb.com/title/tt0263488/
+Thir13en Ghosts	horror, mystery, thriller	2001	Steve Beck	5.3	91	http://www.imdb.com/title/tt0245674/
+The Pink Panther	adventure, comedy, crime, mystery	2006	Shawn Levy	5.3	93	http://www.imdb.com/title/tt0383216/
+The Wicker Man	horror, mystery, thriller	2006	Neil LaBute	3.6	102	http://www.imdb.com/title/tt0450345/
+Cypher	mystery, sci_fi, thriller	2002	Vincenzo Natali	6.8	95	http://www.imdb.com/title/tt0284978/
+The Singing Detective	comedy, crime, musical, mystery	2003	Keith Gordon	5.5	109	http://www.imdb.com/title/tt0314676/
+The Conversation	drama, mystery, thriller	1974	Francis Ford Coppola	8	113	http://www.imdb.com/title/tt0071360/
+The Rescuers	animation, adventure, crime, drama, family, fantasy, mystery	1977	John Lounsbery, Wolfgang Reitherman	6.9	78	http://www.imdb.com/title/tt0076618/
+2010	sci_fi, thriller	1984	Peter Hyams	6.7	116	http://www.imdb.com/title/tt0086837/
+The Great Mouse Detective	animation, adventure, family, musical, mystery	1986	Ron Clements, Burny Mattinson	7.1	74	http://www.imdb.com/title/tt0091149/
+Mississippi Burning	drama, mystery, thriller	1988	Alan Parker	7.8	128	http://www.imdb.com/title/tt0095647/
+The Last Boy Scout	action, comedy, crime, mystery, thriller	1991	Tony Scott	6.8	105	http://www.imdb.com/title/tt0102266/
+Sneakers	comedy, crime, drama, mystery, thriller	1992	Phil Alden Robinson	7	126	http://www.imdb.com/title/tt0105435/
+The Pelican Brief	crime, drama, mystery, thriller	1993	Alan J. Pakula	6.4	141	http://www.imdb.com/title/tt0107798/
+The Prophecy	horror, thriller, fantasy, mystery	1995	Gregory Widen	6.5	98	http://www.imdb.com/title/tt0114194/
+Eraser	action, crime, drama, mystery, sci_fi, thriller	1996	Charles Russell	5.9	115	http://www.imdb.com/title/tt0116213/
+The Negotiator	action, crime, drama, mystery, thriller	1998	F. Gary Gray	7.2	140	http://www.imdb.com/title/tt0120768/
+Double Jeopardy	crime, mystery, thriller	1999	Bruce Beresford	6.2	105	http://www.imdb.com/title/tt0150377/
+High Crimes	crime, drama, mystery, thriller	2002	Carl Franklin	6.2	115	http://www.imdb.com/title/tt0257756/
+Cold Creek Manor	drama, mystery, thriller	2003	Mike Figgis	4.8	118	http://www.imdb.com/title/tt0331468/
+The Ring Two	horror, mystery, thriller	2005	Hideo Nakata	5.2	110	http://www.imdb.com/title/tt0377109/
+Turistas	horror, mystery, thriller	2006	John Stockwell	5.2	93	http://www.imdb.com/title/tt0454970/
+I Know Who Killed Me	crime, mystery, thriller	2007	Chris Sivertson	3.6	105	http://www.imdb.com/title/tt0897361/
+88 Minutes	drama, mystery, thriller	2007	Jon Avnet	5.8	108	http://www.imdb.com/title/tt0411061/
+The X Files: I Want to Believe	drama, mystery, sci_fi, thriller	2008	Chris Carter	5.8	104	http://www.imdb.com/title/tt0443701/
+The Stepfather	mystery, thriller	2009	Nelson McCormick	5.4	101	http://www.imdb.com/title/tt0814335/
+My Soul to Take	horror, mystery, thriller	2010	Wes Craven	4.6	107	http://www.imdb.com/title/tt0872230/
+Columbus Circle	crime, mystery, thriller	2012	George Gallo	5.8	82	http://www.imdb.com/title/tt1465533/
+Absentia	drama, horror, mystery	2011	Mike Flanagan	5.6	87	http://www.imdb.com/title/tt1610996/
+Echelon Conspiracy	action, crime, mystery, thriller	2009	Greg Marcks	5.7	105	http://www.imdb.com/title/tt1124039/
+Transsiberian	crime, drama, mystery, thriller	2008	Brad Anderson	6.7	111	http://www.imdb.com/title/tt0800241/
+Broken Flowers	comedy, drama, mystery	2005	Jim Jarmusch	7.2	106	http://www.imdb.com/title/tt0412019/
+Killer Movie	comedy, horror, mystery, thriller	2008	Jeff Fisher	4.5	93	http://www.imdb.com/title/tt0988083/
+Unknown	crime, drama, mystery, thriller	2006	Simon Brand	6.5	85	http://www.imdb.com/title/tt0450340/
+Passengers	drama, mystery, romance, thriller	2008	Rodrigo García	5.7	93	http://www.imdb.com/title/tt0449487/
+Cleaner	crime, mystery, thriller	2007	Renny Harlin	6.1	88	http://www.imdb.com/title/tt0896798/
+Jack the Ripper	crime, drama, mystery, thriller	1988	David Wickes	7.5	182	http://www.imdb.com/title/tt0095388/
+Sand Castles	drama, mystery, thriller	2014	Clenet Verdi-Rose			http://www.imdb.com/title/tt2233170/
+Christine	drama, horror, mystery, thriller	1983	John Carpenter	6.5	110	http://www.imdb.com/title/tt0085333/
+The Rescuers Down Under	animation, adventure, crime, drama, family, fantasy, mystery	1990	Hendel Butoy, Mike Gabriel	6.7	77	http://www.imdb.com/title/tt0100477/
+Twin Peaks: Fire Walk with Me	mystery, thriller	1992	David Lynch	7	135	http://www.imdb.com/title/tt0105665/
+Conspiracy Theory	action, crime, mystery, romance, thriller	1997	Richard Donner	6.6	135	http://www.imdb.com/title/tt0118883/
+Sphere	drama, mystery, sci_fi, thriller	1998	Barry Levinson	5.8	134	http://www.imdb.com/title/tt0120184/
+Stir of Echoes	thriller, horror, mystery	1999	David Koepp	7	99	http://www.imdb.com/title/tt0164181/
+The Gift	crime, drama, fantasy, mystery, thriller	2000	Sam Raimi	6.6	112	http://www.imdb.com/title/tt0219699/
+Joy Ride	drama, mystery, thriller	2001	John Dahl	6.5	97	http://www.imdb.com/title/tt0206314/
+The Forgotten	drama, mystery, sci_fi, thriller	2004	Joseph Ruben	5.7	91	http://www.imdb.com/title/tt0356618/
+Scooby Doo 2: Monsters Unleashed	action, adventure, comedy, family, fantasy, mystery	2004	Raja Gosnell	4.7	93	http://www.imdb.com/title/tt0331632/
+Sky Captain and the World of Tomorrow	action, adventure, mystery, sci_fi, thriller	2004	Kerry Conran	6.1	106	http://www.imdb.com/title/tt0346156/
+Wicker Park	drama, mystery, romance, thriller	2004	Paul McGuigan	6.8	114	http://www.imdb.com/title/tt0324554/
+Without a Paddle	adventure, comedy, mystery	2004	Steven Brill	5.7	95	http://www.imdb.com/title/tt0364751/
+High Tension	horror, mystery, thriller	2003	Alexandre Aja	6.8	91	http://www.imdb.com/title/tt0338095/
+Basic Instinct 2	crime, horror, mystery, thriller	2006	Michael Caton-Jones	4	114	http://www.imdb.com/title/tt0430912/
+Lady in the Water	fantasy, mystery, thriller	2006	M. Night Shyamalan	5.6	110	http://www.imdb.com/title/tt0452637/
+The Omen	horror, mystery, thriller	2006	John Moore	5.4	110	http://www.imdb.com/title/tt0466909/
+The Invisible	crime, drama, fantasy, mystery, thriller	2007	David S. Goyer	6.1	102	http://www.imdb.com/title/tt0435670/
+One Missed Call	horror, mystery	2008	Eric Valette	3.8	87	http://www.imdb.com/title/tt0479968/
+Prom Night	horror, mystery, thriller	2008	Nelson McCormick	3.7	88	http://www.imdb.com/title/tt0926129/
+Shutter	horror, mystery, thriller	2008	Masayuki Ochiai	5	85	http://www.imdb.com/title/tt0482599/
+Silent Night	horror, mystery, thriller	2012	Steven C. Miller	4.9	94	http://www.imdb.com/title/tt2347497/
+The Tunnel Movie	horror, mystery, thriller	2011	Carlo Ledesma	5.8	90	http://www.imdb.com/title/tt1735485/
+Faces in the Crowd	crime, drama, mystery, thriller	2011	Julien Magnat	5.5	103	http://www.imdb.com/title/tt1536410/
+Vanishing on 7th Street	horror, mystery, thriller	2010	Brad Anderson	4.9	92	http://www.imdb.com/title/tt1452628/
+Afterwards	drama, mystery, thriller	2008	Gilles Bourdos	5.7	104	http://www.imdb.com/title/tt0940580/
+Inland Empire	drama, mystery, thriller	2006	David Lynch	6.8	180	http://www.imdb.com/title/tt0460829/
+Killing Me Softly	drama, mystery, romance, thriller	2002	Chen Kaige	5.3	100	http://www.imdb.com/title/tt0250468/
+Wonderland	crime, drama, mystery, thriller	2003	James Cox	6.5	104	http://www.imdb.com/title/tt0335563/
+Time Bandits	adventure, comedy, family, fantasy, sci_fi	1981	Terry Gilliam	6.9	116	http://www.imdb.com/title/tt0081633/
+Solaris	sci_fi	1972	Andrei Tarkovsky	8	167	http://www.imdb.com/title/tt0069293/
+Return to Oz	adventure, family, fantasy, mystery	1985	Walter Murch	6.6	113	http://www.imdb.com/title/tt0089908/
+Backdraft	action, crime, drama, mystery, thriller	1991	Ron Howard	6.6	137	http://www.imdb.com/title/tt0101393/
+In the Line of Fire	action, crime, drama, mystery, thriller	1993	Wolfgang Petersen	7.2	128	http://www.imdb.com/title/tt0107206/
+Powder	drama, fantasy, mystery, sci_fi, thriller	1995	Victor Salva	6.3	111	http://www.imdb.com/title/tt0114168/
+The X Files	mystery, sci_fi, thriller	1998	Rob Bowman	6.8	121	http://www.imdb.com/title/tt0120902/
+I Still Know What You Did Last Summer	horror, mystery, thriller	1998	Danny Cannon	4.3	100	http://www.imdb.com/title/tt0130018/
+Snake Eyes	crime, mystery, thriller	1998	Brian De Palma	5.9	98	http://www.imdb.com/title/tt0120832/
+Urban Legend	horror, thriller, mystery	1998	Jamie Blanks	5.3	99	http://www.imdb.com/title/tt0146336/
+The General's Daughter	crime, drama, mystery, thriller, war	1999	Simon West	6.1	116	http://www.imdb.com/title/tt0144214/
+House on Haunted Hill	horror, mystery, thriller	1999	William Malone	5.4	93	http://www.imdb.com/title/tt0185371/
+The Mothman Prophecies	drama, horror, mystery, thriller	2002	Mark Pellington	6.4	119	http://www.imdb.com/title/tt0265349/
+Basic	action, mystery, thriller	2003	John McTiernan	6.4	98	http://www.imdb.com/title/tt0264395/
+The Haunted Mansion	comedy, family, fantasy, mystery, thriller	2003	Rob Minkoff	4.8	99	http://www.imdb.com/title/tt0338094/
+Nancy Drew	comedy, crime, family, mystery, thriller	2007	Andrew Fleming	5.8	99	http://www.imdb.com/title/tt0479500/
+The Resident	mystery, thriller	2011	Antti J. Jokinen	5.1	91	http://www.imdb.com/title/tt1334102/
+The Caller	horror, mystery, thriller	2011	Matthew Parkhill	5.9	92	http://www.imdb.com/title/tt1525890/
+Horsemen	crime, drama, mystery, thriller	2009	Jonas Åkerlund	5.5	90	http://www.imdb.com/title/tt0892767/
+Get Low	drama, mystery	2009	Aaron Schneider	7	103	http://www.imdb.com/title/tt1194263/
+Scoop	comedy, mystery	2006	Woody Allen	6.7	96	http://www.imdb.com/title/tt0457513/
+The Hole	drama, horror, mystery, thriller	2001	Nick Hamm	6.2	102	http://www.imdb.com/title/tt0242527/
+The Quiet Earth	drama, sci_fi, mystery	1985	Geoffrey Murphy	6.9	91	http://www.imdb.com/title/tt0089869/
+Sleuth	mystery, thriller	1972	Joseph L. Mankiewicz	8.1	138	http://www.imdb.com/title/tt0069281/
+Sea of Love	crime, drama, mystery, thriller	1989	Harold Becker	6.7	113	http://www.imdb.com/title/tt0098273/
+Child's Play 2	horror, mystery, thriller	1990	John Lafia	5.3	84	http://www.imdb.com/title/tt0099253/
+Leviathan	adventure, horror, mystery, sci_fi, thriller	1989	George P. Cosmatos	5.6	98	http://www.imdb.com/title/tt0097737/
+New Nightmare	horror, mystery, thriller	1994	Wes Craven	6.3	112	http://www.imdb.com/title/tt0111686/
+The Net	action, crime, drama, mystery, thriller	1995	Irwin Winkler	5.7	114	http://www.imdb.com/title/tt0113957/
+Brokedown Palace	drama, mystery, thriller	1999	Jonathan Kaplan	6.2	100	http://www.imdb.com/title/tt0120620/
+Femme Fatale	crime, mystery, thriller	2002	Brian De Palma	6.2	114	http://www.imdb.com/title/tt0280665/
+The Pink Panther 2	adventure, comedy, crime, mystery	2009	Harald Zwart	5.3	92	http://www.imdb.com/title/tt0838232/
+Page Eight	drama, mystery	2011	David Hare	6.7	99	http://www.imdb.com/title/tt1797469/
+Quarantine 2: Terminal	horror, mystery, sci_fi, thriller	2011	John G. Pogue	5.2	86	http://www.imdb.com/title/tt1699231/
+Wrecked	adventure, drama, mystery, thriller	2010	Michael Greenspan	5.1	91	http://www.imdb.com/title/tt1316622/
+And Soon the Darkness	crime, horror, mystery, thriller	2010	Marcos Efron	5.1	91	http://www.imdb.com/title/tt1391034/
+S. Darko	crime, mystery, sci_fi, thriller	2009	Chris Fisher	3.7	103	http://www.imdb.com/title/tt1231277/
+Nine Miles Down	horror, mystery, thriller	2009	Anthony Waller	5.5	86	http://www.imdb.com/title/tt0812352/
+In the Electric Mist	crime, drama, mystery, thriller	2009	Bertrand Tavernier	6.1	117	http://www.imdb.com/title/tt0910905/
+Wild Things: Diamonds in the Rough	action, drama, mystery, thriller	2005	Jay Lowi	4.4	87	http://www.imdb.com/title/tt0448179/
+The Nines	drama, fantasy, mystery, sci_fi, thriller	2007	John August	6.4	100	http://www.imdb.com/title/tt0810988/
+Assassination of a High School President	comedy, crime, mystery	2008	Brett Simon	6.3	93	http://www.imdb.com/title/tt1018818/
+All the Boys Love Mandy Lane	horror, mystery, thriller	2006	Jonathan Levine	5.7	90	http://www.imdb.com/title/tt0490076/
+The Wicker Man	horror, mystery, thriller	1973	Robin Hardy	7.7	88	http://www.imdb.com/title/tt0070917/
+Magnum Force	action, mystery, thriller	1973	Ted Post	7.1	124	http://www.imdb.com/title/tt0070355/
+Friday the 13th Part 2	horror, mystery, thriller	1981	Steve Miner	5.8	87	http://www.imdb.com/title/tt0082418/
+Psycho II	horror, mystery, thriller	1983	Richard Franklin	6.2	113	http://www.imdb.com/title/tt0086154/
+Body Double	crime, drama, mystery, thriller	1984	Brian De Palma	6.6	114	http://www.imdb.com/title/tt0086984/
+Fletch	comedy, crime, mystery	1985	Michael Ritchie	6.8	98	http://www.imdb.com/title/tt0089155/
+Striking Distance	action, crime, mystery, thriller	1993	Rowdy Herrington	5.6	102	http://www.imdb.com/title/tt0108238/
+The Client	crime, drama, mystery, thriller	1994	Joel Schumacher	6.6	119	http://www.imdb.com/title/tt0109446/
+Color of Night	mystery, romance, thriller, drama	1994	Richard Rush	4.9	121	http://www.imdb.com/title/tt0109456/
+Congo	action, adventure, mystery, sci_fi	1995	Frank Marshall	4.8	109	http://www.imdb.com/title/tt0112715/
+Midnight in the Garden of Good and Evil	comedy, crime, drama, mystery, thriller	1997	Clint Eastwood	6.5	155	http://www.imdb.com/title/tt0119668/
+Blood Work	action, crime, drama, mystery, thriller	2002	Clint Eastwood	6.3	110	http://www.imdb.com/title/tt0309377/
+Dragonfly	drama, fantasy, mystery, romance, thriller	2002	Tom Shadyac	5.8	104	http://www.imdb.com/title/tt0259288/
+White Noise	drama, horror, mystery, thriller	2005	Geoffrey Sax	5.4	101	http://www.imdb.com/title/tt0375210/
+Proof	drama, mystery	2005	John Madden	6.7	100	http://www.imdb.com/title/tt0377107/
+Pulse	horror, mystery, sci_fi, thriller	2006	Jim Sonzero	4.6	90	http://www.imdb.com/title/tt0454919/
+Nine Dead	crime, drama, horror, mystery, thriller	2010	Christopher Shadley	5.3	98	http://www.imdb.com/title/tt0959329/
+The Big Bang	action, mystery, thriller	2010	Tony Krantz	5.4	101	http://www.imdb.com/title/tt1307873/
+The Grudge 3	horror, mystery	2009	Toby Wilkins	4.5	90	http://www.imdb.com/title/tt1053859/
+The Oxford Murders	crime, mystery, thriller	2008	Alex de la Iglesia	6.1	104	http://www.imdb.com/title/tt0488604/
+Keeping Mum	comedy, crime, drama, mystery	2005	Niall Johnson	6.7	103	http://www.imdb.com/title/tt0444653/
+Bubba Ho-Tep	comedy, drama, fantasy, horror, mystery	2002	Don Coscarelli	7.1	92	http://www.imdb.com/title/tt0281686/
+Exotica	drama, mystery	1994	Atom Egoyan	7.1	103	http://www.imdb.com/title/tt0109759/
+Six Degrees of Separation	comedy, drama, mystery	1993	Fred Schepisi	6.8	112	http://www.imdb.com/title/tt0108149/
+Three Days of the Condor	drama, mystery, romance, thriller	1975	Sydney Pollack	7.5	117	http://www.imdb.com/title/tt0073802/
+The Golden Child	action, adventure, comedy, fantasy, mystery	1986	Michael Ritchie	5.7	94	http://www.imdb.com/title/tt0091129/
+No Way Out	action, drama, mystery, romance, thriller	1987	Roger Donaldson	7	114	http://www.imdb.com/title/tt0093640/
+Fire in the Sky	biography, drama, horror, mystery, sci_fi	1993	Robert Lieberman	6.4	109	http://www.imdb.com/title/tt0106912/
+Rising Sun	crime, drama, mystery, thriller, action	1993	Philip Kaufman	6.1	125	http://www.imdb.com/title/tt0107969/
+Copycat	crime, drama, mystery, thriller	1995	Jon Amiel	6.5	123	http://www.imdb.com/title/tt0112722/
+Courage Under Fire	drama, mystery, thriller, war	1996	Edward Zwick	6.5	117	http://www.imdb.com/title/tt0115956/
+Breakdown	crime, mystery, thriller	1997	Jonathan Mostow	6.8	93	http://www.imdb.com/title/tt0118771/
+Hearts in Atlantis	drama, mystery	2001	Scott Hicks	6.7	101	http://www.imdb.com/title/tt0252501/
+In the Cut	mystery, thriller	2003	Jane Campion	5.2	119	http://www.imdb.com/title/tt0199626/
+Spartan	action, crime, drama, mystery, thriller	2004	David Mamet	6.6	106	http://www.imdb.com/title/tt0360009/
+Twisted	crime, drama, mystery, thriller	2004	Philip Kaufman	5	97	http://www.imdb.com/title/tt0315297/
+An American Haunting	horror, mystery, thriller	2005	Courtney Solomon	4.9	83	http://www.imdb.com/title/tt0429573/
+Hollywoodland	biography, crime, drama, history, mystery, romance, thriller	2006	Allen Coulter	6.5	126	http://www.imdb.com/title/tt0427969/
+Dylan Dog: Dead of Night	comedy, horror, mystery, sci_fi, thriller	2010	Kevin Munroe	5.1	107	http://www.imdb.com/title/tt1013860/
+The Woman in the Fifth	drama, mystery, thriller	2011	Pawel Pawlikowski	5	85	http://www.imdb.com/title/tt1605777/
+Fear Island	horror, mystery, thriller	2009	Michael Storey	4.8	95	http://www.imdb.com/title/tt1109583/
+Sleuth	drama, mystery, thriller	2007	Kenneth Branagh	6.3	86	http://www.imdb.com/title/tt0857265/
+The Other Man	drama, mystery, thriller	2008	Richard Eyre	5.4	88	http://www.imdb.com/title/tt0974613/
+Cube²: Hypercube	horror, mystery, sci_fi, thriller	2002	Andrzej Sekula	5.6	95	http://www.imdb.com/title/tt0285492/
+Enigma	drama, mystery, romance, thriller, war	2001	Michael Apted	6.3	119	http://www.imdb.com/title/tt0157583/
+The Long Goodbye	crime, drama, thriller, mystery	1973	Robert Altman	7.6	112	http://www.imdb.com/title/tt0070334/
+Silver Bullet	adventure, drama, horror, mystery, thriller	1985	Daniel Attias	6.1	95	http://www.imdb.com/title/tt0090021/
+Frantic	crime, drama, mystery, thriller	1988	Roman Polanski	6.8	120	http://www.imdb.com/title/tt0095174/
+The People Under the Stairs	comedy, horror, mystery, thriller	1991	Wes Craven	6.1	102	http://www.imdb.com/title/tt0105121/
+The Pagemaster	animation, adventure, comedy, family, fantasy, mystery, romance	1994	Maurice Hunt, Joe Johnston	5.4	80	http://www.imdb.com/title/tt0110763/
+Just Cause	crime, drama, mystery, thriller	1995	Arne Glimcher	6.2	102	http://www.imdb.com/title/tt0113501/
+The Arrival	sci_fi, thriller, mystery, action	1996	David Twohy	6.2	115	http://www.imdb.com/title/tt0115571/
+The Pledge	drama, crime, mystery, thriller	2001	Sean Penn	6.8	124	http://www.imdb.com/title/tt0237572/
+Possession	romance, drama, mystery	2002	Neil LaBute	6.3	102	http://www.imdb.com/title/tt0256276/
+The Truth About Charlie	mystery, thriller	2002	Jonathan Demme	4.7	104	http://www.imdb.com/title/tt0270707/
+The Order	action, mystery, thriller	2003	Brian Helgeland	4.9	102	http://www.imdb.com/title/tt0304711/
+The Limits of Control	crime, drama, mystery, thriller	2009	Jim Jarmusch	6.1	116	http://www.imdb.com/title/tt1135092/
+Triage	drama, mystery, war	2009	Danis Tanovic	6.4	99	http://www.imdb.com/title/tt1217070/
+Beyond a Reasonable Doubt	crime, drama, mystery, thriller	2009	Peter Hyams	5.7	106	http://www.imdb.com/title/tt1183251/
+The Lazarus Project	drama, mystery, thriller	2008	John Patrick Glenn	6	100	http://www.imdb.com/title/tt0464041/
+The Three Burials of Melquiades Estrada	adventure, crime, drama, mystery, western	2005	Tommy Lee Jones	7.5	121	http://www.imdb.com/title/tt0419294/
+Where the Truth Lies	crime, drama, mystery, thriller	2005	Atom Egoyan	6.6	107	http://www.imdb.com/title/tt0373450/
+Afterschool	drama, mystery	2008	Antonio Campos	6.1	107	http://www.imdb.com/title/tt1224366/
+Human Trafficking	crime, drama, mystery, thriller	2005	Christian Duguay	7.5	176	http://www.imdb.com/title/tt0461872/
+Below	horror, mystery, thriller	2002	David Twohy	6.1	105	http://www.imdb.com/title/tt0276816/
+The Player	comedy, crime, drama, mystery, romance, thriller	1992	Robert Altman	7.7	124	http://www.imdb.com/title/tt0105151/
+Blow Out	mystery, thriller	1981	Brian De Palma	7.3	107	http://www.imdb.com/title/tt0082085/
+Dressed to Kill	mystery, thriller	1980	Brian De Palma	7.1	105	http://www.imdb.com/title/tt0080661/
+Before I Go to Sleep	mystery, thriller	2014	Rowan Joffe			http://www.imdb.com/title/tt1726592/
+The Return of the Pink Panther	comedy, crime, mystery	1975	Blake Edwards	7	113	http://www.imdb.com/title/tt0072081/
+Murder on the Orient Express	drama, mystery	1974	Sidney Lumet	7.3	128	http://www.imdb.com/title/tt0071877/
+Murder by Death	comedy, mystery, thriller, crime	1976	Robert Moore	7.4	94	http://www.imdb.com/title/tt0074937/
+Crossroads	drama, music, mystery, romance	1986	Walter Hill	6.7	99	http://www.imdb.com/title/tt0090888/
+The Vanishing	drama, mystery, thriller	1993	George Sluizer	6.1	109	http://www.imdb.com/title/tt0108473/
+Batman: Mask of the Phantasm	animation, action, crime, family, mystery, romance, sci_fi, thriller	1993	Eric Radomski, Bruce W. Timm	7.6	76	http://www.imdb.com/title/tt0106364/
+Malice	crime, mystery, thriller	1993	Harold Becker	6.2	107	http://www.imdb.com/title/tt0107497/
+Mulholland Falls	crime, drama, mystery, thriller	1996	Lee Tamahori	6.1	107	http://www.imdb.com/title/tt0117107/
+Murder at 1600	action, crime, drama, mystery, thriller	1997	Dwight Little	5.9	107	http://www.imdb.com/title/tt0119731/
+Disturbing Behavior	horror, mystery, sci_fi, thriller	1998	David Nutter	5.3	84	http://www.imdb.com/title/tt0134619/
+Domestic Disturbance	crime, mystery, thriller	2001	Harold Becker	5.3	89	http://www.imdb.com/title/tt0249478/
+Exorcist: The Beginning	horror, mystery, thriller	2004	Renny Harlin	5	114	http://www.imdb.com/title/tt0204313/
+Boogeyman	drama, horror, mystery, thriller	2005	Stephen Kay	4	89	http://www.imdb.com/title/tt0357507/
+Freedomland	crime, drama, mystery, thriller	2006	Joe Roth	5	113	http://www.imdb.com/title/tt0349467/
+Shanghai	drama, mystery, romance, thriller	2010	Mikael Håfström	6.4	105	http://www.imdb.com/title/tt1092634/
+Red Riding: In the Year of Our Lord 1974	crime, drama, mystery, thriller	2009	Julian Jarrold	7.1	102	http://www.imdb.com/title/tt1259574/
+Stolen	crime, drama, mystery, thriller	2009	Anders Anderson	6	91	http://www.imdb.com/title/tt1139282/
+The Good German	drama, mystery, thriller	2006	Steven Soderbergh	6.1	105	http://www.imdb.com/title/tt0452624/
+The I Inside	mystery, sci_fi, thriller	2004	Roland Suso Richter	6	90	http://www.imdb.com/title/tt0325596/
+The Children	horror, mystery, thriller	2008	Tom Shankland	6	84	http://www.imdb.com/title/tt1172571/
+Dead End	horror, mystery, thriller, comedy	2003	Jean-Baptiste Andrea, Fabrice Canepa	6.7	85	http://www.imdb.com/title/tt0308152/
+The Quiet American	drama, mystery, romance, thriller, war	2002	Phillip Noyce	7.1	101	http://www.imdb.com/title/tt0258068/
+The Mighty Quinn	action, crime, drama, mystery, thriller	1989	Carl Schenkel	5.9	98	http://www.imdb.com/title/tt0097880/
+Boxing Helena	drama, mystery, romance, thriller	1993	Jennifer Chambers Lynch	4.2	107	http://www.imdb.com/title/tt0106471/
+Without a Clue	comedy, crime, mystery	1988	Thom Eberhardt	6.8	107	http://www.imdb.com/title/tt0096454/
+Salem's Lot	horror, mystery, thriller	1979	Tobe Hooper	6.6	112	http://www.imdb.com/title/tt0079844/
+Picnic at Hanging Rock	drama, mystery	1975	Peter Weir	7.6	115	http://www.imdb.com/title/tt0073540/
+The Deep	adventure, horror, mystery, thriller	1977	Peter Yates	6	123	http://www.imdb.com/title/tt0075925/
+Dead Again	mystery, thriller	1991	Kenneth Branagh	6.9	107	http://www.imdb.com/title/tt0101669/
+The Shadow	action, adventure, crime, fantasy, mystery, thriller	1994	Russell Mulcahy	5.7	108	http://www.imdb.com/title/tt0111143/
+Twilight	drama, mystery, thriller, crime	1998	Robert Benton	6.1	94	http://www.imdb.com/title/tt0119594/
+True Crime	crime, drama, mystery, thriller	1999	Clint Eastwood	6.5	127	http://www.imdb.com/title/tt0139668/
+They	horror, mystery, thriller	2002	Robert Harmon	4.7	89	http://www.imdb.com/title/tt0283632/
+Cry_Wolf	drama, horror, mystery, thriller	2005	Jeff Wadlow	5.7	90	http://www.imdb.com/title/tt0384286/
+Altitude	horror, mystery, sci_fi, thriller	2010	Kaare Andrews	4.9	90	http://www.imdb.com/title/tt1407049/
+The Killing Room	mystery, thriller	2009	Jonathan Liebesman	5.7	93	http://www.imdb.com/title/tt1119191/
+Birth	drama, mystery, romance, thriller	2004	Jonathan Glazer	6	100	http://www.imdb.com/title/tt0337876/
+Half Light	drama, horror, mystery, thriller	2006	Craig Rosenberg	5.8	110	http://www.imdb.com/title/tt0412798/
+Possession	drama, mystery, romance, thriller	2008	Joel Bergvall, Simon Sandquist	5.5	85	http://www.imdb.com/title/tt0368563/
+Solstice	drama, horror, mystery, thriller	2008	Dan Myrick	5.2	91	http://www.imdb.com/title/tt0473267/
+The Life Before Her Eyes	drama, mystery, thriller	2007	Vadim Perelman	6.3	90	http://www.imdb.com/title/tt0815178/
+The Salton Sea	crime, drama, mystery, thriller	2002	D.J. Caruso	7.1	103	http://www.imdb.com/title/tt0235737/
+Eye See You	crime, horror, mystery, thriller	2002	Jim Gillespie	5	96	http://www.imdb.com/title/tt0160184/
+Suicide Kings	comedy, drama, mystery, thriller, crime	1997	Peter O'Fallon	6.9	106	http://www.imdb.com/title/tt0120241/
+House of Games	crime, mystery, thriller	1987	David Mamet	7.3	102	http://www.imdb.com/title/tt0093223/
+Cruising	crime, drama, mystery, thriller	1980	William Friedkin	6.2	102	http://www.imdb.com/title/tt0080569/
+Kickback	mystery, thriller, war	2014	Raza Mallal		110	http://www.imdb.com/title/tt2338636/
+Dolores Claiborne	crime, drama, mystery, thriller	1995	Taylor Hackford	7.2	132	http://www.imdb.com/title/tt0109642/
+The Door in the Floor	comedy, drama, mystery, romance	2004	Tod Williams	6.7	111	http://www.imdb.com/title/tt0348593/
+Cyberstalker	drama, mystery, thriller	2012	Curtis Crawford	3.7	92	http://www.imdb.com/title/tt2172001/
+Deadline	mystery, thriller	2011	Chris Tasara	6.9	83	http://www.imdb.com/title/tt2106383/
+The Missing Person	comedy, drama, mystery, thriller	2009	Noah Buschel	6	95	http://www.imdb.com/title/tt1105512/
+Odd Thomas	mystery, thriller	2013	Stephen Sommers	6.7	100	http://www.imdb.com/title/tt1767354/
+NCIS: Red	action, comedy, crime, drama, mystery	2013			60	http://www.imdb.com/title/tt2699068/
+Certain Prey	action, crime, drama, mystery, thriller	2011	Chris Gerolmo	5.4	85	http://www.imdb.com/title/tt1864461/
+False Witness	action, crime, drama, mystery, thriller	2009	Peter Andrikidis	5.5	94	http://www.imdb.com/title/tt1090903/
+Magic Magic	horror, mystery, thriller	2013	Sebastián Silva	6.4	97	http://www.imdb.com/title/tt1929308/
+Episode 50	horror, mystery, thriller	2011	Joe Smalley, Tess Smalley	3.2	78	http://www.imdb.com/title/tt1728976/
+Crush	horror, mystery, thriller	2009	Jeffrey Gerritsen, John V. Soto	4	82	http://www.imdb.com/title/tt1170350/
+The Suspicions of Mr Whicher: The Murder at Road Hill House	drama, mystery	2011	James Hawes	6.3	95	http://www.imdb.com/title/tt1724572/
+Donovan's Echo	drama, fantasy, mystery, sci_fi, thriller	2011	Jim Cliffe	5.5		http://www.imdb.com/title/tt1743922/
+The Motel Life	drama, mystery, thriller	2012	Alan Polsky, Gabe Polsky	6.9		http://www.imdb.com/title/tt1559036/
+Abducted: The Carlina White Story	mystery	2012	Vondie Curtis-Hall	6.6	86	http://www.imdb.com/title/tt2212658/
+Answers to Nothing	drama, mystery	2011	Matthew Leutwyler	4.3	124	http://www.imdb.com/title/tt1523939/
+Problem of Evil	drama, mystery	2013	Ethan Kogan, Jessica Silvetti		84	http://www.imdb.com/title/tt2233268/
+Young Sherlock Holmes	action, adventure, family, fantasy, mystery, thriller	1985	Barry Levinson	6.6	109	http://www.imdb.com/title/tt0090357/
+The Exorcist III	horror, mystery, thriller	1990	William Peter Blatty	6	110	http://www.imdb.com/title/tt0099528/
+Devil in a Blue Dress	crime, drama, mystery, thriller	1995	Carl Franklin	6.5	102	http://www.imdb.com/title/tt0112857/
+Random Hearts	drama, mystery, romance	1999	Sydney Pollack	4.9	133	http://www.imdb.com/title/tt0156934/
+Gossip	drama, mystery, thriller	2000	Davis Guggenheim	5.6	90	http://www.imdb.com/title/tt0176783/
+Head Over Heels	comedy, mystery, romance	2001	Mark Waters	5	86	http://www.imdb.com/title/tt0192111/
+Scooby-Doo! Curse of the Lake Monster	adventure, comedy, family, fantasy, mystery	2010	Brian Levant	4.9	79	http://www.imdb.com/title/tt1618435/
+Rise: Blood Hunter	action, horror, mystery, thriller	2007	Sebastian Gutierrez	4.9	97	http://www.imdb.com/title/tt0389328/
+The Dead Girl	drama, mystery, thriller	2006	Karen Moncrieff	6.7	85	http://www.imdb.com/title/tt0783238/
+Blackout	crime, mystery, thriller	2008	Rigoberto Castañeda	5.1	120	http://www.imdb.com/title/tt0844666/
+Youth Without Youth	drama, fantasy, mystery, romance, thriller	2007	Francis Ford Coppola	6.2	124	http://www.imdb.com/title/tt0481797/
+Paranoid Park	crime, drama, mystery	2007	Gus Van Sant	6.7	85	http://www.imdb.com/title/tt0842929/
+The Echo	drama, horror, mystery, thriller	2008	Yam Laranas	5.5	90	http://www.imdb.com/title/tt0897347/
+Fur: An Imaginary Portrait of Diane Arbus	biography, drama, mystery, romance	2006	Steven Shainberg	6.2	122	http://www.imdb.com/title/tt0422295/
+Surveillance	crime, drama, mystery, thriller	2008	Jennifer Lynch	6.3	97	http://www.imdb.com/title/tt0409345/
+The Million Dollar Hotel	drama, mystery, thriller	2000	Wim Wenders	5.5	122	http://www.imdb.com/title/tt0120753/
+Dagon	fantasy, horror, mystery, thriller	2001	Stuart Gordon	6.1	95	http://www.imdb.com/title/tt0264508/
+The Monkey's Mask	crime, mystery, thriller	2000	Samantha Lang	5.1	93	http://www.imdb.com/title/tt0259442/
+Lone Star	drama, mystery, romance	1996	John Sayles	7.5	135	http://www.imdb.com/title/tt0116905/
+Solace	mystery, thriller	2014	Afonso Poyart			http://www.imdb.com/title/tt1291570/
+Death Warrant	action, crime, drama, mystery, thriller	1990	Deran Sarafian	5.2	89	http://www.imdb.com/title/tt0099385/
+Switchback	crime, mystery, thriller	1997	Jeb Stuart	6.2	118	http://www.imdb.com/title/tt0119210/
+Interstate 60: Episodes of the Road	adventure, comedy, drama, fantasy, mystery, sci_fi, thriller	2002	Bob Gale	7.5	116	http://www.imdb.com/title/tt0165832/
+Klute	mystery, thriller	1971	Alan J. Pakula	7.1	114	http://www.imdb.com/title/tt0067309/
+The Little Girl Who Lives Down the Lane	drama, mystery, thriller	1976	Nicholas Gessner	7	100	http://www.imdb.com/title/tt0074806/
+Exorcist II: The Heretic	horror, mystery, thriller	1977	John Boorman	3.7	118	http://www.imdb.com/title/tt0076009/
+Missing	drama, history, mystery, thriller	1982	Costa-Gavras	7.7	122	http://www.imdb.com/title/tt0084335/
+Death on the Nile	crime, drama, mystery, thriller	1978	John Guillermin	7.1	140	http://www.imdb.com/title/tt0077413/
+Damien: Omen II	horror, mystery	1978	Don Taylor	6.1	107	http://www.imdb.com/title/tt0077394/
+April Fool's Day	comedy, horror, mystery	1986	Fred Walton	5.9	89	http://www.imdb.com/title/tt0090655/
+Psycho III	horror, mystery, thriller	1986	Anthony Perkins	4.9	93	http://www.imdb.com/title/tt0091799/
+Flowers in the Attic	drama, mystery, thriller	1987	Jeffrey Bloom	5.1	93	http://www.imdb.com/title/tt0093036/
+Shattered	crime, mystery, thriller	1991	Wolfgang Petersen	6.4	98	http://www.imdb.com/title/tt0102900/
+The Dark Half	horror, mystery	1993	George A. Romero	5.8	122	http://www.imdb.com/title/tt0106664/
+Book of Shadows: Blair Witch 2	horror, mystery, thriller	2000	Joe Berlinger	3.9	90	http://www.imdb.com/title/tt0229260/
+The Watcher	crime, mystery, thriller	2000	Joe Charbanic	5.2	97	http://www.imdb.com/title/tt0204626/
+Abandon	drama, music, mystery, romance, thriller	2002	Stephen Gaghan	4.7	99	http://www.imdb.com/title/tt0267248/
+Pooh's Heffalump Movie	animation, family, fantasy, mystery	2005	Frank Nissen	6.2	68	http://www.imdb.com/title/tt0407121/
+Red Road	drama, mystery, thriller	2006	Andrea Arnold	6.8	113	http://www.imdb.com/title/tt0471030/
+Autopsy	horror, mystery, thriller	2008	Adam Gierasch	5	84	http://www.imdb.com/title/tt0443435/
+Bordertown	crime, drama, mystery, thriller	2006	Gregory Nava	5.9	112	http://www.imdb.com/title/tt0445935/
+Ripley's Game	crime, drama, mystery, thriller	2002	Liliana Cavani	6.6	110	http://www.imdb.com/title/tt0265651/
+The Big Empty	comedy, drama, mystery, sci_fi	2003	Steve Anderson	6	94	http://www.imdb.com/title/tt0321442/
+National Lampoon Presents Dorm Daze	comedy, crime, mystery, romance	2003	David Hillenbrand, Scott Hillenbrand	4.4	96	http://www.imdb.com/title/tt0362511/
+The Crow: Salvation	action, crime, fantasy, mystery, thriller	2000	Bharat Nalluri	4.6	102	http://www.imdb.com/title/tt0132910/
+Gerry	adventure, drama, mystery	2002	Gus Van Sant	6.2	103	http://www.imdb.com/title/tt0302674/
+The Long Good Friday	crime, drama, mystery, thriller	1980	John Mackenzie	7.7	114	http://www.imdb.com/title/tt0081070/
+The Stepford Wives	horror, mystery, sci_fi, thriller	1975	Bryan Forbes	6.8	115	http://www.imdb.com/title/tt0073747/
+The Legend of Hell House	horror, mystery	1973	John Hough	6.8	95	http://www.imdb.com/title/tt0070294/
+Deep Red	horror, mystery, thriller	1975	Dario Argento	7.6	126	http://www.imdb.com/title/tt0073582/
+Friday the 13th: A New Beginning	horror, mystery, thriller	1985	Danny Steinmann	4.3	92	http://www.imdb.com/title/tt0089173/
+Terminal Velocity	action, thriller, mystery	1994	Deran Sarafian	5.3	102	http://www.imdb.com/title/tt0111400/
+Clockers	drama, crime, mystery	1995	Spike Lee	6.8	128	http://www.imdb.com/title/tt0112688/
+The Curse of the Jade Scorpion	comedy, crime, mystery	2001	Woody Allen	6.7	103	http://www.imdb.com/title/tt0256524/
+City by the Sea	crime, drama, mystery, thriller	2002	Michael Caton-Jones	6.1	108	http://www.imdb.com/title/tt0269095/
+Piglet's Big Movie	animation, adventure, family, mystery	2003	Francis Glebas	5.8	75	http://www.imdb.com/title/tt0323642/
+The Flock	crime, drama, mystery, thriller	2007	Andrew Lau	5.7	105	http://www.imdb.com/title/tt0473356/
+Jesse Stone: Stone Cold	crime, drama, mystery, thriller	2005	Robert Harmon	7	87	http://www.imdb.com/title/tt0431420/
+Desperation	drama, fantasy, horror, mystery, thriller	2006	Mick Garris	5.2	131	http://www.imdb.com/title/tt0129871/
+Archangel	crime, drama, mystery, thriller	2005	Jon Jones	6.4	133	http://www.imdb.com/title/tt0426911/
+Vampire Hunter D: Bloodlust	animation, action, adventure, fantasy, mystery, sci_fi	2000	Yoshiaki Kawajiri	7.6	103	http://www.imdb.com/title/tt0216651/
+Body Snatchers	sci_fi, horror, thriller, mystery	1993	Abel Ferrara	5.8	87	http://www.imdb.com/title/tt0106452/
+Psycho IV: The Beginning	horror, mystery, thriller	1990	Mick Garris	5.2	96	http://www.imdb.com/title/tt0102724/
+Manhattan Murder Mystery	comedy, drama, mystery	1993	Woody Allen	7.3	104	http://www.imdb.com/title/tt0107507/
+The Passenger	drama, mystery, romance, thriller	1975	Michelangelo Antonioni	7.6	126	http://www.imdb.com/title/tt0073580/
+Black Christmas	horror, mystery, thriller	1974	Bob Clark	7.1	98	http://www.imdb.com/title/tt0071222/
+The Car	horror, mystery, thriller	1977	Elliot Silverstein	5.6	96	http://www.imdb.com/title/tt0075809/
+Equus	drama, mystery	1977	Sidney Lumet	7	137	http://www.imdb.com/title/tt0075995/
+Coma	drama, mystery, sci_fi, thriller	1978	Michael Crichton	6.8	113	http://www.imdb.com/title/tt0077355/
+Foul Play	comedy, mystery, thriller	1978	Colin Higgins	6.6	116	http://www.imdb.com/title/tt0077578/
+Dead Men Don't Wear Plaid	comedy, crime, mystery, thriller	1982	Carl Reiner	6.7	88	http://www.imdb.com/title/tt0083798/
+Tightrope	crime, drama, mystery, thriller	1984	Richard Tuggle	6.2	114	http://www.imdb.com/title/tt0088272/
+The Presidio	action, crime, mystery, thriller	1988	Peter Hyams	5.8	97	http://www.imdb.com/title/tt0095897/
+Pacific Heights	mystery, thriller	1990	John Schlesinger	6.2	102	http://www.imdb.com/title/tt0100318/
+Reversal of Fortune	biography, drama, mystery	1990	Barbet Schroeder	7.1	111	http://www.imdb.com/title/tt0100486/
+The Two Jakes	comedy, crime, drama, mystery	1990	Jack Nicholson	6	137	http://www.imdb.com/title/tt0100828/
+The Relic	horror, mystery, thriller	1997	Peter Hyams	5.5	110	http://www.imdb.com/title/tt0120004/
+Snow Falling on Cedars	drama, mystery, romance, thriller	1999	Scott Hicks	6.6	127	http://www.imdb.com/title/tt0120834/
+Mister Foe	drama, mystery, romance	2007	David Mackenzie	7	95	http://www.imdb.com/title/tt0466816/
+Ladies in Lavender.	drama, music, mystery, romance	2004	Charles Dance	7	104	http://www.imdb.com/title/tt0377084/
+Rabbits	comedy, drama, fantasy, horror, mystery	2002	David Lynch	6.8	50	http://www.imdb.com/title/tt0347840/
+Close Your Eyes	crime, horror, mystery, thriller	2002	Nick Willing	6.1	108	http://www.imdb.com/title/tt0286594/
+The Reckoning	crime, drama, mystery	2003	Paul McGuigan	6.4	112	http://www.imdb.com/title/tt0258816/
+Gleaming the Cube	action, drama, mystery	1989	Graeme Clifford	5.6	100	http://www.imdb.com/title/tt0097438/
+Mio in the Land of Faraway	adventure, drama, family, fantasy, mystery	1987	Vladimir Grammatikov	6.3	99	http://www.imdb.com/title/tt0093543/
+The Bourne Identity	action, adventure, drama, mystery, thriller	1988	Roger Young	6.7	185	http://www.imdb.com/title/tt0094791/
+The Stuff	horror, comedy, sci_fi, mystery	1985	Larry Cohen	5.8	93	http://www.imdb.com/title/tt0090094/
+The Keep	action, drama, horror, mystery, romance, thriller, war	1983	Michael Mann	5.7	96	http://www.imdb.com/title/tt0085780/
+Something Wicked This Way Comes	drama, family, fantasy, mystery, thriller	1983	Jack Clayton	6.6	95	http://www.imdb.com/title/tt0086336/
+Jagged Edge	crime, thriller, mystery, romance	1985	Richard Marquand	6.4	108	http://www.imdb.com/title/tt0089360/
+Sommersby	drama, mystery, romance	1993	Jon Amiel	5.9	114	http://www.imdb.com/title/tt0108185/
+Extreme Measures	crime, drama, mystery, thriller	1996	Michael Apted	5.9	118	http://www.imdb.com/title/tt0116259/
+The Night Listener	crime, mystery, thriller	2006	Patrick Stettner	5.8	91	http://www.imdb.com/title/tt0448075/
+The Return	mystery, thriller	2006	Asif Kapadia	4.7	85	http://www.imdb.com/title/tt0433442/
+The Abandoned	horror, mystery, thriller	2006	Nacho Cerdà	5.7	99	http://www.imdb.com/title/tt0475937/
+Inspector Lewis	crime, drama, mystery	2006	Bill Anderson	7.6	120	http://www.imdb.com/title/tt0469870/
+The Dark	horror, mystery, thriller	2005	John Fawcett	5.3	93	http://www.imdb.com/title/tt0411267/
+The Woods	horror, mystery, thriller	2006	Lucky McKee	5.7	91	http://www.imdb.com/title/tt0380066/
+The Clearing	drama, mystery, thriller	2004	Pieter Jan Brugge	5.9	95	http://www.imdb.com/title/tt0331952/
+The Betrayed	crime, drama, mystery, thriller	2008	Amanda Gusack	5.9	98	http://www.imdb.com/title/tt1074191/
+Irresistible	drama, mystery, thriller	2006	Ann Turner	5.7	103	http://www.imdb.com/title/tt0448564/
+End Game	crime, drama, mystery, thriller	2006	Andy Cheng	5.1	93	http://www.imdb.com/title/tt0415778/
+Jindabyne	crime, drama, mystery, thriller	2006	Ray Lawrence	6.4	123	http://www.imdb.com/title/tt0382765/
+From Within	horror, mystery, thriller	2008	Phedon Papamichael	5.6	89	http://www.imdb.com/title/tt1063056/
+'Salem's Lot	horror, drama, mystery, thriller	2004	Mikael Salomon	6.1	181	http://www.imdb.com/title/tt0355987/
+Shuttle	crime, drama, mystery, thriller	2008	Edward Anderson	5.6	107	http://www.imdb.com/title/tt0880648/
+The Limey	crime, drama, mystery, thriller	1999	Steven Soderbergh	7	89	http://www.imdb.com/title/tt0165854/
+Death and the Maiden	drama, mystery, thriller	1994	Roman Polanski	7.2	103	http://www.imdb.com/title/tt0109579/
+The Spanish Prisoner	drama, mystery, thriller	1997	David Mamet	7.2	110	http://www.imdb.com/title/tt0120176/
+The Stepfather	drama, mystery, thriller	1987	Joseph Ruben	6.7	89	http://www.imdb.com/title/tt0094035/
+Fletch Lives	comedy, mystery, crime	1989	Michael Ritchie	5.8	95	http://www.imdb.com/title/tt0097366/
+Lord of Illusions	horror, mystery, thriller	1995	Clive Barker	5.8	109	http://www.imdb.com/title/tt0113690/
+FairyTale: A True Story	drama, family, fantasy, mystery	1997	Charles Sturridge	6.2	99	http://www.imdb.com/title/tt0119095/
+The Corruptor	action, crime, drama, mystery, thriller	1999	James Foley	5.8	110	http://www.imdb.com/title/tt0142192/
+Urban Legends: Final Cut	horror, mystery, thriller	2000	John Ottman	3.8	97	http://www.imdb.com/title/tt0192731/
+Recess: School's Out	animation, family, comedy, mystery, sci_fi	2001	Chuck Sheetz	6.3	82	http://www.imdb.com/title/tt0265632/
+Slipstream	comedy, drama, fantasy, mystery, sci_fi, thriller	2007	Anthony Hopkins	5	96	http://www.imdb.com/title/tt0499570/
+Lake Mungo	drama, horror, mystery, thriller	2008	Joel Anderson	6	87	http://www.imdb.com/title/tt0816556/
+Neverwas	drama, fantasy, mystery	2005	Joshua Michael Stern	6.6	103	http://www.imdb.com/title/tt0418004/
+Toolbox Murders	horror, mystery	2004	Tobe Hooper	5.2	95	http://www.imdb.com/title/tt0367153/
+Pokémon: Destiny Deoxys	animation, adventure, mystery, sci_fi	2004	Kunihiko Yuyama	5.7	98	http://www.imdb.com/title/tt0435286/
+The Weight of Water	crime, drama, mystery, thriller	2000	Kathryn Bigelow	5.9	113	http://www.imdb.com/title/tt0210382/
+Get a Clue	comedy, crime, family, mystery	2002	Maggie Greenwald	4.7	83	http://www.imdb.com/title/tt0282521/
+Kolobos	horror, mystery, thriller	1999	Daniel Liatowitsch, David Todd Ocvirk	5.2	84	http://www.imdb.com/title/tt0151239/
+Lantana	drama, mystery	2001	Ray Lawrence	7.3	121	http://www.imdb.com/title/tt0259393/
+Haunted	drama, fantasy, mystery, romance	1995	Lewis Gilbert	6.1	108	http://www.imdb.com/title/tt0113269/
+A Soldier's Story	drama, mystery, war	1984	Norman Jewison	7.1	101	http://www.imdb.com/title/tt0088146/
+Bad Timing: A Sensual Obsession	drama, mystery, thriller	1980	Nicolas Roeg	6.9	123	http://www.imdb.com/title/tt0080408/
+Tenebre	horror, mystery, thriller	1982	Dario Argento	7	110	http://www.imdb.com/title/tt0084777/
+Night Moves	crime, mystery, thriller	1975	Arthur Penn	7.1	100	http://www.imdb.com/title/tt0073453/
+The Nude Bomb	comedy, crime, mystery	1980	Clive Donner	4.9	94	http://www.imdb.com/title/tt0081249/
+Deathtrap	comedy, crime, mystery, thriller	1982	Sidney Lumet	6.9	116	http://www.imdb.com/title/tt0083806/
+Jennifer Eight	crime, drama, mystery, thriller	1992	Bruce Robinson	6.1	124	http://www.imdb.com/title/tt0104549/
+Thunderheart	crime, mystery, thriller	1992	Michael Apted	6.6	119	http://www.imdb.com/title/tt0105585/
+Flesh and Bone	drama, mystery, romance	1993	Steve Kloves	6.2	126	http://www.imdb.com/title/tt0106926/
+Before and After	crime, drama, mystery	1996	Barbet Schroeder	6	108	http://www.imdb.com/title/tt0115645/
+Eye of the Beholder	drama, mystery, thriller	1999	Stephan Elliott	4.8	109	http://www.imdb.com/title/tt0120662/
+The Zodiac	crime, drama, horror, mystery, thriller	2005	Alexander Bulkley	5.4	92	http://www.imdb.com/title/tt0371739/
+Unearthed	horror, mystery, sci_fi, thriller	2007	Matthew Leutwyler	4	93	http://www.imdb.com/title/tt0475417/
+Jesse Stone: Night Passage	crime, drama, mystery	2006	Robert Harmon	7.1	89	http://www.imdb.com/title/tt0498360/
+Enduring Love	drama, mystery, romance, thriller	2004	Roger Michell	6.4	100	http://www.imdb.com/title/tt0375735/
+Cherry Falls	comedy, horror, mystery, thriller	2000	Geoffrey Wright	4.8	92	http://www.imdb.com/title/tt0175526/
+My Little Eye	horror, mystery, thriller	2002	Marc Evans	5.6	95	http://www.imdb.com/title/tt0280969/
+The Night Flier	fantasy, horror, mystery	1997	Mark Pavia	5.7	93	http://www.imdb.com/title/tt0119784/
+Happy Birthday to Me	horror, mystery, thriller	1981	J. Lee Thompson	5.7	110	http://www.imdb.com/title/tt0082498/
+The Draughtsman's Contract	comedy, drama, mystery	1982	Peter Greenaway	7.2	108	http://www.imdb.com/title/tt0083851/
+Eddie and the Cruisers	drama, mystery, music	1983	Martin Davidson	6.5	95	http://www.imdb.com/title/tt0085475/
+The Bird with the Crystal Plumage	mystery, thriller	1970	Dario Argento	7	98	http://www.imdb.com/title/tt0065143/
+Burnt Offerings	horror, mystery	1976	Dan Curtis	6.1	116	http://www.imdb.com/title/tt0074258/
+Obsession	drama, mystery, thriller	1976	Brian De Palma	6.7	98	http://www.imdb.com/title/tt0074991/
+Cloak & Dagger	action, family, adventure, crime, thriller, mystery	1984	Richard Franklin	6.2	101	http://www.imdb.com/title/tt0087065/
+Deadly Friend	drama, horror, mystery, sci_fi	1986	Wes Craven	5.1	91	http://www.imdb.com/title/tt0090917/
+D.O.A.	drama, mystery, thriller	1988	Annabel Jankel, Rocky Morton	6	96	http://www.imdb.com/title/tt0094933/
+The Guardian	drama, horror, mystery, thriller	1990	William Friedkin	5.1	92	http://www.imdb.com/title/tt0099710/
+Who's the Man?	comedy, drama, mystery, thriller	1993	Ted Demme	4.8	85	http://www.imdb.com/title/tt0108560/
+Gold Diggers: The Secret of Bear Mountain	adventure, drama, mystery	1995	Kevin James Dobson	5.7	94	http://www.imdb.com/title/tt0113188/
+That Darn Cat	comedy, family, mystery, action	1997	Bob Spiers	4.4	89	http://www.imdb.com/title/tt0120317/
+Drowning Mona	crime, mystery, comedy	2000	Nick Gomez	5.3	96	http://www.imdb.com/title/tt0186045/
+House of 9	drama, horror, mystery, thriller	2005	Steven R. Monroe	5.5	86	http://www.imdb.com/title/tt0395585/
+Waking the Dead	drama, mystery, romance, thriller	2000	Keith Gordon	6.6	105	http://www.imdb.com/title/tt0127349/
+The Bunker	drama, horror, mystery, thriller, war	2001	Rob Green	5.4	95	http://www.imdb.com/title/tt0252963/
+The Caveman's Valentine	crime, drama, music, mystery, thriller	2001	Kasi Lemmons	5.9	105	http://www.imdb.com/title/tt0182000/
+Affliction	drama, mystery, thriller	1997	Paul Schrader	6.9	114	http://www.imdb.com/title/tt0118564/
+Shadows and Fog	comedy, crime, drama, mystery, thriller	1991	Woody Allen	6.6	85	http://www.imdb.com/title/tt0105378/
+Kafka	comedy, drama, mystery, sci_fi, thriller	1991	Steven Soderbergh	6.8	98	http://www.imdb.com/title/tt0102181/
+Army of One	action, adventure, crime, drama, mystery, thriller	1993	Vic Armstrong	5.3	106	http://www.imdb.com/title/tt0106309/
+The Island	action, adventure, drama, horror, mystery, thriller	1980	Michael Ritchie	5.1	109	http://www.imdb.com/title/tt0080934/
+Prom Night	horror, mystery, thriller	1980	Paul Lynch	5.2	89	http://www.imdb.com/title/tt0081383/
+Alice Sweet Alice	horror, mystery, thriller	1976	Alfred Sole	6.3	98	http://www.imdb.com/title/tt0076150/
+Evil Under the Sun	crime, drama, mystery, thriller	1982	Guy Hamilton	6.8	117	http://www.imdb.com/title/tt0083908/
+Gotcha!	action, comedy, mystery, romance	1985	Jeff Kanew	5.9	101	http://www.imdb.com/title/tt0089222/
+Cocoon: The Return	adventure, comedy, mystery, romance, sci_fi	1988	Daniel Petrie	5	116	http://www.imdb.com/title/tt0094890/
+Who's Harry Crumb?	comedy, crime, mystery	1989	Paul Flaherty	5.5	94	http://www.imdb.com/title/tt0098645/
+Diabolique	drama, horror, thriller, mystery	1996	Jeremiah Chechik	5.1	107	http://www.imdb.com/title/tt0116095/
+Unforgettable	sci_fi, thriller, mystery	1996	John Dahl	5.8	117	http://www.imdb.com/title/tt0118040/
+Slow Burn	drama, mystery, thriller	2005	Wayne Beach	5.8	93	http://www.imdb.com/title/tt0376196/
+I'll Sleep When I'm Dead	crime, drama, mystery, thriller	2003	Mike Hodges	5.9	103	http://www.imdb.com/title/tt0319531/
+The Wisdom of Crocodiles	crime, mystery, romance, thriller	1998	Po-Chih Leong	6.1	98	http://www.imdb.com/title/tt0120894/
+The Rapture	drama, mystery	1991	Michael Tolkin	6.5	100	http://www.imdb.com/title/tt0102757/
+The Watcher in the Woods	horror, mystery, thriller	1980	John Hough	6.1	84	http://www.imdb.com/title/tt0081738/
+Deadly Blessing	horror, mystery, thriller	1981	Wes Craven	5.2	100	http://www.imdb.com/title/tt0082245/
+The Town That Dreaded Sundown	crime, drama, mystery, thriller	1976	Charles B. Pierce	6	86	http://www.imdb.com/title/tt0075342/
+Telling Secrets	mystery	1993	Marvin J. Chomsky	5.9	240	http://www.imdb.com/title/tt0108310/
+Sleepwalking Theo	drama, fantasy, mystery	2010	Linda Hunter	6.6	46	http://www.imdb.com/title/tt1800736/
+Beautiful Kate	drama, mystery	2009	Rachel Ward	6.7	90	http://www.imdb.com/title/tt1209377/
+Marple: Ordeal by Innocence	crime, drama, mystery	2007	Moira Armstrong	7.1		http://www.imdb.com/title/tt0934905/
+Madison County	horror, mystery, thriller	2011	Eric England	4.2	81	http://www.imdb.com/title/tt1687889/
+My Daughter's Secret	crime, drama, mystery, thriller	2007	Douglas Jackson	4.2	94	http://www.imdb.com/title/tt1052349/
+Bigfoot: The Lost Coast Tapes	horror, mystery, thriller	2012	Corey Grant	4.3	85	http://www.imdb.com/title/tt1740725/
+Mystery Team	comedy, crime, mystery	2009	Dan Eckman	6.7	97	http://www.imdb.com/title/tt1237838/
+Spy School	adventure, comedy, family, mystery	2008	Mark Blutman	4.6	86	http://www.imdb.com/title/tt0484831/
+The Power of Few	action, crime, drama, mystery, thriller	2013	Leone Marucci	4.5	96	http://www.imdb.com/title/tt0817545/
+Scooby-Doo! The Mystery Begins	comedy, family, fantasy, mystery	2009	Brian Levant	5.6	120	http://www.imdb.com/title/tt1258157/
+Night Train	action, crime, mystery, thriller	2009	Brian King	5.8	83	http://www.imdb.com/title/tt1020055/
+Red White & Blue	drama, horror, mystery, romance, thriller	2010	Simon Rumley	6.2	104	http://www.imdb.com/title/tt1465505/
+A Mother's Nightmare	crime, mystery, thriller	2012	Vic Sarin	5.8		http://www.imdb.com/title/tt2401147/
+Fatal Desire	crime, drama, mystery, thriller	2006	Ralph Hemecker	5.7	113	http://www.imdb.com/title/tt0497353/
+Enter Nowhere	mystery, thriller	2011	Jack Heller	6.3	90	http://www.imdb.com/title/tt1631707/
+Jack Irish: Bad Debts	crime, drama, mystery	2012	Jeffrey Walker	6.3	90	http://www.imdb.com/title/tt2087820/
+Red Riding: In the Year of Our Lord 1983	crime, drama, mystery, thriller	2009	Anand Tucker	7.2	100	http://www.imdb.com/title/tt1259573/
+Red Riding: In the Year of Our Lord 1980	crime, drama, mystery, thriller	2009	James Marsh	7.1	93	http://www.imdb.com/title/tt1260581/
+The Perfect Student	crime, mystery, thriller	2011	Michael Feifer	3.7	88	http://www.imdb.com/title/tt1672131/
+The Naked Face	action, mystery, thriller	1984	Bryan Forbes	5.1	103	http://www.imdb.com/title/tt0087777/
+The Lodger	crime, drama, mystery, thriller	2009	David Ondaatje	5.6	95	http://www.imdb.com/title/tt0851530/
+Thorne: Sleepyhead	crime, drama, mystery, thriller	2010	Stephen Hopkins	6.7	180	http://www.imdb.com/title/tt1610518/
+Burn Notice: The Fall of Sam Axe	comedy, crime, drama, mystery, thriller	2011	Jeffrey Donovan	7	120	http://www.imdb.com/title/tt1697851/
+Northern Lights	drama, mystery, romance	2009	Mike Robe	5.4	120	http://www.imdb.com/title/tt1363127/
+Layover	crime, mystery, thriller	2012	R.D. Braunstein	4.2	91	http://www.imdb.com/title/tt2306236/
+The Shadow in the North	adventure, crime, drama, mystery, thriller	2007	John Alexander	6.4	94	http://www.imdb.com/title/tt0913262/
+Dark Country	crime, mystery, thriller	2009	Thomas Jane	5.2	88	http://www.imdb.com/title/tt0469318/
+The Fields	drama, horror, mystery, thriller	2011	Tom Mattera, David Mazzoni	4.3	100	http://www.imdb.com/title/tt1401236/
+Needle	horror, mystery, thriller	2010	John V. Soto	4.4	90	http://www.imdb.com/title/tt1545315/
+Haunter	horror, mystery, thriller	2013	Vincenzo Natali	7.6		http://www.imdb.com/title/tt2345567/
+InSight	drama, mystery, thriller	2011	Richard Gabai	4.8		http://www.imdb.com/title/tt1687277/
+Book of Blood	drama, horror, mystery, thriller	2009	John Harrison	5.2	100	http://www.imdb.com/title/tt1169809/
+All the King's Men	drama, mystery, war	1999	Julian Jarrold	6.9	110	http://www.imdb.com/title/tt0220969/
+Dead Awake	fantasy, mystery, romance, thriller	2010	Omar Naim	4.4	93	http://www.imdb.com/title/tt1501652/
+In My Sleep	drama, mystery, thriller	2010	Allen Wolf	5.2	104	http://www.imdb.com/title/tt0326965/
+After All These Years	mystery	2013	Scott Smith	6.4		http://www.imdb.com/title/tt2212670/
+Beneath the Dark	mystery, thriller	2010	Chad Feehan	4.7	102	http://www.imdb.com/title/tt1422800/
+Buttwhistle	comedy, crime, drama, mystery, romance	2013	Tenney Fairchild			http://www.imdb.com/title/tt1959526/
+Messages Deleted	mystery, thriller	2009	Rob Cowan	4.7	92	http://www.imdb.com/title/tt1072754/
+The List	crime, drama, mystery	2013	Ruben Fleischer			http://www.imdb.com/title/tt2706420/
+Psych:9	horror, mystery, thriller	2010	Andrew Shortell	4.3	98	http://www.imdb.com/title/tt0901504/
+Reeker	horror, mystery	2005	Dave Payne	5.2	90	http://www.imdb.com/title/tt0393635/
+Pornography	mystery	2009	David Kittredge	4.6	113	http://www.imdb.com/title/tt1144811/
+Psychosis	crime, horror, mystery, thriller	2010	Reg Traviss	3.6	89	http://www.imdb.com/title/tt1351784/
+The Killing Floor	crime, horror, mystery, romance, thriller	2007	Gideon Raff	5.5	94	http://www.imdb.com/title/tt0756672/
+The Walker	crime, drama, mystery	2007	Paul Schrader	5.9	108	http://www.imdb.com/title/tt0783608/
+Balibo	drama, mystery, thriller	2009	Robert Connolly	6.9	111	http://www.imdb.com/title/tt1111876/
+Red Butterfly	crime, drama, thriller	2013	Jon Alston		85	http://www.imdb.com/title/tt2063014/
+Conspiracy	action, drama, mystery, thriller, war	2008	Adam Marcus	4.6	90	http://www.imdb.com/title/tt1043838/
+10th & Wolf	crime, drama, mystery, thriller	2006	Bobby Moresco	6.3	107	http://www.imdb.com/title/tt0360323/
+Nightwatching	biography, drama, history, mystery	2007	Peter Greenaway	6.4	134	http://www.imdb.com/title/tt0446750/
+Dead Drop	action, crime, drama, mystery, thriller	2013	R. Ellis Frazier			http://www.imdb.com/title/tt2240966/
+The Bad Penny	drama, mystery, thriller	2010	Todd Bellanca	3.9		http://www.imdb.com/title/tt1356392/
+Jesse Stone: No Remorse	crime, mystery	2010	Robert Harmon	7.1	87	http://www.imdb.com/title/tt1315216/
+Jesse Stone: Thin Ice	drama, mystery	2009	Robert Harmon	6.8	88	http://www.imdb.com/title/tt1064884/
+Heathens and Thieves	mystery, thriller, western	2012	Megan Peterson, John Douglas Sinclair	4.3		http://www.imdb.com/title/tt1510983/
+Deadly Sibling Rivalry	mystery, thriller	2011	Hanelle M. Culpepper	4.5		http://www.imdb.com/title/tt1849751/
+Living in Fear	mystery, thriller	2001	Martin Kitrosser	5	90	http://www.imdb.com/title/tt0280744/
+The Living and the Dead	drama, horror, mystery, thriller	2006	Simon Rumley	5.6	83	http://www.imdb.com/title/tt0483719/
+A Day Without a Mexican	comedy, drama, fantasy, mystery	2004	Sergio Arau	4.7	100	http://www.imdb.com/title/tt0377744/
+The Odds	crime, mystery	2011	Simon Davidson	4.6		http://www.imdb.com/title/tt1783392/
+The Mystery of a Hansom Cab	mystery	2012	Shawn Seet	5.8		http://www.imdb.com/title/tt2174072/
+Chemical Wedding	horror, mystery, sci_fi, thriller	2008	Julian Doyle	4.7	106	http://www.imdb.com/title/tt0974536/
+White Wall	action, mystery, sci_fi, thriller	2010	James Boss	3	91	http://www.imdb.com/title/tt0969653/
+How to Rob a Bank	comedy, crime, mystery, thriller	2007	Andrews Jenkins	6	81	http://www.imdb.com/title/tt0762104/
+Room 6	horror, mystery, thriller	2006	Michael Hurst	4.1	94	http://www.imdb.com/title/tt0451187/
+Remember Me	mystery, thriller	1985	Lex Marinos	6		http://www.imdb.com/title/tt0089900/
+The Bedroom Window	crime, mystery, thriller	1987	Curtis Hanson	6.3	112	http://www.imdb.com/title/tt0092627/
+The Gathering	horror, mystery, thriller	2003	Brian Gilbert	5.6	96	http://www.imdb.com/title/tt0294594/
+Waterland	drama, mystery	1992	Stephen Gyllenhaal	6.5	95	http://www.imdb.com/title/tt0105790/
+Cop	crime, drama, mystery, thriller	1988	James B. Harris	6.3	110	http://www.imdb.com/title/tt0092783/
+House of the Long Shadows	comedy, horror, mystery, thriller	1983	Pete Walker	6.2	100	http://www.imdb.com/title/tt0085693/
+A Bay of Blood	horror, mystery, thriller	1971	Mario Bava	6.6	84	http://www.imdb.com/title/tt0067656/
+The Private Life of Sherlock Holmes	adventure, comedy, crime, mystery, romance, thriller	1970	Billy Wilder	7.2	125	http://www.imdb.com/title/tt0066249/
+Electra Glide in Blue	crime, drama, mystery, thriller	1973	James William Guercio	7.1	114	http://www.imdb.com/title/tt0070022/
+The Adventure of Sherlock Holmes' Smarter Brother	comedy, crime, musical, mystery	1975	Gene Wilder	5.9	91	http://www.imdb.com/title/tt0072608/
+The Seven-Per-Cent Solution	adventure, comedy, crime, drama, mystery, thriller	1976	Herbert Ross	6.7	113	http://www.imdb.com/title/tt0075194/
+Eyes of Laura Mars	horror, mystery, thriller	1978	Irvin Kershner	6	104	http://www.imdb.com/title/tt0077530/
+Mortal Thoughts	mystery, thriller	1991	Alan Rudolph	5.6	102	http://www.imdb.com/title/tt0102469/
+Soul Survivors	drama, horror, mystery, thriller	2001	Steve Carpenter	3.7	84	http://www.imdb.com/title/tt0218619/
+Dancing at the Blue Iguana	drama, mystery	2000	Michael Radford	5.7	123	http://www.imdb.com/title/tt0217355/
+Psycho Beach Party	comedy, horror, mystery	2000	Robert Lee King	5.9	95	http://www.imdb.com/title/tt0206226/
+Mercy	mystery, thriller	2000	Damian Harris	5.2	117	http://www.imdb.com/title/tt0188055/
+The Deep End	crime, drama, mystery, thriller	2001	Scott Mcgehee, David Siegel	6.7	101	http://www.imdb.com/title/tt0250323/
+The Unsaid	crime, drama, mystery, thriller	2001	Tom McLoughlin	6.4	111	http://www.imdb.com/title/tt0258967/
+New Best Friend	drama, mystery, thriller	2002	Zoe Clarke-Williams	5.1	91	http://www.imdb.com/title/tt0191074/
+Boys	mystery, drama, romance	1996	Stacy Cochran	4.4	86	http://www.imdb.com/title/tt0115742/
+Rear Window	crime, drama, mystery, romance, thriller	1998	Jeff Bleckner	5.5	89	http://www.imdb.com/title/tt0166322/
+Zero Effect	comedy, crime, drama, mystery, thriller	1998	Jake Kasdan	6.8	116	http://www.imdb.com/title/tt0120906/
+The Woman in Black	horror, mystery	1989	Herbert Wise	7.3	100	http://www.imdb.com/title/tt0098672/
+Millennium	drama, mystery, sci_fi, thriller	1989	Michael Anderson	5.5	108	http://www.imdb.com/title/tt0097883/
+Dream Lover	drama, mystery, thriller	1993	Nicholas Kazan	5.9	103	http://www.imdb.com/title/tt0109665/
+Lady in White	fantasy, horror, mystery, thriller	1988	Frank LaLoggia	6.6	112	http://www.imdb.com/title/tt0095484/
+The Private Eyes	comedy, mystery	1980	Lang Elliott	6.2	91	http://www.imdb.com/title/tt0081376/
+The Mirror Crack'd	crime, mystery, thriller	1980	Guy Hamilton	6.1	105	http://www.imdb.com/title/tt0081163/
+Asylum	horror, mystery	1972	Roy Ward Baker	6.4	88	http://www.imdb.com/title/tt0068230/
+Farewell, My Lovely	crime, mystery, thriller	1975	Dick Richards	7	95	http://www.imdb.com/title/tt0072973/
+The American Friend	crime, mystery, thriller, drama	1977	Wim Wenders	7.3	125	http://www.imdb.com/title/tt0075675/
+Pure Luck	comedy, crime, mystery	1991	Nadia Tass	5.2	96	http://www.imdb.com/title/tt0102729/
+Heaven's Prisoners	drama, mystery, thriller	1996	Phil Joanou	5.6	132	http://www.imdb.com/title/tt0116508/
+Palmetto	crime, drama, mystery, romance, thriller	1998	Volker Schlondorff	5.8	114	http://www.imdb.com/title/tt0120782/
+Malevolence	crime, horror, mystery, thriller	2003	Stevan Mena	5	90	http://www.imdb.com/title/tt0388230/
+Octane	horror, mystery, thriller	2003	Marcus Adams	4.1	91	http://www.imdb.com/title/tt0323465/
+Resurrection	crime, drama, horror, mystery, thriller	1999	Russell Mulcahy	5.9	108	http://www.imdb.com/title/tt0142804/
+The Body	drama, mystery, romance, thriller	2001	Jonas McCord	5.2	109	http://www.imdb.com/title/tt0201485/
+Brain Dead	horror, mystery, sci_fi, thriller	1990	Adam Simon	5.8	85	http://www.imdb.com/title/tt0099173/
+Omen IV: The Awakening	horror, mystery, thriller	1991	Jorge Montesi, Dominique Othenin-Girard	3.6	97	http://www.imdb.com/title/tt0102585/
+Siesta	drama, mystery, thriller	1987	Mary Lambert	5.3	97	http://www.imdb.com/title/tt0093969/
+Tourist Trap	horror, mystery, thriller	1979	David Schmoeller	6	90	http://www.imdb.com/title/tt0080040/
+Night of Dark Shadows	drama, horror, mystery, romance, thriller	1971	Dan Curtis	5.3	95	http://www.imdb.com/title/tt0067491/
+They Call Me Mister Tibbs!	crime, drama, mystery	1970	Gordon Douglas	5.9	108	http://www.imdb.com/title/tt0066450/
+The Big Sleep	crime, mystery, romance, thriller	1978	Michael Winner	5.5	99	http://www.imdb.com/title/tt0077234/
+The Last Wave	drama, mystery, thriller	1977	Peter Weir	7	106	http://www.imdb.com/title/tt0076299/
+Curse of the Pink Panther	comedy, crime, mystery	1983	Blake Edwards	4.1	109	http://www.imdb.com/title/tt0085384/
+52 Pick-Up	crime, mystery, thriller	1986	John Frankenheimer	6.2	110	http://www.imdb.com/title/tt0090567/
+The Morning After	crime, mystery, romance, thriller	1986	Sidney Lumet	5.7	103	http://www.imdb.com/title/tt0091554/
+Masquerade	drama, mystery, romance, thriller	1988	Bob Swaim	5.9	91	http://www.imdb.com/title/tt0095599/
+A Kiss Before Dying	crime, mystery, thriller	1991	James Dearden	5.5	94	http://www.imdb.com/title/tt0102220/
+Dr. Giggles	comedy, drama, horror, mystery, thriller	1992	Manny Coto	4.7	95	http://www.imdb.com/title/tt0104139/
+Bushwhacked	adventure, comedy, crime, family, mystery	1995	Greg Beeman	5.1	90	http://www.imdb.com/title/tt0112602/
+Goodbye Lover	comedy, crime, mystery, thriller	1998	Roland Joffé	5.5	102	http://www.imdb.com/title/tt0119219/
+The In Crowd	drama, thriller, mystery	2000	Mary Lambert	4.2	105	http://www.imdb.com/title/tt0163676/
+Scream and Scream Again	horror, sci_fi, crime, mystery, thriller	1970	Gordon Hessler	5.5	95	http://www.imdb.com/title/tt0064949/
+Deeply	drama, fantasy, mystery, romance	2000	Sheri Elwood	5.8	101	http://www.imdb.com/title/tt0218141/
+Alexandra's Project	drama, mystery, thriller	2003	Rolf de Heer	6.6	103	http://www.imdb.com/title/tt0338706/
+The 4th Floor	horror, mystery, thriller	1999	Josh Klausner	5.5	90	http://www.imdb.com/title/tt0167752/
+The Minus Man	crime, drama, mystery, thriller	1999	Hampton Fancher	6.2	111	http://www.imdb.com/title/tt0151582/
+Timescape	mystery, sci_fi	1992	David N. Twohy	6.5	99	http://www.imdb.com/title/tt0104362/
+Parents	comedy, drama, horror, mystery	1989	Bob Balaban	6.1	81	http://www.imdb.com/title/tt0098068/
+Trauma	horror, mystery, thriller	1993	Dario Argento	5.9	106	http://www.imdb.com/title/tt0104053/
+Nomads	horror, mystery, thriller	1986	John McTiernan	5.5	91	http://www.imdb.com/title/tt0091647/
+Silent Night, Bloody Night	horror, mystery, thriller	1972	Theodore Gershuny	5	88	http://www.imdb.com/title/tt0070694/
+The Cat o' Nine Tails	mystery, thriller	1971	Dario Argento	6.6	115	http://www.imdb.com/title/tt0065761/
+Blade of the Ripper	mystery, thriller	1971	Sergio Martino	6.9	98	http://www.imdb.com/title/tt0066412/
+The Drowning Pool	thriller, mystery	1975	Stuart Rosenberg	6.4	108	http://www.imdb.com/title/tt0072912/
+Siddhartha	drama, mystery	1972	Conrad Rooks	6.4	89	http://www.imdb.com/title/tt0070689/
+The Serpent's Egg	drama, mystery, thriller	1977	Ingmar Bergman	6.6	119	http://www.imdb.com/title/tt0076686/
+Lisa and the Devil	fantasy, horror, mystery, thriller	1974	Mario Bava, Mickey Lion	6.2	92	http://www.imdb.com/title/tt0068863/
+Agnes of God	drama, mystery, thriller	1985	Norman Jewison	6.5	98	http://www.imdb.com/title/tt0088683/
+Witchboard	horror, mystery, thriller	1986	Kevin Tenney	5.3	98	http://www.imdb.com/title/tt0090327/
+The Believers	drama, horror, mystery, thriller	1987	John Schlesinger	5.9	114	http://www.imdb.com/title/tt0092632/
+The Diary of Ellen Rimbauer	drama, horror, mystery, thriller	2003	Craig R. Baxley	5.2	88	http://www.imdb.com/title/tt0350811/
+Motorama	adventure, comedy, crime, drama, fantasy, mystery, sci_fi, thriller	1991	Barry Shils	6	90	http://www.imdb.com/title/tt0104922/
+Knight Moves	drama, mystery, thriller	1992	Carl Schenkel	5.9	108	http://www.imdb.com/title/tt0104627/
+Mountains of the Moon	adventure, drama, history, mystery	1990	Bob Rafelson	7.1	136	http://www.imdb.com/title/tt0100196/
+Scooby-Doo and the Ghoul School	animation, adventure, comedy, family, fantasy, horror, mystery	1988	Charles A. Nichols, Ray Patterson	6.2	90	http://www.imdb.com/title/tt0189071/
+Paperhouse	drama, fantasy, horror, mystery, romance, thriller	1988	Bernard Rose	6.7	92	http://www.imdb.com/title/tt0098061/
+Bug	sci_fi, horror, mystery	1975	Jeannot Szwarc	5	99	http://www.imdb.com/title/tt0072750/
+KISS Meets the Phantom of the Park	fantasy, horror, music, mystery, sci_fi	1978	Gordon Hessler	4	96	http://www.imdb.com/title/tt0077788/
+The Legacy	horror, mystery	1978	Richard Marquand	5.4	102	http://www.imdb.com/title/tt0079450/
+Frogs	horror, mystery, sci_fi, thriller	1972	George McCowan	4	91	http://www.imdb.com/title/tt0068615/
+The Other	drama, horror, mystery, thriller	1972	Robert Mulligan	6.8	108	http://www.imdb.com/title/tt0069050/
+Her Alibi	comedy, crime, mystery, romance	1989	Bruce Beresford	5.3	94	http://www.imdb.com/title/tt0097500/
+My House in Umbria	drama, mystery, thriller	2003	Richard Loncraine	6.9	103	http://www.imdb.com/title/tt0323332/
+The Legend of Boggy Creek	drama, horror, mystery	1972	Charles B. Pierce	3.8	90	http://www.imdb.com/title/tt0068837/
+Four Flies on Grey Velvet	mystery, thriller	1971	Dario Argento	6.6	104	http://www.imdb.com/title/tt0066735/
+One of Our Dinosaurs Is Missing	family, adventure, comedy, mystery, thriller	1975	Robert Stevenson	5.7	100	http://www.imdb.com/title/tt0075016/
+Breakheart Pass	mystery, western	1975	Tom Gries	6.6	95	http://www.imdb.com/title/tt0072735/
+The Sailor Who Fell from Grace with the Sea	drama, mystery, thriller	1976	Lewis John Carlino	6.2	105	http://www.imdb.com/title/tt0075161/
+Murder by Decree	crime, drama, horror, mystery, thriller	1979	Bob Clark	7	124	http://www.imdb.com/title/tt0079592/
+Agatha	drama, mystery, thriller	1979	Michael Apted	6.1	105	http://www.imdb.com/title/tt0078736/
+The January Man	action, crime, mystery, thriller	1989	Pat O'Connor	5.3	97	http://www.imdb.com/title/tt0097613/
+V.I. Warshawski	action, comedy, crime, mystery	1991	Jeff Kanew	4.5	89	http://www.imdb.com/title/tt0103184/
+Once Upon a Crime...	comedy, crime, mystery	1992	Eugene Levy	5.4	94	http://www.imdb.com/title/tt0101625/
+Radioland Murders	comedy, crime, drama, musical, mystery, romance	1994	Mel Smith	5.8	108	http://www.imdb.com/title/tt0110939/
+Silent Fall	drama, mystery, thriller	1994	Bruce Beresford	5.7	101	http://www.imdb.com/title/tt0111187/
+Don't Torture a Duckling	horror, mystery, thriller	1972	Lucio Fulci	7	102	http://www.imdb.com/title/tt0069019/
+I Love Your Work	drama, mystery	2003	Adam Goldberg	5.1	111	http://www.imdb.com/title/tt0322700/
+Prime Suspect 3	crime, drama, mystery	1993	David Drury	7.7	207	http://www.imdb.com/title/tt0106104/
+After Dark, My Sweet	crime, drama, mystery, thriller	1990	James Foley	6.5	114	http://www.imdb.com/title/tt0098994/
+Appointment with Death	crime, drama, mystery, thriller	1988	Michael Winner	5.8	102	http://www.imdb.com/title/tt0094669/
+The Hound of the Baskervilles	crime, drama, horror, mystery	1988	Brian Mills	7.7	105	http://www.imdb.com/title/tt0095330/
+The Medusa Touch	drama, mystery, thriller	1978	Jack Gold	6.9	105	http://www.imdb.com/title/tt0077921/
+The Bermuda Triangle	horror, sci_fi, mystery	1978	René Cardona Jr.	4.7	112	http://www.imdb.com/title/tt0078417/
+Blade	mystery, thriller	1973	Ernest Pintoff	5.2	90	http://www.imdb.com/title/tt0069797/
+Child's Play	drama, horror, mystery, thriller	1972	Sidney Lumet	6	100	http://www.imdb.com/title/tt0068369/
+Your Vice Is a Locked Room and Only I Have the Key	mystery, thriller	1972	Sergio Martino	6.8	96	http://www.imdb.com/title/tt0069421/
+The Case of the Bloody Iris	mystery, thriller	1972	Anthony Ascott	6.6	94	http://www.imdb.com/title/tt0069073/
+Tombs of the Blind Dead	horror, mystery	1972	Amando de Ossorio	6	101	http://www.imdb.com/title/tt0067500/
+They Might Be Giants	mystery, comedy, romance	1971	Anthony Harvey	7	98	http://www.imdb.com/title/tt0067848/
+A Lizard in a Woman's Skin	mystery, thriller	1971	Lucio Fulci	6.8	98	http://www.imdb.com/title/tt0067361/
+When Eight Bells Toll	action, adventure, crime, mystery	1971	Etienne Perier	5.8	94	http://www.imdb.com/title/tt0067976/
+The House That Dripped Blood	horror, mystery	1971	Peter Duffell	6.5	102	http://www.imdb.com/title/tt0065854/
+Black Belly of the Tarantula	horror, mystery, thriller	1971	Paolo Cavara	6.4	89	http://www.imdb.com/title/tt0069343/
+The Cars That Eat People	comedy, horror, mystery, thriller	1974	Peter Weir	5.5	91	http://www.imdb.com/title/tt0071282/
+Celine and Julie Go Boating	comedy, drama, fantasy, mystery	1974	Jacques Rivette	7.5	193	http://www.imdb.com/title/tt0071381/
+The Last of Sheila	crime, drama, mystery, thriller	1973	Herbert Ross	7.2	120	http://www.imdb.com/title/tt0070291/
+What Have You Done to Solange?	horror, mystery, thriller	1972	Massimo Dallamano	7	103	http://www.imdb.com/title/tt0068416/
+The Tall Blond Man with One Black Shoe	comedy, mystery	1972	Yves Robert	7.1	90	http://www.imdb.com/title/tt0068655/
+Mr. Klein	crime, drama, mystery, thriller, war	1976	Joseph Losey	7.5	123	http://www.imdb.com/title/tt0074916/
+The Cheap Detective	comedy, crime, mystery, romance, thriller	1978	Robert Moore	6.3	92	http://www.imdb.com/title/tt0077321/
+Ashanti	action, adventure, drama, mystery, thriller	1979	Richard Fleischer	5.1	118	http://www.imdb.com/title/tt0078801/
+Flashpoint	action, crime, drama, mystery, thriller	1984	William Tannen	6.4	94	http://www.imdb.com/title/tt0087268/
+Whispers in the Dark	thriller, mystery	1992	Christopher Crowe	5.4	103	http://www.imdb.com/title/tt0105811/
+Clean Slate	comedy, mystery	1994	Mick Jackson	5.3	107	http://www.imdb.com/title/tt0109443/
+Equinox	horror, adventure, mystery	1970	Jack Woods	5.1	80	http://www.imdb.com/title/tt0067055/
+The Advocate	crime, drama, history, mystery	1993	Leslie Megahey	6.6	112	http://www.imdb.com/title/tt0107146/
+Ruby Cairo	mystery, thriller	1993	Graeme Clifford	4.8	90	http://www.imdb.com/title/tt0107999/
+Rawhead Rex	fantasy, horror, mystery, thriller	1986	George Pavlou	4.4	89	http://www.imdb.com/title/tt0091829/
+Boggy Creek II: And the Legend Continues	horror, drama, mystery, thriller	1985	Charles B. Pierce	2	91	http://www.imdb.com/title/tt0088772/
+Fear City	crime, drama, mystery, thriller	1984	Abel Ferrara	5.4	96	http://www.imdb.com/title/tt0087247/
+Shock Waves	horror, mystery, sci_fi	1977	Ken Wiederhorn	5.6	85	http://www.imdb.com/title/tt0076704/
+The Haunting of Julia	drama, horror, mystery	1977	Richard Loncraine	6.2	98	http://www.imdb.com/title/tt0074611/
+Murder on Flight 502	drama, mystery, thriller	1975	George McCowan	5.5	97	http://www.imdb.com/title/tt0073418/
+The Blue Bird	adventure, drama, family, fantasy, mystery, thriller	1976	George Cukor	5.1	99	http://www.imdb.com/title/tt0074225/
+The Thirty Nine Steps	crime, mystery, thriller	1978	Don Sharp	6.3	102	http://www.imdb.com/title/tt0078389/
+Pulp	comedy, crime, drama, mystery, thriller	1972	Mike Hodges	6	95	http://www.imdb.com/title/tt0069134/
+The Reincarnation of Peter Proud	horror, mystery	1975	J. Lee Thompson	6.4	105	http://www.imdb.com/title/tt0073615/
+Stone	action, drama, adventure, crime, mystery	1974	Sandy Harbutt	6.3	103	http://www.imdb.com/title/tt0072209/
+Hustle	crime, drama, mystery, thriller	1975	Robert Aldrich	6.1	120	http://www.imdb.com/title/tt0073133/
+God Told Me To	crime, horror, sci_fi, mystery, thriller	1976	Larry Cohen	6.2	91	http://www.imdb.com/title/tt0075930/
+The Psychic	mystery, thriller	1977	Lucio Fulci	6.9	95	http://www.imdb.com/title/tt0075614/
+Who Is Killing the Great Chefs of Europe?	comedy, mystery, crime	1978	Ted Kotcheff	6.3	112	http://www.imdb.com/title/tt0078488/
+Without a Trace	drama, mystery	1983	Stanley R. Jaffe	6.7	120	http://www.imdb.com/title/tt0086593/
+Lassiter	action, crime, mystery	1984	Roger Young	5.7	100	http://www.imdb.com/title/tt0087589/
+And Soon the Darkness	mystery, thriller	1970	Robert Fuest	6.6	99	http://www.imdb.com/title/tt0065398/
+The Navigator: A Mediaeval Odyssey	action, adventure, drama, fantasy, mystery, thriller	1988	Vincent Ward	6.7	90	http://www.imdb.com/title/tt0095709/
+Jack's Back	crime, horror, mystery, thriller	1988	Rowdy Herrington	5.8	97	http://www.imdb.com/title/tt0095389/
+Ten Little Indians	crime, mystery, drama	1974	Peter Collinson	5.3	105	http://www.imdb.com/title/tt0072263/
+Absolution	drama, mystery, thriller	1978	Anthony Page	6.1	95	http://www.imdb.com/title/tt0081975/
+Someone's Watching Me!	horror, mystery, thriller	1978	John Carpenter	6.6	97	http://www.imdb.com/title/tt0078295/
+Night Watch	horror, mystery, thriller	1973	Brian G. Hutton	5.9	99	http://www.imdb.com/title/tt0070444/
+Tales That Witness Madness	comedy, horror, mystery	1973	Freddie Francis	5.4	90	http://www.imdb.com/title/tt0070770/
+Gumshoe	comedy, crime, drama, mystery	1971	Stephen Frears	6.5	88	http://www.imdb.com/title/tt0068669/
+The Gore Gore Girls	comedy, horror, mystery	1972	Herschell Gordon Lewis	5	81	http://www.imdb.com/title/tt0068649/
+The Being Experience	mystery	2013	Jennifer Marie Elster		80	http://www.imdb.com/title/tt0780541/
+Killer God	drama, mystery, thriller	2010	Stasch Radwanski Jr.	2.5	78	http://www.imdb.com/title/tt1723799/
+Keane	drama, mystery, thriller	2004	Lodge Kerrigan	6.9	100	http://www.imdb.com/title/tt0420291/
+The Book of Revelation	mystery, romance, thriller	2006	Ana Kokkinos	5.4	118	http://www.imdb.com/title/tt0424863/
+Vice	crime, drama, mystery, thriller	2008	Raul Sanchez Inglis	4.8	99	http://www.imdb.com/title/tt0762145/
+Jane Doe: The Harder They Fall	crime, family, mystery	2006	Lea Thompson	5.8	120	http://www.imdb.com/title/tt0455134/
+Minor Details	adventure, family, mystery	2009	John Lyde	4.3		http://www.imdb.com/title/tt1230126/
+Quid Pro Quo	drama, mystery, thriller	2008	Carlos Brooks	6.1	82	http://www.imdb.com/title/tt0414426/
+The Tiger's Tail	comedy, crime, drama, mystery, thriller	2006	John Boorman	5.8	107	http://www.imdb.com/title/tt0490499/
+Hard to Forget	drama, mystery, romance	2003	Vic Sarin	5.3	95	http://www.imdb.com/title/tt0136983/
+In My Father's Den	mystery, drama, thriller	2004	Brad McGann	7.5	127	http://www.imdb.com/title/tt0385017/
+Walk on Water	drama, mystery, thriller	2004	Eytan Fox	7.3	103	http://www.imdb.com/title/tt0352994/
+Breaking Dawn	horror, mystery, thriller	2004	Mark Edwin Robinson	5.4		http://www.imdb.com/title/tt0366518/
+Jesse Stone: Death in Paradise	crime, drama, mystery	2006	Robert Harmon	6.9	87	http://www.imdb.com/title/tt0800095/
+Deadline	drama, mystery, thriller	2012	Curt Hahn	4	95	http://www.imdb.com/title/tt1430811/
+Marple: At Bertram's Hotel	crime, drama, mystery	2007	Dan Zeff	6.8	84	http://www.imdb.com/title/tt0906049/
+Godspeed	drama, mystery, thriller	2009	Robert Saitzyk	4.3	99	http://www.imdb.com/title/tt1242539/
+To Get Her	drama, mystery, thriller	2011	Erica Dunton	5.5	86	http://www.imdb.com/title/tt1787828/
+London River	drama, mystery	2009	Rachid Bouchareb	6.7	88	http://www.imdb.com/title/tt1227787/
+Iron Doors	fantasy, mystery, thriller	2010	Stephen Manuel	4.3	80	http://www.imdb.com/title/tt1520956/
+Bubble	crime, drama, mystery	2005	Steven Soderbergh	6.6	73	http://www.imdb.com/title/tt0454792/
+Munger Road	horror, mystery, thriller	2011	Nicholas Smith	4.3		http://www.imdb.com/title/tt1720172/
+Searching for Sonny	comedy, mystery	2011	Andrew Disney	7		http://www.imdb.com/title/tt1456939/
+The Ruby in the Smoke	crime, drama, mystery	2006	Brian Percival	6.4	95	http://www.imdb.com/title/tt1587299/
+Accused at 17	crime, drama, mystery, thriller	2009	Doug Campbell	5	90	http://www.imdb.com/title/tt1480649/
+Fingerprints	horror, mystery, thriller	2006	Harry Basil	4.9	95	http://www.imdb.com/title/tt0790662/
+Dead Sleep	mystery, thriller	1992	Alec Mills	4.3	100	http://www.imdb.com/title/tt0099376/
+Mystery Woman	crime, drama, mystery, thriller	2003	Walter Klenhard	5.7	88	http://www.imdb.com/title/tt0370987/
+The Wizard of Gore	horror, mystery	2007	Jeremy Kasten	5	94	http://www.imdb.com/title/tt0765487/
+Death of a President	crime, drama, mystery, thriller	2006	Gabriel Range	6.3	97	http://www.imdb.com/title/tt0853096/
+One Point O	drama, horror, mystery, sci_fi, thriller	2004	Jeff Renfroe, Marteinn Thorsson	6	92	http://www.imdb.com/title/tt0317042/
+Agatha Christie Marple: The Body in the Library	crime, drama, mystery	2004	Andy Wilson	6.8	94	http://www.imdb.com/title/tt0414752/
+First Born	drama, horror, mystery, thriller	2007	Isaac Webb	4.6	95	http://www.imdb.com/title/tt0470761/
+Miss Marple: Nemesis	crime, drama, mystery	2007	Nicolas Winding Refn	6.9	83	http://www.imdb.com/title/tt0878691/
+Robin Hood: Ghosts of Sherwood 3D	action, adventure, comedy, drama, horror, mystery	2012	Oliver Krekel	2	116	http://www.imdb.com/title/tt1572503/
+Jane Doe: Vanishing Act	mystery	2005	James A. Contner	5.7	92	http://www.imdb.com/title/tt0440513/
+Scooby Doo! Music of the Vampire	animation, adventure, family, musical, mystery	2011	David Block	6.1	79	http://www.imdb.com/title/tt2162709/
+Hide	action, crime, drama, horror, mystery, thriller	2008	K.C. Bascombe	4.9		http://www.imdb.com/title/tt0827181/
+Marple: Murder Is Easy	crime, drama, mystery	2008	Hettie Macdonald	6.7		http://www.imdb.com/title/tt1251825/
+Don McKay	thriller, drama, mystery	2009	Jake Goldberger	5.8	87	http://www.imdb.com/title/tt1281374/
+The Governor's Wife	crime, mystery, thriller	2008	David Burton Morris	4.1	95	http://www.imdb.com/title/tt1086777/
+Intruders	biography, horror, mystery, sci_fi	1992	Dan Curtis	6.1	163	http://www.imdb.com/title/tt0104523/
+The Watch	drama, horror, mystery, thriller	2008	Jim Donovan	5.2		http://www.imdb.com/title/tt1166118/
+Penance	horror, mystery, thriller	2009	Jake Kennedy	3.5	85	http://www.imdb.com/title/tt1261414/
+Thorne: Scaredy Cat	crime, drama, mystery, thriller	2010	Benjamin Ross	6.5		http://www.imdb.com/title/tt1659253/
+Bad Country	action, crime, drama, mystery, thriller	2013	Chris Brinker			http://www.imdb.com/title/tt2350892/
+Agatha Christie's Miss Marple: A Pocket Full of Rye	crime, drama, mystery	1985	Guy Slater	7.2	103	http://www.imdb.com/title/tt0087924/
+Inside Out	drama, mystery, thriller	2005	David Ogden	5.5	90	http://www.imdb.com/title/tt0386534/
+Thr3e	drama, horror, mystery, thriller	2006	Robby Henson	4.9	101	http://www.imdb.com/title/tt0486028/
+Agatha Christie Marple: By the Pricking of My Thumbs	crime, drama, mystery	2006	Peter Medak	6.8	102	http://www.imdb.com/title/tt0489227/
+Rebecca	drama, mystery, romance, thriller	1997	Jim O'Brien	7.1	190	http://www.imdb.com/title/tt0119991/
+Breathing Room	horror, mystery, thriller	2008	John Suits, Gabriel Cowan	4.2	89	http://www.imdb.com/title/tt1220706/
+Skellig: The Owl Man	drama, family, fantasy, mystery	2009	Aj Jankel	6.3	102	http://www.imdb.com/title/tt0382301/
+The Passion of Darkly Noon	drama, mystery, thriller	1995	Philip Ridley	5.8	100	http://www.imdb.com/title/tt0114099/
+An Amish Murder	drama, mystery, thriller	2013	Stephen Gyllenhaal	6.6		http://www.imdb.com/title/tt2234451/
+Carnal Innocence	mystery	2011	Peter Markle	4.8		http://www.imdb.com/title/tt1863173/
+Marple: The Mirror Crack'd from Side to Side	crime, drama, mystery	2010	Tom Shankland	7.1		http://www.imdb.com/title/tt1488580/
+Armed and Deadly	drama, mystery, thriller	2011	Andrzej Mrotek	2.2	100	http://www.imdb.com/title/tt1595637/
+Mystery Woman: Wild West Mystery	crime, mystery	2006	David S. Cass Sr.	6.3	120	http://www.imdb.com/title/tt0493151/
+Last Hours in Suburbia	crime, mystery, thriller	2012	John Stimpson	4.1		http://www.imdb.com/title/tt2375093/
+Let the Game Begin	comedy, drama, mystery	2010	Amit Gupta	4.9	110	http://www.imdb.com/title/tt1041778/
+Farmhouse	horror, mystery, thriller	2008	George Bessudo	5.5	95	http://www.imdb.com/title/tt0996934/
+Mysteria	mystery	2011	Lucius C. Kuert	3.7		http://www.imdb.com/title/tt1701218/
+The Whisperer in Darkness	mystery, sci_fi, thriller	2011	Sean Branney	6.4	103	http://www.imdb.com/title/tt1498878/
+The Bleeding House	drama, horror, mystery, thriller	2011	Philip Gelatt	4.9		http://www.imdb.com/title/tt1535566/
+A Is for Acid	crime, drama, mystery, thriller	2002	Harry Bradbeer	6.8	120	http://www.imdb.com/title/tt0327392/
+Save Me	mystery, thriller	1994	Alan Roberts	2.8	93	http://www.imdb.com/title/tt0108045/
+Agatha Christie Marple: Why Didn't They Ask Evans?	crime, drama, mystery	2009	Nicholas Renton	6.3	82	http://www.imdb.com/title/tt1276406/
+Cape Karma	drama, mystery, thriller	2007	Pankaj Advani	4.7	90	http://www.imdb.com/title/tt1080568/
+Death Ship	adventure, horror, mystery, thriller	1980	Alvin Rakoff	4.6	91	http://www.imdb.com/title/tt0080603/
+Q	drama, fantasy, horror, mystery, thriller	1982	Larry Cohen	6.1	93	http://www.imdb.com/title/tt0084556/
+Bad Girl Island	mystery, sci_fi	2007	Stewart Raffill	4.5	90	http://www.imdb.com/title/tt1031276/
+Acolytes	crime, drama, horror, mystery, thriller	2008	Jon Hewitt	5.5	91	http://www.imdb.com/title/tt0902952/
+The Dead Outside	horror, mystery, thriller	2008	Kerry Anne Mullaney	4.2	86	http://www.imdb.com/title/tt1206082/
+The Seamstress	crime, horror, mystery, thriller	2009	Jesse James Miller	3.5	85	http://www.imdb.com/title/tt1326260/
+Crowsnest	action, horror, mystery, thriller	2012	Brenton Spencer	3.7	84	http://www.imdb.com/title/tt2180333/
+The Westing Game	family, horror, mystery	1997	Terence H. Winkless	5.5	95	http://www.imdb.com/title/tt0120495/
+Apart	drama, mystery, romance, thriller	2011	Aaron Rottinghaus	4.4	85	http://www.imdb.com/title/tt1525552/
+The Boy She Met Online	crime, mystery, romance, thriller	2010	Curtis Crawford	3.5	89	http://www.imdb.com/title/tt1536536/
+The Outsider	action, crime, drama, mystery, thriller	2013	Brian A Miller		94	http://www.imdb.com/title/tt2198241/
+Vanished	mystery, thriller	2011	Michael Adante	3.6	90	http://www.imdb.com/title/tt1816705/
+Loch Ness	adventure, drama, fantasy, mystery	1996	John Henderson	5.2	101	http://www.imdb.com/title/tt0113682/
+Mortuary	horror, mystery, thriller	2005	Tobe Hooper	3.8	94	http://www.imdb.com/title/tt0415167/
+Photographing Fairies	drama, fantasy, mystery	1997	Nick Willing	6.7	106	http://www.imdb.com/title/tt0119893/
+Sherlock	action, adventure, crime, drama, mystery, thriller	2002	Graham Theakston	5.9	100	http://www.imdb.com/title/tt0337593/
+Danika	drama, horror, mystery, thriller	2006	Ariel Vromen	5.6	79	http://www.imdb.com/title/tt0469062/
+McCanick	crime, drama, mystery, thriller	2013	Josh C. Waller			http://www.imdb.com/title/tt2295564/
+The Dragon Pearl	adventure, family, mystery	2011	Mario Andreacchio	4.2	93	http://www.imdb.com/title/tt1708534/
+Sherlock Holmes and the Case of the Silk Stocking	crime, drama, mystery	2004	Simon Cellan Jones	6.8	99	http://www.imdb.com/title/tt0429032/
+Now You See It...	family, mystery	2005	Duwayne Dunham	6.2	83	http://www.imdb.com/title/tt0426568/
+Living with the Dead	drama, sci_fi, crime, mystery, thriller	2002	Stephen Gyllenhaal	6.9	142	http://www.imdb.com/title/tt0289652/
+The Star Chamber	drama, mystery, thriller	1983	Peter Hyams	6.1	109	http://www.imdb.com/title/tt0086356/
+The House of the Laughing Windows	horror, mystery, thriller	1976	Pupi Avati	7	110	http://www.imdb.com/title/tt0074287/
+All the Colors of the Dark	horror, mystery	1972	Sergio Martino	6.7	94	http://www.imdb.com/title/tt0069390/
+End of the World	mystery, sci_fi, thriller	1977	John Hayes	2.7	88	http://www.imdb.com/title/tt0075990/
+Long Weekend	horror, mystery, thriller	1978	Colin Eggleston	6.7	92	http://www.imdb.com/title/tt0079482/
+Who Saw Her Die?	mystery, thriller	1972	Aldo Lado	6.4	90	http://www.imdb.com/title/tt0068367/
+The Beast Must Die	horror, mystery	1974	Paul Annett	5.7	93	http://www.imdb.com/title/tt0071200/
+St. Ives	action, crime, drama, mystery, thriller	1976	J. Lee Thompson	6	94	http://www.imdb.com/title/tt0075263/
+The Big Fix	comedy, mystery, thriller	1978	Jeremy Paul Kagan	6.2	108	http://www.imdb.com/title/tt0077233/
+Wanda Nevada	comedy, mystery, romance, western	1979	Peter Fonda	5.2	107	http://www.imdb.com/title/tt0080116/
+The Gun in Betty Lou's Handbag	comedy, mystery	1992	Allan Moyle	4.8	89	http://www.imdb.com/title/tt0104376/
+The Man Who Haunted Himself	drama, fantasy, horror, mystery, thriller	1970	Basil Dearden	6.2	89	http://www.imdb.com/title/tt0066053/
+What's the Matter with Helen?	crime, drama, horror, musical, mystery, romance, thriller	1971	Curtis Harrington	6.2	101	http://www.imdb.com/title/tt0067975/
+Endless Night	crime, drama, horror, mystery, thriller	1972	Sidney Gilliat	5.8	99	http://www.imdb.com/title/tt0067052/
+The Zodiac Killer	horror, mystery, thriller	1971	Tom Hanson	4.2	87	http://www.imdb.com/title/tt0143016/
+The Case of the Scorpion's Tail	mystery, thriller	1971	Sergio Martino	6.8	90	http://www.imdb.com/title/tt0066924/
+Conduct Unbecoming	drama, crime, mystery	1975	Michael Anderson	6.2	107	http://www.imdb.com/title/tt0072812/
+Legend of the Werewolf	horror, mystery	1975	Freddie Francis	5.5	85	http://www.imdb.com/title/tt0073275/
+The Late Show	crime, mystery, comedy, drama	1977	Robert Benton	6.9	93	http://www.imdb.com/title/tt0076301/
+Trenchcoat	comedy, mystery, thriller	1983	Michael Tuchner	5.2	91	http://www.imdb.com/title/tt0086476/
+Second Sight	comedy, mystery, sci_fi	1989	Joel Zwick	3.9	83	http://www.imdb.com/title/tt0098276/
+The Hypothesis of the Stolen Painting	drama, mystery	1979	Raoul Ruiz	7.5	66	http://www.imdb.com/title/tt0077707/
+Defenseless	mystery, thriller	1991	Martin Campbell	5.7	104	http://www.imdb.com/title/tt0099397/
+Sarah Landon and the Paranormal Hour	family, horror, mystery, thriller	2007	Lisa Comrie	3.9	81	http://www.imdb.com/title/tt0990376/
+Darker Than Amber	action, drama, mystery, thriller	1970	Robert Clouse	5.9	96	http://www.imdb.com/title/tt0065610/
+Entertaining Mr. Sloane	comedy, horror, mystery	1970	Douglas Hickox	6.5	94	http://www.imdb.com/title/tt0065700/
+Fragment of Fear	crime, mystery, drama	1970	Richard C. Sarafian	6.1	94	http://www.imdb.com/title/tt0065737/
+The Yin and the Yang of Mr. Go	mystery, thriller	1970	Burgess Meredith	3.7	89	http://www.imdb.com/title/tt0066592/
+An Evening of Edgar Allan Poe	drama, horror, mystery, thriller	1970	Kenneth Johnson	7.1	53	http://www.imdb.com/title/tt0229371/
+The Amazing Transplant	fantasy, mystery	1970	Louis Silverman	3.9	77	http://www.imdb.com/title/tt0065390/
+Flesh Feast	fantasy, mystery, sci_fi, thriller	1970	Brad F. Grinter	1.7	72	http://www.imdb.com/title/tt0065727/
