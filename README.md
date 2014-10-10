@@ -18,4 +18,4 @@ for free.
 ![MFM_GOM](https://raw.githubusercontent.com/Modi777/Movie-File-Merger/master/Manuals/MFM_GOM.jpg)
 
 ## MFM with IMDb
-![MFM_IMDB](https://raw.githubusercontent.com/Modi777/Movie-File-Merger/master/Manuals/MFM_IMDB.jpg)
+![MFM_IMDB](https://raw.githubusercontent.com/Modi777/Movie-File-Merger/master/Manuals/MFM_IMDb.jpg)
