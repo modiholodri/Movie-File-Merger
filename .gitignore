@@ -38,7 +38,7 @@ Icon
 # Temp Files
 .csv
 .slv
-~$
+desktop.ini
 
 # Compile Directories
 bin

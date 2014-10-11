@@ -1,0 +1,3 @@
+## :open_file_folder: IMDb Lists Folder
+
+The MFM Collections folder contains some predefined lists with movie genres from IMDb in there.  The names of the lists should be more or less self explanatory...
