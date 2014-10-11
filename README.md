@@ -25,9 +25,9 @@ Just drag the list entry on the `Play Video` drop area...
 Or if you want to get additional information from the web then drap the list entry on the `Search IMDb` drop area...
 ![MFM_IMDB](https://raw.githubusercontent.com/Modi777/Movie-File-Merger/master/Manuals/MFM_IMDb.jpg)
 
-### The MIT License
+### The MIT License (MIT)
 
-Copyright (c) 2012-2014 Reinhold Lauer
+Copyright :copyright: 2012-2014 Reinhold Lauer
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
