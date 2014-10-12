@@ -1,3 +1,3 @@
-## :open_file_folder: MFM Collections Folder
+## :open_file_folder: MFM Collections Folder :open_file_folder: 
 
 The MFM Collections folder is a automatically created by MFM when collections are stored.  By default there are some predefined lists with movie genres from IMDb in there.  This folder can be shared with others over Dropbox to exchange lists...

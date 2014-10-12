@@ -1,4 +1,4 @@
-## :book: Build Instructions
+## :book: Build Instructions :book:
 
 Do following to compile MFM for the first time and set up the basic environment..
 - Open the Movie File Merger solution from SharpDevelop.

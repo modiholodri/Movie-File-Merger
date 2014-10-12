@@ -1,4 +1,4 @@
-## :open_file_folder: MFM Program Folder
+## :open_file_folder: MFM Program Folder :open_file_folder:
 
 The MFM Program folder contains 
 - the MFM excutable
