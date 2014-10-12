@@ -3,29 +3,12 @@ MFM is programmed in [C#](http://www.c-sharpcorner.com/) with [SharpDevelop](htt
 XP needs .net framework 4.0 installed and to handle the resizing of the windows, a program like PowerResizer is required.
 
 The purpose of Movie File Merger (MFM) is to support the combination video collections, like movies, series, or documentaries.
-MFM makes it easier for you to select which items are copied or moved and which items are not touched.  It only considers relevant
-files and ignores the rest.
-MFM helps you to select the items to copy before hand, and hence reduces the hassle of selecting the items when they actually
-should be copied or moved.
+MFM makes it easier for you to select which items are copied or moved and which items are not touched.  It only considers relevant files and ignores the rest. MFM helps you to select the items to copy before hand, and hence reduces the hassle of selecting the items when they actually should be copied or moved.  You can find more information on the Wiki under [MFM Introduction](https://github.com/Modi777/Movie-File-Merger/wiki/Introduction) or other Wiki pages marked with a :book: ...
 
-![MFM](https://raw.githubusercontent.com/Modi777/Movie-File-Merger/master/Manuals/MFM.jpg)
- 
-MFM is not a movie database program; hence MFM is designed so that the lists can be easily updated once out of date.  MFM is
-designed to run in Dropbox, hence makes it easier to share lists with other people, update the program, and store your settings
-and lists in a save place.  MFM is also designed to work together with multiple other programs, which can be downloaded and used
-for free.
+![MFM_GOM](https://raw.githubusercontent.com/Modi777/Movie-File-Merger/master/Manuals/MFM_GOM.jpg) 
+:information_source: MFM is not a movie database program; MFM is designed so that the lists can be easily updated once out of date.  MFM is designed to run in Dropbox or as portable program, what makes it easier to share lists with other people, update the program, and store your settings and lists in a save place.  MFM is also designed to work together with multiple other programs, which can be downloaded and used for free, see [MFM Installation](https://github.com/Modi777/Movie-File-Merger/wiki/Installation).
 
-### MFM with GOM or IMDb
-
-If you can't figure our what the video file is about from the tiltle of it, you can start playing the file from within MFM or get additional indformation from the web.
-
-Just drag the list entry on the `Play Video` drop area...
-![MFM_GOM](https://raw.githubusercontent.com/Modi777/Movie-File-Merger/master/Manuals/MFM_GOM.jpg)
-
-Or if you want to get additional information from the web then drap the list entry on the `Search IMDb` drop area...
-![MFM_IMDB](https://raw.githubusercontent.com/Modi777/Movie-File-Merger/master/Manuals/MFM_IMDb.jpg)
-
-### The MIT License (MIT)
+### [The MIT License (MIT)](http://opensource.org/licenses/MIT)
 
 Copyright :copyright: 2012-2014 Reinhold Lauer
 
