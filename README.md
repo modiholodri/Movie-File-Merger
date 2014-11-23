@@ -1,12 +1,17 @@
 ### Welcome to the Movie File Merger!
-MFM is programmed in [C#](http://www.c-sharpcorner.com/) with [SharpDevelop](http://www.icsharpcode.net/OpenSource/SD/Default.aspx) version 5.0.0.  At the moment it uses the .net framework 4.0.  MFM runs under Windows XP, Vista, Win 7, and Win 8.  MFM has also been used on a Mac with Parallels installed. 
+MFM runs under Windows XP, Vista, Win 7, and Win 8.  MFM has also been used on a Mac with Parallels installed. 
 XP needs .net framework 4.0 installed and to handle the resizing of the windows, a program like PowerResizer is required.
+MFM uses [Semantic Versioning](http://semver.org/) and is programmed in [C#](http://www.c-sharpcorner.com/) with [SharpDevelop](http://www.icsharpcode.net/OpenSource/SD/Default.aspx) version 5.0.0.  At the moment it uses the .net framework 4.0.
 
 ### :book: The User Manuals...
-There are two manuals; one in book format as GitBook [Movie File Merger User Manual](http://modi777.gitbooks.io/movie-file-merger-user-manual/), the other one is a part of this Wiki, have a look at the sections on the right side :point_right: ...
+Multiple manuals, which are more or less interconnected, are involved in the whole project.
+
+- one in book format as GitBook [Movie File Merger User Manual](http://modi777.gitbooks.io/movie-file-merger-user-manual/), it can be found on [GitHub](https://github.com/Modi777/movie-file-merger-user-manual/).
+- the other one is a part of the [Movie File Merger Wiki](https://github.com/Modi777/Movie-File-Merger/wiki), have a look at the sections on the right side of the MFM Wiki :point_right:...
+- another one is about :construction: [How to Organize Videos on Your Hard Disks](http://modi777.gitbooks.io/how-to-oraganize-videos-on-your-hard-disks/) :construction: , it explains my ideas and includes a few brief description of some useful programs.  It is on [GitHub](https://github.com/Modi777/How-to-Organize-Videos-on-Your-Hard-Disks).
 
 ### :arrow_double_down: The Website...
-Have a look at the :construction: [Movie File Merger Website](http://modi777.github.io/Movie-File-Merger/) :construction: , where you can download the project as ZIP for TAR.
+Have a look at the [Movie File Merger Website](http://modi777.github.io/Movie-File-Merger/), where you can download the project as ZIP or TAR, or the installation folder for the latest release.
 
 ### :sunflower: Basic Info  
 The purpose of Movie File Merger (MFM) is to support the combination video collections, like movies, series, or documentaries.
