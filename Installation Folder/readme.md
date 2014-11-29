@@ -9,7 +9,6 @@ Double clicking on the program in its folder or starting it from a shortcut is a
 MFM runs under Windows XP*, Vista*, Windows 7, and Windows 8.  MFM has also been used on a Mac with Parallels installed.
 
 * Not tested, and needs .net framework 4.0 installed.  To handle the resizing of the windows, a program like PowerResizer is required.
-* 
 
 ### :information_source: Other Programs
 There are several other programs used together with MFM.  All other programs can be downloaded and used for free.  For detailed information about the installation of third party programs have a look at the [Installation Wiki](https://github.com/Modi777/Movie-File-Merger/wiki/Installation).
