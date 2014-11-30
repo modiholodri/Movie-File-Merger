@@ -9,9 +9,9 @@ MFM uses [Semantic Versioning][] and is programmed in [C#][] with [SharpDevelop]
 ### :book: The User Manuals...
 There are multiple manuals, which are more or less interconnected, involved in the whole project.
 
-- The [Movie File Merger User Manual][], which concentrates on the program technical aspects of handling MFM.  It is a GitBook and on [GitHub MFM UM][].
-- :construction: [How to Organize Videos on Your Hard Disks][] :construction: , it explains some of my ideas about handling collections and includes a few brief description of some useful programs.  It is also a GitBook and on [GitHub HtOVoYHD][].
-- The [Movie File Merger Wiki][], have a look at the sections on the right side of the MFM Wiki :point_right:...
+- The [Movie File Merger User Manual][], which concentrates on the program technical aspects of handling MFM.  It is a GitBook and on [GitHub][GitHub MFM UM].
+- [How to Organize Videos on Your Hard Disks][] :construction: explains some of my ideas about handling collections and includes a few brief description of some useful programs.  It is also a GitBook and on [GitHub][GitHub HtOVoYHD].
+- The [Movie File Merger Wiki][], have a look at the sections on the right side when you are in the MFM Wiki :point_right:...
 [Movie File Merger User Manual]: http://modi777.gitbooks.io/movie-file-merger-user-manual/
 [GitHub MFM UM]: https://github.com/Modi777/movie-file-merger-user-manual/
 [How to Organize Videos on Your Hard Disks]: http://modi777.gitbooks.io/how-to-oraganize-videos-on-your-hard-disks/
