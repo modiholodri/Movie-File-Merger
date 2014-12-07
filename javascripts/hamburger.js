@@ -34,7 +34,7 @@ jQuery(document).ready(function () {
 
         //set margin for the whole container with a jquery UI animation
         jQuery("#container").animate({"marginLeft": ["100px", 'easeOutExpo']}, {
-            duration: 2000
+            duration: 1000
         });
 
     });
@@ -46,13 +46,13 @@ jQuery(document).ready(function () {
         jQuery('#container').unbind('touchmove');
 
         //set margin for the whole container back to original state with a jquery UI animation
-        jQuery("#container").animate({"marginLeft": ["-1", 'easeOutExpo']}, {
-            duration: 2000,
+        jQuery("#container").animate({"marginLeft": ["auto", 'easeOutExpo']}, {
+            duration: 500,
             complete: function () {
-                jQuery('#content').css('width', 'auto');
+                jQuery('#container').css('width', 'auto');
                 jQuery('#contentLayer').css('display', 'none');
                 jQuery('nav').css('opacity', 0);
-                jQuery('#content').css('min-height', 'auto');
+                jQuery('#container').css('min-height', 'auto');
 
             }
         });

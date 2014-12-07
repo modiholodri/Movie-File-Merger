@@ -16,8 +16,8 @@ header {
     background-color: #FFFFFF; 
     padding: 10px;
     text-decoration: none;
-/*     position: fixed;
-   width: 100%; */
+     position: fixed;
+/*   width: 100%; */
     z-index: 1;
     
     -webkit-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.4);
@@ -29,9 +29,8 @@ using background color is important to cover the menu
 position absolute isset to cover the whole viewport
 */
 #content {
-/*
     background-color: #FFFFFF;
-    padding: 52px 10px 10px 10px; 
+    padding: 10px 10px 10px 10px; 
     position: relative;
     width: auto;
     height: 100%; */
@@ -139,6 +138,6 @@ so that the content is unclickable while menu is shown
     position: absolute;
     right: 0;
     top: 0;
-    width: max-content;
+    width: inherit;
     z-index: 5;
 }
