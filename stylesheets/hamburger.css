@@ -1,0 +1,144 @@
+html {
+    overflow-y: scroll;
+}
+
+/*
+Setup a basic body
+*/
+body {
+    overflow-x: hidden;
+}
+
+/*
+Header is relative so z-index: 1 guarantees always displayed on top
+*/
+header {
+    background-color: #FFFFFF; 
+    padding: 10px;
+    text-decoration: none;
+/*     position: fixed;
+   width: 100%; */
+    z-index: 1;
+    
+    -webkit-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.4);
+}
+
+/*
+using background color is important to cover the menu
+position absolute isset to cover the whole viewport
+*/
+#content {
+/*
+    background-color: #FFFFFF;
+    padding: 52px 10px 10px 10px; 
+    position: relative;
+    width: auto;
+    height: 100%; */
+    /*
+    -webkit-box-shadow: -10px 0px 9px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: -10px 0px 9px 0px rgba(0, 0, 0, 0.4);
+    */
+}
+
+/*
+the hamburger button with a little gradient effekt
+*/
+#hamburger {
+    border: 1px solid #808080;
+    border-radius: 3px 3px 3px 3px;
+    cursor: pointer;
+    display: inline-block;
+    height: 24px;
+    padding: 3px 4px 3px;
+    position: relative;
+    width: 25px;
+    background: #f8f8f8;
+    background: -moz-linear-gradient(top, #f8f8f8 0%, #eeeeee 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f8f8f8), color-stop(100%, #eeeeee));
+    background: -webkit-linear-gradient(top, #f8f8f8 0%, #eeeeee 100%);
+    background: -o-linear-gradient(top, #f8f8f8 0%, #eeeeee 100%);
+    background: -ms-linear-gradient(top, #f8f8f8 0%, #eeeeee 100%);
+    background: linear-gradient(to bottom, #f8f8f8 0%, #eeeeee 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f8f8f8', endColorstr='#eeeeee', GradientType=0);
+}
+
+/*
+The white stripes in the hamburger button
+*/
+#hamburger div {
+    background-color: #bbb;
+    border: 1px solid #eee;
+    border-radius: 2px 2px 2px 2px;
+    height: 3px;
+    margin-top: 3px;
+    width: 90%;
+}
+
+/*
+The navigation container in the background
+*/
+nav {
+    opacity: 0;
+    left: 0px;
+    top: 0px;
+    position: fixed;
+    z-index: 0;
+    width: 100px;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: #ffffff;
+    /*
+    background: -moz-linear-gradient(top, #ffffff 0%, #dddddd 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #dddddd));
+    background: -webkit-linear-gradient(top, #ffffff 0%, #dddddd 100%);
+    background: -o-linear-gradient(top, #ffffff 0%, #dddddd 100%);
+    background: -ms-linear-gradient(top, #ffffff 0%, #dddddd 100%);
+    background: linear-gradient(to bottom, #ffffff 0%, #dddddd 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#dddddd', GradientType=0);
+    */
+}
+
+/*
+Style the navigation menu
+*/
+nav ul {
+    list-style: none;
+    margin: 0;
+    width: 100%;
+    padding: 0;
+}
+
+nav li {
+    position: relative;
+    font-size: 1em;
+    font-weight: bold;
+    border-bottom: 1px solid #222222;
+    border-top: 1px solid #444444;
+    padding: 15px;
+}
+
+nav li a {
+    color: #595858;
+    text-decoration: none;
+}
+
+/*
+The Layer that will be layed over the content
+so that the content is unclickable while menu is shown
+*/
+#contentLayer {
+    display: none;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: max-content;
+    z-index: 5;
+}

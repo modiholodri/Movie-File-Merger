@@ -9,13 +9,33 @@
     <meta name="keywords" content="Collection, Combination, Comparison, Video, Movies, Series, Documentaries, Existing, Garbage, Wish">
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+    <!--Using jQuery and jQuery UI for display effects-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+    <!--Using the hamburger menu display code-->
+    <script src="javascripts/hamburger.js"></script>
+    <script src="javascripts/scale.fix.js"></script>
+
+    <!--Using Media Queries, if the viewport is smaller than 700px use another stylesheet-->
+    <link rel="stylesheet" type="text/css" media="all" href="stylesheets/hamburger.css"/>
+    <link rel="stylesheet" type="text/css" media="all" href="stylesheets/styles.css">
+    <link rel="stylesheet" type="text/css" media="all" href="stylesheets/pygment_trac.css">
   </head>
+
   <body>
-    <div class="wrapper">
+    <div class="wrapper"  id="container">
       
       <header>
-        <h1>Movie File Merger</h1>
+        <h1>
+            <!--The Hamburger Button-->
+            <div id="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div> Movie File Merger</h1>
+
         <p>Merge Video Collections on Hard Disks</p>
         <ul>
           <li><a href="https://github.com/Modi777/Movie-File-Merger/zipball/master">Download <strong>ZIP File</strong></a></li>
@@ -24,12 +44,24 @@
         </ul>
       </header>
 
-      <section>
-       <p><a href="index.html">Home</a> -- 
-          <a href="wikis.html">Wikis</a> -- 
-          <a href="bugs.html">Bugs/Ideas</a> -- 
-          <a href="donations.html">Donations</a> -- 
-          <a href="license.html" style="color:purple">License</a></p>
+     <!--The mobile navigation Markup hidden via css-->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="wikis.html">Wikis</a></li>
+            <li><a href="downloads.html">Downloads</a></li>
+            <li><a href="bugs.html">Bugs/Ideas</a></li>
+            <li><a href="donations.html">Donations</a></li>
+            <li><a href="license.html">License</a></li>
+        </ul>
+    </nav>
+
+    <!--The Layer that will be layed over the content so that the content is unclickable while menu is shown-->
+    <div id="contentLayer"></div>
+
+     <!--The content of the site-->
+    <div id="content">
+     <section>
 
          <h2><a href="http://opensource.org" target="_blank"><img src="images/OpenSource.png" hspace="5" height="64"></a>
              <a href="http://opensource.org/licenses/MIT" target="_blank">The MIT License</a></h2>
@@ -77,9 +109,9 @@
           <a href="http://www.filebot.net/" target="_blank"><img src="images/Filebot.png" alt="Free File Renamer" width="32" height="32" hspace="5"></a>
           <a href="http://www.gimp.org/" target="_blank"><img src="images/Gimp.jpg" alt="Free Image Processing" width="32" height="32" hspace="5"></a>
      </footer>
-         
+     </div>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
+
     <!-- Start of StatCounter Code for Default Guide -->
         <script type="text/javascript">
             var sc_project=10160028; 
