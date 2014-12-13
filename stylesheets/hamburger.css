@@ -76,7 +76,7 @@ nav {
     top: 0px;
     position: fixed;
     z-index: -5;
-    width: 100px; 
+    width: 130px; 
     height: 100%;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -120,6 +120,7 @@ nav li {
 nav li a {
     color: #595858;
     text-decoration: none;
+    display: block;
 }
 
 /*
@@ -135,7 +136,7 @@ so that the content is unclickable while menu is shown
     overflow-x: hidden;
     overflow-y: auto;
     position: fixed;
-    left: 100px;
+    left: 130px;
     right: 0;
     top: 0;
     width: 100%;

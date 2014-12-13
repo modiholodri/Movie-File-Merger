@@ -241,6 +241,9 @@ footer {
   body {
     padding:10px;
   }
+  header {
+    margin:10px;
+}
   /*
   header ul {
     display:none;
