@@ -8,21 +8,21 @@
  * Created by Thomas Zinnbauer YMC AG  |  http://www.ymc.ch
  * Date: 21.05.13
  */
-
 jQuery(document).ready(function () {
 
     //Open the menu
     jQuery("#hamburger").click(function () {
 
-        jQuery('#content').css('min-height', jQuery(window).height());
+        //jQuery('#content').css('min-height', jQuery(window).height());
 
         jQuery('nav').css('opacity', 1);
+        jQuery('nav').css('z-index', 5);
 
         //set the width of primary content container -> content should not scale while animating
-        var contentWidth = jQuery('#content').width();
+        // var contentWidth = jQuery('#content').width();
 
         //set the content with the width that it has originally
-        jQuery('#content').css('width', contentWidth);
+        // jQuery('#content').css('width', contentWidth);
 
         //display a layer to disable clicking and scrolling on the content while menu is shown
         jQuery('#contentLayer').css('display', 'block');
@@ -33,9 +33,11 @@ jQuery(document).ready(function () {
         });
 
         //set margin for the whole container with a jquery UI animation
+        /*
         jQuery("#container").animate({"marginLeft": ["100px", 'easeOutExpo']}, {
             duration: 1000
         });
+        */
 
     });
 
@@ -44,9 +46,13 @@ jQuery(document).ready(function () {
 
         //enable all scrolling on mobile devices when menu is closed
         jQuery('#container').unbind('touchmove');
+        jQuery('#contentLayer').css('display', 'none');
+        jQuery('nav').css('opacity', 0);
+        jQuery('nav').css('z-index', -5);
 
         //set margin for the whole container back to original state with a jquery UI animation
-        jQuery("#container").animate({"marginLeft": ["auto", 'easeOutExpo']}, {
+        /*
+        jQuery("#container").animate({"margin": ["0", 'easeOutExpo']}, {
             duration: 500,
             complete: function () {
                 jQuery('#container').css('width', 'auto');
@@ -56,6 +62,7 @@ jQuery(document).ready(function () {
 
             }
         });
+        */
     });
 
 });
