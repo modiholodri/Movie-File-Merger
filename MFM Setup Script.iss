@@ -24,7 +24,6 @@ Compression=lzma
 SolidCompression=yes
 WizardImageFile=C:\Users\Modi\Dropbox\GitHub\Movie-File-Merger\Movie File Merger\Icons\MFM.bmp
 WizardSmallImageFile=C:\Users\Modi\Dropbox\GitHub\Movie-File-Merger\Movie File Merger\Icons\MFM.bmp
-PrivilegesRequired=poweruser
 ShowLanguageDialog=no
 CloseApplications=False
 RestartApplications=False
@@ -35,6 +34,13 @@ AppCopyright=(c) 2014 Reinhold Lauer
 UsePreviousSetupType=False
 UsePreviousTasks=False
 UsePreviousLanguage=False
+AppContact=reinhold.lauer@gmail.com
+VersionInfoVersion=0.1.0
+VersionInfoCompany=Reinhold Lauer
+VersionInfoDescription=Selectively Merge Collections on Hard Disks
+VersionInfoCopyright=(c) 2014 Reinhold Lauer
+VersionInfoProductName=Movie File Merger
+VersionInfoProductVersion=0.1.0
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
