@@ -13,23 +13,21 @@ AppPublisher=Reinhold Lauer
 AppPublisherURL=http://modi777.github.io/Movie-File-Merger/
 AppSupportURL=http://modi777.github.io/Movie-File-Merger/
 AppUpdatesURL=http://modi777.github.io/Movie-File-Merger/
-DefaultDirName={pf}\Movie File Merger
+DefaultDirName=D:\Movie File Merger
 DefaultGroupName=Movie File Merger
-AllowNoIcons=yes
 LicenseFile=C:\Users\Modi\Dropbox\GitHub\Movie-File-Merger\License.rtf
 OutputDir=C:\Users\Modi\Dropbox\GitHub\Movie-File-Merger\Movie File Merger\bin\Release
 OutputBaseFilename=MFM Setup
 SetupIconFile=C:\Users\Modi\Dropbox\GitHub\Movie-File-Merger\Movie File Merger\Icons\MFM.ico
 Compression=lzma
 SolidCompression=yes
-WizardImageFile=C:\Users\Modi\Dropbox\GitHub\Movie-File-Merger\Movie File Merger\Icons\MFM.bmp
-WizardSmallImageFile=C:\Users\Modi\Dropbox\GitHub\Movie-File-Merger\Movie File Merger\Icons\MFM.bmp
+WizardImageFile=C:\Users\Modi\Dropbox\GitHub\Movie-File-Merger\Movie File Merger\Icons\MFMHigh.bmp
+WizardSmallImageFile=C:\Users\Modi\Dropbox\GitHub\Movie-File-Merger\Movie File Merger\Icons\MFM64.bmp
 ShowLanguageDialog=no
 CloseApplications=False
 RestartApplications=False
 RestartIfNeededByRun=False
 UninstallDisplayIcon={uninstallexe}
-UseSetupLdr=False
 AppCopyright=(c) 2014 Reinhold Lauer
 UsePreviousSetupType=False
 UsePreviousTasks=False
@@ -41,6 +39,7 @@ VersionInfoDescription=Selectively Merge Collections on Hard Disks
 VersionInfoCopyright=(c) 2014 Reinhold Lauer
 VersionInfoProductName=Movie File Merger
 VersionInfoProductVersion=0.1.0
+PrivilegesRequired=lowest
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
@@ -62,3 +61,6 @@ Name: "{userappdata}\Microsoft\Internet Explorer\Quick Launch\Movie File Merger"
 
 [Run]
 Filename: "{app}\MFM Program\Movie File Merger.exe"; WorkingDir: "{app}\MFM Program\"; Flags: nowait postinstall skipifsilent; Description: "{cm:LaunchProgram,Movie File Merger}"
+
+[Messages]
+AboutSetupNote=MFM is portable and should be installed in your Dropbox folder or on an external hard disk, but not in the Program Files folder.
