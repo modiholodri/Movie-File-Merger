@@ -26,7 +26,26 @@ Used as the high picture in the installer.
 
 ![MFMHigh.bmp](https://github.com/Modi777/Movie-File-Merger/blob/master/Movie%20File%20Merger/Icons/MFMHigh.bmp)
  304x512, solid background
+
+### MFM User Manuals ###
+The book cover for the [Movie File Merger User Manual][].
+
+####cover.jpg####
+ 1800x2360
+####cover_small.jpg####
+ 200x262
  
+### How to Organize Videos on your Hard Disks ###
+The book cover for [How to Organize Videos on Your Hard Disks][].
+
+####cover.jpg####
+ 1800x2360
+####cover_small.jpg####
+ 200x262
+
+[Movie File Merger User Manual]: http://modi777.gitbooks.io/movie-file-merger-user-manual/
+[How to Organize Videos on Your Hard Disks]: http://modi777.gitbooks.io/how-to-oraganize-videos-on-your-hard-disks/
+
 ### MFM Program Pictures ###
 Folling stuff is used in the program itself.
 
