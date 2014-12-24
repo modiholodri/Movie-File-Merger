@@ -56,26 +56,8 @@ Folling stuff is used in the program itself.
 ![About.gif](https://github.com/Modi777/Movie-File-Merger/blob/master/Movie%20File%20Merger/Icons/About.gif)
  16x16, transperent background
 
-####Add.gif####
-Delete... 
-
-![Add.gif](https://github.com/Modi777/Movie-File-Merger/blob/master/Movie%20File%20Merger/Icons/Add.gif)
- 16x16, transperent background
-
-####Apply.gif####
-Delete... 
-
-![Apply.gif](https://github.com/Modi777/Movie-File-Merger/blob/master/Movie%20File%20Merger/Icons/Apply.gif)
- 16x16, transperent background
-
 ####Clips.gif####
 ![Clips.gif](https://github.com/Modi777/Movie-File-Merger/blob/master/Movie%20File%20Merger/Icons/Clips.gif)
- 16x16, transperent background
-
-####Color.gif####
-Rename to Erase Color... Combine with Erase cross...
-
-![Color.gif](https://github.com/Modi777/Movie-File-Merger/blob/master/Movie%20File%20Merger/Icons/Color.gif)
  16x16, transperent background
 
 ####Copy.gif####
@@ -86,22 +68,10 @@ Rename to Erase Color... Combine with Erase cross...
 ![Documentaries.gif](https://github.com/Modi777/Movie-File-Merger/blob/master/Movie%20File%20Merger/Icons/Documentaries.gif)
  16x16, transperent background
 
-####Erase All.gif####
-Delete... 
+####Erase Color.gif####
+Combine with Erase cross...
 
-![Erase All.gif](https://github.com/Modi777/Movie-File-Merger/blob/master/Movie%20File%20Merger/Icons/Erase All.gif)
- 16x16, transperent background
-
-####Erase Existing.gif####
-Delete... 
-
-![Erase Existing.gif](https://github.com/Modi777/Movie-File-Merger/blob/master/Movie%20File%20Merger/Icons/Erase Existing.gif)
- 16x16, transperent background
-
-####Erase Garbage.gif####
-Delete... 
-
-![Erase Garbage.gif](https://github.com/Modi777/Movie-File-Merger/blob/master/Movie%20File%20Merger/Icons/Erase Garbage.gif)
+![Erase Color.gif](https://github.com/Modi777/Movie-File-Merger/blob/master/Movie%20File%20Merger/Icons/Erase Color.gif)
  16x16, transperent background
 
 ####Erase Selected.gif####
@@ -110,25 +80,8 @@ Change to blue shade...
 ![Erase Selected.gif](https://github.com/Modi777/Movie-File-Merger/blob/master/Movie%20File%20Merger/Icons/Erase Selected.gif)
  16x16, transperent background
 
-####Erase.gif####
-Delete... 
-
-![Erase.gif](https://github.com/Modi777/Movie-File-Merger/blob/master/Movie%20File%20Merger/Icons/Erase.gif)
- 16x16, transperent background
-
-####Existing.gif####
-Delete? 
-
-![Existing.gif](https://github.com/Modi777/Movie-File-Merger/blob/master/Movie%20File%20Merger/Icons/Existing.gif)
- 16x16, transperent background
-
 ####Folder.gif####
 ![Folder.gif](https://github.com/Modi777/Movie-File-Merger/blob/master/Movie%20File%20Merger/Icons/Folder.gif)
- 16x16, transperent background
-
-####Garbage.gif####
-Delete? 
-![Garbage.gif](https://github.com/Modi777/Movie-File-Merger/blob/master/Movie%20File%20Merger/Icons/Garbage.gif)
  16x16, transperent background
 
 ####Help.gif####
@@ -140,18 +93,6 @@ Improve quality...
 Improve quality...
 
 ![IMDB.gif](https://github.com/Modi777/Movie-File-Merger/blob/master/Movie%20File%20Merger/Icons/IMDB.gif)
- 16x16, transperent background
-
-####Import.gif####
-Delete...
-
-![Import.gif](https://github.com/Modi777/Movie-File-Merger/blob/master/Movie%20File%20Merger/Icons/Import.gif)
- 16x16, transperent background
-
-####List.gif####
-Delete...
-
-![List.gif](https://github.com/Modi777/Movie-File-Merger/blob/master/Movie%20File%20Merger/Icons/List.gif)
  16x16, transperent background
 
 ####Log.gif####
@@ -175,19 +116,9 @@ Make on for Adult in green and for Miscelaneous in blue.
  16x16, transperent background
 
 ####Play.gif####
+Improve quality...
+
 ![Play.gif](https://github.com/Modi777/Movie-File-Merger/blob/master/Movie%20File%20Merger/Icons/Play.gif)
- 16x16, transperent background
-
-####Poster.gif####
-Delete...
-
-![Poster.gif](https://github.com/Modi777/Movie-File-Merger/blob/master/Movie%20File%20Merger/Icons/Poster.gif)
- 16x16, transperent background
-
-####Process.gif####
-Delete...
-
-![Process.gif](https://github.com/Modi777/Movie-File-Merger/blob/master/Movie%20File%20Merger/Icons/Process.gif)
  16x16, transperent background
 
 ####Save.gif####
