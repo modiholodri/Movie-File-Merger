@@ -40,12 +40,14 @@ VersionInfoCopyright=(c) 2014 Reinhold Lauer
 VersionInfoProductName=Movie File Merger
 VersionInfoProductVersion=0.1.0
 PrivilegesRequired=lowest
+InfoBeforeFile="MFM Setup Info Before.rtf"
+AllowRootDirectory=True
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
 
 [Tasks]
-Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
+Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: checkedonce
 Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked; OnlyBelowVersion: 0,6.1
 
 [Files]
@@ -62,5 +64,3 @@ Name: "{userappdata}\Microsoft\Internet Explorer\Quick Launch\Movie File Merger"
 [Run]
 Filename: "{app}\MFM Program\Movie File Merger.exe"; WorkingDir: "{app}\MFM Program\"; Flags: nowait postinstall skipifsilent; Description: "{cm:LaunchProgram,Movie File Merger}"
 
-[Messages]
-AboutSetupNote=MFM is portable and should be installed in your Dropbox folder or on an external hard disk, but not in the Program Files folder.
