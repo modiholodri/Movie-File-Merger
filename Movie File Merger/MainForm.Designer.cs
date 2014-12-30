@@ -1228,10 +1228,10 @@ namespace Movie_File_Merger
 			this.pbAbout.Image = ((System.Drawing.Image)(resources.GetObject("pbAbout.Image")));
 			this.pbAbout.ImageLocation = "";
 			this.pbAbout.InitialImage = null;
-			this.pbAbout.Location = new System.Drawing.Point(12, 10);
+			this.pbAbout.Location = new System.Drawing.Point(8, 10);
 			this.pbAbout.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.pbAbout.Name = "pbAbout";
-			this.pbAbout.Size = new System.Drawing.Size(909, 216);
+			this.pbAbout.Size = new System.Drawing.Size(514, 350);
 			this.pbAbout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
 			this.pbAbout.TabIndex = 3;
 			this.pbAbout.TabStop = false;
@@ -1247,7 +1247,7 @@ namespace Movie_File_Merger
 			this.lblCopyLeft.Name = "lblCopyLeft";
 			this.lblCopyLeft.Size = new System.Drawing.Size(909, 35);
 			this.lblCopyLeft.TabIndex = 2;
-			this.lblCopyLeft.Text = "© 2013 Modi ";
+			this.lblCopyLeft.Text = "© 2014 Reinhold Lauer";
 			this.lblCopyLeft.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// lblVersion
@@ -1256,12 +1256,12 @@ namespace Movie_File_Merger
 			| System.Windows.Forms.AnchorStyles.Right)));
 			this.lblVersion.BackColor = System.Drawing.Color.Transparent;
 			this.lblVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblVersion.Location = new System.Drawing.Point(12, 297);
+			this.lblVersion.Location = new System.Drawing.Point(531, 212);
 			this.lblVersion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblVersion.Name = "lblVersion";
-			this.lblVersion.Size = new System.Drawing.Size(909, 35);
+			this.lblVersion.Size = new System.Drawing.Size(391, 35);
 			this.lblVersion.TabIndex = 1;
-			this.lblVersion.Text = "2013-06-15";
+			this.lblVersion.Text = "0.1.1";
 			this.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// lblMovieFileMerger
@@ -1270,12 +1270,12 @@ namespace Movie_File_Merger
 			| System.Windows.Forms.AnchorStyles.Right)));
 			this.lblMovieFileMerger.BackColor = System.Drawing.Color.Transparent;
 			this.lblMovieFileMerger.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblMovieFileMerger.Location = new System.Drawing.Point(12, 231);
+			this.lblMovieFileMerger.Location = new System.Drawing.Point(530, 88);
 			this.lblMovieFileMerger.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblMovieFileMerger.Name = "lblMovieFileMerger";
-			this.lblMovieFileMerger.Size = new System.Drawing.Size(909, 66);
+			this.lblMovieFileMerger.Size = new System.Drawing.Size(391, 134);
 			this.lblMovieFileMerger.TabIndex = 0;
-			this.lblMovieFileMerger.Text = "Video Collection Organizer";
+			this.lblMovieFileMerger.Text = "Movie File Merger";
 			this.lblMovieFileMerger.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// tpHelp
