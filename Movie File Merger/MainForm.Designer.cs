@@ -113,7 +113,7 @@ namespace Movie_File_Merger
 			this.tpLog = new System.Windows.Forms.TabPage();
 			this.rtbLog = new System.Windows.Forms.RichTextBox();
 			this.tpAbout = new System.Windows.Forms.TabPage();
-			this.tbCopyright = new System.Windows.Forms.RichTextBox();
+			this.rtbCopyright = new System.Windows.Forms.RichTextBox();
 			this.pbAbout = new System.Windows.Forms.PictureBox();
 			this.lblCopyLeft = new System.Windows.Forms.Label();
 			this.lblVersion = new System.Windows.Forms.Label();
@@ -162,29 +162,27 @@ namespace Movie_File_Merger
 			// 
 			this.ilMovieFileMerger.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ilMovieFileMerger.ImageStream")));
 			this.ilMovieFileMerger.TransparentColor = System.Drawing.Color.Transparent;
-			this.ilMovieFileMerger.Images.SetKeyName(0, "Apply.gif");
-			this.ilMovieFileMerger.Images.SetKeyName(1, "Color.gif");
-			this.ilMovieFileMerger.Images.SetKeyName(2, "Copy.gif");
-			this.ilMovieFileMerger.Images.SetKeyName(3, "Erase.gif");
-			this.ilMovieFileMerger.Images.SetKeyName(4, "Folder.gif");
-			this.ilMovieFileMerger.Images.SetKeyName(5, "List.gif");
-			this.ilMovieFileMerger.Images.SetKeyName(6, "Log.gif");
-			this.ilMovieFileMerger.Images.SetKeyName(7, "Move.gif");
-			this.ilMovieFileMerger.Images.SetKeyName(8, "Play.gif");
-			this.ilMovieFileMerger.Images.SetKeyName(9, "Save.gif");
-			this.ilMovieFileMerger.Images.SetKeyName(10, "Settings.gif");
-			this.ilMovieFileMerger.Images.SetKeyName(11, "About.gif");
-			this.ilMovieFileMerger.Images.SetKeyName(12, "Help.gif");
-			this.ilMovieFileMerger.Images.SetKeyName(13, "Import.gif");
-			this.ilMovieFileMerger.Images.SetKeyName(14, "IMDB.gif");
-			this.ilMovieFileMerger.Images.SetKeyName(15, "Documentaries.gif");
-			this.ilMovieFileMerger.Images.SetKeyName(16, "Series.gif");
-			this.ilMovieFileMerger.Images.SetKeyName(17, "Clips.gif");
-			this.ilMovieFileMerger.Images.SetKeyName(18, "Movie.gif");
-			this.ilMovieFileMerger.Images.SetKeyName(19, "Poster.gif");
-			this.ilMovieFileMerger.Images.SetKeyName(20, "Torrenz.gif");
-			this.ilMovieFileMerger.Images.SetKeyName(21, "MediaInfo.gif");
-			this.ilMovieFileMerger.Images.SetKeyName(22, "torrentzeu3.jpg");
+			this.ilMovieFileMerger.Images.SetKeyName(0, "Color.gif");
+			this.ilMovieFileMerger.Images.SetKeyName(1, "Copy.gif");
+			this.ilMovieFileMerger.Images.SetKeyName(2, "Erase.gif");
+			this.ilMovieFileMerger.Images.SetKeyName(3, "Folder.gif");
+			this.ilMovieFileMerger.Images.SetKeyName(4, "Log.gif");
+			this.ilMovieFileMerger.Images.SetKeyName(5, "Move.gif");
+			this.ilMovieFileMerger.Images.SetKeyName(6, "Save.gif");
+			this.ilMovieFileMerger.Images.SetKeyName(7, "Settings.gif");
+			this.ilMovieFileMerger.Images.SetKeyName(8, "About.gif");
+			this.ilMovieFileMerger.Images.SetKeyName(9, "Documentaries.gif");
+			this.ilMovieFileMerger.Images.SetKeyName(10, "Help.gif");
+			this.ilMovieFileMerger.Images.SetKeyName(11, "Series.gif");
+			this.ilMovieFileMerger.Images.SetKeyName(12, "Clips.gif");
+			this.ilMovieFileMerger.Images.SetKeyName(13, "MediaInfo.gif");
+			this.ilMovieFileMerger.Images.SetKeyName(14, "torrentzeu3.jpg");
+			this.ilMovieFileMerger.Images.SetKeyName(15, "IMDB.gif");
+			this.ilMovieFileMerger.Images.SetKeyName(16, "List.gif");
+			this.ilMovieFileMerger.Images.SetKeyName(17, "Adult.gif");
+			this.ilMovieFileMerger.Images.SetKeyName(18, "Miscellaneaous.gif");
+			this.ilMovieFileMerger.Images.SetKeyName(19, "Movie.gif");
+			this.ilMovieFileMerger.Images.SetKeyName(20, "Play.gif");
 			// 
 			// tmrUpdateCounters
 			// 
@@ -539,7 +537,7 @@ namespace Movie_File_Merger
 			// rbMiscellaneous
 			// 
 			this.rbMiscellaneous.Checked = true;
-			this.rbMiscellaneous.ImageKey = "Movie.gif";
+			this.rbMiscellaneous.ImageKey = "Miscellaneaous.gif";
 			this.rbMiscellaneous.ImageList = this.ilMovieFileMerger;
 			this.rbMiscellaneous.Location = new System.Drawing.Point(146, 59);
 			this.rbMiscellaneous.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -555,7 +553,7 @@ namespace Movie_File_Merger
 			// 
 			// rbAdults
 			// 
-			this.rbAdults.ImageKey = "Movie.gif";
+			this.rbAdults.ImageKey = "Adult.gif";
 			this.rbAdults.ImageList = this.ilMovieFileMerger;
 			this.rbAdults.Location = new System.Drawing.Point(18, 59);
 			this.rbAdults.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -1195,7 +1193,7 @@ namespace Movie_File_Merger
 			// tpAbout
 			// 
 			this.tpAbout.BackColor = System.Drawing.SystemColors.Control;
-			this.tpAbout.Controls.Add(this.tbCopyright);
+			this.tpAbout.Controls.Add(this.rtbCopyright);
 			this.tpAbout.Controls.Add(this.pbAbout);
 			this.tpAbout.Controls.Add(this.lblCopyLeft);
 			this.tpAbout.Controls.Add(this.lblVersion);
@@ -1209,16 +1207,18 @@ namespace Movie_File_Merger
 			this.tpAbout.TabIndex = 3;
 			this.tpAbout.Text = "About";
 			// 
-			// tbCopyright
+			// rtbCopyright
 			// 
-			this.tbCopyright.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+			this.rtbCopyright.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
 			| System.Windows.Forms.AnchorStyles.Left) 
 			| System.Windows.Forms.AnchorStyles.Right)));
-			this.tbCopyright.Location = new System.Drawing.Point(7, 368);
-			this.tbCopyright.Name = "tbCopyright";
-			this.tbCopyright.Size = new System.Drawing.Size(915, 172);
-			this.tbCopyright.TabIndex = 4;
-			this.tbCopyright.Text = resources.GetString("tbCopyright.Text");
+			this.rtbCopyright.Location = new System.Drawing.Point(7, 243);
+			this.rtbCopyright.Name = "rtbCopyright";
+			this.rtbCopyright.ReadOnly = true;
+			this.rtbCopyright.Size = new System.Drawing.Size(915, 363);
+			this.rtbCopyright.TabIndex = 4;
+			this.rtbCopyright.Text = "";
+			this.rtbCopyright.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.LinkClicked);
 			// 
 			// pbAbout
 			// 
@@ -1231,8 +1231,8 @@ namespace Movie_File_Merger
 			this.pbAbout.Location = new System.Drawing.Point(8, 10);
 			this.pbAbout.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.pbAbout.Name = "pbAbout";
-			this.pbAbout.Size = new System.Drawing.Size(514, 350);
-			this.pbAbout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+			this.pbAbout.Size = new System.Drawing.Size(261, 225);
+			this.pbAbout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pbAbout.TabIndex = 3;
 			this.pbAbout.TabStop = false;
 			// 
@@ -1242,7 +1242,7 @@ namespace Movie_File_Merger
 			| System.Windows.Forms.AnchorStyles.Right)));
 			this.lblCopyLeft.BackColor = System.Drawing.Color.Transparent;
 			this.lblCopyLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblCopyLeft.Location = new System.Drawing.Point(13, 327);
+			this.lblCopyLeft.Location = new System.Drawing.Point(13, 200);
 			this.lblCopyLeft.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblCopyLeft.Name = "lblCopyLeft";
 			this.lblCopyLeft.Size = new System.Drawing.Size(909, 35);
@@ -1256,10 +1256,10 @@ namespace Movie_File_Merger
 			| System.Windows.Forms.AnchorStyles.Right)));
 			this.lblVersion.BackColor = System.Drawing.Color.Transparent;
 			this.lblVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblVersion.Location = new System.Drawing.Point(531, 212);
+			this.lblVersion.Location = new System.Drawing.Point(277, 92);
 			this.lblVersion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblVersion.Name = "lblVersion";
-			this.lblVersion.Size = new System.Drawing.Size(391, 35);
+			this.lblVersion.Size = new System.Drawing.Size(644, 35);
 			this.lblVersion.TabIndex = 1;
 			this.lblVersion.Text = "0.1.1";
 			this.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1270,10 +1270,10 @@ namespace Movie_File_Merger
 			| System.Windows.Forms.AnchorStyles.Right)));
 			this.lblMovieFileMerger.BackColor = System.Drawing.Color.Transparent;
 			this.lblMovieFileMerger.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblMovieFileMerger.Location = new System.Drawing.Point(530, 88);
+			this.lblMovieFileMerger.Location = new System.Drawing.Point(277, 33);
 			this.lblMovieFileMerger.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblMovieFileMerger.Name = "lblMovieFileMerger";
-			this.lblMovieFileMerger.Size = new System.Drawing.Size(391, 134);
+			this.lblMovieFileMerger.Size = new System.Drawing.Size(645, 59);
 			this.lblMovieFileMerger.TabIndex = 0;
 			this.lblMovieFileMerger.Text = "Movie File Merger";
 			this.lblMovieFileMerger.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1381,7 +1381,7 @@ namespace Movie_File_Merger
 		private System.Windows.Forms.TextBox tbMediaInfoPath;
 		private System.Windows.Forms.ToolTip ttMovieFileMerger;
 		private System.Windows.Forms.CheckBox cbMediaInfo;
-		private System.Windows.Forms.RichTextBox tbCopyright;
+		private System.Windows.Forms.RichTextBox rtbCopyright;
 		private System.Windows.Forms.Label lblTeraCopyPath;
 		private System.Windows.Forms.TextBox tbTeraCopyPath;
 		private System.Windows.Forms.Label lblNickName;

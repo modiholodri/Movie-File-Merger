@@ -1,8 +1,10 @@
 ## :book: Build Instructions :book:
 
 ### Simple Build ###
-Do following to compile MFM for the first time and set up the basic environment..
+Do following to compile MFM for the first time and set up the basic environment...
+
 - Open the Movie File Merger solution from SharpDevelop.
+- Change the build configuration to debug.
 - Run MFM and close it.
 - Copy the files from Installation Folder\MFM Program in the Debug or Release folder.
 - Copy the MFM Collections Folder at the same level as the Debug or Release folder.
@@ -10,6 +12,9 @@ Do following to compile MFM for the first time and set up the basic environment.
 
 ### Release Build ###
 Do following to make a MFM release...
+
+##### In SharpDevelop... #####
+
 - Open the Movie File Merger solution from SharpDevelop.
 - Change the build configuration to release.
 - Update the version in the About tab.

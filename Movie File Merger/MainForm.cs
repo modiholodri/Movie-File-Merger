@@ -3,6 +3,19 @@
  * User: Reinhold Lauer
  * Date: 2012-04-09
  */
+ 
+// Copyright 2012-2014 Reinhold Lauer
+// 
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+// 
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+
 using System;
 using System.Collections.Specialized;
 using System.Drawing;
@@ -16,7 +29,7 @@ using MediaInfoLib;
 namespace Movie_File_Merger
 {
 	/// <summary>
-	/// Specialized application to selectively combine collections on hard disks.
+	/// Application to selectively combine collections on hard disks.
 	/// </summary>
 	public partial class MainForm : Form
 	{
@@ -49,6 +62,8 @@ namespace Movie_File_Merger
 		public MainForm()
 		{
 			InitializeComponent();
+			
+			// make sure that all needed directroies and files are there
 			if ( !Directory.Exists( sPrivatePath )) Directory.CreateDirectory( sPrivatePath );
 			if ( !Directory.Exists( sCollectionsPath )) Directory.CreateDirectory( sCollectionsPath );
 			sTeraCopyListsPath = Path.Combine( sPrivatePath, @"TeraCopy Lists\" );
@@ -56,9 +71,11 @@ namespace Movie_File_Merger
 			sfdMovieFileMerger.InitialDirectory = sCollectionsPath;
 			sIniFilePath = Path.Combine( sPrivatePath, "Movie File Merger.ini" );
 			if ( !File.Exists( sIniFilePath )) File.Copy( Path.Combine( Application.StartupPath, "Movie File Merger.ini" ), sIniFilePath );
+			
 			LoadSettings();
 			this.Text = tbNickName.Text + " - Movie File Merger";
 
+			// load the instruction and copyright files
 			try {
 				rtbHelp.LoadFile( Path.Combine( Application.StartupPath, "Movie File Merger Instructions.rtf" ), RichTextBoxStreamType.RichText );
 			}
@@ -68,10 +85,117 @@ namespace Movie_File_Merger
 				rtbSettings.LoadFile(Path.Combine(Application.StartupPath, "Movie File Merger Settings.rtf"), RichTextBoxStreamType.RichText);
 			}
 			catch ( IOException e ) { ShowInfo( e.Message ); }
+			try {
+				rtbCopyright.LoadFile(Path.Combine(Application.StartupPath, "Movie File Merger Copyright.rtf"), RichTextBoxStreamType.RichText);
+			}
+			catch ( IOException e ) { ShowInfo( e.Message ); }
+			
 			SetColumnWidth();
-			AssignRegexes();
+			AssignRegexes();  // Already done in load setttings - Remove???
+		}
+		
+		/************************/
+		/* Supporting Functions */
+		/************************/
+
+		/// <summary>
+		/// Adds a mesage, with the date, type, and a certain color, to the rich text box on the log tab. 
+		/// </summary>
+		/// <param name="strType">The type name of the message.</param>
+		/// <param name="cColor">The color of the message.</param>
+		/// <param name="strMessage">The message itself.</param>
+		void LogMessage( string strType, Color cColor, string strMessage )
+		{
+			rtbLog.SelectionColor = cColor;
+			rtbLog.AppendText( DateTime.Now + ": " + strType + " - " + strMessage + "\n" );
+		}
+		
+		/// <summary>
+		/// Logs a status message, in black color, and activates the wait cursor.
+		/// </summary>
+		/// <param name="strMessage">The message itself.</param>
+		void SetStatus(string strMessage)
+		{
+			LogMessage( "Status", Color.Black, strMessage );
+			Cursor.Current = Cursors.WaitCursor;
+		}
+		
+		/// <summary>
+		/// Deactivates the wait cursor.
+		/// </summary>
+		void ClearStatus()
+		{
+			Cursor.Current = Cursors.Default;
+		}
+		
+		/// <summary>
+		/// Logs an informal message and asks the user for a decission.
+		/// </summary>
+		/// <param name="strMessage">The informal message.</param>
+		/// <returns>The user feedback.</returns>
+		DialogResult ShowInfo( string strMessage )
+		{
+			LogMessage( "Info", Color.Blue, strMessage );
+			return MessageBox.Show( strMessage, "Movie File Merger - Info", MessageBoxButtons.OK, MessageBoxIcon.Asterisk );
+		}
+		
+		/// <summary>
+		/// Logs an error message and asks the user for a decission.
+		/// </summary>
+		/// <param name="strMessage">The error message.</param>
+		/// <returns>The user feedback.</returns>
+		DialogResult ShowError( string strMessage )
+		{
+			LogMessage( "Error", Color.Red, strMessage );
+			return MessageBox.Show( strMessage, "Movie File Merger - Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error );
+		}
+		
+		/// <summary>
+		/// Asks the user for a decission.
+		/// </summary>
+		/// <param name="strMessage">The question.</param>
+		/// <returns>The user feedback.</returns>
+		DialogResult ShowYesNoQuestion( string strMessage )
+		{
+			return MessageBox.Show( strMessage, "Movie File Merger - Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question );
 		}
 
+		/// <summary>
+		/// Readjusts the column width if the Window is resized. 
+		/// </summary>
+		void SetColumnWidth()
+		{
+			if ( this.WindowState == FormWindowState.Minimized )	// Not if minimized
+			{
+				return;
+			}
+			int iColumnWidth = (this.Size.Width - 37) / 3;
+			scVertical.SplitterDistance = iColumnWidth;
+			scVerticalRight.Width = iColumnWidth * 2;
+			scVerticalRight.SplitterDistance = iColumnWidth + 3;
+			scVerticalRight.SplitterWidth = 3;
+			lvExisting.Columns[0].Width = lvExisting.Width - 35;
+			lvGarbage.Columns[0].Width = lvGarbage.Width - 35;
+			lvImport.Columns[0].Width = lvImport.Width - 35;
+			lvWish.Columns[0].Width = lvWish.Width - 35;
+		}
+
+		/// <summary>
+		/// The form size has been changed.
+		/// Move the spliters.
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		void MainFormSizeChanged(object sender, EventArgs e)
+		{
+			if (this.WindowState == FormWindowState.Minimized)	// Not if minimized
+			{
+				return;
+			}
+			scFolders.SplitterDistance = scFolders.Size.Width / 2;
+			scHorizontal.SplitterDistance = scHorizontal.Size.Height / 2;
+		}
+		
 		/// <summary>
 		/// Assign all the regular expressions from the settings tab.
 		/// </summary>
@@ -129,6 +253,46 @@ namespace Movie_File_Merger
 		}
 		
 		/// <summary>
+		/// Sets a tag in a list view to remember when to save the view.
+		/// </summary>
+		/// <param name="lvThis">The listview to be tagged.</param>
+		/// <param name="bChanged">true when the list view has changed, otherwise flase.</param>
+		void SetListViewChanged( ListView lvThis, bool bChanged )
+		{
+			if ( (string)lvThis.Tag == "Existing" ) bExistingChanged = bChanged;
+			if ( (string)lvThis.Tag == "Garbage" ) bGarbageChanged = bChanged;
+			if ( (string)lvThis.Tag == "Wish" ) bWishChanged = bChanged;
+		}
+		
+		/// <summary>
+		/// Converts a datetime to the standard date format yyyy-mm-dd.
+		/// </summary>
+		/// <param name="dtToSStandardize">The date time to standardize.</param>
+		/// <returns>The standzadized date string.</returns>
+		string StandardizeDate( DateTime dtToSStandardize )
+		{
+			return 	dtToSStandardize.Year.ToString( "D4" ) + "-" +
+				dtToSStandardize.Month.ToString( "D2" ) + "-" +
+				dtToSStandardize.Day.ToString( "D2" );
+		}
+		
+		/// <summary>
+		/// Converts a datetime to the standard time format hh:mm:ss.
+		/// </summary>
+		/// <param name="dtToSStandardize">The date time to standardize.</param>
+		/// <returns>The standzadized time string.</returns>
+		string StandardizeTime( DateTime dtToSStandardize )
+		{
+			return 	dtToSStandardize.Hour.ToString( "D2" ) + "-" +
+				dtToSStandardize.Minute.ToString( "D2" ) + "-" +
+				dtToSStandardize.Second.ToString( "D2" );
+		}
+		
+		/*******************
+		 * Major Functions *
+		 *******************/
+		
+		/// <summary>
 		/// Initialize a list view from a text file in MFM format.
 		/// </summary>
 		/// <param name="lvListView"></param>
@@ -154,7 +318,7 @@ namespace Movie_File_Merger
 		{
 			string strCleanName = strMessyName.ToLower( );
 			
-			if ( rbSeries.Checked )
+			if ( rbSeries.Checked )  // handle series with SxxExx identifier
 			{
 				Match matchEpisodeId = rgxEpisodesId.Match( strCleanName );
 				if ( matchEpisodeId.Success )
@@ -165,7 +329,7 @@ namespace Movie_File_Merger
 					strCleanName = strCleanName.Substring( 0, matchEpisodeId.Index ) + strUnifiedEpisodeId;
 				}
 			}
-			else
+			else  // handle movies and other stuff
 			{
 				Match matchTrimBefore = rgxTrimBefore.Match( strCleanName );
 				if ( matchTrimBefore.Success )
@@ -174,30 +338,19 @@ namespace Movie_File_Merger
 				}
 			}
 			
-			strCleanName = rgxAphanumeric.Replace( strCleanName, @" " );
-			strCleanName = rgxMultiSpace.Replace( strCleanName, @" " );
+			strCleanName = rgxAphanumeric.Replace( strCleanName, @" " );  // get rid of unwanted stuff
+			strCleanName = rgxMultiSpace.Replace( strCleanName, @" " );  // get rid of multiple spaces
 			strCleanName = strCleanName.Trim( ' ' );
-			strCleanName = CultureInfo.CurrentCulture.TextInfo.ToTitleCase( strCleanName );
 			
-			MatchCollection mcToLower = rgxToLower.Matches( strCleanName );
+			// fix the cases according to movie titles
+			strCleanName = CultureInfo.CurrentCulture.TextInfo.ToTitleCase( strCleanName );
+						MatchCollection mcToLower = rgxToLower.Matches( strCleanName );
 			foreach ( Match mToLower in mcToLower )
 			{
 				strCleanName = strCleanName.Replace( mToLower.Value, mToLower.Value.ToLower( ) );
 			}
 
 			return strCleanName;
-		}
-		
-		/// <summary>
-		/// Sets a tag in a list view to remember when to save the view.
-		/// </summary>
-		/// <param name="lvThis">The listview to be tagged.</param>
-		/// <param name="bChanged">true when the list view has changed, otherwise flase.</param>
-		void SetListViewChanged( ListView lvThis, bool bChanged )
-		{
-			if ( (string)lvThis.Tag == "Existing" ) bExistingChanged = bChanged;
-			if ( (string)lvThis.Tag == "Garbage" ) bGarbageChanged = bChanged;
-			if ( (string)lvThis.Tag == "Wish" ) bWishChanged = bChanged;
 		}
 		
 		/// <summary>
@@ -543,22 +696,22 @@ namespace Movie_File_Merger
 		/// </summary>
 		/// <param name="fiImportFile">The file to be copied or moved.</param>
 		/// <returns>The path of the new file.</returns>
-		string MakeTargetPath(FileInfo fiImportFile)
+		string MakeTargetPath( FileInfo fiImportFile )
 		{
 			string strTargetPath = "";
-			if ( !cbKeepFolders.Checked )
+
+			if ( !cbKeepFolders.Checked )  // movie all relevant file into the same folder
 			{
 				strTargetPath = tbTargetFolder.Text;
 			}
-			else
+			else  // keep the folder structure as it is in the source folder 
 			{
 				string sSubPath = fiImportFile.DirectoryName.Substring( fiImportFile.DirectoryName.IndexOf( '\\' )+1 );
 				strTargetPath = Path.Combine( tbTargetFolder.Text, sSubPath );
 			}
-			if(!Directory.Exists( strTargetPath ) )
-			{
-				Directory.CreateDirectory( strTargetPath );
-			}
+
+			if(!Directory.Exists( strTargetPath ) ) Directory.CreateDirectory( strTargetPath );
+
 			return strTargetPath;
 		}
 		
@@ -598,13 +751,16 @@ namespace Movie_File_Merger
 			foreach( FileInfo fiImportFile in diImportFolder.GetFiles( "*", soMovieFileMerger ) )
 			{
 				string strImportName = fiImportFile.Name;
+				// ignore not relevant files
 				if ( !rgxVideoExtensions.IsMatch( fiImportFile.Extension ) &&
 				     !rgxAddonExtensions.IsMatch( fiImportFile.Extension ) ) continue;
 				
+				// cut the file extension, to reduce list entries to only one per item
 				if ( strImportName.LastIndexOf( '.' ) != -1 )
 				{
 					strImportName = strImportName.Substring( 0, strImportName.LastIndexOf( '.' ) );
 				}
+				
 				strImportName = CleanName( RemoveEpisodeInfo( strImportName ) );
 				ListViewItem lviImport = FindItem( lvImport, strImportName );
 				if ( lviImport != null )
@@ -800,88 +956,6 @@ namespace Movie_File_Merger
 		}
 		
 		/// <summary>
-		/// Adds a mesage, with the date, type, and a certain color, to the rich text box on the log tab. 
-		/// </summary>
-		/// <param name="strType">The type name of the message.</param>
-		/// <param name="cColor">The color of the message.</param>
-		/// <param name="strMessage">The message itself.</param>
-		void LogMessage( string strType, Color cColor, string strMessage )
-		{
-			rtbLog.SelectionColor = cColor;
-			rtbLog.AppendText( DateTime.Now + ": " + strType + " - " + strMessage + "\n" );
-		}
-		
-		/// <summary>
-		/// Logs a status message, in black color, and activates the wait cursor.
-		/// </summary>
-		/// <param name="strMessage">The message itself.</param>
-		void SetStatus(string strMessage)
-		{
-			LogMessage( "Status", Color.Black, strMessage );
-			Cursor.Current = Cursors.WaitCursor;
-		}
-		
-		/// <summary>
-		/// Deactivates the wait cursor.
-		/// </summary>
-		void ClearStatus()
-		{
-			Cursor.Current = Cursors.Default;
-		}
-		
-		/// <summary>
-		/// Logs an informal message and asks the user for a decission.
-		/// </summary>
-		/// <param name="strMessage">The informal message.</param>
-		/// <returns>The user feedback.</returns>
-		DialogResult ShowInfo( string strMessage )
-		{
-			LogMessage( "Info", Color.Blue, strMessage );
-			return MessageBox.Show( strMessage, "Movie File Merger - Info", MessageBoxButtons.OK, MessageBoxIcon.Asterisk );
-		}
-		
-		/// <summary>
-		/// Logs an error message and asks the user for a decission.
-		/// </summary>
-		/// <param name="strMessage">The error message.</param>
-		/// <returns>The user feedback.</returns>
-		DialogResult ShowError( string strMessage )
-		{
-			LogMessage( "Error", Color.Red, strMessage );
-			return MessageBox.Show( strMessage, "Movie File Merger - Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error );
-		}
-		
-		/// <summary>
-		/// Asks the user for a decission.
-		/// </summary>
-		/// <param name="strMessage">The question.</param>
-		/// <returns>The user feedback.</returns>
-		DialogResult ShowYesNoQuestion( string strMessage )
-		{
-			return MessageBox.Show( strMessage, "Movie File Merger - Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question );
-		}
-
-		/// <summary>
-		/// Readjusts the column width if the Window is resized. 
-		/// </summary>
-		void SetColumnWidth()
-		{
-			if ( this.WindowState == FormWindowState.Minimized )	// Not if minimized
-			{
-				return;
-			}
-			int iColumnWidth = (this.Size.Width - 37) / 3;
-			scVertical.SplitterDistance = iColumnWidth;
-			scVerticalRight.Width = iColumnWidth * 2;
-			scVerticalRight.SplitterDistance = iColumnWidth + 3;
-			scVerticalRight.SplitterWidth = 3;
-			lvExisting.Columns[0].Width = lvExisting.Width - 35;
-			lvGarbage.Columns[0].Width = lvGarbage.Width - 35;
-			lvImport.Columns[0].Width = lvImport.Width - 35;
-			lvWish.Columns[0].Width = lvWish.Width - 35;
-		}
-
-		/// <summary>
 		/// Removed the selected items from the list view.
 		/// </summary>
 		/// <param name="lvThis">The list view from where the items should e removed.</param>
@@ -901,42 +975,6 @@ namespace Movie_File_Merger
 			}
 		}
 		
-		/******************/
-		/* user interface */
-		/******************/
-		/// <summary>
-		/// The progress bar has been clicked and the processing should start.
-		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		void PbProcessClick( object sender, EventArgs e )
-		{
-			ProcessImport();
-		}
-
-		/// <summary>
-		/// Update the Garbvage, Existing, Wish and Import counters from time to time.
-		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		void TmrUpdateCountersTick( object sender, EventArgs e )
-		{
-			lvExisting.Columns[0].Text = lvExisting.Items.Count + " Existing " + strCollectionType;
-			lvGarbage.Columns[0].Text = lvGarbage.Items.Count + " Garbage " + strCollectionType;
-			lvImport.Columns[0].Text = lvImport.Items.Count + " Import " + strCollectionType;
-			lvWish.Columns[0].Text = lvWish.Items.Count + " Wish " + strCollectionType;
-		}
-
-		/// <summary>
-		/// Resize the columns if the spliter has been moved.
-		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		void ScVerticalSplitterMoved( object sender, SplitterEventArgs e )
-		{
-			SetColumnWidth( );
-		}
-
 		/// <summary>
 		/// Aks the user if changed lists should be save and if so save them.
 		/// </summary>
@@ -1193,6 +1231,62 @@ namespace Movie_File_Merger
 		}
 
 		/// <summary>
+		/// Extracts full information of a file with MediaInfo, but returns only selected infomration. 
+		/// </summary>
+		/// <param name="fiFile">The file to analyse.</param>
+		/// <param name="bFullDetails">Show full details or not?</param>
+		/// <returns>Selected media information.</returns>
+		string ExtractVideoInfo( FileInfo fiFile, bool bFullDetails )
+		{
+			string sMediaInfo = fiFile.Name + "\n" +
+				"[" + tbNickName.Text + " " + StandardizeDate( DateTime.Today ) + "]  " +
+				fiFile.DirectoryName;
+				sMediaInfo += "\nLast Written " + StandardizeDate( fiFile.LastWriteTime );
+			if ( bFullDetails && cbMediaInfo.Checked )
+			{
+				miThis.Open( fiFile.FullName );
+				miThis.Option( "Inform", "General;%Duration/String%,  %FileSize/String%  %Format%" ); // file size
+				sMediaInfo += "\n" + miThis.Inform( );
+				miThis.Option( "Inform", "Video;Video:  %Width% x%Height% (%DisplayAspectRatio/String%) at %FrameRate/String%,  %BitRate/String%" );
+				sMediaInfo += "\n\n" + miThis.Inform( );
+				miThis.Option( "Inform", "Audio;Audio:  %Channel(s)/String%  %Language/String%,  %SamplingRate/String%  %Format%\n" );
+				sMediaInfo += "\n" + miThis.Inform( ).Replace( "Audio: ", "\nAudio: " ).Replace( "Audio:  ,", "Audio:" );
+				miThis.Close( );
+			}
+			else
+			{
+				sMediaInfo += "\n" + 
+					fiFile.Length/1024/1024 + " MiB,  " +
+					fiFile.Extension.ToUpper( ).Substring( 1 );;
+			}
+			return sMediaInfo;
+		}
+		
+		/// <summary>
+		/// Erases a color completely from a list view.
+		/// </summary>
+		/// <param name="lvThis">The list view where the color should be earsed.</param>
+		/// <param name="clrToErase">The color which should be erased fromt he list view.</param>
+		void EraseColorFromListView( ListView lvThis, Color clrToErase )
+		{
+			lvThis.BeginUpdate( );
+			foreach ( ListViewItem lviThis in lvThis.Items )
+			{
+				if ( lviThis.BackColor == clrToErase )
+				{
+					lvThis.Items.Remove( lviThis );
+					ColorAll( lviThis.Text );
+					SetListViewChanged( lvThis, true );
+				}
+			}
+			lvThis.EndUpdate( );
+		}
+		
+		/******************
+		 * User Interface *
+		 ******************/
+		
+		/// <summary>
 		/// The MFM windos has ben shown.  
 		/// Initialize all list views.
 		/// </summary>
@@ -1304,57 +1398,38 @@ namespace Movie_File_Merger
 		}
 
 		/// <summary>
-		/// Extracts full information of a file with MediaInfo, but returns only selected infomration. 
+		/// The progress bar has been clicked and the processing should start.
 		/// </summary>
-		/// <param name="fiFile">The file to analyse.</param>
-		/// <param name="bFullDetails">Show full details or not?</param>
-		/// <returns>Selected media information.</returns>
-		string ExtractVideoInfo( FileInfo fiFile, bool bFullDetails )
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		void PbProcessClick( object sender, EventArgs e )
 		{
-			string sMediaInfo = fiFile.Name + "\n" +
-				"[" + tbNickName.Text + " " + StandardizeDate( DateTime.Today ) + "]  " +
-				fiFile.DirectoryName;
-				sMediaInfo += "\nLast Written " + StandardizeDate( fiFile.LastWriteTime );
-			if ( bFullDetails && cbMediaInfo.Checked )
-			{
-				miThis.Open( fiFile.FullName );
-				miThis.Option( "Inform", "General;%Duration/String%,  %FileSize/String%  %Format%" ); // file size
-				sMediaInfo += "\n" + miThis.Inform( );
-				miThis.Option( "Inform", "Video;Video:  %Width% x%Height% (%DisplayAspectRatio/String%) at %FrameRate/String%,  %BitRate/String%" );
-				sMediaInfo += "\n\n" + miThis.Inform( );
-				miThis.Option( "Inform", "Audio;Audio:  %Channel(s)/String%  %Language/String%,  %SamplingRate/String%  %Format%\n" );
-				sMediaInfo += "\n" + miThis.Inform( ).Replace( "Audio: ", "\nAudio: " ).Replace( "Audio:  ,", "Audio:" );
-				miThis.Close( );
-			}
-			else
-			{
-				sMediaInfo += "\n" + 
-					fiFile.Length/1024/1024 + " MiB,  " +
-					fiFile.Extension.ToUpper( ).Substring( 1 );;
-			}
-			return sMediaInfo;
+			ProcessImport();
 		}
-		
+
 		/// <summary>
-		/// Erases a color completely from a list view.
+		/// Update the Garbvage, Existing, Wish and Import counters from time to time.
 		/// </summary>
-		/// <param name="lvThis">The list view where the color should be earsed.</param>
-		/// <param name="clrToErase">The color which should be erased fromt he list view.</param>
-		void EraseColorFromListView( ListView lvThis, Color clrToErase )
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		void TmrUpdateCountersTick( object sender, EventArgs e )
 		{
-			lvThis.BeginUpdate( );
-			foreach ( ListViewItem lviThis in lvThis.Items )
-			{
-				if ( lviThis.BackColor == clrToErase )
-				{
-					lvThis.Items.Remove( lviThis );
-					ColorAll( lviThis.Text );
-					SetListViewChanged( lvThis, true );
-				}
-			}
-			lvThis.EndUpdate( );
+			lvExisting.Columns[0].Text = lvExisting.Items.Count + " Existing " + strCollectionType;
+			lvGarbage.Columns[0].Text = lvGarbage.Items.Count + " Garbage " + strCollectionType;
+			lvImport.Columns[0].Text = lvImport.Items.Count + " Import " + strCollectionType;
+			lvWish.Columns[0].Text = lvWish.Items.Count + " Wish " + strCollectionType;
 		}
-		
+
+		/// <summary>
+		/// Resize the columns if the spliter has been moved.
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		void ScVerticalSplitterMoved( object sender, SplitterEventArgs e )
+		{
+			SetColumnWidth( );
+		}
+
 		/// <summary>
 		/// The settings tab has been left.  
 		/// Save the settings.
@@ -1438,30 +1513,6 @@ namespace Movie_File_Merger
 		}
 		
 		/// <summary>
-		/// Converts a datetime to the standard date format yyyy-mm-dd.
-		/// </summary>
-		/// <param name="dtToSStandardize">The date time to standardize.</param>
-		/// <returns>The standzadized date string.</returns>
-		string StandardizeDate( DateTime dtToSStandardize )
-		{
-			return 	dtToSStandardize.Year.ToString( "D4" ) + "-" +
-				dtToSStandardize.Month.ToString( "D2" ) + "-" +
-				dtToSStandardize.Day.ToString( "D2" );
-		}
-		
-		/// <summary>
-		/// Converts a datetime to the standard time format hh:mm:ss.
-		/// </summary>
-		/// <param name="dtToSStandardize">The date time to standardize.</param>
-		/// <returns>The standzadized time string.</returns>
-		string StandardizeTime( DateTime dtToSStandardize )
-		{
-			return 	dtToSStandardize.Hour.ToString( "D2" ) + "-" +
-				dtToSStandardize.Minute.ToString( "D2" ) + "-" +
-				dtToSStandardize.Second.ToString( "D2" );
-		}
-		
-		/// <summary>
 		/// A list view has been drop on the Export Lists droparea.
 		/// Save the list view to a CSV file.
 		/// </summary>
@@ -1480,22 +1531,6 @@ namespace Movie_File_Merger
 				sfdMovieFileMerger.InitialDirectory = "";  // take the same folder next time
 				SaveListViewToCsvFile( lvDragSource, sfdMovieFileMerger.FileName );
 			}
-		}
-		
-		/// <summary>
-		/// The form size has been changed.
-		/// Move the spliters.
-		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		void MainFormSizeChanged(object sender, EventArgs e)
-		{
-			if (this.WindowState == FormWindowState.Minimized)	// Not if minimized
-			{
-				return;
-			}
-			scFolders.SplitterDistance = scFolders.Size.Width / 2;
-			scHorizontal.SplitterDistance = scHorizontal.Size.Height / 2;
 		}
 		
 		/// <summary>
