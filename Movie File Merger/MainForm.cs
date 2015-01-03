@@ -33,65 +33,89 @@ namespace Movie_File_Merger
 	/// </summary>
 	public partial class MainForm : Form
 	{
+		ListView lvDragSource = null;  // the list view from which has been dragged
+		Color DragColor = Color.Red;  // the color of the item which has been dragged
+		string strCollectionType = "Miscellaneous";  // the active collection type
+		const string strIMDbSearchType = "&s=tt";  // to search on IDMb for the title only
+		MediaInfo miThis = new MediaInfo( );  // detailed information about the video file from MediaInfo
+
+		// item colors		
 		Color GarbageColor = Color.Red;
 		Color ExistingColor = Color.YellowGreen;
 		Color WishColor = Color.LawnGreen;
 		Color NeutralColor = Color.White;
-		string strCollectionType = "Miscellaneous";
-		const string strIMDbSearchType = "&s=tt";
+		
+		// list change indicators when exiting a collection type
 		bool bExistingChanged = false;
 		bool bGarbageChanged = false;
 		bool bWishChanged = false;
-		ListView lvDragSource = null;
-		Color DragColor = Color.Red;
-		string sPrivatePath = Path.Combine(Path.GetDirectoryName(Application.StartupPath), @"MFM Private\");
-		string sCollectionsPath = Path.Combine(Path.GetDirectoryName(Application.StartupPath), @"MFM Collections\");
-		string sTeraCopyListsPath = "";
-		string sIniFilePath = "";
 
-		Regex rgxVideoExtensions;
-		Regex rgxAddonExtensions;
-		Regex rgxEpisodesId;
-		Regex rgxTrimBefore;
-		Regex rgxAphanumeric;
-		Regex rgxToLower;
-		Regex rgxMultiSpace = new Regex(@"[ ]{2,}");
-		Regex rgxNumber = new Regex(@"\d+");
-		MediaInfo miThis = new MediaInfo();
+		// paths to standard files and folders
+		string strPrivatePath = Path.Combine( Path.GetDirectoryName(Application.StartupPath), @"MFM Private\" );
+		string strCollectionsPath = Path.Combine( Path.GetDirectoryName(Application.StartupPath), @"MFM Collections\" );
+		string strTeraCopyListsPath = "";
+		string strIniFilePath = "";
+
+		// regular expressions to filter the messed up file names
+		Regex rgxVideoExtensions;  // to find the main files
+		Regex rgxAddonExtensions;  // to find wanted addon files, like subtitles
+		Regex rgxEpisodesId;  // to find the episode identifier
+		Regex rgxTrimBefore;  // the names will be cut of before, like 720p
+		Regex rgxAphanumeric;  // only accept clean charaecters in the name
+		Regex rgxToLower;  // words in the name that should be lower case, like the, to, for, of
+		Regex rgxMultiSpace = new Regex( @"[ ]{2,}" );  // two spaces in a row
+		Regex rgxNumber = new Regex( @"\d+" );  // any integer number
 		
+		/// <summary>
+		/// MFM main form to selectivley combine video collections
+		/// </summary>
 		public MainForm()
 		{
 			InitializeComponent();
 			
 			// make sure that all needed directroies and files are there
-			if ( !Directory.Exists( sPrivatePath )) Directory.CreateDirectory( sPrivatePath );
-			if ( !Directory.Exists( sCollectionsPath )) Directory.CreateDirectory( sCollectionsPath );
-			sTeraCopyListsPath = Path.Combine( sPrivatePath, @"TeraCopy Lists\" );
-			if ( !Directory.Exists( sTeraCopyListsPath )) Directory.CreateDirectory( sTeraCopyListsPath );
-			sfdMovieFileMerger.InitialDirectory = sCollectionsPath;
-			sIniFilePath = Path.Combine( sPrivatePath, "Movie File Merger.ini" );
-			if ( !File.Exists( sIniFilePath )) File.Copy( Path.Combine( Application.StartupPath, "Movie File Merger.ini" ), sIniFilePath );
+			if ( !Directory.Exists( strPrivatePath ) ) {
+				Directory.CreateDirectory( strPrivatePath );
+			}
+			if ( !Directory.Exists( strCollectionsPath ) ) {
+				Directory.CreateDirectory( strCollectionsPath );
+			}
+			strTeraCopyListsPath = Path.Combine( strPrivatePath, @"TeraCopy Lists\" );
+			if ( !Directory.Exists( strTeraCopyListsPath ) ) {
+				Directory.CreateDirectory( strTeraCopyListsPath );
+			}
+			sfdMovieFileMerger.InitialDirectory = strCollectionsPath;
+			strIniFilePath = Path.Combine( strPrivatePath, "Movie File Merger.ini" );
+			if ( !File.Exists( strIniFilePath ) ) {
+				File.Copy( Path.Combine( Application.StartupPath, "Movie File Merger.ini" ), strIniFilePath );
+			}
 			
-			LoadSettings();
+			LoadSettings( );
 			this.Text = tbNickName.Text + " - Movie File Merger";
 
 			// load the instruction and copyright files
-			try {
-				rtbHelp.LoadFile( Path.Combine( Application.StartupPath, "Movie File Merger Instructions.rtf" ), RichTextBoxStreamType.RichText );
+			try { 
+				rtbHelp.LoadFile( Path.Combine( Application.StartupPath, "Movie File Merger Instructions.rtf" ), 
+				                  RichTextBoxStreamType.RichText );
+			} catch ( IOException e ) { 
+				ShowInfo( e.Message ); 
 			}
-			catch ( IOException e ) { ShowInfo( e.Message ); }
 			
 			try {
-				rtbSettings.LoadFile(Path.Combine(Application.StartupPath, "Movie File Merger Settings.rtf"), RichTextBoxStreamType.RichText);
+				rtbSettings.LoadFile( Path.Combine(Application.StartupPath, "Movie File Merger Settings.rtf"), 
+				                      RichTextBoxStreamType.RichText);
+			} catch ( IOException e ) { 
+				ShowInfo( e.Message );
 			}
-			catch ( IOException e ) { ShowInfo( e.Message ); }
 			try {
-				rtbCopyright.LoadFile(Path.Combine(Application.StartupPath, "Movie File Merger Copyright.rtf"), RichTextBoxStreamType.RichText);
+				rtbCopyright.LoadFile( Path.Combine(Application.StartupPath, "Movie File Merger Copyright.rtf"), 
+				                       RichTextBoxStreamType.RichText);
+			} catch ( IOException e ) { 
+				ShowInfo( e.Message ); 
 			}
-			catch ( IOException e ) { ShowInfo( e.Message ); }
 			
-			SetColumnWidth();
-			AssignRegexes();  // Already done in load setttings - Remove???
+			SetColumnWidth( );
+			AssignRegexes( );  // Already done in load setttings - Remove???
 		}
 		
 		/************************/
@@ -114,7 +138,7 @@ namespace Movie_File_Merger
 		/// Logs a status message, in black color, and activates the wait cursor.
 		/// </summary>
 		/// <param name="strMessage">The message itself.</param>
-		void SetStatus(string strMessage)
+		void SetStatus( string strMessage )
 		{
 			LogMessage( "Status", Color.Black, strMessage );
 			Cursor.Current = Cursors.WaitCursor;
@@ -123,7 +147,7 @@ namespace Movie_File_Merger
 		/// <summary>
 		/// Deactivates the wait cursor.
 		/// </summary>
-		void ClearStatus()
+		void ClearStatus( )
 		{
 			Cursor.Current = Cursors.Default;
 		}
@@ -136,7 +160,8 @@ namespace Movie_File_Merger
 		DialogResult ShowInfo( string strMessage )
 		{
 			LogMessage( "Info", Color.Blue, strMessage );
-			return MessageBox.Show( strMessage, "Movie File Merger - Info", MessageBoxButtons.OK, MessageBoxIcon.Asterisk );
+			return MessageBox.Show( strMessage, "Movie File Merger - Info", 
+			                        MessageBoxButtons.OK, MessageBoxIcon.Asterisk );
 		}
 		
 		/// <summary>
@@ -147,7 +172,8 @@ namespace Movie_File_Merger
 		DialogResult ShowError( string strMessage )
 		{
 			LogMessage( "Error", Color.Red, strMessage );
-			return MessageBox.Show( strMessage, "Movie File Merger - Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error );
+			return MessageBox.Show( strMessage, "Movie File Merger - Error", 
+			                        MessageBoxButtons.YesNo, MessageBoxIcon.Error );
 		}
 		
 		/// <summary>
@@ -157,19 +183,19 @@ namespace Movie_File_Merger
 		/// <returns>The user feedback.</returns>
 		DialogResult ShowYesNoQuestion( string strMessage )
 		{
-			return MessageBox.Show( strMessage, "Movie File Merger - Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question );
+			return MessageBox.Show( strMessage, "Movie File Merger - Question", 
+			                        MessageBoxButtons.YesNo, MessageBoxIcon.Question );
 		}
 
 		/// <summary>
 		/// Readjusts the column width if the Window is resized. 
 		/// </summary>
-		void SetColumnWidth()
+		void SetColumnWidth( )
 		{
-			if ( this.WindowState == FormWindowState.Minimized )	// Not if minimized
-			{
+			if ( this.WindowState == FormWindowState.Minimized ) {	// Not if minimized
 				return;
 			}
-			int iColumnWidth = (this.Size.Width - 37) / 3;
+			int iColumnWidth = ( this.Size.Width - 37 ) / 3;
 			scVertical.SplitterDistance = iColumnWidth;
 			scVerticalRight.Width = iColumnWidth * 2;
 			scVerticalRight.SplitterDistance = iColumnWidth + 3;
@@ -186,10 +212,9 @@ namespace Movie_File_Merger
 		/// </summary>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
-		void MainFormSizeChanged(object sender, EventArgs e)
+		void MainFormSizeChanged( object sender, EventArgs e )
 		{
-			if (this.WindowState == FormWindowState.Minimized)	// Not if minimized
-			{
+			if ( this.WindowState == FormWindowState.Minimized ) {	// Not if minimized
 				return;
 			}
 			scFolders.SplitterDistance = scFolders.Size.Width / 2;
@@ -199,7 +224,7 @@ namespace Movie_File_Merger
 		/// <summary>
 		/// Assign all the regular expressions from the settings tab.
 		/// </summary>
-		void AssignRegexes()
+		void AssignRegexes( )
 		{
 			rgxVideoExtensions = new Regex( tbVideoExtensionsRegex.Text );
 			rgxAddonExtensions = new Regex( tbAddonExtensionsRegex.Text );
@@ -212,11 +237,10 @@ namespace Movie_File_Merger
 		/// <summary>
 		/// Load the settings from the ini file.
 		/// </summary>
-		void LoadSettings()
+		void LoadSettings ()
 		{
-			try
-			{
-				var srSettings = new StreamReader( sIniFilePath );
+			try {
+				var srSettings = new StreamReader( strIniFilePath );
 				tbVideoExtensionsRegex.Text = srSettings.ReadLine( );
 				tbAddonExtensionsRegex.Text = srSettings.ReadLine();
 				tbEpisodesIdRegex.Text = srSettings.ReadLine( );
@@ -225,9 +249,12 @@ namespace Movie_File_Merger
 				tbToLowerRegex.Text = srSettings.ReadLine( );
 				tbNickName.Text = srSettings.ReadLine( );
 				srSettings.Close( );
+			} catch ( IOException e ) { 
+				ShowInfo( e.Message + "\nUsing default settings..." ); 
 			}
-			catch ( IOException e ) { ShowInfo( e.Message + "\nUsing default settings..." ); }
-			if ( tbNickName.Text == "Anonym" ) ShowInfo( "Please enter your nick name in the Settings..." );
+			if ( tbNickName.Text == "Anonym" ) {
+				ShowInfo( "Please enter your nick name in the Settings..." );
+			}
 			AssignRegexes( );
 		}
 		
@@ -236,9 +263,8 @@ namespace Movie_File_Merger
 		/// </summary>
 		void SaveSettings( )
 		{
-			try
-			{
-				var swSettings = new StreamWriter( sIniFilePath );
+			try {
+				var swSettings = new StreamWriter( strIniFilePath );
 				swSettings.WriteLine( tbVideoExtensionsRegex.Text );
 				swSettings.WriteLine( tbAddonExtensionsRegex.Text );
 				swSettings.WriteLine( tbEpisodesIdRegex.Text );
@@ -247,8 +273,9 @@ namespace Movie_File_Merger
 				swSettings.WriteLine( tbToLowerRegex.Text );
 				swSettings.WriteLine( tbNickName.Text );
 				swSettings.Close( );
+			} catch ( IOException e ) { 
+				ShowInfo( e.Message ); 
 			}
-			catch ( IOException e ) { ShowInfo( e.Message ); }
 			AssignRegexes( );
 		}
 		
@@ -259,9 +286,15 @@ namespace Movie_File_Merger
 		/// <param name="bChanged">true when the list view has changed, otherwise flase.</param>
 		void SetListViewChanged( ListView lvThis, bool bChanged )
 		{
-			if ( (string)lvThis.Tag == "Existing" ) bExistingChanged = bChanged;
-			if ( (string)lvThis.Tag == "Garbage" ) bGarbageChanged = bChanged;
-			if ( (string)lvThis.Tag == "Wish" ) bWishChanged = bChanged;
+			if ( (string)lvThis.Tag == "Existing" ) {
+				bExistingChanged = bChanged;
+			}
+			if ( (string)lvThis.Tag == "Garbage" ) {
+				bGarbageChanged = bChanged;
+			}
+			if ( (string)lvThis.Tag == "Wish" ) {
+				bWishChanged = bChanged;
+			}
 		}
 		
 		/// <summary>
@@ -272,8 +305,8 @@ namespace Movie_File_Merger
 		string StandardizeDate( DateTime dtToSStandardize )
 		{
 			return 	dtToSStandardize.Year.ToString( "D4" ) + "-" +
-				dtToSStandardize.Month.ToString( "D2" ) + "-" +
-				dtToSStandardize.Day.ToString( "D2" );
+			        dtToSStandardize.Month.ToString( "D2" ) + "-" +
+			        dtToSStandardize.Day.ToString( "D2" );
 		}
 		
 		/// <summary>
@@ -284,8 +317,8 @@ namespace Movie_File_Merger
 		string StandardizeTime( DateTime dtToSStandardize )
 		{
 			return 	dtToSStandardize.Hour.ToString( "D2" ) + "-" +
-				dtToSStandardize.Minute.ToString( "D2" ) + "-" +
-				dtToSStandardize.Second.ToString( "D2" );
+			        dtToSStandardize.Minute.ToString( "D2" ) + "-" +
+			        dtToSStandardize.Second.ToString( "D2" );
 		}
 		
 		/*******************
@@ -298,11 +331,11 @@ namespace Movie_File_Merger
 		/// <param name="lvListView"></param>
 		void InitListViewFromFile( ListView lvListView )
 		{
-			string strSerializationFileName = Path.Combine( sPrivatePath, lvListView.Tag + " " + strCollectionType + ".slv" );
-			lvListView.Items.Clear();
+			string strSerializationFileName = Path.Combine( strPrivatePath, lvListView.Tag + " " + 
+			                                                strCollectionType + ".slv" );
+			lvListView.Items.Clear( );
 
-			if ( File.Exists( strSerializationFileName ) )
-			{
+			if ( File.Exists( strSerializationFileName ) ) {
 				DeserializeListView( lvListView, strSerializationFileName );
 			}
 			SetListViewChanged( lvListView, false );
@@ -318,22 +351,19 @@ namespace Movie_File_Merger
 		{
 			string strCleanName = strMessyName.ToLower( );
 			
-			if ( rbSeries.Checked )  // handle series with SxxExx identifier
-			{
+			if ( rbSeries.Checked ) { // handle series with SxxExx identifier
 				Match matchEpisodeId = rgxEpisodesId.Match( strCleanName );
-				if ( matchEpisodeId.Success )
-				{
+				if ( matchEpisodeId.Success ) {
 					MatchCollection mcNumbers = rgxNumber.Matches( matchEpisodeId.Value );
 					string strUnifiedEpisodeId = " s" + mcNumbers[0].Value.PadLeft( 2, '0' ) +
-						"e" + mcNumbers[1].Value.PadLeft( 2, '0' );
+					                              "e" + mcNumbers[1].Value.PadLeft( 2, '0' );
 					strCleanName = strCleanName.Substring( 0, matchEpisodeId.Index ) + strUnifiedEpisodeId;
 				}
 			}
 			else  // handle movies and other stuff
 			{
 				Match matchTrimBefore = rgxTrimBefore.Match( strCleanName );
-				if ( matchTrimBefore.Success )
-				{
+				if ( matchTrimBefore.Success ) {
 					strCleanName = strCleanName.Substring( 0, matchTrimBefore.Index );
 				}
 			}
@@ -344,9 +374,8 @@ namespace Movie_File_Merger
 			
 			// fix the cases according to movie titles
 			strCleanName = CultureInfo.CurrentCulture.TextInfo.ToTitleCase( strCleanName );
-						MatchCollection mcToLower = rgxToLower.Matches( strCleanName );
-			foreach ( Match mToLower in mcToLower )
-			{
+			MatchCollection mcToLower = rgxToLower.Matches( strCleanName );
+			foreach ( Match mToLower in mcToLower ) {
 				strCleanName = strCleanName.Replace( mToLower.Value, mToLower.Value.ToLower( ) );
 			}
 
@@ -362,8 +391,8 @@ namespace Movie_File_Merger
 		ListViewItem AddItemToListView( ListView lvThis, string strCleanName )
 		{
 			ListViewItem lviThis = FindItem( lvThis, strCleanName );
-			if ( lviThis == null )
-			{
+			
+			if ( lviThis == null ) {
 				lviThis = new ListViewItem( strCleanName );
 				lvThis.Items.Add( lviThis );
 				ColorAll( strCleanName );
@@ -381,14 +410,15 @@ namespace Movie_File_Merger
 		ListViewItem AddItemToListView( ListView lvThis, ListViewItem lviToAdd )
 		{
 			ListViewItem lviThis = FindItem( lvThis, lviToAdd.Text );
-			if ( lviThis == null )
-			{
+			
+			if ( lviThis == null ) {
 				lviThis = new ListViewItem( lviToAdd.Text );
 				lviThis.ToolTipText = lviToAdd.ToolTipText;
 				lvThis.Items.Add (lviThis );
 				ColorAll( lviToAdd.Text );
 				SetListViewChanged( lvThis, true );
 			}
+			
 			return lviThis;
 		}
 		
@@ -403,19 +433,21 @@ namespace Movie_File_Merger
 			var srMovies = new StreamReader( strFileName );
 			lvThis.BeginUpdate( );
 			lvThis.Sorting = SortOrder.None;
-			SetStatus( "Loading " + Path.GetFileNameWithoutExtension( strFileName ) + " to " + lvThis.Tag + " " + strCollectionType + "..." );
-			while ( ( line = srMovies.ReadLine( ) ) != null )
-			{
+			SetStatus( "Loading " + Path.GetFileNameWithoutExtension( strFileName ) + 
+			           " to " + lvThis.Tag + " " + strCollectionType + "..." );
+			
+			while ( ( line = srMovies.ReadLine( ) ) != null ) {
 				string[] saParts = line.Split( '\t' );
 				var lviThis = new ListViewItem( CleanName( saParts[0] ) );
 				if ( saParts.Length > 1 ) lviThis.ToolTipText = saParts[1].Replace( '*', '\n' );
 				AddItemToListView( lvThis, lviThis );
 			}
-			if ( rbSeries.Checked )
-			{
+			
+			if ( rbSeries.Checked ) {
 				if ( (string)lvThis.Tag == "Garbage" ) ColorExistingAndUp( );
 				if ( (string)lvThis.Tag == "Wish" ) ColorWishAndUp( );
 			}
+			
 			lvThis.Sorting = SortOrder.Ascending;
 			lvThis.EndUpdate( );
 			srMovies.Close( );
@@ -437,34 +469,38 @@ namespace Movie_File_Merger
 
 			var saTitles = new string[20];
 			var saParts = new string[20];
+			
 			line = srMovies.ReadLine( );
-			if ( line.StartsWith( "Title\t", StringComparison.Ordinal ) ) 
-			{
+			if ( line.StartsWith( "Title\t", StringComparison.Ordinal ) ) {
 				saTitles = line.Split( '\t' );
-				for ( int i = 1; i < saTitles.Length; i++ )
-				{
-					if ( saTitles[i].Length > 1 )  saTitles[i] += ":  ";
+				for ( int i = 1; i < saTitles.Length; i++ ) {
+					if ( saTitles[i].Length > 1 ) {
+						saTitles[i] += ":  ";
+					}
 				}
 				line = srMovies.ReadLine( );
 			}
-			while ( line != null )
-			{
+			
+			while ( line != null ) {
 				saParts = line.Split( '\t' );
 				var lviThis = new ListViewItem( CleanName( saParts[0].Trim('"') ) );
 				lviThis.ToolTipText = saParts[0] + "\n";
-				for ( int i = 1; i < saParts.Length; i++ )
-				{
+				for ( int i = 1; i < saParts.Length; i++ ) {
 					lviThis.ToolTipText += saTitles[i] + saParts[i] + "\n";
 				}
 				AddItemToListView( lvThis, lviThis );
 				line = srMovies.ReadLine( );
 			} 
 
-			if ( rbSeries.Checked )
-			{
-				if ( (string)lvThis.Tag == "Garbage" ) ColorExistingAndUp( );
-				if ( (string)lvThis.Tag == "Wish" ) ColorWishAndUp( );
+			if ( rbSeries.Checked ) {
+				if ( (string)lvThis.Tag == "Garbage" ) {
+					ColorExistingAndUp( );
+				}
+				if ( (string)lvThis.Tag == "Wish" ) {
+					ColorWishAndUp( );
+				}
 			}
+			
 			lvThis.Sorting = SortOrder.Ascending;
 			lvThis.EndUpdate( );
 			srMovies.Close( );
@@ -487,19 +523,17 @@ namespace Movie_File_Merger
 			lvThis.Sorting = SortOrder.None;
 			pbProcess.Maximum = 1;
 			pbProcess.Value = 0;
-			foreach( FileInfo fiFile in diFolder.GetFiles( "*", soMovieFileMerger ) )
-			{
-				if( rgxVideoExtensions.IsMatch( fiFile.Extension ) ) pbProcess.Maximum++;
+			foreach( FileInfo fiFile in diFolder.GetFiles( "*", soMovieFileMerger ) ) {
+				if( rgxVideoExtensions.IsMatch( fiFile.Extension ) ) {
+					pbProcess.Maximum++;
+				}
 			}
-			foreach( FileInfo fiFile in diFolder.GetFiles( "*", soMovieFileMerger ) )
-			{
-				if( !rgxVideoExtensions.IsMatch( fiFile.Extension ) )
-				{
+			foreach( FileInfo fiFile in diFolder.GetFiles( "*", soMovieFileMerger ) ) {
+				if( !rgxVideoExtensions.IsMatch( fiFile.Extension ) ) {
 					continue;
 				}
 				string strJustName = fiFile.Name;
-				if ( strJustName.LastIndexOf( '.' ) != -1 )
-				{
+				if ( strJustName.LastIndexOf( '.' ) != -1 ) {
 					strJustName = strJustName.Substring( 0, strJustName.LastIndexOf( '.' ) );
 				}
 				var lviThis = new ListViewItem ( CleanName( strJustName ) );
@@ -507,10 +541,13 @@ namespace Movie_File_Merger
 				AddItemToListView( lvThis, lviThis );
 				pbProcess.Value++;
 			}
-			if ( rbSeries.Checked )
-			{
-				if ( (string)lvThis.Tag == "Garbage" ) ColorExistingAndUp( );
-				if ( (string)lvThis.Tag == "Wish" ) ColorWishAndUp( );
+			if ( rbSeries.Checked ) {
+				if ( (string)lvThis.Tag == "Garbage" ) {
+					ColorExistingAndUp( );
+				}
+				if ( (string)lvThis.Tag == "Wish" ) {
+					ColorWishAndUp( );
+				}
 			}
 			lvThis.Sorting = SortOrder.Ascending;
 			lvThis.EndUpdate ();
@@ -527,8 +564,7 @@ namespace Movie_File_Merger
 		{
 			var swFile = new StreamWriter( strFileName );
 			
-			foreach ( ListViewItem lviItem in lvListView.Items )
-			{
+			foreach ( ListViewItem lviItem in lvListView.Items ) {
 				swFile.WriteLine( lviItem.Text + "\t" + lviItem.ToolTipText.Replace( '\n', '*' ) );
 			}
 			swFile.Close( );
@@ -550,10 +586,13 @@ namespace Movie_File_Merger
 		/// <param name="lviExisting">The item to be colored.</param>
 		void ColorExistingItem( ListViewItem lviExisting )
 		{
-			if ( lviExisting == null ) return;
+			if ( lviExisting == null ) {
+				return;
+			}
 			lviExisting.Selected = false;
 			ListViewItem lviGarbage = FindItem( lvGarbage, RemoveEpisodeInfo( lviExisting.Text ) );
-			lviExisting.BackColor = ( lviGarbage != null ) ? GarbageColor : ExistingColor;
+			lviExisting.BackColor = ( lviGarbage != null ) ? GarbageColor : 
+			                                                 ExistingColor;
 		}
 		
 		/// <summary>
@@ -562,8 +601,7 @@ namespace Movie_File_Merger
 		void ColorExisting( )
 		{
 			SetStatus( "Coloring " + strCollectionType + " in Existing list..." );
-			foreach ( ListViewItem lviExisting in lvExisting.Items )
-			{
+			foreach ( ListViewItem lviExisting in lvExisting.Items ) {
 				ColorExistingItem( lviExisting );
 			}
 			ClearStatus( );
@@ -584,18 +622,20 @@ namespace Movie_File_Merger
 		/// <param name="lviWish">The item to be colored.</param>
 		void ColorWishItem( ListViewItem lviWish )
 		{
-			if ( lviWish == null ) return;
+			if ( lviWish == null ) {
+				return;
+			}
 			lviWish.Selected = false;
 			ListViewItem lviGarbage = FindItem( lvGarbage, RemoveEpisodeInfo( lviWish.Text ) );
-			if ( lviGarbage != null )
-			{
+			if ( lviGarbage != null ) {
 				lviWish.BackColor = GarbageColor;
 			}
-			else
-			{
+			else {
 				ListViewItem lviExisting;
-				lviExisting = ( rbSeries.Checked ) ? FindItemStart( lvExisting, lviWish.Text ) : FindItem( lvExisting, lviWish.Text );
-				lviWish.BackColor = ( lviExisting != null ) ? ExistingColor : lviWish.BackColor = WishColor;
+				lviExisting = ( rbSeries.Checked ) ? FindItemStart( lvExisting, lviWish.Text ) : 
+				                                     FindItem( lvExisting, lviWish.Text );
+				lviWish.BackColor = ( lviExisting != null ) ? ExistingColor : 
+					                                          WishColor;
 			}
 		}
 
@@ -605,8 +645,7 @@ namespace Movie_File_Merger
 		void ColorWish( )
 		{
 			SetStatus( "Coloring " + strCollectionType + " in Wish list..." );
-			foreach ( ListViewItem lviWish in lvWish.Items )
-			{
+			foreach ( ListViewItem lviWish in lvWish.Items ) {
 				ColorWishItem( lviWish );
 			}
 			ClearStatus( );
@@ -618,24 +657,23 @@ namespace Movie_File_Merger
 		/// <param name="lviImport">The item to be colored.</param>
 		void ColorImportItem( ListViewItem lviImport )
 		{
-			if ( lviImport == null ) return;
+			if ( lviImport == null ) {
+				return;
+			}
 			lviImport.Selected = false;
 			ListViewItem lviGarbage = FindItem( lvGarbage, RemoveEpisodeInfo(lviImport.Text ) );
-			if ( lviGarbage != null )
-			{
+			if ( lviGarbage != null ) {
 				lviImport.BackColor = GarbageColor;
 			}
-			else
-			{
+			else {
 				ListViewItem lviExisting = FindItem( lvExisting, lviImport.Text );
-				if ( lviExisting != null )
-				{
+				if ( lviExisting != null ) {
 					lviImport.BackColor = ExistingColor;
 				}
-				else
-				{
+				else {
 					ListViewItem lviWish = FindItem( lvWish, RemoveEpisodeInfo( lviImport.Text ) );
-					lviImport.BackColor = ( lviWish != null ) ? WishColor : NeutralColor;
+					lviImport.BackColor = ( lviWish != null ) ? WishColor : 
+					                                            NeutralColor;
 				}
 			}
 		}
@@ -648,32 +686,45 @@ namespace Movie_File_Merger
 		{
 			ListViewItem lviGarbage = FindItem( lvGarbage, RemoveEpisodeInfo( strItemName ) );
 			ListViewItem lviExisting;
-			lviExisting = ( rbSeries.Checked ) ? FindItemStart( lvExisting, strItemName ) : FindItem( lvExisting, strItemName );
+			lviExisting = ( rbSeries.Checked ) ? FindItemStart( lvExisting, strItemName ) : 
+			                                     FindItem( lvExisting, strItemName );
 			ListViewItem lviWish = FindItem( lvWish, RemoveEpisodeInfo( strItemName ) );
 			ListViewItem lviImport = FindItem( lvImport, strItemName );
 			
-			if ( lviGarbage != null )
-			{
+			if ( lviGarbage != null ) {
 				lviGarbage.BackColor = GarbageColor;
-				if ( lviExisting != null ) lviExisting.BackColor = GarbageColor;
-				if ( lviWish != null ) lviWish.BackColor = GarbageColor;
-				if ( lviImport != null ) lviImport.BackColor = GarbageColor;
+				if ( lviExisting != null ) {
+					lviExisting.BackColor = GarbageColor;
+				}
+				if ( lviWish != null ) {
+					lviWish.BackColor = GarbageColor;
+				}
+				if ( lviImport != null ) {
+					lviImport.BackColor = GarbageColor;
+				}
 			}
-			else if ( lviExisting != null )
-			{
+			else if ( lviExisting != null ) {
 				lviExisting.BackColor = ExistingColor;
-				if ( lviWish != null ) lviWish.BackColor = ExistingColor;
-				if ( lviImport != null ) lviImport.BackColor = ExistingColor;
+				if ( lviWish != null ) {
+					lviWish.BackColor = ExistingColor;
+				}
+				if ( lviImport != null ) {
+					lviImport.BackColor = ExistingColor;
+				}
 			}
-			else if ( lviWish != null )
-			{
-				if ( rbSeries.Checked ) lviExisting = FindItemStart( lvExisting, RemoveEpisodeInfo( strItemName ) );
+			else if ( lviWish != null ) {
+				if ( rbSeries.Checked ) {
+					lviExisting = FindItemStart( lvExisting, RemoveEpisodeInfo( strItemName ) );
+				}
 				lviExisting = FindItem( lvExisting, strItemName );
-				if ( lviExisting == null )	lviWish.BackColor = WishColor;
-				if ( lviImport != null ) lviImport.BackColor = WishColor;
+				if ( lviExisting == null ) {
+					lviWish.BackColor = WishColor;
+				}
+				if ( lviImport != null ) {
+					lviImport.BackColor = WishColor;
+				}
 			}
-			else if ( lviImport != null )
-			{
+			else if ( lviImport != null ) {
 				lviImport.BackColor = NeutralColor;
 			}
 		}
@@ -684,8 +735,7 @@ namespace Movie_File_Merger
 		void ColorImport( )
 		{
 			SetStatus( "Coloring " + strCollectionType + " in Import list..." );
-			foreach ( ListViewItem lviImport in lvImport.Items )
-			{
+			foreach ( ListViewItem lviImport in lvImport.Items ) {
 				ColorImportItem( lviImport );
 			}
 			ClearStatus( );
@@ -700,17 +750,17 @@ namespace Movie_File_Merger
 		{
 			string strTargetPath = "";
 
-			if ( !cbKeepFolders.Checked )  // movie all relevant file into the same folder
-			{
+			if ( !cbKeepFolders.Checked ) { // move all relevant file into the same folder
 				strTargetPath = tbTargetFolder.Text;
 			}
-			else  // keep the folder structure as it is in the source folder 
-			{
+			else { // keep the folder structure as it is in the source folder
 				string sSubPath = fiImportFile.DirectoryName.Substring( fiImportFile.DirectoryName.IndexOf( '\\' )+1 );
 				strTargetPath = Path.Combine( tbTargetFolder.Text, sSubPath );
 			}
 
-			if(!Directory.Exists( strTargetPath ) ) Directory.CreateDirectory( strTargetPath );
+			if( !Directory.Exists( strTargetPath ) ) {
+				Directory.CreateDirectory( strTargetPath );
+			}
 
 			return strTargetPath;
 		}
@@ -720,13 +770,11 @@ namespace Movie_File_Merger
 		/// </summary>
 		void ProcessImport()
 		{
-			if(!Directory.Exists(tbImportFolder.Text))
-			{
+			if(!Directory.Exists(tbImportFolder.Text)) {
 				ShowInfo("Select a folder with the " + strCollectionType + " to import...");
 				return;
 			}
-			if(!Directory.Exists(tbTargetFolder.Text))
-			{
+			if(!Directory.Exists(tbTargetFolder.Text)) {
 				ShowInfo("Select a target folder...");
 				return;
 			}
@@ -740,69 +788,68 @@ namespace Movie_File_Merger
 			bool bSourceListOpen = false;
 			
 			// tag the items to be copied or moved
-			foreach ( ListViewItem lviThis in lvImport.Items )
-			{
+			foreach ( ListViewItem lviThis in lvImport.Items ) {
 				lviThis.Tag = lviThis.BackColor == WishColor;
 			}
 
 			var diImportFolder = new DirectoryInfo( tbImportFolder.Text );
 			SearchOption soMovieFileMerger = SearchOption.AllDirectories;
 
-			foreach( FileInfo fiImportFile in diImportFolder.GetFiles( "*", soMovieFileMerger ) )
-			{
+			foreach( FileInfo fiImportFile in diImportFolder.GetFiles( "*", soMovieFileMerger ) ) {
 				string strImportName = fiImportFile.Name;
 				// ignore not relevant files
 				if ( !rgxVideoExtensions.IsMatch( fiImportFile.Extension ) &&
-				     !rgxAddonExtensions.IsMatch( fiImportFile.Extension ) ) continue;
+				     !rgxAddonExtensions.IsMatch( fiImportFile.Extension ) ) {
+					continue;
+				}
 				
 				// cut the file extension, to reduce list entries to only one per item
-				if ( strImportName.LastIndexOf( '.' ) != -1 )
-				{
+				if ( strImportName.LastIndexOf( '.' ) != -1 ) {
 					strImportName = strImportName.Substring( 0, strImportName.LastIndexOf( '.' ) );
 				}
 				
 				strImportName = CleanName( RemoveEpisodeInfo( strImportName ) );
 				ListViewItem lviImport = FindItem( lvImport, strImportName );
-				if ( lviImport != null )
-				{
-					if( (bool)lviImport.Tag == true )
-					{
+				if ( lviImport != null ) {
+					if( (bool)lviImport.Tag == true ) {
 						sTargetPath = MakeTargetPath( fiImportFile );
 						sSourceFile = fiImportFile.FullName; //" \"" +  + "\" ";
 						
-						if ( sOldTargetPath != sTargetPath )
-						{
-							if( bSourceListOpen )
-							{
+						if ( sOldTargetPath != sTargetPath ) {
+							if( bSourceListOpen ) {
 								swSourceListFile.Close( );
 								bSourceListOpen = false;
 								DoTeraCopy( sSourceListFileName, sOldTargetPath );
 							}
 							sOldTargetPath = sTargetPath;
 						}
-						if ( !bSourceListOpen )
-						{
+						if ( !bSourceListOpen ) {
 							sSourceListFileName = "TeraCopy List - " + tbNickName.Text + " " +
-								StandardizeDate(DateTime.Now) +  " " +
-								StandardizeTime(DateTime.Now) + " " +
-								sTargetPath.Replace( "\\", " - " ).Replace( ':', ' ' ) +
-								".tcl";
-							sSourceListFileName = Path.Combine( sTeraCopyListsPath, sSourceListFileName );
+							                      StandardizeDate(DateTime.Now) +  " " +
+							                      StandardizeTime(DateTime.Now) + " " +
+							                      sTargetPath.Replace( "\\", " - " ).Replace( ':', ' ' ) +
+							                      ".tcl";
+							sSourceListFileName = Path.Combine( strTeraCopyListsPath, sSourceListFileName );
 							swSourceListFile = new StreamWriter( sSourceListFileName );
 							bSourceListOpen = true;
 							sOldTargetPath = sTargetPath;
 						}
 
-						if ( rbCopy.Checked ) LogMessage( "Add to Source List", Color.Blue, "Copy " + sSourceFile + " -> " + sTargetPath );
-						else LogMessage( "Add to Source List", Color.Blue,  "Move " + sSourceFile + " -> " + sTargetPath );
+						if ( rbCopy.Checked ) {
+							LogMessage( "Add to Source List", Color.Blue, "Copy " + 
+							            sSourceFile + " -> " + sTargetPath );
+						}
+						else {
+							LogMessage( "Add to Source List", Color.Blue,  "Move " + 
+							            sSourceFile + " -> " + sTargetPath );
+						}
 						
 						swSourceListFile.WriteLine( sSourceFile );
 						AddItemToListView( lvExisting, lviImport );
 					}
 				}
 			}
-			if ( bSourceListOpen )
-			{
+			if ( bSourceListOpen ) {
 				swSourceListFile.Close( );
 				DoTeraCopy( sSourceListFileName, sOldTargetPath );
 			}
@@ -820,22 +867,21 @@ namespace Movie_File_Merger
 			string sTeraCopy = tbTeraCopyPath.Text;
 			const string sOptions = " /SkipAll /Close ";
 			
-			try
-			{
-				if (rbCopy.Checked)
-				{
-					System.Diagnostics.Process.Start( sTeraCopy, "Copy *\"" + sSourceListFile + "\" \"" + sTargetPath + "\" " + sOptions );
-					LogMessage( "Add Source List", Color.Purple,  "TeraCopy " + sSourceListFile + " -> " + sTargetPath + sOptions );
+			try {
+				if (rbCopy.Checked) {
+					System.Diagnostics.Process.Start( sTeraCopy, "Copy *\"" + 
+					                                  sSourceListFile + "\" \"" + sTargetPath + "\" " + sOptions );
+					LogMessage( "Add Source List", Color.Purple,  "TeraCopy " + 
+					            sSourceListFile + " -> " + sTargetPath + sOptions );
 				}
-				else
-				{
-					System.Diagnostics.Process.Start( sTeraCopy, "Move *\"" + sSourceListFile + "\" \"" + sTargetPath + "\" "  + sOptions );
-					LogMessage( "Add Source List", Color.Purple,  "TeraMove " + sSourceListFile + " -> " + sTargetPath + sOptions );
+				else {
+					System.Diagnostics.Process.Start( sTeraCopy, "Move *\"" + 
+					                                  sSourceListFile + "\" \"" + sTargetPath + "\" "  + sOptions );
+					LogMessage( "Add Source List", Color.Purple,  "TeraMove " + 
+					            sSourceListFile + " -> " + sTargetPath + sOptions );
 				}
 				System.Threading.Thread.Sleep( 1000 );
-			}
-			catch ( IOException e )
-			{
+			} catch ( IOException e ) {
 				ShowInfo( e.Message );
 			}
 		}
@@ -848,7 +894,8 @@ namespace Movie_File_Merger
 		/// <returns>The found list item, otherwise null if there are no items in the view</returns>
 		ListViewItem FindItem( ListView lvListView, string strText )
 		{
-			return ( lvListView.Items.Count < 1 ) ? null : lvListView.FindItemWithText( strText, false, 0, false );
+			return ( lvListView.Items.Count < 1 ) ? null : 
+				                                    lvListView.FindItemWithText( strText, false, 0, false );
 		}
 
 		/// <summary>
@@ -859,13 +906,15 @@ namespace Movie_File_Merger
 		/// <returns>The item if found, otherwise null.</returns>
 		ListViewItem FindItemStart( ListView lvListView, string strText )
 		{
-			if ( lvListView.Items.Count < 1 ) return null;
+			if ( lvListView.Items.Count < 1 ) {
+				return null;
+			}
 			ListViewItem lviThis = lvListView.FindItemWithText( strText );
-			if ( lviThis != null )
-			{
-				if ( lviThis.Text.Length >= strText.Length )
-				{
-					if ( lviThis.Text.Substring(0,strText.Length) == strText ) return lviThis;
+			if ( lviThis != null ) {
+				if ( lviThis.Text.Length >= strText.Length ) {
+					if ( lviThis.Text.Substring(0,strText.Length) == strText ) {
+						return lviThis;
+					}
 				}
 			}
 			return null;
@@ -877,8 +926,7 @@ namespace Movie_File_Merger
 		/// </summary>
 		void Play( )
 		{
-			if( !Directory.Exists( tbImportFolder.Text ) )
-			{
+			if( !Directory.Exists( tbImportFolder.Text ) ) {
 				ShowInfo( "Select a folder with the " + strCollectionType + " to import..." );
 				return;
 			}
@@ -886,27 +934,26 @@ namespace Movie_File_Merger
 			var diImportFolder = new DirectoryInfo( tbImportFolder.Text );
 			SearchOption soMovieFileMerger = SearchOption.AllDirectories;
 
-			foreach( FileInfo fiImportFile in diImportFolder.GetFiles( "*", soMovieFileMerger ) )
-			{
-				if ( !rgxVideoExtensions.IsMatch( fiImportFile.Extension ) ) continue;
+			foreach( FileInfo fiImportFile in diImportFolder.GetFiles( "*", soMovieFileMerger ) ) {
+				if ( !rgxVideoExtensions.IsMatch( fiImportFile.Extension ) ) {
+					continue;
+				}
 				
 				string strImportName = fiImportFile.Name;
-				if ( fiImportFile.Name.LastIndexOf( '.' ) != -1 )
-				{
+				if ( fiImportFile.Name.LastIndexOf( '.' ) != -1 ) {
 					strImportName = strImportName.Substring( 0, fiImportFile.Name.LastIndexOf( '.' ) );
 				}
 				strImportName = CleanName( strImportName );
 				ListViewItem lviImport = FindItem( lvImport, strImportName );
-				if ( lviImport != null )
-				{
-					if( lviImport.Selected )
-					{
+				if ( lviImport != null ) {
+					if( lviImport.Selected ) {
 						SetStatus( "Playing " + fiImportFile.Name + "..." );
-						try
-						{
+						try {
 							System.Diagnostics.Process.Start( fiImportFile.FullName );
 						}
-						catch ( Exception e ) { ShowInfo( e.Message ); }
+						catch ( Exception e ) { 
+							ShowInfo( e.Message ); 
+						}
 					}
 				}
 				ClearStatus( );
@@ -919,8 +966,7 @@ namespace Movie_File_Merger
 		/// </summary>
 		void GetMediaInfo( )
 		{
-			if( !Directory.Exists( tbImportFolder.Text ) )
-			{
+			if( !Directory.Exists( tbImportFolder.Text ) ) {
 				ShowInfo( "Select a folder with the " + strCollectionType + " to import..." );
 				return;
 			}
@@ -928,27 +974,26 @@ namespace Movie_File_Merger
 			var diImportFolder = new DirectoryInfo( tbImportFolder.Text );
 			SearchOption soMovieFileMerger = SearchOption.AllDirectories;
 
-			foreach( FileInfo fiImportFile in diImportFolder.GetFiles( "*", soMovieFileMerger ) )
-			{
+			foreach( FileInfo fiImportFile in diImportFolder.GetFiles( "*", soMovieFileMerger ) ) {
 				if ( !rgxVideoExtensions.IsMatch( fiImportFile.Extension ) ) continue;
 				
 				string strImportName = fiImportFile.Name;
-				if ( fiImportFile.Name.LastIndexOf( '.' ) != -1 )
-				{
+				if ( fiImportFile.Name.LastIndexOf( '.' ) != -1 ) {
 					strImportName = strImportName.Substring( 0, fiImportFile.Name.LastIndexOf( '.' ) );
 				}
 				strImportName = CleanName( strImportName );
 				ListViewItem lviImport = FindItem( lvImport, strImportName );
-				if ( lviImport != null )
-				{
-					if( lviImport.Selected )
-					{
+
+				if ( lviImport != null ) {
+					if( lviImport.Selected ) {
 						SetStatus( "Getting MediaInfo for " + fiImportFile.Name + "..." );
-						try
-						{
-							System.Diagnostics.Process.Start( tbMediaInfoPath.Text, " \"" + fiImportFile.FullName + "\"" );
+						try {
+							System.Diagnostics.Process.Start( tbMediaInfoPath.Text, " \"" + 
+							                                  fiImportFile.FullName + "\"" );
 						}
-						catch ( Exception e ) { ShowInfo( e.Message ); }
+						catch ( Exception e ) { 
+							ShowInfo( e.Message ); 
+						}
 					}
 				}
 				ClearStatus( );
@@ -962,16 +1007,20 @@ namespace Movie_File_Merger
 		void EraseSelected( ListView lvThis )
 		{
 			SetListViewChanged( lvThis, true );
-			foreach ( ListViewItem lviItem in lvThis.SelectedItems )
-			{
+			foreach ( ListViewItem lviItem in lvThis.SelectedItems ) {
 				lvThis.Items.Remove( lviItem );
 				ColorAll( lviItem.Text );
 			}
-			if ( rbSeries.Checked )
-			{
-				if ( (string)lvThis.Tag == "Garbage" ) ColorExistingAndUp( );
-				if ( (string)lvThis.Tag == "Existing" ) ColorWishAndUp( );
-				if ( (string)lvThis.Tag == "Wish" ) ColorImport( );
+			if ( rbSeries.Checked ) {
+				if ( (string)lvThis.Tag == "Garbage" ) {
+					ColorExistingAndUp( );
+				}
+				if ( (string)lvThis.Tag == "Existing" ) {
+					ColorWishAndUp( );
+				}
+				if ( (string)lvThis.Tag == "Wish" ) {
+					ColorImport( );
+				}
 			}
 		}
 		
@@ -983,13 +1032,11 @@ namespace Movie_File_Merger
 		{
 			string strName = lvListView.Tag + " " +  strCollectionType;
 			
-			if (( lvListView.Tag.ToString() == "Existing" && bExistingChanged ) ||
-			    ( lvListView.Tag.ToString() == "Wish" && bWishChanged ) ||
-			    ( lvListView.Tag.ToString() == "Garbage" && bGarbageChanged ))
-			{
-				if ( ShowYesNoQuestion( "Save " + strName + "?" ) == DialogResult.Yes )
-				{
-					SerializeListView( lvListView, Path.Combine( sPrivatePath, strName + ".slv" ) );
+			if ( ( lvListView.Tag.ToString() == "Existing" && bExistingChanged ) ||
+			     ( lvListView.Tag.ToString() == "Wish" && bWishChanged ) ||
+			     ( lvListView.Tag.ToString() == "Garbage" && bGarbageChanged )) {
+				if ( ShowYesNoQuestion( "Save " + strName + "?" ) == DialogResult.Yes ) {
+					SerializeListView( lvListView, Path.Combine( strPrivatePath, strName + ".slv" ) );
 				}
 			}
 		}
@@ -1003,16 +1050,14 @@ namespace Movie_File_Merger
 		void RbProjectTypeClick( object sender, EventArgs e )
 		{
 			var rbRadioButton = (RadioButton)sender;
-			if ( rbRadioButton.Checked )
-			{
+
+			if ( rbRadioButton.Checked ) {
 				strCollectionType = rbRadioButton.Tag.ToString( );
 				lvImport.Items.Clear( );
 				InitListViewFromFile( lvGarbage );
 				InitListViewFromFile( lvExisting );
 				InitListViewFromFile( lvWish );
-			}
-			else
-			{
+			} else {
 				SaveChangedListView( lvGarbage );
 				SaveChangedListView( lvExisting );
 				SaveChangedListView( lvWish );
@@ -1050,9 +1095,9 @@ namespace Movie_File_Merger
 		/// </summary>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
-		void RtbMouseEnter(object sender, System.EventArgs e)
+		void RtbMouseEnter( object sender, System.EventArgs e )
 		{
-			((RichTextBox)sender).Focus();
+			( (RichTextBox)sender ).Focus( );
 		}
 		
 		/// <summary>
@@ -1060,9 +1105,9 @@ namespace Movie_File_Merger
 		/// </summary>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
-		void LinkClicked(object sender, LinkClickedEventArgs e)
+		void LinkClicked( object sender, LinkClickedEventArgs e )
 		{
-			System.Diagnostics.Process.Start(e.LinkText);
+			System.Diagnostics.Process.Start( e.LinkText );
 		}
 		
 		/// <summary>
@@ -1072,7 +1117,8 @@ namespace Movie_File_Merger
 		/// <returns>The series name.</returns>
 		string RemoveEpisodeInfo( string strCleanName )
 		{
-			return ( rbSeries.Checked ) ? Regex.Replace( strCleanName, @" S\d+e\d+$", "" ) : strCleanName;
+			return ( rbSeries.Checked ) ? Regex.Replace( strCleanName, @" S\d+e\d+$", "" ) : 
+			                              strCleanName;
 		}
 
 		/// <summary>
@@ -1082,10 +1128,10 @@ namespace Movie_File_Merger
 		/// <param name="lvListView">The list view with the selected items.</param>
 		void SearchIMDb( ListView lvListView )
 		{
-			foreach ( ListViewItem lviItem in lvListView.SelectedItems )
-			{
+			foreach ( ListViewItem lviItem in lvListView.SelectedItems ) {
 				string strCleanName = RemoveEpisodeInfo( lviItem.Text );
-				System.Diagnostics.Process.Start( "http://www.imdb.com/find?q=" + strCleanName.Replace( ' ', '+' ) + strIMDbSearchType );
+				System.Diagnostics.Process.Start( "http://www.imdb.com/find?q=" + 
+				                                  strCleanName.Replace( ' ', '+' ) + strIMDbSearchType );
 				LogMessage( "Info", Color.Blue, "Searching IMDb for " + strCleanName );
 			}
 		}
@@ -1097,10 +1143,10 @@ namespace Movie_File_Merger
 		/// <param name="lvListView">The list view with the selected items.</param>
 		void SearchTorrenz( ListView lvListView )
 		{
-			foreach ( ListViewItem lviItem in lvListView.SelectedItems )
-			{
+			foreach ( ListViewItem lviItem in lvListView.SelectedItems ) {
 				string strCleanName = RemoveEpisodeInfo( lviItem.Text );
-				System.Diagnostics.Process.Start( "http://torrentz.eu/search?f=" + strCleanName.Replace( ' ', '+' ) );
+				System.Diagnostics.Process.Start( "http://torrentz.eu/search?f=" + 
+				                                  strCleanName.Replace( ' ', '+' ) );
 				LogMessage( "Info", Color.Blue, "Searching Torrenz for " + strCleanName );
 			}
 		}
@@ -1122,14 +1168,13 @@ namespace Movie_File_Merger
 		/// <param name="strItemName">The item name which should be matched a good as possible.</param>
 		void ShowClosestItem( ListView lvListView, string strItemName )
 		{
-			if ( lvListView.Items.Count > 0 && !lvListView.Focused )
-			{
+			if ( lvListView.Items.Count > 0 && !lvListView.Focused ) {
 				ListViewItem lviItem;
 				ListViewItem lviClosest = lvListView.Items[lvListView.Items.Count-1];
 				int iLength = 1;
 				
-				while ( (iLength < strItemName.Length) && (lviItem = lvListView.FindItemWithText( strItemName.Substring( 0, iLength ) ) ) != null )
-				{
+				while ( (iLength < strItemName.Length) && 
+				        (lviItem = lvListView.FindItemWithText( strItemName.Substring( 0, iLength ) ) ) != null ) {
 					lviClosest = lviItem;
 					iLength++;
 				}
@@ -1144,10 +1189,18 @@ namespace Movie_File_Merger
 		/// <returns>True, if only one item is the focused list is selected, otherwise false.</returns>
 		bool OneItemSelected( )
 		{
-			if( lvGarbage.Focused ) return lvGarbage.SelectedItems.Count<2;
-			if( lvExisting.Focused ) return lvExisting.SelectedItems.Count<2;
-			if( lvWish.Focused ) return lvWish.SelectedItems.Count<2;
-			if( lvImport.Focused ) return lvImport.SelectedItems.Count<2;
+			if( lvGarbage.Focused ) {
+				return lvGarbage.SelectedItems.Count<2;
+			}
+			if( lvExisting.Focused ) {
+				return lvExisting.SelectedItems.Count<2;
+			}
+			if( lvWish.Focused ) {
+				return lvWish.SelectedItems.Count<2;
+			}
+			if( lvImport.Focused ) {
+				return lvImport.SelectedItems.Count<2;
+			}
 			return false;
 		}
 		
@@ -1158,8 +1211,7 @@ namespace Movie_File_Merger
 		/// <param name="e"></param>
 		void LvItemSelectionChanged( object sender, ListViewItemSelectionChangedEventArgs e )
 		{
-			if ( e.Item.Selected && OneItemSelected( ) )
-			{
+			if ( e.Item.Selected && OneItemSelected( ) ) {
 				ShowClosestItem( lvExisting, e.Item.Text );
 				ShowClosestItem( lvGarbage, e.Item.Text );
 				ShowClosestItem( lvWish, e.Item.Text );
@@ -1177,17 +1229,14 @@ namespace Movie_File_Merger
 			SetStatus( "Serializing " + lvListView.Tag + " " + strCollectionType + "..." );
 			var fsListView = new FileStream( strFileName, FileMode.Create );
 			var bf = new BinaryFormatter( );
-			var strcolItems = new StringCollection();
-			foreach ( ListViewItem lviItem in lvListView.Items )
-			{
+			var strcolItems = new StringCollection( );
+			
+			foreach ( ListViewItem lviItem in lvListView.Items ) {
 				strcolItems.Add( lviItem.Text + "\t" + lviItem.ToolTipText );
 			}
-			try
-			{
+			try {
 				bf.Serialize( fsListView, strcolItems );
-			}
-			catch( System.Runtime.Serialization.SerializationException e )
-			{
+			} catch( System.Runtime.Serialization.SerializationException e ) {
 				ShowInfo( e.Message );
 			}
 			fsListView.Close( );
@@ -1204,23 +1253,25 @@ namespace Movie_File_Merger
 		{
 			var strcolStr = new StringCollection( );
 			SetStatus( "Adding " + lvListView.Tag + " " + strCollectionType + "..." );
-			try
-			{
+			try {
 				var fsItems = new FileStream( strFileName, FileMode.Open );
 				var bf = new BinaryFormatter( );
 				strcolStr = (StringCollection)bf.Deserialize( fsItems );
 				fsItems.Close( );
+			} catch ( IOException e ) { 
+				ShowInfo( e.Message ); 
 			}
-			catch ( IOException e ) { ShowInfo( e.Message ); }
 			
 			lvListView.BeginUpdate( );
 			lvListView.Items.Clear( );
 			lvListView.Sorting = SortOrder.None;
-			foreach( string strListViewItemName in strcolStr )
-			{
+			foreach( string strListViewItemName in strcolStr ) {
 				string[] saParts = strListViewItemName.Split( '\t' );
 				var lviThis = new ListViewItem( saParts[0] );
-				if ( saParts.Length > 1 ) lviThis.ToolTipText = saParts[1];
+				
+				if ( saParts.Length > 1 ) {
+					lviThis.ToolTipText = saParts[1];
+				}
 				lvListView.Items.Add( lviThis );
 				ColorAll( saParts[0] );
 			}
@@ -1239,11 +1290,10 @@ namespace Movie_File_Merger
 		string ExtractVideoInfo( FileInfo fiFile, bool bFullDetails )
 		{
 			string sMediaInfo = fiFile.Name + "\n" +
-				"[" + tbNickName.Text + " " + StandardizeDate( DateTime.Today ) + "]  " +
-				fiFile.DirectoryName;
-				sMediaInfo += "\nLast Written " + StandardizeDate( fiFile.LastWriteTime );
-			if ( bFullDetails && cbMediaInfo.Checked )
-			{
+			                    "[" + tbNickName.Text + " " + StandardizeDate( DateTime.Today ) + "]  " +
+			                    fiFile.DirectoryName;
+			                    sMediaInfo += "\nLast Written " + StandardizeDate( fiFile.LastWriteTime );
+			if ( bFullDetails && cbMediaInfo.Checked ) {
 				miThis.Open( fiFile.FullName );
 				miThis.Option( "Inform", "General;%Duration/String%,  %FileSize/String%  %Format%" ); // file size
 				sMediaInfo += "\n" + miThis.Inform( );
@@ -1252,12 +1302,10 @@ namespace Movie_File_Merger
 				miThis.Option( "Inform", "Audio;Audio:  %Channel(s)/String%  %Language/String%,  %SamplingRate/String%  %Format%\n" );
 				sMediaInfo += "\n" + miThis.Inform( ).Replace( "Audio: ", "\nAudio: " ).Replace( "Audio:  ,", "Audio:" );
 				miThis.Close( );
-			}
-			else
-			{
+			} else {
 				sMediaInfo += "\n" + 
-					fiFile.Length/1024/1024 + " MiB,  " +
-					fiFile.Extension.ToUpper( ).Substring( 1 );;
+				              fiFile.Length/1024/1024 + " MiB,  " +
+				              fiFile.Extension.ToUpper( ).Substring( 1 );;
 			}
 			return sMediaInfo;
 		}
@@ -1270,10 +1318,8 @@ namespace Movie_File_Merger
 		void EraseColorFromListView( ListView lvThis, Color clrToErase )
 		{
 			lvThis.BeginUpdate( );
-			foreach ( ListViewItem lviThis in lvThis.Items )
-			{
-				if ( lviThis.BackColor == clrToErase )
-				{
+			foreach ( ListViewItem lviThis in lvThis.Items ) {
+				if ( lviThis.BackColor == clrToErase ) {
 					lvThis.Items.Remove( lviThis );
 					ColorAll( lviThis.Text );
 					SetListViewChanged( lvThis, true );
@@ -1319,8 +1365,12 @@ namespace Movie_File_Merger
 		/// <param name="e"></param>
 		void LvDragOver( object sender, DragEventArgs e )
 		{
-			if ( e.Data.GetDataPresent( typeof( ListView.SelectedListViewItemCollection ) ) ) e.Effect = e.AllowedEffect;
-			if ( e.Data.GetDataPresent( DataFormats.FileDrop ) ) e.Effect = e.AllowedEffect;
+			if ( e.Data.GetDataPresent( typeof( ListView.SelectedListViewItemCollection ) ) ) {
+				e.Effect = e.AllowedEffect;
+			}
+			if ( e.Data.GetDataPresent( DataFormats.FileDrop ) ) {
+				e.Effect = e.AllowedEffect;
+			}
 		}
 		
 		/// <summary>
@@ -1333,65 +1383,70 @@ namespace Movie_File_Merger
 		{
 			var lvThis = (ListView)sender;
 			
-			if( e.AllowedEffect == DragDropEffects.None) return;
+			if( e.AllowedEffect == DragDropEffects.None) {
+				return;
+			}
 			Cursor.Current = Cursors.WaitCursor;
+			
 			// from another list view
-			if( e.Data.GetDataPresent( typeof( ListView.SelectedListViewItemCollection ) ) )
-			{
-				foreach ( ListViewItem lviThis in (ListView.SelectedListViewItemCollection)e.Data.GetData( typeof( ListView.SelectedListViewItemCollection ) ) )
-				{
+			if( e.Data.GetDataPresent( typeof( ListView.SelectedListViewItemCollection ) ) ) {
+				foreach ( ListViewItem lviThis in (ListView.SelectedListViewItemCollection)e.Data.GetData( typeof( ListView.SelectedListViewItemCollection ) ) ) {
 					if ( rbSeries.Checked &&
-					    ( (string)lvThis.Tag == "Garbage" ||
-					      (string)lvThis.Tag == "Wish" ) )
-					{
+					     ( (string)lvThis.Tag == "Garbage" ||
+					       (string)lvThis.Tag == "Wish" ) ) {
 						var lviToAdd = new ListViewItem( RemoveEpisodeInfo( lviThis.Text ) );
 						AddItemToListView( lvThis, lviToAdd );
+					} else {
+						AddItemToListView( lvThis, lviThis );
 					}
-					else AddItemToListView( lvThis, lviThis );
 				}
-				if ( rbSeries.Checked )
-				{
-					if ( (string)lvThis.Tag == "Garbage" ) ColorExistingAndUp( );
-					if ( (string)lvThis.Tag == "Wish" ) ColorWishAndUp( );
+				if ( rbSeries.Checked ) {
+					if ( (string)lvThis.Tag == "Garbage" ) {
+						ColorExistingAndUp( );
+					}
+					if ( (string)lvThis.Tag == "Wish" ) {
+						ColorWishAndUp( );
+					}
 				}
 			}
 			// from folders or files
-			if ( e.Data.GetDataPresent( DataFormats.FileDrop ) )
-			{
+			if ( e.Data.GetDataPresent( DataFormats.FileDrop ) ) {
 				int iFolderCount = 0;
-				foreach ( string strPath in (string[])e.Data.GetData( DataFormats.FileDrop ) )
-				{
+				foreach ( string strPath in (string[])e.Data.GetData( DataFormats.FileDrop ) ) {
 					FileAttributes attr = File.GetAttributes( strPath );
 					bool isFolder = ( attr & FileAttributes.Directory ) == FileAttributes.Directory;
 					// from folder
-					if ( isFolder )
-					{
-						if ( (string)lvThis.Tag == "Import" )
-						{
+					if ( isFolder ) {
+						if ( (string)lvThis.Tag == "Import" ) {
 							iFolderCount++;
-							tbImportFolder.Text = ( iFolderCount == 1 ) ? strPath : Path.GetDirectoryName( strPath );
+							tbImportFolder.Text = ( iFolderCount == 1 ) ? strPath : 
+							                                              Path.GetDirectoryName( strPath );
 						}
 						AddFolderToListView( lvThis, strPath );
 					}
 					// from video file
-					else if ( rgxVideoExtensions.IsMatch (Path.GetExtension( strPath ) ) )
-					{
+					else if ( rgxVideoExtensions.IsMatch (Path.GetExtension( strPath ) ) ) {
 						string strJustName = Path.GetFileNameWithoutExtension( strPath );
-						if ( (string)lvThis.Tag == "Import" ) tbImportFolder.Text = Path.GetDirectoryName( strPath );
+						if ( (string)lvThis.Tag == "Import" ) {
+							tbImportFolder.Text = Path.GetDirectoryName( strPath );
+						}
 						var fiFile = new FileInfo( strPath );
 						var lviThis = new ListViewItem(CleanName(strJustName));
 						lviThis.ToolTipText = ExtractVideoInfo( fiFile, FindItem( lvThis, lviThis.Text ) == null );
 						AddItemToListView( lvThis, lviThis );
 					}
 					// from txt file
-					else if ( Path.GetExtension( strPath ) == ".txt" ) 
+					else if ( Path.GetExtension( strPath ) == ".txt" ) {
 						AddTxtToListView( lvThis, strPath );
+					}
 					// from csv file
-					else if ( Path.GetExtension( strPath ) == ".csv" ) 
+					else if ( Path.GetExtension( strPath ) == ".csv" ) {
 						AddCsvToListView( lvThis, strPath);
+					}
 					// from listview stream
-					else if ( Path.GetExtension( strPath ) == ".slv" ) 
+					else if ( Path.GetExtension( strPath ) == ".slv" ) {
 						DeserializeListView( lvThis, strPath );
+					}
 				}
 			}
 			Cursor.Current = Cursors.Default;
@@ -1449,7 +1504,9 @@ namespace Movie_File_Merger
 		/// <param name="e"></param>
 		void BtnDragOver(object sender, DragEventArgs e)
 		{
-			if ( e.Data.GetDataPresent( typeof( ListView.SelectedListViewItemCollection ) ) ) e.Effect = e.AllowedEffect;
+			if ( e.Data.GetDataPresent( typeof( ListView.SelectedListViewItemCollection ) ) ) {
+				e.Effect = e.AllowedEffect;
+			}
 		}
 		
 		/// <summary>
@@ -1471,8 +1528,7 @@ namespace Movie_File_Merger
 		/// <param name="e"></param>
 		void BtnEraseColorDragDrop( object sender, DragEventArgs e )
 		{
-			foreach ( ListViewItem lviThis in lvDragSource.SelectedItems )
-			{
+			foreach ( ListViewItem lviThis in lvDragSource.SelectedItems ) {
 				DragColor = lviThis.BackColor;
 				break;
 			}
@@ -1526,8 +1582,7 @@ namespace Movie_File_Merger
 				strCollectionType + " " +
 				StandardizeDate( DateTime.Today ) +
 				".csv";
-			if ( sfdMovieFileMerger.ShowDialog( ) == DialogResult.OK )
-			{
+			if ( sfdMovieFileMerger.ShowDialog( ) == DialogResult.OK ) {
 				sfdMovieFileMerger.InitialDirectory = "";  // take the same folder next time
 				SaveListViewToCsvFile( lvDragSource, sfdMovieFileMerger.FileName );
 			}
@@ -1541,16 +1596,16 @@ namespace Movie_File_Merger
 		/// <param name="e"></param>
 		void TbTargetFolderDragDrop( object sender, DragEventArgs e )
 		{
-			if ( e.AllowedEffect == DragDropEffects.None ) return;
+			if ( e.AllowedEffect == DragDropEffects.None ) {
+				return;
+			}
 			Cursor.Current = Cursors.WaitCursor;
-			if ( e.Data.GetDataPresent( DataFormats.FileDrop ) )
-			{
+			if ( e.Data.GetDataPresent( DataFormats.FileDrop ) ) {
 				string strPath = ( (string[])e.Data.GetData( DataFormats.FileDrop ) )[0];
 				FileAttributes attr = File.GetAttributes( strPath );
 				bool isFolder = ( attr & FileAttributes.Directory ) == FileAttributes.Directory;
 
-				if ( isFolder )
-				{
+				if ( isFolder ) {
 					tbTargetFolder.Text = strPath;
 					AddFolderToListView( lvExisting, tbTargetFolder.Text );
 				}
@@ -1566,16 +1621,16 @@ namespace Movie_File_Merger
 		/// <param name="e"></param>
 		void TbImportFolderDragDrop( object sender, DragEventArgs e )
 		{
-			if ( e.AllowedEffect == DragDropEffects.None ) return;
+			if ( e.AllowedEffect == DragDropEffects.None ) {
+				return;
+			}
 			Cursor.Current = Cursors.WaitCursor;
-			if ( e.Data.GetDataPresent( DataFormats.FileDrop) )
-			{
+			if ( e.Data.GetDataPresent( DataFormats.FileDrop) ) {
 				string strPath = ( (string[])e.Data.GetData( DataFormats.FileDrop ) )[0];
 				FileAttributes attr = File.GetAttributes( strPath );
 				bool isFolder = ( attr & FileAttributes.Directory ) == FileAttributes.Directory;
 
-				if ( isFolder )
-				{
+				if ( isFolder ) {
 					lvImport.Items.Clear( );
 					tbImportFolder.Text = strPath;
 					AddFolderToListView( lvImport, tbImportFolder.Text );
@@ -1592,7 +1647,9 @@ namespace Movie_File_Merger
 		/// <param name="e"></param>
 		void TbDragOver( object sender, DragEventArgs e )
 		{
-			if ( e.Data.GetDataPresent( DataFormats.FileDrop ) ) e.Effect = e.AllowedEffect;
+			if ( e.Data.GetDataPresent( DataFormats.FileDrop ) ) {
+				e.Effect = e.AllowedEffect;
+			}
 		}
 		
 		/// <summary>
@@ -1603,7 +1660,9 @@ namespace Movie_File_Merger
 		/// <param name="e"></param>
 		void lvKeyDown( object sender, KeyEventArgs e )
 		{
-			if ( e.KeyCode == Keys.Delete ) EraseSelected( (ListView)sender );
+			if ( e.KeyCode == Keys.Delete ) {
+				EraseSelected( (ListView)sender );
+			}
 		}
 
 		/// <summary>
@@ -1625,7 +1684,9 @@ namespace Movie_File_Merger
 		/// <param name="e"></param>
 		void TbToolTipRegexDragOver(object sender, DragEventArgs e)
 		{
-			if ( e.Data.GetDataPresent( typeof( ListView.SelectedListViewItemCollection ) ) ) e.Effect = e.AllowedEffect;
+			if ( e.Data.GetDataPresent( typeof( ListView.SelectedListViewItemCollection ) ) ) {
+				e.Effect = e.AllowedEffect;
+			}
 		}
 		
 		/// <summary>
@@ -1638,13 +1699,13 @@ namespace Movie_File_Merger
 		{
 			var rgxToolTip = new Regex( tbToolTipRegex.Text );
 			
-			if ( e.AllowedEffect == DragDropEffects.None )  return;
+			if ( e.AllowedEffect == DragDropEffects.None )  {
+				return;
+			}
 			Cursor.Current = Cursors.WaitCursor;
 			// from a list view
-			if ( e.Data.GetDataPresent( typeof( ListView.SelectedListViewItemCollection ) ) )
-			{
-				foreach ( ListViewItem lviThis in lvDragSource.Items )
-				{
+			if ( e.Data.GetDataPresent( typeof( ListView.SelectedListViewItemCollection ) ) ) {
+				foreach ( ListViewItem lviThis in lvDragSource.Items ) {
 					lviThis.Selected = rgxToolTip.IsMatch( lviThis.ToolTipText );
 				}
 			}
