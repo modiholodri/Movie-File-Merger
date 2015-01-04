@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>MFM Donations</title>
-    <meta name="description" content="MFM helps you with the selective combination of video collections, like home videos, movies, series, or documentaries.  
-                MFM runs in Dropbox and is portable. MFM works together with multiple other programs, like GOM, VLC, MediaInfo, or TeraCopy.">
-    <meta name="keywords" content="Collection, Combination, Comparison, Video, Movies, Series, Documentaries, Existing, Garbage, Wish">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+    <title>MFM Donations</title>
+    <meta name="description" content="Selective combination of video collections, home videos, movies, series... Is Portable. Works with Dropbox, TeraCopy, MediaInfo, IMDb, GOM, or VLC.">
+    <meta name="keywords" content="Collection, Combination, Comparison, Video, Movies, Series, Documentaries, Existing, Garbage, Wish">
+    <link rel="shortcut icon" type="image/x-icon" href="images/MFM32Favicon.ico" />
 
     <!--Using jQuery and jQuery UI for display effects-->
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -26,13 +27,17 @@
     <div class="wrapper"  id="container">
       
     <header>
-        <h1><!--The Hamburger Button and the Heading-->
-            <div id="hamburger">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div> Movie F. Merger</h1>
-        <p>Merge Collections on Hard Disks</p>
+       <!--The Hamburger-->
+       <div id="hamburger">
+           <div></div>
+           <div></div>
+           <div></div>
+       </div>
+
+       <!--Heading and Subtitle-->
+       <h2 style=" text-align: right"> Movie F. Merger</h2>
+       <p style=" text-align: right">Merge Collections on Hard Disks</p>
+
        <!-- The download areas -->
        <ul>
             <li><a href="https://github.com/Modi777/Movie-File-Merger/zipball/master">Download <strong>ZIP File</strong></a></li>
@@ -62,10 +67,10 @@
     <div id="content">
       <section>
 
-       <h2><img src="images/Donate.jpg" hspace="5" height="64"> Donations </h2>
+       <h1><img style="margin: 0px 5px" src="images/Donate.jpg" alt="Donate" height="64"> Donations </h1>
 
-          <p>MFM is <a href="http://en.wikipedia.org/wiki/Open_source" target="_blank">open-source</a> and 
-              available on <a href="https://github.com/Modi777/Movie-File-Merger" target="_blank">GitHub</a>.  
+          <p>MFM is <a href="http://en.wikipedia.org/wiki/Open_source">open-source</a> and 
+              available on <a href="https://github.com/Modi777/Movie-File-Merger">GitHub</a>.  
               All features of MFM are available in the free version.  
               You are welcome to contribute by donating your time and working on the source code, improving the user manual or how to guide.  
               If you find a bug, please report it.  
@@ -75,7 +80,7 @@
             <!-- EUR PayPal button start -->
             <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                 <input type="hidden" name="cmd" value="_s-xclick">
-                <table width="100">
+                <table>
                     <tr><td><input type="hidden" name="on0" value="Donate EUR">Donate Euro</td></tr><tr><td><select name="os0">
 	                    <option value="1 Beer">1 Beer €2.00 EUR</option>
 	                    <option value="1 Dinner">1 Dinner €5.00 EUR</option>
@@ -86,15 +91,15 @@
                 </table>
                 <input type="hidden" name="currency_code" value="EUR">
                 <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">
-                <input type="image" src="https://www.paypalobjects.com/en_GB/TH/i/btn/btn_paynow_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
-                <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+                <input type="image" src="https://www.paypalobjects.com/en_GB/TH/i/btn/btn_paynow_LG.gif" name="submit" alt="PayPal – The safer, easier way to pay online.">
+                <img src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" alt="Pixel" width="1" height="1">
             </form>
             <!-- EUR PayPal button end -->
 
             <!-- USD PayPal button start -->
             <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                 <input type="hidden" name="cmd" value="_s-xclick">
-                <table width="100">
+                <table>
                     <tr><td><input type="hidden" name="on0" value="Donate USD">Donate United States Dollar</td></tr><tr><td><select name="os0">
 	                    <option value="1 Beer">1 Beer $3.00 USD</option>
 	                    <option value="1 Dinner">1 Dinner $7.00 USD</option>
@@ -105,15 +110,15 @@
                 </table>
                 <input type="hidden" name="currency_code" value="USD">
                 <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">
-                <input type="image" src="https://www.paypalobjects.com/en_GB/TH/i/btn/btn_paynow_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
-                <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+                <input type="image" src="https://www.paypalobjects.com/en_GB/TH/i/btn/btn_paynow_LG.gif" name="submit" alt="PayPal – The safer, easier way to pay online.">
+                <img src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" alt="Pixel" width="1" height="1">
             </form>
             <!-- USD PayPal button end -->
 
             <!--  THB PayPal button start -->
             <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                 <input type="hidden" name="cmd" value="_s-xclick">
-                <table width="100">
+                <table>
                     <tr><td><input type="hidden" name="on0" value="Donate THB">Donate Thai Baht</td></tr><tr><td><select name="os0">
 	                    <option value="1 Beer">1 Beer ฿100.00 THB</option>
 	                    <option value="1 Dinner">1 Dinner ฿200.00 THB</option>
@@ -124,7 +129,7 @@
                 </table>
                 <input type="hidden" name="currency_code" value="THB">
                 <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">
-                <input type="image" src="https://www.paypalobjects.com/en_GB/TH/i/btn/btn_paynow_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
+                <input type="image" src="https://www.paypalobjects.com/en_GB/TH/i/btn/btn_paynow_LG.gif" name="submit" alt="PayPal – The safer, easier way to pay online.">
             </form>
             <!-- THB PayPal button end -->
       </section>
@@ -134,27 +139,27 @@
            <p><small><a href="mailto:reinhold.lauer@gmail.com">R. Lauer</a> (<a href="https://github.com/Modi777" class="user-mention">@Modi777</a>), J. Gemzoee, H. Hammerborgh<br>
                Theme by <a href="https://github.com/orderedlist">S. Smith</a></small></p>
           <!--32x32 Icons of most contributers-->
-          <a href="http://www.icsharpcode.net/OpenSource/SD/Default.aspx" target="_blank"><img src="images/SharpDevelop.jpg" alt="Free SharpDevelop IDE" width="32" height="32" hspace="5"></a>
-          <a href="http://www.microsoft.com/net" target="_blank"><img src="images/DotNet.jpg" alt="Free Framework" width="32" height="32" hspace="5"></a>
-          <a href="http://www.microsoft.com/web/webmatrix/" target="_blank"><img src="images/WebMatrix.jpg" alt="Free Web Design" width="32" height="32" hspace="5"></a>
-          <a href="https://github.com/Modi777/Movie-File-Merger/" target="_blank"><img src="images/GitHub.png" alt="Free GitHub Implementation" width="32" height="32" hspace="5"></a>
-          <a href="http://statcounter.com/" target="_blank"><img src="images/StatCounter.png" alt="Free Website Statistics" width="32" height="32" hspace="5"></a>
-          <a href="http://modi777.gitbooks.io/movie-file-merger-user-manual/" target="_blank"><img src="images/GitBook.jpg" alt="Free GitBook User Manual" width="32" height="32" hspace="5"></a>
-          <a href="http://codesector.com/teracopy" target="_blank"><img src="images/TeraCopy.jpg" alt="Free Copy Program" width="32" height="32" hspace="5"></a>
-          <a href="http://www.gomlab.com/eng/" target="_blank"><img src="images/GOM.jpg" alt="Free Media Player" width="32" height="32" hspace="5"></a>
-          <a href="http://www.imdb.com/" target="_blank"><img src="images/IMDb.jpg" alt="Free Movie Database" width="32" height="32" hspace="5"></a>
-          <a href="http://thetvdb.com/" target="_blank"><img src="images/TheTVDB.jpg" alt="Free Movie Database" width="32" height="32" hspace="5"></a>
-          <a href="http://www.videodb.info/forum_en/" target="_blank"><img src="images/PVD.png" alt="Free Video Database" width="32" height="32" hspace="5"></a>
-          <a href="http://torrentz.eu/" target="_blank"><img src="images/TorrentzEu.jpg" alt="Free Torrent Meta Search Engine" width="32" height="32" hspace="5"></a>
-          <a href="http://mediaarea.net/en/MediaInfo" target="_blank"><img src="images/MediaInfo.png" alt="Free Media Information" width="32" height="32" hspace="5"></a>
-          <a href="http://www.videolan.org/vlc/index.html" target="_blank"><img src="images/VLC.png" alt="Free Media Player" width="32" height="32" hspace="5"></a>
-          <a href="http://dropbox.com/" target="_blank"><img src="images/Dropbox.jpg" alt="Free Cloud Storage" width="32" height="32" hspace="5"></a>
-          <a href="https://www.mozilla.org/en-US/firefox" target="_blank"><img src="images/FireFox.png" alt="Free Web Browser" width="32" height="32" hspace="5"></a>
-          <a href="http://sickbeard.com/" target="_blank"><img src="images/Sickbeard.jpg" alt="Free Cloud Storage" width="32" height="32" hspace="5"></a>
-          <a href="http://www.filebot.net/" target="_blank"><img src="images/Filebot.png" alt="Free File Renamer" width="32" height="32" hspace="5"></a>
-          <a href="http://www.gimp.org/" target="_blank"><img src="images/Gimp.jpg" alt="Free Image Processing" width="32" height="32" hspace="5"></a>
-          <a href="http://www.jrsoftware.org/isinfo.php" target="_blank"><img src="images/InnoSetup.png" alt="Free Installer" width="32" height="32" hspace="5"></a>
-          <a href="http://www.nonags.com/freeware-movie-file-merger_4412.html" target="_blank"><img src="images/NoNags.png" alt="Free Download Site" width="32" height="32" hspace="5"></a>
+          <a href="http://www.icsharpcode.net/OpenSource/SD"><img src="images/SharpDevelop.jpg" alt="Free SharpDevelop IDE"></a>
+          <a href="http://www.microsoft.com/net"><img src="images/DotNet.jpg" alt="Free Framework"></a>
+          <a href="http://www.microsoft.com/web/webmatrix"><img src="images/WebMatrix.jpg" alt="Free Web Design"></a>
+          <a href="https://github.com/Modi777/Movie-File-Merger"><img src="images/GitHub.png" alt="Free GitHub Implementation"></a>
+          <a href="http://statcounter.com"><img src="images/StatCounter.png" alt="Free Website Statistics"></a>
+          <a href="http://modi777.gitbooks.io/movie-file-merger-user-manual"><img src="images/GitBook.jpg" alt="Free GitBook User Manual"></a>
+          <a href="http://codesector.com/teracopy"><img src="images/TeraCopy.jpg" alt="Free Copy Program"></a>
+          <a href="http://www.gomlab.com/eng"><img src="images/GOM.jpg" alt="Free Media Player"></a>
+          <a href="http://www.imdb.com"><img src="images/IMDb.jpg" alt="Free Movie Database"></a>
+          <a href="http://thetvdb.com"><img src="images/TheTVDB.jpg" alt="Free Movie Database"></a>
+          <a href="http://www.videodb.info/forum_en"><img src="images/PVD.png" alt="Free Video Database"></a>
+          <a href="http://torrentz.eu"><img src="images/TorrentzEu.jpg" alt="Free Torrent Meta Search Engine"></a>
+          <a href="http://mediaarea.net/en/MediaInfo"><img src="images/MediaInfo.png" alt="Free Media Information"></a>
+          <a href="http://www.videolan.org/vlc"><img src="images/VLC.png" alt="Free Media Player"></a>
+          <a href="http://dropbox.com"><img src="images/Dropbox.jpg" alt="Free Cloud Storage"></a>
+          <a href="https://www.mozilla.org/en-US/firefox"><img src="images/FireFox.png" alt="Free Web Browser"></a>
+          <a href="http://sickbeard.com"><img src="images/Sickbeard.jpg" alt="Free Cloud Storage"></a>
+          <a href="http://www.filebot.net"><img src="images/Filebot.png" alt="Free File Renamer"></a>
+          <a href="http://www.gimp.org"><img src="images/Gimp.jpg" alt="Free Image Processing"></a>
+          <a href="http://www.jrsoftware.org/isinfo.php"><img src="images/InnoSetup.png" alt="Free Installer"></a>
+          <a href="http://www.nonags.com/freeware-movie-file-merger_4412.html"><img src="images/NoNags.png" alt="Free Download Site"></a>
      </footer>
      </div>
     </div>
@@ -171,7 +176,7 @@
             "statcounter.com/counter/counter.js'></"+"script>");
         </script>
         <noscript><div class="statcounter"><a title="shopify stats"
-            href="http://statcounter.com/shopify/" target="_blank"><img
+            href="http://statcounter.com/shopify/"><img
             class="statcounter"
             src="http://c.statcounter.com/10160028/0/e4fb09c7/1/"
             alt="shopify stats"></a></div></noscript>

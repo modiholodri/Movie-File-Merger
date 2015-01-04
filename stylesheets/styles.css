@@ -23,6 +23,7 @@ h1, h2, h3 {
 
 h1 {
   font-size:24px;
+  position: relative;
 }
 
 h2 {
@@ -183,6 +184,14 @@ footer {
   position:fixed;
   bottom:50px;
 }
+
+/* format all images in the footer as icons */
+footer img {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+}
+
 
 @media print, screen and (max-width: 960px) {
   
