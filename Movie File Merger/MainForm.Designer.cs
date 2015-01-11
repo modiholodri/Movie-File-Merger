@@ -113,6 +113,7 @@ namespace Movie_File_Merger
 			this.tpLog = new System.Windows.Forms.TabPage();
 			this.rtbLog = new System.Windows.Forms.RichTextBox();
 			this.tpAbout = new System.Windows.Forms.TabPage();
+			this.llMovieFileMergerOrg = new System.Windows.Forms.LinkLabel();
 			this.rtbCopyright = new System.Windows.Forms.RichTextBox();
 			this.pbAbout = new System.Windows.Forms.PictureBox();
 			this.lblCopyLeft = new System.Windows.Forms.Label();
@@ -1193,6 +1194,7 @@ namespace Movie_File_Merger
 			// tpAbout
 			// 
 			this.tpAbout.BackColor = System.Drawing.SystemColors.Control;
+			this.tpAbout.Controls.Add(this.llMovieFileMergerOrg);
 			this.tpAbout.Controls.Add(this.rtbCopyright);
 			this.tpAbout.Controls.Add(this.pbAbout);
 			this.tpAbout.Controls.Add(this.lblCopyLeft);
@@ -1207,6 +1209,18 @@ namespace Movie_File_Merger
 			this.tpAbout.TabIndex = 3;
 			this.tpAbout.Text = "About";
 			// 
+			// llMovieFileMergerOrg
+			// 
+			this.llMovieFileMergerOrg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.llMovieFileMergerOrg.Location = new System.Drawing.Point(261, 131);
+			this.llMovieFileMergerOrg.Name = "llMovieFileMergerOrg";
+			this.llMovieFileMergerOrg.Size = new System.Drawing.Size(551, 69);
+			this.llMovieFileMergerOrg.TabIndex = 5;
+			this.llMovieFileMergerOrg.TabStop = true;
+			this.llMovieFileMergerOrg.Text = "www.Movie-File-Merger.org";
+			this.llMovieFileMergerOrg.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.llMovieFileMergerOrg.Click += new System.EventHandler(this.LlMovieFileMergerOrgClick);
+			// 
 			// rtbCopyright
 			// 
 			this.rtbCopyright.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -1219,11 +1233,10 @@ namespace Movie_File_Merger
 			this.rtbCopyright.TabIndex = 4;
 			this.rtbCopyright.Text = "";
 			this.rtbCopyright.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.LinkClicked);
+			this.rtbCopyright.MouseEnter += new System.EventHandler(this.RtbMouseEnter);
 			// 
 			// pbAbout
 			// 
-			this.pbAbout.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-			| System.Windows.Forms.AnchorStyles.Right)));
 			this.pbAbout.ErrorImage = null;
 			this.pbAbout.Image = ((System.Drawing.Image)(resources.GetObject("pbAbout.Image")));
 			this.pbAbout.ImageLocation = "";
@@ -1231,15 +1244,14 @@ namespace Movie_File_Merger
 			this.pbAbout.Location = new System.Drawing.Point(8, 10);
 			this.pbAbout.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.pbAbout.Name = "pbAbout";
-			this.pbAbout.Size = new System.Drawing.Size(261, 225);
+			this.pbAbout.Size = new System.Drawing.Size(245, 225);
 			this.pbAbout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pbAbout.TabIndex = 3;
 			this.pbAbout.TabStop = false;
 			// 
 			// lblCopyLeft
 			// 
-			this.lblCopyLeft.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-			| System.Windows.Forms.AnchorStyles.Right)));
+			this.lblCopyLeft.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.lblCopyLeft.BackColor = System.Drawing.Color.Transparent;
 			this.lblCopyLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblCopyLeft.Location = new System.Drawing.Point(13, 200);
@@ -1252,28 +1264,24 @@ namespace Movie_File_Merger
 			// 
 			// lblVersion
 			// 
-			this.lblVersion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-			| System.Windows.Forms.AnchorStyles.Right)));
 			this.lblVersion.BackColor = System.Drawing.Color.Transparent;
 			this.lblVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblVersion.Location = new System.Drawing.Point(277, 92);
+			this.lblVersion.Location = new System.Drawing.Point(261, 92);
 			this.lblVersion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblVersion.Name = "lblVersion";
-			this.lblVersion.Size = new System.Drawing.Size(644, 35);
+			this.lblVersion.Size = new System.Drawing.Size(551, 35);
 			this.lblVersion.TabIndex = 1;
 			this.lblVersion.Text = "0.1.1";
 			this.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// lblMovieFileMerger
 			// 
-			this.lblMovieFileMerger.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-			| System.Windows.Forms.AnchorStyles.Right)));
 			this.lblMovieFileMerger.BackColor = System.Drawing.Color.Transparent;
 			this.lblMovieFileMerger.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblMovieFileMerger.Location = new System.Drawing.Point(277, 33);
+			this.lblMovieFileMerger.Location = new System.Drawing.Point(261, 33);
 			this.lblMovieFileMerger.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblMovieFileMerger.Name = "lblMovieFileMerger";
-			this.lblMovieFileMerger.Size = new System.Drawing.Size(645, 59);
+			this.lblMovieFileMerger.Size = new System.Drawing.Size(552, 59);
 			this.lblMovieFileMerger.TabIndex = 0;
 			this.lblMovieFileMerger.Text = "Movie File Merger";
 			this.lblMovieFileMerger.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1459,5 +1467,6 @@ namespace Movie_File_Merger
 		private System.Windows.Forms.SplitContainer scHorizontal;
 		private System.Windows.Forms.ListView lvExisting;
 		private System.Windows.Forms.ListView lvImport;
+		private System.Windows.Forms.LinkLabel llMovieFileMergerOrg;
 	}
 }

@@ -1711,5 +1711,9 @@ namespace Movie_File_Merger
 			}
 			Cursor.Current = Cursors.Default;
 		}
+		void LlMovieFileMergerOrgClick(object sender, EventArgs e)
+		{
+			System.Diagnostics.Process.Start( "www.Movie-File-Merger.org" );
+		}
 	}
 }
