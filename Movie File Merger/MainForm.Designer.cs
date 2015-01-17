@@ -1259,7 +1259,7 @@ namespace Movie_File_Merger
 			this.lblCopyLeft.Name = "lblCopyLeft";
 			this.lblCopyLeft.Size = new System.Drawing.Size(909, 35);
 			this.lblCopyLeft.TabIndex = 2;
-			this.lblCopyLeft.Text = "© 2014 Reinhold Lauer";
+			this.lblCopyLeft.Text = "© 2015 Reinhold Lauer";
 			this.lblCopyLeft.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// lblVersion

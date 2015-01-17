@@ -7,12 +7,12 @@
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
 AppId={{C5C730EB-3765-4B4D-B5B1-DE8F1564205A}
 AppName=Movie File Merger
-AppVersion=0.1.0
-;AppVerName=Movie File Merger 0.1.0
+AppVersion=0.1.1
+;AppVerName=Movie File Merger 0.1.1
 AppPublisher=Reinhold Lauer
-AppPublisherURL=http://modi777.github.io/Movie-File-Merger/
-AppSupportURL=http://modi777.github.io/Movie-File-Merger/
-AppUpdatesURL=http://modi777.github.io/Movie-File-Merger/
+AppPublisherURL=http://Movie-File-Merger.org/
+AppSupportURL=http://Movie-File-Merger.org/
+AppUpdatesURL=http://Movie-File-Merger.org/
 DefaultDirName=D:\Movie File Merger
 DefaultGroupName=Movie File Merger
 LicenseFile=C:\Users\Modi\Dropbox\GitHub\Movie-File-Merger\License.rtf
@@ -28,17 +28,17 @@ CloseApplications=False
 RestartApplications=False
 RestartIfNeededByRun=False
 UninstallDisplayIcon={uninstallexe}
-AppCopyright=(c) 2014 Reinhold Lauer
+AppCopyright=(c) 2015 Reinhold Lauer
 UsePreviousSetupType=False
 UsePreviousTasks=False
 UsePreviousLanguage=False
 AppContact=reinhold.lauer@gmail.com
-VersionInfoVersion=0.1.0
+VersionInfoVersion=0.1.1
 VersionInfoCompany=Reinhold Lauer
 VersionInfoDescription=Selectively Merge Collections on Hard Disks
-VersionInfoCopyright=(c) 2014 Reinhold Lauer
+VersionInfoCopyright=(c) 2015 Reinhold Lauer
 VersionInfoProductName=Movie File Merger
-VersionInfoProductVersion=0.1.0
+VersionInfoProductVersion=0.1.1
 PrivilegesRequired=lowest
 InfoBeforeFile="MFM Setup Info Before.rtf"
 AllowRootDirectory=True
@@ -56,7 +56,7 @@ Source: "C:\Users\Modi\Dropbox\GitHub\Movie-File-Merger\Installation Folder\*"; 
 
 [Icons]
 Name: "{group}\Movie File Merger"; Filename: "{app}\MFM Program\Movie File Merger.exe"
-Name: "{group}\{cm:ProgramOnTheWeb,Movie File Merger}"; Filename: "http://modi777.github.io/Movie-File-Merger/"
+Name: "{group}\{cm:ProgramOnTheWeb,Movie File Merger}"; Filename: "http://Movie-File-Merger.org/"
 Name: "{group}\{cm:UninstallProgram,Movie File Merger}"; Filename: "{uninstallexe}"
 Name: "{commondesktop}\Movie File Merger"; Filename: "{app}\MFM Program\Movie File Merger.exe"; Tasks: desktopicon
 Name: "{userappdata}\Microsoft\Internet Explorer\Quick Launch\Movie File Merger"; Filename: "{app}\MFM Program\Movie File Merger.exe"; Tasks: quicklaunchicon
