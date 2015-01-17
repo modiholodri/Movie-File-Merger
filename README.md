@@ -6,21 +6,22 @@ MFM uses [Semantic Versioning][] and is programmed in [C#][] with [SharpDevelop]
 [C#]: http://www.c-sharpcorner.com/
 [SharpDevelop]: http://www.icsharpcode.net/OpenSource/SD/Default.aspx
 
-### :book: The User Manuals...
+### :book: User Manuals
 There are multiple manuals, which are more or less interconnected, involved in the whole project.
 
 - The [Movie File Merger User Manual][], which concentrates on the program technical aspects of handling MFM.  It is a GitBook and on [GitHub][GitHub MFM UM].
 - [How to Organize Videos on Your Hard Disks][] :construction: explains some of my ideas about handling collections and includes a few brief description of some useful programs.  It is also a GitBook and on [GitHub][GitHub HtOVoYHD].
 - The [Movie File Merger Wiki][], have a look at the sections on the right side when you are in the MFM Wiki :point_right:...
-[Movie File Merger User Manual]: http://modi777.gitbooks.io/movie-file-merger-user-manual/
-[GitHub MFM UM]: https://github.com/Modi777/movie-file-merger-user-manual/
-[How to Organize Videos on Your Hard Disks]: http://modi777.gitbooks.io/how-to-oraganize-videos-on-your-hard-disks/
-[GitHub HtOVoYHD]: https://github.com/Modi777/How-to-Organize-Videos-on-Your-Hard-Disks/
-[Movie File Merger Wiki]: https://github.com/Modi777/Movie-File-Merger/wiki/
+[Movie File Merger User Manual]: http://movie-file-merger.org/usermanual.html
+[GitHub MFM UM]: https://github.com/Modi777/movie-file-merger-user-manual
+[How to Organize Videos on Your Hard Disks]: http://www.movie-file-merger.org/organizevideos.html
+[GitHub HtOVoYHD]: https://github.com/Modi777/How-to-Organize-Videos-on-Your-Hard-Disks
+[Movie File Merger Wiki]: https://github.com/Modi777/Movie-File-Merger/wiki
 
 ### :arrow_double_down: The Download & Website...
-Have a look at the [Movie File Merger Website][], where you can download the project as ZIP or TAR, or the installation folder for the latest release.  Basically, you just have to put the installation folder somewhere, see [MFM Installation][] for details.
-[Movie File Merger Website]: http://modi777.github.io/Movie-File-Merger/
+Have a look at the [Movie File Merger Website][], where you can download the project as ZIP or TAR, or the installation folder for the latest release.
+[MFM Installation]: https://github.com/Modi777/Movie-File-Merger/wiki/installation/
+[Movie File Merger Website]: http://movie-file-merger.org
 
 ### :sunflower: Basic Info  
 MFM supports you with the selective combination ofvideo collections, like home movies, movies, series, or documentaries.
