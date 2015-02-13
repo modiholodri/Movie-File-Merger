@@ -115,12 +115,25 @@ namespace Movie_File_Merger
 			}
 			
 			SetColumnWidth( );
-			AssignRegexes( );  // Already done in load setttings - Remove???
 		}
 		
 		/************************/
 		/* Supporting Functions */
 		/************************/
+		void SetProgressBarText( string sText )
+		{
+			pbProcess.Update();
+			int percent = (int)(((double)(pbProcess.Value - pbProcess.Minimum) /
+			(double)(pbProcess.Maximum - pbProcess.Minimum)) * 100);
+			if ( percent > 0 ) sText = sText + " - " + percent.ToString() + "%";
+			using (Graphics gr = pbProcess.CreateGraphics())
+			{
+			    gr.DrawString( sText, SystemFonts.DefaultFont, Brushes.Black,
+			        new PointF( pbProcess.Width / 2 - ( gr.MeasureString( sText, SystemFonts.DefaultFont ).Width / 2.0F ),
+			        			pbProcess.Height / 2 - ( gr.MeasureString( sText, SystemFonts.DefaultFont ).Height / 2.0F)));
+			}
+		}
+
 
 		/// <summary>
 		/// Adds a mesage, with the date, type, and a certain color, to the rich text box on the log tab. 
@@ -540,6 +553,7 @@ namespace Movie_File_Merger
 				lviThis.ToolTipText = ExtractVideoInfo( fiFile, FindItem( lvThis, lviThis.Text ) == null );
 				AddItemToListView( lvThis, lviThis );
 				pbProcess.Value++;
+				SetProgressBarText( "Adding files" );
 			}
 			if ( rbSeries.Checked ) {
 				if ( (string)lvThis.Tag == "Garbage" ) {
@@ -552,6 +566,7 @@ namespace Movie_File_Merger
 			lvThis.Sorting = SortOrder.Ascending;
 			lvThis.EndUpdate ();
 			pbProcess.Value = 0;
+			SetProgressBarText( "Added all files!" );
 			ClearStatus( );
 		}
 		
@@ -1459,6 +1474,7 @@ namespace Movie_File_Merger
 		/// <param name="e"></param>
 		void PbProcessClick( object sender, EventArgs e )
 		{
+			SetProgressBarText ("Started doing shit...");
 			ProcessImport();
 		}
 
@@ -1714,6 +1730,28 @@ namespace Movie_File_Merger
 		void LlMovieFileMergerOrgClick(object sender, EventArgs e)
 		{
 			System.Diagnostics.Process.Start( "www.Movie-File-Merger.org" );
+		}
+		void PbProcessMouseHover(object sender, EventArgs e)
+		{
+			SetProgressBarText( "Click me to start processing..." );
+		}
+		void CobToolTipRegexSelectedIndexChanged(object sender, EventArgs e)
+		{
+			switch ( cobToolTipRegex.Text ) {
+				case "Square Format": tbToolTipRegex.Text = "\\(((4:3)|(5:4)|(3:2)|(1\\.[0-5]\\d+))\\)"; break;
+				case "Wide Screen": tbToolTipRegex.Text = "\\((16:9)|(1\\.85:1)|(1\\.[6-9]\\d+)|(2\\.[0-2]\\d+))\\)"; break;
+				case "Cinema Scope": tbToolTipRegex.Text = "\\(([23]\\.*\\d*:1)|(2\\.[3-9]\\d+)|(3\\.\\d+))\\)"; break;
+				case "Low Resolution": tbToolTipRegex.Text = "Video:  [1-6]\\d{2} x"; break;
+				case "Medium Resolution": tbToolTipRegex.Text = "Video:  [7-9]\\d{2} x"; break;
+				case "High Resolution": tbToolTipRegex.Text = "Video:  1\\d{3} x"; break;
+				case "Folder Name": tbToolTipRegex.Text = "\\\\YourFolderName"; break;
+				case "After 2009": tbToolTipRegex.Text = "201[0-9]"; break;
+				default: tbToolTipRegex.Text = ""; break;
+			}
+		}
+		void CobToolTipRegexDisplayMemberChanged(object sender, EventArgs e)
+		{
+			SetProgressBarText( cobToolTipRegex.SelectedText );
 		}
 	}
 }
