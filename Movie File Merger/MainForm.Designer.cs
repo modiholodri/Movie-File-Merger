@@ -237,9 +237,9 @@ namespace Movie_File_Merger
 			// 
 			this.tcMovieFileMerger.Controls.Add(this.tpSeparateLists);
 			this.tcMovieFileMerger.Controls.Add(this.tpSettings);
+			this.tcMovieFileMerger.Controls.Add(this.tpHelp);
 			this.tcMovieFileMerger.Controls.Add(this.tpLog);
 			this.tcMovieFileMerger.Controls.Add(this.tpAbout);
-			this.tcMovieFileMerger.Controls.Add(this.tpHelp);
 			this.tcMovieFileMerger.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.tcMovieFileMerger.ImageList = this.ilMovieFileMerger;
 			this.tcMovieFileMerger.Location = new System.Drawing.Point(0, 0);
