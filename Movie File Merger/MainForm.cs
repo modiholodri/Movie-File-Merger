@@ -122,6 +122,7 @@ namespace Movie_File_Merger
 			}
 			
 			SetColumnWidth( );
+			CheckLatestVersion( );
 		}
 		
 		/************************/
@@ -263,6 +264,56 @@ namespace Movie_File_Merger
 		/// <summary>
 		/// Loads the XML settings.
 		/// </summary>
+		void CheckLatestVersion ()
+		{
+			string sLatestRelease = "";
+			string sReleaseNotes = "";
+			string sCurrentRelease = Application.ProductVersion.Remove( Application.ProductVersion.Length-2 );
+			lblVersion.Text = sCurrentRelease;
+			var dtLastChecked = new DateTime ( );
+			string sLastCheckedDate = lblLastChecked.Text.Substring( "Last Checked: ".Length );
+			if ( sLastCheckedDate == "Never" ) sLastCheckedDate = "1900-01-01";
+			dtLastChecked = Convert.ToDateTime( sLastCheckedDate );
+			var tsWaitForDays = new TimeSpan (  1, 0, 0, 0 ); // Check for updates daily...
+			
+			switch ( cobCheckForUpdates.Text ) {
+				case "Check for updates weekly." :
+					tsWaitForDays = new TimeSpan ( 7, 0, 0, 0 );
+					break;
+				case "Check for updates monthly." :
+					tsWaitForDays = new TimeSpan ( 30, 0, 0, 0 );
+					break;
+			}
+			
+			dtLastChecked += tsWaitForDays;
+			
+			if ( dtLastChecked < DateTime.Now ) {
+				var xmlLatestVersion = new XmlDocument ( );
+				try {
+					xmlLatestVersion.Load ( @"http://www.movie-file-merger.org/MFMVersion.xml" );
+					sLatestRelease = readXmlSetting ( xmlLatestVersion, "/MFMVersions/LatestRelease", "0.0.0");
+					sReleaseNotes = readXmlSetting ( xmlLatestVersion, "/MFMVersions/ReleaseNotes", "Sorry, did not find any release notes...");
+					if ( sCurrentRelease != sLatestRelease ) {
+						if ( ShowYesNoQuestion ( "A different version of MFM (" + sCurrentRelease + " -> " + sLatestRelease + ") " +
+						                         "is available with following changes...\n" +  sReleaseNotes + "\n\n" +
+						                         "Go to the Download page now?" ) == DialogResult.Yes) {
+							System.Diagnostics.Process.Start ( "http://www.movie-file-merger.org/downloads.html" );
+						}
+						else {
+							ShowInfo ( "You can change the frequency of update checks in the About tab." );
+						}
+						lblLastChecked.Text = "Last Checked: " + StandardizeDate ( DateTime.Now );
+					}
+				}
+				catch ( Exception e ) { 
+					ShowInfo( "Tried to check for updates but had a problem...\n" + e.Message ); 
+				}
+			}
+		}
+		
+		/// <summary>
+		/// Loads the XML settings. 
+		/// </summary>
 		void LoadXmlSettings ()
 		{
 			var xmlSettings = new XmlDocument ( );
@@ -274,6 +325,8 @@ namespace Movie_File_Merger
 			cbGetHigherRes.Checked = readXmlSetting ( xmlSettings, "/MFMSettings/General/GetHigherRes", "True") == "True";
 			cbKeepFolders.Checked = readXmlSetting ( xmlSettings, "/MFMSettings/General/KeepFolders", "False") == "True";
 			cbMediaInfo.Checked = readXmlSetting ( xmlSettings, "/MFMSettings/General/MediaInfo", "True") == "True";
+			lblLastChecked.Text = readXmlSetting ( xmlSettings, "/MFMSettings/General/LastChecked", "Last Checked: Never");
+			cobCheckForUpdates.Text = readXmlSetting ( xmlSettings, "/MFMSettings/General/CheckForUpdates", "Last Checked: Never");
 			
 			// Considered Files settings 
 			tbVideoExtensionsRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/ConsideredFiles/VideoExtensionsRegex", @"avi|mkv|mp4" );
@@ -312,6 +365,8 @@ namespace Movie_File_Merger
 				writer.WriteElementString("GetHigherRes", cbGetHigherRes.Checked.ToString() );
 				writer.WriteElementString("KeepFolders", cbKeepFolders.Checked.ToString() );
 				writer.WriteElementString("MediaInfo", cbMediaInfo.Checked.ToString() );
+				writer.WriteElementString("LastChecked", lblLastChecked.Text );
+				writer.WriteElementString("CheckForUpdates", cobCheckForUpdates.Text );
 			    writer.WriteEndElement();
 			   
 			    writer.WriteStartElement("ConsideredFiles");  // Considered Files settings group
@@ -1849,6 +1904,10 @@ namespace Movie_File_Merger
 		{
 			SetStatus ("Started doing shit...");
 			ProcessImport();
+		}
+		void BtnCheckNowClick(object sender, EventArgs e)
+		{
+			CheckLatestVersion();
 		}
 	}
 }

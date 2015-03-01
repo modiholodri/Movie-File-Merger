@@ -117,6 +117,9 @@ namespace Movie_File_Merger
 			this.tpLog = new System.Windows.Forms.TabPage();
 			this.rtbLog = new System.Windows.Forms.RichTextBox();
 			this.tpAbout = new System.Windows.Forms.TabPage();
+			this.lblLastChecked = new System.Windows.Forms.Label();
+			this.cobCheckForUpdates = new System.Windows.Forms.ComboBox();
+			this.btnCheckNow = new System.Windows.Forms.Button();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.lblCopyLeft = new System.Windows.Forms.Label();
 			this.rtbCopyright = new System.Windows.Forms.RichTextBox();
@@ -304,6 +307,7 @@ namespace Movie_File_Merger
 			this.cobToolTipRegex.Name = "cobToolTipRegex";
 			this.cobToolTipRegex.Size = new System.Drawing.Size(161, 28);
 			this.cobToolTipRegex.TabIndex = 41;
+			this.cobToolTipRegex.Text = "Select Template...";
 			this.ttMovieFileMerger.SetToolTip(this.cobToolTipRegex, "Select a predefined Tool Tip Regex, \r\nwhich you can fine tune if needed.");
 			this.cobToolTipRegex.SelectedIndexChanged += new System.EventHandler(this.CobToolTipRegexSelectedIndexChanged);
 			this.cobToolTipRegex.DisplayMemberChanged += new System.EventHandler(this.CobToolTipRegexDisplayMemberChanged);
@@ -718,6 +722,8 @@ namespace Movie_File_Merger
 			this.cbGetHigherRes.TabIndex = 26;
 			this.cbGetHigherRes.Text = "Get Higher Res";
 			this.cbGetHigherRes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			this.ttMovieFileMerger.SetToolTip(this.cbGetHigherRes, "Check to copy higer vertical resolution files, eeven if they are existing already" +
+		".");
 			this.cbGetHigherRes.UseVisualStyleBackColor = true;
 			// 
 			// cbKeepFolders
@@ -1311,6 +1317,9 @@ namespace Movie_File_Merger
 			// tpAbout
 			// 
 			this.tpAbout.BackColor = System.Drawing.SystemColors.Control;
+			this.tpAbout.Controls.Add(this.lblLastChecked);
+			this.tpAbout.Controls.Add(this.cobCheckForUpdates);
+			this.tpAbout.Controls.Add(this.btnCheckNow);
 			this.tpAbout.Controls.Add(this.pictureBox1);
 			this.tpAbout.Controls.Add(this.lblCopyLeft);
 			this.tpAbout.Controls.Add(this.rtbCopyright);
@@ -1324,6 +1333,38 @@ namespace Movie_File_Merger
 			this.tpAbout.Size = new System.Drawing.Size(870, 584);
 			this.tpAbout.TabIndex = 3;
 			this.tpAbout.Text = "About";
+			// 
+			// lblLastChecked
+			// 
+			this.lblLastChecked.Location = new System.Drawing.Point(259, 186);
+			this.lblLastChecked.Name = "lblLastChecked";
+			this.lblLastChecked.Size = new System.Drawing.Size(354, 40);
+			this.lblLastChecked.TabIndex = 9;
+			this.lblLastChecked.Text = "Last Checked: Never";
+			this.lblLastChecked.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// cobCheckForUpdates
+			// 
+			this.cobCheckForUpdates.FormattingEnabled = true;
+			this.cobCheckForUpdates.Items.AddRange(new object[] {
+			"Check for updates daily.",
+			"Check for updates weekly.",
+			"Check for updates monthly."});
+			this.cobCheckForUpdates.Location = new System.Drawing.Point(9, 198);
+			this.cobCheckForUpdates.Name = "cobCheckForUpdates";
+			this.cobCheckForUpdates.Size = new System.Drawing.Size(243, 28);
+			this.cobCheckForUpdates.TabIndex = 8;
+			this.cobCheckForUpdates.Text = "Check for updates daily.";
+			// 
+			// btnCheckNow
+			// 
+			this.btnCheckNow.Location = new System.Drawing.Point(619, 186);
+			this.btnCheckNow.Name = "btnCheckNow";
+			this.btnCheckNow.Size = new System.Drawing.Size(243, 40);
+			this.btnCheckNow.TabIndex = 7;
+			this.btnCheckNow.Text = "Check for updates now!";
+			this.btnCheckNow.UseVisualStyleBackColor = true;
+			this.btnCheckNow.Click += new System.EventHandler(this.BtnCheckNowClick);
 			// 
 			// pictureBox1
 			// 
@@ -1353,10 +1394,10 @@ namespace Movie_File_Merger
 			this.rtbCopyright.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
 			| System.Windows.Forms.AnchorStyles.Left) 
 			| System.Windows.Forms.AnchorStyles.Right)));
-			this.rtbCopyright.Location = new System.Drawing.Point(7, 191);
+			this.rtbCopyright.Location = new System.Drawing.Point(7, 241);
 			this.rtbCopyright.Name = "rtbCopyright";
 			this.rtbCopyright.ReadOnly = true;
-			this.rtbCopyright.Size = new System.Drawing.Size(855, 435);
+			this.rtbCopyright.Size = new System.Drawing.Size(855, 385);
 			this.rtbCopyright.TabIndex = 4;
 			this.rtbCopyright.Text = "";
 			this.rtbCopyright.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.LinkClicked);
@@ -1371,7 +1412,7 @@ namespace Movie_File_Merger
 			this.lblVersion.Name = "lblVersion";
 			this.lblVersion.Size = new System.Drawing.Size(99, 23);
 			this.lblVersion.TabIndex = 1;
-			this.lblVersion.Text = "0.2.0";
+			this.lblVersion.Text = "x.x.x";
 			this.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// llMovieFileMergerOrg
@@ -1587,5 +1628,8 @@ namespace Movie_File_Merger
 		private System.Windows.Forms.ToolStripStatusLabel tsslMFM;
 		private System.Windows.Forms.ToolStripProgressBar tspbMFM;
 		private System.Windows.Forms.Button btnStart;
+		private System.Windows.Forms.ComboBox cobCheckForUpdates;
+		private System.Windows.Forms.Button btnCheckNow;
+		private System.Windows.Forms.Label lblLastChecked;
 	}
 }
