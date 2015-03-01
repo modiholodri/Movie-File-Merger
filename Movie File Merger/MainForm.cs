@@ -4,7 +4,7 @@
  * Date: 2012-04-09
  */
  
-// Copyright 2012-2014 Reinhold Lauer
+// Copyright 2012-2015 Reinhold Lauer
 // 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -21,6 +21,7 @@ using System.Collections.Specialized;
 using System.Drawing;
 using System.Windows.Forms;
 using System.IO;
+using System.Xml;
 using System.Text.RegularExpressions;
 using System.Globalization;
 using System.Runtime.Serialization.Formatters.Binary;
@@ -54,7 +55,7 @@ namespace Movie_File_Merger
 		string strPrivatePath = Path.Combine( Path.GetDirectoryName(Application.StartupPath), @"MFM Private\" );
 		string strCollectionsPath = Path.Combine( Path.GetDirectoryName(Application.StartupPath), @"MFM Collections\" );
 		string strTeraCopyListsPath = "";
-		string strIniFilePath = "";
+		string strXmlFilePath = "";
 
 		// regular expressions to filter the messed up file names
 		Regex rgxVideoExtensions;  // to find the main files
@@ -85,12 +86,18 @@ namespace Movie_File_Merger
 				Directory.CreateDirectory( strTeraCopyListsPath );
 			}
 			sfdMovieFileMerger.InitialDirectory = strCollectionsPath;
-			strIniFilePath = Path.Combine( strPrivatePath, "Movie File Merger.ini" );
-			if ( !File.Exists( strIniFilePath ) ) {
-				File.Copy( Path.Combine( Application.StartupPath, "Movie File Merger.ini" ), strIniFilePath );
+			strXmlFilePath = Path.Combine( strPrivatePath, "MFM Settings.xml" );
+			if ( !File.Exists( strXmlFilePath ) ) {
+				using (XmlWriter writer = XmlWriter.Create( strXmlFilePath )) // create a dummy
+				{
+				    writer.WriteStartDocument();
+				    writer.WriteStartElement("MFMSettings");  // root exlement
+				    writer.WriteEndElement();  // close the root element
+				    writer.WriteEndDocument();
+				}
 			}
 			
-			LoadSettings( );
+			LoadXmlSettings( );
 			this.Text = tbNickName.Text + " - Movie File Merger";
 
 			// load the instruction and copyright files
@@ -120,21 +127,6 @@ namespace Movie_File_Merger
 		/************************/
 		/* Supporting Functions */
 		/************************/
-		void SetProgressBarText( string sText )
-		{
-			pbProcess.Update();
-			int percent = (int)(((double)(pbProcess.Value - pbProcess.Minimum) /
-			(double)(pbProcess.Maximum - pbProcess.Minimum)) * 100);
-			if ( percent > 0 ) sText = sText + " - " + percent.ToString() + "%";
-			using (Graphics gr = pbProcess.CreateGraphics())
-			{
-			    gr.DrawString( sText, SystemFonts.DefaultFont, Brushes.Black,
-			        new PointF( pbProcess.Width / 2 - ( gr.MeasureString( sText, SystemFonts.DefaultFont ).Width / 2.0F ),
-			        			pbProcess.Height / 2 - ( gr.MeasureString( sText, SystemFonts.DefaultFont ).Height / 2.0F)));
-			}
-		}
-
-
 		/// <summary>
 		/// Adds a mesage, with the date, type, and a certain color, to the rich text box on the log tab. 
 		/// </summary>
@@ -153,6 +145,8 @@ namespace Movie_File_Merger
 		/// <param name="strMessage">The message itself.</param>
 		void SetStatus( string strMessage )
 		{
+			tsslMFM.Text = strMessage;
+			ssMFM.Update();
 			LogMessage( "Status", Color.Black, strMessage );
 			Cursor.Current = Cursors.WaitCursor;
 		}
@@ -163,6 +157,7 @@ namespace Movie_File_Merger
 		void ClearStatus( )
 		{
 			Cursor.Current = Cursors.Default;
+			tsslMFM.Text = "";
 		}
 		
 		/// <summary>
@@ -239,8 +234,8 @@ namespace Movie_File_Merger
 		/// </summary>
 		void AssignRegexes( )
 		{
-			rgxVideoExtensions = new Regex( tbVideoExtensionsRegex.Text );
-			rgxAddonExtensions = new Regex( tbAddonExtensionsRegex.Text );
+			rgxVideoExtensions = new Regex( tbVideoExtensionsRegex.Text.ToLower() );
+			rgxAddonExtensions = new Regex( tbAddonExtensionsRegex.Text.ToLower() );
 			rgxEpisodesId = new Regex( tbEpisodesIdRegex.Text );
 			rgxTrimBefore = new Regex( tbCutNameBeforeRegex.Text );
 			rgxAphanumeric = new Regex( tbOnlyCharactersRegex.Text );
@@ -248,23 +243,52 @@ namespace Movie_File_Merger
 		}
 		
 		/// <summary>
-		/// Load the settings from the ini file.
+		/// Read the setting of one XML element
 		/// </summary>
-		void LoadSettings ()
-		{
-			try {
-				var srSettings = new StreamReader( strIniFilePath );
-				tbVideoExtensionsRegex.Text = srSettings.ReadLine( );
-				tbAddonExtensionsRegex.Text = srSettings.ReadLine();
-				tbEpisodesIdRegex.Text = srSettings.ReadLine( );
-				tbCutNameBeforeRegex.Text = srSettings.ReadLine( );
-				tbOnlyCharactersRegex.Text = srSettings.ReadLine( );
-				tbToLowerRegex.Text = srSettings.ReadLine( );
-				tbNickName.Text = srSettings.ReadLine( );
-				srSettings.Close( );
-			} catch ( IOException e ) { 
-				ShowInfo( e.Message + "\nUsing default settings..." ); 
+		/// <param name="doc">The XML Document to read from.</param>
+		/// <param name="sSettingName">The XML element name.</param>
+		/// <param name="sDefault">The default value if the setting is not found.</param>
+		/// <returns>The setting as string, if found, otherwise the default value.</returns>
+		string readXmlSetting ( XmlDocument doc, string sSettingName, string sDefault ) {
+			string sText = "";
+			XmlNode node = doc.DocumentElement.SelectSingleNode ( sSettingName );
+			if ( node == null )  sText = sDefault;
+			else {
+				sText = node.InnerText;
+				if ( sText == null ) sText = sDefault;
 			}
+			return sText;
+		}
+
+		/// <summary>
+		/// Loads the XML settings.
+		/// </summary>
+		void LoadXmlSettings ()
+		{
+			var xmlSettings = new XmlDocument ( );
+			xmlSettings.Load ( strXmlFilePath );
+
+			// General settings			
+			tbNickName.Text = readXmlSetting ( xmlSettings, "/MFMSettings/General/NickName", "Anonymous");
+			tbToolTipRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/General/ToolTipRegex", "Enter a regular expression...");
+			cbGetHigherRes.Checked = readXmlSetting ( xmlSettings, "/MFMSettings/General/GetHigherRes", "True") == "True";
+			cbKeepFolders.Checked = readXmlSetting ( xmlSettings, "/MFMSettings/General/KeepFolders", "False") == "True";
+			cbMediaInfo.Checked = readXmlSetting ( xmlSettings, "/MFMSettings/General/MediaInfo", "True") == "True";
+			
+			// Considered Files settings 
+			tbVideoExtensionsRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/ConsideredFiles/VideoExtensionsRegex", @"avi|mkv|mp4" );
+			tbAddonExtensionsRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/ConsideredFiles/AddonExtensionsRegex", @"srt|sub" );
+
+			// Name Unification settings 
+			tbCutNameBeforeRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/NameUnification/CutNameBeforeRegex", @"(.[12][09]\d\d)|(cd[1234])|x264|aac|720p|1080p|divx|xvid|dvd" );
+			tbOnlyCharactersRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/NameUnification/OnlyCharactersRegex", @"[^a-zA-Z0-9 -'üöä]" );
+			tbToLowerRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/NameUnification/ToLowerRegex", @" On | A | The | Of | And | Or | To | From | For | In | As | At | With " );
+			tbEpisodesIdRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/NameUnification/EpisodesIdRegex", @".s\d+[e ]\d+" );
+
+			// Supporting Programms settings 
+			tbTeraCopyPath.Text = readXmlSetting ( xmlSettings, "/MFMSettings/SupportingProgramms/TeraCopyPath", @"C:\Program Files\TeraCopy\TeraCopy.exe" );
+			tbMediaInfoPath.Text = readXmlSetting ( xmlSettings, "/MFMSettings/SupportingProgramms/MediaInfoPath", @"C:\Program Files\MediaInfo\MediaInfo.exe" );
+
 			if ( tbNickName.Text == "Anonym" ) {
 				ShowInfo( "Please enter your nick name in the Settings..." );
 			}
@@ -272,22 +296,44 @@ namespace Movie_File_Merger
 		}
 		
 		/// <summary>
-		/// Save the settings to the ini file.
+		/// Save the XML settings.
 		/// </summary>
-		void SaveSettings( )
+		void SaveXmlSettings( )
 		{
-			try {
-				var swSettings = new StreamWriter( strIniFilePath );
-				swSettings.WriteLine( tbVideoExtensionsRegex.Text );
-				swSettings.WriteLine( tbAddonExtensionsRegex.Text );
-				swSettings.WriteLine( tbEpisodesIdRegex.Text );
-				swSettings.WriteLine( tbCutNameBeforeRegex.Text );
-				swSettings.WriteLine( tbOnlyCharactersRegex.Text );
-				swSettings.WriteLine( tbToLowerRegex.Text );
-				swSettings.WriteLine( tbNickName.Text );
-				swSettings.Close( );
-			} catch ( IOException e ) { 
-				ShowInfo( e.Message ); 
+			using (XmlWriter writer = XmlWriter.Create( strXmlFilePath ))
+			{
+			    writer.WriteStartDocument();
+
+			    writer.WriteStartElement("MFMSettings");  // root exlement
+
+			    writer.WriteStartElement("General");  // General settings group
+				writer.WriteElementString("NickName", tbNickName.Text );
+				writer.WriteElementString("ToolTipRegex", tbToolTipRegex.Text );
+				writer.WriteElementString("GetHigherRes", cbGetHigherRes.Checked.ToString() );
+				writer.WriteElementString("KeepFolders", cbKeepFolders.Checked.ToString() );
+				writer.WriteElementString("MediaInfo", cbMediaInfo.Checked.ToString() );
+			    writer.WriteEndElement();
+			   
+			    writer.WriteStartElement("ConsideredFiles");  // Considered Files settings group
+				writer.WriteElementString("VideoExtensionsRegex", tbVideoExtensionsRegex.Text );
+				writer.WriteElementString("AddonExtensionsRegex", tbAddonExtensionsRegex.Text );
+			    writer.WriteEndElement();
+
+			    writer.WriteStartElement("NameUnification");  // Name Unification settings group
+				writer.WriteElementString("CutNameBeforeRegex", tbCutNameBeforeRegex.Text );
+				writer.WriteElementString("OnlyCharactersRegex", tbOnlyCharactersRegex.Text );
+				writer.WriteElementString("ToLowerRegex", tbToLowerRegex.Text );
+				writer.WriteElementString("EpisodesIdRegex", tbEpisodesIdRegex.Text );
+			    writer.WriteEndElement();
+			    
+			    writer.WriteStartElement("SupportingProgramms");  // Supporting Programms settings group
+				writer.WriteElementString("TeraCopyPath", tbTeraCopyPath.Text );
+				writer.WriteElementString("MediaInfoPath", tbMediaInfoPath.Text );
+			    writer.WriteEndElement();
+			   
+			    writer.WriteEndElement();  // close the root element
+
+			    writer.WriteEndDocument();
 			}
 			AssignRegexes( );
 		}
@@ -452,8 +498,8 @@ namespace Movie_File_Merger
 			while ( ( line = srMovies.ReadLine( ) ) != null ) {
 				string[] saParts = line.Split( '\t' );
 				var lviThis = new ListViewItem( CleanName( saParts[0] ) );
+				lviThis = AddItemToListView( lvThis, lviThis );
 				if ( saParts.Length > 1 ) lviThis.ToolTipText = saParts[1].Replace( '*', '\n' );
-				AddItemToListView( lvThis, lviThis );
 			}
 			
 			if ( rbSeries.Checked ) {
@@ -498,10 +544,10 @@ namespace Movie_File_Merger
 				saParts = line.Split( '\t' );
 				var lviThis = new ListViewItem( CleanName( saParts[0].Trim('"') ) );
 				lviThis.ToolTipText = saParts[0] + "\n";
+				lviThis = AddItemToListView( lvThis, lviThis );
 				for ( int i = 1; i < saParts.Length; i++ ) {
 					lviThis.ToolTipText += saTitles[i] + saParts[i] + "\n";
 				}
-				AddItemToListView( lvThis, lviThis );
 				line = srMovies.ReadLine( );
 			} 
 
@@ -530,19 +576,19 @@ namespace Movie_File_Merger
 			var diFolder = new DirectoryInfo( strFolderName );
 			SearchOption soMovieFileMerger = SearchOption.AllDirectories;
 
-			SetStatus( "Loading folder " + strFolderName + " to " + lvThis.Tag + "..." );
+			SetStatus( "Adding folder " + strFolderName + " to " + lvThis.Tag + "..." );
 
 			lvThis.BeginUpdate( );
 			lvThis.Sorting = SortOrder.None;
-			pbProcess.Maximum = 1;
-			pbProcess.Value = 0;
+			tspbMFM.Maximum = 1;
+			tspbMFM.Value = 0;
 			foreach( FileInfo fiFile in diFolder.GetFiles( "*", soMovieFileMerger ) ) {
-				if( rgxVideoExtensions.IsMatch( fiFile.Extension ) ) {
-					pbProcess.Maximum++;
+				if( rgxVideoExtensions.IsMatch( fiFile.Extension.ToLower() ) ) {
+					tspbMFM.Maximum++;
 				}
 			}
 			foreach( FileInfo fiFile in diFolder.GetFiles( "*", soMovieFileMerger ) ) {
-				if( !rgxVideoExtensions.IsMatch( fiFile.Extension ) ) {
+				if( !rgxVideoExtensions.IsMatch( fiFile.Extension.ToLower() ) ) {
 					continue;
 				}
 				string strJustName = fiFile.Name;
@@ -550,10 +596,10 @@ namespace Movie_File_Merger
 					strJustName = strJustName.Substring( 0, strJustName.LastIndexOf( '.' ) );
 				}
 				var lviThis = new ListViewItem ( CleanName( strJustName ) );
-				lviThis.ToolTipText = ExtractVideoInfo( fiFile, FindItem( lvThis, lviThis.Text ) == null );
-				AddItemToListView( lvThis, lviThis );
-				pbProcess.Value++;
-				SetProgressBarText( "Adding files" );
+				lviThis = AddItemToListView( lvThis, lviThis );
+				MakeToolTip( fiFile, lvThis, lviThis );
+				tspbMFM.Value++;
+				// SetStatus( "Adding " + fiFile.Name );
 			}
 			if ( rbSeries.Checked ) {
 				if ( (string)lvThis.Tag == "Garbage" ) {
@@ -565,8 +611,8 @@ namespace Movie_File_Merger
 			}
 			lvThis.Sorting = SortOrder.Ascending;
 			lvThis.EndUpdate ();
-			pbProcess.Value = 0;
-			SetProgressBarText( "Added all files!" );
+			tspbMFM.Value = 0;
+			SetStatus( "Added all files!" );
 			ClearStatus( );
 		}
 		
@@ -683,7 +729,23 @@ namespace Movie_File_Merger
 			else {
 				ListViewItem lviExisting = FindItem( lvExisting, lviImport.Text );
 				if ( lviExisting != null ) {
-					lviImport.BackColor = ExistingColor;
+					if ( cbGetHigherRes.Checked ) {
+						Match mtExistingResolution = Regex.Match( lviExisting.ToolTipText, "Video:  \\d+" );
+						if ( mtExistingResolution.Success ) {
+							Match mtImportResolution = Regex.Match( lviImport.ToolTipText, "Video:  \\d+" );
+							if ( mtImportResolution.Success ) {
+								string sExistingResolution = Regex.Match(mtExistingResolution.Value, @"\d+").Value;
+								int iExistingResolution = Int32.Parse(sExistingResolution);
+								string sImportResolution = Regex.Match(mtExistingResolution.Value, @"\d+").Value;
+								int iImportResolution = Int32.Parse(sImportResolution);
+								lviImport.BackColor = ( iExistingResolution < iImportResolution ) ? WishColor :
+																									ExistingColor;
+							}
+							else lviImport.BackColor = ExistingColor;
+						}
+						else lviImport.BackColor = ExistingColor;
+					}
+					else lviImport.BackColor = ExistingColor;
 				}
 				else {
 					ListViewItem lviWish = FindItem( lvWish, RemoveEpisodeInfo( lviImport.Text ) );
@@ -724,7 +786,23 @@ namespace Movie_File_Merger
 					lviWish.BackColor = ExistingColor;
 				}
 				if ( lviImport != null ) {
-					lviImport.BackColor = ExistingColor;
+					if ( cbGetHigherRes.Checked ) {
+						Match mtExistingResolution = Regex.Match( lviExisting.ToolTipText, @"Video:  \d+" );
+						if ( mtExistingResolution.Success ) {
+							Match mtImportResolution = Regex.Match( lviImport.ToolTipText, @"Video:  \d+" );
+							if ( mtImportResolution.Success ) {
+								string sExistingResolution = Regex.Match(mtExistingResolution.Value, @"\d+").Value;
+								int iExistingResolution = Int32.Parse(sExistingResolution);
+								string sImportResolution = Regex.Match(mtImportResolution.Value, @"\d+").Value;
+								int iImportResolution = Int32.Parse(sImportResolution);
+								lviImport.BackColor = ( iExistingResolution < iImportResolution ) ? WishColor :
+																									ExistingColor;
+							}
+							else lviImport.BackColor = ExistingColor;
+						}
+						else lviImport.BackColor = ExistingColor;
+					}
+					else lviImport.BackColor = ExistingColor;
 				}
 			}
 			else if ( lviWish != null ) {
@@ -813,8 +891,8 @@ namespace Movie_File_Merger
 			foreach( FileInfo fiImportFile in diImportFolder.GetFiles( "*", soMovieFileMerger ) ) {
 				string strImportName = fiImportFile.Name;
 				// ignore not relevant files
-				if ( !rgxVideoExtensions.IsMatch( fiImportFile.Extension ) &&
-				     !rgxAddonExtensions.IsMatch( fiImportFile.Extension ) ) {
+				if ( !rgxVideoExtensions.IsMatch( fiImportFile.Extension.ToLower() ) &&
+				    !rgxAddonExtensions.IsMatch( fiImportFile.Extension.ToLower() ) ) {
 					continue;
 				}
 				
@@ -950,7 +1028,7 @@ namespace Movie_File_Merger
 			SearchOption soMovieFileMerger = SearchOption.AllDirectories;
 
 			foreach( FileInfo fiImportFile in diImportFolder.GetFiles( "*", soMovieFileMerger ) ) {
-				if ( !rgxVideoExtensions.IsMatch( fiImportFile.Extension ) ) {
+				if ( !rgxVideoExtensions.IsMatch( fiImportFile.Extension.ToLower() ) ) {
 					continue;
 				}
 				
@@ -990,7 +1068,7 @@ namespace Movie_File_Merger
 			SearchOption soMovieFileMerger = SearchOption.AllDirectories;
 
 			foreach( FileInfo fiImportFile in diImportFolder.GetFiles( "*", soMovieFileMerger ) ) {
-				if ( !rgxVideoExtensions.IsMatch( fiImportFile.Extension ) ) continue;
+				if ( !rgxVideoExtensions.IsMatch( fiImportFile.Extension.ToLower() ) ) continue;
 				
 				string strImportName = fiImportFile.Name;
 				if ( fiImportFile.Name.LastIndexOf( '.' ) != -1 ) {
@@ -1090,7 +1168,7 @@ namespace Movie_File_Merger
 			SaveChangedListView( lvExisting );
 			SaveChangedListView( lvGarbage );
 			SaveChangedListView( lvWish );
-			SaveSettings( );
+			SaveXmlSettings( );
 		}
 		
 		/// <summary>
@@ -1300,29 +1378,41 @@ namespace Movie_File_Merger
 		/// Extracts full information of a file with MediaInfo, but returns only selected infomration. 
 		/// </summary>
 		/// <param name="fiFile">The file to analyse.</param>
-		/// <param name="bFullDetails">Show full details or not?</param>
+		/// <param name="lvThis">The list view in question.</param>
+		/// <param name="lviThis">the list view item in question.</param>
 		/// <returns>Selected media information.</returns>
-		string ExtractVideoInfo( FileInfo fiFile, bool bFullDetails )
+		void MakeToolTip( FileInfo fiFile, ListView lvThis, ListViewItem lviThis )
 		{
-			string sMediaInfo = fiFile.Name + "\n" +
-			                    "[" + tbNickName.Text + " " + StandardizeDate( DateTime.Today ) + "]  " +
-			                    fiFile.DirectoryName;
-			                    sMediaInfo += "\nLast Written " + StandardizeDate( fiFile.LastWriteTime );
-			if ( bFullDetails && cbMediaInfo.Checked ) {
+			bool bItemMissing = FindItem( lvThis, lviThis.Text ) == null;
+			bool bHasMediaInfo = lviThis.ToolTipText.Contains ( "Video: " );
+			string sBasicItemInfo = fiFile.Name + "\n" +
+			                    "[" + tbNickName.Text + " " + StandardizeDate( DateTime.Today ) + "]  " ;
+			                    
+			
+			string sFileInfo = fiFile.DirectoryName + "\n" + 
+				               fiFile.Length/1024/1024 + " MiB,  " +
+				               fiFile.Extension.ToUpper( ).Substring( 1 ) +
+							   ", Last Written " + StandardizeDate( fiFile.LastWriteTime );
+			bool bDifferentFile = !lviThis.ToolTipText.Contains( sFileInfo );
+			bool bFullDetails = ( bItemMissing || !bHasMediaInfo || bDifferentFile) && cbMediaInfo.Checked;
+
+			string sMediaInfo = "";
+			if ( bFullDetails ) {
+				SetStatus ( "Getting MediaInfo for " + fiFile.Name );
 				miThis.Open( fiFile.FullName );
-				miThis.Option( "Inform", "General;%Duration/String%,  %FileSize/String%  %Format%" ); // file size
+				miThis.Option( "Inform", "General;%Duration/String%,  %Format%" ); // file size
 				sMediaInfo += "\n" + miThis.Inform( );
 				miThis.Option( "Inform", "Video;Video:  %Width% x%Height% (%DisplayAspectRatio/String%) at %FrameRate/String%,  %BitRate/String%" );
 				sMediaInfo += "\n\n" + miThis.Inform( );
 				miThis.Option( "Inform", "Audio;Audio:  %Channel(s)/String%  %Language/String%,  %SamplingRate/String%  %Format%\n" );
 				sMediaInfo += "\n" + miThis.Inform( ).Replace( "Audio: ", "\nAudio: " ).Replace( "Audio:  ,", "Audio:" );
 				miThis.Close( );
-			} else {
-				sMediaInfo += "\n" + 
-				              fiFile.Length/1024/1024 + " MiB,  " +
-				              fiFile.Extension.ToUpper( ).Substring( 1 );;
 			}
-			return sMediaInfo;
+			
+			if ( bFullDetails || bItemMissing || !bHasMediaInfo ) lviThis.ToolTipText = sBasicItemInfo + sFileInfo + sMediaInfo;
+			else if ( bDifferentFile ) { 
+				if ( !bHasMediaInfo || sMediaInfo != "" ) lviThis.ToolTipText = sBasicItemInfo + sFileInfo + sMediaInfo;
+			}
 		}
 		
 		/// <summary>
@@ -1440,26 +1530,26 @@ namespace Movie_File_Merger
 						AddFolderToListView( lvThis, strPath );
 					}
 					// from video file
-					else if ( rgxVideoExtensions.IsMatch (Path.GetExtension( strPath ) ) ) {
+					else if ( rgxVideoExtensions.IsMatch (Path.GetExtension( strPath ).ToLower() ) ) {
 						string strJustName = Path.GetFileNameWithoutExtension( strPath );
 						if ( (string)lvThis.Tag == "Import" ) {
 							tbImportFolder.Text = Path.GetDirectoryName( strPath );
 						}
 						var fiFile = new FileInfo( strPath );
 						var lviThis = new ListViewItem(CleanName(strJustName));
-						lviThis.ToolTipText = ExtractVideoInfo( fiFile, FindItem( lvThis, lviThis.Text ) == null );
-						AddItemToListView( lvThis, lviThis );
+						lviThis = AddItemToListView( lvThis, lviThis );
+						MakeToolTip( fiFile, lvThis, lviThis );
 					}
 					// from txt file
-					else if ( Path.GetExtension( strPath ) == ".txt" ) {
+					else if ( Path.GetExtension( strPath ).ToLower() == ".txt" ) {
 						AddTxtToListView( lvThis, strPath );
 					}
 					// from csv file
-					else if ( Path.GetExtension( strPath ) == ".csv" ) {
+					else if ( Path.GetExtension( strPath ).ToLower() == ".csv" ) {
 						AddCsvToListView( lvThis, strPath);
 					}
 					// from listview stream
-					else if ( Path.GetExtension( strPath ) == ".slv" ) {
+					else if ( Path.GetExtension( strPath ).ToLower() == ".slv" ) {
 						DeserializeListView( lvThis, strPath );
 					}
 				}
@@ -1474,8 +1564,6 @@ namespace Movie_File_Merger
 		/// <param name="e"></param>
 		void PbProcessClick( object sender, EventArgs e )
 		{
-			SetProgressBarText ("Started doing shit...");
-			ProcessImport();
 		}
 
 		/// <summary>
@@ -1509,7 +1597,7 @@ namespace Movie_File_Merger
 		/// <param name="e"></param>
 		void TpSettingsLeave( object sender, EventArgs e )
 		{
-			SaveSettings( );
+			SaveXmlSettings( );
 		}
 		
 		/// <summary>
@@ -1731,27 +1819,36 @@ namespace Movie_File_Merger
 		{
 			System.Diagnostics.Process.Start( "www.Movie-File-Merger.org" );
 		}
-		void PbProcessMouseHover(object sender, EventArgs e)
-		{
-			SetProgressBarText( "Click me to start processing..." );
-		}
+
 		void CobToolTipRegexSelectedIndexChanged(object sender, EventArgs e)
 		{
 			switch ( cobToolTipRegex.Text ) {
-				case "Square Format": tbToolTipRegex.Text = "\\(((4:3)|(5:4)|(3:2)|(1\\.[0-5]\\d+))\\)"; break;
-				case "Wide Screen": tbToolTipRegex.Text = "\\((16:9)|(1\\.85:1)|(1\\.[6-9]\\d+)|(2\\.[0-2]\\d+))\\)"; break;
-				case "Cinema Scope": tbToolTipRegex.Text = "\\(([23]\\.*\\d*:1)|(2\\.[3-9]\\d+)|(3\\.\\d+))\\)"; break;
-				case "Low Resolution": tbToolTipRegex.Text = "Video:  [1-6]\\d{2} x"; break;
-				case "Medium Resolution": tbToolTipRegex.Text = "Video:  [7-9]\\d{2} x"; break;
-				case "High Resolution": tbToolTipRegex.Text = "Video:  1\\d{3} x"; break;
-				case "Folder Name": tbToolTipRegex.Text = "\\\\YourFolderName"; break;
-				case "After 2009": tbToolTipRegex.Text = "201[0-9]"; break;
-				default: tbToolTipRegex.Text = ""; break;
+				case "Square Format": tbToolTipRegex.Text = @"\(((4:3)|(5:4)|(3:2)|(1\.[0-5]\d+))\)"; break;
+				case "Wide Screen": tbToolTipRegex.Text = @"\((16:9)|(1\.85:1)|(1\.[6-9]\d+)|(2\.[0-2]\d+))\)"; break;
+				case "Cinema Scope": tbToolTipRegex.Text = @"\(([23]\.*\d*:1)|(2\.[3-9]\d+)|(3\.\d+))\)"; break;
+				case "Low Resolution": tbToolTipRegex.Text = @"Video:  [1-6]\d{2} x"; break;
+				case "Medium Resolution": tbToolTipRegex.Text = @"Video:  [7-9]\d{2} x"; break;
+				case "High Resolution": tbToolTipRegex.Text = @"Video:  1\d{3} x"; break;
+				case "Folder Name": tbToolTipRegex.Text = @"\\YourFolderName\\"; break;
+				case "After 2009": tbToolTipRegex.Text = @"201[0-9]"; break;
+				default: tbToolTipRegex.Text = @""; break;
 			}
 		}
+		
 		void CobToolTipRegexDisplayMemberChanged(object sender, EventArgs e)
 		{
-			SetProgressBarText( cobToolTipRegex.SelectedText );
+			SetStatus( cobToolTipRegex.SelectedText );
+		}
+		
+		void StatusStrip1ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+		{
+	
+		}
+		
+		void BtnStartClick(object sender, EventArgs e)
+		{
+			SetStatus ("Started doing shit...");
+			ProcessImport();
 		}
 	}
 }
