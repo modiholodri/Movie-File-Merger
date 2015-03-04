@@ -1336,6 +1336,8 @@ namespace Movie_File_Merger
 			// 
 			// lblLastChecked
 			// 
+			this.lblLastChecked.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+			| System.Windows.Forms.AnchorStyles.Right)));
 			this.lblLastChecked.Location = new System.Drawing.Point(259, 186);
 			this.lblLastChecked.Name = "lblLastChecked";
 			this.lblLastChecked.Size = new System.Drawing.Size(354, 40);
@@ -1358,6 +1360,7 @@ namespace Movie_File_Merger
 			// 
 			// btnCheckNow
 			// 
+			this.btnCheckNow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.btnCheckNow.Location = new System.Drawing.Point(619, 186);
 			this.btnCheckNow.Name = "btnCheckNow";
 			this.btnCheckNow.Size = new System.Drawing.Size(243, 40);
@@ -1368,6 +1371,8 @@ namespace Movie_File_Merger
 			// 
 			// pictureBox1
 			// 
+			this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+			| System.Windows.Forms.AnchorStyles.Right)));
 			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
 			this.pictureBox1.Location = new System.Drawing.Point(9, 8);
 			this.pictureBox1.Name = "pictureBox1";
@@ -1417,6 +1422,8 @@ namespace Movie_File_Merger
 			// 
 			// llMovieFileMergerOrg
 			// 
+			this.llMovieFileMergerOrg.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+			| System.Windows.Forms.AnchorStyles.Right)));
 			this.llMovieFileMergerOrg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.llMovieFileMergerOrg.Location = new System.Drawing.Point(8, 140);
 			this.llMovieFileMergerOrg.Name = "llMovieFileMergerOrg";

@@ -528,7 +528,7 @@ namespace Movie_File_Merger
 			if ( lviThis == null ) {
 				lviThis = new ListViewItem( lviToAdd.Text );
 				lviThis.ToolTipText = lviToAdd.ToolTipText;
-				lvThis.Items.Add (lviThis );
+				lvThis.Items.Add ( lviThis );
 				ColorAll( lviToAdd.Text );
 				SetListViewChanged( lvThis, true );
 			}
@@ -653,6 +653,8 @@ namespace Movie_File_Merger
 				var lviThis = new ListViewItem ( CleanName( strJustName ) );
 				lviThis = AddItemToListView( lvThis, lviThis );
 				MakeToolTip( fiFile, lvThis, lviThis );
+				if ( cbGetHigherRes.Checked ) ColorAll( lviThis.Text );  // color again to get info from tooltip
+
 				tspbMFM.Value++;
 				// SetStatus( "Adding " + fiFile.Name );
 			}
@@ -789,10 +791,10 @@ namespace Movie_File_Merger
 						if ( mtExistingResolution.Success ) {
 							Match mtImportResolution = Regex.Match( lviImport.ToolTipText, "Video:  \\d+" );
 							if ( mtImportResolution.Success ) {
-								string sExistingResolution = Regex.Match(mtExistingResolution.Value, @"\d+").Value;
-								int iExistingResolution = Int32.Parse(sExistingResolution);
-								string sImportResolution = Regex.Match(mtExistingResolution.Value, @"\d+").Value;
-								int iImportResolution = Int32.Parse(sImportResolution);
+								string sExistingResolution = Regex.Match( mtExistingResolution.Value, @"\d+" ).Value;
+								int iExistingResolution = Int32.Parse( sExistingResolution );
+								string sImportResolution = Regex.Match( mtExistingResolution.Value, @"\d+" ).Value;
+								int iImportResolution = Int32.Parse(sImportResolution );
 								lviImport.BackColor = ( iExistingResolution < iImportResolution ) ? WishColor :
 																									ExistingColor;
 							}
@@ -846,10 +848,10 @@ namespace Movie_File_Merger
 						if ( mtExistingResolution.Success ) {
 							Match mtImportResolution = Regex.Match( lviImport.ToolTipText, @"Video:  \d+" );
 							if ( mtImportResolution.Success ) {
-								string sExistingResolution = Regex.Match(mtExistingResolution.Value, @"\d+").Value;
-								int iExistingResolution = Int32.Parse(sExistingResolution);
-								string sImportResolution = Regex.Match(mtImportResolution.Value, @"\d+").Value;
-								int iImportResolution = Int32.Parse(sImportResolution);
+								string sExistingResolution = Regex.Match( mtExistingResolution.Value, @"\d+" ).Value;
+								int iExistingResolution = Int32.Parse( sExistingResolution );
+								string sImportResolution = Regex.Match( mtImportResolution.Value, @"\d+" ).Value;
+								int iImportResolution = Int32.Parse( sImportResolution );
 								lviImport.BackColor = ( iExistingResolution < iImportResolution ) ? WishColor :
 																									ExistingColor;
 							}
@@ -1594,6 +1596,7 @@ namespace Movie_File_Merger
 						var lviThis = new ListViewItem(CleanName(strJustName));
 						lviThis = AddItemToListView( lvThis, lviThis );
 						MakeToolTip( fiFile, lvThis, lviThis );
+						if ( cbGetHigherRes.Checked ) ColorAll( lviThis.Text );  // color again to get info from tooltip
 					}
 					// from txt file
 					else if ( Path.GetExtension( strPath ).ToLower() == ".txt" ) {
