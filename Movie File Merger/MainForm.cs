@@ -1882,8 +1882,8 @@ namespace Movie_File_Merger
 		{
 			switch ( cobToolTipRegex.Text ) {
 				case "Square Format": tbToolTipRegex.Text = @"\(((4:3)|(5:4)|(3:2)|(1\.[0-5]\d+))\)"; break;
-				case "Wide Screen": tbToolTipRegex.Text = @"\((16:9)|(1\.85:1)|(1\.[6-9]\d+)|(2\.[0-2]\d+))\)"; break;
-				case "Cinema Scope": tbToolTipRegex.Text = @"\(([23]\.*\d*:1)|(2\.[3-9]\d+)|(3\.\d+))\)"; break;
+				case "Wide Screen": tbToolTipRegex.Text = @"\(((16:9)|(1\.85:1)|(1\.[6-9]\d+)|(2\.[0-2]\d+))\)"; break;
+				case "Cinema Scope": tbToolTipRegex.Text = @"\((([23]\.*\d*:1)|(2\.[3-9]\d+)|(3\.\d+))\)"; break;
 				case "Low Resolution": tbToolTipRegex.Text = @"Video:  [1-6]\d{2} x"; break;
 				case "Medium Resolution": tbToolTipRegex.Text = @"Video:  [7-9]\d{2} x"; break;
 				case "High Resolution": tbToolTipRegex.Text = @"Video:  1\d{3} x"; break;
