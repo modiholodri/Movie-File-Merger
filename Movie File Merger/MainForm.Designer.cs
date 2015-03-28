@@ -110,8 +110,8 @@ namespace Movie_File_Merger
 			this.gbSettingsConsideredFiles = new System.Windows.Forms.GroupBox();
 			this.lblAddonExtensions = new System.Windows.Forms.Label();
 			this.tbAddonExtensionsRegex = new System.Windows.Forms.TextBox();
-			this.lblVideoExtensions = new System.Windows.Forms.Label();
-			this.tbVideoExtensionsRegex = new System.Windows.Forms.TextBox();
+			this.lblMainExtensions = new System.Windows.Forms.Label();
+			this.tbMainExtensionsRegex = new System.Windows.Forms.TextBox();
 			this.tpHelp = new System.Windows.Forms.TabPage();
 			this.rtbHelp = new System.Windows.Forms.RichTextBox();
 			this.tpLog = new System.Windows.Forms.TabPage();
@@ -1202,8 +1202,8 @@ namespace Movie_File_Merger
 			| System.Windows.Forms.AnchorStyles.Right)));
 			this.gbSettingsConsideredFiles.Controls.Add(this.lblAddonExtensions);
 			this.gbSettingsConsideredFiles.Controls.Add(this.tbAddonExtensionsRegex);
-			this.gbSettingsConsideredFiles.Controls.Add(this.lblVideoExtensions);
-			this.gbSettingsConsideredFiles.Controls.Add(this.tbVideoExtensionsRegex);
+			this.gbSettingsConsideredFiles.Controls.Add(this.lblMainExtensions);
+			this.gbSettingsConsideredFiles.Controls.Add(this.tbMainExtensionsRegex);
 			this.gbSettingsConsideredFiles.Location = new System.Drawing.Point(9, 10);
 			this.gbSettingsConsideredFiles.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.gbSettingsConsideredFiles.Name = "gbSettingsConsideredFiles";
@@ -1238,30 +1238,30 @@ namespace Movie_File_Merger
 			this.ttMovieFileMerger.SetToolTip(this.tbAddonExtensionsRegex, "The Add-on Files Extension identified add-on files like subtitles or posters. \r\nA" +
 		"dd-on files will be only considered if a main video file exists.");
 			// 
-			// lblVideoExtensions
+			// lblMainExtensions
 			// 
-			this.lblVideoExtensions.Location = new System.Drawing.Point(8, 30);
-			this.lblVideoExtensions.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-			this.lblVideoExtensions.Name = "lblVideoExtensions";
-			this.lblVideoExtensions.Size = new System.Drawing.Size(245, 29);
-			this.lblVideoExtensions.TabIndex = 20;
-			this.lblVideoExtensions.Text = "Video Files Extensions Regex";
-			this.ttMovieFileMerger.SetToolTip(this.lblVideoExtensions, "The Video Files Extension regular expression identifies main video files. \r\nIf no" +
-		" main file exists also the add-on files will be ignored.");
+			this.lblMainExtensions.Location = new System.Drawing.Point(8, 30);
+			this.lblMainExtensions.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.lblMainExtensions.Name = "lblMainExtensions";
+			this.lblMainExtensions.Size = new System.Drawing.Size(245, 29);
+			this.lblMainExtensions.TabIndex = 20;
+			this.lblMainExtensions.Text = "Main Files Extensions Regex";
+			this.ttMovieFileMerger.SetToolTip(this.lblMainExtensions, "The Main Files Extension regular expression identifies main files. \r\nIf no main f" +
+		"ile exists also the add-on files will be ignored.");
 			// 
-			// tbVideoExtensionsRegex
+			// tbMainExtensionsRegex
 			// 
-			this.tbVideoExtensionsRegex.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+			this.tbMainExtensionsRegex.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
 			| System.Windows.Forms.AnchorStyles.Right)));
-			this.tbVideoExtensionsRegex.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.tbVideoExtensionsRegex.Location = new System.Drawing.Point(261, 27);
-			this.tbVideoExtensionsRegex.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.tbVideoExtensionsRegex.Name = "tbVideoExtensionsRegex";
-			this.tbVideoExtensionsRegex.Size = new System.Drawing.Size(581, 26);
-			this.tbVideoExtensionsRegex.TabIndex = 21;
-			this.tbVideoExtensionsRegex.Text = "avi|mkv|mp4";
-			this.ttMovieFileMerger.SetToolTip(this.tbVideoExtensionsRegex, "The Video Files Extension regular expression identifies main video files. \r\nIf no" +
-		" main file exists also the add-on files will be ignored.");
+			this.tbMainExtensionsRegex.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.tbMainExtensionsRegex.Location = new System.Drawing.Point(261, 27);
+			this.tbMainExtensionsRegex.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.tbMainExtensionsRegex.Name = "tbMainExtensionsRegex";
+			this.tbMainExtensionsRegex.Size = new System.Drawing.Size(581, 26);
+			this.tbMainExtensionsRegex.TabIndex = 21;
+			this.tbMainExtensionsRegex.Text = "avi|mkv|mp4";
+			this.ttMovieFileMerger.SetToolTip(this.tbMainExtensionsRegex, "The Main Files Extension regular expression identifies main files. \r\nIf no main f" +
+		"ile exists also the add-on files will be ignored.");
 			// 
 			// tpHelp
 			// 
@@ -1614,8 +1614,8 @@ namespace Movie_File_Merger
 		private System.Windows.Forms.RadioButton rbCopy;
 		private System.Windows.Forms.RadioButton rbMove;
 		private System.Windows.Forms.Button btnMediaInfo;
-		private System.Windows.Forms.Label lblVideoExtensions;
-		private System.Windows.Forms.TextBox tbVideoExtensionsRegex;
+		private System.Windows.Forms.Label lblMainExtensions;
+		private System.Windows.Forms.TextBox tbMainExtensionsRegex;
 		private System.Windows.Forms.SaveFileDialog sfdMovieFileMerger;
 		private System.Windows.Forms.Timer tmrUpdateCounters;
 		private System.Windows.Forms.ListView lvGarbage;

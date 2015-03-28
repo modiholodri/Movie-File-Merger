@@ -58,7 +58,7 @@ namespace Movie_File_Merger
 		string strXmlFilePath = "";
 
 		// regular expressions to filter the messed up file names
-		Regex rgxVideoExtensions;  // to find the main files
+		Regex rgxMainExtensions;  // to find the main files
 		Regex rgxAddonExtensions;  // to find wanted addon files, like subtitles
 		Regex rgxEpisodesId;  // to find the episode identifier
 		Regex rgxTrimBefore;  // the names will be cut of before, like 720p
@@ -98,7 +98,7 @@ namespace Movie_File_Merger
 			}
 			
 			LoadXmlSettings( );
-			this.Text = tbNickName.Text + " - Movie File Merger";
+			Text = tbNickName.Text + " - Movie File Merger";
 
 			// load the instruction and copyright files
 			try { 
@@ -235,7 +235,7 @@ namespace Movie_File_Merger
 		/// </summary>
 		void AssignRegexes( )
 		{
-			rgxVideoExtensions = new Regex( tbVideoExtensionsRegex.Text.ToLower() );
+			rgxMainExtensions = new Regex( tbMainExtensionsRegex.Text.ToLower() );
 			rgxAddonExtensions = new Regex( tbAddonExtensionsRegex.Text.ToLower() );
 			rgxEpisodesId = new Regex( tbEpisodesIdRegex.Text );
 			rgxTrimBefore = new Regex( tbCutNameBeforeRegex.Text );
@@ -329,7 +329,7 @@ namespace Movie_File_Merger
 			cobCheckForUpdates.Text = readXmlSetting ( xmlSettings, "/MFMSettings/General/CheckForUpdates", "Last Checked: Never");
 			
 			// Considered Files settings 
-			tbVideoExtensionsRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/ConsideredFiles/VideoExtensionsRegex", @"avi|mkv|mp4" );
+			tbMainExtensionsRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/ConsideredFiles/MainExtensionsRegex", @"avi|mkv|mp4" );
 			tbAddonExtensionsRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/ConsideredFiles/AddonExtensionsRegex", @"srt|sub" );
 
 			// Name Unification settings 
@@ -370,7 +370,7 @@ namespace Movie_File_Merger
 			    writer.WriteEndElement();
 			   
 			    writer.WriteStartElement("ConsideredFiles");  // Considered Files settings group
-				writer.WriteElementString("VideoExtensionsRegex", tbVideoExtensionsRegex.Text );
+				writer.WriteElementString("MainExtensionsRegex", tbMainExtensionsRegex.Text );
 				writer.WriteElementString("AddonExtensionsRegex", tbAddonExtensionsRegex.Text );
 			    writer.WriteEndElement();
 
@@ -638,12 +638,12 @@ namespace Movie_File_Merger
 			tspbMFM.Maximum = 1;
 			tspbMFM.Value = 0;
 			foreach( FileInfo fiFile in diFolder.GetFiles( "*", soMovieFileMerger ) ) {
-				if( rgxVideoExtensions.IsMatch( fiFile.Extension.ToLower() ) ) {
+				if( rgxMainExtensions.IsMatch( fiFile.Extension.ToLower() ) ) {
 					tspbMFM.Maximum++;
 				}
 			}
 			foreach( FileInfo fiFile in diFolder.GetFiles( "*", soMovieFileMerger ) ) {
-				if( !rgxVideoExtensions.IsMatch( fiFile.Extension.ToLower() ) ) {
+				if( !rgxMainExtensions.IsMatch( fiFile.Extension.ToLower() ) ) {
 					continue;
 				}
 				string strJustName = fiFile.Name;
@@ -948,7 +948,7 @@ namespace Movie_File_Merger
 			foreach( FileInfo fiImportFile in diImportFolder.GetFiles( "*", soMovieFileMerger ) ) {
 				string strImportName = fiImportFile.Name;
 				// ignore not relevant files
-				if ( !rgxVideoExtensions.IsMatch( fiImportFile.Extension.ToLower() ) &&
+				if ( !rgxMainExtensions.IsMatch( fiImportFile.Extension.ToLower() ) &&
 				    !rgxAddonExtensions.IsMatch( fiImportFile.Extension.ToLower() ) ) {
 					continue;
 				}
@@ -1085,7 +1085,7 @@ namespace Movie_File_Merger
 			SearchOption soMovieFileMerger = SearchOption.AllDirectories;
 
 			foreach( FileInfo fiImportFile in diImportFolder.GetFiles( "*", soMovieFileMerger ) ) {
-				if ( !rgxVideoExtensions.IsMatch( fiImportFile.Extension.ToLower() ) ) {
+				if ( !rgxMainExtensions.IsMatch( fiImportFile.Extension.ToLower() ) ) {
 					continue;
 				}
 				
@@ -1125,7 +1125,7 @@ namespace Movie_File_Merger
 			SearchOption soMovieFileMerger = SearchOption.AllDirectories;
 
 			foreach( FileInfo fiImportFile in diImportFolder.GetFiles( "*", soMovieFileMerger ) ) {
-				if ( !rgxVideoExtensions.IsMatch( fiImportFile.Extension.ToLower() ) ) continue;
+				if ( !rgxMainExtensions.IsMatch( fiImportFile.Extension.ToLower() ) ) continue;
 				
 				string strImportName = fiImportFile.Name;
 				if ( fiImportFile.Name.LastIndexOf( '.' ) != -1 ) {
@@ -1587,7 +1587,7 @@ namespace Movie_File_Merger
 						AddFolderToListView( lvThis, strPath );
 					}
 					// from video file
-					else if ( rgxVideoExtensions.IsMatch (Path.GetExtension( strPath ).ToLower() ) ) {
+					else if ( rgxMainExtensions.IsMatch (Path.GetExtension( strPath ).ToLower() ) ) {
 						string strJustName = Path.GetFileNameWithoutExtension( strPath );
 						if ( (string)lvThis.Tag == "Import" ) {
 							tbImportFolder.Text = Path.GetDirectoryName( strPath );
