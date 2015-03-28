@@ -11,6 +11,8 @@ Update...
 ![CollectionType.jpg](https://github.com/Modi777/Movie-File-Merger/blob/master/Manuals/CollectionType.jpg)
 
 ####ConsideredFiles.jpg####
+Update...
+
 ![ConsideredFiles.jpg](https://github.com/Modi777/Movie-File-Merger/blob/master/Manuals/ConsideredFiles.jpg)
 
 ####Documentaries.jpg####
@@ -31,6 +33,8 @@ Update...
 ![FileRenamer.jpg](https://github.com/Modi777/Movie-File-Merger/blob/master/Manuals/FileRenamer.jpg)
 
 ####Folders.jpg####
+Update...
+
 ![Folders.jpg](https://github.com/Modi777/Movie-File-Merger/blob/master/Manuals/Folders.jpg)
 
 ####GOMPreferences.jpg####
@@ -60,15 +64,23 @@ Update...
 ![MFM_Dropbox2.jpg](https://github.com/Modi777/Movie-File-Merger/blob/master/Manuals/MFM_Dropbox2.jpg)
 
 ####MFM_GOM.jpg####
+Update...
+
 ![MFM_GOM.jpg](https://github.com/Modi777/Movie-File-Merger/blob/master/Manuals/MFM_GOM.jpg)
 
 ####MFM_IMDb.jpg####
+Update...
+
 ![MFM_IMDb.jpg](https://github.com/Modi777/Movie-File-Merger/blob/master/Manuals/MFM_IMDb.jpg)
 
 ####MFM_MediaInfo.jpg####
+Update...
+
 ![MFM_MediaInfo.jpg](https://github.com/Modi777/Movie-File-Merger/blob/master/Manuals/MFM_MediaInfo.jpg)
 
 ####MFM_Torrentz.jpg####
+Update...
+
 ![MFM_Torrentz.jpg](https://github.com/Modi777/Movie-File-Merger/blob/master/Manuals/MFM_Torrentz.jpg)
 
 ####MFMSetupAdditionalTasks.jpg####
@@ -84,6 +96,8 @@ Update...
 ![MFMSetupInformation.jpg](https://github.com/Modi777/Movie-File-Merger/blob/master/Manuals/MFMSetupInformation.jpg)
 
 ####MFMSetupLicense.jpg####
+Update copy right year...
+
 ![MFMSetupLicense.jpg](https://github.com/Modi777/Movie-File-Merger/blob/master/Manuals/MFMSetupLicense.jpg)
 
 ####MFMSetupReady.jpg####
@@ -99,9 +113,13 @@ Update...
 ![MovieFormat.jpg](https://github.com/Modi777/Movie-File-Merger/blob/master/Manuals/MovieFormat.jpg)
 
 ####NameUnification.jpg####
+Make simpler settings.
+
 ![NameUnification.jpg](https://github.com/Modi777/Movie-File-Merger/blob/master/Manuals/NameUnification.jpg)
 
 ####ProcessImport.jpg####
+Update...
+
 ![ProcessImport.jpg](https://github.com/Modi777/Movie-File-Merger/blob/master/Manuals/ProcessImport.jpg)
 
 ####PVD.jpg####
