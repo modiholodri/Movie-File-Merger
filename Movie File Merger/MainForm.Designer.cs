@@ -641,7 +641,7 @@ namespace Movie_File_Merger
 			this.rbSeries.Text = "Series";
 			this.rbSeries.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.ttMovieFileMerger.SetToolTip(this.rbSeries, "Series are a video collection telling a fictive story in multiple parts or \r\nepis" +
-		"odes by the use of actors");
+		"odes by the use of actors.");
 			this.rbSeries.UseVisualStyleBackColor = true;
 			this.rbSeries.CheckedChanged += new System.EventHandler(this.RbProjectTypeClick);
 			// 
@@ -722,8 +722,8 @@ namespace Movie_File_Merger
 			this.cbGetHigherRes.TabIndex = 26;
 			this.cbGetHigherRes.Text = "Get Higher Res";
 			this.cbGetHigherRes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-			this.ttMovieFileMerger.SetToolTip(this.cbGetHigherRes, "Check to copy higer vertical resolution files, eeven if they are existing already" +
-		".");
+			this.ttMovieFileMerger.SetToolTip(this.cbGetHigherRes, "Check to copy higer horizontal resolution files, eeven if they are existing alrea" +
+		"dy.");
 			this.cbGetHigherRes.UseVisualStyleBackColor = true;
 			// 
 			// cbKeepFolders
@@ -1312,6 +1312,7 @@ namespace Movie_File_Merger
 			this.rtbLog.Size = new System.Drawing.Size(862, 574);
 			this.rtbLog.TabIndex = 0;
 			this.rtbLog.Text = "";
+			this.rtbLog.WordWrap = false;
 			this.rtbLog.MouseEnter += new System.EventHandler(this.RtbMouseEnter);
 			// 
 			// tpAbout

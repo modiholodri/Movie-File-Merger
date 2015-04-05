@@ -555,6 +555,7 @@ namespace Movie_File_Merger
 				var lviThis = new ListViewItem( CleanName( saParts[0] ) );
 				lviThis = AddItemToListView( lvThis, lviThis );
 				if ( saParts.Length > 1 ) lviThis.ToolTipText = saParts[1].Replace( '*', '\n' );
+				ColorAll ( lviThis.Text );
 			}
 			
 			if ( rbSeries.Checked ) {
@@ -768,7 +769,33 @@ namespace Movie_File_Merger
 			}
 			ClearStatus( );
 		}
-
+		
+		/// <summary>
+		/// Compares the horizoltal resolution in the tool tip.
+		/// </summary>
+		/// <param name="lviOld">Old ListViewItem</param>
+		/// <param name="lviNew">New ListViewItem</param>
+		/// <returns>True: if New Item Resolution is higher.</returns>
+		bool CompareHorizontalResolution( ListViewItem lviOld, ListViewItem lviNew )
+		{
+			bool bResolutionIsHigher = false;
+			
+			if ( cbGetHigherRes.Checked ) {
+				Match mtExistingResolution = Regex.Match( lviOld.ToolTipText, "Video:  \\d+" );
+				if ( mtExistingResolution.Success ) {
+					Match mtImportResolution = Regex.Match( lviNew.ToolTipText, "Video:  \\d+" );
+					if ( mtImportResolution.Success ) {
+						string sExistingResolution = Regex.Match( mtExistingResolution.Value, @"\d+" ).Value;
+						int iExistingResolution = Int32.Parse( sExistingResolution );
+						string sImportResolution = Regex.Match( mtImportResolution.Value, @"\d+" ).Value;
+						int iImportResolution = Int32.Parse(sImportResolution );
+						bResolutionIsHigher = iExistingResolution < iImportResolution;
+					}
+				}
+			}
+			return bResolutionIsHigher;
+		}
+		
 		/// <summary>
 		/// Colors a single item in the Import list view.
 		/// </summary>
@@ -786,23 +813,8 @@ namespace Movie_File_Merger
 			else {
 				ListViewItem lviExisting = FindItem( lvExisting, lviImport.Text );
 				if ( lviExisting != null ) {
-					if ( cbGetHigherRes.Checked ) {
-						Match mtExistingResolution = Regex.Match( lviExisting.ToolTipText, "Video:  \\d+" );
-						if ( mtExistingResolution.Success ) {
-							Match mtImportResolution = Regex.Match( lviImport.ToolTipText, "Video:  \\d+" );
-							if ( mtImportResolution.Success ) {
-								string sExistingResolution = Regex.Match( mtExistingResolution.Value, @"\d+" ).Value;
-								int iExistingResolution = Int32.Parse( sExistingResolution );
-								string sImportResolution = Regex.Match( mtExistingResolution.Value, @"\d+" ).Value;
-								int iImportResolution = Int32.Parse(sImportResolution );
-								lviImport.BackColor = ( iExistingResolution < iImportResolution ) ? WishColor :
-																									ExistingColor;
-							}
-							else lviImport.BackColor = ExistingColor;
-						}
-						else lviImport.BackColor = ExistingColor;
-					}
-					else lviImport.BackColor = ExistingColor;
+ 					lviImport.BackColor = CompareHorizontalResolution ( lviExisting, lviImport ) ? WishColor :
+																								ExistingColor;
 				}
 				else {
 					ListViewItem lviWish = FindItem( lvWish, RemoveEpisodeInfo( lviImport.Text ) );
@@ -843,23 +855,8 @@ namespace Movie_File_Merger
 					lviWish.BackColor = ExistingColor;
 				}
 				if ( lviImport != null ) {
-					if ( cbGetHigherRes.Checked ) {
-						Match mtExistingResolution = Regex.Match( lviExisting.ToolTipText, @"Video:  \d+" );
-						if ( mtExistingResolution.Success ) {
-							Match mtImportResolution = Regex.Match( lviImport.ToolTipText, @"Video:  \d+" );
-							if ( mtImportResolution.Success ) {
-								string sExistingResolution = Regex.Match( mtExistingResolution.Value, @"\d+" ).Value;
-								int iExistingResolution = Int32.Parse( sExistingResolution );
-								string sImportResolution = Regex.Match( mtImportResolution.Value, @"\d+" ).Value;
-								int iImportResolution = Int32.Parse( sImportResolution );
-								lviImport.BackColor = ( iExistingResolution < iImportResolution ) ? WishColor :
-																									ExistingColor;
-							}
-							else lviImport.BackColor = ExistingColor;
-						}
-						else lviImport.BackColor = ExistingColor;
-					}
-					else lviImport.BackColor = ExistingColor;
+ 					lviImport.BackColor = CompareHorizontalResolution ( lviExisting, lviImport ) ? WishColor :
+																								ExistingColor;
 				}
 			}
 			else if ( lviWish != null ) {
@@ -995,7 +992,14 @@ namespace Movie_File_Merger
 						}
 						
 						swSourceListFile.WriteLine( sSourceFile );
-						AddItemToListView( lvExisting, lviImport );
+						ListViewItem lviExisting;
+						lviExisting = AddItemToListView( lvExisting, lviImport );
+						if ( CompareHorizontalResolution ( lviExisting, lviImport ) )
+						{
+							lviExisting.ToolTipText = lviImport.ToolTipText;
+							ColorAll( lviExisting.Text );
+							SetListViewChanged( lvExisting, true );
+						}
 					}
 				}
 			}
@@ -1593,7 +1597,7 @@ namespace Movie_File_Merger
 							tbImportFolder.Text = Path.GetDirectoryName( strPath );
 						}
 						var fiFile = new FileInfo( strPath );
-						var lviThis = new ListViewItem(CleanName(strJustName));
+						var lviThis = new ListViewItem( CleanName( strJustName ) );
 						lviThis = AddItemToListView( lvThis, lviThis );
 						MakeToolTip( fiFile, lvThis, lviThis );
 						if ( cbGetHigherRes.Checked ) ColorAll( lviThis.Text );  // color again to get info from tooltip
