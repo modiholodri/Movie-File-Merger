@@ -21,6 +21,7 @@ using System.Collections.Specialized;
 using System.Drawing;
 using System.Windows.Forms;
 using System.IO;
+using System.Text;
 using System.Xml;
 using System.Text.RegularExpressions;
 using System.Globalization;
@@ -122,7 +123,7 @@ namespace Movie_File_Merger
 			}
 			
 			SetColumnWidth( );
-			CheckLatestVersion( );
+			CheckLatestVersion( "Statup" );
 		}
 		
 		/************************/
@@ -264,7 +265,7 @@ namespace Movie_File_Merger
 		/// <summary>
 		/// Loads the XML settings.
 		/// </summary>
-		void CheckLatestVersion ()
+		void CheckLatestVersion (string sWhen)
 		{
 			string sLatestRelease = "";
 			string sReleaseNotes = "";
@@ -287,7 +288,7 @@ namespace Movie_File_Merger
 			
 			dtLastChecked += tsWaitForDays;
 			
-			if ( dtLastChecked < DateTime.Now ) {
+			if ( dtLastChecked < DateTime.Now || sWhen.Contains ( "Now" ) ) {
 				var xmlLatestVersion = new XmlDocument ( );
 				try {
 					xmlLatestVersion.Load ( @"http://www.movie-file-merger.org/MFMVersion.xml" );
@@ -299,11 +300,12 @@ namespace Movie_File_Merger
 						                         "Go to the Download page now?" ) == DialogResult.Yes) {
 							System.Diagnostics.Process.Start ( "http://www.movie-file-merger.org/downloads.html" );
 						}
-						else {
-							ShowInfo ( "You can change the frequency of update checks in the About tab." );
-						}
-						lblLastChecked.Text = "Last Checked: " + StandardizeDate ( DateTime.Now );
 					}
+					else if ( sWhen.Contains ( "Now" ) )
+					{
+						ShowInfo ( sCurrentRelease + " is the latest version." );
+					}
+					lblLastChecked.Text = "Last Checked: " + StandardizeDate ( DateTime.Now );
 				}
 				catch ( Exception e ) { 
 					ShowInfo( "Tried to check for updates but had a problem...\n" + e.Message ); 
@@ -343,7 +345,7 @@ namespace Movie_File_Merger
 			tbMediaInfoPath.Text = readXmlSetting ( xmlSettings, "/MFMSettings/SupportingProgramms/MediaInfoPath", @"C:\Program Files\MediaInfo\MediaInfo.exe" );
 
 			if ( tbNickName.Text == "Anonym" ) {
-				ShowInfo( "Please enter your nick name in the Settings..." );
+				ShowInfo( "Please enter your nick name in the Nick Name field..." );
 			}
 			AssignRegexes( );
 		}
@@ -356,7 +358,6 @@ namespace Movie_File_Merger
 			using (XmlWriter writer = XmlWriter.Create( strXmlFilePath ))
 			{
 			    writer.WriteStartDocument();
-
 			    writer.WriteStartElement("MFMSettings");  // root exlement
 
 			    writer.WriteStartElement("General");  // General settings group
@@ -387,7 +388,6 @@ namespace Movie_File_Merger
 			    writer.WriteEndElement();
 			   
 			    writer.WriteEndElement();  // close the root element
-
 			    writer.WriteEndDocument();
 			}
 			AssignRegexes( );
@@ -403,10 +403,10 @@ namespace Movie_File_Merger
 			if ( (string)lvThis.Tag == "Existing" ) {
 				bExistingChanged = bChanged;
 			}
-			if ( (string)lvThis.Tag == "Garbage" ) {
+			else if ( (string)lvThis.Tag == "Garbage" ) {
 				bGarbageChanged = bChanged;
 			}
-			if ( (string)lvThis.Tag == "Wish" ) {
+			else if ( (string)lvThis.Tag == "Wish" ) {
 				bWishChanged = bChanged;
 			}
 		}
@@ -977,7 +977,7 @@ namespace Movie_File_Merger
 							                      sTargetPath.Replace( "\\", " - " ).Replace( ':', ' ' ) +
 							                      ".tcl";
 							sSourceListFileName = Path.Combine( strTeraCopyListsPath, sSourceListFileName );
-							swSourceListFile = new StreamWriter( sSourceListFileName );
+							swSourceListFile = new StreamWriter( sSourceListFileName, false, Encoding.Unicode );
 							bSourceListOpen = true;
 							sOldTargetPath = sTargetPath;
 						}
@@ -1912,9 +1912,10 @@ namespace Movie_File_Merger
 			SetStatus ("Started doing shit...");
 			ProcessImport();
 		}
+
 		void BtnCheckNowClick(object sender, EventArgs e)
 		{
-			CheckLatestVersion();
+			CheckLatestVersion( "Now" );
 		}
 	}
 }

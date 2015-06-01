@@ -706,6 +706,8 @@ namespace Movie_File_Merger
 			this.btnStart.Size = new System.Drawing.Size(81, 69);
 			this.btnStart.TabIndex = 27;
 			this.btnStart.Text = "Start Process";
+			this.ttMovieFileMerger.SetToolTip(this.btnStart, "Click to start the copying or moving of the files, which are marked as Wish in th" +
+		"e Import list.");
 			this.btnStart.UseVisualStyleBackColor = false;
 			this.btnStart.Click += new System.EventHandler(this.BtnStartClick);
 			// 
@@ -1072,7 +1074,7 @@ namespace Movie_File_Merger
 			this.rtbSettings.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.rtbSettings.Name = "rtbSettings";
 			this.rtbSettings.ReadOnly = true;
-			this.rtbSettings.Size = new System.Drawing.Size(853, 215);
+			this.rtbSettings.Size = new System.Drawing.Size(853, 174);
 			this.rtbSettings.TabIndex = 3;
 			this.rtbSettings.Text = "";
 			this.rtbSettings.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.LinkClicked);
@@ -1400,10 +1402,10 @@ namespace Movie_File_Merger
 			this.rtbCopyright.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
 			| System.Windows.Forms.AnchorStyles.Left) 
 			| System.Windows.Forms.AnchorStyles.Right)));
-			this.rtbCopyright.Location = new System.Drawing.Point(7, 241);
+			this.rtbCopyright.Location = new System.Drawing.Point(0, 241);
 			this.rtbCopyright.Name = "rtbCopyright";
 			this.rtbCopyright.ReadOnly = true;
-			this.rtbCopyright.Size = new System.Drawing.Size(855, 385);
+			this.rtbCopyright.Size = new System.Drawing.Size(862, 344);
 			this.rtbCopyright.TabIndex = 4;
 			this.rtbCopyright.Text = "";
 			this.rtbCopyright.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.LinkClicked);
