@@ -1470,9 +1470,15 @@ namespace Movie_File_Merger
 				miThis.Close( );
 			}
 			
-			if ( bFullDetails || bItemMissing || !bHasMediaInfo ) lviThis.ToolTipText = sBasicItemInfo + sFileInfo + sMediaInfo;
+			if ( bFullDetails || bItemMissing || !bHasMediaInfo ) {
+				lviThis.ToolTipText = sBasicItemInfo + sFileInfo + sMediaInfo;
+				SetListViewChanged( lvThis, true );
+			}
 			else if ( bDifferentFile ) { 
-				if ( !bHasMediaInfo || sMediaInfo != "" ) lviThis.ToolTipText = sBasicItemInfo + sFileInfo + sMediaInfo;
+				if ( !bHasMediaInfo || sMediaInfo != "" ) {
+					lviThis.ToolTipText = sBasicItemInfo + sFileInfo + sMediaInfo;
+					SetListViewChanged( lvThis, true );
+				}
 			}
 		}
 		
