@@ -1080,8 +1080,9 @@ namespace Movie_File_Merger
 		/// </summary>
 		void Play( )
 		{
+			bool bPlayedSomething = false;
 			if( !Directory.Exists( tbImportFolder.Text ) ) {
-				ShowInfo( "Select a folder with the " + strCollectionType + " to import..." );
+				ShowInfo( "Select a folder with " + strCollectionType + " to import..." );
 				return;
 			}
 
@@ -1104,6 +1105,7 @@ namespace Movie_File_Merger
 						SetStatus( "Playing " + fiImportFile.Name + "..." );
 						try {
 							System.Diagnostics.Process.Start( fiImportFile.FullName );
+							bPlayedSomething = true;
 						}
 						catch ( Exception e ) { 
 							ShowInfo( e.Message ); 
@@ -1111,6 +1113,9 @@ namespace Movie_File_Merger
 					}
 				}
 				ClearStatus( );
+			}
+			if ( !bPlayedSomething ) {
+				ShowInfo ( "Did not find an according file under the Import path." );
 			}
 		}
 		
@@ -1120,6 +1125,7 @@ namespace Movie_File_Merger
 		/// </summary>
 		void GetMediaInfo( )
 		{
+			bool bMediaInfoedSomething = false;
 			if( !Directory.Exists( tbImportFolder.Text ) ) {
 				ShowInfo( "Select a folder with the " + strCollectionType + " to import..." );
 				return;
@@ -1144,14 +1150,19 @@ namespace Movie_File_Merger
 						try {
 							System.Diagnostics.Process.Start( tbMediaInfoPath.Text, " \"" + 
 							                                  fiImportFile.FullName + "\"" );
+							bMediaInfoedSomething = true;
 						}
 						catch ( Exception e ) { 
 							ShowInfo( e.Message ); 
 						}
+						ClearStatus( );
 					}
 				}
-				ClearStatus( );
 			}
+			if ( !bMediaInfoedSomething ) {
+				ShowInfo ( "Did not find an according file under the Import path." );
+			}
+
 		}
 		
 		/// <summary>
@@ -1199,8 +1210,8 @@ namespace Movie_File_Merger
 		/// The collection type has been changed.  
 		/// Save changed list and load the new ones.
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
 		void RbProjectTypeClick( object sender, EventArgs e )
 		{
 			var rbRadioButton = (RadioButton)sender;
@@ -1236,8 +1247,8 @@ namespace Movie_File_Merger
 		/// The mose entered a list view.  
 		/// Make the list view acitve, so that the scrolling works.
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
 		void LvMouseEnter( object sender, EventArgs e )
 		{
 			( (ListView)sender ).Select( );
@@ -1247,8 +1258,8 @@ namespace Movie_File_Merger
 		/// The mouse entered a rich text box.  
 		/// Put it in focus, so that the scrolling works.
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
 		void RtbMouseEnter( object sender, System.EventArgs e )
 		{
 			( (RichTextBox)sender ).Focus( );
@@ -1257,8 +1268,8 @@ namespace Movie_File_Merger
 		/// <summary>
 		/// A link in a richtext box has been clicked.  Start the link with the default browser.
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
 		void LinkClicked( object sender, LinkClickedEventArgs e )
 		{
 			System.Diagnostics.Process.Start( e.LinkText );
@@ -1308,8 +1319,8 @@ namespace Movie_File_Merger
 		/// <summary>
 		/// A list view item has been double clicked.  Seach IMDb.
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
 		void LvDoubleClick( object sender, EventArgs e )
 		{
 			SearchIMDb( (ListView)sender );
@@ -1361,8 +1372,8 @@ namespace Movie_File_Merger
 		/// <summary>
 		/// Scolls all lists to the closed match of the last selected item.
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
 		void LvItemSelectionChanged( object sender, ListViewItemSelectionChangedEventArgs e )
 		{
 			if ( e.Item.Selected && OneItemSelected( ) ) {
@@ -1508,8 +1519,8 @@ namespace Movie_File_Merger
 		/// The MFM windos has ben shown.  
 		/// Initialize all list views.
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
 		void MfShown( object sender, EventArgs e )
 		{
 			InitListViewFromFile( lvGarbage );
@@ -1521,8 +1532,8 @@ namespace Movie_File_Merger
 		/// An item has been draged from a list view.  
 		/// Set the drag source and effects.
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
 		void LvItemDrag( object sender, ItemDragEventArgs e )
 		{
 			lvDragSource = (ListView)sender;
@@ -1533,8 +1544,8 @@ namespace Movie_File_Merger
 		/// Somehting has been draged over a list view.  
 		/// Check it and set the cursor accordingly.
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
 		void LvDragOver( object sender, DragEventArgs e )
 		{
 			if ( e.Data.GetDataPresent( typeof( ListView.SelectedListViewItemCollection ) ) ) {
@@ -1549,8 +1560,8 @@ namespace Movie_File_Merger
 		/// Something has been droped on a list view.  
 		/// Check it and act accordingly.
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
 		void LvDragDrop( object sender, DragEventArgs e )
 		{
 			var lvThis = (ListView)sender;
@@ -1628,8 +1639,8 @@ namespace Movie_File_Merger
 		/// <summary>
 		/// The progress bar has been clicked and the processing should start.
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
 		void PbProcessClick( object sender, EventArgs e )
 		{
 		}
@@ -1637,8 +1648,8 @@ namespace Movie_File_Merger
 		/// <summary>
 		/// Update the Garbvage, Existing, Wish and Import counters from time to time.
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
 		void TmrUpdateCountersTick( object sender, EventArgs e )
 		{
 			lvExisting.Columns[0].Text = lvExisting.Items.Count + " Existing " + strCollectionType;
@@ -1650,8 +1661,8 @@ namespace Movie_File_Merger
 		/// <summary>
 		/// Resize the columns if the spliter has been moved.
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
 		void ScVerticalSplitterMoved( object sender, SplitterEventArgs e )
 		{
 			SetColumnWidth( );
@@ -1661,8 +1672,8 @@ namespace Movie_File_Merger
 		/// The settings tab has been left.  
 		/// Save the settings.
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
 		void TpSettingsLeave( object sender, EventArgs e )
 		{
 			SaveXmlSettings( );
@@ -1672,8 +1683,8 @@ namespace Movie_File_Merger
 		/// Something has been draged over a droparea.  
 		/// Change the cursor accordingly.
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
 		void BtnDragOver(object sender, DragEventArgs e)
 		{
 			if ( e.Data.GetDataPresent( typeof( ListView.SelectedListViewItemCollection ) ) ) {
@@ -1685,8 +1696,8 @@ namespace Movie_File_Merger
 		/// Items have been dropped on the Erase Selected drop area. 
 		/// Erase the selected items from the list view.
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
 		void BtnEraseSelectedDragDrop( object sender, DragEventArgs e )
 		{
 			EraseSelected( lvDragSource );
@@ -1696,8 +1707,8 @@ namespace Movie_File_Merger
 		/// An item has been droped on the Erase Color drop area.  
 		/// Erase all items with the same color from the list view.
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
 		void BtnEraseColorDragDrop( object sender, DragEventArgs e )
 		{
 			foreach ( ListViewItem lviThis in lvDragSource.SelectedItems ) {
@@ -1711,19 +1722,24 @@ namespace Movie_File_Merger
 		/// An item has been dropped on the Play Video droparea.
 		/// Play it with the default player.
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
 		void BtnPlayDragDrop( object sender, DragEventArgs e )
 		{
-			Play( );
+			if ( (string)lvDragSource.Tag == "Import" ) {
+				Play( );
+			}
+			else {
+				ShowInfo( "Playing is only supported from the Import list." );
+			}
 		}
 		
 		/// <summary>
 		/// Items have been droped on the Seach IMDb drop area.
 		/// Open the IMDb searches for them in the default browser.
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
 		void BtnSearchIMDbDragDrop( object sender, DragEventArgs e )
 		{
 			SearchIMDb( lvDragSource );
@@ -1733,8 +1749,8 @@ namespace Movie_File_Merger
 		/// Items have been dropped on the Seach Torrentz droparea.
 		/// Open the To4rentz.eu searches for them in the default browser. 
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
 		void BtnSearchTorrentzDragDrop( object sender, DragEventArgs e) 
 		{
 			SearchTorrenz( lvDragSource );
@@ -1744,8 +1760,8 @@ namespace Movie_File_Merger
 		/// A list view has been drop on the Export Lists droparea.
 		/// Save the list view to a CSV file.
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
 		void BtnExportListDragDrop( object sender, DragEventArgs e )
 		{
 			sfdMovieFileMerger.FileName =
@@ -1764,8 +1780,8 @@ namespace Movie_File_Merger
 		/// A folder has been dropped on the Target Folder droparea.
 		/// Brows the folder and add the files to the Existing list view.
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
 		void TbTargetFolderDragDrop( object sender, DragEventArgs e )
 		{
 			if ( e.AllowedEffect == DragDropEffects.None ) {
@@ -1789,8 +1805,8 @@ namespace Movie_File_Merger
 		/// A folder has been dropped on the Import Folder droparea.
 		/// Brows the folder and add the files to the Import list view.
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
 		void TbImportFolderDragDrop( object sender, DragEventArgs e )
 		{
 			if ( e.AllowedEffect == DragDropEffects.None ) {
@@ -1815,8 +1831,8 @@ namespace Movie_File_Merger
 		/// Something has been draged over a text box.
 		/// Check what it is and set the allowed effect accordingly.
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
 		void TbDragOver( object sender, DragEventArgs e )
 		{
 			if ( e.Data.GetDataPresent( DataFormats.FileDrop ) ) {
@@ -1828,8 +1844,8 @@ namespace Movie_File_Merger
 		/// A key has been pressed on a list view.
 		/// Check which key and take the according actions.
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
 		void lvKeyDown( object sender, KeyEventArgs e )
 		{
 			if ( e.KeyCode == Keys.Delete ) {
@@ -1841,20 +1857,25 @@ namespace Movie_File_Merger
 		/// An item has been dropped on the Media Info drop area.
 		/// Get the detailed madia info for it.
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
 		void BtnMediaInfoDragDrop( object sender, DragEventArgs e )
 		{
-			GetMediaInfo( );
+			if ( (string)lvDragSource.Tag == "Import" ) {
+				GetMediaInfo( );
+			}
+			else {
+				ShowInfo( "Getting the MediaInfo is only supported from the Import list." );
+			}
 		}
 		
 		/// <summary>
 		/// A list view has been dragged over the Tool Tip Regex text box.
 		/// Chec it and set the drop effects accordingly.
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		void TbToolTipRegexDragOver(object sender, DragEventArgs e)
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void TbToolTipRegexDragOver( object sender, DragEventArgs e )
 		{
 			if ( e.Data.GetDataPresent( typeof( ListView.SelectedListViewItemCollection ) ) ) {
 				e.Effect = e.AllowedEffect;
@@ -1862,32 +1883,66 @@ namespace Movie_File_Merger
 		}
 		
 		/// <summary>
-		/// A list view has been dropped on the Tool Tip Regex text box.
-		/// Select items in the list view according to the regular expression.
+		/// Select items in a list according to a regular expression.
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		void TbToolTipRegexDragDrop( object sender, DragEventArgs e )
+		/// <param name="lvThis">The list to select from.</param>
+		/// <param name="sRegex">The regular expression according to which to select.</param>
+		int SelectInList( ListView lvThis, string sRegex )
 		{
-			var rgxToolTip = new Regex( tbToolTipRegex.Text );
+			int iSelected = 0;
+			var rgxToolTip = new Regex( sRegex );
 			
-			if ( e.AllowedEffect == DragDropEffects.None )  {
-				return;
-			}
 			Cursor.Current = Cursors.WaitCursor;
-			// from a list view
-			if ( e.Data.GetDataPresent( typeof( ListView.SelectedListViewItemCollection ) ) ) {
-				foreach ( ListViewItem lviThis in lvDragSource.Items ) {
-					lviThis.Selected = rgxToolTip.IsMatch( lviThis.ToolTipText );
+			foreach ( ListViewItem lviThis in lvThis.Items ) {
+				if( rgxToolTip.IsMatch( lviThis.ToolTipText ) ) {
+					lviThis.Selected = true;
+					iSelected++;
+				}
+				else {
+					lviThis.Selected = false;
 				}
 			}
 			Cursor.Current = Cursors.Default;
+			if( iSelected > 0 ) {
+				ShowInfo( "Selected " + iSelected + " items in " + lvThis.Tag  + " " + strCollectionType + ".");
+			}
+			return iSelected;
 		}
+		
+		
+		/// <summary>
+		/// A list view has been dropped on the Tool Tip Regex text box.
+		/// Select items in the list view according to the regular expression.
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void TbToolTipRegexDragDrop( object sender, DragEventArgs e )
+		{
+			if ( e.AllowedEffect == DragDropEffects.None )  {
+				return;
+			}
+			if ( e.Data.GetDataPresent( typeof( ListView.SelectedListViewItemCollection ) ) ) {
+				if( SelectInList( lvDragSource, tbToolTipRegex.Text ) == 0 ) {
+					ShowInfo( "Selected no items.");
+				}
+			}
+		}
+		
+		/// <summary>
+		/// Launch the MFM website if the link label has been clicked. 
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
 		void LlMovieFileMergerOrgClick(object sender, EventArgs e)
 		{
 			System.Diagnostics.Process.Start( "www.Movie-File-Merger.org" );
 		}
 
+		/// <summary>
+		/// Update the Tool Tip Regex once the selection has changed.
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
 		void CobToolTipRegexSelectedIndexChanged(object sender, EventArgs e)
 		{
 			switch ( cobToolTipRegex.Text ) {
@@ -1902,26 +1957,155 @@ namespace Movie_File_Merger
 				default: tbToolTipRegex.Text = @""; break;
 			}
 		}
-		
+
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
 		void CobToolTipRegexDisplayMemberChanged(object sender, EventArgs e)
 		{
 			SetStatus( cobToolTipRegex.SelectedText );
 		}
 		
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
 		void StatusStrip1ItemClicked(object sender, ToolStripItemClickedEventArgs e)
 		{
 	
 		}
 		
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
 		void BtnStartClick(object sender, EventArgs e)
 		{
 			SetStatus ("Started doing shit...");
 			ProcessImport();
 		}
 
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
 		void BtnCheckNowClick(object sender, EventArgs e)
 		{
 			CheckLatestVersion( "Now" );
+		}
+		
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <returns></returns>
+		string GetSelectionRegEx ( string sSelection)
+		{
+			string sResult = "";
+			switch ( sSelection ) {
+				case "Square Format": sResult = @"\(((4:3)|(5:4)|(3:2)|(1\.[0-5]\d+))\)"; break;
+				case "Wide Screen": sResult = @"\(((16:9)|(1\.85:1)|(1\.[6-9]\d+)|(2\.[0-2]\d+))\)"; break;
+				case "Cinema Scope": sResult = @"\((([23]\.*\d*:1)|(2\.[3-9]\d+)|(3\.\d+))\)"; break;
+				case "699 or narrower": sResult = @"Video:  [1-6]\d{2} x"; break;
+				case "700 or wider": sResult = @"(Video:  [7-9]\d{2} x)|(Video:  [1-9]\d{3} x)"; break;
+				case "1000 or wider": sResult = @"Video:  [1-9]\d{3} x"; break;
+				case "Series with \"SxxExx\"": sResult = @".[Ss]\d+[Ee]\d+"; break;
+				case "Movies with \"(Year)\"": sResult = @"\([1-2][0-9]{3}\)"; break;
+				default: sResult = @"^$"; break;
+			}
+			return sResult;
+		}
+		
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="lvSource">The list view from where to copy the selected items.</param>
+		/// <param name="lvTarget">The list view to where to copy the selected items.</param>
+		void CopySelected ( ListView lvSource, ListView lvTarget )
+		{
+			foreach ( ListViewItem lviThis in lvSource.SelectedItems ) {
+				if ( rbSeries.Checked &&
+				     ( (string)lvTarget.Tag == "Garbage" ||
+				       (string)lvTarget.Tag == "Wish" ) ) {
+					var lviToAdd = new ListViewItem( RemoveEpisodeInfo( lviThis.Text ) );
+					AddItemToListView( lvTarget, lviToAdd );
+				} else {
+					AddItemToListView( lvTarget, lviThis );
+				}
+			}
+			if ( rbSeries.Checked ) {
+				if ( (string)lvTarget.Tag == "Garbage" ) {
+					ColorExistingAndUp( );
+				}
+				if ( (string)lvTarget.Tag == "Wish" ) {
+					ColorWishAndUp( );
+				}
+			}
+		}
+
+		/// <summary>
+		/// Select all items in all lists according to the selection criteria.
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void BtnSelectClick(object sender, EventArgs e)
+		{
+			int iTotalSelected = 0;
+			iTotalSelected += SelectInList ( lvGarbage,  GetSelectionRegEx ( cobCriteria.Text ) );
+			iTotalSelected += SelectInList ( lvExisting, GetSelectionRegEx (cobCriteria.Text ) );
+			iTotalSelected += SelectInList ( lvWish, GetSelectionRegEx ( cobCriteria.Text ) );
+			iTotalSelected += SelectInList ( lvImport, GetSelectionRegEx ( cobCriteria.Text ) );
+			if( iTotalSelected == 0 ) {
+				ShowInfo( "Selected no items.");
+			}
+		}
+		
+		/// <summary>
+		/// Put all items in all lists in the Garbage list according to the selection ctriteria.
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void BtnBinClick(object sender, EventArgs e)
+		{
+			int iTotalSelected = 0;
+			iTotalSelected += SelectInList ( lvExisting, GetSelectionRegEx ( cobCriteria.Text ) );
+			CopySelected ( lvExisting, lvGarbage );
+			iTotalSelected += SelectInList ( lvWish, GetSelectionRegEx ( cobCriteria.Text ) );
+			CopySelected ( lvWish, lvGarbage );
+			iTotalSelected += SelectInList ( lvImport, GetSelectionRegEx ( cobCriteria.Text ) );
+			CopySelected ( lvImport, lvGarbage );
+			ShowInfo( "Copied " + iTotalSelected + " items, including duplicates, into the Garbage list.");
+		}
+		
+		/// <summary>
+		/// Wish all items in the Import list according to the selection criteria.
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void BtnWishClick ( object sender, EventArgs e )
+		{
+			int iTotalSelected = 0;
+			iTotalSelected += SelectInList ( lvImport, GetSelectionRegEx ( cobCriteria.Text ) );
+			CopySelected ( lvImport, lvWish );
+			ShowInfo ( "Copied " + iTotalSelected + " items, including duplicates, into the Wish list.");
+		}
+		
+		/// <summary>
+		/// Just rip everything from the Import list. 
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void BtnJustRipItClick ( object sender, EventArgs e )
+		{
+			foreach( ListViewItem lviThis in lvImport.Items ) {
+				lviThis.Selected = lviThis.BackColor == NeutralColor;
+			}
+			CopySelected ( lvImport, lvWish );
+			ProcessImport ( );
 		}
 	}
 }
