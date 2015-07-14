@@ -317,7 +317,8 @@ namespace Movie_File_Merger
 			this.btnJustRipIt.Text = "Just Rip It";
 			this.btnJustRipIt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.btnJustRipIt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-			this.ttMovieFileMerger.SetToolTip(this.btnJustRipIt, "Just rip everything from the Import list.");
+			this.ttMovieFileMerger.SetToolTip(this.btnJustRipIt, "Just rip the stuff you don\'t have from the Import folder and put it in the Target" +
+		" folder.");
 			this.btnJustRipIt.UseVisualStyleBackColor = true;
 			this.btnJustRipIt.Click += new System.EventHandler(this.BtnJustRipItClick);
 			// 

@@ -918,7 +918,8 @@ namespace Movie_File_Merger
 		void ProcessImport()
 		{
 			if(!Directory.Exists(tbImportFolder.Text)) {
-				ShowInfo("Select a folder with the " + strCollectionType + " to import...");
+				ShowInfo("Select a folder with the " + strCollectionType + " to import...\n" + 
+				         "Drop the folder in the Import list." );
 				return;
 			}
 			if(!Directory.Exists(tbTargetFolder.Text)) {
@@ -933,7 +934,13 @@ namespace Movie_File_Merger
 			string sTargetPath = "";
 			string sSourceFile;
 			bool bSourceListOpen = false;
+			bool bCopiedOrMovedSomething = false;
 			
+			if ( !File.Exists ( tbTeraCopyPath.Text ) ) {
+				ShowInfo( "Could not find TeraCopy. You can download it from\n  www.movie-file-merger.org/downloads.html\nDid you install it and set the path in the setting correct?" );
+				return;
+			}
+
 			// tag the items to be copied or moved
 			foreach ( ListViewItem lviThis in lvImport.Items ) {
 				lviThis.Tag = lviThis.BackColor == WishColor;
@@ -1000,6 +1007,7 @@ namespace Movie_File_Merger
 							ColorAll( lviExisting.Text );
 							SetListViewChanged( lvExisting, true );
 						}
+						bCopiedOrMovedSomething = true;
 					}
 				}
 			}
@@ -1007,7 +1015,14 @@ namespace Movie_File_Merger
 				swSourceListFile.Close( );
 				DoTeraCopy( sSourceListFileName, sOldTargetPath );
 			}
-			ShowInfo( "Finished processing..." );
+			if ( bCopiedOrMovedSomething ) {
+				if ( File.Exists ( tbTeraCopyPath.Text ) ) {
+					ShowInfo( "Finished processing..." );
+				}
+			}
+			else {
+				ShowInfo( "Did not find anything to copy or move...\nDid you put something in the Wish list?" );
+			}
 			ClearStatus( );
 		}
 
@@ -1018,26 +1033,21 @@ namespace Movie_File_Merger
 		/// <param name="sTargetPath">The path to where the source files should be copied or moved. </param>
 		void DoTeraCopy( string sSourceListFile, string sTargetPath )
 		{
-			string sTeraCopy = tbTeraCopyPath.Text;
 			const string sOptions = " /SkipAll /Close ";
 			
-			try {
-				if (rbCopy.Checked) {
-					System.Diagnostics.Process.Start( sTeraCopy, "Copy *\"" + 
+			if (rbCopy.Checked) {
+					System.Diagnostics.Process.Start( tbTeraCopyPath.Text, "Copy *\"" + 
 					                                  sSourceListFile + "\" \"" + sTargetPath + "\" " + sOptions );
 					LogMessage( "Add Source List", Color.Purple,  "TeraCopy " + 
 					            sSourceListFile + " -> " + sTargetPath + sOptions );
-				}
-				else {
-					System.Diagnostics.Process.Start( sTeraCopy, "Move *\"" + 
-					                                  sSourceListFile + "\" \"" + sTargetPath + "\" "  + sOptions );
-					LogMessage( "Add Source List", Color.Purple,  "TeraMove " + 
-					            sSourceListFile + " -> " + sTargetPath + sOptions );
-				}
-				System.Threading.Thread.Sleep( 1000 );
-			} catch ( IOException e ) {
-				ShowInfo( e.Message );
 			}
+			else {
+					System.Diagnostics.Process.Start( tbTeraCopyPath.Text, "Move *\"" + 
+				                                  sSourceListFile + "\" \"" + sTargetPath + "\" "  + sOptions );
+				LogMessage( "Add Source List", Color.Purple,  "TeraMove " + 
+				            sSourceListFile + " -> " + sTargetPath + sOptions );
+			}
+			System.Threading.Thread.Sleep( 1000 );
 		}
 
 		/// <summary>
@@ -1082,7 +1092,7 @@ namespace Movie_File_Merger
 		{
 			bool bPlayedSomething = false;
 			if( !Directory.Exists( tbImportFolder.Text ) ) {
-				ShowInfo( "Select a folder with " + strCollectionType + " to import..." );
+				ShowInfo( "Select a folder with " + strCollectionType + " to play..." );
 				return;
 			}
 
@@ -1127,7 +1137,7 @@ namespace Movie_File_Merger
 		{
 			bool bMediaInfoedSomething = false;
 			if( !Directory.Exists( tbImportFolder.Text ) ) {
-				ShowInfo( "Select a folder with the " + strCollectionType + " to import..." );
+				ShowInfo( "Select a folder with the " + strCollectionType + " to get the media information..." );
 				return;
 			}
 
@@ -1147,13 +1157,13 @@ namespace Movie_File_Merger
 				if ( lviImport != null ) {
 					if( lviImport.Selected ) {
 						SetStatus( "Getting MediaInfo for " + fiImportFile.Name + "..." );
-						try {
+						if ( File.Exists ( tbMediaInfoPath.Text ) ) {
 							System.Diagnostics.Process.Start( tbMediaInfoPath.Text, " \"" + 
 							                                  fiImportFile.FullName + "\"" );
 							bMediaInfoedSomething = true;
 						}
-						catch ( Exception e ) { 
-							ShowInfo( e.Message ); 
+						else {
+							ShowInfo( "Could not find MediaInfo. You can download it from\n  www.movie-file-merger.org/downloads.html\nDid you install it and set the path in the setting correct?" );
 						}
 						ClearStatus( );
 					}
@@ -1568,6 +1578,13 @@ namespace Movie_File_Merger
 			
 			if( e.AllowedEffect == DragDropEffects.None) {
 				return;
+			}
+			if ( lvThis.Tag == "Import" && cbGetHigherRes.Checked && !cbMediaInfo.Checked ) {
+				if ( ShowYesNoQuestion ( "To process higher resolution files MediaInfo should be ticked,\n" +
+				                    "which takes considerably longer, but is better.\n" +
+				                    "Should MFM tick it now?" ) == DialogResult.Yes) {
+					cbMediaInfo.Checked = true;
+				}
 			}
 			Cursor.Current = Cursors.WaitCursor;
 			
