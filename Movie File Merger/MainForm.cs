@@ -57,7 +57,7 @@ namespace Movie_File_Merger
 		string strCollectionsPath = Path.Combine( Path.GetDirectoryName(Application.StartupPath), @"MFM Collections\" );
 		string strTeraCopyListsPath = "";
 		string strXmlFilePath = "";
-
+		
 		// regular expressions to filter the messed up file names
 		Regex rgxMainExtensions;  // to find the main files
 		Regex rgxAddonExtensions;  // to find wanted addon files, like subtitles
@@ -86,7 +86,6 @@ namespace Movie_File_Merger
 			if ( !Directory.Exists( strTeraCopyListsPath ) ) {
 				Directory.CreateDirectory( strTeraCopyListsPath );
 			}
-			sfdMovieFileMerger.InitialDirectory = strCollectionsPath;
 			strXmlFilePath = Path.Combine( strPrivatePath, "MFM Settings.xml" );
 			if ( !File.Exists( strXmlFilePath ) ) {
 				using (XmlWriter writer = XmlWriter.Create( strXmlFilePath )) // create a dummy
@@ -97,38 +96,121 @@ namespace Movie_File_Merger
 				    writer.WriteEndDocument();
 				}
 			}
+			sfdMovieFileMerger.InitialDirectory = strCollectionsPath;
 			
 			LoadXmlSettings( );
 			Text = tbNickName.Text + " - Movie File Merger";
 
 			// load the instruction and copyright files
+			string strMFMInstructionsPath = Path.Combine( Application.StartupPath, "Movie File Merger Instructions.rtf" );
 			try { 
-				rtbHelp.LoadFile( Path.Combine( Application.StartupPath, "Movie File Merger Instructions.rtf" ), 
-				                  RichTextBoxStreamType.RichText );
+				rtbHelp.LoadFile( strMFMInstructionsPath, RichTextBoxStreamType.RichText );
 			} catch ( IOException e ) { 
 				ShowInfo( e.Message ); 
+				rtbHelp.Text = "Error: Had problems loading the help file " + strMFMInstructionsPath + ".";
 			}
 			
+			string strMFMSettingsPath = Path.Combine(Application.StartupPath, "Movie File Merger Settings.rtf");
 			try {
-				rtbSettings.LoadFile( Path.Combine(Application.StartupPath, "Movie File Merger Settings.rtf"), 
-				                      RichTextBoxStreamType.RichText);
+				rtbSettings.LoadFile( strMFMSettingsPath, RichTextBoxStreamType.RichText);
 			} catch ( IOException e ) { 
 				ShowInfo( e.Message );
+				rtbSettings.Text = "Error: Had problems loading the settings instructions file " + strMFMSettingsPath + ".";
 			}
+			
+			string strMFMCopyrightPath = Path.Combine(Application.StartupPath, "Movie File Merger Copyright.rtf");
 			try {
-				rtbCopyright.LoadFile( Path.Combine(Application.StartupPath, "Movie File Merger Copyright.rtf"), 
-				                       RichTextBoxStreamType.RichText);
+				rtbCopyright.LoadFile( strMFMCopyrightPath, RichTextBoxStreamType.RichText);
 			} catch ( IOException e ) { 
 				ShowInfo( e.Message ); 
+				rtbCopyright.Text = "Error: Had problems loading the copyright file " + strMFMSettingsPath + ".";
 			}
 			
 			SetColumnWidth( );
 			CheckLatestVersion( "Statup" );
 		}
 		
-		/************************/
-		/* Supporting Functions */
-		/************************/
+/************************************************************************************************/
+/*                                    Supporting Functions                                      */
+/************************************************************************************************/
+
+		/// <summary>
+		/// Check if the latest version is installed.
+		/// </summary>
+		void CheckLatestVersion (string sWhen)
+		{
+			string sLatestRelease = "";
+			string sReleaseNotes = "";
+			string sCurrentRelease = Application.ProductVersion.Remove( Application.ProductVersion.Length-2 );
+			lblVersion.Text = sCurrentRelease;
+			var dtLastChecked = new DateTime ( );
+			string sLastCheckedDate = lblLastChecked.Text.Substring( "Last Checked: ".Length );
+			if ( sLastCheckedDate == "Never" ) sLastCheckedDate = "1900-01-01";
+			dtLastChecked = Convert.ToDateTime( sLastCheckedDate );
+			var tsWaitForDays = new TimeSpan (  1, 0, 0, 0 ); // Check for updates daily...
+			
+			switch ( cobCheckForUpdates.Text ) {
+				case "Check for updates weekly." :
+					tsWaitForDays = new TimeSpan ( 7, 0, 0, 0 );
+					break;
+				case "Check for updates monthly." :
+					tsWaitForDays = new TimeSpan ( 30, 0, 0, 0 );
+					break;
+			}
+			
+			dtLastChecked += tsWaitForDays;
+			
+			if ( dtLastChecked < DateTime.Now || sWhen.Contains ( "Now" ) ) {
+				var xmlLatestVersion = new XmlDocument ( );
+				try {
+					xmlLatestVersion.Load ( @"http://www.movie-file-merger.org/MFMVersion.xml" );
+					sLatestRelease = readXmlSetting ( xmlLatestVersion, "/MFMVersions/LatestRelease", "0.0.0");
+					sReleaseNotes = readXmlSetting ( xmlLatestVersion, "/MFMVersions/ReleaseNotes", "Sorry, did not find any release notes...");
+					if ( sCurrentRelease != sLatestRelease ) {
+						if ( ShowYesNoQuestion ( "A different version of MFM (" + sCurrentRelease + " -> " + sLatestRelease + ") " +
+						                         "is available with following changes...\n" +  sReleaseNotes + "\n\n" +
+						                         "Go to the Download page now?" ) == DialogResult.Yes) {
+							System.Diagnostics.Process.Start ( "http://www.movie-file-merger.org/downloads.html" );
+						}
+					}
+					else if ( sWhen.Contains ( "Now" ) )
+					{
+						ShowInfo ( sCurrentRelease + " is the latest version." );
+					}
+					lblLastChecked.Text = "Last Checked: " + StandardizeDate ( DateTime.Now );
+				}
+				catch ( Exception e ) { 
+					ShowInfo( "Tried to check for updates but had a problem...\n" + e.Message ); 
+				}
+			}
+		}
+		
+		/// <summary>
+		/// Converts a datetime to the standard date format yyyy-mm-dd.
+		/// </summary>
+		/// <param name="dtToSStandardize">The date time to standardize.</param>
+		/// <returns>The standzadized date string.</returns>
+		string StandardizeDate( DateTime dtToSStandardize )
+		{
+			return 	dtToSStandardize.Year.ToString( "D4" ) + "-" +
+			        dtToSStandardize.Month.ToString( "D2" ) + "-" +
+			        dtToSStandardize.Day.ToString( "D2" );
+		}
+		
+		/// <summary>
+		/// Converts a datetime to the standard time format hh:mm:ss.
+		/// </summary>
+		/// <param name="dtToSStandardize">The date time to standardize.</param>
+		/// <returns>The standzadized time string.</returns>
+		string StandardizeTime( DateTime dtToSStandardize )
+		{
+			return 	dtToSStandardize.Hour.ToString( "D2" ) + "-" +
+			        dtToSStandardize.Minute.ToString( "D2" ) + "-" +
+			        dtToSStandardize.Second.ToString( "D2" );
+		}
+		
+/*********************************** Message Handling and Logging *******************************/
+
 		/// <summary>
 		/// Adds a mesage, with the date, type, and a certain color, to the rich text box on the log tab. 
 		/// </summary>
@@ -197,6 +279,8 @@ namespace Movie_File_Merger
 			                        MessageBoxButtons.YesNo, MessageBoxIcon.Question );
 		}
 
+/************************************** Window Resizing ****************************************/
+
 		/// <summary>
 		/// Readjusts the column width if the Window is resized. 
 		/// </summary>
@@ -231,6 +315,8 @@ namespace Movie_File_Merger
 			scHorizontal.SplitterDistance = scHorizontal.Size.Height / 2;
 		}
 		
+/******************************************** Setting Handling *********************************/		
+
 		/// <summary>
 		/// Assign all the regular expressions from the settings tab.
 		/// </summary>
@@ -262,57 +348,6 @@ namespace Movie_File_Merger
 			return sText;
 		}
 
-		/// <summary>
-		/// Loads the XML settings.
-		/// </summary>
-		void CheckLatestVersion (string sWhen)
-		{
-			string sLatestRelease = "";
-			string sReleaseNotes = "";
-			string sCurrentRelease = Application.ProductVersion.Remove( Application.ProductVersion.Length-2 );
-			lblVersion.Text = sCurrentRelease;
-			var dtLastChecked = new DateTime ( );
-			string sLastCheckedDate = lblLastChecked.Text.Substring( "Last Checked: ".Length );
-			if ( sLastCheckedDate == "Never" ) sLastCheckedDate = "1900-01-01";
-			dtLastChecked = Convert.ToDateTime( sLastCheckedDate );
-			var tsWaitForDays = new TimeSpan (  1, 0, 0, 0 ); // Check for updates daily...
-			
-			switch ( cobCheckForUpdates.Text ) {
-				case "Check for updates weekly." :
-					tsWaitForDays = new TimeSpan ( 7, 0, 0, 0 );
-					break;
-				case "Check for updates monthly." :
-					tsWaitForDays = new TimeSpan ( 30, 0, 0, 0 );
-					break;
-			}
-			
-			dtLastChecked += tsWaitForDays;
-			
-			if ( dtLastChecked < DateTime.Now || sWhen.Contains ( "Now" ) ) {
-				var xmlLatestVersion = new XmlDocument ( );
-				try {
-					xmlLatestVersion.Load ( @"http://www.movie-file-merger.org/MFMVersion.xml" );
-					sLatestRelease = readXmlSetting ( xmlLatestVersion, "/MFMVersions/LatestRelease", "0.0.0");
-					sReleaseNotes = readXmlSetting ( xmlLatestVersion, "/MFMVersions/ReleaseNotes", "Sorry, did not find any release notes...");
-					if ( sCurrentRelease != sLatestRelease ) {
-						if ( ShowYesNoQuestion ( "A different version of MFM (" + sCurrentRelease + " -> " + sLatestRelease + ") " +
-						                         "is available with following changes...\n" +  sReleaseNotes + "\n\n" +
-						                         "Go to the Download page now?" ) == DialogResult.Yes) {
-							System.Diagnostics.Process.Start ( "http://www.movie-file-merger.org/downloads.html" );
-						}
-					}
-					else if ( sWhen.Contains ( "Now" ) )
-					{
-						ShowInfo ( sCurrentRelease + " is the latest version." );
-					}
-					lblLastChecked.Text = "Last Checked: " + StandardizeDate ( DateTime.Now );
-				}
-				catch ( Exception e ) { 
-					ShowInfo( "Tried to check for updates but had a problem...\n" + e.Message ); 
-				}
-			}
-		}
-		
 		/// <summary>
 		/// Loads the XML settings. 
 		/// </summary>
@@ -393,67 +428,9 @@ namespace Movie_File_Merger
 			AssignRegexes( );
 		}
 		
-		/// <summary>
-		/// Sets a tag in a list view to remember when to save the view.
-		/// </summary>
-		/// <param name="lvThis">The listview to be tagged.</param>
-		/// <param name="bChanged">true when the list view has changed, otherwise flase.</param>
-		void SetListViewChanged( ListView lvThis, bool bChanged )
-		{
-			if ( (string)lvThis.Tag == "Existing" ) {
-				bExistingChanged = bChanged;
-			}
-			else if ( (string)lvThis.Tag == "Garbage" ) {
-				bGarbageChanged = bChanged;
-			}
-			else if ( (string)lvThis.Tag == "Wish" ) {
-				bWishChanged = bChanged;
-			}
-		}
-		
-		/// <summary>
-		/// Converts a datetime to the standard date format yyyy-mm-dd.
-		/// </summary>
-		/// <param name="dtToSStandardize">The date time to standardize.</param>
-		/// <returns>The standzadized date string.</returns>
-		string StandardizeDate( DateTime dtToSStandardize )
-		{
-			return 	dtToSStandardize.Year.ToString( "D4" ) + "-" +
-			        dtToSStandardize.Month.ToString( "D2" ) + "-" +
-			        dtToSStandardize.Day.ToString( "D2" );
-		}
-		
-		/// <summary>
-		/// Converts a datetime to the standard time format hh:mm:ss.
-		/// </summary>
-		/// <param name="dtToSStandardize">The date time to standardize.</param>
-		/// <returns>The standzadized time string.</returns>
-		string StandardizeTime( DateTime dtToSStandardize )
-		{
-			return 	dtToSStandardize.Hour.ToString( "D2" ) + "-" +
-			        dtToSStandardize.Minute.ToString( "D2" ) + "-" +
-			        dtToSStandardize.Second.ToString( "D2" );
-		}
-		
-		/*******************
-		 * Major Functions *
-		 *******************/
-		
-		/// <summary>
-		/// Initialize a list view from a text file in MFM format.
-		/// </summary>
-		/// <param name="lvListView"></param>
-		void InitListViewFromFile( ListView lvListView )
-		{
-			string strSerializationFileName = Path.Combine( strPrivatePath, lvListView.Tag + " " + 
-			                                                strCollectionType + ".slv" );
-			lvListView.Items.Clear( );
-
-			if ( File.Exists( strSerializationFileName ) ) {
-				DeserializeListView( lvListView, strSerializationFileName );
-			}
-			SetListViewChanged( lvListView, false );
-		}
+/************************************************************************************************/
+/*                                              Main Functions                                   *
+/************************************************************************************************/
 		
 		/// <summary>
 		/// Cleans up and tries to standardize the name of movies or series, so that they 
@@ -494,6 +471,68 @@ namespace Movie_File_Merger
 			}
 
 			return strCleanName;
+		}
+		
+		/// <summary>
+		/// Checks if the horizoltal resolution in the tool tip of the new list view item is higher.
+		/// </summary>
+		/// <param name="lviOld">Old ListViewItem</param>
+		/// <param name="lviNew">New ListViewItem</param>
+		/// <returns>True: if New Item Resolution is higher.</returns>
+		bool HorizontalResolutionIsHigher( ListViewItem lviOld, ListViewItem lviNew )
+		{
+			bool bResolutionIsHigher = false;
+			
+			if ( cbGetHigherRes.Checked ) {
+				Match mtExistingResolution = Regex.Match( lviOld.ToolTipText, "Video:  \\d+" );
+				if ( mtExistingResolution.Success ) {
+					Match mtImportResolution = Regex.Match( lviNew.ToolTipText, "Video:  \\d+" );
+					if ( mtImportResolution.Success ) {
+						string sExistingResolution = Regex.Match( mtExistingResolution.Value, @"\d+" ).Value;
+						int iExistingResolution = Int32.Parse( sExistingResolution );
+						string sImportResolution = Regex.Match( mtImportResolution.Value, @"\d+" ).Value;
+						int iImportResolution = Int32.Parse(sImportResolution );
+						bResolutionIsHigher = iExistingResolution < iImportResolution;
+					}
+				}
+			}
+			return bResolutionIsHigher;
+		}
+		
+/************************************** List View Handling ****************************************/		
+
+		/// <summary>
+		/// Sets a tag in a list view to remember when to save the view.
+		/// </summary>
+		/// <param name="lvThis">The listview to be tagged.</param>
+		/// <param name="bChanged">true when the list view has changed, otherwise flase.</param>
+		void SetListViewChanged( ListView lvThis, bool bChanged )
+		{
+			if ( (string)lvThis.Tag == "Existing" ) {
+				bExistingChanged = bChanged;
+			}
+			else if ( (string)lvThis.Tag == "Garbage" ) {
+				bGarbageChanged = bChanged;
+			}
+			else if ( (string)lvThis.Tag == "Wish" ) {
+				bWishChanged = bChanged;
+			}
+		}
+		
+		/// <summary>
+		/// Initialize a list view from a text file in MFM format.
+		/// </summary>
+		/// <param name="lvListView">The list view to be intialized.</param>
+		void InitListViewFromFile( ListView lvListView )
+		{
+			string strSerializationFileName = Path.Combine( strPrivatePath, lvListView.Tag + " " + 
+			                                                strCollectionType + ".slv" );
+			lvListView.Items.Clear( );
+
+			if ( File.Exists( strSerializationFileName ) ) {
+				DeserializeListView( lvListView, strSerializationFileName );
+			}
+			SetListViewChanged( lvListView, false );
 		}
 		
 		/// <summary>
@@ -689,205 +728,8 @@ namespace Movie_File_Merger
 			swFile.Close( );
 		}
 
-		/// <summary>
-		/// Colors all items contained in the Existing, the Wish and the Import list views.
-		/// </summary>
-		void ColorExistingAndUp( )
-		{
-			ColorExisting( );
-			ColorWish( );
-			ColorImport( );
-		}
-		
-		/// <summary>
-		/// Colors a single items in the Existing list view.
-		/// </summary>
-		/// <param name="lviExisting">The item to be colored.</param>
-		void ColorExistingItem( ListViewItem lviExisting )
-		{
-			if ( lviExisting == null ) {
-				return;
-			}
-			lviExisting.Selected = false;
-			ListViewItem lviGarbage = FindItem( lvGarbage, RemoveEpisodeInfo( lviExisting.Text ) );
-			lviExisting.BackColor = ( lviGarbage != null ) ? GarbageColor : 
-			                                                 ExistingColor;
-		}
-		
-		/// <summary>
-		/// Colcors all items in the Existing list view.
-		/// </summary>
-		void ColorExisting( )
-		{
-			SetStatus( "Coloring " + strCollectionType + " in Existing list..." );
-			foreach ( ListViewItem lviExisting in lvExisting.Items ) {
-				ColorExistingItem( lviExisting );
-			}
-			ClearStatus( );
-		}
-		
-		/// <summary>
-		/// Colors all items contained in the Wish and the Import list views.
-		/// </summary>
-		void ColorWishAndUp( )
-		{
-			ColorWish( );
-			ColorImport( );
-		}
-		
-		/// <summary>
-		/// Colors a single item in the Wish list view.
-		/// </summary>
-		/// <param name="lviWish">The item to be colored.</param>
-		void ColorWishItem( ListViewItem lviWish )
-		{
-			if ( lviWish == null ) {
-				return;
-			}
-			lviWish.Selected = false;
-			ListViewItem lviGarbage = FindItem( lvGarbage, RemoveEpisodeInfo( lviWish.Text ) );
-			if ( lviGarbage != null ) {
-				lviWish.BackColor = GarbageColor;
-			}
-			else {
-				ListViewItem lviExisting;
-				lviExisting = ( rbSeries.Checked ) ? FindItemStart( lvExisting, lviWish.Text ) : 
-				                                     FindItem( lvExisting, lviWish.Text );
-				lviWish.BackColor = ( lviExisting != null ) ? ExistingColor : 
-					                                          WishColor;
-			}
-		}
+/******************************************************* Processing ***************************************************/
 
-		/// <summary>
-		/// Colors all items in the Wish list.
-		/// </summary>
-		void ColorWish( )
-		{
-			SetStatus( "Coloring " + strCollectionType + " in Wish list..." );
-			foreach ( ListViewItem lviWish in lvWish.Items ) {
-				ColorWishItem( lviWish );
-			}
-			ClearStatus( );
-		}
-		
-		/// <summary>
-		/// Compares the horizoltal resolution in the tool tip.
-		/// </summary>
-		/// <param name="lviOld">Old ListViewItem</param>
-		/// <param name="lviNew">New ListViewItem</param>
-		/// <returns>True: if New Item Resolution is higher.</returns>
-		bool CompareHorizontalResolution( ListViewItem lviOld, ListViewItem lviNew )
-		{
-			bool bResolutionIsHigher = false;
-			
-			if ( cbGetHigherRes.Checked ) {
-				Match mtExistingResolution = Regex.Match( lviOld.ToolTipText, "Video:  \\d+" );
-				if ( mtExistingResolution.Success ) {
-					Match mtImportResolution = Regex.Match( lviNew.ToolTipText, "Video:  \\d+" );
-					if ( mtImportResolution.Success ) {
-						string sExistingResolution = Regex.Match( mtExistingResolution.Value, @"\d+" ).Value;
-						int iExistingResolution = Int32.Parse( sExistingResolution );
-						string sImportResolution = Regex.Match( mtImportResolution.Value, @"\d+" ).Value;
-						int iImportResolution = Int32.Parse(sImportResolution );
-						bResolutionIsHigher = iExistingResolution < iImportResolution;
-					}
-				}
-			}
-			return bResolutionIsHigher;
-		}
-		
-		/// <summary>
-		/// Colors a single item in the Import list view.
-		/// </summary>
-		/// <param name="lviImport">The item to be colored.</param>
-		void ColorImportItem( ListViewItem lviImport )
-		{
-			if ( lviImport == null ) {
-				return;
-			}
-			lviImport.Selected = false;
-			ListViewItem lviGarbage = FindItem( lvGarbage, RemoveEpisodeInfo(lviImport.Text ) );
-			if ( lviGarbage != null ) {
-				lviImport.BackColor = GarbageColor;
-			}
-			else {
-				ListViewItem lviExisting = FindItem( lvExisting, lviImport.Text );
-				if ( lviExisting != null ) {
- 					lviImport.BackColor = CompareHorizontalResolution ( lviExisting, lviImport ) ? WishColor :
-																								ExistingColor;
-				}
-				else {
-					ListViewItem lviWish = FindItem( lvWish, RemoveEpisodeInfo( lviImport.Text ) );
-					lviImport.BackColor = ( lviWish != null ) ? WishColor : 
-					                                            NeutralColor;
-				}
-			}
-		}
-
-		/// <summary>
-		/// Colcor all items with the according name in all lists. 
-		/// </summary>
-		/// <param name="strItemName">The name of the item to be colored.</param>
-		void ColorAll( string strItemName )
-		{
-			ListViewItem lviGarbage = FindItem( lvGarbage, RemoveEpisodeInfo( strItemName ) );
-			ListViewItem lviExisting;
-			lviExisting = ( rbSeries.Checked ) ? FindItemStart( lvExisting, strItemName ) : 
-			                                     FindItem( lvExisting, strItemName );
-			ListViewItem lviWish = FindItem( lvWish, RemoveEpisodeInfo( strItemName ) );
-			ListViewItem lviImport = FindItem( lvImport, strItemName );
-			
-			if ( lviGarbage != null ) {
-				lviGarbage.BackColor = GarbageColor;
-				if ( lviExisting != null ) {
-					lviExisting.BackColor = GarbageColor;
-				}
-				if ( lviWish != null ) {
-					lviWish.BackColor = GarbageColor;
-				}
-				if ( lviImport != null ) {
-					lviImport.BackColor = GarbageColor;
-				}
-			}
-			else if ( lviExisting != null ) {
-				lviExisting.BackColor = ExistingColor;
-				if ( lviWish != null ) {
-					lviWish.BackColor = ExistingColor;
-				}
-				if ( lviImport != null ) {
- 					lviImport.BackColor = CompareHorizontalResolution ( lviExisting, lviImport ) ? WishColor :
-																								ExistingColor;
-				}
-			}
-			else if ( lviWish != null ) {
-				if ( rbSeries.Checked ) {
-					lviExisting = FindItemStart( lvExisting, RemoveEpisodeInfo( strItemName ) );
-				}
-				lviExisting = FindItem( lvExisting, strItemName );
-				if ( lviExisting == null ) {
-					lviWish.BackColor = WishColor;
-				}
-				if ( lviImport != null ) {
-					lviImport.BackColor = WishColor;
-				}
-			}
-			else if ( lviImport != null ) {
-				lviImport.BackColor = NeutralColor;
-			}
-		}
-
-		/// <summary>
-		/// Colors all items in the Import list.
-		/// </summary>
-		void ColorImport( )
-		{
-			SetStatus( "Coloring " + strCollectionType + " in Import list..." );
-			foreach ( ListViewItem lviImport in lvImport.Items ) {
-				ColorImportItem( lviImport );
-			}
-			ClearStatus( );
-		}
-		
 		/// <summary>
 		/// Make the target path, including file name, for file to be copied or moved.
 		/// </summary>
@@ -1001,7 +843,7 @@ namespace Movie_File_Merger
 						swSourceListFile.WriteLine( sSourceFile );
 						ListViewItem lviExisting;
 						lviExisting = AddItemToListView( lvExisting, lviImport );
-						if ( CompareHorizontalResolution ( lviExisting, lviImport ) )
+						if ( HorizontalResolutionIsHigher ( lviExisting, lviImport ) )
 						{
 							lviExisting.ToolTipText = lviImport.ToolTipText;
 							ColorAll( lviExisting.Text );
@@ -1051,39 +893,39 @@ namespace Movie_File_Merger
 		}
 
 		/// <summary>
-		/// Searches a list view for an item with a specific text.  
+		/// Removes the episode info to get the series name.
 		/// </summary>
-		/// <param name="lvListView">The list view to be searched.</param>
-		/// <param name="strText">The text to search for.</param>
-		/// <returns>The found list item, otherwise null if there are no items in the view</returns>
-		ListViewItem FindItem( ListView lvListView, string strText )
+		/// <param name="strCleanName">The episode name.</param>
+		/// <returns>The series name.</returns>
+		string RemoveEpisodeInfo( string strCleanName )
 		{
-			return ( lvListView.Items.Count < 1 ) ? null : 
-				                                    lvListView.FindItemWithText( strText, false, 0, false );
+			return ( rbSeries.Checked ) ? Regex.Replace( strCleanName, @" S\d+e\d+$", "" ) : 
+			                              strCleanName;
 		}
+
+/********************************************** Drop Area Handling ***************************************************/
 
 		/// <summary>
-		/// Searches a list view for an items starting with a specific text. 
+		/// Get the according selected regular expression to fill the Tool Tip regex. 
 		/// </summary>
-		/// <param name="lvListView">The list view to be searched.</param>
-		/// <param name="strText">The text with whish the item should start.</param>
-		/// <returns>The item if found, otherwise null.</returns>
-		ListViewItem FindItemStart( ListView lvListView, string strText )
+		/// <returns>The regular expression to fill the Tool Tip Regex.</returns>
+		string GetSelectionRegEx ( string sSelection)
 		{
-			if ( lvListView.Items.Count < 1 ) {
-				return null;
+			string sResult = "";
+			switch ( sSelection ) {
+				case "Square Format": sResult = @"\(((4:3)|(5:4)|(3:2)|(1\.[0-5]\d+))\)"; break;
+				case "Wide Screen": sResult = @"\(((16:9)|(1\.85:1)|(1\.[6-9]\d+)|(2\.[0-2]\d+))\)"; break;
+				case "Cinema Scope": sResult = @"\((([23]\.*\d*:1)|(2\.[3-9]\d+)|(3\.\d+))\)"; break;
+				case "699 or narrower": sResult = @"Video:  [1-6]\d{2} x"; break;
+				case "700 or wider": sResult = @"(Video:  [7-9]\d{2} x)|(Video:  [1-9]\d{3} x)"; break;
+				case "1000 or wider": sResult = @"Video:  [1-9]\d{3} x"; break;
+				case "Series with \"SxxExx\"": sResult = @".[Ss]\d+[Ee]\d+"; break;
+				case "Movies with \"(Year)\"": sResult = @"\([1-2][0-9]{3}\)"; break;
+				default: sResult = @"^$"; break;
 			}
-			ListViewItem lviThis = lvListView.FindItemWithText( strText );
-			if ( lviThis != null ) {
-				if ( lviThis.Text.Length >= strText.Length ) {
-					if ( lviThis.Text.Substring(0,strText.Length) == strText ) {
-						return lviThis;
-					}
-				}
-			}
-			return null;
+			return sResult;
 		}
-
+		
 		/// <summary>
 		/// Plays the video of the item dropped on the Play droparea with the default system player.
 		/// The file to be played has to be located in the Import folder.
@@ -1176,6 +1018,246 @@ namespace Movie_File_Merger
 		}
 		
 		/// <summary>
+		/// Searches on IMDb for the selected items of the list view, 
+		/// which has been droped on the Search IMDb droparea.
+		/// </summary>
+		/// <param name="lvListView">The list view with the selected items.</param>
+		void SearchIMDb( ListView lvListView )
+		{
+			foreach ( ListViewItem lviItem in lvListView.SelectedItems ) {
+				string strCleanName = RemoveEpisodeInfo( lviItem.Text );
+				System.Diagnostics.Process.Start( "http://www.imdb.com/find?q=" + 
+				                                  strCleanName.Replace( ' ', '+' ) + strIMDbSearchType );
+				LogMessage( "Info", Color.Blue, "Searching IMDb for " + strCleanName );
+			}
+		}
+
+		/// <summary>
+		/// Searches on Torrentz.eu for the selected items of the list view, 
+		/// which has been droped on the Search Torrentz droparea.
+		/// </summary>
+		/// <param name="lvListView">The list view with the selected items.</param>
+		void SearchTorrenz( ListView lvListView )
+		{
+			foreach ( ListViewItem lviItem in lvListView.SelectedItems ) {
+				string strCleanName = RemoveEpisodeInfo( lviItem.Text );
+				System.Diagnostics.Process.Start( "http://torrentz.eu/search?f=" + 
+				                                  strCleanName.Replace( ' ', '+' ) );
+				LogMessage( "Info", Color.Blue, "Searching Torrenz for " + strCleanName );
+			}
+		}
+
+/******************************************* List View Coloring *******************************************/		
+		/// <summary>
+		/// Colors all items contained in the Existing, the Wish and the Import list views.
+		/// </summary>
+		void ColorExistingAndUp( )
+		{
+			ColorExisting( );
+			ColorWish( );
+			ColorImport( );
+		}
+		
+		/// <summary>
+		/// Colors a single items in the Existing list view.
+		/// </summary>
+		/// <param name="lviExisting">The item to be colored.</param>
+		void ColorExistingItem( ListViewItem lviExisting )
+		{
+			if ( lviExisting == null ) {
+				return;
+			}
+			lviExisting.Selected = false;
+			ListViewItem lviGarbage = FindItem( lvGarbage, RemoveEpisodeInfo( lviExisting.Text ) );
+			lviExisting.BackColor = ( lviGarbage != null ) ? GarbageColor : 
+			                                                 ExistingColor;
+		}
+		
+		/// <summary>
+		/// Colcors all items in the Existing list view.
+		/// </summary>
+		void ColorExisting( )
+		{
+			SetStatus( "Coloring " + strCollectionType + " in Existing list..." );
+			foreach ( ListViewItem lviExisting in lvExisting.Items ) {
+				ColorExistingItem( lviExisting );
+			}
+			ClearStatus( );
+		}
+		
+		/// <summary>
+		/// Colors all items contained in the Wish and the Import list views.
+		/// </summary>
+		void ColorWishAndUp( )
+		{
+			ColorWish( );
+			ColorImport( );
+		}
+		
+		/// <summary>
+		/// Colors a single item in the Wish list view.
+		/// </summary>
+		/// <param name="lviWish">The item to be colored.</param>
+		void ColorWishItem( ListViewItem lviWish )
+		{
+			if ( lviWish == null ) {
+				return;
+			}
+			lviWish.Selected = false;
+			ListViewItem lviGarbage = FindItem( lvGarbage, RemoveEpisodeInfo( lviWish.Text ) );
+			if ( lviGarbage != null ) {
+				lviWish.BackColor = GarbageColor;
+			}
+			else {
+				ListViewItem lviExisting;
+				lviExisting = ( rbSeries.Checked ) ? FindItemStart( lvExisting, lviWish.Text ) : 
+				                                     FindItem( lvExisting, lviWish.Text );
+				lviWish.BackColor = ( lviExisting != null ) ? ExistingColor : 
+					                                          WishColor;
+			}
+		}
+
+		/// <summary>
+		/// Colors all items in the Wish list.
+		/// </summary>
+		void ColorWish( )
+		{
+			SetStatus( "Coloring " + strCollectionType + " in Wish list..." );
+			foreach ( ListViewItem lviWish in lvWish.Items ) {
+				ColorWishItem( lviWish );
+			}
+			ClearStatus( );
+		}
+		
+		/// <summary>
+		/// Colors a single item in the Import list view.
+		/// </summary>
+		/// <param name="lviImport">The item to be colored.</param>
+		void ColorImportItem( ListViewItem lviImport )
+		{
+			if ( lviImport == null ) {
+				return;
+			}
+			lviImport.Selected = false;
+			ListViewItem lviGarbage = FindItem( lvGarbage, RemoveEpisodeInfo(lviImport.Text ) );
+			if ( lviGarbage != null ) {
+				lviImport.BackColor = GarbageColor;
+			}
+			else {
+				ListViewItem lviExisting = FindItem( lvExisting, lviImport.Text );
+				if ( lviExisting != null ) {
+ 					lviImport.BackColor = HorizontalResolutionIsHigher ( lviExisting, lviImport ) ? WishColor :
+																								ExistingColor;
+				}
+				else {
+					ListViewItem lviWish = FindItem( lvWish, RemoveEpisodeInfo( lviImport.Text ) );
+					lviImport.BackColor = ( lviWish != null ) ? WishColor : 
+					                                            NeutralColor;
+				}
+			}
+		}
+
+		/// <summary>
+		/// Colcor all items with the according name in all lists. 
+		/// </summary>
+		/// <param name="strItemName">The name of the item to be colored.</param>
+		void ColorAll( string strItemName )
+		{
+			ListViewItem lviGarbage = FindItem( lvGarbage, RemoveEpisodeInfo( strItemName ) );
+			ListViewItem lviExisting;
+			lviExisting = ( rbSeries.Checked ) ? FindItemStart( lvExisting, strItemName ) : 
+			                                     FindItem( lvExisting, strItemName );
+			ListViewItem lviWish = FindItem( lvWish, RemoveEpisodeInfo( strItemName ) );
+			ListViewItem lviImport = FindItem( lvImport, strItemName );
+			
+			if ( lviGarbage != null ) {
+				lviGarbage.BackColor = GarbageColor;
+				if ( lviExisting != null ) {
+					lviExisting.BackColor = GarbageColor;
+				}
+				if ( lviWish != null ) {
+					lviWish.BackColor = GarbageColor;
+				}
+				if ( lviImport != null ) {
+					lviImport.BackColor = GarbageColor;
+				}
+			}
+			else if ( lviExisting != null ) {
+				lviExisting.BackColor = ExistingColor;
+				if ( lviWish != null ) {
+					lviWish.BackColor = ExistingColor;
+				}
+				if ( lviImport != null ) {
+ 					lviImport.BackColor = HorizontalResolutionIsHigher ( lviExisting, lviImport ) ? WishColor :
+																								ExistingColor;
+				}
+			}
+			else if ( lviWish != null ) {
+				if ( rbSeries.Checked ) {
+					lviExisting = FindItemStart( lvExisting, RemoveEpisodeInfo( strItemName ) );
+				}
+				lviExisting = FindItem( lvExisting, strItemName );
+				if ( lviExisting == null ) {
+					lviWish.BackColor = WishColor;
+				}
+				if ( lviImport != null ) {
+					lviImport.BackColor = WishColor;
+				}
+			}
+			else if ( lviImport != null ) {
+				lviImport.BackColor = NeutralColor;
+			}
+		}
+
+		/// <summary>
+		/// Colors all items in the Import list.
+		/// </summary>
+		void ColorImport( )
+		{
+			SetStatus( "Coloring " + strCollectionType + " in Import list..." );
+			foreach ( ListViewItem lviImport in lvImport.Items ) {
+				ColorImportItem( lviImport );
+			}
+			ClearStatus( );
+		}
+		
+/************************************************* List View Handling ***********************************************/
+
+		/// <summary>
+		/// Searches a list view for an item with a specific text.  
+		/// </summary>
+		/// <param name="lvListView">The list view to be searched.</param>
+		/// <param name="strText">The text to search for.</param>
+		/// <returns>The found list item, otherwise null if there are no items in the view</returns>
+		ListViewItem FindItem( ListView lvListView, string strText )
+		{
+			return ( lvListView.Items.Count < 1 ) ? null : 
+				                                    lvListView.FindItemWithText( strText, false, 0, false );
+		}
+
+		/// <summary>
+		/// Searches a list view for an items starting with a specific text. 
+		/// </summary>
+		/// <param name="lvListView">The list view to be searched.</param>
+		/// <param name="strText">The text with whish the item should start.</param>
+		/// <returns>The item if found, otherwise null.</returns>
+		ListViewItem FindItemStart( ListView lvListView, string strText )
+		{
+			if ( lvListView.Items.Count < 1 ) {
+				return null;
+			}
+			ListViewItem lviThis = lvListView.FindItemWithText( strText );
+			if ( lviThis != null ) {
+				if ( lviThis.Text.Length >= strText.Length ) {
+					if ( lviThis.Text.Substring(0,strText.Length) == strText ) {
+						return lviThis;
+					}
+				}
+			}
+			return null;
+		}
+
+		/// <summary>
 		/// Removed the selected items from the list view.
 		/// </summary>
 		/// <param name="lvThis">The list view from where the items should e removed.</param>
@@ -1214,126 +1296,6 @@ namespace Movie_File_Merger
 					SerializeListView( lvListView, Path.Combine( strPrivatePath, strName + ".slv" ) );
 				}
 			}
-		}
-
-		/// <summary>
-		/// The collection type has been changed.  
-		/// Save changed list and load the new ones.
-		/// </summary>
-		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
-		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
-		void RbProjectTypeClick( object sender, EventArgs e )
-		{
-			var rbRadioButton = (RadioButton)sender;
-
-			if ( rbRadioButton.Checked ) {
-				strCollectionType = rbRadioButton.Tag.ToString( );
-				lvImport.Items.Clear( );
-				InitListViewFromFile( lvGarbage );
-				InitListViewFromFile( lvExisting );
-				InitListViewFromFile( lvWish );
-			} else {
-				SaveChangedListView( lvGarbage );
-				SaveChangedListView( lvExisting );
-				SaveChangedListView( lvWish );
-			}
-		}
-		
-		/// <summary>
-		/// The form is closing. 
-		/// Save changed lists and the settings.
-		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		void MfFormClosing( object sender, FormClosingEventArgs e )
-		{
-			SaveChangedListView( lvExisting );
-			SaveChangedListView( lvGarbage );
-			SaveChangedListView( lvWish );
-			SaveXmlSettings( );
-		}
-		
-		/// <summary>
-		/// The mose entered a list view.  
-		/// Make the list view acitve, so that the scrolling works.
-		/// </summary>
-		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
-		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
-		void LvMouseEnter( object sender, EventArgs e )
-		{
-			( (ListView)sender ).Select( );
-		}
-		
-		/// <summary>
-		/// The mouse entered a rich text box.  
-		/// Put it in focus, so that the scrolling works.
-		/// </summary>
-		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
-		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
-		void RtbMouseEnter( object sender, System.EventArgs e )
-		{
-			( (RichTextBox)sender ).Focus( );
-		}
-		
-		/// <summary>
-		/// A link in a richtext box has been clicked.  Start the link with the default browser.
-		/// </summary>
-		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
-		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
-		void LinkClicked( object sender, LinkClickedEventArgs e )
-		{
-			System.Diagnostics.Process.Start( e.LinkText );
-		}
-		
-		/// <summary>
-		/// Removes the episode info to get the series name.
-		/// </summary>
-		/// <param name="strCleanName">The episode name.</param>
-		/// <returns>The series name.</returns>
-		string RemoveEpisodeInfo( string strCleanName )
-		{
-			return ( rbSeries.Checked ) ? Regex.Replace( strCleanName, @" S\d+e\d+$", "" ) : 
-			                              strCleanName;
-		}
-
-		/// <summary>
-		/// Searches on IMDb for the selected items of the list view, 
-		/// which has been droped on the Search IMDb droparea.
-		/// </summary>
-		/// <param name="lvListView">The list view with the selected items.</param>
-		void SearchIMDb( ListView lvListView )
-		{
-			foreach ( ListViewItem lviItem in lvListView.SelectedItems ) {
-				string strCleanName = RemoveEpisodeInfo( lviItem.Text );
-				System.Diagnostics.Process.Start( "http://www.imdb.com/find?q=" + 
-				                                  strCleanName.Replace( ' ', '+' ) + strIMDbSearchType );
-				LogMessage( "Info", Color.Blue, "Searching IMDb for " + strCleanName );
-			}
-		}
-
-		/// <summary>
-		/// Searches on Torrentz.eu for the selected items of the list view, 
-		/// which has been droped on the Search Torrentz droparea.
-		/// </summary>
-		/// <param name="lvListView">The list view with the selected items.</param>
-		void SearchTorrenz( ListView lvListView )
-		{
-			foreach ( ListViewItem lviItem in lvListView.SelectedItems ) {
-				string strCleanName = RemoveEpisodeInfo( lviItem.Text );
-				System.Diagnostics.Process.Start( "http://torrentz.eu/search?f=" + 
-				                                  strCleanName.Replace( ' ', '+' ) );
-				LogMessage( "Info", Color.Blue, "Searching Torrenz for " + strCleanName );
-			}
-		}
-
-		/// <summary>
-		/// A list view item has been double clicked.  Seach IMDb.
-		/// </summary>
-		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
-		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
-		void LvDoubleClick( object sender, EventArgs e )
-		{
-			SearchIMDb( (ListView)sender );
 		}
 
 		/// <summary>
@@ -1379,21 +1341,6 @@ namespace Movie_File_Merger
 			return false;
 		}
 		
-		/// <summary>
-		/// Scolls all lists to the closed match of the last selected item.
-		/// </summary>
-		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
-		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
-		void LvItemSelectionChanged( object sender, ListViewItemSelectionChangedEventArgs e )
-		{
-			if ( e.Item.Selected && OneItemSelected( ) ) {
-				ShowClosestItem( lvExisting, e.Item.Text );
-				ShowClosestItem( lvGarbage, e.Item.Text );
-				ShowClosestItem( lvWish, e.Item.Text );
-				ShowClosestItem( lvImport, e.Item.Text );
-			}
-		}
-
 		/// <summary>
 		/// Saves a list view to a file, which can bge read by MFM.
 		/// </summary>
@@ -1520,13 +1467,67 @@ namespace Movie_File_Merger
 			}
 			lvThis.EndUpdate( );
 		}
+
+		/// <summary>
+		/// Copy the selected item from one list view to another.
+		/// </summary>
+		/// <param name="lvSource">The list view from where to copy the selected items.</param>
+		/// <param name="lvTarget">The list view to where to copy the selected items.</param>
+		void CopySelected ( ListView lvSource, ListView lvTarget )
+		{
+			foreach ( ListViewItem lviThis in lvSource.SelectedItems ) {
+				if ( rbSeries.Checked &&
+				     ( (string)lvTarget.Tag == "Garbage" ||
+				       (string)lvTarget.Tag == "Wish" ) ) {
+					var lviToAdd = new ListViewItem( RemoveEpisodeInfo( lviThis.Text ) );
+					AddItemToListView( lvTarget, lviToAdd );
+				} else {
+					AddItemToListView( lvTarget, lviThis );
+				}
+			}
+			if ( rbSeries.Checked ) {
+				if ( (string)lvTarget.Tag == "Garbage" ) {
+					ColorExistingAndUp( );
+				}
+				if ( (string)lvTarget.Tag == "Wish" ) {
+					ColorWishAndUp( );
+				}
+			}
+		}
+
+		/// <summary>
+		/// Select items in a list according to a regular expression.
+		/// </summary>
+		/// <param name="lvThis">The list to select from.</param>
+		/// <param name="sRegex">The regular expression according to which to select.</param>
+		int SelectInList( ListView lvThis, string sRegex )
+		{
+			int iSelected = 0;
+			var rgxToolTip = new Regex( sRegex );
+			
+			Cursor.Current = Cursors.WaitCursor;
+			foreach ( ListViewItem lviThis in lvThis.Items ) {
+				if( rgxToolTip.IsMatch( lviThis.ToolTipText ) ) {
+					lviThis.Selected = true;
+					iSelected++;
+				}
+				else {
+					lviThis.Selected = false;
+				}
+			}
+			Cursor.Current = Cursors.Default;
+			if( iSelected > 0 ) {
+				ShowInfo( "Selected " + iSelected + " items in " + lvThis.Tag  + " " + strCollectionType + ".");
+			}
+			return iSelected;
+		}
 		
-		/******************
-		 * User Interface *
-		 ******************/
+/************************************************************************************************/
+/*                                          User Interface                                      */
+/************************************************************************************************/
 		
 		/// <summary>
-		/// The MFM windos has ben shown.  
+		/// The MFM windos has been shown.  
 		/// Initialize all list views.
 		/// </summary>
 		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
@@ -1538,6 +1539,413 @@ namespace Movie_File_Merger
 			InitListViewFromFile( lvWish );
 		}
 
+		/// <summary>
+		/// The form is closing. 
+		/// Save changed lists and the settings.
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void MfFormClosing( object sender, FormClosingEventArgs e )
+		{
+			SaveChangedListView( lvExisting );
+			SaveChangedListView( lvGarbage );
+			SaveChangedListView( lvWish );
+			SaveXmlSettings( );
+		}
+		
+		/// <summary>
+		/// Resize the columns if the spliter has been moved.
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void ScVerticalSplitterMoved( object sender, SplitterEventArgs e )
+		{
+			SetColumnWidth( );
+		}
+
+/******************************************** General Interface ***************************************************/		
+		/// <summary>
+		/// The settings tab has been left.  
+		/// Save the settings.
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void TpSettingsLeave( object sender, EventArgs e )
+		{
+			SaveXmlSettings( );
+		}
+		
+		/// <summary>
+		/// The mouse entered a rich text box.  
+		/// Put it in focus, so that the scrolling works.
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void RtbMouseEnter( object sender, System.EventArgs e )
+		{
+			( (RichTextBox)sender ).Focus( );
+		}
+		
+		/// <summary>
+		/// A link in a richtext box has been clicked.  Start the link with the default browser.
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void LinkClicked( object sender, LinkClickedEventArgs e )
+		{
+			System.Diagnostics.Process.Start( e.LinkText );
+		}
+		
+		/// <summary>
+		/// Launch the MFM website if the link label has been clicked. 
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void LlMovieFileMergerOrgClick(object sender, EventArgs e)
+		{
+			System.Diagnostics.Process.Start( "www.Movie-File-Merger.org" );
+		}
+
+		/// <summary>
+		/// Check if the latest version is installed.
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void BtnCheckNowClick(object sender, EventArgs e)
+		{
+			CheckLatestVersion( "Now" );
+		}
+		
+/************************************** Top Interface ****************************************************/
+
+		/// <summary>
+		/// Something has been draged over a text box.
+		/// Check what it is and set the allowed effect accordingly.
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void TbDragOver( object sender, DragEventArgs e )
+		{
+			if ( e.Data.GetDataPresent( DataFormats.FileDrop ) ) {
+				e.Effect = e.AllowedEffect;
+			}
+		}
+		
+		/// <summary>
+		/// A folder has been dropped on the Target Folder droparea.
+		/// Brows the folder and add the files to the Existing list view.
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void TbTargetFolderDragDrop( object sender, DragEventArgs e )
+		{
+			if ( e.AllowedEffect == DragDropEffects.None ) {
+				return;
+			}
+			Cursor.Current = Cursors.WaitCursor;
+			if ( e.Data.GetDataPresent( DataFormats.FileDrop ) ) {
+				string strPath = ( (string[])e.Data.GetData( DataFormats.FileDrop ) )[0];
+				FileAttributes attr = File.GetAttributes( strPath );
+				bool isFolder = ( attr & FileAttributes.Directory ) == FileAttributes.Directory;
+
+				if ( isFolder ) {
+					tbTargetFolder.Text = strPath;
+					AddFolderToListView( lvExisting, tbTargetFolder.Text );
+				}
+			}
+			Cursor.Current = Cursors.Default;
+		}
+		
+		/// <summary>
+		/// A folder has been dropped on the Import Folder droparea.
+		/// Brows the folder and add the files to the Import list view.
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void TbImportFolderDragDrop( object sender, DragEventArgs e )
+		{
+			if ( e.AllowedEffect == DragDropEffects.None ) {
+				return;
+			}
+			Cursor.Current = Cursors.WaitCursor;
+			if ( e.Data.GetDataPresent( DataFormats.FileDrop) ) {
+				string strPath = ( (string[])e.Data.GetData( DataFormats.FileDrop ) )[0];
+				FileAttributes attr = File.GetAttributes( strPath );
+				bool isFolder = ( attr & FileAttributes.Directory ) == FileAttributes.Directory;
+
+				if ( isFolder ) {
+					lvImport.Items.Clear( );
+					tbImportFolder.Text = strPath;
+					AddFolderToListView( lvImport, tbImportFolder.Text );
+				}
+			}
+			Cursor.Current = Cursors.Default;
+		}
+		
+		/// <summary>
+		/// The collection type has been changed.  
+		/// Save changed list and load the new ones.
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void RbCollectionsClick( object sender, EventArgs e )
+		{
+			var rbRadioButton = (RadioButton)sender;
+
+			if ( rbRadioButton.Checked ) {
+				strCollectionType = rbRadioButton.Tag.ToString( );
+				lvImport.Items.Clear( );
+				InitListViewFromFile( lvGarbage );
+				InitListViewFromFile( lvExisting );
+				InitListViewFromFile( lvWish );
+			} else {
+				SaveChangedListView( lvGarbage );
+				SaveChangedListView( lvExisting );
+				SaveChangedListView( lvWish );
+			}
+		}
+		
+		/// <summary>
+		/// Sart the processing of the files.
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void BtnStartProcessClick(object sender, EventArgs e)
+		{
+			ProcessImport();
+		}
+
+		/// <summary>
+		/// A list view has been dragged over the Tool Tip Regex text box.
+		/// Chec it and set the drop effects accordingly.
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void TbToolTipRegexDragOver( object sender, DragEventArgs e )
+		{
+			if ( e.Data.GetDataPresent( typeof( ListView.SelectedListViewItemCollection ) ) ) {
+				e.Effect = e.AllowedEffect;
+			}
+		}
+		
+		/// <summary>
+		/// A list view has been dropped on the Tool Tip Regex text box.
+		/// Select items in the list view according to the regular expression.
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void TbToolTipRegexDragDrop( object sender, DragEventArgs e )
+		{
+			if ( e.AllowedEffect == DragDropEffects.None )  {
+				return;
+			}
+			if ( e.Data.GetDataPresent( typeof( ListView.SelectedListViewItemCollection ) ) ) {
+				if( SelectInList( lvDragSource, tbToolTipRegex.Text ) == 0 ) {
+					ShowInfo( "Selected no items.");
+				}
+			}
+		}
+		
+		/// <summary>
+		/// Update the Tool Tip Regex once the selection has changed.
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void CobToolTipRegexSelectedIndexChanged(object sender, EventArgs e)
+		{
+			switch ( cobToolTipRegex.Text ) {
+				case "Square Format": tbToolTipRegex.Text = @"\(((4:3)|(5:4)|(3:2)|(1\.[0-5]\d+))\)"; break;
+				case "Wide Screen": tbToolTipRegex.Text = @"\(((16:9)|(1\.85:1)|(1\.[6-9]\d+)|(2\.[0-2]\d+))\)"; break;
+				case "Cinema Scope": tbToolTipRegex.Text = @"\((([23]\.*\d*:1)|(2\.[3-9]\d+)|(3\.\d+))\)"; break;
+				case "Low Resolution": tbToolTipRegex.Text = @"Video:  [1-6]\d{2} x"; break;
+				case "Medium Resolution": tbToolTipRegex.Text = @"Video:  [7-9]\d{2} x"; break;
+				case "High Resolution": tbToolTipRegex.Text = @"Video:  1\d{3} x"; break;
+				case "Folder Name": tbToolTipRegex.Text = @"\\YourFolderName\\"; break;
+				case "After 2009": tbToolTipRegex.Text = @"201[0-9]"; break;
+				default: tbToolTipRegex.Text = @""; break;
+			}
+		}
+
+/************************************** Drop Area Interface *******************************************/
+
+		/// <summary>
+		/// Something has been draged over a droparea.  
+		/// Change the cursor accordingly.
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void BtnDragOver(object sender, DragEventArgs e)
+		{
+			if ( e.Data.GetDataPresent( typeof( ListView.SelectedListViewItemCollection ) ) ) {
+				e.Effect = e.AllowedEffect;
+			}
+		}
+		
+		/// <summary>
+		/// A list view has been drop on the Export Lists droparea.
+		/// Save the list view to a CSV file.
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void BtnExportListDragDrop( object sender, DragEventArgs e )
+		{
+			sfdMovieFileMerger.FileName =
+				tbNickName.Text + " " +
+				(string)lvDragSource.Tag + " " +
+				strCollectionType + " " +
+				StandardizeDate( DateTime.Today ) +
+				".csv";
+			if ( sfdMovieFileMerger.ShowDialog( ) == DialogResult.OK ) {
+				sfdMovieFileMerger.InitialDirectory = "";  // take the same folder next time
+				SaveListViewToCsvFile( lvDragSource, sfdMovieFileMerger.FileName );
+			}
+		}
+		
+		/// <summary>
+		/// Items have been dropped on the Seach Torrentz droparea.
+		/// Open the To4rentz.eu searches for them in the default browser. 
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void BtnSearchTorrentzDragDrop( object sender, DragEventArgs e) 
+		{
+			SearchTorrenz( lvDragSource );
+		}
+		
+		/// <summary>
+		/// Items have been dropped on the Erase Selected drop area. 
+		/// Erase the selected items from the list view.
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void BtnEraseSelectedDragDrop( object sender, DragEventArgs e )
+		{
+			EraseSelected( lvDragSource );
+		}
+		
+		/// <summary>
+		/// An item has been droped on the Erase Color drop area.  
+		/// Erase all items with the same color from the list view.
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void BtnEraseColorDragDrop( object sender, DragEventArgs e )
+		{
+			foreach ( ListViewItem lviThis in lvDragSource.SelectedItems ) {
+				DragColor = lviThis.BackColor;
+				break;
+			}
+			EraseColorFromListView( lvDragSource, DragColor );
+		}
+		
+		/// <summary>
+		/// Items have been droped on the Seach IMDb drop area.
+		/// Open the IMDb searches for them in the default browser.
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void BtnSearchIMDbDragDrop( object sender, DragEventArgs e )
+		{
+			SearchIMDb( lvDragSource );
+		}
+		
+		/// <summary>
+		/// An item has been dropped on the Play Video droparea.
+		/// Play it with the default player.
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void BtnPlayDragDrop( object sender, DragEventArgs e )
+		{
+			if ( (string)lvDragSource.Tag == "Import" ) {
+				Play( );
+			}
+			else {
+				ShowInfo( "Playing is only supported from the Import list." );
+			}
+		}
+		
+		/// <summary>
+		/// An item has been dropped on the Media Info drop area.
+		/// Get the detailed madia info for it.
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void BtnMediaInfoDragDrop( object sender, DragEventArgs e )
+		{
+			if ( (string)lvDragSource.Tag == "Import" ) {
+				GetMediaInfo( );
+			}
+			else {
+				ShowInfo( "Getting the MediaInfo is only supported from the Import list." );
+			}
+		}
+		
+/*************************************************** Lists Interface *******************************************/	
+
+		/// <summary>
+		/// Update the Garbvage, Existing, Wish and Import counters from time to time.
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void TmrUpdateCountersTick( object sender, EventArgs e )
+		{
+			lvExisting.Columns[0].Text = lvExisting.Items.Count + " Existing " + strCollectionType;
+			lvGarbage.Columns[0].Text = lvGarbage.Items.Count + " Garbage " + strCollectionType;
+			lvImport.Columns[0].Text = lvImport.Items.Count + " Import " + strCollectionType;
+			lvWish.Columns[0].Text = lvWish.Items.Count + " Wish " + strCollectionType;
+		}
+
+		/// <summary>
+		/// A key has been pressed on a list view.
+		/// Check which key and take the according actions.
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void lvKeyDown( object sender, KeyEventArgs e )
+		{
+			if ( e.KeyCode == Keys.Delete ) {
+				EraseSelected( (ListView)sender );
+			}
+			// TODO: Add Ctrl-A
+		}
+
+		/// <summary>
+		/// Scolls all lists to the closed match of the last selected item.
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void LvItemSelectionChanged( object sender, ListViewItemSelectionChangedEventArgs e )
+		{
+			if ( e.Item.Selected && OneItemSelected( ) ) {
+				ShowClosestItem( lvExisting, e.Item.Text );
+				ShowClosestItem( lvGarbage, e.Item.Text );
+				ShowClosestItem( lvWish, e.Item.Text );
+				ShowClosestItem( lvImport, e.Item.Text );
+			}
+		}
+
+		/// <summary>
+		/// A list view item has been double clicked.  Seach IMDb.
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void LvDoubleClick( object sender, EventArgs e )
+		{
+			SearchIMDb( (ListView)sender );
+		}
+
+		/// <summary>
+		/// The mose entered a list view.  
+		/// Make the list view acitve, so that the scrolling works.
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void LvMouseEnter( object sender, EventArgs e )
+		{
+			( (ListView)sender ).Select( );
+		}
+		
 		/// <summary>
 		/// An item has been draged from a list view.  
 		/// Set the drag source and effects.
@@ -1575,11 +1983,12 @@ namespace Movie_File_Merger
 		void LvDragDrop( object sender, DragEventArgs e )
 		{
 			var lvThis = (ListView)sender;
+			// TODO: Make Separate function function
 			
 			if( e.AllowedEffect == DragDropEffects.None) {
 				return;
 			}
-			if ( lvThis.Tag == "Import" && cbGetHigherRes.Checked && !cbMediaInfo.Checked ) {
+			if ( lvThis.Tag.ToString() == "Import" && cbGetHigherRes.Checked && !cbMediaInfo.Checked ) {
 				if ( ShowYesNoQuestion ( "To process higher resolution files MediaInfo should be ticked,\n" +
 				                    "which takes considerably longer, but is better.\n" +
 				                    "Should MFM tick it now?" ) == DialogResult.Yes) {
@@ -1653,416 +2062,7 @@ namespace Movie_File_Merger
 			Cursor.Current = Cursors.Default;
 		}
 
-		/// <summary>
-		/// The progress bar has been clicked and the processing should start.
-		/// </summary>
-		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
-		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
-		void PbProcessClick( object sender, EventArgs e )
-		{
-		}
-
-		/// <summary>
-		/// Update the Garbvage, Existing, Wish and Import counters from time to time.
-		/// </summary>
-		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
-		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
-		void TmrUpdateCountersTick( object sender, EventArgs e )
-		{
-			lvExisting.Columns[0].Text = lvExisting.Items.Count + " Existing " + strCollectionType;
-			lvGarbage.Columns[0].Text = lvGarbage.Items.Count + " Garbage " + strCollectionType;
-			lvImport.Columns[0].Text = lvImport.Items.Count + " Import " + strCollectionType;
-			lvWish.Columns[0].Text = lvWish.Items.Count + " Wish " + strCollectionType;
-		}
-
-		/// <summary>
-		/// Resize the columns if the spliter has been moved.
-		/// </summary>
-		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
-		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
-		void ScVerticalSplitterMoved( object sender, SplitterEventArgs e )
-		{
-			SetColumnWidth( );
-		}
-
-		/// <summary>
-		/// The settings tab has been left.  
-		/// Save the settings.
-		/// </summary>
-		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
-		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
-		void TpSettingsLeave( object sender, EventArgs e )
-		{
-			SaveXmlSettings( );
-		}
-		
-		/// <summary>
-		/// Something has been draged over a droparea.  
-		/// Change the cursor accordingly.
-		/// </summary>
-		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
-		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
-		void BtnDragOver(object sender, DragEventArgs e)
-		{
-			if ( e.Data.GetDataPresent( typeof( ListView.SelectedListViewItemCollection ) ) ) {
-				e.Effect = e.AllowedEffect;
-			}
-		}
-		
-		/// <summary>
-		/// Items have been dropped on the Erase Selected drop area. 
-		/// Erase the selected items from the list view.
-		/// </summary>
-		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
-		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
-		void BtnEraseSelectedDragDrop( object sender, DragEventArgs e )
-		{
-			EraseSelected( lvDragSource );
-		}
-		
-		/// <summary>
-		/// An item has been droped on the Erase Color drop area.  
-		/// Erase all items with the same color from the list view.
-		/// </summary>
-		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
-		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
-		void BtnEraseColorDragDrop( object sender, DragEventArgs e )
-		{
-			foreach ( ListViewItem lviThis in lvDragSource.SelectedItems ) {
-				DragColor = lviThis.BackColor;
-				break;
-			}
-			EraseColorFromListView( lvDragSource, DragColor );
-		}
-		
-		/// <summary>
-		/// An item has been dropped on the Play Video droparea.
-		/// Play it with the default player.
-		/// </summary>
-		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
-		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
-		void BtnPlayDragDrop( object sender, DragEventArgs e )
-		{
-			if ( (string)lvDragSource.Tag == "Import" ) {
-				Play( );
-			}
-			else {
-				ShowInfo( "Playing is only supported from the Import list." );
-			}
-		}
-		
-		/// <summary>
-		/// Items have been droped on the Seach IMDb drop area.
-		/// Open the IMDb searches for them in the default browser.
-		/// </summary>
-		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
-		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
-		void BtnSearchIMDbDragDrop( object sender, DragEventArgs e )
-		{
-			SearchIMDb( lvDragSource );
-		}
-		
-		/// <summary>
-		/// Items have been dropped on the Seach Torrentz droparea.
-		/// Open the To4rentz.eu searches for them in the default browser. 
-		/// </summary>
-		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
-		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
-		void BtnSearchTorrentzDragDrop( object sender, DragEventArgs e) 
-		{
-			SearchTorrenz( lvDragSource );
-		}
-		
-		/// <summary>
-		/// A list view has been drop on the Export Lists droparea.
-		/// Save the list view to a CSV file.
-		/// </summary>
-		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
-		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
-		void BtnExportListDragDrop( object sender, DragEventArgs e )
-		{
-			sfdMovieFileMerger.FileName =
-				tbNickName.Text + " " +
-				(string)lvDragSource.Tag + " " +
-				strCollectionType + " " +
-				StandardizeDate( DateTime.Today ) +
-				".csv";
-			if ( sfdMovieFileMerger.ShowDialog( ) == DialogResult.OK ) {
-				sfdMovieFileMerger.InitialDirectory = "";  // take the same folder next time
-				SaveListViewToCsvFile( lvDragSource, sfdMovieFileMerger.FileName );
-			}
-		}
-		
-		/// <summary>
-		/// A folder has been dropped on the Target Folder droparea.
-		/// Brows the folder and add the files to the Existing list view.
-		/// </summary>
-		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
-		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
-		void TbTargetFolderDragDrop( object sender, DragEventArgs e )
-		{
-			if ( e.AllowedEffect == DragDropEffects.None ) {
-				return;
-			}
-			Cursor.Current = Cursors.WaitCursor;
-			if ( e.Data.GetDataPresent( DataFormats.FileDrop ) ) {
-				string strPath = ( (string[])e.Data.GetData( DataFormats.FileDrop ) )[0];
-				FileAttributes attr = File.GetAttributes( strPath );
-				bool isFolder = ( attr & FileAttributes.Directory ) == FileAttributes.Directory;
-
-				if ( isFolder ) {
-					tbTargetFolder.Text = strPath;
-					AddFolderToListView( lvExisting, tbTargetFolder.Text );
-				}
-			}
-			Cursor.Current = Cursors.Default;
-		}
-		
-		/// <summary>
-		/// A folder has been dropped on the Import Folder droparea.
-		/// Brows the folder and add the files to the Import list view.
-		/// </summary>
-		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
-		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
-		void TbImportFolderDragDrop( object sender, DragEventArgs e )
-		{
-			if ( e.AllowedEffect == DragDropEffects.None ) {
-				return;
-			}
-			Cursor.Current = Cursors.WaitCursor;
-			if ( e.Data.GetDataPresent( DataFormats.FileDrop) ) {
-				string strPath = ( (string[])e.Data.GetData( DataFormats.FileDrop ) )[0];
-				FileAttributes attr = File.GetAttributes( strPath );
-				bool isFolder = ( attr & FileAttributes.Directory ) == FileAttributes.Directory;
-
-				if ( isFolder ) {
-					lvImport.Items.Clear( );
-					tbImportFolder.Text = strPath;
-					AddFolderToListView( lvImport, tbImportFolder.Text );
-				}
-			}
-			Cursor.Current = Cursors.Default;
-		}
-		
-		/// <summary>
-		/// Something has been draged over a text box.
-		/// Check what it is and set the allowed effect accordingly.
-		/// </summary>
-		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
-		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
-		void TbDragOver( object sender, DragEventArgs e )
-		{
-			if ( e.Data.GetDataPresent( DataFormats.FileDrop ) ) {
-				e.Effect = e.AllowedEffect;
-			}
-		}
-		
-		/// <summary>
-		/// A key has been pressed on a list view.
-		/// Check which key and take the according actions.
-		/// </summary>
-		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
-		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
-		void lvKeyDown( object sender, KeyEventArgs e )
-		{
-			if ( e.KeyCode == Keys.Delete ) {
-				EraseSelected( (ListView)sender );
-			}
-		}
-
-		/// <summary>
-		/// An item has been dropped on the Media Info drop area.
-		/// Get the detailed madia info for it.
-		/// </summary>
-		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
-		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
-		void BtnMediaInfoDragDrop( object sender, DragEventArgs e )
-		{
-			if ( (string)lvDragSource.Tag == "Import" ) {
-				GetMediaInfo( );
-			}
-			else {
-				ShowInfo( "Getting the MediaInfo is only supported from the Import list." );
-			}
-		}
-		
-		/// <summary>
-		/// A list view has been dragged over the Tool Tip Regex text box.
-		/// Chec it and set the drop effects accordingly.
-		/// </summary>
-		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
-		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
-		void TbToolTipRegexDragOver( object sender, DragEventArgs e )
-		{
-			if ( e.Data.GetDataPresent( typeof( ListView.SelectedListViewItemCollection ) ) ) {
-				e.Effect = e.AllowedEffect;
-			}
-		}
-		
-		/// <summary>
-		/// Select items in a list according to a regular expression.
-		/// </summary>
-		/// <param name="lvThis">The list to select from.</param>
-		/// <param name="sRegex">The regular expression according to which to select.</param>
-		int SelectInList( ListView lvThis, string sRegex )
-		{
-			int iSelected = 0;
-			var rgxToolTip = new Regex( sRegex );
-			
-			Cursor.Current = Cursors.WaitCursor;
-			foreach ( ListViewItem lviThis in lvThis.Items ) {
-				if( rgxToolTip.IsMatch( lviThis.ToolTipText ) ) {
-					lviThis.Selected = true;
-					iSelected++;
-				}
-				else {
-					lviThis.Selected = false;
-				}
-			}
-			Cursor.Current = Cursors.Default;
-			if( iSelected > 0 ) {
-				ShowInfo( "Selected " + iSelected + " items in " + lvThis.Tag  + " " + strCollectionType + ".");
-			}
-			return iSelected;
-		}
-		
-		
-		/// <summary>
-		/// A list view has been dropped on the Tool Tip Regex text box.
-		/// Select items in the list view according to the regular expression.
-		/// </summary>
-		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
-		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
-		void TbToolTipRegexDragDrop( object sender, DragEventArgs e )
-		{
-			if ( e.AllowedEffect == DragDropEffects.None )  {
-				return;
-			}
-			if ( e.Data.GetDataPresent( typeof( ListView.SelectedListViewItemCollection ) ) ) {
-				if( SelectInList( lvDragSource, tbToolTipRegex.Text ) == 0 ) {
-					ShowInfo( "Selected no items.");
-				}
-			}
-		}
-		
-		/// <summary>
-		/// Launch the MFM website if the link label has been clicked. 
-		/// </summary>
-		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
-		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
-		void LlMovieFileMergerOrgClick(object sender, EventArgs e)
-		{
-			System.Diagnostics.Process.Start( "www.Movie-File-Merger.org" );
-		}
-
-		/// <summary>
-		/// Update the Tool Tip Regex once the selection has changed.
-		/// </summary>
-		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
-		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
-		void CobToolTipRegexSelectedIndexChanged(object sender, EventArgs e)
-		{
-			switch ( cobToolTipRegex.Text ) {
-				case "Square Format": tbToolTipRegex.Text = @"\(((4:3)|(5:4)|(3:2)|(1\.[0-5]\d+))\)"; break;
-				case "Wide Screen": tbToolTipRegex.Text = @"\(((16:9)|(1\.85:1)|(1\.[6-9]\d+)|(2\.[0-2]\d+))\)"; break;
-				case "Cinema Scope": tbToolTipRegex.Text = @"\((([23]\.*\d*:1)|(2\.[3-9]\d+)|(3\.\d+))\)"; break;
-				case "Low Resolution": tbToolTipRegex.Text = @"Video:  [1-6]\d{2} x"; break;
-				case "Medium Resolution": tbToolTipRegex.Text = @"Video:  [7-9]\d{2} x"; break;
-				case "High Resolution": tbToolTipRegex.Text = @"Video:  1\d{3} x"; break;
-				case "Folder Name": tbToolTipRegex.Text = @"\\YourFolderName\\"; break;
-				case "After 2009": tbToolTipRegex.Text = @"201[0-9]"; break;
-				default: tbToolTipRegex.Text = @""; break;
-			}
-		}
-
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
-		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
-		void CobToolTipRegexDisplayMemberChanged(object sender, EventArgs e)
-		{
-			SetStatus( cobToolTipRegex.SelectedText );
-		}
-		
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
-		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
-		void StatusStrip1ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-		{
-	
-		}
-		
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
-		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
-		void BtnStartClick(object sender, EventArgs e)
-		{
-			SetStatus ("Started doing shit...");
-			ProcessImport();
-		}
-
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
-		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
-		void BtnCheckNowClick(object sender, EventArgs e)
-		{
-			CheckLatestVersion( "Now" );
-		}
-		
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <returns></returns>
-		string GetSelectionRegEx ( string sSelection)
-		{
-			string sResult = "";
-			switch ( sSelection ) {
-				case "Square Format": sResult = @"\(((4:3)|(5:4)|(3:2)|(1\.[0-5]\d+))\)"; break;
-				case "Wide Screen": sResult = @"\(((16:9)|(1\.85:1)|(1\.[6-9]\d+)|(2\.[0-2]\d+))\)"; break;
-				case "Cinema Scope": sResult = @"\((([23]\.*\d*:1)|(2\.[3-9]\d+)|(3\.\d+))\)"; break;
-				case "699 or narrower": sResult = @"Video:  [1-6]\d{2} x"; break;
-				case "700 or wider": sResult = @"(Video:  [7-9]\d{2} x)|(Video:  [1-9]\d{3} x)"; break;
-				case "1000 or wider": sResult = @"Video:  [1-9]\d{3} x"; break;
-				case "Series with \"SxxExx\"": sResult = @".[Ss]\d+[Ee]\d+"; break;
-				case "Movies with \"(Year)\"": sResult = @"\([1-2][0-9]{3}\)"; break;
-				default: sResult = @"^$"; break;
-			}
-			return sResult;
-		}
-		
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <param name="lvSource">The list view from where to copy the selected items.</param>
-		/// <param name="lvTarget">The list view to where to copy the selected items.</param>
-		void CopySelected ( ListView lvSource, ListView lvTarget )
-		{
-			foreach ( ListViewItem lviThis in lvSource.SelectedItems ) {
-				if ( rbSeries.Checked &&
-				     ( (string)lvTarget.Tag == "Garbage" ||
-				       (string)lvTarget.Tag == "Wish" ) ) {
-					var lviToAdd = new ListViewItem( RemoveEpisodeInfo( lviThis.Text ) );
-					AddItemToListView( lvTarget, lviToAdd );
-				} else {
-					AddItemToListView( lvTarget, lviThis );
-				}
-			}
-			if ( rbSeries.Checked ) {
-				if ( (string)lvTarget.Tag == "Garbage" ) {
-					ColorExistingAndUp( );
-				}
-				if ( (string)lvTarget.Tag == "Wish" ) {
-					ColorWishAndUp( );
-				}
-			}
-		}
+// **************************************** Action Bar Interface ***************************************************/ 
 
 		/// <summary>
 		/// Select all items in all lists according to the selection criteria.
@@ -2123,6 +2123,17 @@ namespace Movie_File_Merger
 			}
 			CopySelected ( lvImport, lvWish );
 			ProcessImport ( );
+		}
+		
+		
+		/// <summary>
+		/// Just everything and put it in the Existing list. 
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void BtnJustScanItClick(object sender, EventArgs e)
+		{
+	
 		}
 	}
 }

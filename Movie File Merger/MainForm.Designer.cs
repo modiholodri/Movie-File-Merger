@@ -49,6 +49,7 @@ namespace Movie_File_Merger
 			this.ContentPanel = new System.Windows.Forms.ToolStripContentPanel();
 			this.tcMovieFileMerger = new System.Windows.Forms.TabControl();
 			this.tpSeparateLists = new System.Windows.Forms.TabPage();
+			this.btnJustScanIt = new System.Windows.Forms.Button();
 			this.btnJustRipIt = new System.Windows.Forms.Button();
 			this.cobCriteria = new System.Windows.Forms.ComboBox();
 			this.btnWish = new System.Windows.Forms.Button();
@@ -272,6 +273,7 @@ namespace Movie_File_Merger
 			// tpSeparateLists
 			// 
 			this.tpSeparateLists.BackColor = System.Drawing.SystemColors.Control;
+			this.tpSeparateLists.Controls.Add(this.btnJustScanIt);
 			this.tpSeparateLists.Controls.Add(this.btnJustRipIt);
 			this.tpSeparateLists.Controls.Add(this.cobCriteria);
 			this.tpSeparateLists.Controls.Add(this.btnWish);
@@ -305,12 +307,28 @@ namespace Movie_File_Merger
 			this.tpSeparateLists.TabIndex = 0;
 			this.tpSeparateLists.Text = "Lists";
 			// 
+			// btnJustScanIt
+			// 
+			this.btnJustScanIt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.btnJustScanIt.ImageKey = "Process.gif";
+			this.btnJustScanIt.ImageList = this.ilMovieFileMerger;
+			this.btnJustScanIt.Location = new System.Drawing.Point(8, 539);
+			this.btnJustScanIt.Name = "btnJustScanIt";
+			this.btnJustScanIt.Size = new System.Drawing.Size(142, 40);
+			this.btnJustScanIt.TabIndex = 48;
+			this.btnJustScanIt.Text = "Just Scan It";
+			this.btnJustScanIt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.btnJustScanIt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			this.ttMovieFileMerger.SetToolTip(this.btnJustScanIt, "Just scan the existing stuff and update the Existing list.");
+			this.btnJustScanIt.UseVisualStyleBackColor = true;
+			this.btnJustScanIt.Click += new System.EventHandler(this.BtnJustScanItClick);
+			// 
 			// btnJustRipIt
 			// 
-			this.btnJustRipIt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.btnJustRipIt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.btnJustRipIt.ImageKey = "Process.gif";
 			this.btnJustRipIt.ImageList = this.ilMovieFileMerger;
-			this.btnJustRipIt.Location = new System.Drawing.Point(8, 539);
+			this.btnJustRipIt.Location = new System.Drawing.Point(766, 539);
 			this.btnJustRipIt.Name = "btnJustRipIt";
 			this.btnJustRipIt.Size = new System.Drawing.Size(122, 40);
 			this.btnJustRipIt.TabIndex = 47;
@@ -325,7 +343,7 @@ namespace Movie_File_Merger
 			// cobCriteria
 			// 
 			this.cobCriteria.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
-			this.cobCriteria.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.cobCriteria.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.cobCriteria.FormattingEnabled = true;
 			this.cobCriteria.Items.AddRange(new object[] {
 			"Square Format",
@@ -336,7 +354,7 @@ namespace Movie_File_Merger
 			"1000 or wider",
 			"Series with \"SxxExx\"",
 			"Movies with \"(Year)\""});
-			this.cobCriteria.Location = new System.Drawing.Point(696, 545);
+			this.cobCriteria.Location = new System.Drawing.Point(517, 545);
 			this.cobCriteria.Name = "cobCriteria";
 			this.cobCriteria.Size = new System.Drawing.Size(194, 28);
 			this.cobCriteria.TabIndex = 46;
@@ -346,10 +364,10 @@ namespace Movie_File_Merger
 			// 
 			// btnWish
 			// 
-			this.btnWish.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnWish.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.btnWish.ImageKey = "Wish.png";
 			this.btnWish.ImageList = this.ilMovieFileMerger;
-			this.btnWish.Location = new System.Drawing.Point(599, 539);
+			this.btnWish.Location = new System.Drawing.Point(420, 538);
 			this.btnWish.Name = "btnWish";
 			this.btnWish.Size = new System.Drawing.Size(90, 40);
 			this.btnWish.TabIndex = 45;
@@ -362,10 +380,10 @@ namespace Movie_File_Merger
 			// 
 			// btnBin
 			// 
-			this.btnBin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnBin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.btnBin.ImageKey = "Garbage.gif";
 			this.btnBin.ImageList = this.ilMovieFileMerger;
-			this.btnBin.Location = new System.Drawing.Point(503, 539);
+			this.btnBin.Location = new System.Drawing.Point(324, 539);
 			this.btnBin.Name = "btnBin";
 			this.btnBin.Size = new System.Drawing.Size(90, 40);
 			this.btnBin.TabIndex = 44;
@@ -379,10 +397,10 @@ namespace Movie_File_Merger
 			// 
 			// btnSelect
 			// 
-			this.btnSelect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnSelect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.btnSelect.ImageKey = "Select.gif";
 			this.btnSelect.ImageList = this.ilMovieFileMerger;
-			this.btnSelect.Location = new System.Drawing.Point(399, 538);
+			this.btnSelect.Location = new System.Drawing.Point(220, 538);
 			this.btnSelect.Name = "btnSelect";
 			this.btnSelect.Size = new System.Drawing.Size(98, 40);
 			this.btnSelect.TabIndex = 42;
@@ -414,7 +432,6 @@ namespace Movie_File_Merger
 			this.cobToolTipRegex.Text = "Select Template...";
 			this.ttMovieFileMerger.SetToolTip(this.cobToolTipRegex, "Select a predefined Tool Tip Regex, \r\nwhich you can fine tune if needed.");
 			this.cobToolTipRegex.SelectedIndexChanged += new System.EventHandler(this.CobToolTipRegexSelectedIndexChanged);
-			this.cobToolTipRegex.DisplayMemberChanged += new System.EventHandler(this.CobToolTipRegexDisplayMemberChanged);
 			// 
 			// lblToolTipRegex
 			// 
@@ -697,7 +714,7 @@ namespace Movie_File_Merger
 			this.ttMovieFileMerger.SetToolTip(this.rbMiscellaneous, "Use this collection for any video of any kind as temporarily collection \r\nto clea" +
 		"n up your collections.");
 			this.rbMiscellaneous.UseVisualStyleBackColor = true;
-			this.rbMiscellaneous.CheckedChanged += new System.EventHandler(this.RbProjectTypeClick);
+			this.rbMiscellaneous.CheckedChanged += new System.EventHandler(this.RbCollectionsClick);
 			// 
 			// rbAdults
 			// 
@@ -714,7 +731,7 @@ namespace Movie_File_Merger
 			this.ttMovieFileMerger.SetToolTip(this.rbAdults, "An Adult video is telling a fictive story by the use of special actors, \r\nwhich s" +
 		"hould not be watched by persons under 18 years.");
 			this.rbAdults.UseVisualStyleBackColor = true;
-			this.rbAdults.CheckedChanged += new System.EventHandler(this.RbProjectTypeClick);
+			this.rbAdults.CheckedChanged += new System.EventHandler(this.RbCollectionsClick);
 			// 
 			// rbClips
 			// 
@@ -730,7 +747,7 @@ namespace Movie_File_Merger
 			this.rbClips.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.ttMovieFileMerger.SetToolTip(this.rbClips, "A clip is a short video telling the story of a song by using dancers.");
 			this.rbClips.UseVisualStyleBackColor = true;
-			this.rbClips.CheckedChanged += new System.EventHandler(this.RbProjectTypeClick);
+			this.rbClips.CheckedChanged += new System.EventHandler(this.RbCollectionsClick);
 			// 
 			// rbSeries
 			// 
@@ -747,7 +764,7 @@ namespace Movie_File_Merger
 			this.ttMovieFileMerger.SetToolTip(this.rbSeries, "Series are a video collection telling a fictive story in multiple parts or \r\nepis" +
 		"odes by the use of actors.");
 			this.rbSeries.UseVisualStyleBackColor = true;
-			this.rbSeries.CheckedChanged += new System.EventHandler(this.RbProjectTypeClick);
+			this.rbSeries.CheckedChanged += new System.EventHandler(this.RbCollectionsClick);
 			// 
 			// rbDocumentaries
 			// 
@@ -764,7 +781,7 @@ namespace Movie_File_Merger
 			this.ttMovieFileMerger.SetToolTip(this.rbDocumentaries, "A documentary is video that is telling a more real story by the use of presenters" +
 		" or \r\na movie or a television program that provides a factual record or report.");
 			this.rbDocumentaries.UseVisualStyleBackColor = true;
-			this.rbDocumentaries.CheckedChanged += new System.EventHandler(this.RbProjectTypeClick);
+			this.rbDocumentaries.CheckedChanged += new System.EventHandler(this.RbCollectionsClick);
 			// 
 			// rbMovies
 			// 
@@ -782,7 +799,7 @@ namespace Movie_File_Merger
 		"vent recorded by a camera as a set of moving images and \r\nshown in a theatre or " +
 		"on television; a motion picture.");
 			this.rbMovies.UseVisualStyleBackColor = true;
-			this.rbMovies.CheckedChanged += new System.EventHandler(this.RbProjectTypeClick);
+			this.rbMovies.CheckedChanged += new System.EventHandler(this.RbCollectionsClick);
 			// 
 			// gbProcessImport
 			// 
@@ -816,7 +833,7 @@ namespace Movie_File_Merger
 			this.ttMovieFileMerger.SetToolTip(this.btnStart, "Click to start the copying or moving of the files, which are marked as Wish in th" +
 		"e Import list.");
 			this.btnStart.UseVisualStyleBackColor = false;
-			this.btnStart.Click += new System.EventHandler(this.BtnStartClick);
+			this.btnStart.Click += new System.EventHandler(this.BtnStartProcessClick);
 			// 
 			// cbGetHigherRes
 			// 
@@ -1753,5 +1770,6 @@ namespace Movie_File_Merger
 		private System.Windows.Forms.Button btnBin;
 		private System.Windows.Forms.Button btnSelect;
 		private System.Windows.Forms.Button btnJustRipIt;
+		private System.Windows.Forms.Button btnJustScanIt;
 	}
 }
