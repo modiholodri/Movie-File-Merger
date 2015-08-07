@@ -726,7 +726,7 @@ namespace Movie_File_Merger
 			this.rbAdults.Size = new System.Drawing.Size(120, 37);
 			this.rbAdults.TabIndex = 4;
 			this.rbAdults.Tag = "Adults";
-			this.rbAdults.Text = "Adult";
+			this.rbAdults.Text = "Adults";
 			this.rbAdults.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.ttMovieFileMerger.SetToolTip(this.rbAdults, "An Adult video is telling a fictive story by the use of special actors, \r\nwhich s" +
 		"hould not be watched by persons under 18 years.");

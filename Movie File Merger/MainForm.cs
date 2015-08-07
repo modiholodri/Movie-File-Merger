@@ -275,8 +275,11 @@ namespace Movie_File_Merger
 		/// <returns>The user feedback.</returns>
 		DialogResult ShowYesNoQuestion( string strMessage )
 		{
-			return MessageBox.Show( strMessage, "Movie File Merger - Question", 
+			LogMessage ( "Question", Color.BlueViolet, strMessage );
+			DialogResult drAnswer = MessageBox.Show( strMessage, "Movie File Merger - Question", 
 			                        MessageBoxButtons.YesNo, MessageBoxIcon.Question );
+			LogMessage ( "Answer", Color.BlueViolet, drAnswer.ToString() );
+			return drAnswer;
 		}
 
 /************************************** Window Resizing ****************************************/
@@ -2133,7 +2136,56 @@ namespace Movie_File_Merger
 		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
 		void BtnJustScanItClick(object sender, EventArgs e)
 		{
-	
+			string[] saCollections = {"Miscellaneous", "Adults", "Movies", "Documentaries", "Series", "Clips"};
+			
+			// Clear all lists
+			lvGarbage.Items.Clear();
+			lvExisting.Items.Clear();
+			lvWish.Items.Clear();
+			lvImport.Items.Clear();
+			
+			if ( cbMediaInfo.Checked == false ) {
+				if ( ShowYesNoQuestion ( "MediaInfo is not checked, what will result in not scanning all needed information.\n" + 
+				                    "Should I check MeidaInfo before the scan?" ) == DialogResult.Yes ) {
+					cbMediaInfo.Checked = true;
+				}
+			}
+			bool bScanWithoutQuestions = ShowYesNoQuestion ( "Scan all folders without any further questions?" ) == DialogResult.Yes;
+			foreach ( string strCollection in saCollections ) {
+				strCollectionType = strCollection;
+				LogMessage ( "Info", Color.Aquamarine, "Just scanning " + strCollectionType + "..." );
+				switch ( strCollectionType ) {
+						case "Miscellaneous": rbMiscellaneous.Checked = true; break;
+						case "Adults": rbAdults.Checked = true; break;
+						case "Movies": rbMovies.Checked = true; break;
+						case "Documentaries": rbDocumentaries.Checked = true; break;
+						case "Series": rbSeries.Checked = true; break;
+						case "Clips": rbClips.Checked = true; break;
+				}
+				foreach (var drive in DriveInfo.GetDrives())
+				{
+					foreach ( var strPath in Directory.GetDirectories ( drive.Name ) ) {
+						if ( strPath.Contains ( strCollectionType ) ) {
+							if ( bScanWithoutQuestions || ShowYesNoQuestion ( "Scan " + strPath + " and add to Existing " + strCollectionType + "?" ) == DialogResult.Yes ) {
+								tbTargetFolder.Text = strPath;
+								SetStatus ( "Scanning " + strPath + "..." );
+								AddFolderToListView ( lvExisting, strPath );
+								if ( bScanWithoutQuestions ) {
+									string strName = lvExisting.Tag + " " +  strCollectionType;
+									if ( bExistingChanged ) {
+										SerializeListView( lvExisting, Path.Combine( strPrivatePath, strName + ".slv" ) );
+									}
+								}
+								else {
+									SaveChangedListView ( lvExisting );
+								}
+							}
+						}
+					}
+				}
+			}
+			ShowInfo ( "Finished sanning all concerned folders.\n" +
+			           "Check the log tab for detailed information..." );
 		}
 	}
 }
