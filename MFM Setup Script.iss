@@ -7,8 +7,8 @@
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
 AppId={{C5C730EB-3765-4B4D-B5B1-DE8F1564205A}
 AppName=Movie File Merger
-AppVersion=0.2.1
-;AppVerName=Movie File Merger 0.2.1
+AppVersion=0.3.0
+;AppVerName=Movie File Merger 0.3.0
 AppPublisher=Reinhold Lauer
 AppPublisherURL=http://Movie-File-Merger.org/
 AppSupportURL=http://Movie-File-Merger.org/
@@ -33,12 +33,12 @@ UsePreviousSetupType=False
 UsePreviousTasks=False
 UsePreviousLanguage=False
 AppContact=reinhold.lauer@gmail.com
-VersionInfoVersion=0.2.1
+VersionInfoVersion=0.3.0
 VersionInfoCompany=Reinhold Lauer
 VersionInfoDescription=Selectively Merge Collections on Hard Disks
 VersionInfoCopyright=(c) 2015 Reinhold Lauer
 VersionInfoProductName=Movie File Merger
-VersionInfoProductVersion=0.2.1
+VersionInfoProductVersion=0.3.0
 PrivilegesRequired=lowest
 InfoBeforeFile="MFM Setup Info Before.rtf"
 AllowRootDirectory=True
