@@ -452,6 +452,7 @@ namespace Movie_File_Merger
 			this.tbNickName.TabIndex = 39;
 			this.tbNickName.Text = "Modi";
 			this.ttMovieFileMerger.SetToolTip(this.tbNickName, "Your nick name will be used as default in the exported lists name.");
+			this.tbNickName.TextChanged += new System.EventHandler(this.TbNickNameTextChanged);
 			// 
 			// lblNickName
 			// 
