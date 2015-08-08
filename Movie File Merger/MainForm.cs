@@ -2187,6 +2187,7 @@ namespace Movie_File_Merger
 			ShowInfo ( "Finished sanning all concerned folders.\n" +
 			           "Check the log tab for detailed information..." );
 		}
+
 		void TbNickNameTextChanged(object sender, EventArgs e)
 		{
 			Text = tbNickName.Text + " - Movie File Merger";
