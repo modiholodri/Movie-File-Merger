@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Movie File Merger")]
-[assembly: AssemblyDescription("Selectively Merger Collections on Hard Disks")]
+[assembly: AssemblyDescription("Selectively Merge Collections on Hard Disks")]
 
 #if DEBUG
 [assembly: AssemblyConfiguration("Debug")]
