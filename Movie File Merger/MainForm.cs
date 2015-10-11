@@ -47,6 +47,12 @@ namespace Movie_File_Merger
 		Color WishColor = Color.LawnGreen;
 		Color NeutralColor = Color.White;
 		
+		Color GoodMovieColor = Color.PaleGreen;
+		Color GoodSeriesColor = Color.SeaGreen;
+		Color BadMovieColor = Color.MediumVioletRed;
+		Color BadSeriesColor = Color.PaleVioletRed;
+		Color DuplicateColor = Color.Purple;
+		
 		// list change indicators when exiting a collection type
 		bool bExistingChanged = false;
 		bool bGarbageChanged = false;
@@ -221,6 +227,8 @@ namespace Movie_File_Merger
 		{
 			rtbLog.SelectionColor = cColor;
 			rtbLog.AppendText( DateTime.Now + ": " + strType + " - " + strMessage + "\n" );
+			rtbMaintenance.SelectionColor = cColor;
+			rtbMaintenance.AppendText( DateTime.Now + ": " + strType + " - " + strMessage + "\n" );
 		}
 		
 		/// <summary>
@@ -254,6 +262,15 @@ namespace Movie_File_Merger
 			LogMessage( "Info", Color.Blue, strMessage );
 			return MessageBox.Show( strMessage, "Movie File Merger - Info", 
 			                        MessageBoxButtons.OK, MessageBoxIcon.Asterisk );
+		}
+		
+		/// <summary>
+		/// Logs an informal message and asks the user for a decission.
+		/// </summary>
+		/// <param name="strMessage">The informal message.</param>
+		void LogInfo( string strMessage )
+		{
+			LogMessage( "Info", Color.Blue, strMessage );
 		}
 		
 		/// <summary>
@@ -301,6 +318,8 @@ namespace Movie_File_Merger
 			lvGarbage.Columns[0].Width = lvGarbage.Width - 35;
 			lvImport.Columns[0].Width = lvImport.Width - 35;
 			lvWish.Columns[0].Width = lvWish.Width - 35;
+			
+			lvMaintenance.Columns[0].Width = lvMaintenance.Width - 35;
 		}
 
 		/// <summary>
@@ -554,6 +573,9 @@ namespace Movie_File_Merger
 				ColorAll( strCleanName );
 				SetListViewChanged( lvThis, true );
 			}
+			else {
+				lviThis.BackColor = DuplicateColor;
+			}
 			return lviThis;
 		}
 		
@@ -573,6 +595,9 @@ namespace Movie_File_Merger
 				lvThis.Items.Add ( lviThis );
 				ColorAll( lviToAdd.Text );
 				SetListViewChanged( lvThis, true );
+			}
+			else {
+				lviThis.BackColor = DuplicateColor;
 			}
 			
 			return lviThis;
@@ -696,10 +721,10 @@ namespace Movie_File_Merger
 				var lviThis = new ListViewItem ( CleanName( strJustName ) );
 				lviThis = AddItemToListView( lvThis, lviThis );
 				MakeToolTip( fiFile, lvThis, lviThis );
+				
 				if ( cbGetHigherRes.Checked ) ColorAll( lviThis.Text );  // color again to get info from tooltip
 
 				tspbMFM.Value++;
-				// SetStatus( "Adding " + fiFile.Name );
 			}
 			if ( rbSeries.Checked ) {
 				if ( (string)lvThis.Tag == "Garbage" ) {
@@ -1049,7 +1074,31 @@ namespace Movie_File_Merger
 				LogMessage( "Info", Color.Blue, "Searching Torrenz for " + strCleanName );
 			}
 		}
+		
+		/// <summary>
+		/// Extracts the file name from the tool tip.
+		/// </summary>
+		/// <param name="strToolTip">The tool tip from where to extract the file name.</param>
+		/// <returns>The file name.</returns>
+		string ExtractFileNameFromToolTip( string strToolTip )
+		{
+				return strToolTip.Substring( 0, strToolTip.IndexOf( "\n" ) );
+		}
 
+		/// <summary>
+		/// Extracts the full file path from the tool tip.
+		/// </summary>
+		/// <param name="strToolTip">The tool tip from where to extract the full file path.</param>
+		/// <returns>The full file path.</returns>
+		string ExtractFullPathFromToolTip( string strToolTip )
+		{
+				string strFileName = ExtractFileNameFromToolTip ( strToolTip );
+				int iFirstEOL = strToolTip.IndexOf( "\n" );
+				string strFilePath = strToolTip.Substring( iFirstEOL, strToolTip.IndexOf( "\n", iFirstEOL + 2) - iFirstEOL );
+				return strFilePath.Substring ( strFilePath.IndexOf ( "] " ) + 3 ) + "\\" + strFileName;
+		}
+
+		
 /******************************************* List View Coloring *******************************************/		
 		/// <summary>
 		/// Colors all items contained in the Existing, the Wish and the Import list views.
@@ -1444,12 +1493,16 @@ namespace Movie_File_Merger
 			if ( bFullDetails || bItemMissing || !bHasMediaInfo ) {
 				lviThis.ToolTipText = sBasicItemInfo + sFileInfo + sMediaInfo;
 				SetListViewChanged( lvThis, true );
+				var lviMaintenance = AddItemToListView ( lvMaintenance, fiFile.FullName );
+				lviMaintenance.ToolTipText = lviThis.ToolTipText;
 			}
 			else if ( bDifferentFile ) { 
 				if ( !bHasMediaInfo || sMediaInfo != "" ) {
 					lviThis.ToolTipText = sBasicItemInfo + sFileInfo + sMediaInfo;
 					SetListViewChanged( lvThis, true );
 				}
+				var lviMaintenance = AddItemToListView ( lvMaintenance, fiFile.FullName );
+				lviMaintenance.ToolTipText = lviThis.ToolTipText;
 			}
 		}
 		
@@ -1897,6 +1950,7 @@ namespace Movie_File_Merger
 			lvGarbage.Columns[0].Text = lvGarbage.Items.Count + " Garbage " + strCollectionType;
 			lvImport.Columns[0].Text = lvImport.Items.Count + " Import " + strCollectionType;
 			lvWish.Columns[0].Text = lvWish.Items.Count + " Wish " + strCollectionType;
+			lvMaintenance.Columns[0].Text = lvMaintenance.Items.Count + " Maintenance Items";
 		}
 
 		/// <summary>
@@ -1907,8 +1961,15 @@ namespace Movie_File_Merger
 		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
 		void lvKeyDown( object sender, KeyEventArgs e )
 		{
+			var lvThis = (ListView)sender;
+			
 			if ( e.KeyCode == Keys.Delete ) {
-				EraseSelected( (ListView)sender );
+				EraseSelected( lvThis );
+			}
+			if ( e.Control && e.KeyCode == Keys.A ) {
+				foreach ( ListViewItem lviThis in lvThis.Items ) {
+					lviThis.Selected = true;
+				}
 			}
 			// TODO: Add Ctrl-A
 		}
@@ -2132,9 +2193,7 @@ namespace Movie_File_Merger
 		/// <summary>
 		/// Just everything and put it in the Existing list. 
 		/// </summary>
-		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
-		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
-		void BtnJustScanItClick(object sender, EventArgs e)
+		void JustScanIt( )
 		{
 			string[] saCollections = {"Miscellaneous", "Adults", "Movies", "Documentaries", "Series", "Clips"};
 			
@@ -2143,6 +2202,7 @@ namespace Movie_File_Merger
 			lvExisting.Items.Clear();
 			lvWish.Items.Clear();
 			lvImport.Items.Clear();
+			lvMaintenance.Items.Clear();
 			
 			if ( cbMediaInfo.Checked == false ) {
 				if ( ShowYesNoQuestion ( "MediaInfo is not checked, what will result in not scanning all needed information.\n" + 
@@ -2188,9 +2248,193 @@ namespace Movie_File_Merger
 			           "Check the log tab for detailed information..." );
 		}
 
+		/// <summary>
+		/// Just everything and put it in the Existing list. 
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void BtnJustScanItClick(object sender, EventArgs e)
+		{
+			JustScanIt( );
+			ColorMaintenance( );
+		}
+
+		/// <summary>
+		/// Update the main window title after the nickname has changed. 
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
 		void TbNickNameTextChanged(object sender, EventArgs e)
 		{
 			Text = tbNickName.Text + " - Movie File Merger";
+		}
+		
+/************************* Maintenance Tab Interface **********************************/		
+		/// <summary>
+		/// Drag file from a list view, to drop and on FileBot... 
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void LvFileListDrag(object sender, ItemDragEventArgs e)
+		{
+			lvDragSource = (ListView)sender;
+			var strcolThis = new StringCollection( );
+			foreach ( ListViewItem lviThis in lvDragSource.SelectedItems ) {
+				strcolThis.Add( ExtractFullPathFromToolTip ( lviThis.ToolTipText ) );
+			}
+			
+			var doThis = new DataObject( );
+			doThis.SetFileDropList ( strcolThis );
+			lvDragSource.DoDragDrop( doThis, DragDropEffects.Move );
+		}
+
+		/// <summary>
+		/// Color the maintenance list
+		/// </summary>
+		void ColorMaintenance ( ) {
+			foreach ( ListViewItem lviThis in lvMaintenance.Items ) {
+				string sFileName = lviThis.Text;
+	
+				if ( lviThis.BackColor == DuplicateColor ) {
+			    	rtbMaintenance.AppendText ( "Duplicated item: " + sFileName + "\n" );
+				}
+				else if ( Regex.IsMatch ( sFileName, @".* S[0-9]{2}E[0-9]{2}(-E[0-9]{2})? .*[.][a-z0-9]*" ) ) {
+			    	// found valid serie
+			    	lviThis.BackColor = GoodSeriesColor;
+			    	rtbMaintenance.AppendText ( "Valid serie: " + sFileName + "\n" );
+			    }
+			    else if ( Regex.IsMatch ( sFileName, @".* \([12][0-9]{3}\)[.][a-z0-9]*" ) ) {
+					// found valid movie
+					lviThis.BackColor = GoodMovieColor;
+			    	rtbMaintenance.AppendText ( "Valid movie: " + sFileName + "\n" );
+				}
+				else if ( Regex.IsMatch ( sFileName, @"[Ss][0-9]{1,2}[Ee][0-9]{1,2}" ) ){ // did not find any valid format
+					lviThis.BackColor = BadSeriesColor;
+			    	rtbMaintenance.AppendText ( "Invalid serie: " + sFileName + "\n" );
+				}
+				else if ( Regex.IsMatch ( sFileName, @"[12][0-9]{3}" ) ){ // did not find any valid format
+					lviThis.BackColor = BadMovieColor;
+			    	rtbMaintenance.AppendText ( "Invalid movie: " + sFileName + "\n" );
+				}
+				else {
+					lviThis.BackColor = NeutralColor;
+			    	rtbMaintenance.AppendText ( "Invalid item: " + sFileName + "\n" );
+				}
+			}
+		}
+		
+		/// <summary>
+		/// Find duplicates in the according folders. 
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void BtnFindDuplicatesClick(object sender, EventArgs e)
+		{
+			JustScanIt( );
+			ColorMaintenance( );
+		}
+
+		/// <summary>
+		/// Adds items contained in a folder to a list view.
+		/// </summary>
+		/// <param name="lvThis">The list view to add the items.</param>
+		/// <param name="strFolderName">The name of the folder containing the items to be added.</param>
+		void AddFolderToMaintenanceListView( ListView lvThis, string strFolderName )
+		{
+			var diFolder = new DirectoryInfo( strFolderName );
+			SearchOption soMovieFileMerger = SearchOption.AllDirectories;
+
+			SetStatus( "Adding folder " + strFolderName + " to " + lvThis.Tag + "..." );
+			cbMediaInfo.Checked = false;
+
+			lvThis.BeginUpdate( );
+			lvThis.Sorting = SortOrder.None;
+			tspbMFM.Maximum = 1;
+			tspbMFM.Value = 0;
+			foreach( FileInfo fiFile in diFolder.GetFiles( "*", soMovieFileMerger ) ) {
+				tspbMFM.Maximum++;
+			}
+			foreach( FileInfo fiFile in diFolder.GetFiles( "*", soMovieFileMerger ) ) {
+				var lviThis = new ListViewItem ( fiFile.FullName );
+				lviThis = AddItemToListView( lvThis, lviThis );
+				MakeToolTip( fiFile, lvThis, lviThis );
+				tspbMFM.Value++;
+			}
+			lvThis.Sorting = SortOrder.Ascending;
+			lvThis.EndUpdate ();
+			tspbMFM.Value = 0;
+			SetStatus( "Added all files!" );
+			ClearStatus( );
+		}
+		
+		/// <summary>
+		/// Something has been droped on the maintenance list view.  
+		/// Check it and act accordingly.
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void LvMaintenanceDragDrop( object sender, DragEventArgs e )
+		{
+			var lvThis = (ListView)sender;
+			lvThis.Items.Clear();
+			
+			if( e.AllowedEffect == DragDropEffects.None) {
+				return;
+			}
+			Cursor.Current = Cursors.WaitCursor;
+			
+			// from folders or files
+			if ( e.Data.GetDataPresent( DataFormats.FileDrop ) ) {
+				foreach ( string strPath in (string[])e.Data.GetData( DataFormats.FileDrop ) ) {
+					FileAttributes attr = File.GetAttributes( strPath );
+					bool isFolder = ( attr & FileAttributes.Directory ) == FileAttributes.Directory;
+
+					if ( isFolder ) { // from folder
+						AddFolderToMaintenanceListView( lvMaintenance, strPath );
+					}
+					else if ( File.Exists ( strPath ) ){ // from video file
+						var fiFile = new FileInfo( strPath );
+						var lviThis = new ListViewItem( strPath );
+						lviThis = AddItemToListView( lvThis, lviThis );
+						MakeToolTip( fiFile, lvThis, lviThis );
+					}
+				}
+			}
+			Cursor.Current = Cursors.Default;
+			ColorMaintenance( );
+		}
+		
+		/// <summary>
+		/// Something has been draged over a maintenance drop area.  
+		/// Change the cursor accordingly.
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void BtnMaintenanceDragOver(object sender, DragEventArgs e)
+		{
+			if ( e.Data.GetDataPresent( DataFormats.FileDrop ) ) {
+				e.Effect = e.AllowedEffect;
+			}
+		}
+		void BtnFindDuplicatesDragDrop(object sender, DragEventArgs e)
+		{
+			JustScanIt( );
+			ColorMaintenance( );
+		}
+
+		void DeleteFiles( ) 
+		{
+			foreach ( ListViewItem lviThis in lvDragSource.SelectedItems ) {
+				if ( ShowYesNoQuestion("Delete " + lviThis.Text + "?" ) == DialogResult.Yes ) {
+					File.Delete ( lviThis.Text );
+					LogInfo ( "Deleting " + lviThis.Text + "\n" );
+				}
+			}
+		}
+		
+		void BtnDeleteFilesDragDrop(object sender, DragEventArgs e)
+		{
+			DeleteFiles( );
 		}
 	}
 }
