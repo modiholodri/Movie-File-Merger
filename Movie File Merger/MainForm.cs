@@ -37,6 +37,7 @@ namespace Movie_File_Merger
 	{
 		ListView lvDragSource = null;  // the list view from which has been dragged
 		Color DragColor = Color.Red;  // the color of the item which has been dragged
+		string[] saCollections = {"Miscellaneous", "Adults", "Movies", "Documentaries", "Series", "Clips"}; // all collections
 		string strCollectionType = "Miscellaneous";  // the active collection type
 		const string strIMDbSearchType = "&s=tt";  // to search on IDMb for the title only
 		MediaInfo miThis = new MediaInfo( );  // detailed information about the video file from MediaInfo
@@ -47,11 +48,12 @@ namespace Movie_File_Merger
 		Color WishColor = Color.LawnGreen;
 		Color NeutralColor = Color.White;
 		
-		Color GoodMovieColor = Color.PaleGreen;
-		Color GoodSeriesColor = Color.SeaGreen;
+		Color GoodMovieColor = Color.SeaGreen;
+		Color GoodDocumentaryColor = Color.LawnGreen;
+		Color GoodEpisodeColor = Color.PaleGreen;
 		Color BadMovieColor = Color.MediumVioletRed;
-		Color BadSeriesColor = Color.PaleVioletRed;
-		Color DuplicateColor = Color.Purple;
+		Color BadEpisodeColor = Color.PaleVioletRed;
+		Color BadNameColor = Color.Pink;
 		
 		// list change indicators when exiting a collection type
 		bool bExistingChanged = false;
@@ -133,6 +135,14 @@ namespace Movie_File_Merger
 			}
 			
 			SetColumnWidth( );
+			lblGoodMovie.BackColor = GoodMovieColor;
+			lblGoodEpisode.BackColor = GoodEpisodeColor;
+			lblGoodDocumentary.BackColor = GoodDocumentaryColor;
+			lblBadMovie.BackColor = BadMovieColor;
+			lblBadEpisode.BackColor = BadEpisodeColor;
+			lblBadName.BackColor = BadNameColor;
+			lblUnrelatedFile.BackColor = NeutralColor;
+
 			CheckLatestVersion( "Statup" );
 		}
 		
@@ -215,7 +225,8 @@ namespace Movie_File_Merger
 			        dtToSStandardize.Second.ToString( "D2" );
 		}
 		
-/*********************************** Message Handling and Logging *******************************/
+// *****************************************************************************************************************/	
+// ******************************************** Message Handling and Logging ***************************************/
 
 		/// <summary>
 		/// Adds a mesage, with the date, type, and a certain color, to the rich text box on the log tab. 
@@ -227,10 +238,21 @@ namespace Movie_File_Merger
 		{
 			rtbLog.SelectionColor = cColor;
 			rtbLog.AppendText( DateTime.Now + ": " + strType + " - " + strMessage + "\n" );
+		}
+		
+		/// <summary>
+		/// Adds a mesage to the maintenance log, with the date, type, and a certain color, to the rich text box on the log tab. 
+		/// </summary>
+		/// <param name="strType">The type name of the message.</param>
+		/// <param name="cColor">The color of the message.</param>
+		/// <param name="strMessage">The message itself.</param>
+		void LogMaintenance( string strType, Color cColor, string strMessage )
+		{
 			rtbMaintenance.SelectionColor = cColor;
 			rtbMaintenance.AppendText( DateTime.Now + ": " + strType + " - " + strMessage + "\n" );
 		}
 		
+
 		/// <summary>
 		/// Logs a status message, in black color, and activates the wait cursor.
 		/// </summary>
@@ -299,7 +321,8 @@ namespace Movie_File_Merger
 			return drAnswer;
 		}
 
-/************************************** Window Resizing ****************************************/
+// *****************************************************************************************************************/	
+// ********************************************** Window Resizing **************************************************/
 
 		/// <summary>
 		/// Readjusts the column width if the Window is resized. 
@@ -337,7 +360,8 @@ namespace Movie_File_Merger
 			scHorizontal.SplitterDistance = scHorizontal.Size.Height / 2;
 		}
 		
-/******************************************** Setting Handling *********************************/		
+// *****************************************************************************************************************/	
+// *************************************************** Settings Handling *******************************************/
 
 		/// <summary>
 		/// Assign all the regular expressions from the settings tab.
@@ -521,7 +545,8 @@ namespace Movie_File_Merger
 			return bResolutionIsHigher;
 		}
 		
-/************************************** List View Handling ****************************************/		
+// *****************************************************************************************************************/	
+// ********************************************** List View Handling ***********************************************/
 
 		/// <summary>
 		/// Sets a tag in a list view to remember when to save the view.
@@ -573,9 +598,6 @@ namespace Movie_File_Merger
 				ColorAll( strCleanName );
 				SetListViewChanged( lvThis, true );
 			}
-			else {
-				lviThis.BackColor = DuplicateColor;
-			}
 			return lviThis;
 		}
 		
@@ -595,9 +617,6 @@ namespace Movie_File_Merger
 				lvThis.Items.Add ( lviThis );
 				ColorAll( lviToAdd.Text );
 				SetListViewChanged( lvThis, true );
-			}
-			else {
-				lviThis.BackColor = DuplicateColor;
 			}
 			
 			return lviThis;
@@ -756,7 +775,8 @@ namespace Movie_File_Merger
 			swFile.Close( );
 		}
 
-/******************************************************* Processing ***************************************************/
+// *****************************************************************************************************************/	
+// ************************************************** Processing ***************************************************/
 
 		/// <summary>
 		/// Make the target path, including file name, for file to be copied or moved.
@@ -931,7 +951,8 @@ namespace Movie_File_Merger
 			                              strCleanName;
 		}
 
-/********************************************** Drop Area Handling ***************************************************/
+// *****************************************************************************************************************/	
+// ****************************************** Drop Area Handling ***************************************************/
 
 		/// <summary>
 		/// Get the according selected regular expression to fill the Tool Tip regex. 
@@ -1099,7 +1120,8 @@ namespace Movie_File_Merger
 		}
 
 		
-/******************************************* List View Coloring *******************************************/		
+// *****************************************************************************************************************/	
+// *********************************************** List View Coloring **********************************************/
 		/// <summary>
 		/// Colors all items contained in the Existing, the Wish and the Import list views.
 		/// </summary>
@@ -1273,7 +1295,8 @@ namespace Movie_File_Merger
 			ClearStatus( );
 		}
 		
-/************************************************* List View Handling ***********************************************/
+// *****************************************************************************************************************/	
+// ********************************************** List View Handling ***********************************************/
 
 		/// <summary>
 		/// Searches a list view for an item with a specific text.  
@@ -1493,16 +1516,12 @@ namespace Movie_File_Merger
 			if ( bFullDetails || bItemMissing || !bHasMediaInfo ) {
 				lviThis.ToolTipText = sBasicItemInfo + sFileInfo + sMediaInfo;
 				SetListViewChanged( lvThis, true );
-				var lviMaintenance = AddItemToListView ( lvMaintenance, fiFile.FullName );
-				lviMaintenance.ToolTipText = lviThis.ToolTipText;
 			}
 			else if ( bDifferentFile ) { 
 				if ( !bHasMediaInfo || sMediaInfo != "" ) {
 					lviThis.ToolTipText = sBasicItemInfo + sFileInfo + sMediaInfo;
 					SetListViewChanged( lvThis, true );
 				}
-				var lviMaintenance = AddItemToListView ( lvMaintenance, fiFile.FullName );
-				lviMaintenance.ToolTipText = lviThis.ToolTipText;
 			}
 		}
 		
@@ -1619,7 +1638,8 @@ namespace Movie_File_Merger
 			SetColumnWidth( );
 		}
 
-/******************************************** General Interface ***************************************************/		
+// *****************************************************************************************************************/	
+// ******************************************* General Interface ***************************************************/		
 		/// <summary>
 		/// The settings tab has been left.  
 		/// Save the settings.
@@ -1672,7 +1692,8 @@ namespace Movie_File_Merger
 			CheckLatestVersion( "Now" );
 		}
 		
-/************************************** Top Interface ****************************************************/
+// *****************************************************************************************************************/	
+// ******************************************** Top Interface ******************************************************/
 
 		/// <summary>
 		/// Something has been draged over a text box.
@@ -1822,7 +1843,8 @@ namespace Movie_File_Merger
 			}
 		}
 
-/************************************** Drop Area Interface *******************************************/
+// *****************************************************************************************************************/	
+// ********************************************* Drop Area Interface ***********************************************/
 
 		/// <summary>
 		/// Something has been draged over a droparea.  
@@ -1937,7 +1959,8 @@ namespace Movie_File_Merger
 			}
 		}
 		
-/*************************************************** Lists Interface *******************************************/	
+// *****************************************************************************************************************/	
+// *************************************************** Lists Interface *********************************************/
 
 		/// <summary>
 		/// Update the Garbvage, Existing, Wish and Import counters from time to time.
@@ -2126,6 +2149,7 @@ namespace Movie_File_Merger
 			Cursor.Current = Cursors.Default;
 		}
 
+// *****************************************************************************************************************/	
 // **************************************** Action Bar Interface ***************************************************/ 
 
 		/// <summary>
@@ -2191,14 +2215,15 @@ namespace Movie_File_Merger
 		
 		
 		/// <summary>
-		/// Just everything and put it in the Existing list. 
+		/// Just scan everything and put it in the Existing lists. 
 		/// </summary>
 		void JustScanIt( )
 		{
-			string[] saCollections = {"Miscellaneous", "Adults", "Movies", "Documentaries", "Series", "Clips"};
-			
-			// Clear all lists
-			lvGarbage.Items.Clear();
+			SaveChangedListView( lvExisting );  // Ask to safe, if something has changed
+			SaveChangedListView( lvGarbage );
+			SaveChangedListView( lvWish );
+
+			lvGarbage.Items.Clear(); 			// Clear all lists
 			lvExisting.Items.Clear();
 			lvWish.Items.Clear();
 			lvImport.Items.Clear();
@@ -2256,7 +2281,6 @@ namespace Movie_File_Merger
 		void BtnJustScanItClick(object sender, EventArgs e)
 		{
 			JustScanIt( );
-			ColorMaintenance( );
 		}
 
 		/// <summary>
@@ -2268,10 +2292,30 @@ namespace Movie_File_Merger
 		{
 			Text = tbNickName.Text + " - Movie File Merger";
 		}
-		
-/************************* Maintenance Tab Interface **********************************/		
+	
+// *****************************************************************************************************************/	
+// ***************************************** Maintenance Tab Section ***********************************************/
+
 		/// <summary>
-		/// Drag file from a list view, to drop and on FileBot... 
+		/// Adds an item to the maintenance list view, if it does not exist already.
+		/// </summary>
+		/// <param name="lviToAdd">The item to add.</param>
+		/// <returns>The reference of the added item.</returns>
+
+		ListViewItem AddItemToMaintenanceListView( ListViewItem lviToAdd )
+		{
+			ListViewItem lviThis = FindItem( lvMaintenance, lviToAdd.Text );
+			
+			if ( lviThis == null ) {
+				lviThis = new ListViewItem( lviToAdd.Text );
+				lviThis.ToolTipText = lviToAdd.ToolTipText;
+				lvMaintenance.Items.Add ( lviThis );
+			}
+			return lviThis;
+		}
+		
+		/// <summary>
+		/// Drag file from a list view, to drop and on FileBot, the Windows Explorer, ... 
 		/// </summary>
 		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
 		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
@@ -2280,7 +2324,7 @@ namespace Movie_File_Merger
 			lvDragSource = (ListView)sender;
 			var strcolThis = new StringCollection( );
 			foreach ( ListViewItem lviThis in lvDragSource.SelectedItems ) {
-				strcolThis.Add( ExtractFullPathFromToolTip ( lviThis.ToolTipText ) );
+				strcolThis.Add( lviThis.Text );
 			}
 			
 			var doThis = new DataObject( );
@@ -2293,62 +2337,58 @@ namespace Movie_File_Merger
 		/// </summary>
 		void ColorMaintenance ( ) {
 			foreach ( ListViewItem lviThis in lvMaintenance.Items ) {
-				string sFileName = lviThis.Text;
+				string sFileName = Path.GetFileNameWithoutExtension( lviThis.Text );
+				string sExtension = Path.GetExtension( lviThis.Text ).ToLower();
 	
-				if ( lviThis.BackColor == DuplicateColor ) {
-			    	rtbMaintenance.AppendText ( "Duplicated item: " + sFileName + "\n" );
+				if ( rgxMainExtensions.IsMatch( sExtension ) || rgxAddonExtensions.IsMatch( sExtension ) ) {
+					// the file is or beloongs to a video
+					if ( Regex.IsMatch ( sFileName, @".* S[12][0-9]{3}E[0-9]{1,3} .*$" ) ) {
+				    	lviThis.BackColor = GoodDocumentaryColor;  // found good documentary
+				    	LogMaintenance ( "Valid documentary: ", GoodDocumentaryColor, sFileName);
+				    }
+					else if ( Regex.IsMatch ( sFileName, @".* S[0-9]{2}E[0-9]{2}(-E[0-9]{2})? .*$" ) ) {
+				    	lviThis.BackColor = GoodEpisodeColor;  // found good episode
+				    	LogMaintenance ( "Valid episode: ", GoodEpisodeColor, sFileName);
+				    }
+				    else if ( Regex.IsMatch ( sFileName, @".* \([12][0-9]{3}\)$" ) ) {
+						lviThis.BackColor = GoodMovieColor;  // found good movie
+				    	LogMaintenance ( "Valid movie: ", GoodMovieColor, sFileName);
+					}
+					else if ( Regex.IsMatch ( sFileName, @"[Ss][0-9]{1,2}[Ee][0-9]{1,2}" ) ){ // did not find any valid format
+						lviThis.BackColor = BadEpisodeColor;  // found bad episode
+				    	LogMaintenance ( "Invalid episode: ", BadEpisodeColor, sFileName);
+					}
+					else if ( Regex.IsMatch ( sFileName, @"[12][0-9]{3}" ) ){ // did not find any valid format
+						lviThis.BackColor = BadMovieColor;  // found bad movie
+				    	LogMaintenance ( "Invalid movie: ", BadMovieColor, sFileName);
+					}
+					else {
+						lviThis.BackColor = BadNameColor;  // found bad name, not sure of what
+				    	LogMaintenance ( "Invalid item: ", BadNameColor, sFileName);
+					}
 				}
-				else if ( Regex.IsMatch ( sFileName, @".* S[0-9]{2}E[0-9]{2}(-E[0-9]{2})? .*[.][a-z0-9]*" ) ) {
-			    	// found valid serie
-			    	lviThis.BackColor = GoodSeriesColor;
-			    	rtbMaintenance.AppendText ( "Valid serie: " + sFileName + "\n" );
-			    }
-			    else if ( Regex.IsMatch ( sFileName, @".* \([12][0-9]{3}\)[.][a-z0-9]*" ) ) {
-					// found valid movie
-					lviThis.BackColor = GoodMovieColor;
-			    	rtbMaintenance.AppendText ( "Valid movie: " + sFileName + "\n" );
-				}
-				else if ( Regex.IsMatch ( sFileName, @"[Ss][0-9]{1,2}[Ee][0-9]{1,2}" ) ){ // did not find any valid format
-					lviThis.BackColor = BadSeriesColor;
-			    	rtbMaintenance.AppendText ( "Invalid serie: " + sFileName + "\n" );
-				}
-				else if ( Regex.IsMatch ( sFileName, @"[12][0-9]{3}" ) ){ // did not find any valid format
-					lviThis.BackColor = BadMovieColor;
-			    	rtbMaintenance.AppendText ( "Invalid movie: " + sFileName + "\n" );
-				}
-				else {
+				else {  // the file doesn't belong to a video
 					lviThis.BackColor = NeutralColor;
-			    	rtbMaintenance.AppendText ( "Invalid item: " + sFileName + "\n" );
+			    	LogMaintenance ( "Invalid item: ", NeutralColor, sFileName);
 				}
 			}
 		}
 		
 		/// <summary>
-		/// Find duplicates in the according folders. 
-		/// </summary>
-		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
-		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
-		void BtnFindDuplicatesClick(object sender, EventArgs e)
-		{
-			JustScanIt( );
-			ColorMaintenance( );
-		}
-
-		/// <summary>
 		/// Adds items contained in a folder to a list view.
 		/// </summary>
 		/// <param name="lvThis">The list view to add the items.</param>
 		/// <param name="strFolderName">The name of the folder containing the items to be added.</param>
-		void AddFolderToMaintenanceListView( ListView lvThis, string strFolderName )
+		void AddFolderToMaintenanceListView( string strFolderName )
 		{
 			var diFolder = new DirectoryInfo( strFolderName );
 			SearchOption soMovieFileMerger = SearchOption.AllDirectories;
 
-			SetStatus( "Adding folder " + strFolderName + " to " + lvThis.Tag + "..." );
+			SetStatus( "Adding folder " + strFolderName + " to " + lvMaintenance.Tag + "..." );
 			cbMediaInfo.Checked = false;
 
-			lvThis.BeginUpdate( );
-			lvThis.Sorting = SortOrder.None;
+			lvMaintenance.BeginUpdate( );
+			lvMaintenance.Sorting = SortOrder.None;
 			tspbMFM.Maximum = 1;
 			tspbMFM.Value = 0;
 			foreach( FileInfo fiFile in diFolder.GetFiles( "*", soMovieFileMerger ) ) {
@@ -2356,12 +2396,12 @@ namespace Movie_File_Merger
 			}
 			foreach( FileInfo fiFile in diFolder.GetFiles( "*", soMovieFileMerger ) ) {
 				var lviThis = new ListViewItem ( fiFile.FullName );
-				lviThis = AddItemToListView( lvThis, lviThis );
-				MakeToolTip( fiFile, lvThis, lviThis );
+				lviThis = AddItemToMaintenanceListView( lviThis );
+				MakeToolTip( fiFile, lvMaintenance, lviThis );
 				tspbMFM.Value++;
 			}
-			lvThis.Sorting = SortOrder.Ascending;
-			lvThis.EndUpdate ();
+			lvMaintenance.Sorting = SortOrder.Ascending;
+			lvMaintenance.EndUpdate ();
 			tspbMFM.Value = 0;
 			SetStatus( "Added all files!" );
 			ClearStatus( );
@@ -2375,12 +2415,9 @@ namespace Movie_File_Merger
 		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
 		void LvMaintenanceDragDrop( object sender, DragEventArgs e )
 		{
-			var lvThis = (ListView)sender;
-			lvThis.Items.Clear();
+			lvMaintenance.Items.Clear();
 			
-			if( e.AllowedEffect == DragDropEffects.None) {
-				return;
-			}
+			if( e.AllowedEffect == DragDropEffects.None) return;
 			Cursor.Current = Cursors.WaitCursor;
 			
 			// from folders or files
@@ -2390,18 +2427,18 @@ namespace Movie_File_Merger
 					bool isFolder = ( attr & FileAttributes.Directory ) == FileAttributes.Directory;
 
 					if ( isFolder ) { // from folder
-						AddFolderToMaintenanceListView( lvMaintenance, strPath );
+						AddFolderToMaintenanceListView( strPath );
 					}
 					else if ( File.Exists ( strPath ) ){ // from video file
 						var fiFile = new FileInfo( strPath );
 						var lviThis = new ListViewItem( strPath );
-						lviThis = AddItemToListView( lvThis, lviThis );
-						MakeToolTip( fiFile, lvThis, lviThis );
+						lviThis = AddItemToMaintenanceListView( lviThis );
+						MakeToolTip( fiFile, lvMaintenance, lviThis );
 					}
 				}
 			}
-			Cursor.Current = Cursors.Default;
 			ColorMaintenance( );
+			Cursor.Current = Cursors.Default;
 		}
 		
 		/// <summary>
@@ -2416,18 +2453,13 @@ namespace Movie_File_Merger
 				e.Effect = e.AllowedEffect;
 			}
 		}
-		void BtnFindDuplicatesDragDrop(object sender, DragEventArgs e)
-		{
-			JustScanIt( );
-			ColorMaintenance( );
-		}
 
 		void DeleteFiles( ) 
 		{
 			foreach ( ListViewItem lviThis in lvDragSource.SelectedItems ) {
 				if ( ShowYesNoQuestion("Delete " + lviThis.Text + "?" ) == DialogResult.Yes ) {
 					File.Delete ( lviThis.Text );
-					LogInfo ( "Deleting " + lviThis.Text + "\n" );
+					LogMaintenance ( "Deleting ", GarbageColor, lviThis.Text + "\n" );
 				}
 			}
 		}
@@ -2435,6 +2467,38 @@ namespace Movie_File_Merger
 		void BtnDeleteFilesDragDrop(object sender, DragEventArgs e)
 		{
 			DeleteFiles( );
+		}
+
+		void BtnSelectColorDragDrop(object sender, DragEventArgs e)
+		{
+			foreach ( ListViewItem lviThis in lvDragSource.SelectedItems ) {
+				DragColor = lviThis.BackColor;
+				break;
+			}
+			lvDragSource.BeginUpdate( );
+			foreach ( ListViewItem lviThis in lvDragSource.Items ) {
+				if ( lviThis.BackColor == DragColor ) {
+					lviThis.Selected = true;
+				}
+			}
+			lvDragSource.EndUpdate( );
+		}
+		
+		void LblLegendClick(object sender, EventArgs e)
+		{
+			foreach ( ListViewItem lviThis in lvMaintenance.Items ) {
+				if ( lviThis.BackColor == ((Label)sender).BackColor ) {
+					lviThis.Selected = true;
+				}
+			}
+		}
+
+		void LvGiveFeedback(object sender, GiveFeedbackEventArgs e)
+		{
+			e.UseDefaultCursors = false;
+			var bmp = new Bitmap( pbMFM.Image );
+	        var cur = new Cursor( bmp.GetHicon() );                                
+	        Cursor.Current = cur;  		
 		}
 	}
 }
