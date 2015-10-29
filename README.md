@@ -1,37 +1,30 @@
 ### Welcome to the Movie File Merger!
-MFM runs under Win 7, Win 8, and Win 8.1.  MFM has also been used on a Mac with Parallels installed. 
-Windows XP needs .net framework 4.0 installed and to handle the resizing of the windows, a program like PowerResizer.
+MFM runs under Winindows 7, 8, and 10.  MFM has also been used on a Mac with Parallels installed.
 MFM uses [Semantic Versioning][] and is programmed in [C#][] with [SharpDevelop][] version 5.0.0.  At the moment it uses the .net framework 4.0.
 [Semantic Versioning]: http://semver.org/
 [C#]: http://www.c-sharpcorner.com/
 [SharpDevelop]: http://www.icsharpcode.net/OpenSource/SD/Default.aspx
 
 ### :book: User Manuals
-There are multiple manuals, which are more or less interconnected, involved in the whole project.
+There are two manuals, which are more or less interconnected, involved in the whole project.
 
 - The [Movie File Merger User Manual][], which concentrates on the program technical aspects of handling MFM.  It is a GitBook and on [GitHub][GitHub MFM UM].
-- [How to Organize Videos on Your Hard Disks][] :construction: explains some of my ideas about handling collections and includes a few brief description of some useful programs.  It is also a GitBook and on [GitHub][GitHub HtOVoYHD].
-- The [Movie File Merger Wiki][], have a look at the sections on the right side when you are in the MFM Wiki :point_right:...
+- [How to Organize Videos on Your Hard Disks][] explains some of my ideas about handling collections and includes a few brief description of some useful programs.  It is also a GitBook and on [GitHub][GitHub HtOVoYHD].
 [Movie File Merger User Manual]: http://movie-file-merger.org/usermanual.html
 [GitHub MFM UM]: https://github.com/Modi777/movie-file-merger-user-manual
-[How to Organize Videos on Your Hard Disks]: http://www.movie-file-merger.org/organizevideos.html
+[How to Organize Videos on Your Hard Disks]: http://movie-file-merger.org/usermanual.html
 [GitHub HtOVoYHD]: https://github.com/Modi777/How-to-Organize-Videos-on-Your-Hard-Disks
-[Movie File Merger Wiki]: https://github.com/Modi777/Movie-File-Merger/wiki
 
 ### :arrow_double_down: The Download & Website...
-Have a look at the [Movie File Merger Website][], where you can download the project as ZIP or TAR, or the installation folder for the latest release.
-[MFM Installation]: https://github.com/Modi777/Movie-File-Merger/wiki/installation/
+Have a look at the [Movie File Merger Website][], where you can download the project as ZIP File, TAR Ball, or Setup.
 [Movie File Merger Website]: http://movie-file-merger.org
 
 ### :sunflower: Basic Info  
-MFM supports you with the selective combination ofvideo collections, like home movies, movies, series, or documentaries.
-MFM makes it easier for you to select which items are copied or moved and which items are not touched.  It only considers relevant files and ignores the rest. MFM helps you to select the items to copy before hand, and hence reduces the hassle of selecting the items when they actually should be copied or moved.  You can find more information on the Wiki under [MFM Introduction][] or other Wiki pages marked with a :book: ...
-[MFM Introduction]: https://github.com/Modi777/Movie-File-Merger/wiki/Introduction/
+MFM supports you with the selective combination of video collections, like home movies, movies, series, or documentaries.
+MFM makes it easier for you to select which items are copied or moved and which items are not touched.  It only considers relevant files and ignores the rest. MFM helps you to select the items to copy before hand, and hence reduces the hassle of selecting the items when they actually should be copied or moved.
+![MFM_GOM](http://movie-file-merger.org/MFM.gif)
 
-![MFM_GOM](https://raw.githubusercontent.com/Modi777/Movie-File-Merger/master/Manuals/MFM_GOM.jpg)
-
-:information_source: MFM is not a movie database program; MFM is designed so that the lists can be easily updated once out of date.  MFM is designed to run in Dropbox or as portable program, what makes it easier to share lists with other people, update the program, and store your settings and lists in a save place.  MFM is also designed to work together with multiple other programs, which can be downloaded and used for free, see [MFM Installation][].
-[MFM Installation]: https://github.com/Modi777/Movie-File-Merger/wiki/Installation
+:information_source: MFM is not a movie database program; MFM is designed so that the lists can be easily updated once out of date.  MFM is designed to run in Dropbox or as portable program, what makes it easier to share lists with other people, update the program, and store your settings and lists in a save place.  MFM is also designed to work together with multiple other programs, which can be downloaded and used for free.
 
 ### [The MIT License (MIT)](http://opensource.org/licenses/MIT)
 
