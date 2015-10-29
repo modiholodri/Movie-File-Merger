@@ -1,171 +1,157 @@
 <!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<html lang="en">
+    <head>
+        <meta name="DC.Format" content="text/html" /> 
+        <meta name="DC.Title" xml:lang="EN" content="Movie File Merger" />
+        <meta name="DC.Creator" content="Reinhold Lauer" />
+        <meta name="DC.Description" xml:lang="EN" content="Selective combination of video collections, home videos, movies, series... Is Portable. Works with Dropbox, TeraCopy, MediaInfo, IMDb, GOM, or VLC." />
+        <meta name="DC.Rights" content="Copyright 2015, Reinhold Lauer - All rights reserved." />
 
-    <title>MFM Merge Video Collections</title>
-    <meta name="description" content="Selective combination of video collections, home videos, movies, series... Is Portable. Works with Dropbox, TeraCopy, MediaInfo, IMDb, GOM, or VLC.">
-    <meta name="keywords" content="Collection, Combination, Comparison, Video, Movies, Series, Documentaries, Existing, Garbage, Wish">
-    <link rel="shortcut icon" type="image/x-icon" href="images/MFM32Favicon.ico" />
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 
-    <!--Using jQuery and jQuery UI for display effects-->
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
-    <!--Using the hamburger menu display code-->
-    <script src="javascripts/hamburger.js"></script>
-    <script src="javascripts/scale.fix.js"></script>
+        <title>Errors</title>
+        <meta name="description" content="Selective combination of video collections, home videos, movies, series... Is Portable. Works with Dropbox, TeraCopy, MediaInfo, IMDb, GOM, or VLC.">
+        <meta name="keywords" content="Collection, Merge, Combination, Comparison, Video, Movies, Series, Documentaries, Errors">
+        <link rel="shortcut icon" type="image/x-icon" href="images/MFM32Favicon.ico" />
 
-    <!--Using Media Queries, if the viewport is smaller than 700px use another stylesheet-->
-    <link rel="stylesheet" type="text/css" media="all" href="stylesheets/hamburger.css"/>
-    <link rel="stylesheet" type="text/css" media="all" href="stylesheets/styles.css">
-    <link rel="stylesheet" type="text/css" media="all" href="stylesheets/pygment_trac.css">
-  </head>
+        <!--Using jQuery and jQuery UI for display effects-->
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+        <!--Using the hamburger menu display code-->
+        <script src="javascripts/hamburger.js"></script>
+        <script src="javascripts/scale.fix.js"></script>
 
-  <body>
-    <div class="wrapper"  id="container">
+        <!--Using Media Queries, if the viewport is smaller than 700px use another stylesheet-->
+        <link rel="stylesheet" type="text/css" media="all" href="stylesheets/hamburger.css"/>
+        <link rel="stylesheet" type="text/css" media="all" href="stylesheets/styles.css">
+        <link rel="stylesheet" type="text/css" media="all" href="stylesheets/pygment_trac.css">
+        <link rel="canonical" href="http://movie-file-merger.org/bugs.html" />
+        <link rel="alternate" hreflang="en" href="http://movie-file-merger.org/bugs.html" />
+     
+        <!-- Google Analytics Code -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-63705144-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+    </head>
+
+    <body>
+        <div class="wrapper"  id="container">
       
-    <header>
-       <!--The Hamburger-->
-       <div id="hamburger">
-           <div></div>
-           <div></div>
-           <div></div>
-       </div>
+        <header>
+            <!--The Hamburger-->
+            <div id="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
 
-       <!--Heading and Subtitle-->
-       <h2 style=" text-align: right"> Movie F. Merger</h2>
-       <p style=" text-align: right">Merge Collections on Hard Disks</p>
+            <!-- Header Banner -->
+            <img src="images/Header.gif" alt="Header" width="220" style="margin: 0px 0px 15px 10px; box-shadow: 5px 5px 10px #888888" >
 
-       <!-- The download areas -->
-       <ul>
-            <li><a href="https://github.com/Modi777/Movie-File-Merger/zipball/master">Download <strong>ZIP File</strong></a></li>
-            <li><a href="https://github.com/Modi777/Movie-File-Merger/tarball/master">Download <strong>TAR Ball</strong></a></li>
-            <li><a href="http://Movie-File-Merger.org/MFM Setup.exe">Download <strong>MFM Setup</strong></a></li> 
-        </ul>
-    </header>
+            <h1 style="text-align: center"> Errors <img style="margin: 0px 0px 0px 10px" src="images/Errors.png" alt="Errors" height="32"></h1>
 
-    <!--The Layer that will be layed over the content so that the content is unclickable while menu is shown-->
-    <div id="contentLayer"></div>
-
-    <!--The mobile navigation Markup hidden via css-->
-    <nav>
-        <ul>
-            <li><a href="http://Movie-File-Merger.org/index.html">Home</a></li>
-            <li><a href="http://Movie-File-Merger.org/wikis.html">Wikis</a></li>
-            <li><a href="http://Movie-File-Merger.org/downloads.html">Downloads</a></li>
-            <li><a href="http://Movie-File-Merger.org/bugs.html">Bugs/Ideas</a></li>
-            <li><a href="http://Movie-File-Merger.org/donations.html">Donations</a></li>
-            <li><a href="http://Movie-File-Merger.org/license.html">License</a></li>
-        </ul>
-    </nav>
-
-     <!--The content of the site-->
-    <div id="content">
-
-     <section>
-         <h2 style="background-color:lightgrey; text-align:center; color:red;">MFM has moved to it's own website...<br>
-             <a href="http://Movie-File-Merger.org"><b>Movie-File-Merger.org</b></a><br>
-             Please go there to get the updated version and have access to the forum.</h2>
-
-       <h1><img style="margin: 0px 5px" src="images/MFM128.png" alt="Movie File Merger" height="64"> MFM Home </h1>
-
-            <p>Movie File Merger (MFM) helps you with the selective combination of video collections, like home videos, movies, series, or documentaries.  
-               It can be used also for other types of collections, like music, or basically any files, but MFM is optimized for videos.</p>
-
-             <img src="https://raw.githubusercontent.com/Modi777/Movie-File-Merger/master/Manuals/MFM_GOM.jpg" alt="MFM &amp; GOM">
-            
-            <p>For more information have a look at the <a href="http://modi777.gitbooks.io/movie-file-merger-user-manual">MFM User Manual</a>
-               or check out <a href="http://modi777.gitbooks.io/how-to-oraganize-videos-on-your-hard-disks">How to Organize Videos on Your Hard Disks</a>.
-               Both books are a work in progress, but there should be already some useful stuff in there. </p>
-
-        <h3>Features</h3>
-            <p>MFM is not a movie database program like <a href="http://www.videodb.info/forum_en/">Personal Video Database</a>! 
-               MFM is designed so that the lists can be easily updated once out of date. 
-               MFM runs in <a href="http://www.dropbox.com">Dropbox</a>, which makes it easier to share lists with other people.  
-               MFM is portable, so that you can run it from anywhere, on any hard disk or memory stick.
-               MFM works together with multiple other programs, like 
-               <a href="http://www.gomlab.com">GOM</a>, 
-               <a href="http://www.videolan.org/vlc">VLC</a>, 
-               <a href="http://mediaarea.net/en/MediaInfo">MediaInfo</a>, or 
-               <a href="http://codesector.com/teracopy">TeraCopy</a>.
-               All of them can be downloaded and used for free.</p>
-            
-            <p>Some examples of what you can do with MFM are:</p>
+            <!-- The download areas -->
             <ul>
-                <li>Select which videos are copied or moved</li>
-                <li>Select the videos to copy before hand; lists are small can be easily distributed over the internet</li>
-                <li>Copy only relevant videos in the Wish list</li>
-                <li>Ignore videos in the Existing and Garbage lists; don't have all the stuff duplicated in various locations</li>
-                <li>Select movies according to predefined genre lists from <a href="http://www.imdb.com">IMDb</a></li>
-                <li>Select videos according to regular expressions which can be tested with <a href="http://rubular.com">Rubular</a>; for example year 2013</li>
-                <li>Search for movies or series on <a href="http://www.imdb.com">IMDb</a></li>
-                <li>Search for videos on <a href="http://torrentz.eu">torrentz.eu</a></li>
-                <li>List detailed media information with <a href="http://mediaarea.net/en/MediaInfo">MediaInfo</a></li>
-                <li>View video media information in the pop-ups when hovering over a list entry</li>
-                <li>Select videos according to filtered media information; for example horizontal resolution greater than 1000 pixels</li>
-                <li>Start play the video with your default player</li>
+                <li><a href="https://github.com/Modi777/Movie-File-Merger/zipball/master">Download <strong>ZIP File</strong></a></li>
+                <li><a href="https://github.com/Modi777/Movie-File-Merger/tarball/master">Download <strong>TAR Ball</strong></a></li>
+                <li><a href="http://movie-file-merger.org/MFMSetup.exe">Download <strong>MFM Setup</strong></a></li> 
             </ul>
+        </header>
 
-        <h3>Hidden Benefits</h3>
-          <p>MFM is designed so that it is quite flexible.  How and for what to use it depends basically on you, 
-              what means also that you'll have to use it for some time to figure out which way is best for you. 
-              Some of the not that obvious benefits are:</p>
-          <ul>
-              <li>Back up your video collections on hard disks of family members, that way they can watch your videos and you safe space</li>
-              <li>Social gathering when visiting your friend, because your two hard disks have to be brought together to make it happen</li>
-              <li>Save internet bandwidth, because large data quantities are moved over USB or similar</li>
-              <li>Faster than backing up in the cloud, transferring data over USB 3.0 is around 150MB/s</li>
-          </ul>
-      </section>
+        <!--The Layer that will be layed over the content so that the content is unclickable while menu is shown-->
+        <div id="contentLayer"></div>
+
+        <!--The mobile navigation Markup hidden via css-->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="http://movie-file-merger.org/forum/index.php">Forum</a></li>
+                <li><a href="usermanual.html">Manuals</a></li>
+                <li><a href="downloads.html">Downloads</a></li>
+                <li><a href="donations.html">Donations</a></li>
+                <li><a href="contacts.html">Contacts</a></li>
+                <li><a href="license.html">License</a></li>
+            </ul>
+        </nav>
+
+        <!--The content of the site-->
+        <div id="content">
+            <section>
+                <img src="images/Header.gif" alt="Header" width="500" height="64" style="margin: 5px 0px 10px; box-shadow: 5px 5px 10px #888888" >
+                <h2 style="text-align: center">Page Not Found</h2>
+                <h2 style="background-color:lightgrey; text-align:center; color:red;">
+                    MFM has moved to it's own website...<br>
+                    <a href="http://Movie-File-Merger.org"><b>Movie-File-Merger.org</b></a><br>
+                    Please go there to get the updated version and have access to the forum.
+                </h2>
+                <p style="text-align:center">
+                    <img src="images/404.jpg" alt="404" >
+                </p>
+                
+                <img src="images/Header.gif" alt="Header" width="500" height="64" style="margin: 5px 0px 10px; box-shadow: 5px 5px 10px #888888" >
+                <p style="text-align: center">Copyright © 2012-2015 Reinhold Lauer</p>
+            </section>
       
-      <footer>
-       <h3>Authors & Contributors</h3>
-           <p><small><a href="mailto:reinhold.lauer@gmail.com">R. Lauer</a> (<a href="https://github.com/Modi777" class="user-mention">@Modi777</a>), J. Gemzoee, H. Hammerborgh<br>
-               Theme by <a href="https://github.com/orderedlist">S. Smith</a></small></p>
-          <!--32x32 Icons of most contributers-->
-          <a href="http://www.icsharpcode.net/OpenSource/SD"><img src="images/SharpDevelop.jpg" alt="Free SharpDevelop IDE"></a>
-          <a href="http://www.microsoft.com/net"><img src="images/DotNet.jpg" alt="Free Framework"></a>
-          <a href="http://www.microsoft.com/web/webmatrix"><img src="images/WebMatrix.jpg" alt="Free Web Design"></a>
-          <a href="https://github.com/Modi777/Movie-File-Merger"><img src="images/GitHub.png" alt="Free GitHub Implementation"></a>
-          <a href="http://statcounter.com"><img src="images/StatCounter.png" alt="Free Website Statistics"></a>
-          <a href="http://modi777.gitbooks.io/movie-file-merger-user-manual"><img src="images/GitBook.jpg" alt="Free GitBook User Manual"></a>
-          <a href="http://codesector.com/teracopy"><img src="images/TeraCopy.jpg" alt="Free Copy Program"></a>
-          <a href="http://www.gomlab.com/eng"><img src="images/GOM.jpg" alt="Free Media Player"></a>
-          <a href="http://www.imdb.com"><img src="images/IMDb.jpg" alt="Free Movie Database"></a>
-          <a href="http://thetvdb.com"><img src="images/TheTVDB.jpg" alt="Free Movie Database"></a>
-          <a href="http://www.videodb.info/forum_en"><img src="images/PVD.png" alt="Free Video Database"></a>
-          <a href="http://torrentz.eu"><img src="images/TorrentzEu.jpg" alt="Free Torrent Meta Search Engine"></a>
-          <a href="http://mediaarea.net/en/MediaInfo"><img src="images/MediaInfo.png" alt="Free Media Information"></a>
-          <a href="http://www.videolan.org/vlc"><img src="images/VLC.png" alt="Free Media Player"></a>
-          <a href="http://dropbox.com"><img src="images/Dropbox.jpg" alt="Free Cloud Storage"></a>
-          <a href="http://www.mozilla.org/en-US/firefox"><img src="images/FireFox.png" alt="Free Web Browser"></a>
-          <a href="http://sickbeard.com"><img src="images/Sickbeard.jpg" alt="Free Cloud Storage"></a>
-          <a href="http://www.filebot.net"><img src="images/Filebot.png" alt="Free File Renamer"></a>
-          <a href="http://www.gimp.org"><img src="images/Gimp.jpg" alt="Free Image Processing"></a>
-          <a href="http://www.jrsoftware.org/isinfo.php"><img src="images/InnoSetup.png" alt="Free Installer"></a>
-          <a href="http://www.nonags.com/freeware-movie-file-merger_4412.html"><img src="images/NoNags.png" alt="Free Download Site"></a>
-      </footer>
-     </div>
-    </div>
+            <footer>
+            <h3>Authors & Contributors</h3>
+                <p><small>
+                    <a href="mailto:reinhold.lauer@gmail.com">R. Lauer</a> 
+                    (<a href="https://github.com/Modi777" class="user-mention">@Modi777</a>), 
+                    J. Gemzoee, H. Hammerborgh<br>
+                    Theme by <a href="https://github.com/orderedlist">S. Smith</a></small>
+                </p>
+                <!--32x32 Icons of most contributers-->
+                <a href="http://www.icsharpcode.net/OpenSource/SD"><img src="images/SharpDevelop.jpg" alt="Free SharpDevelop IDE"></a>
+                <a href="http://www.microsoft.com/net"><img src="images/DotNet.jpg" alt="Free Framework"></a>
+                <a href="http://www.microsoft.com/web/webmatrix"><img src="images/WebMatrix.jpg" alt="Free Web Design"></a>
+                <a href="https://github.com/Modi777/Movie-File-Merger"><img src="images/GitHub.png" alt="Free GitHub Implementation"></a>
+                <a href="http://statcounter.com"><img src="images/StatCounter.png" alt="Free Website Statistics"></a>
+                <a href="http://modi777.gitbooks.io/movie-file-merger-user-manual"><img src="images/GitBook.jpg" alt="Free GitBook User Manual"></a>
+                <a href="http://codesector.com/teracopy"><img src="images/TeraCopy.jpg" alt="Free Copy Program"></a>
+                <a href="http://www.gomlab.com/eng"><img src="images/GOM.jpg" alt="Free Media Player"></a>
+                <a href="http://www.imdb.com"><img src="images/IMDb.jpg" alt="Free Movie Database"></a>
+                <a href="http://thetvdb.com"><img src="images/TheTVDB.jpg" alt="Free Movie Database"></a>
+                <a href="http://www.videodb.info/forum_en"><img src="images/PVD.png" alt="Free Video Database"></a>
+                <a href="http://torrentz.eu"><img src="images/TorrentzEu.jpg" alt="Free Torrent Meta Search Engine"></a>
+                <a href="http://mediaarea.net/en/MediaInfo"><img src="images/MediaInfo.png" alt="Free Media Information"></a>
+                <a href="http://www.videolan.org/vlc"><img src="images/VLC.png" alt="Free Media Player"></a>
+                <a href="http://dropbox.com"><img src="images/Dropbox.jpg" alt="Free Cloud Storage"></a>
+                <a href="https://www.mozilla.org/en-US/firefox"><img src="images/FireFox.png" alt="Free Web Browser"></a>
+                <a href="http://sickbeard.com"><img src="images/Sickbeard.jpg" alt="Free Cloud Storage"></a>
+                <a href="http://www.filebot.net"><img src="images/Filebot.png" alt="Free File Renamer"></a>
+                <a href="http://www.gimp.org"><img src="images/Gimp.jpg" alt="Free Image Processing"></a>
+                <a href="http://www.jrsoftware.org/isinfo.php"><img src="images/InnoSetup.png" alt="Free Installer"></a>
+            </footer>
+            </div>
+        </div>
 
-    <!-- Start of StatCounter Code for Default Guide -->
+        <!-- Start of StatCounter Code for Default Guide -->
         <script type="text/javascript">
-            var sc_project=10160028; 
-            var sc_invisible=1; 
-            var sc_security="e4fb09c7"; 
+            var sc_project=10227202;
+            var sc_invisible=1;
+            var sc_security="e96e6a0e";
             var scJsHost = (("https:" == document.location.protocol) ?
             "https://secure." : "http://www.");
-            document.write("<sc"+"ript type='text/javascript' src='" +
-            scJsHost+
+            document.write("<sc"+"ript type='text/javascript' src='" + scJsHost+
             "statcounter.com/counter/counter.js'></"+"script>");
         </script>
-        <noscript><div class="statcounter"><a title="shopify stats"
-            href="http://statcounter.com/shopify/"><img
-            class="statcounter"
-            src="http://c.statcounter.com/10160028/0/e4fb09c7/1/"
-            alt="shopify stats"></a></div></noscript>
-    <!-- End of StatCounter Code for Default Guide -->
-  </body>
+        <noscript>
+            <div class="statcounter">
+                <a title="create counter"
+                    href="http://statcounter.com/free-hit-counter/" target="_blank"><img
+                    class="statcounter" 
+                    src="http://c.statcounter.com/10227202/0/e96e6a0e/1/"
+                    alt="create counter">
+                </a>
+            </div>
+        </noscript>
+        <!-- End of StatCounter Code for Default Guide -->
+    </body>
 </html>
