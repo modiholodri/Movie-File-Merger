@@ -416,16 +416,16 @@ namespace Movie_File_Merger
 			tbAddonExtensionsRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/ConsideredFiles/AddonExtensionsRegex", @"srt|sub" );
 
 			// Name Unification settings 
-			tbCutNameBeforeRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/NameUnification/CutNameBeforeRegex", @"(.[12][09]\d\d)|(cd[1234])|x264|aac|720p|1080p|divx|xvid|dvd" );
+			tbCutNameBeforeRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/NameUnification/CutNameBeforeRegex", @"(.[12][09]\d\d)|720p|1080p|(cd[1234])|x264|aac|divx|xvid|dvd" );
 			tbOnlyCharactersRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/NameUnification/OnlyCharactersRegex", @"[^a-zA-Z0-9 -'üöä]" );
 			tbToLowerRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/NameUnification/ToLowerRegex", @" On | A | The | Of | And | Or | To | From | For | In | As | At | With " );
 			tbEpisodesIdRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/NameUnification/EpisodesIdRegex", @".s\d+[e ]\d+" );
-			tbGoodDocuNameRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/NameUnification/GoodDocuRegex", @".* S[12][0-9]{3}E[0-9]{1,3} .*$" );
-			tbGoodEpisodeNameRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/NameUnification/GoodEpisodeRegex", @".* S[0-9]{2}E[0-9]{2}(-E[0-9]{2})? .*$" );
-			tbGoodMovieNameRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/NameUnification/GoodMovieRegex", @".* \([12][0-9]{3}\)$" );
-			tbBadDocuNameRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/NameUnification/BadDocuRegex", @"[Ss][12][0-9]{3}[Ee][0-9]{1,3}" );
-			tbBadEpisodeNameRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/NameUnification/BadEpisodeRegex", @"[Ss][0-9]{1,2}[Ee][0-9]{1,2}" );
-			tbBadMovieNameRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/NameUnification/BadMovieRegex", @"[12][0-9]{3}" );
+			tbGoodDocuNameRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/NameUnification/GoodDocuRegex", @".* S[12]\d{3}E\d{1,3} .*$" );
+			tbGoodEpisodeNameRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/NameUnification/GoodEpisodeRegex", @".* S\d{2}E\d{2}(-E\d{2})? .*$" );
+			tbGoodMovieNameRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/NameUnification/GoodMovieRegex", @".* \([12]\d{3}\)$" );
+			tbBadDocuNameRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/NameUnification/BadDocuRegex", @"[Ss][12]\d{3}[Ee]\d{1,3}" );
+			tbBadEpisodeNameRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/NameUnification/BadEpisodeRegex", @"[Ss]\d{1,2}[Ee]\d{1,2}" );
+			tbBadMovieNameRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/NameUnification/BadMovieRegex", @"[12]\d{3}" );
 
 			// Supporting Programms settings 
 			tbTeraCopyPath.Text = readXmlSetting ( xmlSettings, "/MFMSettings/SupportingProgramms/TeraCopyPath", @"C:\Program Files\TeraCopy\TeraCopy.exe" );
