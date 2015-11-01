@@ -39,7 +39,6 @@ namespace Movie_File_Merger
 		Color DragColor = Color.Red;  // the color of the item which has been dragged
 		string[] saCollections = {"Miscellaneous", "Adults", "Movies", "Documentaries", "Series", "Clips"}; // all collections
 		string strCollectionType = "Miscellaneous";  // the active collection type
-		const string strIMDbSearchType = "&s=tt";  // to search on IDMb for the title only
 		MediaInfo miThis = new MediaInfo( );  // detailed information about the video file from MediaInfo
 
 		// item colors		
@@ -403,7 +402,9 @@ namespace Movie_File_Merger
 			xmlSettings.Load ( strXmlFilePath );
 
 			// General settings			
-			tbNickName.Text = readXmlSetting ( xmlSettings, "/MFMSettings/General/NickName", "Anonymous");
+			tbNickName.Text = readXmlSetting ( xmlSettings, "/MFMSettings/General/NickName", "Anonymous" );
+			cobSearchInfo.SelectedIndex = cobSearchInfo.FindString( readXmlSetting ( xmlSettings, "/MFMSettings/General/SeachInfo", "IMDb" ) );
+			cobSearchDownload.SelectedIndex = cobSearchDownload.FindString( readXmlSetting ( xmlSettings, "/MFMSettings/General/SeachDownload", "Torrentz" ) );
 			tbToolTipRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/General/ToolTipRegex", "Enter a regular expression...");
 			cbGetHigherRes.Checked = readXmlSetting ( xmlSettings, "/MFMSettings/General/GetHigherRes", "True") == "True";
 			cbKeepFolders.Checked = readXmlSetting ( xmlSettings, "/MFMSettings/General/KeepFolders", "False") == "True";
@@ -435,6 +436,8 @@ namespace Movie_File_Merger
 				ShowInfo( "Please enter your nick name in the Nick Name field..." );
 			}
 			AssignRegexes( );
+			btnSearchDownload.Text = cobSearchDownload.Text;
+			btnSearchInfo.Text = cobSearchInfo.Text;
 		}
 		
 		/// <summary>
@@ -449,6 +452,8 @@ namespace Movie_File_Merger
 
 			    writer.WriteStartElement("General");  // General settings group
 				writer.WriteElementString("NickName", tbNickName.Text );
+				writer.WriteElementString("SeachInfo", cobSearchInfo.Text );
+				writer.WriteElementString("SeachDownload", cobSearchDownload.Text );
 				writer.WriteElementString("ToolTipRegex", tbToolTipRegex.Text );
 				writer.WriteElementString("GetHigherRes", cbGetHigherRes.Checked.ToString() );
 				writer.WriteElementString("KeepFolders", cbKeepFolders.Checked.ToString() );
@@ -1078,36 +1083,6 @@ namespace Movie_File_Merger
 				ShowInfo ( "Did not find an according file under the Import path." );
 			}
 
-		}
-		
-		/// <summary>
-		/// Searches on IMDb for the selected items of the list view, 
-		/// which has been droped on the Search IMDb droparea.
-		/// </summary>
-		/// <param name="lvListView">The list view with the selected items.</param>
-		void SearchIMDb( ListView lvListView )
-		{
-			foreach ( ListViewItem lviItem in lvListView.SelectedItems ) {
-				string strCleanName = RemoveEpisodeInfo( lviItem.Text );
-				System.Diagnostics.Process.Start( "http://www.imdb.com/find?q=" + 
-				                                  strCleanName.Replace( ' ', '+' ) + strIMDbSearchType );
-				LogMessage( "Info", Color.Blue, "Searching IMDb for " + strCleanName );
-			}
-		}
-
-		/// <summary>
-		/// Searches on Torrentz.eu for the selected items of the list view, 
-		/// which has been droped on the Search Torrentz droparea.
-		/// </summary>
-		/// <param name="lvListView">The list view with the selected items.</param>
-		void SearchTorrenz( ListView lvListView )
-		{
-			foreach ( ListViewItem lviItem in lvListView.SelectedItems ) {
-				string strCleanName = RemoveEpisodeInfo( lviItem.Text );
-				System.Diagnostics.Process.Start( "http://torrentz.eu/search?f=" + 
-				                                  strCleanName.Replace( ' ', '+' ) );
-				LogMessage( "Info", Color.Blue, "Searching Torrenz for " + strCleanName );
-			}
 		}
 		
 		/// <summary>
@@ -1896,17 +1871,6 @@ namespace Movie_File_Merger
 		}
 		
 		/// <summary>
-		/// Items have been dropped on the Seach Torrentz droparea.
-		/// Open the To4rentz.eu searches for them in the default browser. 
-		/// </summary>
-		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
-		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
-		void BtnSearchTorrentzDragDrop( object sender, DragEventArgs e) 
-		{
-			SearchTorrenz( lvDragSource );
-		}
-		
-		/// <summary>
 		/// Items have been dropped on the Erase Selected drop area. 
 		/// Erase the selected items from the list view.
 		/// </summary>
@@ -1930,17 +1894,6 @@ namespace Movie_File_Merger
 				break;
 			}
 			EraseColorFromListView( lvDragSource, DragColor );
-		}
-		
-		/// <summary>
-		/// Items have been droped on the Seach IMDb drop area.
-		/// Open the IMDb searches for them in the default browser.
-		/// </summary>
-		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
-		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
-		void BtnSearchIMDbDragDrop( object sender, DragEventArgs e )
-		{
-			SearchIMDb( lvDragSource );
 		}
 		
 		/// <summary>
@@ -2064,7 +2017,7 @@ namespace Movie_File_Merger
 		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
 		void LvDoubleClick( object sender, EventArgs e )
 		{
-			SearchIMDb( (ListView)sender );
+			SearchInfo( (ListView)sender );
 		}
 
 		/// <summary>
@@ -2456,6 +2409,10 @@ namespace Movie_File_Merger
 			ClearStatus( );
 		}
 
+		/// <summary>
+		/// Add dropped file to the Maintenance list.
+		/// </summary>
+		/// <param name="saFileList">The string array with the file names.</param>
 		void lvMaintenanceAddFiles ( string[] saFileList ) {
 			foreach ( string strPath in saFileList ) {
 				FileAttributes attr = File.GetAttributes( strPath );
@@ -2533,6 +2490,170 @@ namespace Movie_File_Merger
 		void LvMaintenanceResize(object sender, EventArgs e)
 		{
 			lvMaintenance.Columns[0].Width = lvMaintenance.Width - 35;
+		}
+		
+		/// <summary>
+		/// Searches on the internet for the selected items of the list view, 
+		/// which has been droped on the Search Info droparea.
+		/// </summary>
+		/// <param name="lvListView">The list view with the selected items.</param>
+		void SearchInfo( ListView lvListView )
+		{ 
+			string strCleanName = "";
+			string strSearchInfo = "";
+			foreach ( ListViewItem lviItem in lvListView.SelectedItems ) {
+				strCleanName = RemoveEpisodeInfo( lviItem.Text ).Replace( ' ', '+' );
+				switch ( cobSearchInfo.Text) {
+					case "All Movie":
+						strSearchInfo = "http://www.allmovie.com/search/all/" + strCleanName;
+						LogMessage( "Info", Color.Blue, "Searching All Movie for " + strCleanName );
+						break;
+					case "IMDb": 
+						strSearchInfo = "http://www.imdb.com/find?q=" + strCleanName + "&s=tt";
+						LogMessage( "Info", Color.Blue, "Searching IMDb for " + strCleanName );
+						break;
+					case "The Movie DB": 
+						strSearchInfo = "https://www.themoviedb.org/search?query=" + strCleanName;
+						LogMessage( "Info", Color.Blue, "Searching The Movie DB for " + strCleanName );
+						break;
+					case "The Movie Poster DB":
+						strSearchInfo = "http://www.movieposterdb.com/search/?query=" + strCleanName;
+						LogMessage( "Info", Color.Blue, "Searching The Movie Poster DB for " + strCleanName );
+						break;
+					case "The TVDB": 
+						strSearchInfo = "http://thetvdb.com/?string=" + strCleanName + "&searchseriesid=&tab=listseries&function=Search";
+						LogMessage( "Info", Color.Blue, "Searching The TVDB for " + strCleanName );
+						break;
+					case "Trailer Addict":
+						strSearchInfo = "http://www.traileraddict.com/search/" + strCleanName;
+						LogMessage( "Info", Color.Blue, "Searching Trailer Addict for " + strCleanName );
+						break;
+					case "Adult DVD Empire": 
+						strSearchInfo = "http://www.adultdvdempire.com/allsearch/search?q=" + strCleanName;
+						LogMessage( "Info", Color.Blue, "Searching Adult DVD Empire for " + strCleanName );
+						break;
+					default: 
+						strSearchInfo = "http://www.imdb.com/find?q=" + strCleanName + "&s=tt";
+						LogMessage( "Info", Color.Blue, "Searching IMDb for " + strCleanName );
+						break;
+				}
+				System.Diagnostics.Process.Start( strSearchInfo );
+			}
+		}
+
+		/// <summary>
+		/// Searches the internet for the selected items of the list view, 
+		/// which has been droped on the Search Download droparea.
+		/// </summary>
+		/// <param name="lvListView">The list view with the selected items.</param>
+		void SearchDownload( ListView lvListView )
+		{
+			string strCleanName = "";
+			string strSearchInfo = "";
+			foreach ( ListViewItem lviItem in lvListView.SelectedItems ) {
+				strCleanName = RemoveEpisodeInfo( lviItem.Text ).Replace( ' ', '+' );
+				switch ( cobSearchDownload.Text) {
+					case "1337X":
+						strSearchInfo = "https://1337x.to/search/" + strCleanName;
+						LogMessage( "Info", Color.Blue, "Searching 1337X for " + strCleanName + "/1/");
+						break;
+					case "Bit Snoop":
+						strSearchInfo = "http://bitsnoop.com/search/all/" + strCleanName;
+						LogMessage( "Info", Color.Blue, "Searching Bit Snoop for " + strCleanName );
+						break;
+					case "Demonoid":
+						strSearchInfo = "http://www.demonoid.pw/files/?query=" + strCleanName;
+						LogMessage( "Info", Color.Blue, "Searching Demonoid for " + strCleanName );
+						break;
+					case "Extra Torrent":
+						strSearchInfo = "http://extratorrent.cc/search/?search=" + strCleanName;
+						LogMessage( "Info", Color.Blue, "Searching Extra Torrent for " + strCleanName );
+						break;
+					case "Kickass":
+						strSearchInfo = "https://kat.cr/usearch/" + strCleanName + "  category:movies/";
+						LogMessage( "Info", Color.Blue, "Searching Kickass for " + strCleanName );
+						break;
+					case "Rarbg":
+						strSearchInfo = "https://rarbg.to/torrents.php?search=" + strCleanName;
+						LogMessage( "Info", Color.Blue, "Searching Rarbg for " + strCleanName );
+						break;
+					case "ISO Hunt":
+						strSearchInfo = "https://isohunt.to/torrents/?ihq=" + strCleanName;
+						LogMessage( "Info", Color.Blue, "Searching ISO Hunt for " + strCleanName );
+						break;
+					case "Lime Torrents":
+						strSearchInfo = "https://www.limetorrents.cc/search/all/pulp-fiction/" + strCleanName;
+						LogMessage( "Info", Color.Blue, "Searching Lime Torrents for " + strCleanName );
+						break;
+					case "The Piratebay":
+						strSearchInfo = "https://thepiratebay.la/search/" + strCleanName;
+						LogMessage( "Info", Color.Blue, "Searching  for " + strCleanName );
+						break;
+					case "Torrentz":
+						strSearchInfo = "http://torrentz.eu/search?f=" + strCleanName;
+						LogMessage( "Info", Color.Blue, "Searching Torrenz for " + strCleanName );
+						break;
+					case "Torrent Hound":
+						strSearchInfo = "http://www.torrenthound.com/search/pulp+fiction" + strCleanName;
+						LogMessage( "Info", Color.Blue, "Searching Torrent Hound for " + strCleanName );
+						break;
+					case "Torlock":
+						strSearchInfo = "http://www.torlock.com/all/torrents/" + strCleanName;
+						LogMessage( "Info", Color.Blue, "Searching Torlock for " + strCleanName );
+						break;
+					case "Yifi Torrents":
+						strSearchInfo = "https://www.yify-torrent.org/search/" + strCleanName;
+						LogMessage( "Info", Color.Blue, "Searching Yifi Torrents for " + strCleanName );
+						break;
+					default:
+						strSearchInfo = "http://torrentz.eu/search?f=" + strCleanName;
+						LogMessage( "Info", Color.Blue, "Searching Torrenz.eu for " + strCleanName );
+						break;
+				}
+				System.Diagnostics.Process.Start( strSearchInfo );
+			}
+		}
+		
+		/// <summary>
+		/// Items have been droped on the Seach Info drop area.
+		/// Open the info searches for tem in the default browser.
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void BtnSearchInfoDragDrop( object sender, DragEventArgs e )
+		{
+			SearchInfo( lvDragSource );
+		}
+		
+		/// <summary>
+		/// Items have been dropped on the Seach Download droparea.
+		/// Open the download searches for them in the default browser. 
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void BtnSearchDownloadDragDrop( object sender, DragEventArgs e) 
+		{
+			SearchDownload( lvDragSource );
+		}
+		
+		/// <summary>
+		/// Update the Search Info button text after the selection hsa been changed.
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void CobSearchInfoSelectedIndexChanged(object sender, EventArgs e)
+		{
+			btnSearchInfo.Text = cobSearchInfo.Text;
+		}
+
+		/// <summary>
+		/// Update the Download button text after the selection has been changed.
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void CobSearchDownloadSelectedIndexChanged(object sender, EventArgs e)
+		{
+			btnSearchDownload.Text = cobSearchDownload.Text;
 		}
 	}
 }

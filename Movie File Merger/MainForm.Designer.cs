@@ -78,13 +78,13 @@ namespace Movie_File_Merger
 			this.lblImportFolder = new System.Windows.Forms.Label();
 			this.btnExportList = new System.Windows.Forms.Button();
 			this.btnEraseColor = new System.Windows.Forms.Button();
-			this.btnSearchTorrentz = new System.Windows.Forms.Button();
+			this.btnSearchDownload = new System.Windows.Forms.Button();
 			this.btnMediaInfo = new System.Windows.Forms.Button();
 			this.btnEraseSelected = new System.Windows.Forms.Button();
 			this.scFolders = new System.Windows.Forms.SplitContainer();
 			this.tbTargetFolder = new System.Windows.Forms.TextBox();
 			this.tbImportFolder = new System.Windows.Forms.TextBox();
-			this.btnSearchIMDb = new System.Windows.Forms.Button();
+			this.btnSearchInfo = new System.Windows.Forms.Button();
 			this.gbTypeSelection = new System.Windows.Forms.GroupBox();
 			this.rbMiscellaneous = new System.Windows.Forms.RadioButton();
 			this.rbAdults = new System.Windows.Forms.RadioButton();
@@ -113,6 +113,10 @@ namespace Movie_File_Merger
 			this.tpLog = new System.Windows.Forms.TabPage();
 			this.rtbLog = new System.Windows.Forms.RichTextBox();
 			this.tpSettings = new System.Windows.Forms.TabPage();
+			this.label2 = new System.Windows.Forms.Label();
+			this.label1 = new System.Windows.Forms.Label();
+			this.cobSearchDownload = new System.Windows.Forms.ComboBox();
+			this.cobSearchInfo = new System.Windows.Forms.ComboBox();
 			this.tbNickName = new System.Windows.Forms.TextBox();
 			this.lblNickName = new System.Windows.Forms.Label();
 			this.gbSupportingPrograms = new System.Windows.Forms.GroupBox();
@@ -227,18 +231,17 @@ namespace Movie_File_Merger
 			this.ilMovieFileMerger.Images.SetKeyName(11, "Series.gif");
 			this.ilMovieFileMerger.Images.SetKeyName(12, "Clips.gif");
 			this.ilMovieFileMerger.Images.SetKeyName(13, "MediaInfo.gif");
-			this.ilMovieFileMerger.Images.SetKeyName(14, "torrentzeu3.jpg");
-			this.ilMovieFileMerger.Images.SetKeyName(15, "IMDB.gif");
-			this.ilMovieFileMerger.Images.SetKeyName(16, "List.gif");
-			this.ilMovieFileMerger.Images.SetKeyName(17, "Adult.gif");
-			this.ilMovieFileMerger.Images.SetKeyName(18, "Miscellaneaous.gif");
-			this.ilMovieFileMerger.Images.SetKeyName(19, "Movie.gif");
-			this.ilMovieFileMerger.Images.SetKeyName(20, "Play.gif");
-			this.ilMovieFileMerger.Images.SetKeyName(21, "Garbage.gif");
-			this.ilMovieFileMerger.Images.SetKeyName(22, "Process.gif");
-			this.ilMovieFileMerger.Images.SetKeyName(23, "Select.gif");
-			this.ilMovieFileMerger.Images.SetKeyName(24, "Wish.png");
-			this.ilMovieFileMerger.Images.SetKeyName(25, "Start.gif");
+			this.ilMovieFileMerger.Images.SetKeyName(14, "List.gif");
+			this.ilMovieFileMerger.Images.SetKeyName(15, "Adult.gif");
+			this.ilMovieFileMerger.Images.SetKeyName(16, "Miscellaneaous.gif");
+			this.ilMovieFileMerger.Images.SetKeyName(17, "Movie.gif");
+			this.ilMovieFileMerger.Images.SetKeyName(18, "Play.gif");
+			this.ilMovieFileMerger.Images.SetKeyName(19, "Garbage.gif");
+			this.ilMovieFileMerger.Images.SetKeyName(20, "Process.gif");
+			this.ilMovieFileMerger.Images.SetKeyName(21, "Select.gif");
+			this.ilMovieFileMerger.Images.SetKeyName(22, "Wish.png");
+			this.ilMovieFileMerger.Images.SetKeyName(23, "Start.gif");
+			this.ilMovieFileMerger.Images.SetKeyName(24, "Download.png");
 			// 
 			// tmrUpdateCounters
 			// 
@@ -518,11 +521,11 @@ namespace Movie_File_Merger
 			this.tpSeparateLists.Controls.Add(this.lblImportFolder);
 			this.tpSeparateLists.Controls.Add(this.btnExportList);
 			this.tpSeparateLists.Controls.Add(this.btnEraseColor);
-			this.tpSeparateLists.Controls.Add(this.btnSearchTorrentz);
+			this.tpSeparateLists.Controls.Add(this.btnSearchDownload);
 			this.tpSeparateLists.Controls.Add(this.btnMediaInfo);
 			this.tpSeparateLists.Controls.Add(this.btnEraseSelected);
 			this.tpSeparateLists.Controls.Add(this.scFolders);
-			this.tpSeparateLists.Controls.Add(this.btnSearchIMDb);
+			this.tpSeparateLists.Controls.Add(this.btnSearchInfo);
 			this.tpSeparateLists.Controls.Add(this.gbTypeSelection);
 			this.tpSeparateLists.Controls.Add(this.gbProcessImport);
 			this.tpSeparateLists.Controls.Add(this.btnPlay);
@@ -758,10 +761,10 @@ namespace Movie_File_Merger
 			this.btnEraseColor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.btnEraseColor.ImageKey = "Color.gif";
 			this.btnEraseColor.ImageList = this.ilMovieFileMerger;
-			this.btnEraseColor.Location = new System.Drawing.Point(445, 204);
+			this.btnEraseColor.Location = new System.Drawing.Point(421, 204);
 			this.btnEraseColor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.btnEraseColor.Name = "btnEraseColor";
-			this.btnEraseColor.Size = new System.Drawing.Size(108, 70);
+			this.btnEraseColor.Size = new System.Drawing.Size(94, 70);
 			this.btnEraseColor.TabIndex = 28;
 			this.btnEraseColor.Text = "Erase Color";
 			this.btnEraseColor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -771,23 +774,23 @@ namespace Movie_File_Merger
 			this.btnEraseColor.DragDrop += new System.Windows.Forms.DragEventHandler(this.BtnEraseColorDragDrop);
 			this.btnEraseColor.DragOver += new System.Windows.Forms.DragEventHandler(this.BtnDragOver);
 			// 
-			// btnSearchTorrentz
+			// btnSearchDownload
 			// 
-			this.btnSearchTorrentz.AllowDrop = true;
-			this.btnSearchTorrentz.ImageKey = "torrentzeu3.jpg";
-			this.btnSearchTorrentz.ImageList = this.ilMovieFileMerger;
-			this.btnSearchTorrentz.Location = new System.Drawing.Point(131, 204);
-			this.btnSearchTorrentz.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.btnSearchTorrentz.Name = "btnSearchTorrentz";
-			this.btnSearchTorrentz.Size = new System.Drawing.Size(120, 70);
-			this.btnSearchTorrentz.TabIndex = 33;
-			this.btnSearchTorrentz.Text = "Search Torrentz";
-			this.btnSearchTorrentz.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.btnSearchTorrentz.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-			this.ttMovieFileMerger.SetToolTip(this.btnSearchTorrentz, "Drop items here to search for them on Torrentz.eu.");
-			this.btnSearchTorrentz.UseVisualStyleBackColor = false;
-			this.btnSearchTorrentz.DragDrop += new System.Windows.Forms.DragEventHandler(this.BtnSearchTorrentzDragDrop);
-			this.btnSearchTorrentz.DragOver += new System.Windows.Forms.DragEventHandler(this.BtnDragOver);
+			this.btnSearchDownload.AllowDrop = true;
+			this.btnSearchDownload.ImageKey = "Download.png";
+			this.btnSearchDownload.ImageList = this.ilMovieFileMerger;
+			this.btnSearchDownload.Location = new System.Drawing.Point(131, 204);
+			this.btnSearchDownload.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.btnSearchDownload.Name = "btnSearchDownload";
+			this.btnSearchDownload.Size = new System.Drawing.Size(154, 70);
+			this.btnSearchDownload.TabIndex = 33;
+			this.btnSearchDownload.Text = "Torrent Hound";
+			this.btnSearchDownload.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.btnSearchDownload.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			this.ttMovieFileMerger.SetToolTip(this.btnSearchDownload, "Drop items here to download them from the internet.");
+			this.btnSearchDownload.UseVisualStyleBackColor = false;
+			this.btnSearchDownload.DragDrop += new System.Windows.Forms.DragEventHandler(this.BtnSearchDownloadDragDrop);
+			this.btnSearchDownload.DragOver += new System.Windows.Forms.DragEventHandler(this.BtnDragOver);
 			// 
 			// btnMediaInfo
 			// 
@@ -813,7 +816,7 @@ namespace Movie_File_Merger
 			this.btnEraseSelected.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.btnEraseSelected.ImageKey = "Erase.gif";
 			this.btnEraseSelected.ImageList = this.ilMovieFileMerger;
-			this.btnEraseSelected.Location = new System.Drawing.Point(315, 204);
+			this.btnEraseSelected.Location = new System.Drawing.Point(291, 204);
 			this.btnEraseSelected.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.btnEraseSelected.Name = "btnEraseSelected";
 			this.btnEraseSelected.Size = new System.Drawing.Size(120, 70);
@@ -876,24 +879,24 @@ namespace Movie_File_Merger
 			this.tbImportFolder.DragDrop += new System.Windows.Forms.DragEventHandler(this.TbImportFolderDragDrop);
 			this.tbImportFolder.DragOver += new System.Windows.Forms.DragEventHandler(this.TbDragOver);
 			// 
-			// btnSearchIMDb
+			// btnSearchInfo
 			// 
-			this.btnSearchIMDb.AllowDrop = true;
-			this.btnSearchIMDb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.btnSearchIMDb.ImageKey = "IMDB.gif";
-			this.btnSearchIMDb.ImageList = this.ilMovieFileMerger;
-			this.btnSearchIMDb.Location = new System.Drawing.Point(563, 204);
-			this.btnSearchIMDb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.btnSearchIMDb.Name = "btnSearchIMDb";
-			this.btnSearchIMDb.Size = new System.Drawing.Size(120, 70);
-			this.btnSearchIMDb.TabIndex = 32;
-			this.btnSearchIMDb.Text = "Search IMDb";
-			this.btnSearchIMDb.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.btnSearchIMDb.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-			this.ttMovieFileMerger.SetToolTip(this.btnSearchIMDb, "Drop items here to search for them on IMDb.com.");
-			this.btnSearchIMDb.UseVisualStyleBackColor = false;
-			this.btnSearchIMDb.DragDrop += new System.Windows.Forms.DragEventHandler(this.BtnSearchIMDbDragDrop);
-			this.btnSearchIMDb.DragOver += new System.Windows.Forms.DragEventHandler(this.BtnDragOver);
+			this.btnSearchInfo.AllowDrop = true;
+			this.btnSearchInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnSearchInfo.ImageKey = "About.gif";
+			this.btnSearchInfo.ImageList = this.ilMovieFileMerger;
+			this.btnSearchInfo.Location = new System.Drawing.Point(533, 204);
+			this.btnSearchInfo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.btnSearchInfo.Name = "btnSearchInfo";
+			this.btnSearchInfo.Size = new System.Drawing.Size(152, 70);
+			this.btnSearchInfo.TabIndex = 32;
+			this.btnSearchInfo.Text = "Adult DVD Empire";
+			this.btnSearchInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.btnSearchInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			this.ttMovieFileMerger.SetToolTip(this.btnSearchInfo, "Drop items here to search for them on the internet.");
+			this.btnSearchInfo.UseVisualStyleBackColor = false;
+			this.btnSearchInfo.DragDrop += new System.Windows.Forms.DragEventHandler(this.BtnSearchInfoDragDrop);
+			this.btnSearchInfo.DragOver += new System.Windows.Forms.DragEventHandler(this.BtnDragOver);
 			// 
 			// gbTypeSelection
 			// 
@@ -1366,6 +1369,10 @@ namespace Movie_File_Merger
 			// tpSettings
 			// 
 			this.tpSettings.BackColor = System.Drawing.SystemColors.Control;
+			this.tpSettings.Controls.Add(this.label2);
+			this.tpSettings.Controls.Add(this.label1);
+			this.tpSettings.Controls.Add(this.cobSearchDownload);
+			this.tpSettings.Controls.Add(this.cobSearchInfo);
 			this.tpSettings.Controls.Add(this.tbNickName);
 			this.tpSettings.Controls.Add(this.lblNickName);
 			this.tpSettings.Controls.Add(this.gbSupportingPrograms);
@@ -1381,6 +1388,64 @@ namespace Movie_File_Merger
 			this.tpSettings.TabIndex = 1;
 			this.tpSettings.Text = "Settings";
 			this.tpSettings.Leave += new System.EventHandler(this.TpSettingsLeave);
+			// 
+			// label2
+			// 
+			this.label2.Location = new System.Drawing.Point(602, 12);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(128, 27);
+			this.label2.TabIndex = 45;
+			this.label2.Text = "Search Info on";
+			// 
+			// label1
+			// 
+			this.label1.Location = new System.Drawing.Point(286, 13);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(128, 27);
+			this.label1.TabIndex = 44;
+			this.label1.Text = "Download from";
+			// 
+			// cobSearchDownload
+			// 
+			this.cobSearchDownload.FormattingEnabled = true;
+			this.cobSearchDownload.Items.AddRange(new object[] {
+			"1337X",
+			"Bit Snoop",
+			"Demonoid",
+			"Extra Torrent",
+			"Kickass",
+			"Rarbg",
+			"ISO Hunt",
+			"Lime Torrents",
+			"The Piratebay",
+			"Torrentz",
+			"Torrent Hound",
+			"Torlock",
+			"Yifi Torrents"});
+			this.cobSearchDownload.Location = new System.Drawing.Point(420, 11);
+			this.cobSearchDownload.Name = "cobSearchDownload";
+			this.cobSearchDownload.Size = new System.Drawing.Size(157, 28);
+			this.cobSearchDownload.TabIndex = 43;
+			this.cobSearchDownload.Text = "Torrentz";
+			this.cobSearchDownload.SelectedIndexChanged += new System.EventHandler(this.CobSearchDownloadSelectedIndexChanged);
+			// 
+			// cobSearchInfo
+			// 
+			this.cobSearchInfo.FormattingEnabled = true;
+			this.cobSearchInfo.Items.AddRange(new object[] {
+			"All Movie",
+			"IMDb",
+			"The Movie DB",
+			"The Movie Poster DB",
+			"The TVDB",
+			"Trailer Addict",
+			"Adult DVD Empire"});
+			this.cobSearchInfo.Location = new System.Drawing.Point(736, 11);
+			this.cobSearchInfo.Name = "cobSearchInfo";
+			this.cobSearchInfo.Size = new System.Drawing.Size(177, 28);
+			this.cobSearchInfo.TabIndex = 42;
+			this.cobSearchInfo.Text = "IMDb";
+			this.cobSearchInfo.SelectedIndexChanged += new System.EventHandler(this.CobSearchInfoSelectedIndexChanged);
 			// 
 			// tbNickName
 			// 
@@ -2108,8 +2173,8 @@ namespace Movie_File_Merger
 		private System.Windows.Forms.Label lblTargetFolder;
 		//private System.Diagnostics.PerformanceCounter performanceCounter1;
 		private System.Windows.Forms.Button btnExportList;
-		private System.Windows.Forms.Button btnSearchIMDb;
-		private System.Windows.Forms.Button btnSearchTorrentz;
+		private System.Windows.Forms.Button btnSearchInfo;
+		private System.Windows.Forms.Button btnSearchDownload;
 		private System.Windows.Forms.ToolStripContentPanel ContentPanel;
 		private System.Windows.Forms.ToolStripPanel LeftToolStripPanel;
 		private System.Windows.Forms.ToolStripPanel RightToolStripPanel;
@@ -2220,5 +2285,9 @@ namespace Movie_File_Merger
 		private System.Windows.Forms.TextBox tbBadDocuNameRegex;
 		private System.Windows.Forms.Label lblGoodDocuNameRegex;
 		private System.Windows.Forms.TextBox tbGoodDocuNameRegex;
+		private System.Windows.Forms.ComboBox cobSearchDownload;
+		private System.Windows.Forms.ComboBox cobSearchInfo;
+		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.Label label1;
 	}
 }
