@@ -96,16 +96,6 @@ namespace Movie_File_Merger
 			if ( !Directory.Exists( strTeraCopyListsPath ) ) {
 				Directory.CreateDirectory( strTeraCopyListsPath );
 			}
-			strXmlFilePath = Path.Combine( strPrivatePath, "MFM Settings.xml" );
-			if ( !File.Exists( strXmlFilePath ) ) {
-				using (XmlWriter writer = XmlWriter.Create( strXmlFilePath )) // create a dummy
-				{
-				    writer.WriteStartDocument();
-				    writer.WriteStartElement("MFMSettings");  // root exlement
-				    writer.WriteEndElement();  // close the root element
-				    writer.WriteEndDocument();
-				}
-			}
 			sfdMovieFileMerger.InitialDirectory = strCollectionsPath;
 			
 			LoadXmlSettings( );
@@ -196,7 +186,7 @@ namespace Movie_File_Merger
 						if ( ShowYesNoQuestion ( "A different version of MFM (" + sCurrentRelease + " -> " + sLatestRelease + ") " +
 						                         "is available with following changes...\n" +  sReleaseNotes + "\n\n" +
 						                         "Go to the Download page now?" ) == DialogResult.Yes) {
-							System.Diagnostics.Process.Start ( "http://www.movie-file-merger.org/downloads.html" );
+							ExecuteThis ( "http://www.movie-file-merger.org/downloads.html" );
 						}
 					}
 					else if ( sWhen.Contains ( "Now" ) )
@@ -407,6 +397,17 @@ namespace Movie_File_Merger
 		/// </summary>
 		void LoadXmlSettings ()
 		{
+			strXmlFilePath = Path.Combine( strPrivatePath, "MFM Settings.xml" );
+			if ( !File.Exists( strXmlFilePath ) ) {
+				using (XmlWriter writer = XmlWriter.Create( strXmlFilePath )) // create a dummy
+				{
+				    writer.WriteStartDocument();
+				    writer.WriteStartElement("MFMSettings");  // root exlement
+				    writer.WriteEndElement();  // close the root element
+				    writer.WriteEndDocument();
+				}
+			}
+
 			var xmlSettings = new XmlDocument ( );
 			xmlSettings.Load ( strXmlFilePath );
 
@@ -1001,13 +1002,13 @@ namespace Movie_File_Merger
 			const string sOptions = " /SkipAll /Close ";
 			
 			if (rbCopy.Checked) {
-					System.Diagnostics.Process.Start( tbTeraCopyPath.Text, "Copy *\"" + 
+					System.Diagnostics.Process.Start ( tbTeraCopyPath.Text, "Copy *\"" + 
 					                                  sSourceListFile + "\" \"" + sTargetPath + "\" " + sOptions );
 					LogMessage( "Add Source List", Color.Purple,  "TeraCopy " + 
 					            sSourceListFile + " -> " + sTargetPath + sOptions );
 			}
 			else {
-					System.Diagnostics.Process.Start( tbTeraCopyPath.Text, "Move *\"" + 
+					System.Diagnostics.Process.Start ( tbTeraCopyPath.Text, "Move *\"" + 
 				                                  sSourceListFile + "\" \"" + sTargetPath + "\" "  + sOptions );
 				LogMessage( "Add Source List", Color.Purple,  "TeraMove " + 
 				            sSourceListFile + " -> " + sTargetPath + sOptions );
@@ -1071,7 +1072,7 @@ namespace Movie_File_Merger
 					if( lviImport.Selected ) {
 						SetStatus( "Playing " + fiImportFile.Name + "..." );
 						try {
-							System.Diagnostics.Process.Start( fiImportFile.FullName );
+							ExecuteThis( fiImportFile.FullName );
 							bPlayedSomething = true;
 						}
 						catch ( Exception e ) { 
@@ -1115,7 +1116,7 @@ namespace Movie_File_Merger
 					if( lviImport.Selected ) {
 						SetStatus( "Getting MediaInfo for " + fiImportFile.Name + "..." );
 						if ( File.Exists ( tbMediaInfoPath.Text ) ) {
-							System.Diagnostics.Process.Start( tbMediaInfoPath.Text, " \"" + 
+							System.Diagnostics.Process.Start ( tbMediaInfoPath.Text, " \"" + 
 							                                  fiImportFile.FullName + "\"" );
 							bMediaInfoedSomething = true;
 						}
@@ -1718,7 +1719,7 @@ namespace Movie_File_Merger
 		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
 		void LinkClicked( object sender, LinkClickedEventArgs e )
 		{
-			System.Diagnostics.Process.Start( e.LinkText );
+			ExecuteThis ( e.LinkText );
 		}
 		
 		/// <summary>
@@ -1728,7 +1729,7 @@ namespace Movie_File_Merger
 		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
 		void LlMovieFileMergerOrgClick(object sender, EventArgs e)
 		{
-			System.Diagnostics.Process.Start( "www.Movie-File-Merger.org" );
+			ExecuteThis ( "www.Movie-File-Merger.org" );
 		}
 
 		/// <summary>
@@ -2559,7 +2560,7 @@ namespace Movie_File_Merger
 		/// Execute the command in the system.
 		/// </summary>
 		/// <param name="sCommand">The command to execute.</param>
-		void ExcuteThis ( string sCommand ) {
+		void ExecuteThis ( string sCommand ) {
 			System.Diagnostics.Process.Start( sCommand );
 		}
 
@@ -2576,36 +2577,36 @@ namespace Movie_File_Merger
 				LogMessage( "Info", Color.Blue, "Searching " + cobSearchInfo.Text + " for " + strCleanName );
 				switch ( cobSearchInfo.Text ) {
 					case "Nearly All Below":
-						ExcuteThis ( "http://www.allmovie.com/search/all/" + strCleanName );
-						ExcuteThis ( "http://www.imdb.com/find?q=" + strCleanName + "&s=tt" );
-						ExcuteThis ( "https://www.themoviedb.org/search?query=" + strCleanName );
-						ExcuteThis ( "http://www.movieposterdb.com/search/?query=" + strCleanName );
-						ExcuteThis ( "http://thetvdb.com/?string=" + strCleanName + "&searchseriesid=&tab=listseries&function=Search" );
-						ExcuteThis ( "http://www.traileraddict.com/search/" + strCleanName );
+						ExecuteThis ( "http://www.allmovie.com/search/all/" + strCleanName );
+						ExecuteThis ( "http://www.imdb.com/find?q=" + strCleanName + "&s=tt" );
+						ExecuteThis ( "https://www.themoviedb.org/search?query=" + strCleanName );
+						ExecuteThis ( "http://www.movieposterdb.com/search/?query=" + strCleanName );
+						ExecuteThis ( "http://thetvdb.com/?string=" + strCleanName + "&searchseriesid=&tab=listseries&function=Search" );
+						ExecuteThis ( "http://www.traileraddict.com/search/" + strCleanName );
 						break;
 					case "All Movie":
-						ExcuteThis ( "http://www.allmovie.com/search/all/" + strCleanName );
+						ExecuteThis ( "http://www.allmovie.com/search/all/" + strCleanName );
 						break;
 					case "IMDb": 
-						ExcuteThis ( "http://www.imdb.com/find?q=" + strCleanName + "&s=tt" );
+						ExecuteThis ( "http://www.imdb.com/find?q=" + strCleanName + "&s=tt" );
 						break;
 					case "The Movie DB": 
-						ExcuteThis ( "https://www.themoviedb.org/search?query=" + strCleanName );
+						ExecuteThis ( "https://www.themoviedb.org/search?query=" + strCleanName );
 						break;
 					case "The Movie Poster DB":
-						ExcuteThis ( "http://www.movieposterdb.com/search/?query=" + strCleanName );
+						ExecuteThis ( "http://www.movieposterdb.com/search/?query=" + strCleanName );
 						break;
 					case "The TVDB": 
-						ExcuteThis ( "http://thetvdb.com/?string=" + strCleanName + "&searchseriesid=&tab=listseries&function=Search" );
+						ExecuteThis ( "http://thetvdb.com/?string=" + strCleanName + "&searchseriesid=&tab=listseries&function=Search" );
 						break;
 					case "Trailer Addict":
-						ExcuteThis ( "http://www.traileraddict.com/search/" + strCleanName );
+						ExecuteThis ( "http://www.traileraddict.com/search/" + strCleanName );
 						break;
 					case "Adult DVD Empire": 
-						ExcuteThis ( "http://www.adultdvdempire.com/allsearch/search?q=" + strCleanName );
+						ExecuteThis ( "http://www.adultdvdempire.com/allsearch/search?q=" + strCleanName );
 						break;
 					default: 
-						ExcuteThis ( "http://www.imdb.com/find?q=" + strCleanName + "&s=tt" );
+						ExecuteThis ( "http://www.imdb.com/find?q=" + strCleanName + "&s=tt" );
 						LogMessage( "Warning", Color.Orange, "Could not find " + cobSearchDownload.Text + " -> Searching IMDb instead." );
 						break;
 				}
@@ -2625,69 +2626,69 @@ namespace Movie_File_Merger
 				LogMessage( "Info", Color.Blue, "Searching " +  cobSearchDownload.Text + " for " + strCleanName);
 				switch ( cobSearchDownload.Text ) {
 					case "All Below": 
-						ExcuteThis ( "https://1337x.to/search/" + strCleanName + "/1/" );
-						ExcuteThis ( "http://bitsnoop.com/search/all/" + strCleanName );
-						ExcuteThis ( "http://www.demonoid.pw/files/?query=" + strCleanName );
-						ExcuteThis ( "http://extratorrent.cc/search/?search=" + strCleanName );
-						ExcuteThis ( "https://eztv.ag/search/" + strCleanName );
-						ExcuteThis ( "https://kat.cr/usearch/" + strCleanName + "  category:movies/" );
-						ExcuteThis ( "http://magnetseed.net/search/index?q=" + strCleanName );
-						ExcuteThis ( "https://rarbg.to/torrents.php?search=" + strCleanName );
-						ExcuteThis ( "https://isohunt.to/torrents/?ihq=" + strCleanName );
-						ExcuteThis ( "https://www.limetorrents.cc/search/all/" + strCleanName );
-						ExcuteThis ( "https://thepiratebay.la/search/" + strCleanName );
-						ExcuteThis ( "http://torrentz.eu/search?f=" + strCleanName );
-						ExcuteThis ( "http://www.torrenthound.com/search/" + strCleanName );
-						ExcuteThis ( "http://www.torlock.com/all/torrents/" + strCleanName );
-						ExcuteThis ( "https://www.yify-torrent.org/search/" + strCleanName );
+						ExecuteThis ( "https://1337x.to/search/" + strCleanName + "/1/" );
+						ExecuteThis ( "http://bitsnoop.com/search/all/" + strCleanName );
+						ExecuteThis ( "http://www.demonoid.pw/files/?query=" + strCleanName );
+						ExecuteThis ( "http://extratorrent.cc/search/?search=" + strCleanName );
+						ExecuteThis ( "https://eztv.ag/search/" + strCleanName );
+						ExecuteThis ( "https://kat.cr/usearch/" + strCleanName + "  category:movies/" );
+						ExecuteThis ( "http://magnetseed.net/search/index?q=" + strCleanName );
+						ExecuteThis ( "https://rarbg.to/torrents.php?search=" + strCleanName );
+						ExecuteThis ( "https://isohunt.to/torrents/?ihq=" + strCleanName );
+						ExecuteThis ( "https://www.limetorrents.cc/search/all/" + strCleanName );
+						ExecuteThis ( "https://thepiratebay.la/search/" + strCleanName );
+						ExecuteThis ( "http://torrentz.eu/search?f=" + strCleanName );
+						ExecuteThis ( "http://www.torrenthound.com/search/" + strCleanName );
+						ExecuteThis ( "http://www.torlock.com/all/torrents/" + strCleanName );
+						ExecuteThis ( "https://www.yify-torrent.org/search/" + strCleanName );
 						break;
 					case "1337X":
-						ExcuteThis ( "https://1337x.to/search/" + strCleanName + "/1/" );
+						ExecuteThis ( "https://1337x.to/search/" + strCleanName + "/1/" );
 						break;
 					case "Bit Snoop":
-						ExcuteThis ( "http://bitsnoop.com/search/all/" + strCleanName );
+						ExecuteThis ( "http://bitsnoop.com/search/all/" + strCleanName );
 						break;
 					case "Demonoid":
-						ExcuteThis ( "http://www.demonoid.pw/files/?query=" + strCleanName );
+						ExecuteThis ( "http://www.demonoid.pw/files/?query=" + strCleanName );
 						break;
 					case "Extra Torrent":
-						ExcuteThis ( "http://extratorrent.cc/search/?search=" + strCleanName );
+						ExecuteThis ( "http://extratorrent.cc/search/?search=" + strCleanName );
 						break;
 					case "Eztv":
-						ExcuteThis ( "https://eztv.ag/search/" + strCleanName );
+						ExecuteThis ( "https://eztv.ag/search/" + strCleanName );
 						break;
 					case "Kickass":
-						ExcuteThis ( "https://kat.cr/usearch/" + strCleanName + "  category:movies/" );
+						ExecuteThis ( "https://kat.cr/usearch/" + strCleanName + "  category:movies/" );
 						break;
 					case "Magnet Seed":
-						ExcuteThis ( "http://magnetseed.net/search/index?q=" + strCleanName );
+						ExecuteThis ( "http://magnetseed.net/search/index?q=" + strCleanName );
 						break;
 					case "Rarbg":
-						ExcuteThis ( "https://rarbg.to/torrents.php?search=" + strCleanName );
+						ExecuteThis ( "https://rarbg.to/torrents.php?search=" + strCleanName );
 						break;
 					case "ISO Hunt":
-						ExcuteThis ( "https://isohunt.to/torrents/?ihq=" + strCleanName );
+						ExecuteThis ( "https://isohunt.to/torrents/?ihq=" + strCleanName );
 						break;
 					case "Lime Torrents":
-						ExcuteThis ( "https://www.limetorrents.cc/search/all/" + strCleanName );
+						ExecuteThis ( "https://www.limetorrents.cc/search/all/" + strCleanName );
 						break;
 					case "The Piratebay":
-						ExcuteThis ( "https://thepiratebay.la/search/" + strCleanName );
+						ExecuteThis ( "https://thepiratebay.la/search/" + strCleanName );
 						break;
 					case "Torrentz":
-						ExcuteThis ( "http://torrentz.eu/search?f=" + strCleanName );
+						ExecuteThis ( "http://torrentz.eu/search?f=" + strCleanName );
 						break;
 					case "Torrent Hound":
-						ExcuteThis ( "http://www.torrenthound.com/search/" + strCleanName );
+						ExecuteThis ( "http://www.torrenthound.com/search/" + strCleanName );
 						break;
 					case "Torlock":
-						ExcuteThis ( "http://www.torlock.com/all/torrents/" + strCleanName );
+						ExecuteThis ( "http://www.torlock.com/all/torrents/" + strCleanName );
 						break;
 					case "Yifi Torrents":
-						ExcuteThis ( "https://www.yify-torrent.org/search/" + strCleanName );
+						ExecuteThis ( "https://www.yify-torrent.org/search/" + strCleanName );
 						break;
 					default:
-						ExcuteThis ( "http://torrentz.eu/search?f=" + strCleanName );
+						ExecuteThis ( "http://torrentz.eu/search?f=" + strCleanName );
 						LogMessage( "Warning", Color.Orange, "Could not find " + cobSearchDownload.Text + " -> Searching Torrenz instead." );
 						break;
 				}
