@@ -43,7 +43,7 @@ namespace Movie_File_Merger
 
 		// item colors		
 		Color GarbageColor = Color.Red;
-		Color LowerResColor = Color.IndianRed;
+		Color LowResColor = Color.IndianRed;
 		Color ExistingColor = Color.YellowGreen;
 		Color HigherResColor = Color.MediumSpringGreen;
 		Color WishColor = Color.LawnGreen;
@@ -137,6 +137,13 @@ namespace Movie_File_Merger
 			}
 			
 			SetColumnWidth( );
+			btnGarbage.BackColor = GarbageColor;
+			btnLowRes.BackColor = LowResColor;
+			btnExisting.BackColor = ExistingColor;
+			btnHigherRes.BackColor = HigherResColor;
+			btnWish.BackColor = WishColor;
+			btnToConsider.BackColor = NeutralColor;
+			
 			btnBadMovie.BackColor = BadMovieColor;
 			btnBadEpisode.BackColor = BadEpisodeColor;
 			btnBadDocu.BackColor = BadDocuColor;
@@ -901,7 +908,7 @@ namespace Movie_File_Merger
 
 			// tag the items to be copied or moved
 			foreach ( ListViewItem lviThis in lvImport.Items ) {
-				lviThis.Tag = lviThis.BackColor == WishColor;
+				lviThis.Tag = (lviThis.BackColor == WishColor) || (lviThis.BackColor == HigherResColor);
 			}
 
 			var diImportFolder = new DirectoryInfo( tbImportFolder.Text );
@@ -1249,10 +1256,10 @@ namespace Movie_File_Merger
 			else {
 				ListViewItem lviExisting = FindItem( lvExisting, lviImport.Text );
 				if ( HorizontalResolutionTooLow ( lviImport ) ) {
-					lviImport.BackColor = LowerResColor;
+					lviImport.BackColor = LowResColor;
 				}
 				else if ( lviExisting != null ) {
- 					lviImport.BackColor = HorizontalResolutionIsHigher ( lviExisting, lviImport ) ? WishColor :
+ 					lviImport.BackColor = HorizontalResolutionIsHigher ( lviExisting, lviImport ) ? HigherResColor :
 																								ExistingColor;
 				}
 				else {
@@ -1294,10 +1301,10 @@ namespace Movie_File_Merger
 					lviWish.BackColor = ExistingColor;
 				}
 				if ( lviImport != null ) {
- 					lviImport.BackColor = HorizontalResolutionIsHigher ( lviExisting, lviImport ) ? WishColor :
+ 					lviImport.BackColor = HorizontalResolutionIsHigher ( lviExisting, lviImport ) ? HigherResColor :
 																								ExistingColor;
 					if ( HorizontalResolutionTooLow ( lviImport ) ) {
-						lviImport.BackColor = LowerResColor;
+						lviImport.BackColor = LowResColor;
 					}
 				}
 			}
@@ -1312,14 +1319,14 @@ namespace Movie_File_Merger
 				if ( lviImport != null ) {
 					lviImport.BackColor = WishColor;
 					if ( HorizontalResolutionTooLow ( lviImport ) ) {
-						lviImport.BackColor = LowerResColor;
+						lviImport.BackColor = LowResColor;
 					}
 				}
 			}
 			else if ( lviImport != null ) {
 				lviImport.BackColor = NeutralColor;
 				if ( HorizontalResolutionTooLow ( lviImport ) ) {
-					lviImport.BackColor = LowerResColor;
+					lviImport.BackColor = LowResColor;
 				}
 			}
 		}
@@ -1880,7 +1887,7 @@ namespace Movie_File_Merger
 				case "Medium Resolution": tbToolTipRegex.Text = @"Video:  [7-9]\d{2} x"; break;
 				case "High Resolution": tbToolTipRegex.Text = @"Video:  1\d{3} x"; break;
 				case "2 Channels": tbToolTipRegex.Text = @"2 channels"; break;
-				case "6 Channels": tbToolTipRegex.Text = @"2 channels"; break;
+				case "6 Channels": tbToolTipRegex.Text = @"6 channels"; break;
 				case "Folder Name": tbToolTipRegex.Text = @"\\YourFolderName\\"; break;
 				case "After 2009": tbToolTipRegex.Text = @"201[0-9]"; break;
 				default: tbToolTipRegex.Text = @""; break;
@@ -2242,7 +2249,7 @@ namespace Movie_File_Merger
 		/// </summary>
 		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
 		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
-		void BtnWishClick ( object sender, EventArgs e )
+		void BtnAddToWishClick ( object sender, EventArgs e )
 		{
 			int iTotalSelected = 0;
 			iTotalSelected += SelectInList ( lvImport, GetSelectionRegEx ( cobCriteria.Text ) );
