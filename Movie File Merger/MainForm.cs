@@ -43,7 +43,9 @@ namespace Movie_File_Merger
 
 		// item colors		
 		Color GarbageColor = Color.Red;
+		Color LowerResColor = Color.IndianRed;
 		Color ExistingColor = Color.YellowGreen;
+		Color HigherResColor = Color.MediumSpringGreen;
 		Color WishColor = Color.LawnGreen;
 		Color NeutralColor = Color.White;
 		
@@ -539,6 +541,17 @@ namespace Movie_File_Merger
 		}
 		
 		/// <summary>
+		/// Removes the episode info to get the series name.
+		/// </summary>
+		/// <param name="strCleanName">The episode name.</param>
+		/// <returns>The series name.</returns>
+		string RemoveEpisodeInfo( string strCleanName )
+		{
+			return ( rbSeries.Checked ) ? Regex.Replace( strCleanName, @" S\d+e\d+$", "" ) : 
+			                              strCleanName;
+		}
+
+		/// <summary>
 		/// Checks if the horizoltal resolution in the tool tip of the new list view item is higher.
 		/// </summary>
 		/// <param name="lviOld">Old ListViewItem</param>
@@ -562,6 +575,47 @@ namespace Movie_File_Merger
 				}
 			}
 			return bResolutionIsHigher;
+		}
+		
+		/// <summary>
+		/// Converts the selected minimum vertical pixels into the horizontal pixels.
+		/// </summary>
+		/// <returns>The minimum horizontal resolution.</returns>
+		int GetMinimumResolution ( ) 
+		{
+			int iMinimumResolution = 0;
+			switch ( cobMinimumResolution.Text ) {
+				case "Minimum 360p (nHD)": iMinimumResolution = 640; break;
+				case "Minimum 540p (qHD)": iMinimumResolution = 960; break;
+				case "Minimum 720p (HD)": iMinimumResolution = 1280; break;
+				case "Minimum 900p (HD+)": iMinimumResolution = 1600; break;
+				case "Minimum 1080p (Full HD)": iMinimumResolution = 1920; break;
+				case "Minimum 1440p (WQHD)": iMinimumResolution = 2560; break;
+				case "Minimum 2160p (4K UHD)": iMinimumResolution = 3840; break;
+				case "Minimum 2880p (UHD+)": iMinimumResolution = 5120; break;
+				case "Minimum 4320p (8K FUHD)": iMinimumResolution = 7680; break;
+				case "Minimum 8640p (16k QUHD)": iMinimumResolution = 15360; break;
+				default: iMinimumResolution = 0; break;
+			}
+			return iMinimumResolution;
+		}
+		
+		/// <summary>
+		/// Checks if the horizoltal resolution in the tool tip of the list item too low.
+		/// </summary>
+		/// <param name="lviThis">Old ListViewItem</param>
+		/// <returns>True: if This Item Resolution is lower then the minimum resolution in the settings.</returns>
+		bool HorizontalResolutionTooLow( ListViewItem lviThis )
+		{
+			bool bResolutionIsLower = false;
+			
+			Match mtResolution = Regex.Match( lviThis.ToolTipText, @"Video:  \d+" );
+			if ( mtResolution.Success ) {
+				string sResolution = Regex.Match( mtResolution.Value, @"\d+" ).Value;
+				int iExistingResolution = Int32.Parse( sResolution );
+				bResolutionIsLower = iExistingResolution < GetMinimumResolution ( );
+			}
+			return bResolutionIsLower;
 		}
 		
 // *****************************************************************************************************************/	
@@ -754,9 +808,8 @@ namespace Movie_File_Merger
 				}
 				var lviThis = new ListViewItem ( CleanName( strJustName ) );
 				lviThis = AddItemToListView( lvThis, lviThis );
-				MakeToolTip( fiFile, lvThis, lviThis );
-				
-				if ( cbGetHigherRes.Checked ) ColorAll( lviThis.Text );  // color again to get info from tooltip
+				MakeToolTip( fiFile, lvThis, lviThis, cbMediaInfo.Checked );
+				ColorAll( lviThis.Text );  // color again to get info from tooltip
 
 				tspbMFM.Value++;
 			}
@@ -953,17 +1006,6 @@ namespace Movie_File_Merger
 				            sSourceListFile + " -> " + sTargetPath + sOptions );
 			}
 			System.Threading.Thread.Sleep( 1000 );
-		}
-
-		/// <summary>
-		/// Removes the episode info to get the series name.
-		/// </summary>
-		/// <param name="strCleanName">The episode name.</param>
-		/// <returns>The series name.</returns>
-		string RemoveEpisodeInfo( string strCleanName )
-		{
-			return ( rbSeries.Checked ) ? Regex.Replace( strCleanName, @" S\d+e\d+$", "" ) : 
-			                              strCleanName;
 		}
 
 // *****************************************************************************************************************/	
@@ -1206,7 +1248,10 @@ namespace Movie_File_Merger
 			}
 			else {
 				ListViewItem lviExisting = FindItem( lvExisting, lviImport.Text );
-				if ( lviExisting != null ) {
+				if ( HorizontalResolutionTooLow ( lviImport ) ) {
+					lviImport.BackColor = LowerResColor;
+				}
+				else if ( lviExisting != null ) {
  					lviImport.BackColor = HorizontalResolutionIsHigher ( lviExisting, lviImport ) ? WishColor :
 																								ExistingColor;
 				}
@@ -1251,6 +1296,9 @@ namespace Movie_File_Merger
 				if ( lviImport != null ) {
  					lviImport.BackColor = HorizontalResolutionIsHigher ( lviExisting, lviImport ) ? WishColor :
 																								ExistingColor;
+					if ( HorizontalResolutionTooLow ( lviImport ) ) {
+						lviImport.BackColor = LowerResColor;
+					}
 				}
 			}
 			else if ( lviWish != null ) {
@@ -1263,10 +1311,16 @@ namespace Movie_File_Merger
 				}
 				if ( lviImport != null ) {
 					lviImport.BackColor = WishColor;
+					if ( HorizontalResolutionTooLow ( lviImport ) ) {
+						lviImport.BackColor = LowerResColor;
+					}
 				}
 			}
 			else if ( lviImport != null ) {
 				lviImport.BackColor = NeutralColor;
+				if ( HorizontalResolutionTooLow ( lviImport ) ) {
+					lviImport.BackColor = LowerResColor;
+				}
 			}
 		}
 
@@ -1470,9 +1524,10 @@ namespace Movie_File_Merger
 		/// </summary>
 		/// <param name="fiFile">The file to analyse.</param>
 		/// <param name="lvThis">The list view in question.</param>
-		/// <param name="lviThis">the list view item in question.</param>
+		/// <param name="lviThis">The list view item in question.</param>
+		/// <param name="bGetMediaInfo">Get detailed ModiaInfo if needed.</param>
 		/// <returns>Selected media information.</returns>
-		void MakeToolTip( FileInfo fiFile, ListView lvThis, ListViewItem lviThis )
+		void MakeToolTip( FileInfo fiFile, ListView lvThis, ListViewItem lviThis, bool bGetMediaInfo )
 		{
 			bool bItemMissing = FindItem( lvThis, lviThis.Text ) == null;
 			bool bHasMediaInfo = lviThis.ToolTipText.Contains ( "Video: " );
@@ -1485,7 +1540,7 @@ namespace Movie_File_Merger
 				               fiFile.Extension.ToUpper( ).Substring( 1 ) +
 							   ", Last Written " + StandardizeDate( fiFile.LastWriteTime );
 			bool bDifferentFile = !lviThis.ToolTipText.Contains( sFileInfo );
-			bool bFullDetails = ( bItemMissing || !bHasMediaInfo || bDifferentFile) && cbMediaInfo.Checked;
+			bool bFullDetails = ( bItemMissing || !bHasMediaInfo || bDifferentFile) && bGetMediaInfo;
 
 			string sMediaInfo = "";
 			if ( bFullDetails ) {
@@ -2125,7 +2180,7 @@ namespace Movie_File_Merger
 						var fiFile = new FileInfo( strPath );
 						var lviThis = new ListViewItem( CleanName( strJustName ) );
 						lviThis = AddItemToListView( lvThis, lviThis );
-						MakeToolTip( fiFile, lvThis, lviThis );
+						MakeToolTip( fiFile, lvThis, lviThis, cbMediaInfo.Checked );
 						if ( cbGetHigherRes.Checked ) ColorAll( lviThis.Text );  // color again to get info from tooltip
 					}
 					// from txt file
@@ -2385,7 +2440,6 @@ namespace Movie_File_Merger
 			SearchOption soMovieFileMerger = SearchOption.AllDirectories;
 
 			SetStatus( "Adding folder " + strFolderName + " to " + lvMaintenance.Tag + "..." );
-			cbMediaInfo.Checked = false;
 
 			lvMaintenance.BeginUpdate( );
 			lvMaintenance.Sorting = SortOrder.None;
@@ -2397,7 +2451,7 @@ namespace Movie_File_Merger
 			foreach( FileInfo fiFile in diFolder.GetFiles( "*", soMovieFileMerger ) ) {
 				var lviThis = new ListViewItem ( fiFile.FullName );
 				lviThis = AddItemToMaintenanceListView( lviThis );
-				MakeToolTip( fiFile, lvMaintenance, lviThis );
+				MakeToolTip( fiFile, lvMaintenance, lviThis, false );
 				tspbMFM.Value++;
 			}
 			lvMaintenance.Sorting = SortOrder.Ascending;
@@ -2423,7 +2477,7 @@ namespace Movie_File_Merger
 					var fiFile = new FileInfo( strPath );
 					var lviThis = new ListViewItem( strPath );
 					lviThis = AddItemToMaintenanceListView( lviThis );
-					MakeToolTip( fiFile, lvMaintenance, lviThis );
+					MakeToolTip( fiFile, lvMaintenance, lviThis, false );
 				}
 			}
 		}
