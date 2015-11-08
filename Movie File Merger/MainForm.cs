@@ -2511,21 +2511,25 @@ namespace Movie_File_Merger
 			rtbMaintenance.ScrollToCaret();
 			Cursor.Current = Cursors.Default;
 		}
-
-		/// <summary>
-		/// Select of items of a certain color.
-		/// </summary>
-		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
-		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
-		void btnSelectClick(object sender, EventArgs e)
-		{
-			foreach ( ListViewItem lviThis in lvMaintenance.Items ) {
-				if ( lviThis.BackColor == ((Button)sender).BackColor ) {
+		
+		void SelectColorInList ( ListView lvThis, Color ThisColor ) {
+			foreach ( ListViewItem lviThis in lvThis.Items ) {
+				if ( lviThis.BackColor == ThisColor ) {
 					lviThis.Selected = true;
 				}
 			}
-			if ( lvMaintenance.SelectedItems.Count > 0 ) lvMaintenance.SelectedItems[0].EnsureVisible();
-			lvMaintenance.Select();
+			if ( lvThis.SelectedItems.Count > 0 ) lvThis.SelectedItems[0].EnsureVisible();
+			lvThis.Select();
+		}
+
+		/// <summary>
+		/// Select of items of a certain color in the maintenance list.
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void BtnSelectMaintenanceClick(object sender, EventArgs e)
+		{
+			SelectColorInList (lvMaintenance, ((Button)sender).BackColor );
 		}
 
 		/// <summary>
@@ -2730,6 +2734,72 @@ namespace Movie_File_Merger
 		void CobSearchDownloadSelectedIndexChanged(object sender, EventArgs e)
 		{
 			btnSearchDownload.Text = cobSearchDownload.Text;
+		}
+
+		/// <summary>
+		/// Select the Existing color in all apropriate lists.
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void BtnExistingClick(object sender, EventArgs e)
+		{
+			SelectColorInList ( lvExisting, ExistingColor );
+			SelectColorInList ( lvWish, ExistingColor );
+			SelectColorInList ( lvImport, ExistingColor );
+		}
+
+		/// <summary>
+		/// Select the Wish color in all apropriate lists.
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void BtnWishClick(object sender, EventArgs e)
+		{
+			SelectColorInList ( lvWish, WishColor );
+			SelectColorInList ( lvImport, WishColor );
+		}
+
+		/// <summary>
+		/// Select the Garbage color in all apropriate lists.
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void BtnGarbageClick(object sender, EventArgs e)
+		{
+			SelectColorInList ( lvGarbage, GarbageColor );
+			SelectColorInList ( lvExisting, GarbageColor );
+			SelectColorInList ( lvWish, GarbageColor );
+			SelectColorInList ( lvImport, GarbageColor );
+		}
+
+		/// <summary>
+		/// Select the Neutral color in all apropriate lists.
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void BtnToConsiderClick(object sender, EventArgs e)
+		{
+			SelectColorInList ( lvImport, NeutralColor );
+		}
+
+		/// <summary>
+		/// Select the HigherRes color in all apropriate lists.
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void BtnHigherResClick(object sender, EventArgs e)
+		{
+			SelectColorInList ( lvImport, HigherResColor );
+		}
+
+		/// <summary>
+		/// Select the LowRes color in all apropriate lists.
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void BtnLowResClick(object sender, EventArgs e)
+		{
+			SelectColorInList ( lvImport, LowResColor );
 		}
 	}
 }

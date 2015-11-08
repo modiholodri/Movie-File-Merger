@@ -49,6 +49,13 @@ namespace Movie_File_Merger
 			this.ContentPanel = new System.Windows.Forms.ToolStripContentPanel();
 			this.tcMovieFileMerger = new System.Windows.Forms.TabControl();
 			this.tpSeparateLists = new System.Windows.Forms.TabPage();
+			this.label3 = new System.Windows.Forms.Label();
+			this.btnHigherRes = new System.Windows.Forms.Button();
+			this.btnLowRes = new System.Windows.Forms.Button();
+			this.btnToConsider = new System.Windows.Forms.Button();
+			this.btnWish = new System.Windows.Forms.Button();
+			this.btnExisting = new System.Windows.Forms.Button();
+			this.btnGarbage = new System.Windows.Forms.Button();
 			this.cobMinimumResolution = new System.Windows.Forms.ComboBox();
 			this.btnJustScanIt = new System.Windows.Forms.Button();
 			this.btnJustRipIt = new System.Windows.Forms.Button();
@@ -167,12 +174,6 @@ namespace Movie_File_Merger
 			this.tsslMFM = new System.Windows.Forms.ToolStripStatusLabel();
 			this.tspbMFM = new System.Windows.Forms.ToolStripProgressBar();
 			this.ttMovieFileMerger = new System.Windows.Forms.ToolTip(this.components);
-			this.btnHigherRes = new System.Windows.Forms.Button();
-			this.btnLowRes = new System.Windows.Forms.Button();
-			this.btnToConsider = new System.Windows.Forms.Button();
-			this.btnWish = new System.Windows.Forms.Button();
-			this.btnExisting = new System.Windows.Forms.Button();
-			this.btnGarbage = new System.Windows.Forms.Button();
 			this.tcMovieFileMerger.SuspendLayout();
 			this.tpSeparateLists.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.scFolders)).BeginInit();
@@ -316,6 +317,7 @@ namespace Movie_File_Merger
 			// tpSeparateLists
 			// 
 			this.tpSeparateLists.BackColor = System.Drawing.SystemColors.Control;
+			this.tpSeparateLists.Controls.Add(this.label3);
 			this.tpSeparateLists.Controls.Add(this.btnHigherRes);
 			this.tpSeparateLists.Controls.Add(this.btnLowRes);
 			this.tpSeparateLists.Controls.Add(this.btnToConsider);
@@ -353,6 +355,84 @@ namespace Movie_File_Merger
 			this.tpSeparateLists.Size = new System.Drawing.Size(920, 569);
 			this.tpSeparateLists.TabIndex = 0;
 			this.tpSeparateLists.Text = "Lists";
+			// 
+			// label3
+			// 
+			this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.label3.AutoEllipsis = true;
+			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label3.Location = new System.Drawing.Point(8, 536);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(92, 23);
+			this.label3.TabIndex = 56;
+			this.label3.Text = "Select";
+			this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// btnHigherRes
+			// 
+			this.btnHigherRes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnHigherRes.Location = new System.Drawing.Point(646, 532);
+			this.btnHigherRes.Name = "btnHigherRes";
+			this.btnHigherRes.Size = new System.Drawing.Size(120, 32);
+			this.btnHigherRes.TabIndex = 50;
+			this.btnHigherRes.Text = "Higher Res";
+			this.btnHigherRes.UseVisualStyleBackColor = true;
+			this.btnHigherRes.Click += new System.EventHandler(this.BtnHigherResClick);
+			// 
+			// btnLowRes
+			// 
+			this.btnLowRes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnLowRes.Location = new System.Drawing.Point(782, 532);
+			this.btnLowRes.Name = "btnLowRes";
+			this.btnLowRes.Size = new System.Drawing.Size(120, 32);
+			this.btnLowRes.TabIndex = 51;
+			this.btnLowRes.Text = "Low Res";
+			this.btnLowRes.UseVisualStyleBackColor = true;
+			this.btnLowRes.Click += new System.EventHandler(this.BtnLowResClick);
+			// 
+			// btnToConsider
+			// 
+			this.btnToConsider.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnToConsider.Location = new System.Drawing.Point(510, 532);
+			this.btnToConsider.Name = "btnToConsider";
+			this.btnToConsider.Size = new System.Drawing.Size(120, 32);
+			this.btnToConsider.TabIndex = 52;
+			this.btnToConsider.Text = "To Consider";
+			this.btnToConsider.UseVisualStyleBackColor = true;
+			this.btnToConsider.Click += new System.EventHandler(this.BtnToConsiderClick);
+			// 
+			// btnWish
+			// 
+			this.btnWish.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.btnWish.Location = new System.Drawing.Point(238, 532);
+			this.btnWish.Name = "btnWish";
+			this.btnWish.Size = new System.Drawing.Size(120, 32);
+			this.btnWish.TabIndex = 53;
+			this.btnWish.Text = "Wish";
+			this.btnWish.UseVisualStyleBackColor = true;
+			this.btnWish.Click += new System.EventHandler(this.BtnWishClick);
+			// 
+			// btnExisting
+			// 
+			this.btnExisting.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.btnExisting.Location = new System.Drawing.Point(102, 532);
+			this.btnExisting.Name = "btnExisting";
+			this.btnExisting.Size = new System.Drawing.Size(120, 32);
+			this.btnExisting.TabIndex = 54;
+			this.btnExisting.Text = "Existing";
+			this.btnExisting.UseVisualStyleBackColor = true;
+			this.btnExisting.Click += new System.EventHandler(this.BtnExistingClick);
+			// 
+			// btnGarbage
+			// 
+			this.btnGarbage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.btnGarbage.Location = new System.Drawing.Point(374, 532);
+			this.btnGarbage.Name = "btnGarbage";
+			this.btnGarbage.Size = new System.Drawing.Size(120, 32);
+			this.btnGarbage.TabIndex = 55;
+			this.btnGarbage.Text = "Garbage";
+			this.btnGarbage.UseVisualStyleBackColor = true;
+			this.btnGarbage.Click += new System.EventHandler(this.BtnGarbageClick);
 			// 
 			// cobMinimumResolution
 			// 
@@ -1196,7 +1276,7 @@ namespace Movie_File_Merger
 			this.btnGoodEpisode.TabIndex = 46;
 			this.btnGoodEpisode.Text = "Good Episode";
 			this.btnGoodEpisode.UseVisualStyleBackColor = true;
-			this.btnGoodEpisode.Click += new System.EventHandler(this.btnSelectClick);
+			this.btnGoodEpisode.Click += new System.EventHandler(this.BtnSelectMaintenanceClick);
 			// 
 			// btnGoodDocu
 			// 
@@ -1206,7 +1286,7 @@ namespace Movie_File_Merger
 			this.btnGoodDocu.TabIndex = 46;
 			this.btnGoodDocu.Text = "Good Docu";
 			this.btnGoodDocu.UseVisualStyleBackColor = true;
-			this.btnGoodDocu.Click += new System.EventHandler(this.btnSelectClick);
+			this.btnGoodDocu.Click += new System.EventHandler(this.BtnSelectMaintenanceClick);
 			// 
 			// btnGoodMovie
 			// 
@@ -1216,7 +1296,7 @@ namespace Movie_File_Merger
 			this.btnGoodMovie.TabIndex = 46;
 			this.btnGoodMovie.Text = "Good Movie";
 			this.btnGoodMovie.UseVisualStyleBackColor = true;
-			this.btnGoodMovie.Click += new System.EventHandler(this.btnSelectClick);
+			this.btnGoodMovie.Click += new System.EventHandler(this.BtnSelectMaintenanceClick);
 			// 
 			// btnUnrelatedFile
 			// 
@@ -1226,7 +1306,7 @@ namespace Movie_File_Merger
 			this.btnUnrelatedFile.TabIndex = 46;
 			this.btnUnrelatedFile.Text = "Unrelated File";
 			this.btnUnrelatedFile.UseVisualStyleBackColor = true;
-			this.btnUnrelatedFile.Click += new System.EventHandler(this.btnSelectClick);
+			this.btnUnrelatedFile.Click += new System.EventHandler(this.BtnSelectMaintenanceClick);
 			// 
 			// btnBadEpisode
 			// 
@@ -1236,7 +1316,7 @@ namespace Movie_File_Merger
 			this.btnBadEpisode.TabIndex = 46;
 			this.btnBadEpisode.Text = "Bad Episode";
 			this.btnBadEpisode.UseVisualStyleBackColor = true;
-			this.btnBadEpisode.Click += new System.EventHandler(this.btnSelectClick);
+			this.btnBadEpisode.Click += new System.EventHandler(this.BtnSelectMaintenanceClick);
 			// 
 			// btnBadName
 			// 
@@ -1246,7 +1326,7 @@ namespace Movie_File_Merger
 			this.btnBadName.TabIndex = 46;
 			this.btnBadName.Text = "Bad Name";
 			this.btnBadName.UseVisualStyleBackColor = true;
-			this.btnBadName.Click += new System.EventHandler(this.btnSelectClick);
+			this.btnBadName.Click += new System.EventHandler(this.BtnSelectMaintenanceClick);
 			// 
 			// btnBadDocu
 			// 
@@ -1256,7 +1336,7 @@ namespace Movie_File_Merger
 			this.btnBadDocu.TabIndex = 46;
 			this.btnBadDocu.Text = "Bad Docu";
 			this.btnBadDocu.UseVisualStyleBackColor = true;
-			this.btnBadDocu.Click += new System.EventHandler(this.btnSelectClick);
+			this.btnBadDocu.Click += new System.EventHandler(this.BtnSelectMaintenanceClick);
 			// 
 			// btnBadMovie
 			// 
@@ -1266,7 +1346,7 @@ namespace Movie_File_Merger
 			this.btnBadMovie.TabIndex = 46;
 			this.btnBadMovie.Text = "Bad Movie";
 			this.btnBadMovie.UseVisualStyleBackColor = true;
-			this.btnBadMovie.Click += new System.EventHandler(this.btnSelectClick);
+			this.btnBadMovie.Click += new System.EventHandler(this.BtnSelectMaintenanceClick);
 			// 
 			// pbMFM
 			// 
@@ -2097,66 +2177,6 @@ namespace Movie_File_Merger
 			this.ttMovieFileMerger.ReshowDelay = 100;
 			this.ttMovieFileMerger.ShowAlways = true;
 			// 
-			// btnHigherRes
-			// 
-			this.btnHigherRes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.btnHigherRes.Location = new System.Drawing.Point(632, 532);
-			this.btnHigherRes.Name = "btnHigherRes";
-			this.btnHigherRes.Size = new System.Drawing.Size(120, 32);
-			this.btnHigherRes.TabIndex = 50;
-			this.btnHigherRes.Text = "Higher Res";
-			this.btnHigherRes.UseVisualStyleBackColor = true;
-			// 
-			// btnLowRes
-			// 
-			this.btnLowRes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.btnLowRes.Location = new System.Drawing.Point(788, 532);
-			this.btnLowRes.Name = "btnLowRes";
-			this.btnLowRes.Size = new System.Drawing.Size(120, 32);
-			this.btnLowRes.TabIndex = 51;
-			this.btnLowRes.Text = "Low Res";
-			this.btnLowRes.UseVisualStyleBackColor = true;
-			// 
-			// btnToConsider
-			// 
-			this.btnToConsider.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.btnToConsider.Location = new System.Drawing.Point(476, 532);
-			this.btnToConsider.Name = "btnToConsider";
-			this.btnToConsider.Size = new System.Drawing.Size(120, 32);
-			this.btnToConsider.TabIndex = 52;
-			this.btnToConsider.Text = "To Consider";
-			this.btnToConsider.UseVisualStyleBackColor = true;
-			// 
-			// btnWish
-			// 
-			this.btnWish.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-			this.btnWish.Location = new System.Drawing.Point(164, 532);
-			this.btnWish.Name = "btnWish";
-			this.btnWish.Size = new System.Drawing.Size(120, 32);
-			this.btnWish.TabIndex = 53;
-			this.btnWish.Text = "Wish";
-			this.btnWish.UseVisualStyleBackColor = true;
-			// 
-			// btnExisting
-			// 
-			this.btnExisting.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-			this.btnExisting.Location = new System.Drawing.Point(8, 532);
-			this.btnExisting.Name = "btnExisting";
-			this.btnExisting.Size = new System.Drawing.Size(120, 32);
-			this.btnExisting.TabIndex = 54;
-			this.btnExisting.Text = "Existing";
-			this.btnExisting.UseVisualStyleBackColor = true;
-			// 
-			// btnGarbage
-			// 
-			this.btnGarbage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-			this.btnGarbage.Location = new System.Drawing.Point(320, 532);
-			this.btnGarbage.Name = "btnGarbage";
-			this.btnGarbage.Size = new System.Drawing.Size(120, 32);
-			this.btnGarbage.TabIndex = 55;
-			this.btnGarbage.Text = "Garbage";
-			this.btnGarbage.UseVisualStyleBackColor = true;
-			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -2359,5 +2379,6 @@ namespace Movie_File_Merger
 		private System.Windows.Forms.Button btnWish;
 		private System.Windows.Forms.Button btnExisting;
 		private System.Windows.Forms.Button btnGarbage;
+		private System.Windows.Forms.Label label3;
 	}
 }
