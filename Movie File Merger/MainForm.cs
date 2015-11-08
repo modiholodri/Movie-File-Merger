@@ -403,14 +403,15 @@ namespace Movie_File_Merger
 
 			// General settings			
 			tbNickName.Text = readXmlSetting ( xmlSettings, "/MFMSettings/General/NickName", "Anonymous" );
-			cobSearchInfo.SelectedIndex = cobSearchInfo.FindString( readXmlSetting ( xmlSettings, "/MFMSettings/General/SeachInfo", "IMDb" ) );
-			cobSearchDownload.SelectedIndex = cobSearchDownload.FindString( readXmlSetting ( xmlSettings, "/MFMSettings/General/SeachDownload", "Torrentz" ) );
-			tbToolTipRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/General/ToolTipRegex", "Enter a regular expression...");
-			cbGetHigherRes.Checked = readXmlSetting ( xmlSettings, "/MFMSettings/General/GetHigherRes", "True") == "True";
-			cbKeepFolders.Checked = readXmlSetting ( xmlSettings, "/MFMSettings/General/KeepFolders", "False") == "True";
-			cbMediaInfo.Checked = readXmlSetting ( xmlSettings, "/MFMSettings/General/MediaInfo", "True") == "True";
-			lblLastChecked.Text = readXmlSetting ( xmlSettings, "/MFMSettings/General/LastChecked", "Last Checked: Never");
-			cobCheckForUpdates.Text = readXmlSetting ( xmlSettings, "/MFMSettings/General/CheckForUpdates", "Last Checked: Never");
+			cobSearchInfo.Text = readXmlSetting ( xmlSettings, "/MFMSettings/General/SeachInfo", "IMDb" );
+			cobSearchDownload.Text = readXmlSetting ( xmlSettings, "/MFMSettings/General/SeachDownload", "Torrentz" );
+			tbToolTipRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/General/ToolTipRegex", "Enter a regular expression..." );
+			cbGetHigherRes.Checked = readXmlSetting ( xmlSettings, "/MFMSettings/General/GetHigherRes", "True" ) == "True";
+			cbKeepFolders.Checked = readXmlSetting ( xmlSettings, "/MFMSettings/General/KeepFolders", "False" ) == "True";
+			cbMediaInfo.Checked = readXmlSetting ( xmlSettings, "/MFMSettings/General/MediaInfo", "True" ) == "True";
+			lblLastChecked.Text = readXmlSetting ( xmlSettings, "/MFMSettings/General/LastChecked", "Last Checked: Never" );
+			cobCheckForUpdates.Text = readXmlSetting ( xmlSettings, "/MFMSettings/General/CheckForUpdates", "Last Checked: Never" );
+			cobMinimumResolution.Text = readXmlSetting ( xmlSettings, "/MFMSettings/General/MinimumResolution", "Minimum 720p" );
 			
 			// Considered Files settings 
 			tbMainExtensionsRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/ConsideredFiles/MainExtensionsRegex", @"avi|mkv|mp4" );
@@ -445,50 +446,51 @@ namespace Movie_File_Merger
 		/// </summary>
 		void SaveXmlSettings( )
 		{
-			using (XmlWriter writer = XmlWriter.Create( strXmlFilePath ))
+			using ( XmlWriter writer = XmlWriter.Create( strXmlFilePath ) )
 			{
-			    writer.WriteStartDocument();
-			    writer.WriteStartElement("MFMSettings");  // root exlement
+			    writer.WriteStartDocument ( );
+			    writer.WriteStartElement ( "MFMSettings" );  // root exlement
 
-			    writer.WriteStartElement("General");  // General settings group
-				writer.WriteElementString("NickName", tbNickName.Text );
-				writer.WriteElementString("SeachInfo", cobSearchInfo.Text );
-				writer.WriteElementString("SeachDownload", cobSearchDownload.Text );
-				writer.WriteElementString("ToolTipRegex", tbToolTipRegex.Text );
-				writer.WriteElementString("GetHigherRes", cbGetHigherRes.Checked.ToString() );
-				writer.WriteElementString("KeepFolders", cbKeepFolders.Checked.ToString() );
-				writer.WriteElementString("MediaInfo", cbMediaInfo.Checked.ToString() );
-				writer.WriteElementString("LastChecked", lblLastChecked.Text );
-				writer.WriteElementString("CheckForUpdates", cobCheckForUpdates.Text );
-			    writer.WriteEndElement();
+			    writer.WriteStartElement ( "General" );  // General settings group
+				writer.WriteElementString ( "NickName", tbNickName.Text );
+				writer.WriteElementString ( "SeachInfo", cobSearchInfo.Text );
+				writer.WriteElementString ( "SeachDownload", cobSearchDownload.Text );
+				writer.WriteElementString ( "ToolTipRegex", tbToolTipRegex.Text );
+				writer.WriteElementString ( "GetHigherRes", cbGetHigherRes.Checked.ToString() );
+				writer.WriteElementString ( "KeepFolders", cbKeepFolders.Checked.ToString() );
+				writer.WriteElementString ( "MediaInfo", cbMediaInfo.Checked.ToString() );
+				writer.WriteElementString ( "LastChecked", lblLastChecked.Text );
+				writer.WriteElementString ( "CheckForUpdates", cobCheckForUpdates.Text );
+				writer.WriteElementString ( "MinimumResolution", cobMinimumResolution.Text );
+			    writer.WriteEndElement ( );
 			   
-			    writer.WriteStartElement("ConsideredFiles");  // Considered Files settings group
-				writer.WriteElementString("MainExtensionsRegex", tbMainExtensionsRegex.Text );
-				writer.WriteElementString("AddonExtensionsRegex", tbAddonExtensionsRegex.Text );
-			    writer.WriteEndElement();
+			    writer.WriteStartElement ( "ConsideredFiles" );  // Considered Files settings group
+				writer.WriteElementString ( "MainExtensionsRegex", tbMainExtensionsRegex.Text );
+				writer.WriteElementString ( "AddonExtensionsRegex", tbAddonExtensionsRegex.Text );
+			    writer.WriteEndElement ( );
 
-			    writer.WriteStartElement("NameUnification");  // Name Unification settings group
-				writer.WriteElementString("CutNameBeforeRegex", tbCutNameBeforeRegex.Text );
-				writer.WriteElementString("OnlyCharactersRegex", tbOnlyCharactersRegex.Text );
-				writer.WriteElementString("ToLowerRegex", tbToLowerRegex.Text );
-				writer.WriteElementString("EpisodesIdRegex", tbEpisodesIdRegex.Text );
-				writer.WriteElementString("GoodDocuNmaeRegex", tbGoodDocuNameRegex.Text );
-				writer.WriteElementString("GoodEpisodeNameRegex", tbGoodEpisodeNameRegex.Text );
-				writer.WriteElementString("GoodMovieNameRegex", tbGoodMovieNameRegex.Text );
-				writer.WriteElementString("BadDocuNameRegex", tbBadDocuNameRegex.Text );
-				writer.WriteElementString("BadEpisodeNameRegex", tbBadEpisodeNameRegex.Text );
-				writer.WriteElementString("BadMovieNameRegex", tbBadMovieNameRegex.Text );
-			    writer.WriteEndElement();
+			    writer.WriteStartElement ( "NameUnification" );  // Name Unification settings group
+				writer.WriteElementString ( "CutNameBeforeRegex", tbCutNameBeforeRegex.Text );
+				writer.WriteElementString ( "OnlyCharactersRegex", tbOnlyCharactersRegex.Text );
+				writer.WriteElementString ( "ToLowerRegex", tbToLowerRegex.Text );
+				writer.WriteElementString ( "EpisodesIdRegex", tbEpisodesIdRegex.Text );
+				writer.WriteElementString ( "GoodDocuNmaeRegex", tbGoodDocuNameRegex.Text );
+				writer.WriteElementString ( "GoodEpisodeNameRegex", tbGoodEpisodeNameRegex.Text );
+				writer.WriteElementString ( "GoodMovieNameRegex", tbGoodMovieNameRegex.Text );
+				writer.WriteElementString ( "BadDocuNameRegex", tbBadDocuNameRegex.Text );
+				writer.WriteElementString ( "BadEpisodeNameRegex", tbBadEpisodeNameRegex.Text );
+				writer.WriteElementString ( "BadMovieNameRegex", tbBadMovieNameRegex.Text );
+			    writer.WriteEndElement ( );
 			    
-			    writer.WriteStartElement("SupportingProgramms");  // Supporting Programms settings group
-				writer.WriteElementString("TeraCopyPath", tbTeraCopyPath.Text );
-				writer.WriteElementString("MediaInfoPath", tbMediaInfoPath.Text );
-			    writer.WriteEndElement();
+			    writer.WriteStartElement ( "SupportingProgramms" );  // Supporting Programms settings group
+				writer.WriteElementString ( "TeraCopyPath", tbTeraCopyPath.Text );
+				writer.WriteElementString ( "MediaInfoPath", tbMediaInfoPath.Text );
+			    writer.WriteEndElement ( );
 			   
-			    writer.WriteEndElement();  // close the root element
-			    writer.WriteEndDocument();
+			    writer.WriteEndElement ( );  // close the root element
+			    writer.WriteEndDocument ( );
 			}
-			AssignRegexes( );
+			AssignRegexes ( );
 		}
 		
 /************************************************************************************************/
@@ -572,14 +574,10 @@ namespace Movie_File_Merger
 		/// <param name="bChanged">true when the list view has changed, otherwise flase.</param>
 		void SetListViewChanged( ListView lvThis, bool bChanged )
 		{
-			if ( (string)lvThis.Tag == "Existing" ) {
-				bExistingChanged = bChanged;
-			}
-			else if ( (string)lvThis.Tag == "Garbage" ) {
-				bGarbageChanged = bChanged;
-			}
-			else if ( (string)lvThis.Tag == "Wish" ) {
-				bWishChanged = bChanged;
+			switch ( (string)lvThis.Tag ) {
+				case "Existing": bExistingChanged = bChanged; break;
+				case "Garbage": bGarbageChanged = bChanged; break;
+				case "Wish": bWishChanged = bChanged; break;
 			}
 		}
 		
@@ -1983,7 +1981,7 @@ namespace Movie_File_Merger
 			if ( e.Control && e.KeyCode == Keys.V ) {  // Ctrl-V: Paste
 				if ( Clipboard.ContainsFileDropList() ) {
 					StringCollection scFileNames = Clipboard.GetFileDropList( );
-					string[] saFileNames = new string[scFileNames.Count];
+					var saFileNames = new string[scFileNames.Count];
 					int iIndex = 0;
 					foreach ( string sFileName in scFileNames ) {
 						saFileNames[iIndex] += sFileName;
@@ -2075,8 +2073,8 @@ namespace Movie_File_Merger
 			}
 			if ( lvThis.Tag.ToString() == "Import" && cbGetHigherRes.Checked && !cbMediaInfo.Checked ) {
 				if ( ShowYesNoQuestion ( "To process higher resolution files MediaInfo should be ticked,\n" +
-				                    "which takes considerably longer, but is better.\n" +
-				                    "Should MFM tick it now?" ) == DialogResult.Yes) {
+				                    	 "which takes considerably longer, but is better.\n" +
+				                     	 "Should MFM tick it now?" ) == DialogResult.Yes) {
 					cbMediaInfo.Checked = true;
 				}
 			}
@@ -2229,7 +2227,7 @@ namespace Movie_File_Merger
 			
 			if ( cbMediaInfo.Checked == false ) {
 				if ( ShowYesNoQuestion ( "MediaInfo is not checked, what will result in not scanning all needed information.\n" + 
-				                    "Should I check MeidaInfo before the scan?" ) == DialogResult.Yes ) {
+				                    	 "Should I check MeidaInfo before the scan?" ) == DialogResult.Yes ) {
 					cbMediaInfo.Checked = true;
 				}
 			}
@@ -2493,6 +2491,14 @@ namespace Movie_File_Merger
 		}
 		
 		/// <summary>
+		/// Execute the command in the system.
+		/// </summary>
+		/// <param name="sCommand">The command to execute.</param>
+		void ExcuteThis ( string sCommand ) {
+			System.Diagnostics.Process.Start( sCommand );
+		}
+
+		/// <summary>
 		/// Searches on the internet for the selected items of the list view, 
 		/// which has been droped on the Search Info droparea.
 		/// </summary>
@@ -2500,47 +2506,47 @@ namespace Movie_File_Merger
 		void SearchInfo( ListView lvListView )
 		{ 
 			string strCleanName = "";
-			string strSearchInfo = "";
 			foreach ( ListViewItem lviItem in lvListView.SelectedItems ) {
 				strCleanName = RemoveEpisodeInfo( lviItem.Text ).Replace( ' ', '+' );
-				switch ( cobSearchInfo.Text) {
+				LogMessage( "Info", Color.Blue, "Searching " + cobSearchInfo.Text + " for " + strCleanName );
+				switch ( cobSearchInfo.Text ) {
+					case "Nearly All Below":
+						ExcuteThis ( "http://www.allmovie.com/search/all/" + strCleanName );
+						ExcuteThis ( "http://www.imdb.com/find?q=" + strCleanName + "&s=tt" );
+						ExcuteThis ( "https://www.themoviedb.org/search?query=" + strCleanName );
+						ExcuteThis ( "http://www.movieposterdb.com/search/?query=" + strCleanName );
+						ExcuteThis ( "http://thetvdb.com/?string=" + strCleanName + "&searchseriesid=&tab=listseries&function=Search" );
+						ExcuteThis ( "http://www.traileraddict.com/search/" + strCleanName );
+						break;
 					case "All Movie":
-						strSearchInfo = "http://www.allmovie.com/search/all/" + strCleanName;
-						LogMessage( "Info", Color.Blue, "Searching All Movie for " + strCleanName );
+						ExcuteThis ( "http://www.allmovie.com/search/all/" + strCleanName );
 						break;
 					case "IMDb": 
-						strSearchInfo = "http://www.imdb.com/find?q=" + strCleanName + "&s=tt";
-						LogMessage( "Info", Color.Blue, "Searching IMDb for " + strCleanName );
+						ExcuteThis ( "http://www.imdb.com/find?q=" + strCleanName + "&s=tt" );
 						break;
 					case "The Movie DB": 
-						strSearchInfo = "https://www.themoviedb.org/search?query=" + strCleanName;
-						LogMessage( "Info", Color.Blue, "Searching The Movie DB for " + strCleanName );
+						ExcuteThis ( "https://www.themoviedb.org/search?query=" + strCleanName );
 						break;
 					case "The Movie Poster DB":
-						strSearchInfo = "http://www.movieposterdb.com/search/?query=" + strCleanName;
-						LogMessage( "Info", Color.Blue, "Searching The Movie Poster DB for " + strCleanName );
+						ExcuteThis ( "http://www.movieposterdb.com/search/?query=" + strCleanName );
 						break;
 					case "The TVDB": 
-						strSearchInfo = "http://thetvdb.com/?string=" + strCleanName + "&searchseriesid=&tab=listseries&function=Search";
-						LogMessage( "Info", Color.Blue, "Searching The TVDB for " + strCleanName );
+						ExcuteThis ( "http://thetvdb.com/?string=" + strCleanName + "&searchseriesid=&tab=listseries&function=Search" );
 						break;
 					case "Trailer Addict":
-						strSearchInfo = "http://www.traileraddict.com/search/" + strCleanName;
-						LogMessage( "Info", Color.Blue, "Searching Trailer Addict for " + strCleanName );
+						ExcuteThis ( "http://www.traileraddict.com/search/" + strCleanName );
 						break;
 					case "Adult DVD Empire": 
-						strSearchInfo = "http://www.adultdvdempire.com/allsearch/search?q=" + strCleanName;
-						LogMessage( "Info", Color.Blue, "Searching Adult DVD Empire for " + strCleanName );
+						ExcuteThis ( "http://www.adultdvdempire.com/allsearch/search?q=" + strCleanName );
 						break;
 					default: 
-						strSearchInfo = "http://www.imdb.com/find?q=" + strCleanName + "&s=tt";
-						LogMessage( "Info", Color.Blue, "Searching IMDb for " + strCleanName );
+						ExcuteThis ( "http://www.imdb.com/find?q=" + strCleanName + "&s=tt" );
+						LogMessage( "Warning", Color.Orange, "Could not find " + cobSearchDownload.Text + " -> Searching IMDb instead." );
 						break;
 				}
-				System.Diagnostics.Process.Start( strSearchInfo );
 			}
 		}
-
+		
 		/// <summary>
 		/// Searches the internet for the selected items of the list view, 
 		/// which has been droped on the Search Download droparea.
@@ -2549,68 +2555,77 @@ namespace Movie_File_Merger
 		void SearchDownload( ListView lvListView )
 		{
 			string strCleanName = "";
-			string strSearchInfo = "";
 			foreach ( ListViewItem lviItem in lvListView.SelectedItems ) {
 				strCleanName = RemoveEpisodeInfo( lviItem.Text ).Replace( ' ', '+' );
-				switch ( cobSearchDownload.Text) {
+				LogMessage( "Info", Color.Blue, "Searching " +  cobSearchDownload.Text + " for " + strCleanName);
+				switch ( cobSearchDownload.Text ) {
+					case "All Below": 
+						ExcuteThis ( "https://1337x.to/search/" + strCleanName + "/1/" );
+						ExcuteThis ( "http://bitsnoop.com/search/all/" + strCleanName );
+						ExcuteThis ( "http://www.demonoid.pw/files/?query=" + strCleanName );
+						ExcuteThis ( "http://extratorrent.cc/search/?search=" + strCleanName );
+						ExcuteThis ( "https://eztv.ag/search/" + strCleanName );
+						ExcuteThis ( "https://kat.cr/usearch/" + strCleanName + "  category:movies/" );
+						ExcuteThis ( "http://magnetseed.net/search/index?q=" + strCleanName );
+						ExcuteThis ( "https://rarbg.to/torrents.php?search=" + strCleanName );
+						ExcuteThis ( "https://isohunt.to/torrents/?ihq=" + strCleanName );
+						ExcuteThis ( "https://www.limetorrents.cc/search/all/" + strCleanName );
+						ExcuteThis ( "https://thepiratebay.la/search/" + strCleanName );
+						ExcuteThis ( "http://torrentz.eu/search?f=" + strCleanName );
+						ExcuteThis ( "http://www.torrenthound.com/search/" + strCleanName );
+						ExcuteThis ( "http://www.torlock.com/all/torrents/" + strCleanName );
+						ExcuteThis ( "https://www.yify-torrent.org/search/" + strCleanName );
+						break;
 					case "1337X":
-						strSearchInfo = "https://1337x.to/search/" + strCleanName;
-						LogMessage( "Info", Color.Blue, "Searching 1337X for " + strCleanName + "/1/");
+						ExcuteThis ( "https://1337x.to/search/" + strCleanName + "/1/" );
 						break;
 					case "Bit Snoop":
-						strSearchInfo = "http://bitsnoop.com/search/all/" + strCleanName;
-						LogMessage( "Info", Color.Blue, "Searching Bit Snoop for " + strCleanName );
+						ExcuteThis ( "http://bitsnoop.com/search/all/" + strCleanName );
 						break;
 					case "Demonoid":
-						strSearchInfo = "http://www.demonoid.pw/files/?query=" + strCleanName;
-						LogMessage( "Info", Color.Blue, "Searching Demonoid for " + strCleanName );
+						ExcuteThis ( "http://www.demonoid.pw/files/?query=" + strCleanName );
 						break;
 					case "Extra Torrent":
-						strSearchInfo = "http://extratorrent.cc/search/?search=" + strCleanName;
-						LogMessage( "Info", Color.Blue, "Searching Extra Torrent for " + strCleanName );
+						ExcuteThis ( "http://extratorrent.cc/search/?search=" + strCleanName );
+						break;
+					case "Eztv":
+						ExcuteThis ( "https://eztv.ag/search/" + strCleanName );
 						break;
 					case "Kickass":
-						strSearchInfo = "https://kat.cr/usearch/" + strCleanName + "  category:movies/";
-						LogMessage( "Info", Color.Blue, "Searching Kickass for " + strCleanName );
+						ExcuteThis ( "https://kat.cr/usearch/" + strCleanName + "  category:movies/" );
+						break;
+					case "Magnet Seed":
+						ExcuteThis ( "http://magnetseed.net/search/index?q=" + strCleanName );
 						break;
 					case "Rarbg":
-						strSearchInfo = "https://rarbg.to/torrents.php?search=" + strCleanName;
-						LogMessage( "Info", Color.Blue, "Searching Rarbg for " + strCleanName );
+						ExcuteThis ( "https://rarbg.to/torrents.php?search=" + strCleanName );
 						break;
 					case "ISO Hunt":
-						strSearchInfo = "https://isohunt.to/torrents/?ihq=" + strCleanName;
-						LogMessage( "Info", Color.Blue, "Searching ISO Hunt for " + strCleanName );
+						ExcuteThis ( "https://isohunt.to/torrents/?ihq=" + strCleanName );
 						break;
 					case "Lime Torrents":
-						strSearchInfo = "https://www.limetorrents.cc/search/all/pulp-fiction/" + strCleanName;
-						LogMessage( "Info", Color.Blue, "Searching Lime Torrents for " + strCleanName );
+						ExcuteThis ( "https://www.limetorrents.cc/search/all/" + strCleanName );
 						break;
 					case "The Piratebay":
-						strSearchInfo = "https://thepiratebay.la/search/" + strCleanName;
-						LogMessage( "Info", Color.Blue, "Searching  for " + strCleanName );
+						ExcuteThis ( "https://thepiratebay.la/search/" + strCleanName );
 						break;
 					case "Torrentz":
-						strSearchInfo = "http://torrentz.eu/search?f=" + strCleanName;
-						LogMessage( "Info", Color.Blue, "Searching Torrenz for " + strCleanName );
+						ExcuteThis ( "http://torrentz.eu/search?f=" + strCleanName );
 						break;
 					case "Torrent Hound":
-						strSearchInfo = "http://www.torrenthound.com/search/pulp+fiction" + strCleanName;
-						LogMessage( "Info", Color.Blue, "Searching Torrent Hound for " + strCleanName );
+						ExcuteThis ( "http://www.torrenthound.com/search/" + strCleanName );
 						break;
 					case "Torlock":
-						strSearchInfo = "http://www.torlock.com/all/torrents/" + strCleanName;
-						LogMessage( "Info", Color.Blue, "Searching Torlock for " + strCleanName );
+						ExcuteThis ( "http://www.torlock.com/all/torrents/" + strCleanName );
 						break;
 					case "Yifi Torrents":
-						strSearchInfo = "https://www.yify-torrent.org/search/" + strCleanName;
-						LogMessage( "Info", Color.Blue, "Searching Yifi Torrents for " + strCleanName );
+						ExcuteThis ( "https://www.yify-torrent.org/search/" + strCleanName );
 						break;
 					default:
-						strSearchInfo = "http://torrentz.eu/search?f=" + strCleanName;
-						LogMessage( "Info", Color.Blue, "Searching Torrenz.eu for " + strCleanName );
+						ExcuteThis ( "http://torrentz.eu/search?f=" + strCleanName );
+						LogMessage( "Warning", Color.Orange, "Could not find " + cobSearchDownload.Text + " -> Searching Torrenz instead." );
 						break;
 				}
-				System.Diagnostics.Process.Start( strSearchInfo );
 			}
 		}
 		
