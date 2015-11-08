@@ -428,7 +428,7 @@ namespace Movie_File_Merger
 			tbAddonExtensionsRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/ConsideredFiles/AddonExtensionsRegex", @"srt|sub" );
 
 			// Name Unification settings 
-			tbCutNameBeforeRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/NameUnification/CutNameBeforeRegex", @"(.[12][09]\d\d)|720p|1080p|(cd[1234])|x264|aac|divx|xvid|dvd" );
+			tbCutNameBeforeRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/NameUnification/CutNameBeforeRegex", @"720p|1080p|(cd[1234])|x264|aac|divx|xvid|dvd" );
 			tbOnlyCharactersRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/NameUnification/OnlyCharactersRegex", @"[^a-zA-Z0-9 -'üöä]" );
 			tbToLowerRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/NameUnification/ToLowerRegex", @" On | A | The | Of | And | Or | To | From | For | In | As | At | With " );
 			tbEpisodesIdRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/NameUnification/EpisodesIdRegex", @".s\d+[e ]\d+" );
@@ -516,9 +516,15 @@ namespace Movie_File_Merger
 		string CleanName( string strMessyName )
 		{
 			string strCleanName = strMessyName.ToLower( );
-			
-			if ( rbSeries.Checked ) { // handle series with SxxExx identifier
-				Match matchEpisodeId = rgxEpisodesId.Match( strCleanName );
+
+			if ( Regex.IsMatch ( strCleanName, tbBadDocuNameRegex.Text ) ){ // handle documentaries
+				Match matchTrimBefore = Regex.Match ( strCleanName, @"720p|1080p|x264|aac|divx|xvid|dvd" );
+				if ( matchTrimBefore.Success ) {
+					strCleanName = strCleanName.Substring( 0, matchTrimBefore.Index );
+				}
+			}
+			else if ( Regex.IsMatch ( strCleanName, tbBadEpisodeNameRegex.Text ) ){ // handle episodes 
+				Match matchEpisodeId = Regex.Match ( strCleanName, tbBadEpisodeNameRegex.Text );
 				if ( matchEpisodeId.Success ) {
 					MatchCollection mcNumbers = rgxNumber.Matches( matchEpisodeId.Value );
 					string strUnifiedEpisodeId = " s" + mcNumbers[0].Value.PadLeft( 2, '0' ) +
@@ -526,7 +532,13 @@ namespace Movie_File_Merger
 					strCleanName = strCleanName.Substring( 0, matchEpisodeId.Index ) + strUnifiedEpisodeId;
 				}
 			}
-			else  // handle movies and other stuff
+			else if ( Regex.IsMatch ( strCleanName, tbBadMovieNameRegex.Text ) ){ // handle movies
+				Match matchTrimBefore = Regex.Match ( strCleanName, tbBadMovieNameRegex.Text );
+				if ( matchTrimBefore.Success ) {
+					strCleanName = strCleanName.Substring( 0, matchTrimBefore.Index );
+				}
+			}
+			else  // handle other stuff
 			{
 				Match matchTrimBefore = rgxTrimBefore.Match( strCleanName );
 				if ( matchTrimBefore.Success ) {
@@ -541,6 +553,10 @@ namespace Movie_File_Merger
 			// fix the cases according to movie titles
 			strCleanName = CultureInfo.CurrentCulture.TextInfo.ToTitleCase( strCleanName );
 			MatchCollection mcToLower = rgxToLower.Matches( strCleanName );
+			foreach ( Match mToLower in mcToLower ) {
+				strCleanName = strCleanName.Replace( mToLower.Value, mToLower.Value.ToLower( ) );
+			}
+			mcToLower = rgxToLower.Matches( strCleanName ); // has to be done 2 times because of overlaps
 			foreach ( Match mToLower in mcToLower ) {
 				strCleanName = strCleanName.Replace( mToLower.Value, mToLower.Value.ToLower( ) );
 			}

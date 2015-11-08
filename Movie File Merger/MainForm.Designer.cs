@@ -1493,7 +1493,7 @@ namespace Movie_File_Merger
 			// 
 			// label2
 			// 
-			this.label2.Location = new System.Drawing.Point(602, 12);
+			this.label2.Location = new System.Drawing.Point(602, 14);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(128, 27);
 			this.label2.TabIndex = 45;
@@ -1601,7 +1601,7 @@ namespace Movie_File_Merger
 			// 
 			this.tbMediaInfoPath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
 			| System.Windows.Forms.AnchorStyles.Right)));
-			this.tbMediaInfoPath.Location = new System.Drawing.Point(556, 25);
+			this.tbMediaInfoPath.Location = new System.Drawing.Point(556, 28);
 			this.tbMediaInfoPath.Name = "tbMediaInfoPath";
 			this.tbMediaInfoPath.Size = new System.Drawing.Size(334, 26);
 			this.tbMediaInfoPath.TabIndex = 7;
@@ -1610,7 +1610,7 @@ namespace Movie_File_Merger
 			// 
 			// lblMediaInfoPath
 			// 
-			this.lblMediaInfoPath.Location = new System.Drawing.Point(456, 28);
+			this.lblMediaInfoPath.Location = new System.Drawing.Point(456, 31);
 			this.lblMediaInfoPath.Name = "lblMediaInfoPath";
 			this.lblMediaInfoPath.Size = new System.Drawing.Size(94, 23);
 			this.lblMediaInfoPath.TabIndex = 6;
@@ -1619,8 +1619,6 @@ namespace Movie_File_Merger
 			// 
 			// tbTeraCopyPath
 			// 
-			this.tbTeraCopyPath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-			| System.Windows.Forms.AnchorStyles.Right)));
 			this.tbTeraCopyPath.Location = new System.Drawing.Point(114, 28);
 			this.tbTeraCopyPath.Name = "tbTeraCopyPath";
 			this.tbTeraCopyPath.Size = new System.Drawing.Size(334, 26);
@@ -1711,8 +1709,6 @@ namespace Movie_File_Merger
 			// 
 			// tbGoodMovieNameRegex
 			// 
-			this.tbGoodMovieNameRegex.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-			| System.Windows.Forms.AnchorStyles.Right)));
 			this.tbGoodMovieNameRegex.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.tbGoodMovieNameRegex.Location = new System.Drawing.Point(218, 205);
 			this.tbGoodMovieNameRegex.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -1757,8 +1753,6 @@ namespace Movie_File_Merger
 			// 
 			// tbGoodEpisodeNameRegex
 			// 
-			this.tbGoodEpisodeNameRegex.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-			| System.Windows.Forms.AnchorStyles.Right)));
 			this.tbGoodEpisodeNameRegex.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.tbGoodEpisodeNameRegex.Location = new System.Drawing.Point(218, 169);
 			this.tbGoodEpisodeNameRegex.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -1803,8 +1797,6 @@ namespace Movie_File_Merger
 			// 
 			// tbGoodDocuNameRegex
 			// 
-			this.tbGoodDocuNameRegex.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-			| System.Windows.Forms.AnchorStyles.Right)));
 			this.tbGoodDocuNameRegex.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.tbGoodDocuNameRegex.Location = new System.Drawing.Point(218, 133);
 			this.tbGoodDocuNameRegex.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -1873,8 +1865,6 @@ namespace Movie_File_Merger
 			// 
 			// tbEpisodesIdRegex
 			// 
-			this.tbEpisodesIdRegex.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-			| System.Windows.Forms.AnchorStyles.Right)));
 			this.tbEpisodesIdRegex.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.tbEpisodesIdRegex.Location = new System.Drawing.Point(218, 97);
 			this.tbEpisodesIdRegex.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -1906,7 +1896,7 @@ namespace Movie_File_Merger
 			this.tbCutNameBeforeRegex.Name = "tbCutNameBeforeRegex";
 			this.tbCutNameBeforeRegex.Size = new System.Drawing.Size(693, 26);
 			this.tbCutNameBeforeRegex.TabIndex = 17;
-			this.tbCutNameBeforeRegex.Text = "(.[12][09]\\d\\d)|720p|1080p|(cd[12])|x264|aac|divx|xvid";
+			this.tbCutNameBeforeRegex.Text = "720p|1080p|(cd[12])|x264|aac|divx|xvid";
 			this.ttMovieFileMerger.SetToolTip(this.tbCutNameBeforeRegex, "The Cut Name Before regular expression tells MFM what not to include in the name." +
 		" \r\nEverything after, including the match itself, will be removed from the item n" +
 		"ame.");
@@ -1942,8 +1932,6 @@ namespace Movie_File_Merger
 			// 
 			// tbAddonExtensionsRegex
 			// 
-			this.tbAddonExtensionsRegex.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-			| System.Windows.Forms.AnchorStyles.Right)));
 			this.tbAddonExtensionsRegex.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.tbAddonExtensionsRegex.Location = new System.Drawing.Point(679, 27);
 			this.tbAddonExtensionsRegex.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -1967,8 +1955,6 @@ namespace Movie_File_Merger
 			// 
 			// tbMainExtensionsRegex
 			// 
-			this.tbMainExtensionsRegex.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-			| System.Windows.Forms.AnchorStyles.Right)));
 			this.tbMainExtensionsRegex.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.tbMainExtensionsRegex.Location = new System.Drawing.Point(198, 27);
 			this.tbMainExtensionsRegex.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
