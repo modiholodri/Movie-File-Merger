@@ -435,9 +435,9 @@ namespace Movie_File_Merger
 			tbGoodDocuNameRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/NameUnification/GoodDocuRegex", @".* S[12]\d{3}E\d{1,3} .*$" );
 			tbGoodEpisodeNameRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/NameUnification/GoodEpisodeRegex", @".* S\d{2}E\d{2}(-E\d{2})? .*$" );
 			tbGoodMovieNameRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/NameUnification/GoodMovieRegex", @".* \([12]\d{3}\)$" );
-			tbBadDocuNameRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/NameUnification/BadDocuRegex", @"[Ss][12]\d{3}[Ee]\d{1,3}" );
-			tbBadEpisodeNameRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/NameUnification/BadEpisodeRegex", @"[Ss]\d{1,2}[Ee]\d{1,2}" );
-			tbBadMovieNameRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/NameUnification/BadMovieRegex", @"[12]\d{3}" );
+			tbBadDocuNameRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/NameUnification/BadDocuRegex", @".[Ss][12]\d{3}[Ee]\d{1,3}" );
+			tbBadEpisodeNameRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/NameUnification/BadEpisodeRegex", @".[Ss]\d{1,2}[Ee]\d{1,2}" );
+			tbBadMovieNameRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/NameUnification/BadMovieRegex", @".[12]\d{3}" );
 
 			// Supporting Programms settings 
 			tbTeraCopyPath.Text = readXmlSetting ( xmlSettings, "/MFMSettings/SupportingProgramms/TeraCopyPath", @"C:\Program Files\TeraCopy\TeraCopy.exe" );

@@ -376,6 +376,8 @@ namespace Movie_File_Merger
 			this.btnHigherRes.Size = new System.Drawing.Size(120, 32);
 			this.btnHigherRes.TabIndex = 50;
 			this.btnHigherRes.Text = "Higher Res";
+			this.ttMovieFileMerger.SetToolTip(this.btnHigherRes, "Select all import items, which have a higher horizotal resolution than the accord" +
+		"ing existing item.");
 			this.btnHigherRes.UseVisualStyleBackColor = true;
 			this.btnHigherRes.Click += new System.EventHandler(this.BtnHigherResClick);
 			// 
@@ -387,6 +389,7 @@ namespace Movie_File_Merger
 			this.btnLowRes.Size = new System.Drawing.Size(120, 32);
 			this.btnLowRes.TabIndex = 51;
 			this.btnLowRes.Text = "Low Res";
+			this.ttMovieFileMerger.SetToolTip(this.btnLowRes, "Select all import items, which have a too low horizontal resolution.");
 			this.btnLowRes.UseVisualStyleBackColor = true;
 			this.btnLowRes.Click += new System.EventHandler(this.BtnLowResClick);
 			// 
@@ -398,6 +401,8 @@ namespace Movie_File_Merger
 			this.btnToConsider.Size = new System.Drawing.Size(120, 32);
 			this.btnToConsider.TabIndex = 52;
 			this.btnToConsider.Text = "To Consider";
+			this.ttMovieFileMerger.SetToolTip(this.btnToConsider, "Select all import items, which are not yet in the Garbage, Existing or Wish list." +
+		"");
 			this.btnToConsider.UseVisualStyleBackColor = true;
 			this.btnToConsider.Click += new System.EventHandler(this.BtnToConsiderClick);
 			// 
@@ -409,6 +414,7 @@ namespace Movie_File_Merger
 			this.btnWish.Size = new System.Drawing.Size(120, 32);
 			this.btnWish.TabIndex = 53;
 			this.btnWish.Text = "Wish";
+			this.ttMovieFileMerger.SetToolTip(this.btnWish, "Select all Wish items in all lists.");
 			this.btnWish.UseVisualStyleBackColor = true;
 			this.btnWish.Click += new System.EventHandler(this.BtnWishClick);
 			// 
@@ -420,6 +426,7 @@ namespace Movie_File_Merger
 			this.btnExisting.Size = new System.Drawing.Size(120, 32);
 			this.btnExisting.TabIndex = 54;
 			this.btnExisting.Text = "Existing";
+			this.ttMovieFileMerger.SetToolTip(this.btnExisting, "Select all Existing items in all lists.");
 			this.btnExisting.UseVisualStyleBackColor = true;
 			this.btnExisting.Click += new System.EventHandler(this.BtnExistingClick);
 			// 
@@ -431,6 +438,7 @@ namespace Movie_File_Merger
 			this.btnGarbage.Size = new System.Drawing.Size(120, 32);
 			this.btnGarbage.TabIndex = 55;
 			this.btnGarbage.Text = "Garbage";
+			this.ttMovieFileMerger.SetToolTip(this.btnGarbage, "Select all Garbage items in all lists.");
 			this.btnGarbage.UseVisualStyleBackColor = true;
 			this.btnGarbage.Click += new System.EventHandler(this.BtnGarbageClick);
 			// 
@@ -456,6 +464,8 @@ namespace Movie_File_Merger
 			this.cobMinimumResolution.Size = new System.Drawing.Size(210, 28);
 			this.cobMinimumResolution.TabIndex = 28;
 			this.cobMinimumResolution.Text = "Minimum 720p";
+			this.ttMovieFileMerger.SetToolTip(this.cobMinimumResolution, "Select the minimum horizontal resolution for import items, so that they are consi" +
+		"dered to be processed at all.");
 			// 
 			// btnJustScanIt
 			// 
@@ -1275,6 +1285,7 @@ namespace Movie_File_Merger
 			this.btnGoodEpisode.Size = new System.Drawing.Size(128, 32);
 			this.btnGoodEpisode.TabIndex = 46;
 			this.btnGoodEpisode.Text = "Good Episode";
+			this.ttMovieFileMerger.SetToolTip(this.btnGoodEpisode, "Select all episodes with bad names.");
 			this.btnGoodEpisode.UseVisualStyleBackColor = true;
 			this.btnGoodEpisode.Click += new System.EventHandler(this.BtnSelectMaintenanceClick);
 			// 
@@ -1285,6 +1296,7 @@ namespace Movie_File_Merger
 			this.btnGoodDocu.Size = new System.Drawing.Size(128, 32);
 			this.btnGoodDocu.TabIndex = 46;
 			this.btnGoodDocu.Text = "Good Docu";
+			this.ttMovieFileMerger.SetToolTip(this.btnGoodDocu, "Select all documentaries with good names.");
 			this.btnGoodDocu.UseVisualStyleBackColor = true;
 			this.btnGoodDocu.Click += new System.EventHandler(this.BtnSelectMaintenanceClick);
 			// 
@@ -1295,6 +1307,7 @@ namespace Movie_File_Merger
 			this.btnGoodMovie.Size = new System.Drawing.Size(128, 32);
 			this.btnGoodMovie.TabIndex = 46;
 			this.btnGoodMovie.Text = "Good Movie";
+			this.ttMovieFileMerger.SetToolTip(this.btnGoodMovie, "Select all movies with good names.");
 			this.btnGoodMovie.UseVisualStyleBackColor = true;
 			this.btnGoodMovie.Click += new System.EventHandler(this.BtnSelectMaintenanceClick);
 			// 
@@ -1305,6 +1318,7 @@ namespace Movie_File_Merger
 			this.btnUnrelatedFile.Size = new System.Drawing.Size(128, 32);
 			this.btnUnrelatedFile.TabIndex = 46;
 			this.btnUnrelatedFile.Text = "Unrelated File";
+			this.ttMovieFileMerger.SetToolTip(this.btnUnrelatedFile, "Select all unrelated files, which are not main or add-on files.");
 			this.btnUnrelatedFile.UseVisualStyleBackColor = true;
 			this.btnUnrelatedFile.Click += new System.EventHandler(this.BtnSelectMaintenanceClick);
 			// 
@@ -1315,6 +1329,7 @@ namespace Movie_File_Merger
 			this.btnBadEpisode.Size = new System.Drawing.Size(128, 32);
 			this.btnBadEpisode.TabIndex = 46;
 			this.btnBadEpisode.Text = "Bad Episode";
+			this.ttMovieFileMerger.SetToolTip(this.btnBadEpisode, "Select all episodes with bad names.");
 			this.btnBadEpisode.UseVisualStyleBackColor = true;
 			this.btnBadEpisode.Click += new System.EventHandler(this.BtnSelectMaintenanceClick);
 			// 
@@ -1325,6 +1340,7 @@ namespace Movie_File_Merger
 			this.btnBadName.Size = new System.Drawing.Size(128, 32);
 			this.btnBadName.TabIndex = 46;
 			this.btnBadName.Text = "Bad Name";
+			this.ttMovieFileMerger.SetToolTip(this.btnBadName, "Select all remaining files with bad names.");
 			this.btnBadName.UseVisualStyleBackColor = true;
 			this.btnBadName.Click += new System.EventHandler(this.BtnSelectMaintenanceClick);
 			// 
@@ -1335,6 +1351,7 @@ namespace Movie_File_Merger
 			this.btnBadDocu.Size = new System.Drawing.Size(128, 32);
 			this.btnBadDocu.TabIndex = 46;
 			this.btnBadDocu.Text = "Bad Docu";
+			this.ttMovieFileMerger.SetToolTip(this.btnBadDocu, "Select all documentaries with bad names.");
 			this.btnBadDocu.UseVisualStyleBackColor = true;
 			this.btnBadDocu.Click += new System.EventHandler(this.BtnSelectMaintenanceClick);
 			// 
@@ -1345,6 +1362,7 @@ namespace Movie_File_Merger
 			this.btnBadMovie.Size = new System.Drawing.Size(128, 32);
 			this.btnBadMovie.TabIndex = 46;
 			this.btnBadMovie.Text = "Bad Movie";
+			this.ttMovieFileMerger.SetToolTip(this.btnBadMovie, "Select all movies with with bad names.");
 			this.btnBadMovie.UseVisualStyleBackColor = true;
 			this.btnBadMovie.Click += new System.EventHandler(this.BtnSelectMaintenanceClick);
 			// 
