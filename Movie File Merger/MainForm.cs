@@ -2818,5 +2818,36 @@ namespace Movie_File_Merger
 		{
 			SelectColorInList ( lvImport, LowResColor );
 		}
+
+		/// <summary>
+		/// Go to the How to Organize Videos on Hard Disks Manual to get a brief description 
+		/// about how a video collection could be organized in general.
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void PbHowToClick(object sender, EventArgs e)
+		{
+			ExecuteThis ( "http://modi777.gitbooks.io/how-to-oraganize-videos-on-your-hard-disks" );
+		}
+		
+		/// <summary>
+		/// Go to the MFM web site to get additional information or access the forum.
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void PbBannerClick(object sender, EventArgs e)
+		{
+			ExecuteThis ( "http://www.movie-file-merger.org" );
+		}
+		
+		/// <summary>
+		/// Go To the MFM User Manual to read more details about how to use MFM.
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void PbUserManualClick(object sender, EventArgs e)
+		{
+			ExecuteThis ( "http://modi777.gitbooks.io/movie-file-merger-user-manual" );
+		}
 	}
 }
