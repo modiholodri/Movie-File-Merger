@@ -1332,6 +1332,8 @@ namespace Movie_File_Merger
 			this.pbMaintenanceUserManual.TabStop = false;
 			this.ttMovieFileMerger.SetToolTip(this.pbMaintenanceUserManual, "Go To the MFM User Manual to read more details about how to use MFM.");
 			this.pbMaintenanceUserManual.Click += new System.EventHandler(this.PbUserManualClick);
+			this.pbMaintenanceUserManual.MouseEnter += new System.EventHandler(this.PbPictureLinkMouseEnter);
+			this.pbMaintenanceUserManual.MouseLeave += new System.EventHandler(this.PbPictureLinkMouseLeave);
 			// 
 			// btnGoodEpisode
 			// 
@@ -1433,6 +1435,8 @@ namespace Movie_File_Merger
 			this.pbMFM.TabStop = false;
 			this.ttMovieFileMerger.SetToolTip(this.pbMFM, "Go to the MFM web site to get additional information or access the forum.");
 			this.pbMFM.Click += new System.EventHandler(this.PbBannerClick);
+			this.pbMFM.MouseEnter += new System.EventHandler(this.PbPictureLinkMouseEnter);
+			this.pbMFM.MouseLeave += new System.EventHandler(this.PbPictureLinkMouseLeave);
 			// 
 			// lblSelect
 			// 
@@ -1544,6 +1548,8 @@ namespace Movie_File_Merger
 			this.pbLogUserManual.TabStop = false;
 			this.ttMovieFileMerger.SetToolTip(this.pbLogUserManual, "Go To the MFM User Manual to read more details about how to use MFM.");
 			this.pbLogUserManual.Click += new System.EventHandler(this.PbUserManualClick);
+			this.pbLogUserManual.MouseEnter += new System.EventHandler(this.PbPictureLinkMouseEnter);
+			this.pbLogUserManual.MouseLeave += new System.EventHandler(this.PbPictureLinkMouseLeave);
 			// 
 			// pbLogHowTo
 			// 
@@ -1558,6 +1564,8 @@ namespace Movie_File_Merger
 			this.ttMovieFileMerger.SetToolTip(this.pbLogHowTo, "Go to the How to Organize Videos on Hard Disks Manual to get a brief description " +
 		"about how a video collection could be organized in general.");
 			this.pbLogHowTo.Click += new System.EventHandler(this.PbHowToClick);
+			this.pbLogHowTo.MouseEnter += new System.EventHandler(this.PbPictureLinkMouseEnter);
+			this.pbLogHowTo.MouseLeave += new System.EventHandler(this.PbPictureLinkMouseLeave);
 			// 
 			// pbLogBanner
 			// 
@@ -1572,6 +1580,8 @@ namespace Movie_File_Merger
 			this.pbLogBanner.TabStop = false;
 			this.ttMovieFileMerger.SetToolTip(this.pbLogBanner, "Go to the MFM web site to get additional information or access the forum.");
 			this.pbLogBanner.Click += new System.EventHandler(this.PbBannerClick);
+			this.pbLogBanner.MouseEnter += new System.EventHandler(this.PbPictureLinkMouseEnter);
+			this.pbLogBanner.MouseLeave += new System.EventHandler(this.PbPictureLinkMouseLeave);
 			// 
 			// rtbLog
 			// 
@@ -1627,6 +1637,8 @@ namespace Movie_File_Merger
 			this.ttMovieFileMerger.SetToolTip(this.pbSeetingsHowTo, "Go to the How to Organize Videos on Hard Disks Manual to get a brief description " +
 		"about how a video collection could be organized in general.");
 			this.pbSeetingsHowTo.Click += new System.EventHandler(this.PbHowToClick);
+			this.pbSeetingsHowTo.MouseEnter += new System.EventHandler(this.PbPictureLinkMouseEnter);
+			this.pbSeetingsHowTo.MouseLeave += new System.EventHandler(this.PbPictureLinkMouseLeave);
 			// 
 			// pbSettingsUserManual
 			// 
@@ -1639,6 +1651,8 @@ namespace Movie_File_Merger
 			this.pbSettingsUserManual.TabStop = false;
 			this.ttMovieFileMerger.SetToolTip(this.pbSettingsUserManual, "Go To the MFM User Manual to read more details about how to use MFM.");
 			this.pbSettingsUserManual.Click += new System.EventHandler(this.PbUserManualClick);
+			this.pbSettingsUserManual.MouseEnter += new System.EventHandler(this.PbPictureLinkMouseEnter);
+			this.pbSettingsUserManual.MouseLeave += new System.EventHandler(this.PbPictureLinkMouseLeave);
 			// 
 			// pbSettingsBanner
 			// 
@@ -1652,6 +1666,8 @@ namespace Movie_File_Merger
 			this.pbSettingsBanner.TabIndex = 47;
 			this.pbSettingsBanner.TabStop = false;
 			this.ttMovieFileMerger.SetToolTip(this.pbSettingsBanner, "Go to the MFM web site to get additional information or access the forum.");
+			this.pbSettingsBanner.MouseEnter += new System.EventHandler(this.PbPictureLinkMouseEnter);
+			this.pbSettingsBanner.MouseLeave += new System.EventHandler(this.PbPictureLinkMouseLeave);
 			// 
 			// label2
 			// 
@@ -2164,6 +2180,8 @@ namespace Movie_File_Merger
 			this.pbInstructionsUserManual.TabStop = false;
 			this.ttMovieFileMerger.SetToolTip(this.pbInstructionsUserManual, "Go To the MFM User Manual to read more details about how to use MFM.");
 			this.pbInstructionsUserManual.Click += new System.EventHandler(this.PbUserManualClick);
+			this.pbInstructionsUserManual.MouseEnter += new System.EventHandler(this.PbPictureLinkMouseEnter);
+			this.pbInstructionsUserManual.MouseLeave += new System.EventHandler(this.PbPictureLinkMouseLeave);
 			// 
 			// pbInstructionsHowTo
 			// 
@@ -2178,6 +2196,8 @@ namespace Movie_File_Merger
 			this.ttMovieFileMerger.SetToolTip(this.pbInstructionsHowTo, "Go to the How to Organize Videos on Hard Disks Manual to get a brief description " +
 		"about how a video collection could be organized in general.");
 			this.pbInstructionsHowTo.Click += new System.EventHandler(this.PbHowToClick);
+			this.pbInstructionsHowTo.MouseEnter += new System.EventHandler(this.PbPictureLinkMouseEnter);
+			this.pbInstructionsHowTo.MouseLeave += new System.EventHandler(this.PbPictureLinkMouseLeave);
 			// 
 			// pbInstructionsBanner
 			// 
@@ -2192,6 +2212,8 @@ namespace Movie_File_Merger
 			this.pbInstructionsBanner.TabStop = false;
 			this.ttMovieFileMerger.SetToolTip(this.pbInstructionsBanner, "Go to the MFM web site to get additional information or access the forum.");
 			this.pbInstructionsBanner.Click += new System.EventHandler(this.PbBannerClick);
+			this.pbInstructionsBanner.MouseEnter += new System.EventHandler(this.PbPictureLinkMouseEnter);
+			this.pbInstructionsBanner.MouseLeave += new System.EventHandler(this.PbPictureLinkMouseLeave);
 			// 
 			// rtbHelp
 			// 
@@ -2241,6 +2263,8 @@ namespace Movie_File_Merger
 			this.pbAboutUserManual.TabStop = false;
 			this.ttMovieFileMerger.SetToolTip(this.pbAboutUserManual, "Go To the MFM User Manual to read more details about how to use MFM.");
 			this.pbAboutUserManual.Click += new System.EventHandler(this.PbUserManualClick);
+			this.pbAboutUserManual.MouseEnter += new System.EventHandler(this.PbPictureLinkMouseEnter);
+			this.pbAboutUserManual.MouseLeave += new System.EventHandler(this.PbPictureLinkMouseLeave);
 			// 
 			// pbAboutHowTo
 			// 
@@ -2255,6 +2279,8 @@ namespace Movie_File_Merger
 			this.ttMovieFileMerger.SetToolTip(this.pbAboutHowTo, "Go to the How to Organize Videos on Hard Disks Manual to get a brief description " +
 		"about how a video collection could be organized in general.");
 			this.pbAboutHowTo.Click += new System.EventHandler(this.PbHowToClick);
+			this.pbAboutHowTo.MouseEnter += new System.EventHandler(this.PbPictureLinkMouseEnter);
+			this.pbAboutHowTo.MouseLeave += new System.EventHandler(this.PbPictureLinkMouseLeave);
 			// 
 			// lblLastChecked
 			// 
@@ -2304,6 +2330,8 @@ namespace Movie_File_Merger
 			this.pbAboutBanner.TabStop = false;
 			this.ttMovieFileMerger.SetToolTip(this.pbAboutBanner, "Go to the MFM web site to get additional information or access the forum.");
 			this.pbAboutBanner.Click += new System.EventHandler(this.PbBannerClick);
+			this.pbAboutBanner.MouseEnter += new System.EventHandler(this.PbPictureLinkMouseEnter);
+			this.pbAboutBanner.MouseLeave += new System.EventHandler(this.PbPictureLinkMouseLeave);
 			// 
 			// lblCopyLeft
 			// 

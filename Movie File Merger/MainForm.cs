@@ -2841,13 +2841,33 @@ namespace Movie_File_Merger
 		}
 		
 		/// <summary>
-		/// Go To the MFM User Manual to read more details about how to use MFM.
+		/// Go to the MFM User Manual to read more details about how to use MFM.
 		/// </summary>
 		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
 		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
 		void PbUserManualClick(object sender, EventArgs e)
 		{
 			ExecuteThis ( "http://modi777.gitbooks.io/movie-file-merger-user-manual" );
+		}
+		
+		/// <summary>
+		/// Show the Hand mouse pointer when the mouse enters a link picture box.
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void PbPictureLinkMouseEnter(object sender, EventArgs e)
+		{
+			((PictureBox)sender).Cursor = Cursors.Hand;
+		}
+		
+		/// <summary>
+		/// Show the Default mouse pointer when the mouse leaves a link picture box..
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void PbPictureLinkMouseLeave(object sender, EventArgs e)
+		{
+			((PictureBox)sender).Cursor = Cursors.Default;
 		}
 	}
 }
