@@ -866,6 +866,7 @@ namespace Movie_File_Merger
 			this.gbTypeSelection.TabIndex = 10;
 			this.gbTypeSelection.TabStop = false;
 			this.gbTypeSelection.Text = "Collections";
+			this.ttMovieFileMerger.SetToolTip(this.gbTypeSelection, resources.GetString("gbTypeSelection.ToolTip"));
 			// 
 			// rbMiscellaneous
 			// 
@@ -988,6 +989,8 @@ namespace Movie_File_Merger
 			this.gbProcessImport.TabIndex = 20;
 			this.gbProcessImport.TabStop = false;
 			this.gbProcessImport.Text = "Process Import";
+			this.ttMovieFileMerger.SetToolTip(this.gbProcessImport, "The process Import section allows you to copy or move the actual video and subtit" +
+		"le files. You have to install TeraCopy to\r\ndo the actual processing.");
 			// 
 			// btnStart
 			// 
@@ -1062,6 +1065,7 @@ namespace Movie_File_Merger
 			this.rbCopy.Name = "rbCopy";
 			this.rbCopy.Size = new System.Drawing.Size(120, 37);
 			this.rbCopy.TabIndex = 22;
+			this.rbCopy.TabStop = true;
 			this.rbCopy.Text = "Copy";
 			this.rbCopy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.ttMovieFileMerger.SetToolTip(this.rbCopy, "If Copy is selected and you click the Progress Bar, the Wish colored items \r\nin t" +
@@ -1656,6 +1660,7 @@ namespace Movie_File_Merger
 			this.label2.Size = new System.Drawing.Size(128, 27);
 			this.label2.TabIndex = 45;
 			this.label2.Text = "Search Info on";
+			this.ttMovieFileMerger.SetToolTip(this.label2, "Select where to search for additional information concerning the item.");
 			// 
 			// label1
 			// 
@@ -1664,6 +1669,7 @@ namespace Movie_File_Merger
 			this.label1.Size = new System.Drawing.Size(128, 27);
 			this.label1.TabIndex = 44;
 			this.label1.Text = "Download from";
+			this.ttMovieFileMerger.SetToolTip(this.label1, "Select where to search for torrents to download the item.");
 			// 
 			// cobSearchDownload
 			// 
@@ -1691,6 +1697,7 @@ namespace Movie_File_Merger
 			this.cobSearchDownload.Size = new System.Drawing.Size(157, 28);
 			this.cobSearchDownload.TabIndex = 2;
 			this.cobSearchDownload.Text = "Torrentz";
+			this.ttMovieFileMerger.SetToolTip(this.cobSearchDownload, "Select where to search for torrents to download the item.");
 			this.cobSearchDownload.SelectedIndexChanged += new System.EventHandler(this.CobSearchDownloadSelectedIndexChanged);
 			// 
 			// cobSearchInfo
@@ -1711,6 +1718,7 @@ namespace Movie_File_Merger
 			this.cobSearchInfo.Size = new System.Drawing.Size(177, 28);
 			this.cobSearchInfo.TabIndex = 3;
 			this.cobSearchInfo.Text = "IMDb";
+			this.ttMovieFileMerger.SetToolTip(this.cobSearchInfo, "Select where to search for additional information concerning the item.");
 			this.cobSearchInfo.SelectedIndexChanged += new System.EventHandler(this.CobSearchInfoSelectedIndexChanged);
 			// 
 			// tbNickName
@@ -1745,6 +1753,8 @@ namespace Movie_File_Merger
 			this.gbSupportingPrograms.TabIndex = 40;
 			this.gbSupportingPrograms.TabStop = false;
 			this.gbSupportingPrograms.Text = "Supporting Programs Installation Paths";
+			this.ttMovieFileMerger.SetToolTip(this.gbSupportingPrograms, "The Supporting Programs Installation Paths are used when MFM launches a 3rd party" +
+		" program over the commandline interface.");
 			// 
 			// lblTeraCopyPath
 			// 
@@ -1832,6 +1842,8 @@ namespace Movie_File_Merger
 			this.gbSettingsNameUnification.TabIndex = 20;
 			this.gbSettingsNameUnification.TabStop = false;
 			this.gbSettingsNameUnification.Text = "Name Unification Regular Expressions";
+			this.ttMovieFileMerger.SetToolTip(this.gbSettingsNameUnification, "Name Unification Regular Expressions are used to standardize and cleanup the name" +
+		"s as much as possible.");
 			// 
 			// lblBadMovieNameRegex
 			// 
@@ -2077,6 +2089,7 @@ namespace Movie_File_Merger
 			this.gbSettingsConsideredFiles.TabIndex = 10;
 			this.gbSettingsConsideredFiles.TabStop = false;
 			this.gbSettingsConsideredFiles.Text = "Considered Files Regular Expressions";
+			this.ttMovieFileMerger.SetToolTip(this.gbSettingsConsideredFiles, "Only add the file extensions of files which should be considered.");
 			// 
 			// lblAddonExtensions
 			// 
