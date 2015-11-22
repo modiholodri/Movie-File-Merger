@@ -639,7 +639,7 @@ namespace Movie_File_Merger
 			// cbMediaInfo
 			// 
 			this.cbMediaInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.cbMediaInfo.Location = new System.Drawing.Point(879, 241);
+			this.cbMediaInfo.Location = new System.Drawing.Point(880, 242);
 			this.cbMediaInfo.Name = "cbMediaInfo";
 			this.cbMediaInfo.Size = new System.Drawing.Size(23, 25);
 			this.cbMediaInfo.TabIndex = 37;
@@ -1866,7 +1866,7 @@ namespace Movie_File_Merger
 			this.lblBadMovieNameRegex.Location = new System.Drawing.Point(482, 208);
 			this.lblBadMovieNameRegex.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblBadMovieNameRegex.Name = "lblBadMovieNameRegex";
-			this.lblBadMovieNameRegex.Size = new System.Drawing.Size(153, 32);
+			this.lblBadMovieNameRegex.Size = new System.Drawing.Size(153, 24);
 			this.lblBadMovieNameRegex.TabIndex = 38;
 			this.lblBadMovieNameRegex.Text = "Bad Movie Name";
 			this.ttMovieFileMerger.SetToolTip(this.lblBadMovieNameRegex, resources.GetString("lblBadMovieNameRegex.ToolTip"));
@@ -1889,7 +1889,7 @@ namespace Movie_File_Merger
 			this.lblGoodMovieNameRegex.Location = new System.Drawing.Point(12, 208);
 			this.lblGoodMovieNameRegex.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblGoodMovieNameRegex.Name = "lblGoodMovieNameRegex";
-			this.lblGoodMovieNameRegex.Size = new System.Drawing.Size(198, 32);
+			this.lblGoodMovieNameRegex.Size = new System.Drawing.Size(198, 24);
 			this.lblGoodMovieNameRegex.TabIndex = 36;
 			this.lblGoodMovieNameRegex.Text = "Good Movie Name";
 			this.ttMovieFileMerger.SetToolTip(this.lblGoodMovieNameRegex, resources.GetString("lblGoodMovieNameRegex.ToolTip"));
@@ -1910,7 +1910,7 @@ namespace Movie_File_Merger
 			this.lblBadEpisodeNameRegex.Location = new System.Drawing.Point(482, 172);
 			this.lblBadEpisodeNameRegex.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblBadEpisodeNameRegex.Name = "lblBadEpisodeNameRegex";
-			this.lblBadEpisodeNameRegex.Size = new System.Drawing.Size(153, 32);
+			this.lblBadEpisodeNameRegex.Size = new System.Drawing.Size(153, 24);
 			this.lblBadEpisodeNameRegex.TabIndex = 34;
 			this.lblBadEpisodeNameRegex.Text = "Bad Episode Name";
 			this.ttMovieFileMerger.SetToolTip(this.lblBadEpisodeNameRegex, resources.GetString("lblBadEpisodeNameRegex.ToolTip"));
@@ -1933,7 +1933,7 @@ namespace Movie_File_Merger
 			this.lblGoodEpisodeNameRegex.Location = new System.Drawing.Point(12, 172);
 			this.lblGoodEpisodeNameRegex.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblGoodEpisodeNameRegex.Name = "lblGoodEpisodeNameRegex";
-			this.lblGoodEpisodeNameRegex.Size = new System.Drawing.Size(198, 32);
+			this.lblGoodEpisodeNameRegex.Size = new System.Drawing.Size(198, 24);
 			this.lblGoodEpisodeNameRegex.TabIndex = 32;
 			this.lblGoodEpisodeNameRegex.Text = "Good Episode Name";
 			this.ttMovieFileMerger.SetToolTip(this.lblGoodEpisodeNameRegex, resources.GetString("lblGoodEpisodeNameRegex.ToolTip"));
@@ -1954,7 +1954,7 @@ namespace Movie_File_Merger
 			this.lblBadDocuNameRegex.Location = new System.Drawing.Point(482, 136);
 			this.lblBadDocuNameRegex.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblBadDocuNameRegex.Name = "lblBadDocuNameRegex";
-			this.lblBadDocuNameRegex.Size = new System.Drawing.Size(153, 32);
+			this.lblBadDocuNameRegex.Size = new System.Drawing.Size(153, 24);
 			this.lblBadDocuNameRegex.TabIndex = 30;
 			this.lblBadDocuNameRegex.Text = "Bad Docu Name";
 			this.ttMovieFileMerger.SetToolTip(this.lblBadDocuNameRegex, resources.GetString("lblBadDocuNameRegex.ToolTip"));
@@ -1977,7 +1977,7 @@ namespace Movie_File_Merger
 			this.lblGoodDocuNameRegex.Location = new System.Drawing.Point(12, 136);
 			this.lblGoodDocuNameRegex.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblGoodDocuNameRegex.Name = "lblGoodDocuNameRegex";
-			this.lblGoodDocuNameRegex.Size = new System.Drawing.Size(198, 32);
+			this.lblGoodDocuNameRegex.Size = new System.Drawing.Size(198, 24);
 			this.lblGoodDocuNameRegex.TabIndex = 28;
 			this.lblGoodDocuNameRegex.Text = "Good Docu Name";
 			this.ttMovieFileMerger.SetToolTip(this.lblGoodDocuNameRegex, resources.GetString("lblGoodDocuNameRegex.ToolTip"));

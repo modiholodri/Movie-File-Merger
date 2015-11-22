@@ -127,6 +127,7 @@ namespace Movie_File_Merger
 			}
 			
 			SetColumnWidth( );
+			// set the button colors in the list tab
 			btnGarbage.BackColor = GarbageColor;
 			btnLowRes.BackColor = LowResColor;
 			btnExisting.BackColor = ExistingColor;
@@ -134,16 +135,25 @@ namespace Movie_File_Merger
 			btnWish.BackColor = WishColor;
 			btnToConsider.BackColor = NeutralColor;
 			
-			btnBadMovie.BackColor = BadMovieColor;
-			btnBadEpisode.BackColor = BadEpisodeColor;
+			// set the button and lable colors in the maintenance tab
 			btnBadDocu.BackColor = BadDocuColor;
+			lblBadDocuNameRegex.BackColor = BadDocuColor;
+			btnBadEpisode.BackColor = BadEpisodeColor;
+			lblBadEpisodeNameRegex.BackColor = BadEpisodeColor;
+			btnBadMovie.BackColor = BadMovieColor;
+			lblBadMovieNameRegex.BackColor = BadMovieColor;
+
 			btnBadName.BackColor = BadNameColor;
 			btnUnrelatedFile.BackColor = NeutralColor;
-			btnGoodMovie.BackColor = GoodMovieColor;
-			btnGoodEpisode.BackColor = GoodEpisodeColor;
-			btnGoodDocu.BackColor = GoodDocuColor;
 
-			CheckLatestVersion( "Statup" );
+			btnGoodDocu.BackColor = GoodDocuColor;
+			lblGoodDocuNameRegex.BackColor = GoodDocuColor;
+			btnGoodEpisode.BackColor = GoodEpisodeColor;
+			lblGoodEpisodeNameRegex.BackColor = GoodEpisodeColor;
+			btnGoodMovie.BackColor = GoodMovieColor;
+			lblGoodMovieNameRegex.BackColor = GoodMovieColor;
+
+			CheckLatestVersion( "Startup" );
 		}
 		
 /************************************************************************************************/
