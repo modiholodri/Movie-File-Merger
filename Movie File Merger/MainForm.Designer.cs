@@ -70,11 +70,11 @@ namespace Movie_File_Merger
 			this.rbDocumentaries = new System.Windows.Forms.RadioButton();
 			this.rbMovies = new System.Windows.Forms.RadioButton();
 			this.gbProcessImport = new System.Windows.Forms.GroupBox();
+			this.dudMinimumResolution = new System.Windows.Forms.DomainUpDown();
 			this.btnStart = new System.Windows.Forms.Button();
 			this.cbGetHigherRes = new System.Windows.Forms.CheckBox();
 			this.rbMove = new System.Windows.Forms.RadioButton();
 			this.rbCopy = new System.Windows.Forms.RadioButton();
-			this.cobMinimumResolution = new System.Windows.Forms.ComboBox();
 			this.scVertical = new System.Windows.Forms.SplitContainer();
 			this.lvExisting = new System.Windows.Forms.ListView();
 			this.chNameExisting = new System.Windows.Forms.ColumnHeader("(none)");
@@ -86,6 +86,8 @@ namespace Movie_File_Merger
 			this.chNameGarbage = new System.Windows.Forms.ColumnHeader("(none)");
 			this.lvImport = new System.Windows.Forms.ListView();
 			this.chNameImport = new System.Windows.Forms.ColumnHeader("(none)");
+			this.cobSearchDownload = new System.Windows.Forms.ComboBox();
+			this.cobSearchInfo = new System.Windows.Forms.ComboBox();
 			this.tpMaintenance = new System.Windows.Forms.TabPage();
 			this.pbMaintenanceUserManual = new System.Windows.Forms.PictureBox();
 			this.btnGoodEpisode = new System.Windows.Forms.Button();
@@ -111,17 +113,6 @@ namespace Movie_File_Merger
 			this.pbSeetingsHowTo = new System.Windows.Forms.PictureBox();
 			this.pbSettingsUserManual = new System.Windows.Forms.PictureBox();
 			this.pbSettingsBanner = new System.Windows.Forms.PictureBox();
-			this.label2 = new System.Windows.Forms.Label();
-			this.label1 = new System.Windows.Forms.Label();
-			this.cobSearchDownload = new System.Windows.Forms.ComboBox();
-			this.cobSearchInfo = new System.Windows.Forms.ComboBox();
-			this.tbNickName = new System.Windows.Forms.TextBox();
-			this.lblNickName = new System.Windows.Forms.Label();
-			this.gbSupportingPrograms = new System.Windows.Forms.GroupBox();
-			this.lblTeraCopyPath = new System.Windows.Forms.Label();
-			this.tbMediaInfoPath = new System.Windows.Forms.TextBox();
-			this.lblMediaInfoPath = new System.Windows.Forms.Label();
-			this.tbTeraCopyPath = new System.Windows.Forms.TextBox();
 			this.rtbSettings = new System.Windows.Forms.RichTextBox();
 			this.gbSettingsNameUnification = new System.Windows.Forms.GroupBox();
 			this.lblBadMovieNameRegex = new System.Windows.Forms.Label();
@@ -170,6 +161,7 @@ namespace Movie_File_Merger
 			this.tsslMFM = new System.Windows.Forms.ToolStripStatusLabel();
 			this.tspbMFM = new System.Windows.Forms.ToolStripProgressBar();
 			this.ttMovieFileMerger = new System.Windows.Forms.ToolTip(this.components);
+			this.ofdTeraCopy = new System.Windows.Forms.OpenFileDialog();
 			this.tcMovieFileMerger.SuspendLayout();
 			this.tpSeparateLists.SuspendLayout();
 			this.gbTypeSelection.SuspendLayout();
@@ -201,7 +193,6 @@ namespace Movie_File_Merger
 			((System.ComponentModel.ISupportInitialize)(this.pbSeetingsHowTo)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pbSettingsUserManual)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pbSettingsBanner)).BeginInit();
-			this.gbSupportingPrograms.SuspendLayout();
 			this.gbSettingsNameUnification.SuspendLayout();
 			this.gbSettingsConsideredFiles.SuspendLayout();
 			this.tpHelp.SuspendLayout();
@@ -257,7 +248,7 @@ namespace Movie_File_Merger
 			// tmrUpdateCounters
 			// 
 			this.tmrUpdateCounters.Enabled = true;
-			this.tmrUpdateCounters.Interval = 500;
+			this.tmrUpdateCounters.Interval = 3000;
 			this.tmrUpdateCounters.Tick += new System.EventHandler(this.TmrUpdateCountersTick);
 			// 
 			// sfdMovieFileMerger
@@ -339,6 +330,8 @@ namespace Movie_File_Merger
 			this.tpSeparateLists.Controls.Add(this.gbTypeSelection);
 			this.tpSeparateLists.Controls.Add(this.gbProcessImport);
 			this.tpSeparateLists.Controls.Add(this.scVertical);
+			this.tpSeparateLists.Controls.Add(this.cobSearchDownload);
+			this.tpSeparateLists.Controls.Add(this.cobSearchInfo);
 			this.tpSeparateLists.ImageKey = "List.gif";
 			this.tpSeparateLists.Location = new System.Drawing.Point(4, 35);
 			this.tpSeparateLists.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -444,6 +437,7 @@ namespace Movie_File_Merger
 			this.cobCriteria.TabIndex = 44;
 			this.cobCriteria.Text = "Select the Criteria...";
 			this.ttMovieFileMerger.SetToolTip(this.cobCriteria, "Select a predefined Tool Tip Regex,\r\nfor the Select, Bin, or Wish actions.");
+			this.cobCriteria.TextChanged += new System.EventHandler(this.SettingsChanged);
 			this.cobCriteria.DragDrop += new System.Windows.Forms.DragEventHandler(this.CobCriteriaDragDrop);
 			this.cobCriteria.DragOver += new System.Windows.Forms.DragEventHandler(this.CobCriteriaDragOver);
 			// 
@@ -542,7 +536,7 @@ namespace Movie_File_Merger
 			this.btnSearchDownload.AllowDrop = true;
 			this.btnSearchDownload.ImageKey = "Download.png";
 			this.btnSearchDownload.ImageList = this.ilMovieFileMerger;
-			this.btnSearchDownload.Location = new System.Drawing.Point(148, 116);
+			this.btnSearchDownload.Location = new System.Drawing.Point(149, 116);
 			this.btnSearchDownload.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.btnSearchDownload.Name = "btnSearchDownload";
 			this.btnSearchDownload.Size = new System.Drawing.Size(154, 66);
@@ -721,11 +715,11 @@ namespace Movie_File_Merger
 			// gbProcessImport
 			// 
 			this.gbProcessImport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.gbProcessImport.Controls.Add(this.dudMinimumResolution);
 			this.gbProcessImport.Controls.Add(this.btnStart);
 			this.gbProcessImport.Controls.Add(this.cbGetHigherRes);
 			this.gbProcessImport.Controls.Add(this.rbMove);
 			this.gbProcessImport.Controls.Add(this.rbCopy);
-			this.gbProcessImport.Controls.Add(this.cobMinimumResolution);
 			this.gbProcessImport.Location = new System.Drawing.Point(471, 10);
 			this.gbProcessImport.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.gbProcessImport.Name = "gbProcessImport";
@@ -737,6 +731,32 @@ namespace Movie_File_Merger
 			this.gbProcessImport.Text = "Process Import";
 			this.ttMovieFileMerger.SetToolTip(this.gbProcessImport, "The process Import section allows you to copy or move the actual video and subtit" +
 		"le files. You have to install TeraCopy to\r\ndo the actual processing.");
+			// 
+			// dudMinimumResolution
+			// 
+			this.dudMinimumResolution.BackColor = System.Drawing.Color.IndianRed;
+			this.dudMinimumResolution.Items.Add(" > 8640p (16k QUHD)");
+			this.dudMinimumResolution.Items.Add(" > 4320p (8K FUHD)");
+			this.dudMinimumResolution.Items.Add(" > 2880p (UHD+)");
+			this.dudMinimumResolution.Items.Add(" > 2160p (4K UHD)");
+			this.dudMinimumResolution.Items.Add(" > 1440p (WQHD)");
+			this.dudMinimumResolution.Items.Add(" > 1080p (Full HD)");
+			this.dudMinimumResolution.Items.Add(" > 900p (HD+)");
+			this.dudMinimumResolution.Items.Add(" > 720p (HD)");
+			this.dudMinimumResolution.Items.Add(" > 540p (qHD)");
+			this.dudMinimumResolution.Items.Add(" > 360p (nHD)");
+			this.dudMinimumResolution.Items.Add(" > 0p (LD)");
+			this.dudMinimumResolution.Location = new System.Drawing.Point(265, 27);
+			this.dudMinimumResolution.Name = "dudMinimumResolution";
+			this.dudMinimumResolution.ReadOnly = true;
+			this.dudMinimumResolution.RightToLeft = System.Windows.Forms.RightToLeft.No;
+			this.dudMinimumResolution.Size = new System.Drawing.Size(157, 26);
+			this.dudMinimumResolution.TabIndex = 1;
+			this.dudMinimumResolution.Text = " > 720p (HD)";
+			this.dudMinimumResolution.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.ttMovieFileMerger.SetToolTip(this.dudMinimumResolution, "Select the minimum horizontal resolution for import items, so that they are consi" +
+		"dered to be processed at all.");
+			this.dudMinimumResolution.TextChanged += new System.EventHandler(this.SettingsChanged);
 			// 
 			// btnStart
 			// 
@@ -756,7 +776,7 @@ namespace Movie_File_Merger
 			// 
 			// cbGetHigherRes
 			// 
-			this.cbGetHigherRes.BackColor = System.Drawing.SystemColors.Highlight;
+			this.cbGetHigherRes.BackColor = System.Drawing.Color.MediumSeaGreen;
 			this.cbGetHigherRes.Checked = true;
 			this.cbGetHigherRes.CheckState = System.Windows.Forms.CheckState.Checked;
 			this.cbGetHigherRes.ImageKey = "Folder.gif";
@@ -770,6 +790,7 @@ namespace Movie_File_Merger
 			this.ttMovieFileMerger.SetToolTip(this.cbGetHigherRes, "Check to copy higer horizontal resolution files, even if they are existing alread" +
 		"y.");
 			this.cbGetHigherRes.UseVisualStyleBackColor = false;
+			this.cbGetHigherRes.CheckedChanged += new System.EventHandler(this.SettingsChanged);
 			// 
 			// rbMove
 			// 
@@ -802,32 +823,6 @@ namespace Movie_File_Merger
 			this.ttMovieFileMerger.SetToolTip(this.rbCopy, "If Copy is selected and you click the Progress Bar, the Wish colored items \r\nin t" +
 		"he Import list will be copied to the Target folder.");
 			this.rbCopy.UseVisualStyleBackColor = true;
-			// 
-			// cobMinimumResolution
-			// 
-			this.cobMinimumResolution.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.cobMinimumResolution.BackColor = System.Drawing.SystemColors.HotTrack;
-			this.cobMinimumResolution.FormattingEnabled = true;
-			this.cobMinimumResolution.Items.AddRange(new object[] {
-			" > 0p (LD)",
-			" > 360p (nHD)",
-			" > 540p (qHD)",
-			" > 720p (HD)",
-			" > 900p (HD+)",
-			" > 1080p (Full HD)",
-			" > 1440p (WQHD)",
-			" > 2160p (4K UHD)",
-			" > 2880p (UHD+)",
-			" > 4320p (8K FUHD)",
-			" > 8640p (16k QUHD)"});
-			this.cobMinimumResolution.Location = new System.Drawing.Point(265, 28);
-			this.cobMinimumResolution.Name = "cobMinimumResolution";
-			this.cobMinimumResolution.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.cobMinimumResolution.Size = new System.Drawing.Size(157, 28);
-			this.cobMinimumResolution.TabIndex = 33;
-			this.cobMinimumResolution.Text = "> 720p (HD)";
-			this.ttMovieFileMerger.SetToolTip(this.cobMinimumResolution, "Select the minimum horizontal resolution for import items, so that they are consi" +
-		"dered to be processed at all.");
 			// 
 			// scVertical
 			// 
@@ -1039,6 +1034,59 @@ namespace Movie_File_Merger
 			// 
 			this.chNameImport.Text = "Import";
 			this.chNameImport.Width = 250;
+			// 
+			// cobSearchDownload
+			// 
+			this.cobSearchDownload.BackColor = System.Drawing.SystemColors.Control;
+			this.cobSearchDownload.DropDownWidth = 130;
+			this.cobSearchDownload.FormattingEnabled = true;
+			this.cobSearchDownload.Items.AddRange(new object[] {
+			"All Below",
+			"1337X",
+			"Bit Snoop",
+			"Demonoid",
+			"Extra Torrent",
+			"Eztv",
+			"Kickass",
+			"Magnet Seed",
+			"Rarbg",
+			"ISO Hunt",
+			"Lime Torrents",
+			"The Piratebay",
+			"Torrentz",
+			"Torrent Hound",
+			"Torlock",
+			"Yifi Torrents"});
+			this.cobSearchDownload.Location = new System.Drawing.Point(122, 133);
+			this.cobSearchDownload.Name = "cobSearchDownload";
+			this.cobSearchDownload.Size = new System.Drawing.Size(28, 28);
+			this.cobSearchDownload.TabIndex = 48;
+			this.cobSearchDownload.Text = "Torrentz";
+			this.ttMovieFileMerger.SetToolTip(this.cobSearchDownload, "Select where to search for torrents to download the item.");
+			this.cobSearchDownload.SelectedIndexChanged += new System.EventHandler(this.CobSearchDownloadSelectedIndexChanged);
+			// 
+			// cobSearchInfo
+			// 
+			this.cobSearchInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.cobSearchInfo.BackColor = System.Drawing.SystemColors.Control;
+			this.cobSearchInfo.DropDownWidth = 130;
+			this.cobSearchInfo.FormattingEnabled = true;
+			this.cobSearchInfo.Items.AddRange(new object[] {
+			"Nearly All Below",
+			"All Movie",
+			"IMDb",
+			"The Movie DB",
+			"The Movie Poster DB",
+			"The TVDB",
+			"Trailer Addict",
+			"Adult DVD Empire"});
+			this.cobSearchInfo.Location = new System.Drawing.Point(770, 133);
+			this.cobSearchInfo.Name = "cobSearchInfo";
+			this.cobSearchInfo.Size = new System.Drawing.Size(28, 28);
+			this.cobSearchInfo.TabIndex = 47;
+			this.cobSearchInfo.Text = "IMDb";
+			this.ttMovieFileMerger.SetToolTip(this.cobSearchInfo, "Select where to search for additional information concerning the item.");
+			this.cobSearchInfo.SelectedIndexChanged += new System.EventHandler(this.CobSearchInfoSelectedIndexChanged);
 			// 
 			// tpMaintenance
 			// 
@@ -1345,13 +1393,6 @@ namespace Movie_File_Merger
 			this.tpSettings.Controls.Add(this.pbSeetingsHowTo);
 			this.tpSettings.Controls.Add(this.pbSettingsUserManual);
 			this.tpSettings.Controls.Add(this.pbSettingsBanner);
-			this.tpSettings.Controls.Add(this.label2);
-			this.tpSettings.Controls.Add(this.label1);
-			this.tpSettings.Controls.Add(this.cobSearchDownload);
-			this.tpSettings.Controls.Add(this.cobSearchInfo);
-			this.tpSettings.Controls.Add(this.tbNickName);
-			this.tpSettings.Controls.Add(this.lblNickName);
-			this.tpSettings.Controls.Add(this.gbSupportingPrograms);
 			this.tpSettings.Controls.Add(this.rtbSettings);
 			this.tpSettings.Controls.Add(this.gbSettingsNameUnification);
 			this.tpSettings.Controls.Add(this.gbSettingsConsideredFiles);
@@ -1407,160 +1448,20 @@ namespace Movie_File_Merger
 			this.pbSettingsBanner.TabIndex = 47;
 			this.pbSettingsBanner.TabStop = false;
 			this.ttMovieFileMerger.SetToolTip(this.pbSettingsBanner, "Go to the MFM web site to get additional information or access the forum.");
+			this.pbSettingsBanner.Click += new System.EventHandler(this.PbBannerClick);
 			this.pbSettingsBanner.MouseEnter += new System.EventHandler(this.PbPictureLinkMouseEnter);
 			this.pbSettingsBanner.MouseLeave += new System.EventHandler(this.PbPictureLinkMouseLeave);
-			// 
-			// label2
-			// 
-			this.label2.Location = new System.Drawing.Point(602, 128);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(128, 27);
-			this.label2.TabIndex = 45;
-			this.label2.Text = "Search Info on";
-			this.ttMovieFileMerger.SetToolTip(this.label2, "Select where to search for additional information concerning the item.");
-			// 
-			// label1
-			// 
-			this.label1.Location = new System.Drawing.Point(286, 127);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(128, 27);
-			this.label1.TabIndex = 44;
-			this.label1.Text = "Download from";
-			this.ttMovieFileMerger.SetToolTip(this.label1, "Select where to search for torrents to download the item.");
-			// 
-			// cobSearchDownload
-			// 
-			this.cobSearchDownload.BackColor = System.Drawing.SystemColors.Control;
-			this.cobSearchDownload.FormattingEnabled = true;
-			this.cobSearchDownload.Items.AddRange(new object[] {
-			"All Below",
-			"1337X",
-			"Bit Snoop",
-			"Demonoid",
-			"Extra Torrent",
-			"Eztv",
-			"Kickass",
-			"Magnet Seed",
-			"Rarbg",
-			"ISO Hunt",
-			"Lime Torrents",
-			"The Piratebay",
-			"Torrentz",
-			"Torrent Hound",
-			"Torlock",
-			"Yifi Torrents"});
-			this.cobSearchDownload.Location = new System.Drawing.Point(420, 125);
-			this.cobSearchDownload.Name = "cobSearchDownload";
-			this.cobSearchDownload.Size = new System.Drawing.Size(157, 28);
-			this.cobSearchDownload.TabIndex = 2;
-			this.cobSearchDownload.Text = "Torrentz";
-			this.ttMovieFileMerger.SetToolTip(this.cobSearchDownload, "Select where to search for torrents to download the item.");
-			this.cobSearchDownload.SelectedIndexChanged += new System.EventHandler(this.CobSearchDownloadSelectedIndexChanged);
-			// 
-			// cobSearchInfo
-			// 
-			this.cobSearchInfo.BackColor = System.Drawing.SystemColors.Control;
-			this.cobSearchInfo.FormattingEnabled = true;
-			this.cobSearchInfo.Items.AddRange(new object[] {
-			"Nearly All Below",
-			"All Movie",
-			"IMDb",
-			"The Movie DB",
-			"The Movie Poster DB",
-			"The TVDB",
-			"Trailer Addict",
-			"Adult DVD Empire"});
-			this.cobSearchInfo.Location = new System.Drawing.Point(736, 125);
-			this.cobSearchInfo.Name = "cobSearchInfo";
-			this.cobSearchInfo.Size = new System.Drawing.Size(177, 28);
-			this.cobSearchInfo.TabIndex = 3;
-			this.cobSearchInfo.Text = "IMDb";
-			this.ttMovieFileMerger.SetToolTip(this.cobSearchInfo, "Select where to search for additional information concerning the item.");
-			this.cobSearchInfo.SelectedIndexChanged += new System.EventHandler(this.CobSearchInfoSelectedIndexChanged);
-			// 
-			// tbNickName
-			// 
-			this.tbNickName.Location = new System.Drawing.Point(135, 124);
-			this.tbNickName.Name = "tbNickName";
-			this.tbNickName.Size = new System.Drawing.Size(120, 26);
-			this.tbNickName.TabIndex = 1;
-			this.tbNickName.Text = "Modi";
-			this.ttMovieFileMerger.SetToolTip(this.tbNickName, "Your nick name will be used as default in the exported lists name.");
-			// 
-			// lblNickName
-			// 
-			this.lblNickName.Location = new System.Drawing.Point(17, 127);
-			this.lblNickName.Name = "lblNickName";
-			this.lblNickName.Size = new System.Drawing.Size(109, 23);
-			this.lblNickName.TabIndex = 40;
-			this.lblNickName.Text = "Nick Name";
-			this.ttMovieFileMerger.SetToolTip(this.lblNickName, "Your nick name will be used as default in the exported lists name.");
-			// 
-			// gbSupportingPrograms
-			// 
-			this.gbSupportingPrograms.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-			| System.Windows.Forms.AnchorStyles.Right)));
-			this.gbSupportingPrograms.Controls.Add(this.lblTeraCopyPath);
-			this.gbSupportingPrograms.Controls.Add(this.tbMediaInfoPath);
-			this.gbSupportingPrograms.Controls.Add(this.lblMediaInfoPath);
-			this.gbSupportingPrograms.Controls.Add(this.tbTeraCopyPath);
-			this.gbSupportingPrograms.Location = new System.Drawing.Point(10, 486);
-			this.gbSupportingPrograms.Name = "gbSupportingPrograms";
-			this.gbSupportingPrograms.Size = new System.Drawing.Size(903, 63);
-			this.gbSupportingPrograms.TabIndex = 40;
-			this.gbSupportingPrograms.TabStop = false;
-			this.gbSupportingPrograms.Text = "Supporting Programs Installation Paths";
-			this.ttMovieFileMerger.SetToolTip(this.gbSupportingPrograms, "The Supporting Programs Installation Paths are used when MFM launches a 3rd party" +
-		" program over the commandline interface.");
-			// 
-			// lblTeraCopyPath
-			// 
-			this.lblTeraCopyPath.Location = new System.Drawing.Point(14, 31);
-			this.lblTeraCopyPath.Name = "lblTeraCopyPath";
-			this.lblTeraCopyPath.Size = new System.Drawing.Size(94, 23);
-			this.lblTeraCopyPath.TabIndex = 6;
-			this.lblTeraCopyPath.Text = "TeraCopy";
-			this.ttMovieFileMerger.SetToolTip(this.lblTeraCopyPath, "The TeraCopy Path points to where you have installed TeraCopy. ");
-			// 
-			// tbMediaInfoPath
-			// 
-			this.tbMediaInfoPath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-			| System.Windows.Forms.AnchorStyles.Right)));
-			this.tbMediaInfoPath.Location = new System.Drawing.Point(556, 28);
-			this.tbMediaInfoPath.Name = "tbMediaInfoPath";
-			this.tbMediaInfoPath.Size = new System.Drawing.Size(334, 26);
-			this.tbMediaInfoPath.TabIndex = 42;
-			this.tbMediaInfoPath.Text = "C:\\Program Files\\MediaInfo\\MediaInfo.exe";
-			this.ttMovieFileMerger.SetToolTip(this.tbMediaInfoPath, "The MediaInfo Path points to where you have installed MediaInfo.");
-			// 
-			// lblMediaInfoPath
-			// 
-			this.lblMediaInfoPath.Location = new System.Drawing.Point(456, 31);
-			this.lblMediaInfoPath.Name = "lblMediaInfoPath";
-			this.lblMediaInfoPath.Size = new System.Drawing.Size(94, 23);
-			this.lblMediaInfoPath.TabIndex = 6;
-			this.lblMediaInfoPath.Text = "MediaInfo";
-			this.ttMovieFileMerger.SetToolTip(this.lblMediaInfoPath, "The MediaInfo Path points to where you have installed MediaInfo.");
-			// 
-			// tbTeraCopyPath
-			// 
-			this.tbTeraCopyPath.Location = new System.Drawing.Point(114, 28);
-			this.tbTeraCopyPath.Name = "tbTeraCopyPath";
-			this.tbTeraCopyPath.Size = new System.Drawing.Size(334, 26);
-			this.tbTeraCopyPath.TabIndex = 41;
-			this.tbTeraCopyPath.Text = "C:\\Program Files\\TeraCopy\\TeraCopy.exe";
-			this.ttMovieFileMerger.SetToolTip(this.tbTeraCopyPath, "The TeraCopy Path points to where you have installed TeraCopy. ");
 			// 
 			// rtbSettings
 			// 
 			this.rtbSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
 			| System.Windows.Forms.AnchorStyles.Left) 
 			| System.Windows.Forms.AnchorStyles.Right)));
-			this.rtbSettings.Location = new System.Drawing.Point(9, 557);
+			this.rtbSettings.Location = new System.Drawing.Point(9, 449);
 			this.rtbSettings.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.rtbSettings.Name = "rtbSettings";
 			this.rtbSettings.ReadOnly = true;
-			this.rtbSettings.Size = new System.Drawing.Size(903, 0);
+			this.rtbSettings.Size = new System.Drawing.Size(903, 108);
 			this.rtbSettings.TabIndex = 3;
 			this.rtbSettings.TabStop = false;
 			this.rtbSettings.Text = "";
@@ -1591,7 +1492,7 @@ namespace Movie_File_Merger
 			this.gbSettingsNameUnification.Controls.Add(this.tbEpisodesIdRegex);
 			this.gbSettingsNameUnification.Controls.Add(this.lblCutNameBeforeRegex);
 			this.gbSettingsNameUnification.Controls.Add(this.tbCutNameBeforeRegex);
-			this.gbSettingsNameUnification.Location = new System.Drawing.Point(9, 236);
+			this.gbSettingsNameUnification.Location = new System.Drawing.Point(8, 197);
 			this.gbSettingsNameUnification.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.gbSettingsNameUnification.Name = "gbSettingsNameUnification";
 			this.gbSettingsNameUnification.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -1838,7 +1739,7 @@ namespace Movie_File_Merger
 			this.gbSettingsConsideredFiles.Controls.Add(this.lblMainExtensions);
 			this.gbSettingsConsideredFiles.Controls.Add(this.tbMainExtensionsRegex);
 			this.gbSettingsConsideredFiles.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.gbSettingsConsideredFiles.Location = new System.Drawing.Point(9, 159);
+			this.gbSettingsConsideredFiles.Location = new System.Drawing.Point(8, 120);
 			this.gbSettingsConsideredFiles.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.gbSettingsConsideredFiles.Name = "gbSettingsConsideredFiles";
 			this.gbSettingsConsideredFiles.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -2180,6 +2081,10 @@ namespace Movie_File_Merger
 			this.ttMovieFileMerger.ReshowDelay = 100;
 			this.ttMovieFileMerger.ShowAlways = true;
 			// 
+			// ofdTeraCopy
+			// 
+			this.ofdTeraCopy.FileName = "C:\\Program Files\\TeraCopy\\TeraCopy.exe";
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -2223,12 +2128,9 @@ namespace Movie_File_Merger
 			((System.ComponentModel.ISupportInitialize)(this.pbLogHowTo)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pbLogBanner)).EndInit();
 			this.tpSettings.ResumeLayout(false);
-			this.tpSettings.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pbSeetingsHowTo)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pbSettingsUserManual)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pbSettingsBanner)).EndInit();
-			this.gbSupportingPrograms.ResumeLayout(false);
-			this.gbSupportingPrograms.PerformLayout();
 			this.gbSettingsNameUnification.ResumeLayout(false);
 			this.gbSettingsNameUnification.PerformLayout();
 			this.gbSettingsConsideredFiles.ResumeLayout(false);
@@ -2251,15 +2153,8 @@ namespace Movie_File_Merger
 			this.ResumeLayout(false);
 
 		}
-		private System.Windows.Forms.GroupBox gbSupportingPrograms;
-		private System.Windows.Forms.Label lblMediaInfoPath;
-		private System.Windows.Forms.TextBox tbMediaInfoPath;
 		private System.Windows.Forms.ToolTip ttMovieFileMerger;
 		private System.Windows.Forms.RichTextBox rtbCopyright;
-		private System.Windows.Forms.Label lblTeraCopyPath;
-		private System.Windows.Forms.TextBox tbTeraCopyPath;
-		private System.Windows.Forms.Label lblNickName;
-		private System.Windows.Forms.TextBox tbNickName;
 		//private System.Diagnostics.PerformanceCounter performanceCounter1;
 		private System.Windows.Forms.Button btnExportList;
 		private System.Windows.Forms.Button btnSearchInfo;
@@ -2366,11 +2261,6 @@ namespace Movie_File_Merger
 		private System.Windows.Forms.TextBox tbBadDocuNameRegex;
 		private System.Windows.Forms.Label lblGoodDocuNameRegex;
 		private System.Windows.Forms.TextBox tbGoodDocuNameRegex;
-		private System.Windows.Forms.ComboBox cobSearchDownload;
-		private System.Windows.Forms.ComboBox cobSearchInfo;
-		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.ComboBox cobMinimumResolution;
 		private System.Windows.Forms.PictureBox pbAboutUserManual;
 		private System.Windows.Forms.PictureBox pbAboutHowTo;
 		private System.Windows.Forms.PictureBox pbInstructionsUserManual;
@@ -2384,5 +2274,9 @@ namespace Movie_File_Merger
 		private System.Windows.Forms.PictureBox pbSettingsUserManual;
 		private System.Windows.Forms.PictureBox pbSettingsBanner;
 		private System.Windows.Forms.Button btnEdit;
+		private System.Windows.Forms.DomainUpDown dudMinimumResolution;
+		private System.Windows.Forms.ComboBox cobSearchDownload;
+		private System.Windows.Forms.ComboBox cobSearchInfo;
+		private System.Windows.Forms.OpenFileDialog ofdTeraCopy;
 	}
 }

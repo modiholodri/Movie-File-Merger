@@ -43,11 +43,12 @@ namespace Movie_File_Merger
 		
 		// item colors		
 		Color GarbageColor = Color.Red;
-		Color LowResColor = Color.IndianRed;
 		Color ExistingColor = Color.YellowGreen;
-		Color HigherResColor = Color.MediumSpringGreen;
 		Color WishColor = Color.LawnGreen;
 		Color NeutralColor = Color.White;
+
+		Color LowResColor = Color.IndianRed;
+		Color HigherResColor = Color.MediumSpringGreen;
 		
 		Color GoodMovieColor = Color.SeaGreen;
 		Color GoodDocuColor = Color.LawnGreen;
@@ -65,8 +66,10 @@ namespace Movie_File_Merger
 		// paths to standard files and folders
 		string strPrivatePath = Path.Combine( Path.GetDirectoryName(Application.StartupPath), @"MFM Private\" );
 		string strCollectionsPath = Path.Combine( Path.GetDirectoryName(Application.StartupPath), @"MFM Collections\" );
+		string strTeraCopyPath = "";
 		string strTeraCopyListsPath = "";
 		string strXmlFilePath = "";
+		string strNickName = "";
 		
 		string strImportFolder = "";
 		string strTargetFolder = "";
@@ -102,7 +105,9 @@ namespace Movie_File_Merger
 			sfdMovieFileMerger.InitialDirectory = strCollectionsPath;
 			
 			LoadXmlSettings( );
-			Text = tbNickName.Text + " - Movie File Merger";
+			// string input = Microsoft.VisualBasic.Interaction.InputBox("Prompt", "Title", "Default", -1, -1);
+			
+			Text = strNickName + " - Movie File Merger";
 
 			// load the instruction and copyright files
 			string strMFMInstructionsPath = Path.Combine( Application.StartupPath, "Movie File Merger Instructions.rtf" );
@@ -135,7 +140,7 @@ namespace Movie_File_Merger
 			lvExisting.BackColor = ExistingColor;
 			lvWish.BackColor = WishColor;
 			
-			cobMinimumResolution.BackColor = LowResColor;
+			dudMinimumResolution.BackColor = LowResColor;
 			cbGetHigherRes.BackColor = HigherResColor;
 			
 			// set the button and lable colors in the maintenance tab
@@ -200,6 +205,7 @@ namespace Movie_File_Merger
 						                         "is available with following changes...\n" +  sReleaseNotes + "\n\n" +
 						                         "Go to the Download page now?" ) == DialogResult.Yes) {
 							ExecuteThis ( "http://www.movie-file-merger.org/downloads.html" );
+							Application.Exit( );
 						}
 					}
 					else if ( sWhen.Contains ( "Now" ) )
@@ -424,13 +430,13 @@ namespace Movie_File_Merger
 			xmlSettings.Load ( strXmlFilePath );
 
 			// General settings			
-			tbNickName.Text = readXmlSetting ( xmlSettings, "/MFMSettings/General/NickName", "Anonymous" );
+			strNickName = readXmlSetting ( xmlSettings, "/MFMSettings/General/NickName", "Anonymous" );
 			cobSearchInfo.Text = readXmlSetting ( xmlSettings, "/MFMSettings/General/SeachInfo", "IMDb" );
 			cobSearchDownload.Text = readXmlSetting ( xmlSettings, "/MFMSettings/General/SeachDownload", "Torrentz" );
 			cbGetHigherRes.Checked = readXmlSetting ( xmlSettings, "/MFMSettings/General/GetHigherRes", "True" ) == "True";
 			lblLastChecked.Text = readXmlSetting ( xmlSettings, "/MFMSettings/General/LastChecked", "Last Checked: Never" );
 			cobCheckForUpdates.Text = readXmlSetting ( xmlSettings, "/MFMSettings/General/CheckForUpdates", "Last Checked: Never" );
-			cobMinimumResolution.Text = readXmlSetting ( xmlSettings, "/MFMSettings/General/MinimumResolution", " > 720p (HD)" );
+			dudMinimumResolution.Text = readXmlSetting ( xmlSettings, "/MFMSettings/General/MinimumResolution", " > 720p (HD)" );
 			
 			// Considered Files settings 
 			tbMainExtensionsRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/ConsideredFiles/MainExtensionsRegex", @"avi|mkv|mp4" );
@@ -449,17 +455,55 @@ namespace Movie_File_Merger
 			tbBadMovieNameRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/NameUnification/BadMovieRegex", @".[12]\d{3}" );
 
 			// Supporting Programms settings 
-			tbTeraCopyPath.Text = readXmlSetting ( xmlSettings, "/MFMSettings/SupportingProgramms/TeraCopyPath", @"C:\Program Files\TeraCopy\TeraCopy.exe" );
-			tbMediaInfoPath.Text = readXmlSetting ( xmlSettings, "/MFMSettings/SupportingProgramms/MediaInfoPath", @"C:\Program Files\MediaInfo\MediaInfo.exe" );
+			strTeraCopyPath = readXmlSetting ( xmlSettings, "/MFMSettings/SupportingProgramms/TeraCopyPath", @"C:\Program Files\TeraCopy\TeraCopy.exe" );
 
-			if ( tbNickName.Text == "Anonym" ) {
-				ShowInfo( "Please enter your nick name in the Nick Name field..." );
+			if ( strNickName == "Anonymous" ) {
+				ShowInputDialog ( "Please enter your nickname.", ref strNickName );
+				Text = strNickName + " - Movie File Merger";
 			}
 			AssignRegexes( );
 			btnSearchDownload.Text = cobSearchDownload.Text;
 			btnSearchInfo.Text = cobSearchInfo.Text;
 		}
 		
+		/// <summary>
+		/// Show a simple dialog with the possibility to imput text.
+		/// </summary>
+		/// <param name="strTitle">The dialog title.</param>
+		/// <param name="strInput">The string which will contain the inputed text.</param>
+		/// <returns>The Dialog Result.</returns>
+		private static DialogResult ShowInputDialog ( string strTitle, ref string strInput )
+	    {
+	        var size = new Size ( 300, 70 );
+	        var inputBox = new Form ( );
+	
+	        inputBox.FormBorderStyle = FormBorderStyle.FixedDialog;
+	        inputBox.ClientSize = size;
+	        inputBox.Text = strTitle;
+	
+	        var	textBox = new TextBox ( );
+	        textBox.Size = new Size ( size.Width - 10, 23 );
+	        textBox.Location = new Point ( 5, 5 );
+	        textBox.Text = strInput;
+	        inputBox.Controls.Add ( textBox );
+	
+	        var okButton = new Button();
+	        okButton.DialogResult = DialogResult.OK;
+	        //okButton.Name = "btnOk";
+	        okButton.Size = new Size ( 100, 23 );
+	        okButton.Text = "&OK";
+	        okButton.Location = new Point ( 100, 39 );
+	        inputBox.Controls.Add ( okButton );
+	
+	        inputBox.AcceptButton = okButton;
+	
+	        DialogResult result = inputBox.ShowDialog ( );
+	        strInput = textBox.Text;
+	        return result;
+	    }
+
+
+
 		/// <summary>
 		/// Save the XML settings.
 		/// </summary>
@@ -471,13 +515,13 @@ namespace Movie_File_Merger
 			    writer.WriteStartElement ( "MFMSettings" );  // root exlement
 
 			    writer.WriteStartElement ( "General" );  // General settings group
-				writer.WriteElementString ( "NickName", tbNickName.Text );
+				writer.WriteElementString ( "NickName", strNickName );
 				writer.WriteElementString ( "SeachInfo", cobSearchInfo.Text );
 				writer.WriteElementString ( "SeachDownload", cobSearchDownload.Text );
 				writer.WriteElementString ( "GetHigherRes", cbGetHigherRes.Checked.ToString() );
 				writer.WriteElementString ( "LastChecked", lblLastChecked.Text );
 				writer.WriteElementString ( "CheckForUpdates", cobCheckForUpdates.Text );
-				writer.WriteElementString ( "MinimumResolution", cobMinimumResolution.Text );
+				writer.WriteElementString ( "MinimumResolution", dudMinimumResolution.Text );
 			    writer.WriteEndElement ( );
 			   
 			    writer.WriteStartElement ( "ConsideredFiles" );  // Considered Files settings group
@@ -499,8 +543,7 @@ namespace Movie_File_Merger
 			    writer.WriteEndElement ( );
 			    
 			    writer.WriteStartElement ( "SupportingProgramms" );  // Supporting Programms settings group
-				writer.WriteElementString ( "TeraCopyPath", tbTeraCopyPath.Text );
-				writer.WriteElementString ( "MediaInfoPath", tbMediaInfoPath.Text );
+				writer.WriteElementString ( "TeraCopyPath", strTeraCopyPath );
 			    writer.WriteEndElement ( );
 			   
 			    writer.WriteEndElement ( );  // close the root element
@@ -614,7 +657,7 @@ namespace Movie_File_Merger
 		int GetMinimumResolution ( ) 
 		{
 			int iMinimumResolution = 0;
-			switch ( cobMinimumResolution.Text ) {
+			switch ( dudMinimumResolution.Text ) {
 				case " > 0p (LD)": iMinimumResolution = 0; break;
 				case " > 360p (nHD)": iMinimumResolution = 640; break;
 				case " > 540p (qHD)": iMinimumResolution = 960; break;
@@ -927,8 +970,11 @@ namespace Movie_File_Merger
 			bool bSourceListOpen = false;
 			bool bCopiedOrMovedSomething = false;
 			
-			if ( !File.Exists ( tbTeraCopyPath.Text ) ) {
-				ShowInfo( "Could not find TeraCopy. You can download it from\n  www.movie-file-merger.org/downloads.html\nDid you install it and set the path in the setting correct?" );
+			if ( !File.Exists ( strTeraCopyPath ) ) {
+				ShowInfo( "Could not find TeraCopy. You can download it from\n    www.movie-file-merger.org/downloads.html\nOr set the path in the next dialog..." );
+				ofdTeraCopy.InitialDirectory = @"C:\Program Files";
+				ofdTeraCopy.ShowDialog ( );
+				strTeraCopyPath = ofdTeraCopy.FileName;
 				return;
 			}
 
@@ -969,7 +1015,7 @@ namespace Movie_File_Merger
 							sOldTargetPath = sTargetPath;
 						}
 						if ( !bSourceListOpen ) {
-							sSourceListFileName = "TeraCopy List - " + tbNickName.Text + " " +
+							sSourceListFileName = "TeraCopy List - " + strNickName + " " +
 							                      StandardizeDate(DateTime.Now) +  " " +
 							                      StandardizeTime(DateTime.Now) + " " +
 							                      sTargetPath.Replace( "\\", " - " ).Replace( ':', ' ' ) +
@@ -1007,7 +1053,7 @@ namespace Movie_File_Merger
 				DoTeraCopy( sSourceListFileName, sOldTargetPath );
 			}
 			if ( bCopiedOrMovedSomething ) {
-				if ( File.Exists ( tbTeraCopyPath.Text ) ) {
+				if ( File.Exists ( strTeraCopyPath ) ) {
 					ShowInfo( "Finished processing..." );
 				}
 			}
@@ -1027,13 +1073,13 @@ namespace Movie_File_Merger
 			const string sOptions = " /SkipAll /Close ";
 			
 			if (rbCopy.Checked) {
-					System.Diagnostics.Process.Start ( tbTeraCopyPath.Text, "Copy *\"" + 
+					System.Diagnostics.Process.Start ( strTeraCopyPath, "Copy *\"" + 
 					                                  sSourceListFile + "\" \"" + sTargetPath + "\" " + sOptions );
 					LogMessage( "Add Source List", Color.Purple,  "TeraCopy " + 
 					            sSourceListFile + " -> " + sTargetPath + sOptions );
 			}
 			else {
-					System.Diagnostics.Process.Start ( tbTeraCopyPath.Text, "Move *\"" + 
+					System.Diagnostics.Process.Start ( strTeraCopyPath, "Move *\"" + 
 				                                  sSourceListFile + "\" \"" + sTargetPath + "\" "  + sOptions );
 				LogMessage( "Add Source List", Color.Purple,  "TeraMove " + 
 				            sSourceListFile + " -> " + sTargetPath + sOptions );
@@ -1088,53 +1134,7 @@ namespace Movie_File_Merger
 				ShowInfo ( "Did not find an according file under the Import path." );
 			}
 		}
-		
-		/// <summary>
-		/// Gets the media information of the item dropped on the MediaInfo droparea with MediaInfo.
-		/// The file to be analysed has to be located in the Import folder.
-		/// </summary>
-		void GetMediaInfo( )
-		{
-			bool bMediaInfoedSomething = false;
-			if( !Directory.Exists( strImportFolder ) ) {
-				ShowInfo( "Select a folder with the " + strCollectionType + " to get the media information..." );
-				return;
-			}
 
-			var diImportFolder = new DirectoryInfo( strImportFolder );
-			SearchOption soMovieFileMerger = SearchOption.AllDirectories;
-
-			foreach( FileInfo fiImportFile in diImportFolder.GetFiles( "*", soMovieFileMerger ) ) {
-				if ( !rgxMainExtensions.IsMatch( fiImportFile.Extension.ToLower() ) ) continue;
-				
-				string strImportName = fiImportFile.Name;
-				if ( fiImportFile.Name.LastIndexOf( '.' ) != -1 ) {
-					strImportName = strImportName.Substring( 0, fiImportFile.Name.LastIndexOf( '.' ) );
-				}
-				strImportName = CleanName( strImportName );
-				ListViewItem lviImport = FindItem( lvImport, strImportName );
-
-				if ( lviImport != null ) {
-					if( lviImport.Selected ) {
-						SetStatus( "Getting MediaInfo for " + fiImportFile.Name + "..." );
-						if ( File.Exists ( tbMediaInfoPath.Text ) ) {
-							System.Diagnostics.Process.Start ( tbMediaInfoPath.Text, " \"" + 
-							                                  fiImportFile.FullName + "\"" );
-							bMediaInfoedSomething = true;
-						}
-						else {
-							ShowInfo( "Could not find MediaInfo. You can download it from\n  www.movie-file-merger.org/downloads.html\nDid you install it and set the path in the setting correct?" );
-						}
-						ClearStatus( );
-					}
-				}
-			}
-			if ( !bMediaInfoedSomething ) {
-				ShowInfo ( "Did not find an according file under the Import path." );
-			}
-
-		}
-		
 		/// <summary>
 		/// Extracts the file name from the tool tip.
 		/// </summary>
@@ -1542,7 +1542,7 @@ namespace Movie_File_Merger
 			bool bItemMissing = FindItem( lvThis, lviThis.Text ) == null;
 			bool bHasMediaInfo = lviThis.ToolTipText.Contains ( "Video: " );
 			string sBasicItemInfo = fiFile.Name + "\n" +
-			                    "[" + tbNickName.Text + " " + StandardizeDate( DateTime.Today ) + "]  " ;
+			                    "[" + strNickName + " " + StandardizeDate( DateTime.Today ) + "]  " ;
 			                    
 			
 			string sFileInfo = fiFile.DirectoryName + "\n" + 
@@ -1869,7 +1869,7 @@ namespace Movie_File_Merger
 		void BtnExportListDragDrop( object sender, DragEventArgs e )
 		{
 			sfdMovieFileMerger.FileName =
-				tbNickName.Text + " " +
+				strNickName + " " +
 				(string)lvDragSource.Tag + " " +
 				strCollectionType + " " +
 				StandardizeDate( DateTime.Today ) +
@@ -1921,24 +1921,8 @@ namespace Movie_File_Merger
 				ShowInfo( "Playing is only supported from the Import list." );
 			}
 		}
-		
-		/// <summary>
-		/// An item has been dropped on the Media Info drop area.
-		/// Get the detailed madia info for it.
-		/// </summary>
-		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
-		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
-		void BtnMediaInfoDragDrop( object sender, DragEventArgs e )
-		{
-			if ( (string)lvDragSource.Tag == "Import" ) {
-				GetMediaInfo( );
-			}
-			else {
-				ShowInfo( "Getting the MediaInfo is only supported from the Import list." );
-			}
-		}
-		
-// *****************************************************************************************************************/	
+
+// *****************************************************************************************************************/
 // *************************************************** Lists Interface *********************************************/
 
 		/// <summary>
@@ -1948,9 +1932,19 @@ namespace Movie_File_Merger
 		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
 		void TmrUpdateCountersTick( object sender, EventArgs e )
 		{
-			lvExisting.Columns[0].Text = lvExisting.Items.Count + " Existing " + strCollectionType;
+			if ( strTargetFolder != "" && lvExisting.Columns[0].Text != strTargetFolder ) {
+				lvExisting.Columns[0].Text = strTargetFolder;
+			}
+			else {
+				lvExisting.Columns[0].Text = lvExisting.Items.Count + " Existing " + strCollectionType;
+			}
 			lvGarbage.Columns[0].Text = lvGarbage.Items.Count + " Garbage " + strCollectionType;
-			lvImport.Columns[0].Text = lvImport.Items.Count + " Import " + strCollectionType;
+			if ( strImportFolder != "" && lvImport.Columns[0].Text != strImportFolder ) {
+				lvImport.Columns[0].Text = strImportFolder;
+			}
+			else {
+				lvImport.Columns[0].Text = lvImport.Items.Count + " Import " + strCollectionType;
+			}
 			lvWish.Columns[0].Text = lvWish.Items.Count + " Wish " + strCollectionType;
 			lvMaintenance.Columns[0].Text = lvMaintenance.Items.Count + " Maintenance Items";
 		}
@@ -2349,15 +2343,6 @@ namespace Movie_File_Merger
 			JustScanIt( );
 		}
 
-		/// <summary>
-		/// Update the main window title after the nickname has changed. 
-		/// </summary>
-		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
-		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
-		void TbNickNameTextChanged(object sender, EventArgs e)
-		{
-			Text = tbNickName.Text + " - Movie File Merger";
-		}
 	
 // *****************************************************************************************************************/	
 // ***************************************** Maintenance Tab Section ***********************************************/
@@ -2732,6 +2717,7 @@ namespace Movie_File_Merger
 		void CobSearchInfoSelectedIndexChanged(object sender, EventArgs e)
 		{
 			btnSearchInfo.Text = cobSearchInfo.Text;
+			SaveXmlSettings ( );
 		}
 
 		/// <summary>
@@ -2742,6 +2728,7 @@ namespace Movie_File_Merger
 		void CobSearchDownloadSelectedIndexChanged(object sender, EventArgs e)
 		{
 			btnSearchDownload.Text = cobSearchDownload.Text;
+			SaveXmlSettings ( );
 		}
 
 		/// <summary>
@@ -2803,6 +2790,16 @@ namespace Movie_File_Merger
 		void BtnEditClick(object sender, EventArgs e)
 		{
 			cobCriteria.Text = GetCriteriaRegEx( cobCriteria.Text );
+		}
+
+		/// <summary>
+		/// Some settings have been changed, save them...
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void SettingsChanged(object sender, EventArgs e)
+		{
+			SaveXmlSettings ( );
 		}
 	}
 }
