@@ -40,7 +40,7 @@ namespace Movie_File_Merger
 		string[] saCollections = {"Miscellaneous", "Adults", "Movies", "Documentaries", "Series", "Clips"}; // all collections
 		string strCollectionType = "Miscellaneous";  // the active collection type
 		MediaInfo miThis = new MediaInfo( );  // detailed information about the video file from MediaInfo
-
+		
 		// item colors		
 		Color GarbageColor = Color.Red;
 		Color LowResColor = Color.IndianRed;
@@ -67,6 +67,9 @@ namespace Movie_File_Merger
 		string strCollectionsPath = Path.Combine( Path.GetDirectoryName(Application.StartupPath), @"MFM Collections\" );
 		string strTeraCopyListsPath = "";
 		string strXmlFilePath = "";
+		
+		string strImportFolder = "";
+		string strTargetFolder = "";
 		
 		// regular expressions to filter the messed up file names
 		Regex rgxMainExtensions;  // to find the main files
@@ -128,12 +131,12 @@ namespace Movie_File_Merger
 			
 			SetColumnWidth( );
 			// set the button colors in the list tab
-			btnGarbage.BackColor = GarbageColor;
-			btnLowRes.BackColor = LowResColor;
-			btnExisting.BackColor = ExistingColor;
-			btnHigherRes.BackColor = HigherResColor;
-			btnWish.BackColor = WishColor;
-			btnToConsider.BackColor = NeutralColor;
+			lvGarbage.BackColor = GarbageColor;
+			lvExisting.BackColor = ExistingColor;
+			lvWish.BackColor = WishColor;
+			
+			cobMinimumResolution.BackColor = LowResColor;
+			cbGetHigherRes.BackColor = HigherResColor;
 			
 			// set the button and lable colors in the maintenance tab
 			btnBadDocu.BackColor = BadDocuColor;
@@ -364,7 +367,6 @@ namespace Movie_File_Merger
 			if ( this.WindowState == FormWindowState.Minimized ) {	// Not if minimized
 				return;
 			}
-			scFolders.SplitterDistance = scFolders.Size.Width / 2;
 			scHorizontal.SplitterDistance = scHorizontal.Size.Height / 2;
 		}
 		
@@ -425,13 +427,10 @@ namespace Movie_File_Merger
 			tbNickName.Text = readXmlSetting ( xmlSettings, "/MFMSettings/General/NickName", "Anonymous" );
 			cobSearchInfo.Text = readXmlSetting ( xmlSettings, "/MFMSettings/General/SeachInfo", "IMDb" );
 			cobSearchDownload.Text = readXmlSetting ( xmlSettings, "/MFMSettings/General/SeachDownload", "Torrentz" );
-			tbToolTipRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/General/ToolTipRegex", "Enter a regular expression..." );
 			cbGetHigherRes.Checked = readXmlSetting ( xmlSettings, "/MFMSettings/General/GetHigherRes", "True" ) == "True";
-			cbKeepFolders.Checked = readXmlSetting ( xmlSettings, "/MFMSettings/General/KeepFolders", "False" ) == "True";
-			cbMediaInfo.Checked = readXmlSetting ( xmlSettings, "/MFMSettings/General/MediaInfo", "True" ) == "True";
 			lblLastChecked.Text = readXmlSetting ( xmlSettings, "/MFMSettings/General/LastChecked", "Last Checked: Never" );
 			cobCheckForUpdates.Text = readXmlSetting ( xmlSettings, "/MFMSettings/General/CheckForUpdates", "Last Checked: Never" );
-			cobMinimumResolution.Text = readXmlSetting ( xmlSettings, "/MFMSettings/General/MinimumResolution", "Minimum 720p" );
+			cobMinimumResolution.Text = readXmlSetting ( xmlSettings, "/MFMSettings/General/MinimumResolution", " > 720p (HD)" );
 			
 			// Considered Files settings 
 			tbMainExtensionsRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/ConsideredFiles/MainExtensionsRegex", @"avi|mkv|mp4" );
@@ -475,10 +474,7 @@ namespace Movie_File_Merger
 				writer.WriteElementString ( "NickName", tbNickName.Text );
 				writer.WriteElementString ( "SeachInfo", cobSearchInfo.Text );
 				writer.WriteElementString ( "SeachDownload", cobSearchDownload.Text );
-				writer.WriteElementString ( "ToolTipRegex", tbToolTipRegex.Text );
 				writer.WriteElementString ( "GetHigherRes", cbGetHigherRes.Checked.ToString() );
-				writer.WriteElementString ( "KeepFolders", cbKeepFolders.Checked.ToString() );
-				writer.WriteElementString ( "MediaInfo", cbMediaInfo.Checked.ToString() );
 				writer.WriteElementString ( "LastChecked", lblLastChecked.Text );
 				writer.WriteElementString ( "CheckForUpdates", cobCheckForUpdates.Text );
 				writer.WriteElementString ( "MinimumResolution", cobMinimumResolution.Text );
@@ -619,16 +615,17 @@ namespace Movie_File_Merger
 		{
 			int iMinimumResolution = 0;
 			switch ( cobMinimumResolution.Text ) {
-				case "Minimum 360p (nHD)": iMinimumResolution = 640; break;
-				case "Minimum 540p (qHD)": iMinimumResolution = 960; break;
-				case "Minimum 720p (HD)": iMinimumResolution = 1280; break;
-				case "Minimum 900p (HD+)": iMinimumResolution = 1600; break;
-				case "Minimum 1080p (Full HD)": iMinimumResolution = 1920; break;
-				case "Minimum 1440p (WQHD)": iMinimumResolution = 2560; break;
-				case "Minimum 2160p (4K UHD)": iMinimumResolution = 3840; break;
-				case "Minimum 2880p (UHD+)": iMinimumResolution = 5120; break;
-				case "Minimum 4320p (8K FUHD)": iMinimumResolution = 7680; break;
-				case "Minimum 8640p (16k QUHD)": iMinimumResolution = 15360; break;
+				case " > 0p (LD)": iMinimumResolution = 0; break;
+				case " > 360p (nHD)": iMinimumResolution = 640; break;
+				case " > 540p (qHD)": iMinimumResolution = 960; break;
+				case " > 720p (HD)": iMinimumResolution = 1280; break;
+				case " > 900p (HD+)": iMinimumResolution = 1600; break;
+				case " > 1080p (Full HD)": iMinimumResolution = 1920; break;
+				case " > 1440p (WQHD)": iMinimumResolution = 2560; break;
+				case " > 2160p (4K UHD)": iMinimumResolution = 3840; break;
+				case " > 2880p (UHD+)": iMinimumResolution = 5120; break;
+				case " > 4320p (8K FUHD)": iMinimumResolution = 7680; break;
+				case " > 8640p (16k QUHD)": iMinimumResolution = 15360; break;
 				default: iMinimumResolution = 0; break;
 			}
 			return iMinimumResolution;
@@ -842,7 +839,7 @@ namespace Movie_File_Merger
 				}
 				var lviThis = new ListViewItem ( CleanName( strJustName ) );
 				lviThis = AddItemToListView( lvThis, lviThis );
-				MakeToolTip( fiFile, lvThis, lviThis, cbMediaInfo.Checked );
+				MakeToolTip( fiFile, lvThis, lviThis, cbGetHigherRes.Checked );
 				ColorAll( lviThis.Text );  // color again to get info from tooltip
 
 				tspbMFM.Value++;
@@ -889,12 +886,13 @@ namespace Movie_File_Merger
 		{
 			string strTargetPath = "";
 
-			if ( !cbKeepFolders.Checked ) { // move all relevant file into the same folder
-				strTargetPath = tbTargetFolder.Text;
+			// TODO: fix later, just a placeholder for now
+			if ( true ) { // move all relevant file into the same folder
+				strTargetPath = strTargetFolder;
 			}
 			else { // keep the folder structure as it is in the source folder
 				string sSubPath = fiImportFile.DirectoryName.Substring( fiImportFile.DirectoryName.IndexOf( '\\' )+1 );
-				strTargetPath = Path.Combine( tbTargetFolder.Text, sSubPath );
+				strTargetPath = Path.Combine( strTargetFolder, sSubPath );
 			}
 
 			if( !Directory.Exists( strTargetPath ) ) {
@@ -909,13 +907,14 @@ namespace Movie_File_Merger
 		/// </summary>
 		void ProcessImport()
 		{
-			if(!Directory.Exists(tbImportFolder.Text)) {
+			if(!Directory.Exists(strImportFolder)) {
 				ShowInfo("Select a folder with the " + strCollectionType + " to import...\n" + 
-				         "Drop the folder in the Import list." );
+				         "Just drop the folder in the Import list." );
 				return;
 			}
-			if(!Directory.Exists(tbTargetFolder.Text)) {
-				ShowInfo("Select a target folder...");
+			if(!Directory.Exists(strTargetFolder)) {
+				ShowInfo("Select a target folder...\n" +
+				         "Just drop the folder in the Existing list." );
 				return;
 			}
 			
@@ -938,7 +937,7 @@ namespace Movie_File_Merger
 				lviThis.Tag = (lviThis.BackColor == WishColor) || (lviThis.BackColor == HigherResColor);
 			}
 
-			var diImportFolder = new DirectoryInfo( tbImportFolder.Text );
+			var diImportFolder = new DirectoryInfo( strImportFolder );
 			SearchOption soMovieFileMerger = SearchOption.AllDirectories;
 
 			foreach( FileInfo fiImportFile in diImportFolder.GetFiles( "*", soMovieFileMerger ) ) {
@@ -1046,41 +1045,18 @@ namespace Movie_File_Merger
 // ****************************************** Drop Area Handling ***************************************************/
 
 		/// <summary>
-		/// Get the according selected regular expression to fill the Tool Tip regex. 
-		/// </summary>
-		/// <returns>The regular expression to fill the Tool Tip Regex.</returns>
-		string GetSelectionRegEx ( string sSelection)
-		{
-			string sResult = "";
-			switch ( sSelection ) {
-				case "Square Format": sResult = @"\(((4:3)|(5:4)|(3:2)|(1\.[0-5]\d+))\)"; break;
-				case "Wide Screen": sResult = @"\(((16:9)|(1\.85:1)|(1\.[6-9]\d+)|(2\.[0-2]\d+))\)"; break;
-				case "Cinema Scope": sResult = @"\((([23]\.*\d*:1)|(2\.[3-9]\d+)|(3\.\d+))\)"; break;
-				case "699 or narrower": sResult = @"Video:  [1-6]\d{2} x"; break;
-				case "700 or wider": sResult = @"(Video:  [7-9]\d{2} x)|(Video:  [1-9]\d{3} x)"; break;
-				case "1000 or wider": sResult = @"Video:  [1-9]\d{3} x"; break;
-				case "2 Channels": sResult = @"2 channels"; break;
-				case "6 Channels": sResult = @"6 channels"; break;
-				case "Series with \"SxxExx\"": sResult = @".[Ss]\d+[Ee]\d+"; break;
-				case "Movies with \"(Year)\"": sResult = @"\([1-2][0-9]{3}\)"; break;
-				default: sResult = @"^$"; break;
-			}
-			return sResult;
-		}
-		
-		/// <summary>
 		/// Plays the video of the item dropped on the Play droparea with the default system player.
 		/// The file to be played has to be located in the Import folder.
 		/// </summary>
 		void Play( )
 		{
 			bool bPlayedSomething = false;
-			if( !Directory.Exists( tbImportFolder.Text ) ) {
+			if( !Directory.Exists( strImportFolder ) ) {
 				ShowInfo( "Select a folder with " + strCollectionType + " to play..." );
 				return;
 			}
 
-			var diImportFolder = new DirectoryInfo( tbImportFolder.Text );
+			var diImportFolder = new DirectoryInfo( strImportFolder );
 			SearchOption soMovieFileMerger = SearchOption.AllDirectories;
 
 			foreach( FileInfo fiImportFile in diImportFolder.GetFiles( "*", soMovieFileMerger ) ) {
@@ -1120,12 +1096,12 @@ namespace Movie_File_Merger
 		void GetMediaInfo( )
 		{
 			bool bMediaInfoedSomething = false;
-			if( !Directory.Exists( tbImportFolder.Text ) ) {
+			if( !Directory.Exists( strImportFolder ) ) {
 				ShowInfo( "Select a folder with the " + strCollectionType + " to get the media information..." );
 				return;
 			}
 
-			var diImportFolder = new DirectoryInfo( tbImportFolder.Text );
+			var diImportFolder = new DirectoryInfo( strImportFolder );
 			SearchOption soMovieFileMerger = SearchOption.AllDirectories;
 
 			foreach( FileInfo fiImportFile in diImportFolder.GetFiles( "*", soMovieFileMerger ) ) {
@@ -1783,7 +1759,7 @@ namespace Movie_File_Merger
 				e.Effect = e.AllowedEffect;
 			}
 		}
-		
+/*		
 		/// <summary>
 		/// A folder has been dropped on the Target Folder droparea.
 		/// Brows the folder and add the files to the Existing list view.
@@ -1802,8 +1778,8 @@ namespace Movie_File_Merger
 				bool isFolder = ( attr & FileAttributes.Directory ) == FileAttributes.Directory;
 
 				if ( isFolder ) {
-					tbTargetFolder.Text = strPath;
-					AddFolderToListView( lvExisting, tbTargetFolder.Text );
+					strTargetFolder = strPath;
+					AddFolderToListView( lvExisting, strTargetFolder );
 				}
 			}
 			Cursor.Current = Cursors.Default;
@@ -1828,13 +1804,13 @@ namespace Movie_File_Merger
 
 				if ( isFolder ) {
 					lvImport.Items.Clear( );
-					tbImportFolder.Text = strPath;
-					AddFolderToListView( lvImport, tbImportFolder.Text );
+					strImportFolder = strPath;
+					AddFolderToListView( lvImport, strImportFolder );
 				}
 			}
 			Cursor.Current = Cursors.Default;
 		}
-		
+*/		
 		/// <summary>
 		/// The collection type has been changed.  
 		/// Save changed list and load the new ones.
@@ -1866,59 +1842,6 @@ namespace Movie_File_Merger
 		void BtnStartProcessClick(object sender, EventArgs e)
 		{
 			ProcessImport();
-		}
-
-		/// <summary>
-		/// A list view has been dragged over the Tool Tip Regex text box.
-		/// Chec it and set the drop effects accordingly.
-		/// </summary>
-		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
-		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
-		void TbToolTipRegexDragOver( object sender, DragEventArgs e )
-		{
-			if ( e.Data.GetDataPresent( typeof( ListView.SelectedListViewItemCollection ) ) ) {
-				e.Effect = e.AllowedEffect;
-			}
-		}
-		
-		/// <summary>
-		/// A list view has been dropped on the Tool Tip Regex text box.
-		/// Select items in the list view according to the regular expression.
-		/// </summary>
-		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
-		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
-		void TbToolTipRegexDragDrop( object sender, DragEventArgs e )
-		{
-			if ( e.AllowedEffect == DragDropEffects.None )  {
-				return;
-			}
-			if ( e.Data.GetDataPresent( typeof( ListView.SelectedListViewItemCollection ) ) ) {
-				if( SelectInList( lvDragSource, tbToolTipRegex.Text ) == 0 ) {
-					ShowInfo( "Selected no items.");
-				}
-			}
-		}
-		
-		/// <summary>
-		/// Update the Tool Tip Regex once the selection has changed.
-		/// </summary>
-		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
-		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
-		void CobToolTipRegexSelectedIndexChanged(object sender, EventArgs e)
-		{
-			switch ( cobToolTipRegex.Text ) {
-				case "Square Format": tbToolTipRegex.Text = @"\(((4:3)|(5:4)|(3:2)|(1\.[0-5]\d+))\)"; break;
-				case "Wide Screen": tbToolTipRegex.Text = @"\(((16:9)|(1\.85:1)|(1\.[6-9]\d+)|(2\.[0-2]\d+))\)"; break;
-				case "Cinema Scope": tbToolTipRegex.Text = @"\((([23]\.*\d*:1)|(2\.[3-9]\d+)|(3\.\d+))\)"; break;
-				case "Low Resolution": tbToolTipRegex.Text = @"Video:  [1-6]\d{2} x"; break;
-				case "Medium Resolution": tbToolTipRegex.Text = @"Video:  [7-9]\d{2} x"; break;
-				case "High Resolution": tbToolTipRegex.Text = @"Video:  1\d{3} x"; break;
-				case "2 Channels": tbToolTipRegex.Text = @"2 channels"; break;
-				case "6 Channels": tbToolTipRegex.Text = @"6 channels"; break;
-				case "Folder Name": tbToolTipRegex.Text = @"\\YourFolderName\\"; break;
-				case "After 2009": tbToolTipRegex.Text = @"201[0-9]"; break;
-				default: tbToolTipRegex.Text = @""; break;
-			}
 		}
 
 // *****************************************************************************************************************/	
@@ -2160,13 +2083,6 @@ namespace Movie_File_Merger
 			if( e.AllowedEffect == DragDropEffects.None) {
 				return;
 			}
-			if ( lvThis.Tag.ToString() == "Import" && cbGetHigherRes.Checked && !cbMediaInfo.Checked ) {
-				if ( ShowYesNoQuestion ( "To process higher resolution files MediaInfo should be ticked,\n" +
-				                    	 "which takes considerably longer, but is better.\n" +
-				                     	 "Should MFM tick it now?" ) == DialogResult.Yes) {
-					cbMediaInfo.Checked = true;
-				}
-			}
 			Cursor.Current = Cursors.WaitCursor;
 			
 			// from another list view
@@ -2198,23 +2114,29 @@ namespace Movie_File_Merger
 					bool isFolder = ( attr & FileAttributes.Directory ) == FileAttributes.Directory;
 					// from folder
 					if ( isFolder ) {
+						if ( (string)lvThis.Tag == "Existing" ) {
+							iFolderCount++;
+							strTargetFolder = ( iFolderCount == 1 ) ? strPath : Path.GetDirectoryName( strPath );
+						}
 						if ( (string)lvThis.Tag == "Import" ) {
 							iFolderCount++;
-							tbImportFolder.Text = ( iFolderCount == 1 ) ? strPath : 
-							                                              Path.GetDirectoryName( strPath );
+							strImportFolder = ( iFolderCount == 1 ) ? strPath : Path.GetDirectoryName( strPath );
 						}
 						AddFolderToListView( lvThis, strPath );
 					}
 					// from video file
 					else if ( rgxMainExtensions.IsMatch (Path.GetExtension( strPath ).ToLower() ) ) {
 						string strJustName = Path.GetFileNameWithoutExtension( strPath );
+						if ( (string)lvThis.Tag == "Existing" ) {
+							strTargetFolder = Path.GetDirectoryName( strPath );
+						}
 						if ( (string)lvThis.Tag == "Import" ) {
-							tbImportFolder.Text = Path.GetDirectoryName( strPath );
+							strImportFolder = Path.GetDirectoryName( strPath );
 						}
 						var fiFile = new FileInfo( strPath );
 						var lviThis = new ListViewItem( CleanName( strJustName ) );
 						lviThis = AddItemToListView( lvThis, lviThis );
-						MakeToolTip( fiFile, lvThis, lviThis, cbMediaInfo.Checked );
+						MakeToolTip( fiFile, lvThis, lviThis, cbGetHigherRes.Checked );
 						if ( cbGetHigherRes.Checked ) ColorAll( lviThis.Text );  // color again to get info from tooltip
 					}
 					// from txt file
@@ -2238,6 +2160,65 @@ namespace Movie_File_Merger
 // **************************************** Action Bar Interface ***************************************************/ 
 
 		/// <summary>
+		/// A list view has been dragged over the Tool Tip Regex text box.
+		/// Chec it and set the drop effects accordingly.
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void CobCriteriaDragOver( object sender, DragEventArgs e )
+		{
+			if ( e.Data.GetDataPresent( typeof( ListView.SelectedListViewItemCollection ) ) ) {
+				e.Effect = e.AllowedEffect;
+			}
+		}
+		
+		/// <summary>
+		/// A list view has been dropped on the Tool Tip Regex text box.
+		/// Select items in the list view according to the regular expression.
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void CobCriteriaDragDrop( object sender, DragEventArgs e )
+		{
+			if ( e.AllowedEffect == DragDropEffects.None )  {
+				return;
+			}
+			if ( e.Data.GetDataPresent( typeof( ListView.SelectedListViewItemCollection ) ) ) {
+				if( SelectInList( lvDragSource, GetCriteriaRegEx ( cobCriteria.Text ) ) == 0 ) {
+					ShowInfo( "Selected no items.");
+				}
+			}
+		}
+		
+		/// <summary>
+		/// Get the according selected regular expression for the Criteria. 
+		/// </summary>
+		/// <returns>The regular expression to fill the Tool Tip Regex.</returns>
+		string GetCriteriaRegEx ( string sSelection)
+		{
+			string sResult = "";
+			switch ( sSelection ) {
+				case "Square Format": sResult = @"\(((4:3)|(5:4)|(3:2)|(1\.[0-5]\d+))\)"; break;
+				case "Wide Screen": sResult = @"\(((16:9)|(1\.85:1)|(1\.[6-9]\d+)|(2\.[0-2]\d+))\)"; break;
+				case "Cinema Scope": sResult = @"\((([23]\.*\d*:1)|(2\.[3-9]\d+)|(3\.\d+))\)"; break;
+				case "<699 horizontal": sResult = @"Video:  [1-6]\d{2} x"; break;
+				case ">699 & <1000 horizontal": sResult = @"Video:  [7-9]\d{2} x"; break;
+				case ">700 horizontal": sResult = @"(Video:  [7-9]\d{2} x)|(Video:  [1-9]\d{3} x)"; break;
+				case ">1000 horizontal": sResult = @"Video:  [1-9]\d{3} x"; break;
+				case "2 Channels": sResult = @"2 channels"; break;
+				case "6 Channels": sResult = @"6 channels"; break;
+				case "Series with \"SxxExx\"": sResult = @".[Ss]\d+[Ee]\d+"; break;
+				case "Movies with \"(Year)\"": sResult = @"\([1-2][0-9]{3}\)"; break;
+				default: sResult = cobCriteria.Text; break;
+			}
+			return sResult;
+		}
+		
+
+
+
+
+		/// <summary>
 		/// Select all items in all lists according to the selection criteria.
 		/// </summary>
 		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
@@ -2245,10 +2226,10 @@ namespace Movie_File_Merger
 		void BtnSelectClick(object sender, EventArgs e)
 		{
 			int iTotalSelected = 0;
-			iTotalSelected += SelectInList ( lvGarbage,  GetSelectionRegEx ( cobCriteria.Text ) );
-			iTotalSelected += SelectInList ( lvExisting, GetSelectionRegEx (cobCriteria.Text ) );
-			iTotalSelected += SelectInList ( lvWish, GetSelectionRegEx ( cobCriteria.Text ) );
-			iTotalSelected += SelectInList ( lvImport, GetSelectionRegEx ( cobCriteria.Text ) );
+			iTotalSelected += SelectInList ( lvGarbage,  GetCriteriaRegEx ( cobCriteria.Text ) );
+			iTotalSelected += SelectInList ( lvExisting, GetCriteriaRegEx (cobCriteria.Text ) );
+			iTotalSelected += SelectInList ( lvWish, GetCriteriaRegEx ( cobCriteria.Text ) );
+			iTotalSelected += SelectInList ( lvImport, GetCriteriaRegEx ( cobCriteria.Text ) );
 			if( iTotalSelected == 0 ) {
 				ShowInfo( "Selected no items.");
 			}
@@ -2262,11 +2243,11 @@ namespace Movie_File_Merger
 		void BtnBinClick(object sender, EventArgs e)
 		{
 			int iTotalSelected = 0;
-			iTotalSelected += SelectInList ( lvExisting, GetSelectionRegEx ( cobCriteria.Text ) );
+			iTotalSelected += SelectInList ( lvExisting, GetCriteriaRegEx ( cobCriteria.Text ) );
 			CopySelected ( lvExisting, lvGarbage );
-			iTotalSelected += SelectInList ( lvWish, GetSelectionRegEx ( cobCriteria.Text ) );
+			iTotalSelected += SelectInList ( lvWish, GetCriteriaRegEx ( cobCriteria.Text ) );
 			CopySelected ( lvWish, lvGarbage );
-			iTotalSelected += SelectInList ( lvImport, GetSelectionRegEx ( cobCriteria.Text ) );
+			iTotalSelected += SelectInList ( lvImport, GetCriteriaRegEx ( cobCriteria.Text ) );
 			CopySelected ( lvImport, lvGarbage );
 			ShowInfo( "Copied " + iTotalSelected + " items, including duplicates, into the Garbage list.");
 		}
@@ -2279,7 +2260,7 @@ namespace Movie_File_Merger
 		void BtnAddToWishClick ( object sender, EventArgs e )
 		{
 			int iTotalSelected = 0;
-			iTotalSelected += SelectInList ( lvImport, GetSelectionRegEx ( cobCriteria.Text ) );
+			iTotalSelected += SelectInList ( lvImport, GetCriteriaRegEx ( cobCriteria.Text ) );
 			CopySelected ( lvImport, lvWish );
 			ShowInfo ( "Copied " + iTotalSelected + " items, including duplicates, into the Wish list.");
 		}
@@ -2314,10 +2295,10 @@ namespace Movie_File_Merger
 			lvImport.Items.Clear();
 			lvMaintenance.Items.Clear();
 			
-			if ( cbMediaInfo.Checked == false ) {
-				if ( ShowYesNoQuestion ( "MediaInfo is not checked, what will result in not scanning all needed information.\n" + 
-				                    	 "Should I check MeidaInfo before the scan?" ) == DialogResult.Yes ) {
-					cbMediaInfo.Checked = true;
+			if ( cbGetHigherRes.Checked == false ) {
+				if ( ShowYesNoQuestion ( "Get Higher Res is not checked, what will result in not scanning all needed information.\n" + 
+				                    	 "Should I check Get Higher Res before the scan?" ) == DialogResult.Yes ) {
+					cbGetHigherRes.Checked = true;
 				}
 			}
 			bool bScanWithoutQuestions = ShowYesNoQuestion ( "Scan all folders without any further questions?" ) == DialogResult.Yes;
@@ -2337,7 +2318,7 @@ namespace Movie_File_Merger
 					foreach ( var strPath in Directory.GetDirectories ( drive.Name ) ) {
 						if ( strPath.Contains ( strCollectionType ) ) {
 							if ( bScanWithoutQuestions || ShowYesNoQuestion ( "Scan " + strPath + " and add to Existing " + strCollectionType + "?" ) == DialogResult.Yes ) {
-								tbTargetFolder.Text = strPath;
+								strTargetFolder = strPath;
 								SetStatus ( "Scanning " + strPath + "..." );
 								AddFolderToListView ( lvExisting, strPath );
 								if ( bScanWithoutQuestions ) {
@@ -2764,72 +2745,6 @@ namespace Movie_File_Merger
 		}
 
 		/// <summary>
-		/// Select the Existing color in all apropriate lists.
-		/// </summary>
-		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
-		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
-		void BtnExistingClick(object sender, EventArgs e)
-		{
-			SelectColorInList ( lvExisting, ExistingColor );
-			SelectColorInList ( lvWish, ExistingColor );
-			SelectColorInList ( lvImport, ExistingColor );
-		}
-
-		/// <summary>
-		/// Select the Wish color in all apropriate lists.
-		/// </summary>
-		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
-		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
-		void BtnWishClick(object sender, EventArgs e)
-		{
-			SelectColorInList ( lvWish, WishColor );
-			SelectColorInList ( lvImport, WishColor );
-		}
-
-		/// <summary>
-		/// Select the Garbage color in all apropriate lists.
-		/// </summary>
-		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
-		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
-		void BtnGarbageClick(object sender, EventArgs e)
-		{
-			SelectColorInList ( lvGarbage, GarbageColor );
-			SelectColorInList ( lvExisting, GarbageColor );
-			SelectColorInList ( lvWish, GarbageColor );
-			SelectColorInList ( lvImport, GarbageColor );
-		}
-
-		/// <summary>
-		/// Select the Neutral color in all apropriate lists.
-		/// </summary>
-		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
-		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
-		void BtnToConsiderClick(object sender, EventArgs e)
-		{
-			SelectColorInList ( lvImport, NeutralColor );
-		}
-
-		/// <summary>
-		/// Select the HigherRes color in all apropriate lists.
-		/// </summary>
-		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
-		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
-		void BtnHigherResClick(object sender, EventArgs e)
-		{
-			SelectColorInList ( lvImport, HigherResColor );
-		}
-
-		/// <summary>
-		/// Select the LowRes color in all apropriate lists.
-		/// </summary>
-		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
-		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
-		void BtnLowResClick(object sender, EventArgs e)
-		{
-			SelectColorInList ( lvImport, LowResColor );
-		}
-
-		/// <summary>
 		/// Go to the How to Organize Videos on Hard Disks Manual to get a brief description 
 		/// about how a video collection could be organized in general.
 		/// </summary>
@@ -2871,13 +2786,23 @@ namespace Movie_File_Merger
 		}
 		
 		/// <summary>
-		/// Show the Default mouse pointer when the mouse leaves a link picture box..
+		/// Show the Default mouse pointer when the mouse leaves a link picture box.
 		/// </summary>
 		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
 		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
 		void PbPictureLinkMouseLeave(object sender, EventArgs e)
 		{
 			((PictureBox)sender).Cursor = Cursors.Default;
+		}
+		
+		/// <summary>
+		/// Edit the Criteria regex.
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void BtnEditClick(object sender, EventArgs e)
+		{
+			cobCriteria.Text = GetCriteriaRegEx( cobCriteria.Text );
 		}
 	}
 }
