@@ -104,8 +104,7 @@ namespace Movie_File_Merger
 			}
 			sfdMovieFileMerger.InitialDirectory = strCollectionsPath;
 			
-			LoadXmlSettings( );
-			// string input = Microsoft.VisualBasic.Interaction.InputBox("Prompt", "Title", "Default", -1, -1);
+			LoadXmlSettings( false );
 			
 			Text = strNickName + " - Movie File Merger";
 
@@ -413,10 +412,10 @@ namespace Movie_File_Merger
 		/// <summary>
 		/// Loads the XML settings. 
 		/// </summary>
-		void LoadXmlSettings ()
+		void LoadXmlSettings ( bool bReset )
 		{
 			strXmlFilePath = Path.Combine( strPrivatePath, "MFM Settings.xml" );
-			if ( !File.Exists( strXmlFilePath ) ) {
+			if ( !File.Exists( strXmlFilePath ) || bReset ) {
 				using (XmlWriter writer = XmlWriter.Create( strXmlFilePath )) // create a dummy
 				{
 				    writer.WriteStartDocument();
@@ -433,6 +432,7 @@ namespace Movie_File_Merger
 			strNickName = readXmlSetting ( xmlSettings, "/MFMSettings/General/NickName", "Anonymous" );
 			cobSearchInfo.Text = readXmlSetting ( xmlSettings, "/MFMSettings/General/SeachInfo", "IMDb" );
 			cobSearchDownload.Text = readXmlSetting ( xmlSettings, "/MFMSettings/General/SeachDownload", "Torrentz" );
+			cobDoubleClickDefault.Text = readXmlSetting ( xmlSettings, "/MFMSettings/General/DoubleClickDefault", "Play" );
 			cbGetHigherRes.Checked = readXmlSetting ( xmlSettings, "/MFMSettings/General/GetHigherRes", "True" ) == "True";
 			lblLastChecked.Text = readXmlSetting ( xmlSettings, "/MFMSettings/General/LastChecked", "Last Checked: Never" );
 			cobCheckForUpdates.Text = readXmlSetting ( xmlSettings, "/MFMSettings/General/CheckForUpdates", "Last Checked: Never" );
@@ -444,7 +444,7 @@ namespace Movie_File_Merger
 
 			// Name Unification settings 
 			tbCutNameBeforeRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/NameUnification/CutNameBeforeRegex", @"720p|1080p|(cd[1234])|x264|aac|divx|xvid|dvd" );
-			tbOnlyCharactersRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/NameUnification/OnlyCharactersRegex", @"[^a-zA-Z0-9 -'üöä]" );
+			tbOnlyCharactersRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/NameUnification/OnlyCharactersRegex", @"[^\p{L}\p{N} -'ก-์]" );
 			tbToLowerRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/NameUnification/ToLowerRegex", @" On | A | The | Of | And | Or | To | From | For | In | As | At | With " );
 			tbEpisodesIdRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/NameUnification/EpisodesIdRegex", @".s\d+[e ]\d+" );
 			tbGoodDocuNameRegex.Text = readXmlSetting ( xmlSettings, "/MFMSettings/NameUnification/GoodDocuRegex", @".* S[12]\d{3}E\d{1,3} .*$" );
@@ -518,6 +518,7 @@ namespace Movie_File_Merger
 				writer.WriteElementString ( "NickName", strNickName );
 				writer.WriteElementString ( "SeachInfo", cobSearchInfo.Text );
 				writer.WriteElementString ( "SeachDownload", cobSearchDownload.Text );
+				writer.WriteElementString ( "DoubleClickDefault", cobDoubleClickDefault.Text );
 				writer.WriteElementString ( "GetHigherRes", cbGetHigherRes.Checked.ToString() );
 				writer.WriteElementString ( "LastChecked", lblLastChecked.Text );
 				writer.WriteElementString ( "CheckForUpdates", cobCheckForUpdates.Text );
@@ -2021,7 +2022,23 @@ namespace Movie_File_Merger
 		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
 		void LvDoubleClick( object sender, EventArgs e )
 		{
-			SearchInfo( (ListView)sender );
+			switch ( cobDoubleClickDefault.Text ) {
+				case "DoubleClick Default":
+					Play ( );
+					break;
+				case "Play":
+					Play ( );
+					break;
+				case "Search Info":
+					SearchInfo( (ListView)sender );
+					break;
+				case "Search Download":
+					SearchDownload ( (ListView)sender );
+					break;
+				default:
+					Play ( );
+					break;
+			}
 		}
 
 		/// <summary>
@@ -2800,6 +2817,16 @@ namespace Movie_File_Merger
 		void SettingsChanged(object sender, EventArgs e)
 		{
 			SaveXmlSettings ( );
+		}
+
+		/// <summary>
+		/// Reset all settings to their default values.
+		/// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+		void BtnResetSettingsClick(object sender, EventArgs e)
+		{
+			LoadXmlSettings( true );
 		}
 	}
 }

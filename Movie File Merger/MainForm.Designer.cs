@@ -115,6 +115,7 @@ namespace Movie_File_Merger
 			this.pbSettingsBanner = new System.Windows.Forms.PictureBox();
 			this.rtbSettings = new System.Windows.Forms.RichTextBox();
 			this.gbSettingsNameUnification = new System.Windows.Forms.GroupBox();
+			this.btnResetSettings = new System.Windows.Forms.Button();
 			this.lblBadMovieNameRegex = new System.Windows.Forms.Label();
 			this.tbBadMovieNameRegex = new System.Windows.Forms.TextBox();
 			this.lblGoodMovieNameRegex = new System.Windows.Forms.Label();
@@ -162,6 +163,7 @@ namespace Movie_File_Merger
 			this.tspbMFM = new System.Windows.Forms.ToolStripProgressBar();
 			this.ttMovieFileMerger = new System.Windows.Forms.ToolTip(this.components);
 			this.ofdTeraCopy = new System.Windows.Forms.OpenFileDialog();
+			this.cobDoubleClickDefault = new System.Windows.Forms.ComboBox();
 			this.tcMovieFileMerger.SuspendLayout();
 			this.tpSeparateLists.SuspendLayout();
 			this.gbTypeSelection.SuspendLayout();
@@ -1057,9 +1059,10 @@ namespace Movie_File_Merger
 			"Torrent Hound",
 			"Torlock",
 			"Yifi Torrents"});
-			this.cobSearchDownload.Location = new System.Drawing.Point(122, 133);
+			this.cobSearchDownload.Location = new System.Drawing.Point(126, 133);
 			this.cobSearchDownload.Name = "cobSearchDownload";
-			this.cobSearchDownload.Size = new System.Drawing.Size(28, 28);
+			this.cobSearchDownload.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+			this.cobSearchDownload.Size = new System.Drawing.Size(24, 28);
 			this.cobSearchDownload.TabIndex = 48;
 			this.cobSearchDownload.Text = "Torrentz";
 			this.ttMovieFileMerger.SetToolTip(this.cobSearchDownload, "Select where to search for torrents to download the item.");
@@ -1082,7 +1085,7 @@ namespace Movie_File_Merger
 			"Adult DVD Empire"});
 			this.cobSearchInfo.Location = new System.Drawing.Point(770, 133);
 			this.cobSearchInfo.Name = "cobSearchInfo";
-			this.cobSearchInfo.Size = new System.Drawing.Size(28, 28);
+			this.cobSearchInfo.Size = new System.Drawing.Size(24, 28);
 			this.cobSearchInfo.TabIndex = 47;
 			this.cobSearchInfo.Text = "IMDb";
 			this.ttMovieFileMerger.SetToolTip(this.cobSearchInfo, "Select where to search for additional information concerning the item.");
@@ -1472,6 +1475,8 @@ namespace Movie_File_Merger
 			// 
 			this.gbSettingsNameUnification.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
 			| System.Windows.Forms.AnchorStyles.Right)));
+			this.gbSettingsNameUnification.Controls.Add(this.cobDoubleClickDefault);
+			this.gbSettingsNameUnification.Controls.Add(this.btnResetSettings);
 			this.gbSettingsNameUnification.Controls.Add(this.lblBadMovieNameRegex);
 			this.gbSettingsNameUnification.Controls.Add(this.tbBadMovieNameRegex);
 			this.gbSettingsNameUnification.Controls.Add(this.lblGoodMovieNameRegex);
@@ -1502,6 +1507,17 @@ namespace Movie_File_Merger
 			this.gbSettingsNameUnification.Text = "Name Unification Regular Expressions";
 			this.ttMovieFileMerger.SetToolTip(this.gbSettingsNameUnification, "Name Unification Regular Expressions are used to standardize and cleanup the name" +
 		"s as much as possible.");
+			// 
+			// btnResetSettings
+			// 
+			this.btnResetSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnResetSettings.Location = new System.Drawing.Point(709, 26);
+			this.btnResetSettings.Name = "btnResetSettings";
+			this.btnResetSettings.Size = new System.Drawing.Size(182, 33);
+			this.btnResetSettings.TabIndex = 39;
+			this.btnResetSettings.Text = "Reset All Settings";
+			this.btnResetSettings.UseVisualStyleBackColor = true;
+			this.btnResetSettings.Click += new System.EventHandler(this.BtnResetSettingsClick);
 			// 
 			// lblBadMovieNameRegex
 			// 
@@ -1650,11 +1666,11 @@ namespace Movie_File_Merger
 			this.tbToLowerRegex.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
 			| System.Windows.Forms.AnchorStyles.Right)));
 			this.tbToLowerRegex.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.tbToLowerRegex.Location = new System.Drawing.Point(182, 65);
+			this.tbToLowerRegex.Location = new System.Drawing.Point(198, 65);
 			this.tbToLowerRegex.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.tbToLowerRegex.Multiline = true;
 			this.tbToLowerRegex.Name = "tbToLowerRegex";
-			this.tbToLowerRegex.Size = new System.Drawing.Size(709, 26);
+			this.tbToLowerRegex.Size = new System.Drawing.Size(504, 26);
 			this.tbToLowerRegex.TabIndex = 22;
 			this.tbToLowerRegex.Text = " On | A | The | Of | And | Or | To | From | For | In | As | At | With";
 			this.ttMovieFileMerger.SetToolTip(this.tbToLowerRegex, resources.GetString("tbToLowerRegex.ToolTip"));
@@ -1679,7 +1695,7 @@ namespace Movie_File_Merger
 			this.tbOnlyCharactersRegex.Name = "tbOnlyCharactersRegex";
 			this.tbOnlyCharactersRegex.Size = new System.Drawing.Size(248, 26);
 			this.tbOnlyCharactersRegex.TabIndex = 24;
-			this.tbOnlyCharactersRegex.Text = "[^a-zA-Z0-9 -\'üöä]";
+			this.tbOnlyCharactersRegex.Text = "[^\\p{L}\\p{N} -\'ก-์]";
 			this.ttMovieFileMerger.SetToolTip(this.tbOnlyCharactersRegex, resources.GetString("tbOnlyCharactersRegex.ToolTip"));
 			// 
 			// lblEpisodesId
@@ -1723,7 +1739,7 @@ namespace Movie_File_Merger
 			this.tbCutNameBeforeRegex.Location = new System.Drawing.Point(198, 29);
 			this.tbCutNameBeforeRegex.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.tbCutNameBeforeRegex.Name = "tbCutNameBeforeRegex";
-			this.tbCutNameBeforeRegex.Size = new System.Drawing.Size(693, 26);
+			this.tbCutNameBeforeRegex.Size = new System.Drawing.Size(504, 26);
 			this.tbCutNameBeforeRegex.TabIndex = 21;
 			this.tbCutNameBeforeRegex.Text = "720p|1080p|(cd[12])|x264|aac|divx|xvid";
 			this.ttMovieFileMerger.SetToolTip(this.tbCutNameBeforeRegex, "The Cut Name Before regular expression tells MFM what not to include in the name." +
@@ -1762,6 +1778,8 @@ namespace Movie_File_Merger
 			// 
 			// tbAddonExtensionsRegex
 			// 
+			this.tbAddonExtensionsRegex.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+			| System.Windows.Forms.AnchorStyles.Right)));
 			this.tbAddonExtensionsRegex.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.tbAddonExtensionsRegex.Location = new System.Drawing.Point(679, 27);
 			this.tbAddonExtensionsRegex.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -2085,6 +2103,26 @@ namespace Movie_File_Merger
 			// 
 			this.ofdTeraCopy.FileName = "C:\\Program Files\\TeraCopy\\TeraCopy.exe";
 			// 
+			// cobDoubleClickDefault
+			// 
+			this.cobDoubleClickDefault.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+			this.cobDoubleClickDefault.AllowDrop = true;
+			this.cobDoubleClickDefault.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.cobDoubleClickDefault.BackColor = System.Drawing.SystemColors.Control;
+			this.cobDoubleClickDefault.FormattingEnabled = true;
+			this.cobDoubleClickDefault.Items.AddRange(new object[] {
+			"DoubleClick Default",
+			"Play",
+			"Search Info",
+			"Search Download"});
+			this.cobDoubleClickDefault.Location = new System.Drawing.Point(709, 64);
+			this.cobDoubleClickDefault.MaxDropDownItems = 15;
+			this.cobDoubleClickDefault.Name = "cobDoubleClickDefault";
+			this.cobDoubleClickDefault.Size = new System.Drawing.Size(182, 28);
+			this.cobDoubleClickDefault.TabIndex = 45;
+			this.cobDoubleClickDefault.Text = "DoubleClick Default";
+			this.ttMovieFileMerger.SetToolTip(this.cobDoubleClickDefault, "Select a predefined Tool Tip Regex,\r\nfor the Select, Bin, or Wish actions.");
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -2278,5 +2316,7 @@ namespace Movie_File_Merger
 		private System.Windows.Forms.ComboBox cobSearchDownload;
 		private System.Windows.Forms.ComboBox cobSearchInfo;
 		private System.Windows.Forms.OpenFileDialog ofdTeraCopy;
+		private System.Windows.Forms.Button btnResetSettings;
+		private System.Windows.Forms.ComboBox cobDoubleClickDefault;
 	}
 }
