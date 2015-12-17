@@ -115,6 +115,7 @@ namespace Movie_File_Merger
 			this.pbSettingsBanner = new System.Windows.Forms.PictureBox();
 			this.rtbSettings = new System.Windows.Forms.RichTextBox();
 			this.gbSettingsNameUnification = new System.Windows.Forms.GroupBox();
+			this.cobDoubleClickDefault = new System.Windows.Forms.ComboBox();
 			this.btnResetSettings = new System.Windows.Forms.Button();
 			this.lblBadMovieNameRegex = new System.Windows.Forms.Label();
 			this.tbBadMovieNameRegex = new System.Windows.Forms.TextBox();
@@ -163,7 +164,6 @@ namespace Movie_File_Merger
 			this.tspbMFM = new System.Windows.Forms.ToolStripProgressBar();
 			this.ttMovieFileMerger = new System.Windows.Forms.ToolTip(this.components);
 			this.ofdTeraCopy = new System.Windows.Forms.OpenFileDialog();
-			this.cobDoubleClickDefault = new System.Windows.Forms.ComboBox();
 			this.tcMovieFileMerger.SuspendLayout();
 			this.tpSeparateLists.SuspendLayout();
 			this.gbTypeSelection.SuspendLayout();
@@ -1393,7 +1393,9 @@ namespace Movie_File_Merger
 			// tpSettings
 			// 
 			this.tpSettings.BackColor = System.Drawing.SystemColors.Control;
+			this.tpSettings.Controls.Add(this.cobDoubleClickDefault);
 			this.tpSettings.Controls.Add(this.pbSeetingsHowTo);
+			this.tpSettings.Controls.Add(this.btnResetSettings);
 			this.tpSettings.Controls.Add(this.pbSettingsUserManual);
 			this.tpSettings.Controls.Add(this.pbSettingsBanner);
 			this.tpSettings.Controls.Add(this.rtbSettings);
@@ -1460,11 +1462,11 @@ namespace Movie_File_Merger
 			this.rtbSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
 			| System.Windows.Forms.AnchorStyles.Left) 
 			| System.Windows.Forms.AnchorStyles.Right)));
-			this.rtbSettings.Location = new System.Drawing.Point(9, 449);
+			this.rtbSettings.Location = new System.Drawing.Point(9, 483);
 			this.rtbSettings.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.rtbSettings.Name = "rtbSettings";
 			this.rtbSettings.ReadOnly = true;
-			this.rtbSettings.Size = new System.Drawing.Size(903, 108);
+			this.rtbSettings.Size = new System.Drawing.Size(903, 67);
 			this.rtbSettings.TabIndex = 3;
 			this.rtbSettings.TabStop = false;
 			this.rtbSettings.Text = "";
@@ -1475,8 +1477,6 @@ namespace Movie_File_Merger
 			// 
 			this.gbSettingsNameUnification.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
 			| System.Windows.Forms.AnchorStyles.Right)));
-			this.gbSettingsNameUnification.Controls.Add(this.cobDoubleClickDefault);
-			this.gbSettingsNameUnification.Controls.Add(this.btnResetSettings);
 			this.gbSettingsNameUnification.Controls.Add(this.lblBadMovieNameRegex);
 			this.gbSettingsNameUnification.Controls.Add(this.tbBadMovieNameRegex);
 			this.gbSettingsNameUnification.Controls.Add(this.lblGoodMovieNameRegex);
@@ -1508,12 +1508,32 @@ namespace Movie_File_Merger
 			this.ttMovieFileMerger.SetToolTip(this.gbSettingsNameUnification, "Name Unification Regular Expressions are used to standardize and cleanup the name" +
 		"s as much as possible.");
 			// 
+			// cobDoubleClickDefault
+			// 
+			this.cobDoubleClickDefault.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+			this.cobDoubleClickDefault.AllowDrop = true;
+			this.cobDoubleClickDefault.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.cobDoubleClickDefault.BackColor = System.Drawing.SystemColors.Control;
+			this.cobDoubleClickDefault.FormattingEnabled = true;
+			this.cobDoubleClickDefault.Items.AddRange(new object[] {
+			"DoubleClick Default",
+			"Play",
+			"Search Info",
+			"Search Download"});
+			this.cobDoubleClickDefault.Location = new System.Drawing.Point(7, 447);
+			this.cobDoubleClickDefault.MaxDropDownItems = 15;
+			this.cobDoubleClickDefault.Name = "cobDoubleClickDefault";
+			this.cobDoubleClickDefault.Size = new System.Drawing.Size(182, 28);
+			this.cobDoubleClickDefault.TabIndex = 45;
+			this.cobDoubleClickDefault.Text = "DoubleClick Default";
+			this.ttMovieFileMerger.SetToolTip(this.cobDoubleClickDefault, "Select a predefined Tool Tip Regex,\r\nfor the Select, Bin, or Wish actions.");
+			// 
 			// btnResetSettings
 			// 
 			this.btnResetSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.btnResetSettings.Location = new System.Drawing.Point(709, 26);
+			this.btnResetSettings.Location = new System.Drawing.Point(729, 447);
 			this.btnResetSettings.Name = "btnResetSettings";
-			this.btnResetSettings.Size = new System.Drawing.Size(182, 33);
+			this.btnResetSettings.Size = new System.Drawing.Size(182, 28);
 			this.btnResetSettings.TabIndex = 39;
 			this.btnResetSettings.Text = "Reset All Settings";
 			this.btnResetSettings.UseVisualStyleBackColor = true;
@@ -2003,7 +2023,7 @@ namespace Movie_File_Merger
 			this.lblCopyLeft.Name = "lblCopyLeft";
 			this.lblCopyLeft.Size = new System.Drawing.Size(200, 23);
 			this.lblCopyLeft.TabIndex = 2;
-			this.lblCopyLeft.Text = "© 2015 Modi";
+			this.lblCopyLeft.Text = "© 2016 Modi";
 			this.lblCopyLeft.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// rtbCopyright
@@ -2102,26 +2122,6 @@ namespace Movie_File_Merger
 			// ofdTeraCopy
 			// 
 			this.ofdTeraCopy.FileName = "C:\\Program Files\\TeraCopy\\TeraCopy.exe";
-			// 
-			// cobDoubleClickDefault
-			// 
-			this.cobDoubleClickDefault.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
-			this.cobDoubleClickDefault.AllowDrop = true;
-			this.cobDoubleClickDefault.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.cobDoubleClickDefault.BackColor = System.Drawing.SystemColors.Control;
-			this.cobDoubleClickDefault.FormattingEnabled = true;
-			this.cobDoubleClickDefault.Items.AddRange(new object[] {
-			"DoubleClick Default",
-			"Play",
-			"Search Info",
-			"Search Download"});
-			this.cobDoubleClickDefault.Location = new System.Drawing.Point(709, 64);
-			this.cobDoubleClickDefault.MaxDropDownItems = 15;
-			this.cobDoubleClickDefault.Name = "cobDoubleClickDefault";
-			this.cobDoubleClickDefault.Size = new System.Drawing.Size(182, 28);
-			this.cobDoubleClickDefault.TabIndex = 45;
-			this.cobDoubleClickDefault.Text = "DoubleClick Default";
-			this.ttMovieFileMerger.SetToolTip(this.cobDoubleClickDefault, "Select a predefined Tool Tip Regex,\r\nfor the Select, Bin, or Wish actions.");
 			// 
 			// MainForm
 			// 
