@@ -27,6 +27,7 @@ using System.Text.RegularExpressions;
 using System.Globalization;
 using System.Runtime.Serialization.Formatters.Binary;
 using MediaInfoLib;
+using System.Threading;
 
 namespace Movie_File_Merger
 {
@@ -83,6 +84,13 @@ namespace Movie_File_Merger
 		Regex rgxToLower;  // words in the name that should be lower case, like the, to, for, of
 		Regex rgxMultiSpace = new Regex( @"[ ]{2,}" );  // two spaces in a row
 		Regex rgxNumber = new Regex( @"\d+" );  // any integer number
+		
+		// Thread Stuff
+		private delegate void UpdateListViewDelegate( string strName, FileInfo fiFile, ListView lvThis );
+		private delegate void UpdateStatusDelegate( string strMessage );
+		ListView lvToAddFiles = null;
+		string strGlobalFolderName;
+		
 		
 		/// <summary>
 		/// MFM main form to selectivley combine video collections
@@ -308,8 +316,14 @@ namespace Movie_File_Merger
 		/// Logs an informal message and asks the user for a decission.
 		/// </summary>
 		/// <param name="strMessage">The informal message.</param>
-		void LogInfo( string strMessage )
+		private void LogInfo( string strMessage )
 		{
+		    if ( this.InvokeRequired )
+		    {
+		        // we were called on a worker thread marshal the call to the user interface thread
+		        this.Invoke( new UpdateStatusDelegate( LogInfo ), new object[] { strMessage } );
+		        return;
+		    }
 			LogMessage( "Info", Color.Blue, strMessage );
 		}
 		
@@ -852,6 +866,48 @@ namespace Movie_File_Merger
 			ClearStatus( );
 		}
 		
+		
+		private void DoUpdate( string strName, FileInfo fiFile, ListView lvThis )
+		{
+		    if ( this.InvokeRequired )
+		    {
+		        // we were called on a worker thread marshal the call to the user interface thread
+		        this.Invoke( new UpdateListViewDelegate( DoUpdate ), new object[] { strName, fiFile, lvThis } );
+		        return;
+		    }
+		
+		    // this code can only be reached by the user interface thread
+			var lviThis = new ListViewItem ( strName );
+			lviThis = AddItemToListView( lvThis, lviThis );
+			MakeToolTip( fiFile, lvThis, lviThis, true );
+			ColorAll( lviThis.Text );  // color again to get info from tooltip
+			tspbMFM.Value++;
+		} 		
+		
+		
+		void lvAddFilesInThread ( ) 
+		{
+			var diFolder = new DirectoryInfo( strGlobalFolderName );
+			SearchOption soMovieFileMerger = SearchOption.AllDirectories;
+			
+			foreach( FileInfo fiFile in diFolder.GetFiles( "*", soMovieFileMerger ) ) {
+				if( !rgxMainExtensions.IsMatch( fiFile.Extension.ToLower() ) ) {
+					continue;
+				}
+				string strJustName = fiFile.Name;
+				if ( strJustName.LastIndexOf( '.' ) != -1 ) {
+					strJustName = strJustName.Substring( 0, strJustName.LastIndexOf( '.' ) );
+				}
+				DoUpdate ( CleanName( strJustName ), fiFile, lvToAddFiles );
+			}
+			MessageBox.Show( " Finished adding files...", "Movie File Merger - Info", 
+			                MessageBoxButtons.OK, MessageBoxIcon.Asterisk );
+			Cursor.Current = Cursors.Default;
+			ClearStatus();
+			tspbMFM.Value = 0;
+		}
+		
+		
 		/// <summary>
 		/// Adds items contained in a folder to a list view.
 		/// </summary>
@@ -866,28 +922,20 @@ namespace Movie_File_Merger
 
 			lvThis.BeginUpdate( );
 			lvThis.Sorting = SortOrder.None;
-			tspbMFM.Maximum = 1;
+			tspbMFM.Maximum = 0;
 			tspbMFM.Value = 0;
 			foreach( FileInfo fiFile in diFolder.GetFiles( "*", soMovieFileMerger ) ) {
 				if( rgxMainExtensions.IsMatch( fiFile.Extension.ToLower() ) ) {
 					tspbMFM.Maximum++;
 				}
 			}
-			foreach( FileInfo fiFile in diFolder.GetFiles( "*", soMovieFileMerger ) ) {
-				if( !rgxMainExtensions.IsMatch( fiFile.Extension.ToLower() ) ) {
-					continue;
-				}
-				string strJustName = fiFile.Name;
-				if ( strJustName.LastIndexOf( '.' ) != -1 ) {
-					strJustName = strJustName.Substring( 0, strJustName.LastIndexOf( '.' ) );
-				}
-				var lviThis = new ListViewItem ( CleanName( strJustName ) );
-				lviThis = AddItemToListView( lvThis, lviThis );
-				MakeToolTip( fiFile, lvThis, lviThis, cbGetHigherRes.Checked );
-				ColorAll( lviThis.Text );  // color again to get info from tooltip
 
-				tspbMFM.Value++;
-			}
+			// Add the files in a tread, so that not every freezes all the time
+			lvToAddFiles = lvThis;
+			strGlobalFolderName = strFolderName;
+			var thrdAddFilesToListView = new Thread ( lvAddFilesInThread );
+			thrdAddFilesToListView.Start( );
+			
 			if ( rbSeries.Checked ) {
 				if ( (string)lvThis.Tag == "Garbage" ) {
 					ColorExistingAndUp( );
@@ -898,9 +946,6 @@ namespace Movie_File_Merger
 			}
 			lvThis.Sorting = SortOrder.Ascending;
 			lvThis.EndUpdate ();
-			tspbMFM.Value = 0;
-			SetStatus( "Added all files!" );
-			ClearStatus( );
 		}
 		
 		/// <summary>
@@ -2120,20 +2165,27 @@ namespace Movie_File_Merger
 			// from folders or files
 			if ( e.Data.GetDataPresent( DataFormats.FileDrop ) ) {
 				int iFolderCount = 0;
+				string strConsideredFolder = "";
 				foreach ( string strPath in (string[])e.Data.GetData( DataFormats.FileDrop ) ) {
 					FileAttributes attr = File.GetAttributes( strPath );
 					bool isFolder = ( attr & FileAttributes.Directory ) == FileAttributes.Directory;
 					// from folder
 					if ( isFolder ) {
+						iFolderCount++;
 						if ( (string)lvThis.Tag == "Existing" ) {
-							iFolderCount++;
 							strTargetFolder = ( iFolderCount == 1 ) ? strPath : Path.GetDirectoryName( strPath );
 						}
 						if ( (string)lvThis.Tag == "Import" ) {
-							iFolderCount++;
 							strImportFolder = ( iFolderCount == 1 ) ? strPath : Path.GetDirectoryName( strPath );
 						}
-						AddFolderToListView( lvThis, strPath );
+						if ( iFolderCount == 1 ) {
+							AddFolderToListView( lvThis, strPath );
+							strConsideredFolder = strPath;
+						}
+						else if ( iFolderCount == 2 ) {
+							ShowInfo ( "You have dropped more than one single folders.\n" + 
+							           "Only " + strConsideredFolder + " has been added to the list!" );
+						}
 					}
 					// from video file
 					else if ( rgxMainExtensions.IsMatch (Path.GetExtension( strPath ).ToLower() ) ) {
@@ -2290,6 +2342,36 @@ namespace Movie_File_Merger
 			ProcessImport ( );
 		}
 		
+		void ExistingJustScanItInThread( ) 
+		{
+			SearchOption soMovieFileMerger = SearchOption.AllDirectories;
+			foreach (var drive in DriveInfo.GetDrives()) {
+				foreach ( var strPath in Directory.GetDirectories ( drive.Name ) ) {
+					if ( strPath.Contains ( strCollectionType ) ) {
+						strTargetFolder = strPath;
+						LogInfo ( "Scanning folder " + strPath );
+						var diFolder = new DirectoryInfo( strPath );
+						foreach( FileInfo fiFile in diFolder.GetFiles( "*", soMovieFileMerger ) ) {
+							if( !rgxMainExtensions.IsMatch( fiFile.Extension.ToLower() ) ) {
+								continue;
+							}
+							string strJustName = fiFile.Name;
+							if ( strJustName.LastIndexOf( '.' ) != -1 ) {
+								strJustName = strJustName.Substring( 0, strJustName.LastIndexOf( '.' ) );
+							}
+							DoUpdate ( CleanName( strJustName ), fiFile, lvExisting );
+						}
+					}
+				}
+			}
+			MessageBox.Show( "Finished sanning all concerned folders.\n" +
+			           	     "Check the log tab for detailed information...", "Movie File Merger - Info", 
+			                MessageBoxButtons.OK, MessageBoxIcon.Asterisk );
+			Cursor.Current = Cursors.Default;
+			ClearStatus();
+			tspbMFM.Value = 0;
+		}
+		
 		
 		/// <summary>
 		/// Just scan everything and put it in the Existing lists. 
@@ -2300,54 +2382,27 @@ namespace Movie_File_Merger
 			SaveChangedListView( lvGarbage );
 			SaveChangedListView( lvWish );
 
-			lvGarbage.Items.Clear(); 			// Clear all lists
-			lvExisting.Items.Clear();
-			lvWish.Items.Clear();
-			lvImport.Items.Clear();
-			lvMaintenance.Items.Clear();
-			
-			if ( cbGetHigherRes.Checked == false ) {
-				if ( ShowYesNoQuestion ( "Get Higher Res is not checked, what will result in not scanning all needed information.\n" + 
-				                    	 "Should I check Get Higher Res before the scan?" ) == DialogResult.Yes ) {
-					cbGetHigherRes.Checked = true;
-				}
-			}
-			bool bScanWithoutQuestions = ShowYesNoQuestion ( "Scan all folders without any further questions?" ) == DialogResult.Yes;
-			foreach ( string strCollection in saCollections ) {
-				strCollectionType = strCollection;
-				LogMessage ( "Info", Color.Aquamarine, "Just scanning " + strCollectionType + "..." );
-				switch ( strCollectionType ) {
-						case "Miscellaneous": rbMiscellaneous.Checked = true; break;
-						case "Adults": rbAdults.Checked = true; break;
-						case "Movies": rbMovies.Checked = true; break;
-						case "Documentaries": rbDocumentaries.Checked = true; break;
-						case "Series": rbSeries.Checked = true; break;
-						case "Clips": rbClips.Checked = true; break;
-				}
-				foreach (var drive in DriveInfo.GetDrives())
-				{
-					foreach ( var strPath in Directory.GetDirectories ( drive.Name ) ) {
-						if ( strPath.Contains ( strCollectionType ) ) {
-							if ( bScanWithoutQuestions || ShowYesNoQuestion ( "Scan " + strPath + " and add to Existing " + strCollectionType + "?" ) == DialogResult.Yes ) {
-								strTargetFolder = strPath;
-								SetStatus ( "Scanning " + strPath + "..." );
-								AddFolderToListView ( lvExisting, strPath );
-								if ( bScanWithoutQuestions ) {
-									string strName = lvExisting.Tag + " " +  strCollectionType;
-									if ( bExistingChanged ) {
-										SerializeListView( lvExisting, Path.Combine( strPrivatePath, strName + ".slv" ) );
-									}
-								}
-								else {
-									SaveChangedListView ( lvExisting );
-								}
+			LogMessage ( "Info", Color.Aquamarine, "Just scanning " + strCollectionType + "..." );
+
+			SearchOption soMovieFileMerger = SearchOption.AllDirectories;
+			tspbMFM.Maximum = 0;
+			tspbMFM.Value = 0;
+			foreach (var drive in DriveInfo.GetDrives()) {
+				foreach ( var strPath in Directory.GetDirectories ( drive.Name ) ) {
+					if ( strPath.Contains ( strCollectionType ) ) {
+						var diFolder = new DirectoryInfo( strPath );
+						foreach( FileInfo fiFile in diFolder.GetFiles( "*", soMovieFileMerger ) ) {
+							if( !rgxMainExtensions.IsMatch( fiFile.Extension.ToLower() ) ) {
+								continue;
 							}
+							tspbMFM.Maximum++;
 						}
 					}
 				}
 			}
-			ShowInfo ( "Finished sanning all concerned folders.\n" +
-			           "Check the log tab for detailed information..." );
+			// Add the files in a tread, so that not every freezes all the time
+			var thrdExistingJustScanIt = new Thread ( ExistingJustScanItInThread );
+			thrdExistingJustScanIt.Start( );
 		}
 
 		/// <summary>
