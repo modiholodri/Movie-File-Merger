@@ -1,10 +1,7 @@
 ﻿/*
- * Created by SharpDevelop.
- * User: rlauer
+ * Created by Modi
  * Date: 2012-04-09
  * Time: 3:28 PM
- * 
- * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 using System;
 using System.Windows.Forms;
@@ -14,7 +11,7 @@ namespace Movie_File_Merger
 	/// <summary>
 	/// Class with program entry point.
 	/// </summary>
-	internal sealed class Program
+	static class Program
 	{
 		/// <summary>
 		/// Program entry point.

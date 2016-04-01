@@ -1,6 +1,5 @@
 ﻿/*
- * Created by SharpDevelop.
- * User: Reinhold Lauer
+ * Created by Modi
  * Date: 2012-04-09
  */
  
@@ -26,8 +25,8 @@ using System.Xml;
 using System.Text.RegularExpressions;
 using System.Globalization;
 using System.Runtime.Serialization.Formatters.Binary;
-using MediaInfoLib;
 using System.Threading;
+using MediaInfoLib;
 
 namespace Movie_File_Merger
 {
@@ -976,13 +975,13 @@ namespace Movie_File_Merger
 			string strTargetPath = "";
 
 			// TODO: fix later, just a placeholder for now
-			if ( true ) { // move all relevant file into the same folder
+			// if ( true ) { // move all relevant file into the same folder
 				strTargetPath = strTargetFolder;
-			}
-			else { // keep the folder structure as it is in the source folder
-				string sSubPath = fiImportFile.DirectoryName.Substring( fiImportFile.DirectoryName.IndexOf( '\\' )+1 );
-				strTargetPath = Path.Combine( strTargetFolder, sSubPath );
-			}
+			// }
+			// else { // keep the folder structure as it is in the source folder
+			//	string sSubPath = fiImportFile.DirectoryName.Substring( fiImportFile.DirectoryName.IndexOf( '\\' )+1 );
+			//	strTargetPath = Path.Combine( strTargetFolder, sSubPath );
+			//}
 
 			if( !Directory.Exists( strTargetPath ) ) {
 				Directory.CreateDirectory( strTargetPath );
@@ -1403,8 +1402,7 @@ namespace Movie_File_Merger
 		/// <returns>The found list item, otherwise null if there are no items in the view</returns>
 		ListViewItem FindItem( ListView lvListView, string strText )
 		{
-			return ( lvListView.Items.Count < 1 ) ? null : 
-				                                    lvListView.FindItemWithText( strText, false, 0, false );
+			return ( lvListView.Items.Count < 1 ) ? null : lvListView.FindItemWithText( strText, false, 0, false );
 		}
 
 		/// <summary>
