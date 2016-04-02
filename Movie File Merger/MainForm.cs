@@ -42,10 +42,10 @@ namespace Movie_File_Merger
 		MediaInfo miThis = new MediaInfo( );  // detailed information about the video file from MediaInfo
 		
 		// item colors		
-		Color GarbageColor = Color.Red;
-		Color ExistingColor = Color.YellowGreen;
-		Color WishColor = Color.LawnGreen;
-		Color NeutralColor = Color.White;
+		Color GarbageColor = Color.SaddleBrown;
+		Color ExistingColor = Color.ForestGreen;
+		Color WishColor = Color.LimeGreen;
+		Color NeutralColor = Color.Silver;
 
 		Color LowResColor = Color.IndianRed;
 		Color HigherResColor = Color.MediumSpringGreen;
@@ -145,6 +145,7 @@ namespace Movie_File_Merger
 			lvGarbage.BackColor = GarbageColor;
 			lvExisting.BackColor = ExistingColor;
 			lvWish.BackColor = WishColor;
+            lvImport.BackColor = NeutralColor;
 			
 			dudMinimumResolution.BackColor = LowResColor;
 			cbGetHigherRes.BackColor = HigherResColor;
@@ -902,8 +903,8 @@ namespace Movie_File_Merger
 			MessageBox.Show( " Finished adding files...", "Movie File Merger - Info", 
 			                MessageBoxButtons.OK, MessageBoxIcon.Asterisk );
 			Cursor.Current = Cursors.Default;
-			ClearStatus();
-			tspbMFM.Value = 0;
+			//ClearStatus();
+			//tspbMFM.Value = 0;
 		}
 		
 		
@@ -919,8 +920,8 @@ namespace Movie_File_Merger
 
 			SetStatus( "Adding folder " + strFolderName + " to " + lvThis.Tag + "..." );
 
-			lvThis.BeginUpdate( );
-			lvThis.Sorting = SortOrder.None;
+			// lvThis.BeginUpdate( );
+			// lvThis.Sorting = SortOrder.None;
 			tspbMFM.Maximum = 0;
 			tspbMFM.Value = 0;
 			foreach( FileInfo fiFile in diFolder.GetFiles( "*", soMovieFileMerger ) ) {
@@ -935,6 +936,7 @@ namespace Movie_File_Merger
 			var thrdAddFilesToListView = new Thread ( lvAddFilesInThread );
 			thrdAddFilesToListView.Start( );
 			
+            /*
 			if ( rbSeries.Checked ) {
 				if ( (string)lvThis.Tag == "Garbage" ) {
 					ColorExistingAndUp( );
@@ -945,6 +947,7 @@ namespace Movie_File_Merger
 			}
 			lvThis.Sorting = SortOrder.Ascending;
 			lvThis.EndUpdate ();
+            */
 		}
 		
 		/// <summary>
@@ -2405,8 +2408,8 @@ namespace Movie_File_Merger
 			           	     "Check the log tab for detailed information...", "Movie File Merger - Info", 
 			                MessageBoxButtons.OK, MessageBoxIcon.Asterisk );
 			Cursor.Current = Cursors.Default;
-			ClearStatus();
-			tspbMFM.Value = 0;
+			// ClearStatus();
+			// tspbMFM.Value = 0;
 		}
 		
 		

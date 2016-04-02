@@ -293,13 +293,6 @@
   <metadata name="sfdMovieFileMerger.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>413, 17</value>
   </metadata>
-  <metadata name="ttMovieFileMerger.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>794, 17</value>
-  </metadata>
-  <data name="gbTypeSelection.ToolTip" xml:space="preserve">
-    <value>A collection is the sum of items, which match certain criteria, like Movies, Documentaries or Series. Try to keep the
-collections in separate top level folders on your hard disks, to make your life easier when processing your collections.</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pbMaintenanceUserManual.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -866,6 +859,13 @@ collections in separate top level folders on your hard disks, to make your life 
         h++fWP5Bn0edOnXSt7e3dwDzHVJSUhxu3rzZE/52L7imvU1NTQvd/y94UlD4Pz3kGzPX6RqrAAAAAElF
         TkSuQmCC
 </value>
+  </data>
+  <metadata name="ttMovieFileMerger.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>794, 17</value>
+  </metadata>
+  <data name="gbTypeSelection.ToolTip" xml:space="preserve">
+    <value>A collection is the sum of items, which match certain criteria, like Movies, Documentaries or Series. Try to keep the
+collections in separate top level folders on your hard disks, to make your life easier when processing your collections.</value>
   </data>
   <data name="pbLogUserManual.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -5644,7 +5644,7 @@ the second number for the episode. Episode names will be truncated after the epi
     <value>1102, 17</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>70</value>
+    <value>62</value>
   </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

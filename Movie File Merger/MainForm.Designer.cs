@@ -863,7 +863,7 @@ namespace Movie_File_Merger
             // lvExisting
             // 
             this.lvExisting.AllowDrop = true;
-            this.lvExisting.BackColor = System.Drawing.SystemColors.Window;
+            this.lvExisting.BackColor = System.Drawing.Color.ForestGreen;
             this.lvExisting.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lvExisting.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.chNameExisting});
@@ -940,7 +940,7 @@ namespace Movie_File_Merger
             // lvWish
             // 
             this.lvWish.AllowDrop = true;
-            this.lvWish.BackColor = System.Drawing.SystemColors.Window;
+            this.lvWish.BackColor = System.Drawing.Color.LimeGreen;
             this.lvWish.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lvWish.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1});
@@ -977,7 +977,7 @@ namespace Movie_File_Merger
             // lvGarbage
             // 
             this.lvGarbage.AllowDrop = true;
-            this.lvGarbage.BackColor = System.Drawing.SystemColors.Window;
+            this.lvGarbage.BackColor = System.Drawing.Color.SaddleBrown;
             this.lvGarbage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lvGarbage.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.chNameGarbage});
@@ -1014,6 +1014,7 @@ namespace Movie_File_Merger
             // lvImport
             // 
             this.lvImport.AllowDrop = true;
+            this.lvImport.BackColor = System.Drawing.Color.Silver;
             this.lvImport.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lvImport.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.chNameImport});
@@ -1294,6 +1295,7 @@ namespace Movie_File_Merger
             // lvMaintenance
             // 
             this.lvMaintenance.AllowDrop = true;
+            this.lvMaintenance.BackColor = System.Drawing.Color.LightSteelBlue;
             this.lvMaintenance.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.chNameMaintenance});
             this.lvMaintenance.Dock = System.Windows.Forms.DockStyle.Fill;
