@@ -1,9 +1,8 @@
 ### Welcome to the Movie File Merger!
 MFM runs under Winindows 7, 8, and 10.  MFM has also been used on a Mac with Parallels installed.
-MFM uses [Semantic Versioning][] and is programmed in [C#][] with [SharpDevelop][] version 5.0.0.  At the moment it uses the .net framework 4.0.
+MFM uses [Semantic Versioning][] and is programmed in [C#][].  At the moment it uses the .net framework 4.0.
 [Semantic Versioning]: http://semver.org/
 [C#]: http://www.c-sharpcorner.com/
-[SharpDevelop]: http://www.icsharpcode.net/OpenSource/SD/Default.aspx
 
 ### :book: User Manuals
 There are two manuals, which are more or less interconnected, involved in the whole project.
