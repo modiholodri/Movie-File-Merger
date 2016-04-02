@@ -147,6 +147,9 @@ namespace Movie_File_Merger
             this.pbInstructionsBanner = new System.Windows.Forms.PictureBox();
             this.rtbHelp = new System.Windows.Forms.RichTextBox();
             this.tpAbout = new System.Windows.Forms.TabPage();
+            this.llDonateABeerOrTwo = new System.Windows.Forms.LinkLabel();
+            this.llUserFeedbackForum = new System.Windows.Forms.LinkLabel();
+            this.llGitHubSourceCode = new System.Windows.Forms.LinkLabel();
             this.pbAboutUserManual = new System.Windows.Forms.PictureBox();
             this.pbAboutHowTo = new System.Windows.Forms.PictureBox();
             this.lblLastChecked = new System.Windows.Forms.Label();
@@ -1946,6 +1949,9 @@ namespace Movie_File_Merger
             // tpAbout
             // 
             this.tpAbout.BackColor = System.Drawing.SystemColors.Control;
+            this.tpAbout.Controls.Add(this.llDonateABeerOrTwo);
+            this.tpAbout.Controls.Add(this.llUserFeedbackForum);
+            this.tpAbout.Controls.Add(this.llGitHubSourceCode);
             this.tpAbout.Controls.Add(this.pbAboutUserManual);
             this.tpAbout.Controls.Add(this.pbAboutHowTo);
             this.tpAbout.Controls.Add(this.lblLastChecked);
@@ -1964,6 +1970,50 @@ namespace Movie_File_Merger
             this.tpAbout.Size = new System.Drawing.Size(820, 432);
             this.tpAbout.TabIndex = 3;
             this.tpAbout.Text = "About";
+            // 
+            // llDonateABeerOrTwo
+            // 
+            this.llDonateABeerOrTwo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.llDonateABeerOrTwo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llDonateABeerOrTwo.Location = new System.Drawing.Point(226, 158);
+            this.llDonateABeerOrTwo.Name = "llDonateABeerOrTwo";
+            this.llDonateABeerOrTwo.Size = new System.Drawing.Size(366, 32);
+            this.llDonateABeerOrTwo.TabIndex = 14;
+            this.llDonateABeerOrTwo.TabStop = true;
+            this.llDonateABeerOrTwo.Text = "Donate a Beer or Two";
+            this.llDonateABeerOrTwo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ttMovieFileMerger.SetToolTip(this.llDonateABeerOrTwo, "Brings you to the MFM Donation page, where you can donate a beer or two for me.");
+            this.llDonateABeerOrTwo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llDonateABeerOrTwo_LinkClicked);
+            // 
+            // llUserFeedbackForum
+            // 
+            this.llUserFeedbackForum.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llUserFeedbackForum.Location = new System.Drawing.Point(4, 158);
+            this.llUserFeedbackForum.Name = "llUserFeedbackForum";
+            this.llUserFeedbackForum.Size = new System.Drawing.Size(216, 32);
+            this.llUserFeedbackForum.TabIndex = 13;
+            this.llUserFeedbackForum.TabStop = true;
+            this.llUserFeedbackForum.Text = "User Feedback Forum";
+            this.llUserFeedbackForum.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ttMovieFileMerger.SetToolTip(this.llUserFeedbackForum, "Brings you to the MFM Forum, where you can find Useful tips, give feedback, repor" +
+        "t bugs, and so on...");
+            this.llUserFeedbackForum.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llUserFeedbackForum_LinkClicked);
+            // 
+            // llGitHubSourceCode
+            // 
+            this.llGitHubSourceCode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.llGitHubSourceCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llGitHubSourceCode.Location = new System.Drawing.Point(598, 158);
+            this.llGitHubSourceCode.Name = "llGitHubSourceCode";
+            this.llGitHubSourceCode.Size = new System.Drawing.Size(216, 32);
+            this.llGitHubSourceCode.TabIndex = 12;
+            this.llGitHubSourceCode.TabStop = true;
+            this.llGitHubSourceCode.Text = "GitHub Source Code";
+            this.llGitHubSourceCode.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ttMovieFileMerger.SetToolTip(this.llGitHubSourceCode, "Brings you to the MFM  GitHub page, where you can Download the source code, give " +
+        "feed back about bugs, or just read more about MFM.");
+            this.llGitHubSourceCode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llGitHubSourceCode_LinkClicked);
             // 
             // pbAboutUserManual
             // 
@@ -2007,6 +2057,7 @@ namespace Movie_File_Merger
             this.lblLastChecked.TabIndex = 9;
             this.lblLastChecked.Text = "Last Checked: Never";
             this.lblLastChecked.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ttMovieFileMerger.SetToolTip(this.lblLastChecked, "If the version is up to date has been last checked...");
             // 
             // cobCheckForUpdates
             // 
@@ -2021,6 +2072,7 @@ namespace Movie_File_Merger
             this.cobCheckForUpdates.Size = new System.Drawing.Size(216, 24);
             this.cobCheckForUpdates.TabIndex = 2;
             this.cobCheckForUpdates.Text = "Check for updates daily.";
+            this.ttMovieFileMerger.SetToolTip(this.cobCheckForUpdates, "Change the frequency to check for updates.");
             // 
             // btnCheckNow
             // 
@@ -2031,6 +2083,7 @@ namespace Movie_File_Merger
             this.btnCheckNow.Size = new System.Drawing.Size(216, 32);
             this.btnCheckNow.TabIndex = 3;
             this.btnCheckNow.Text = "Check for updates now!";
+            this.ttMovieFileMerger.SetToolTip(this.btnCheckNow, "Enforces to check for updates immediately.");
             this.btnCheckNow.UseVisualStyleBackColor = true;
             this.btnCheckNow.Click += new System.EventHandler(this.BtnCheckNowClick);
             // 
@@ -2069,11 +2122,11 @@ namespace Movie_File_Merger
             this.rtbCopyright.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.rtbCopyright.Location = new System.Drawing.Point(0, 163);
+            this.rtbCopyright.Location = new System.Drawing.Point(0, 192);
             this.rtbCopyright.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rtbCopyright.Name = "rtbCopyright";
             this.rtbCopyright.ReadOnly = true;
-            this.rtbCopyright.Size = new System.Drawing.Size(814, 303);
+            this.rtbCopyright.Size = new System.Drawing.Size(814, 274);
             this.rtbCopyright.TabIndex = 4;
             this.rtbCopyright.TabStop = false;
             this.rtbCopyright.Text = "";
@@ -2104,7 +2157,9 @@ namespace Movie_File_Merger
             this.llMovieFileMergerOrg.TabStop = true;
             this.llMovieFileMergerOrg.Text = "www.Movie-File-Merger.org";
             this.llMovieFileMergerOrg.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.llMovieFileMergerOrg.Click += new System.EventHandler(this.LlMovieFileMergerOrgClick);
+            this.ttMovieFileMerger.SetToolTip(this.llMovieFileMergerOrg, "Brings you to the MFM homepage, where you can find additional infomration about M" +
+        "ovie File Merger.");
+            this.llMovieFileMergerOrg.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llMovieFileMergerOrg_LinkClicked);
             // 
             // toolStripContainer1
             // 
@@ -2362,5 +2417,8 @@ namespace Movie_File_Merger
 		private System.Windows.Forms.OpenFileDialog ofdTeraCopy;
 		private System.Windows.Forms.Button btnResetSettings;
 		private System.Windows.Forms.ComboBox cobDoubleClickDefault;
-	}
+        private System.Windows.Forms.LinkLabel llDonateABeerOrTwo;
+        private System.Windows.Forms.LinkLabel llUserFeedbackForum;
+        private System.Windows.Forms.LinkLabel llGitHubSourceCode;
+    }
 }

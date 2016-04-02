@@ -1769,16 +1769,6 @@ namespace Movie_File_Merger
 		}
 		
 		/// <summary>
-		/// Launch the MFM website if the link label has been clicked. 
-		/// </summary>
-		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
-		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
-		void LlMovieFileMergerOrgClick(object sender, EventArgs e)
-		{
-			ExecuteThis ( "www.Movie-File-Merger.org" );
-		}
-
-		/// <summary>
 		/// Check if the latest version is installed.
 		/// </summary>
 		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
@@ -1787,17 +1777,66 @@ namespace Movie_File_Merger
 		{
 			CheckLatestVersion( "Now" );
 		}
-		
-// *****************************************************************************************************************/	
-// ******************************************** Top Interface ******************************************************/
 
-		/// <summary>
-		/// Something has been draged over a text box.
-		/// Check what it is and set the allowed effect accordingly.
-		/// </summary>
+        /// <summary>
+        /// Launch the MFM website if the link label has been clicked.
+        /// </summary>
 		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
 		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
-		void TbDragOver( object sender, DragEventArgs e )
+        private void LlMovieFileMergerOrgClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ExecuteThis("http://movie-file-merger.org/");
+        }
+        /// <summary>
+        /// Launch the MFM website if the link label has been clicked.
+        /// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+        private void llMovieFileMergerOrg_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ExecuteThis("http://movie-file-merger.org/");
+        }
+
+        /// <summary>
+        /// Launch the MFM Forum if the link label has been clicked.
+        /// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+        private void llUserFeedbackForum_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ExecuteThis("http://movie-file-merger.org/forum/index.php");
+        }
+
+        /// <summary>
+        /// Launch the MFM Donation page if the link label has been clicked.
+        /// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+        private void llDonateABeerOrTwo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ExecuteThis("http://movie-file-merger.org/donations.html");
+        }
+
+        /// <summary>
+        /// Launch the MFM GitHub site if the link label has been clicked.
+        /// </summary>
+		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
+		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
+        private void llGitHubSourceCode_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ExecuteThis("https://github.com/Modi777/Movie-File-Merger");
+        }
+
+        // *****************************************************************************************************************/	
+        // ******************************************** Top Interface ******************************************************/
+
+        /// <summary>
+        /// Something has been draged over a text box.
+        /// Check what it is and set the allowed effect accordingly.
+        /// </summary>
+        /// <param name="sender">The object that invoked the event that fired the event handler.</param>
+        /// <param name="e">The arguments that the implementor of this event may find useful.</param>
+        void TbDragOver( object sender, DragEventArgs e )
 		{
 			if ( e.Data.GetDataPresent( DataFormats.FileDrop ) ) {
 				e.Effect = e.AllowedEffect;
@@ -2881,5 +2920,5 @@ namespace Movie_File_Merger
 		{
 			LoadXmlSettings( true );
 		}
-	}
+    }
 }
