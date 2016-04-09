@@ -920,6 +920,7 @@ namespace Movie_File_Merger
 
 			SetStatus( "Adding folder " + strFolderName + " to " + lvThis.Tag + "..." );
 
+            // TODO: remove later after tested
 			// lvThis.BeginUpdate( );
 			// lvThis.Sorting = SortOrder.None;
 			tspbMFM.Maximum = 0;

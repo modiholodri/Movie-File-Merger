@@ -46,6 +46,7 @@ desktop.ini
 bin
 obj
 Images
+.suo
 
 # Directories potentially created on remote AFP share
 .AppleDB
@@ -54,3 +55,4 @@ Network Trash Folder
 Temporary Items
 .apdisk
 /.project
+*.suo
