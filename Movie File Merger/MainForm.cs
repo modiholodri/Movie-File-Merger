@@ -3,7 +3,7 @@
  * Date: 2012-04-09
  */
  
-// Copyright 2012-2015 Reinhold Lauer
+// Copyright 2012-2016 Reinhold Lauer
 // 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -40,9 +40,10 @@ namespace Movie_File_Merger
 		string[] saCollections = {"Miscellaneous", "Adults", "Movies", "Documentaries", "Series", "Clips"}; // all collections
 		string strCollectionType = "Miscellaneous";  // the active collection type
 		MediaInfo miThis = new MediaInfo( );  // detailed information about the video file from MediaInfo
-		
-		// item colors		
-		Color GarbageColor = Color.SaddleBrown;
+        int iAddedCount = 1;
+
+        // item colors		
+        Color GarbageColor = Color.SaddleBrown;
 		Color ExistingColor = Color.ForestGreen;
 		Color WishColor = Color.LimeGreen;
 		Color NeutralColor = Color.Silver;
@@ -68,7 +69,7 @@ namespace Movie_File_Merger
 		string strCollectionsPath = Path.Combine( Path.GetDirectoryName(Application.StartupPath), @"MFM Collections\" );
 		string strTeraCopyPath = "";
 		string strTeraCopyListsPath = "";
-		string strXmlFilePath = "";
+		string strXmlSettingsFilePath = "";
 		string strNickName = "";
 		
 		string strImportFolder = "";
@@ -86,15 +87,16 @@ namespace Movie_File_Merger
 		
 		// Thread Stuff
 		private delegate void UpdateListViewDelegate( string strName, FileInfo fiFile, ListView lvThis );
-		private delegate void UpdateStatusDelegate( string strMessage );
-		ListView lvToAddFiles = null;
+        private delegate void UpdateStatusDelegate( string strMessage );
+		ListView lvToAdd = null;
 		string strGlobalFolderName;
-		
-		
-		/// <summary>
-		/// MFM main form to selectivley combine video collections
-		/// </summary>
-		public MainForm()
+        string strGlobalFileName;
+
+
+        /// <summary>
+        /// MFM main form to selectivley combine video collections
+        /// </summary>
+        public MainForm()
 		{
 			InitializeComponent();
 			
@@ -428,9 +430,9 @@ namespace Movie_File_Merger
 		/// </summary>
 		void LoadXmlSettings ( bool bReset )
 		{
-			strXmlFilePath = Path.Combine( strPrivatePath, "MFM Settings.xml" );
-			if ( !File.Exists( strXmlFilePath ) || bReset ) {
-				using (XmlWriter writer = XmlWriter.Create( strXmlFilePath )) // create a dummy
+			strXmlSettingsFilePath = Path.Combine( strPrivatePath, "MFM Settings.xml" );
+			if ( !File.Exists( strXmlSettingsFilePath ) || bReset ) {
+				using (XmlWriter writer = XmlWriter.Create( strXmlSettingsFilePath )) // create a dummy
 				{
 				    writer.WriteStartDocument();
 				    writer.WriteStartElement("MFMSettings");  // root exlement
@@ -440,7 +442,7 @@ namespace Movie_File_Merger
 			}
 
 			var xmlSettings = new XmlDocument ( );
-			xmlSettings.Load ( strXmlFilePath );
+			xmlSettings.Load ( strXmlSettingsFilePath );
 
 			// General settings			
 			strNickName = readXmlSetting ( xmlSettings, "/MFMSettings/General/NickName", "Anonymous" );
@@ -523,7 +525,7 @@ namespace Movie_File_Merger
 		/// </summary>
 		void SaveXmlSettings( )
 		{
-			using ( XmlWriter writer = XmlWriter.Create( strXmlFilePath ) )
+			using ( XmlWriter writer = XmlWriter.Create( strXmlSettingsFilePath ) )
 			{
 			    writer.WriteStartDocument ( );
 			    writer.WriteStartElement ( "MFMSettings" );  // root exlement
@@ -673,7 +675,7 @@ namespace Movie_File_Merger
 		{
 			int iMinimumResolution = 0;
 			switch ( dudMinimumResolution.Text ) {
-				case " > 0p (LD)": iMinimumResolution = 0; break;
+				case " > 0p (FLD)": iMinimumResolution = 0; break;
 				case " > 360p (nHD)": iMinimumResolution = 640; break;
 				case " > 540p (qHD)": iMinimumResolution = 960; break;
 				case " > 720p (HD)": iMinimumResolution = 1280; break;
@@ -697,13 +699,14 @@ namespace Movie_File_Merger
 		bool HorizontalResolutionTooLow( ListViewItem lviThis )
 		{
 			bool bResolutionIsLower = false;
-			
-			Match mtResolution = Regex.Match( lviThis.ToolTipText, @"Video:  \d+" );
-			if ( mtResolution.Success ) {
-				string sResolution = Regex.Match( mtResolution.Value, @"\d+" ).Value;
-				int iExistingResolution = Int32.Parse( sResolution );
-				bResolutionIsLower = iExistingResolution < GetMinimumResolution ( );
-			}
+            if ( dudMinimumResolution.Text != " > 0p (FLD)" ) {
+                Match mtResolution = Regex.Match( lviThis.ToolTipText, @"Video:  \d+" );
+                if ( mtResolution.Success ) {
+                    string sResolution = Regex.Match( mtResolution.Value, @"\d+" ).Value;
+                    int iExistingResolution = Int32.Parse( sResolution );
+                    bResolutionIsLower = iExistingResolution < GetMinimumResolution( );
+                }
+            }
 			return bResolutionIsLower;
 		}
 		
@@ -739,92 +742,101 @@ namespace Movie_File_Merger
 			}
 			SetListViewChanged( lvListView, false );
 		}
-		
-		/// <summary>
-		/// Adds an item to a list view by name, if it does not exist already.
-		/// </summary>
-		/// <param name="lvThis">The list view to add the item.</param>
-		/// <param name="strCleanName">The cleaned up name of the item to add.</param>
-		/// <returns>The reference of the added item.</returns>
-		ListViewItem AddItemToListView( ListView lvThis, string strCleanName )
-		{
-			ListViewItem lviThis = FindItem( lvThis, strCleanName );
-			
-			if ( lviThis == null ) {
-				lviThis = new ListViewItem( strCleanName );
-				lvThis.Items.Add( lviThis );
-				ColorAll( strCleanName );
-				SetListViewChanged( lvThis, true );
-			}
+
+        /// <summary>
+        /// Adds an item to a list view, if it does not exist already.
+        /// </summary>
+        /// <param name="lvThis">The list view to add the item.</param>
+        /// <param name="lviToAdd">The item to add.</param>
+        /// <returns>The reference of the added item.</returns>
+        ListViewItem AddItemToListView( ListView lvThis, ListViewItem lviToAdd )
+        {
+            ListViewItem lviThis = FindItem( lvThis, lviToAdd.Text );
+
+            if ( lviThis == null ) {
+                lviThis = new ListViewItem( lviToAdd.Text );
+                lviThis.ToolTipText = lviToAdd.ToolTipText;
+                lvThis.Items.Add( lviThis );
+                ColorAll( lviToAdd.Text );
+                SetListViewChanged( lvThis, true );
+            }
+
+            if ( iAddedCount++ % 20 == 0 ) {
+                lviThis.EnsureVisible( );
+                lvThis.Update( );
+            }
+            lviThis.Selected = true;
 			return lviThis;
 		}
-		
-		/// <summary>
-		/// Adds an item to a list view, if it does not exist already.
-		/// </summary>
-		/// <param name="lvThis">The list view to add the item.</param>
-		/// <param name="lviToAdd">The item to add.</param>
-		/// <returns>The reference of the added item.</returns>
-		ListViewItem AddItemToListView( ListView lvThis, ListViewItem lviToAdd )
-		{
-			ListViewItem lviThis = FindItem( lvThis, lviToAdd.Text );
-			
-			if ( lviThis == null ) {
-				lviThis = new ListViewItem( lviToAdd.Text );
-				lviThis.ToolTipText = lviToAdd.ToolTipText;
-				lvThis.Items.Add ( lviThis );
-				ColorAll( lviToAdd.Text );
-				SetListViewChanged( lvThis, true );
-			}
-			
-			return lviThis;
-		}
-		
-		/// <summary>
-		/// Adds items to a list view from a CSV file.
-		/// </summary>
-		/// <param name="lvThis">The list view to add the items.</param>
-		/// <param name="strFileName">The name of the file to b added.</param>
-		void AddCsvToListView( ListView lvThis, string strFileName )
+
+        /// <summary>
+        /// Adds items to a list view from a CSV file.
+        /// </summary>
+        /// <param name="lvThis">The list view to add the items.</param>
+        /// <param name="strPath">The name of the file to b added.</param>
+        void AddCsvToListView( ListView lvThis, string strPath )
 		{
 			string line;
-			var srMovies = new StreamReader( strFileName );
-			lvThis.BeginUpdate( );
-			lvThis.Sorting = SortOrder.None;
-			SetStatus( "Loading " + Path.GetFileNameWithoutExtension( strFileName ) + 
+			var srMovies = new StreamReader( strPath );
+            LogInfo( "Loading " + Path.GetFileNameWithoutExtension( strPath ) + 
 			           " to " + lvThis.Tag + " " + strCollectionType + "..." );
 			
 			while ( ( line = srMovies.ReadLine( ) ) != null ) {
 				string[] saParts = line.Split( '\t' );
 				var lviThis = new ListViewItem( CleanName( saParts[0] ) );
-				lviThis = AddItemToListView( lvThis, lviThis );
+                lviThis = AddItemToListView( lvThis, lviThis );
 				if ( saParts.Length > 1 ) lviThis.ToolTipText = saParts[1].Replace( '*', '\n' );
-				ColorAll ( lviThis.Text );
 			}
-			
-			if ( rbSeries.Checked ) {
-				if ( (string)lvThis.Tag == "Garbage" ) ColorExistingAndUp( );
-				if ( (string)lvThis.Tag == "Wish" ) ColorWishAndUp( );
-			}
-			
-			lvThis.Sorting = SortOrder.Ascending;
-			lvThis.EndUpdate( );
 			srMovies.Close( );
-			ClearStatus( );
+			LogInfo( "Added " + Path.GetFileNameWithoutExtension( strPath ) + 
+                       " to " + lvThis.Tag + " " + strCollectionType + "..." );
 		}
-		
-		/// <summary>
-		/// Adds items to a list view from the tabulator separated file.
-		/// </summary>
-		/// <param name="lvThis">The list view to add the items.</param>
-		/// <param name="strFileName">The name of the file to b added.</param>
-		void AddTxtToListView( ListView lvThis, string strFileName )
+
+        /// <summary>
+        /// Adds items to a list view from a XML file.
+        /// </summary>
+        /// <param name="lvThis">The list view to add the items.</param>
+        /// <param name="strPath">The name of the file to b added.</param>
+        void AddXmlToListView( ListView lvThis, string strPath )
+        {
+            string line;
+            var xmlFile = new XmlDocument( );
+            xmlFile.Load( strPath );
+            LogInfo( "Loading " + Path.GetFileNameWithoutExtension( strPath ) +
+                       " to " + lvThis.Tag + " " + strCollectionType + "..." );
+
+            foreach ( XmlNode node in xmlFile.DocumentElement.ChildNodes ) {
+                string strToolTip = "";
+                var lviThis = new ListViewItem( node.FirstChild.InnerXml );
+                foreach ( XmlNode xmlaThis in node.ChildNodes ) {
+                    if ( xmlaThis.Name == "Name" ) continue;
+                    if ( xmlaThis.Name == "General" ) strToolTip += "\n";
+                    strToolTip += xmlaThis.Name + ":  " + xmlaThis.InnerXml + "\n";
+                }
+                lviThis.ToolTipText = strToolTip;
+                lviThis = AddItemToListView( lvThis, lviThis );
+            }
+
+            if ( rbSeries.Checked ) {
+                if ( (string)lvThis.Tag == "Garbage" ) ColorExistingAndUp( );
+                if ( (string)lvThis.Tag == "Existing" ) ColorWishAndUp( );
+                if ( (string)lvThis.Tag == "Wish" ) ColorWishAndUp( );
+            }
+
+            LogInfo( "Added " + Path.GetFileNameWithoutExtension( strPath ) +
+                       " to " + lvThis.Tag + " " + strCollectionType + "..." );
+        }
+
+        /// <summary>
+        /// Adds items to a list view from the tabulator separated file.
+        /// </summary>
+        /// <param name="lvThis">The list view to add the items.</param>
+        /// <param name="strPath">The name of the file to b added.</param>
+        void AddTxtToListView( ListView lvThis, string strPath )
 		{
 			string line;
-			var srMovies = new StreamReader( strFileName );
-			lvThis.BeginUpdate( );
-			lvThis.Sorting = SortOrder.None;
-			SetStatus( "Loading " + Path.GetFileNameWithoutExtension( strFileName ) + " to " + lvThis.Tag + " " + strCollectionType + "..." );
+			var srMovies = new StreamReader( strPath );
+            LogInfo( "Loading " + Path.GetFileNameWithoutExtension( strPath ) + " to " + lvThis.Tag + " " + strCollectionType + "..." );
 
 			var saTitles = new string[20];
 			var saParts = new string[20];
@@ -850,41 +862,45 @@ namespace Movie_File_Merger
 				}
 				line = srMovies.ReadLine( );
 			} 
-
 			if ( rbSeries.Checked ) {
-				if ( (string)lvThis.Tag == "Garbage" ) {
-					ColorExistingAndUp( );
-				}
-				if ( (string)lvThis.Tag == "Wish" ) {
-					ColorWishAndUp( );
-				}
+				if ( (string)lvThis.Tag == "Garbage" ) ColorExistingAndUp( );
+				if ( (string)lvThis.Tag == "Wish" ) ColorWishAndUp( );
 			}
-			
-			lvThis.Sorting = SortOrder.Ascending;
-			lvThis.EndUpdate( );
 			srMovies.Close( );
-			ClearStatus( );
+			LogInfo( "Added " + Path.GetFileNameWithoutExtension( strGlobalFileName ) + " to " + lvToAdd.Tag + " " + strCollectionType + "..." );
 		}
-		
-		
-		private void DoUpdate( string strName, FileInfo fiFile, ListView lvThis )
+
+        /// <summary>
+        /// Adds a file to a list view in a thread.
+        /// </summary>
+        /// <param name="strName">The list view item name.</param>
+        /// <param name="fiFile">The file info of the item to add.</param>
+        /// <param name="lvThis">The list view where the item should be added.</param>
+        private void DoAddFileToListView( string strName, FileInfo fiFile, ListView lvThis )
 		{
 		    if ( this.InvokeRequired )
 		    {
 		        // we were called on a worker thread marshal the call to the user interface thread
-		        this.Invoke( new UpdateListViewDelegate( DoUpdate ), new object[] { strName, fiFile, lvThis } );
+		        this.Invoke( new UpdateListViewDelegate( DoAddFileToListView ), new object[] { strName, fiFile, lvThis } );
 		        return;
 		    }
 		
 		    // this code can only be reached by the user interface thread
 			var lviThis = new ListViewItem ( strName );
 			lviThis = AddItemToListView( lvThis, lviThis );
-			MakeToolTip( fiFile, lvThis, lviThis, true );
-			ColorAll( lviThis.Text );  // color again to get info from tooltip
-			tspbMFM.Value++;
+            lviThis.EnsureVisible( );
+            lvGarbage.Update( );
+            lvExisting.Update( );
+            lvWish.Update( );
+            lvImport.Update( );
+            MakeToolTip( fiFile, lvThis, lviThis, true );
+            ColorAll( lviThis.Text );  // color again to get info from tooltip
+            tspbMFM.Value++;
 		} 		
 		
-		
+		/// <summary>
+        /// Add files to a list view ina thread
+        /// </summary>
 		void lvAddFilesInThread ( ) 
 		{
 			var diFolder = new DirectoryInfo( strGlobalFolderName );
@@ -898,13 +914,13 @@ namespace Movie_File_Merger
 				if ( strJustName.LastIndexOf( '.' ) != -1 ) {
 					strJustName = strJustName.Substring( 0, strJustName.LastIndexOf( '.' ) );
 				}
-				DoUpdate ( CleanName( strJustName ), fiFile, lvToAddFiles );
+				DoAddFileToListView ( CleanName( strJustName ), fiFile, lvToAdd );
 			}
 			MessageBox.Show( " Finished adding files...", "Movie File Merger - Info", 
 			                MessageBoxButtons.OK, MessageBoxIcon.Asterisk );
 			Cursor.Current = Cursors.Default;
-			//ClearStatus();
-			//tspbMFM.Value = 0;
+			// ClearStatus();
+			// tspbMFM.Value = 0;
 		}
 		
 		
@@ -920,9 +936,6 @@ namespace Movie_File_Merger
 
 			SetStatus( "Adding folder " + strFolderName + " to " + lvThis.Tag + "..." );
 
-            // TODO: remove later after tested
-			// lvThis.BeginUpdate( );
-			// lvThis.Sorting = SortOrder.None;
 			tspbMFM.Maximum = 0;
 			tspbMFM.Value = 0;
 			foreach( FileInfo fiFile in diFolder.GetFiles( "*", soMovieFileMerger ) ) {
@@ -932,49 +945,56 @@ namespace Movie_File_Merger
 			}
 
 			// Add the files in a tread, so that not every freezes all the time
-			lvToAddFiles = lvThis;
+			lvToAdd = lvThis;
 			strGlobalFolderName = strFolderName;
 			var thrdAddFilesToListView = new Thread ( lvAddFilesInThread );
 			thrdAddFilesToListView.Start( );
-			
-            /*
-			if ( rbSeries.Checked ) {
-				if ( (string)lvThis.Tag == "Garbage" ) {
-					ColorExistingAndUp( );
-				}
-				if ( (string)lvThis.Tag == "Wish" ) {
-					ColorWishAndUp( );
-				}
-			}
-			lvThis.Sorting = SortOrder.Ascending;
-			lvThis.EndUpdate ();
-            */
 		}
 		
-		/// <summary>
-		/// Saves all items contained in a list view to a file, so that it can be later reloaded by MFM.
-		/// </summary>
-		/// <param name="lvListView">The list view containing the items.</param>
-		/// <param name="strFileName">The name of the file to where to save the list view items.</param>
-		void SaveListViewToCsvFile( ListView lvListView, string strFileName )
-		{
-			var swFile = new StreamWriter( strFileName );
-			
-			foreach ( ListViewItem lviItem in lvListView.Items ) {
-				swFile.WriteLine( lviItem.Text + "\t" + lviItem.ToolTipText.Replace( '\n', '*' ) );
-			}
-			swFile.Close( );
-		}
+        /// <summary>
+        /// Saves all items contained in a list view to a XML file, so that it can be later reloaded by MFM.
+        /// </summary>
+        /// <param name="lvListView">The list view containing the items.</param>
+        /// <param name="strFileName">The name of the file to where to save the list view items.</param>
+        void SaveListViewToXmlFile( ListView lvListView, string strFileName ) {
+            Regex rgxXmlStuff = new Regex( @"_x\d{4}" );
+            using ( XmlWriter writer = XmlWriter.Create( strFileName.Replace( ".csv", ".xml" ) ) ) {
+                writer.WriteStartDocument( );
+                writer.WriteStartElement( rgxXmlStuff.Replace( XmlConvert.EncodeName( strFileName.Substring( strFileName.LastIndexOf( "\\" ) + 1 ) ), "" ) );  // root exlement
+                foreach ( ListViewItem lviItem in lvListView.Items ) {
+                    string strGoodName = lviItem.Text;
+                    if ( strGoodName == "" ) continue;
+                    if ( Char.IsDigit( strGoodName[ 0 ] ) ) strGoodName = "_" + strGoodName;
+                    strGoodName = rgxXmlStuff.Replace( XmlConvert.EncodeName( strGoodName ), "" );
+                    writer.WriteStartElement( strGoodName );  // list entry
+                    writer.WriteElementString( "Name", lviItem.Text );
+                    foreach ( string strLine in lviItem.ToolTipText.Split( '\n' ) ) {
+                        if ( strLine == "" ) continue;
+                        if ( strLine.Contains( ":  " ) ) {
+                            var strElementName = strLine.Substring( 0, strLine.IndexOf( ":  " ) );
+                            writer.WriteElementString( strElementName, strLine.Substring( strLine.IndexOf( ":  " ) + 3 ) );
+                        }
+                        else {
+                            writer.WriteElementString( "Line", strLine );
+                        }
+                    }
+                    writer.WriteEndElement( );
+                }
 
-// *****************************************************************************************************************/	
-// ************************************************** Processing ***************************************************/
+                writer.WriteEndElement( );  // close the root element
+                writer.WriteEndDocument( );
+            }
+        }
 
-		/// <summary>
-		/// Make the target path, including file name, for file to be copied or moved.
-		/// </summary>
-		/// <param name="fiImportFile">The file to be copied or moved.</param>
-		/// <returns>The path of the new file.</returns>
-		string MakeTargetPath( FileInfo fiImportFile )
+        // *****************************************************************************************************************/	
+        // ************************************************** Processing ***************************************************/
+
+        /// <summary>
+        /// Make the target path, including file name, for file to be copied or moved.
+        /// </summary>
+        /// <param name="fiImportFile">The file to be copied or moved.</param>
+        /// <returns>The path of the new file.</returns>
+        string MakeTargetPath( FileInfo fiImportFile )
 		{
 			string strTargetPath = "";
 
@@ -1440,18 +1460,14 @@ namespace Movie_File_Merger
 			SetListViewChanged( lvThis, true );
 			foreach ( ListViewItem lviItem in lvThis.SelectedItems ) {
 				lvThis.Items.Remove( lviItem );
-				ColorAll( lviItem.Text );
+                if ( !rbSeries.Checked && (string)lvThis.Tag != "Import" ) {
+                    ColorAll( lviItem.Text );
+                }
 			}
 			if ( rbSeries.Checked ) {
-				if ( (string)lvThis.Tag == "Garbage" ) {
-					ColorExistingAndUp( );
-				}
-				if ( (string)lvThis.Tag == "Existing" ) {
-					ColorWishAndUp( );
-				}
-				if ( (string)lvThis.Tag == "Wish" ) {
-					ColorImport( );
-				}
+				if ( (string)lvThis.Tag == "Garbage" ) ColorExistingAndUp( );
+				if ( (string)lvThis.Tag == "Existing" ) ColorWishAndUp( );
+				if ( (string)lvThis.Tag == "Wish" ) ColorImport( );
 			}
 		}
 		
@@ -1557,8 +1573,7 @@ namespace Movie_File_Merger
 			} catch ( IOException e ) { 
 				ShowInfo( e.Message ); 
 			}
-			
-			lvListView.BeginUpdate( );
+
 			lvListView.Items.Clear( );
 			lvListView.Sorting = SortOrder.None;
 			foreach( string strListViewItemName in strcolStr ) {
@@ -1568,12 +1583,19 @@ namespace Movie_File_Merger
 				if ( saParts.Length > 1 ) {
 					lviThis.ToolTipText = saParts[1];
 				}
-				lvListView.Items.Add( lviThis );
-				ColorAll( saParts[0] );
+				ListViewItem lviJustAdded = lvListView.Items.Add( lviThis );
+                if ( iAddedCount++ % 20 == 0 ) {
+                    lviJustAdded.EnsureVisible( );
+                    //lvListView.Update( );
+                    lvGarbage.Update( );
+                    lvExisting.Update( );
+                    lvWish.Update( );
+                    lvImport.Update( );
+                }
+                ColorAll( saParts[0] );
 			}
 			lvListView.Sorting = SortOrder.Ascending;
 			SetStatus( "Added " + lvListView.Items.Count + " items." );
-			lvListView.EndUpdate( );
 			ClearStatus( );
 		}
 
@@ -1589,13 +1611,10 @@ namespace Movie_File_Merger
 		{
 			bool bItemMissing = FindItem( lvThis, lviThis.Text ) == null;
 			bool bHasMediaInfo = lviThis.ToolTipText.Contains ( "Video: " );
-			string sBasicItemInfo = fiFile.Name + "\n" +
-			                    "[" + strNickName + " " + StandardizeDate( DateTime.Today ) + "]  " ;
-			                    
 			
-			string sFileInfo = fiFile.DirectoryName + "\n" + 
-				               fiFile.Length/1024/1024 + " MiB,  " +
-				               fiFile.Extension.ToUpper( ).Substring( 1 ) +
+			string sFileInfo = "File:  " + fiFile.Name + "\n" +
+                               "Path:  " + fiFile.DirectoryName + "\n" + 
+				               "Info:  " + fiFile.Length/1024/1024 + " MiB,  " + fiFile.Extension.ToUpper( ).Substring( 1 ) +
 							   ", Last Written " + StandardizeDate( fiFile.LastWriteTime );
 			bool bDifferentFile = !lviThis.ToolTipText.Contains( sFileInfo );
 			bool bFullDetails = ( bItemMissing || !bHasMediaInfo || bDifferentFile) && bGetMediaInfo;
@@ -1604,22 +1623,22 @@ namespace Movie_File_Merger
 			if ( bFullDetails ) {
 				SetStatus ( "Getting MediaInfo for " + fiFile.Name );
 				miThis.Open( fiFile.FullName );
-				miThis.Option( "Inform", "General;%Duration/String%,  %Format%" ); // file size
-				sMediaInfo += "\n" + miThis.Inform( );
-				miThis.Option( "Inform", "Video;Video:  %Width% x%Height% (%DisplayAspectRatio/String%) at %FrameRate/String%,  %BitRate/String%" );
+				miThis.Option( "Inform", "General;General:  %Duration/String% in %Format% format" ); // file size
 				sMediaInfo += "\n\n" + miThis.Inform( );
-				miThis.Option( "Inform", "Audio;Audio:  %Channel(s)/String%  %Language/String%,  %SamplingRate/String%  %Format%\n" );
-				sMediaInfo += "\n" + miThis.Inform( ).Replace( "Audio: ", "\nAudio: " ).Replace( "Audio:  ,", "Audio:" );
+				miThis.Option( "Inform", "Video;Video:  %Width%x%Height% (%DisplayAspectRatio/String%) at %FrameRate/String% with %BitRate/String%" );
+				sMediaInfo += "\n" + miThis.Inform( );
+				miThis.Option( "Inform", "Audio;Audio:  %Channel(s)/String% at %SamplingRate/String% %Format% %Language/String%" );
+				sMediaInfo += miThis.Inform( ).Replace( "Audio: ", "\nAudio: " ).Replace( "Audio:  ,", "Audio:" );
 				miThis.Close( );
 			}
 			
 			if ( bFullDetails || bItemMissing || !bHasMediaInfo ) {
-				lviThis.ToolTipText = sBasicItemInfo + sFileInfo + sMediaInfo;
+				lviThis.ToolTipText = sFileInfo + sMediaInfo;
 				SetListViewChanged( lvThis, true );
 			}
 			else if ( bDifferentFile ) { 
 				if ( !bHasMediaInfo || sMediaInfo != "" ) {
-					lviThis.ToolTipText = sBasicItemInfo + sFileInfo + sMediaInfo;
+					lviThis.ToolTipText = sFileInfo + sMediaInfo;
 					SetListViewChanged( lvThis, true );
 				}
 			}
@@ -1636,9 +1655,11 @@ namespace Movie_File_Merger
 			foreach ( ListViewItem lviThis in lvThis.Items ) {
 				if ( lviThis.BackColor == clrToErase ) {
 					lvThis.Items.Remove( lviThis );
-					ColorAll( lviThis.Text );
-					SetListViewChanged( lvThis, true );
-				}
+                    if ( (string)lvThis.Tag != "Import" ) {
+                        ColorAll( lviThis.Text );
+                        SetListViewChanged( lvThis, true );
+                    }
+                }
 			}
 			lvThis.EndUpdate( );
 		}
@@ -1661,12 +1682,8 @@ namespace Movie_File_Merger
 				}
 			}
 			if ( rbSeries.Checked ) {
-				if ( (string)lvTarget.Tag == "Garbage" ) {
-					ColorExistingAndUp( );
-				}
-				if ( (string)lvTarget.Tag == "Wish" ) {
-					ColorWishAndUp( );
-				}
+				if ( (string)lvTarget.Tag == "Garbage" ) ColorExistingAndUp( );
+				if ( (string)lvTarget.Tag == "Wish" ) ColorWishAndUp( );
 			}
 		}
 
@@ -1959,13 +1976,12 @@ namespace Movie_File_Merger
 				strNickName + " " +
 				(string)lvDragSource.Tag + " " +
 				strCollectionType + " " +
-				StandardizeDate( DateTime.Today ) +
-				".csv";
+				StandardizeDate( DateTime.Today );
 			if ( sfdMovieFileMerger.ShowDialog( ) == DialogResult.OK ) {
 				sfdMovieFileMerger.InitialDirectory = "";  // take the same folder next time
-				SaveListViewToCsvFile( lvDragSource, sfdMovieFileMerger.FileName );
-			}
-		}
+                SaveListViewToXmlFile( lvDragSource, sfdMovieFileMerger.FileName );
+            }
+        }
 		
 		/// <summary>
 		/// Items have been dropped on the Erase Selected drop area. 
@@ -2195,12 +2211,8 @@ namespace Movie_File_Merger
 					}
 				}
 				if ( rbSeries.Checked ) {
-					if ( (string)lvThis.Tag == "Garbage" ) {
-						ColorExistingAndUp( );
-					}
-					if ( (string)lvThis.Tag == "Wish" ) {
-						ColorWishAndUp( );
-					}
+					if ( (string)lvThis.Tag == "Garbage" ) ColorExistingAndUp( );
+					if ( (string)lvThis.Tag == "Wish" ) ColorWishAndUp( );
 				}
 			}
 			// from folders or files
@@ -2245,14 +2257,18 @@ namespace Movie_File_Merger
 					}
 					// from txt file
 					else if ( Path.GetExtension( strPath ).ToLower() == ".txt" ) {
-						AddTxtToListView( lvThis, strPath );
+                        AddTxtToListView( lvThis, strPath );
 					}
 					// from csv file
 					else if ( Path.GetExtension( strPath ).ToLower() == ".csv" ) {
-						AddCsvToListView( lvThis, strPath);
+                        AddCsvToListView( lvThis, strPath );
 					}
-					// from listview stream
-					else if ( Path.GetExtension( strPath ).ToLower() == ".slv" ) {
+                    // from xml file
+                    else if ( Path.GetExtension( strPath ).ToLower( ) == ".xml" ) {
+                        AddXmlToListView( lvThis, strPath );
+                    }
+                    // from listview stream
+                    else if ( Path.GetExtension( strPath ).ToLower() == ".slv" ) {
 						DeserializeListView( lvThis, strPath );
 					}
 				}
@@ -2317,10 +2333,6 @@ namespace Movie_File_Merger
 			}
 			return sResult;
 		}
-		
-
-
-
 
 		/// <summary>
 		/// Select all items in all lists according to the selection criteria.
@@ -2400,7 +2412,7 @@ namespace Movie_File_Merger
 							if ( strJustName.LastIndexOf( '.' ) != -1 ) {
 								strJustName = strJustName.Substring( 0, strJustName.LastIndexOf( '.' ) );
 							}
-							DoUpdate ( CleanName( strJustName ), fiFile, lvExisting );
+							DoAddFileToListView ( CleanName( strJustName ), fiFile, lvExisting );
 						}
 					}
 				}
@@ -2409,8 +2421,7 @@ namespace Movie_File_Merger
 			           	     "Check the log tab for detailed information...", "Movie File Merger - Info", 
 			                MessageBoxButtons.OK, MessageBoxIcon.Asterisk );
 			Cursor.Current = Cursors.Default;
-			// ClearStatus();
-			// tspbMFM.Value = 0;
+            LogInfo( "Just Scann It is finished... " );
 		}
 		
 		
@@ -2428,6 +2439,7 @@ namespace Movie_File_Merger
 			SearchOption soMovieFileMerger = SearchOption.AllDirectories;
 			tspbMFM.Maximum = 0;
 			tspbMFM.Value = 0;
+            SetStatus( "Calculating maximum progress..." );
 			foreach (var drive in DriveInfo.GetDrives()) {
 				foreach ( var strPath in Directory.GetDirectories ( drive.Name ) ) {
 					if ( strPath.Contains ( strCollectionType ) ) {
@@ -2441,8 +2453,9 @@ namespace Movie_File_Merger
 					}
 				}
 			}
-			// Add the files in a tread, so that not every freezes all the time
-			var thrdExistingJustScanIt = new Thread ( ExistingJustScanItInThread );
+            SetStatus( "Starting Just Scan It thread..." );
+            // Add the files in a tread, so that not every freezes all the time
+            var thrdExistingJustScanIt = new Thread ( ExistingJustScanItInThread );
 			thrdExistingJustScanIt.Start( );
 		}
 
@@ -2726,77 +2739,77 @@ namespace Movie_File_Merger
 		void SearchDownload( ListView lvListView )
 		{
 			string strCleanName = "";
-			foreach ( ListViewItem lviItem in lvListView.SelectedItems ) {
-				strCleanName = RemoveEpisodeInfo( lviItem.Text ).Replace( ' ', '+' );
-				LogMessage( "Info", Color.Blue, "Searching " +  cobSearchDownload.Text + " for " + strCleanName);
-				switch ( cobSearchDownload.Text ) {
-					case "All Below": 
-						ExecuteThis ( "https://1337x.to/search/" + strCleanName + "/1/" );
-						ExecuteThis ( "http://bitsnoop.com/search/all/" + strCleanName );
-						ExecuteThis ( "http://www.demonoid.pw/files/?query=" + strCleanName );
-						ExecuteThis ( "http://extratorrent.cc/search/?search=" + strCleanName );
-						ExecuteThis ( "https://eztv.ag/search/" + strCleanName );
-						ExecuteThis ( "https://kat.cr/usearch/" + strCleanName + "  category:movies/" );
-						ExecuteThis ( "http://magnetseed.net/search/index?q=" + strCleanName );
-						ExecuteThis ( "https://rarbg.to/torrents.php?search=" + strCleanName );
-						ExecuteThis ( "https://isohunt.to/torrents/?ihq=" + strCleanName );
-						ExecuteThis ( "https://www.limetorrents.cc/search/all/" + strCleanName );
-						ExecuteThis ( "https://thepiratebay.la/search/" + strCleanName );
-						ExecuteThis ( "http://torrentz.eu/search?f=" + strCleanName );
-						ExecuteThis ( "http://www.torrenthound.com/search/" + strCleanName );
-						ExecuteThis ( "http://www.torlock.com/all/torrents/" + strCleanName );
-						ExecuteThis ( "https://www.yify-torrent.org/search/" + strCleanName );
-						break;
-					case "1337X":
-						ExecuteThis ( "https://1337x.to/search/" + strCleanName + "/1/" );
-						break;
-					case "Bit Snoop":
-						ExecuteThis ( "http://bitsnoop.com/search/all/" + strCleanName );
-						break;
-					case "Demonoid":
-						ExecuteThis ( "http://www.demonoid.pw/files/?query=" + strCleanName );
-						break;
-					case "Extra Torrent":
-						ExecuteThis ( "http://extratorrent.cc/search/?search=" + strCleanName );
-						break;
-					case "Eztv":
-						ExecuteThis ( "https://eztv.ag/search/" + strCleanName );
-						break;
-					case "Kickass":
-						ExecuteThis ( "https://kat.cr/usearch/" + strCleanName + "  category:movies/" );
-						break;
-					case "Magnet Seed":
-						ExecuteThis ( "http://magnetseed.net/search/index?q=" + strCleanName );
-						break;
-					case "Rarbg":
-						ExecuteThis ( "https://rarbg.to/torrents.php?search=" + strCleanName );
-						break;
-					case "ISO Hunt":
-						ExecuteThis ( "https://isohunt.to/torrents/?ihq=" + strCleanName );
-						break;
-					case "Lime Torrents":
-						ExecuteThis ( "https://www.limetorrents.cc/search/all/" + strCleanName );
-						break;
-					case "The Piratebay":
-						ExecuteThis ( "https://thepiratebay.la/search/" + strCleanName );
-						break;
-					case "Torrentz":
-						ExecuteThis ( "http://torrentz.eu/search?f=" + strCleanName );
-						break;
-					case "Torrent Hound":
-						ExecuteThis ( "http://www.torrenthound.com/search/" + strCleanName );
-						break;
-					case "Torlock":
-						ExecuteThis ( "http://www.torlock.com/all/torrents/" + strCleanName );
-						break;
-					case "Yifi Torrents":
-						ExecuteThis ( "https://www.yify-torrent.org/search/" + strCleanName );
-						break;
-					default:
-						ExecuteThis ( "http://torrentz.eu/search?f=" + strCleanName );
-						LogMessage( "Warning", Color.Orange, "Could not find " + cobSearchDownload.Text + " -> Searching Torrenz instead." );
-						break;
-				}
+            foreach ( ListViewItem lviItem in lvListView.SelectedItems ) {
+                strCleanName = RemoveEpisodeInfo( lviItem.Text ).Replace( ' ', '+' );
+                LogMessage( "Info", Color.Blue, "Searching " + cobSearchDownload.Text + " for " + strCleanName );
+                switch ( cobSearchDownload.Text ) {
+                    case "All Below":
+                        ExecuteThis( "https://1337x.to/search/" + strCleanName + "/1/" );
+                        ExecuteThis( "http://bitsnoop.com/search/all/" + strCleanName );
+                        ExecuteThis( "http://www.demonoid.pw/files/?query=" + strCleanName );
+                        ExecuteThis( "http://extratorrent.cc/search/?search=" + strCleanName );
+                        ExecuteThis( "https://eztv.ag/search/" + strCleanName );
+                        ExecuteThis( "https://kat.cr/usearch/" + strCleanName + "  category:movies/" );
+                        ExecuteThis( "http://magnetseed.net/search/index?q=" + strCleanName );
+                        ExecuteThis( "https://rarbg.to/torrents.php?search=" + strCleanName );
+                        ExecuteThis( "https://isohunt.to/torrents/?ihq=" + strCleanName );
+                        ExecuteThis( "https://www.limetorrents.cc/search/all/" + strCleanName );
+                        ExecuteThis( "https://thepiratebay.la/search/" + strCleanName );
+                        ExecuteThis( "http://torrentz.eu/search?f=" + strCleanName );
+                        ExecuteThis( "http://www.torrenthound.com/search/" + strCleanName );
+                        ExecuteThis( "http://www.torlock.com/all/torrents/" + strCleanName );
+                        ExecuteThis( "https://www.yify-torrent.org/search/" + strCleanName );
+                        break;
+                    case "1337X":
+                        ExecuteThis( "https://1337x.to/search/" + strCleanName + "/1/" );
+                        break;
+                    case "Bit Snoop":
+                        ExecuteThis( "http://bitsnoop.com/search/all/" + strCleanName );
+                        break;
+                    case "Demonoid":
+                        ExecuteThis( "http://www.demonoid.pw/files/?query=" + strCleanName );
+                        break;
+                    case "Extra Torrent":
+                        ExecuteThis( "http://extratorrent.cc/search/?search=" + strCleanName );
+                        break;
+                    case "Eztv":
+                        ExecuteThis( "https://eztv.ag/search/" + strCleanName );
+                        break;
+                    case "Kickass":
+                        ExecuteThis( "https://kat.cr/usearch/" + strCleanName + "  category:movies/" );
+                        break;
+                    case "Magnet Seed":
+                        ExecuteThis( "http://magnetseed.net/search/index?q=" + strCleanName );
+                        break;
+                    case "Rarbg":
+                        ExecuteThis( "https://rarbg.to/torrents.php?search=" + strCleanName );
+                        break;
+                    case "ISO Hunt":
+                        ExecuteThis( "https://isohunt.to/torrents/?ihq=" + strCleanName );
+                        break;
+                    case "Lime Torrents":
+                        ExecuteThis( "https://www.limetorrents.cc/search/all/" + strCleanName );
+                        break;
+                    case "The Piratebay":
+                        ExecuteThis( "https://thepiratebay.la/search/" + strCleanName );
+                        break;
+                    case "Torrentz":
+                        ExecuteThis( "http://torrentz.eu/search?f=" + strCleanName );
+                        break;
+                    case "Torrent Hound":
+                        ExecuteThis( "http://www.torrenthound.com/search/" + strCleanName );
+                        break;
+                    case "Torlock":
+                        ExecuteThis( "http://www.torlock.com/all/torrents/" + strCleanName );
+                        break;
+                    case "Yifi Torrents":
+                        ExecuteThis( "https://www.yify-torrent.org/search/" + strCleanName );
+                        break;
+                    default:
+                        ExecuteThis( "http://torrentz.eu/search?f=" + strCleanName );
+                        LogMessage( "Warning", Color.Orange, "Could not find " + cobSearchDownload.Text + " -> Searching Torrenz instead." );
+                        break;
+                }
 			}
 		}
 		
