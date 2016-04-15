@@ -98,7 +98,8 @@ namespace Movie_File_Merger
         public MainForm()
 		{
 			InitializeComponent();
-			
+            LogInfo( "Initializing Movie File Merger..." );
+
 			// make sure that all needed directroies and files are there
 			if ( !Directory.Exists( strPrivatePath ) ) {
 				Directory.CreateDirectory( strPrivatePath );
@@ -141,7 +142,7 @@ namespace Movie_File_Merger
 				rtbCopyright.Text = "Error: Had problems loading the copyright file " + strMFMSettingsPath + ".";
 			}
 			
-			SetColumnWidth( );
+			SetListTabColumnWidth( );
 			// set the button colors in the list tab
 			lvGarbage.BackColor = GarbageColor;
 			lvExisting.BackColor = ExistingColor;
@@ -175,7 +176,8 @@ namespace Movie_File_Merger
         /************************************************************************************************/
         /*                                    Supporting Functions                                      */
         /************************************************************************************************/
-        #region General Stuff
+
+        #region General Form or Element Handling
 
         /// <summary>
         /// Converts a datetime to the standard date format yyyy-mm-dd.
@@ -200,71 +202,11 @@ namespace Movie_File_Merger
                     dtToSStandardize.Minute.ToString( "D2" ) + "-" +
                     dtToSStandardize.Second.ToString( "D2" );
         }
-
-        #endregion General Stuff
-
-        #region Version Check
-
+        
         /// <summary>
-        /// Check if the latest version is installed.
+        /// Readjusts the column width of the lists in the Lists tab if the Window is resized. 
         /// </summary>
-        void CheckLatestVersion (string sWhen)
-		{
-			string sLatestRelease = "";
-			string sReleaseNotes = "";
-			string sCurrentRelease = Application.ProductVersion.Remove( Application.ProductVersion.Length-2 );
-			lblVersion.Text = sCurrentRelease;
-			var dtLastChecked = new DateTime ( );
-			string sLastCheckedDate = lblLastChecked.Text.Substring( "Last Checked: ".Length );
-			if ( sLastCheckedDate == "Never" ) sLastCheckedDate = "1900-01-01";
-			dtLastChecked = Convert.ToDateTime( sLastCheckedDate );
-			var tsWaitForDays = new TimeSpan (  1, 0, 0, 0 ); // Check for updates daily...
-			
-			switch ( cobCheckForUpdates.Text ) {
-				case "Check for updates weekly." :
-					tsWaitForDays = new TimeSpan ( 7, 0, 0, 0 );
-					break;
-				case "Check for updates monthly." :
-					tsWaitForDays = new TimeSpan ( 30, 0, 0, 0 );
-					break;
-			}
-			
-			dtLastChecked += tsWaitForDays;
-			
-			if ( dtLastChecked < DateTime.Now || sWhen.Contains ( "Now" ) ) {
-				var xmlLatestVersion = new XmlDocument ( );
-				try {
-					xmlLatestVersion.Load ( @"http://www.movie-file-merger.org/MFMVersion.xml" );
-					sLatestRelease = readXmlSetting ( xmlLatestVersion, "/MFMVersions/LatestRelease", "0.0.0");
-					sReleaseNotes = readXmlSetting ( xmlLatestVersion, "/MFMVersions/ReleaseNotes", "Sorry, did not find any release notes...");
-					if ( sCurrentRelease != sLatestRelease ) {
-						if ( ShowYesNoQuestion ( "A different version of MFM (" + sCurrentRelease + " -> " + sLatestRelease + ") " +
-						                         "is available with following changes...\n" +  sReleaseNotes + "\n\n" +
-						                         "Go to the Download page now?" ) == DialogResult.Yes) {
-							ExecuteThis ( "http://www.movie-file-merger.org/downloads.html" );
-							Application.Exit( );
-						}
-					}
-					else if ( sWhen.Contains ( "Now" ) )
-					{
-						ShowInfo ( sCurrentRelease + " is the latest version." );
-					}
-					lblLastChecked.Text = "Last Checked: " + StandardizeDate ( DateTime.Now );
-				}
-				catch ( Exception e ) { 
-					ShowInfo( "Tried to check for updates but had a problem...\n" + e.Message ); 
-				}
-			}
-		}
-
-        #endregion Version Check
-
-        #region Form Handling
-
-        /// <summary>
-        /// Readjusts the column width if the Window is resized. 
-        /// </summary>
-        void SetColumnWidth( )
+        void SetListTabColumnWidth( )
 		{
 			if ( this.WindowState == FormWindowState.Minimized ) {	// Not if minimized
 				return;
@@ -280,13 +222,12 @@ namespace Movie_File_Merger
 			lvWish.Columns[0].Width = lvWish.Width - 35;
 		}
 
-		/// <summary>
-		/// The form size has been changed.
-		/// Move the spliters.
-		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		void MainFormSizeChanged( object sender, EventArgs e )
+        /// <summary>
+        /// Readjusts the column width of the horizoltal splitter in the Lists tab if the Window is resized. 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        void MainFormSizeChanged( object sender, EventArgs e )
 		{
 			if ( this.WindowState == FormWindowState.Minimized ) {	// Not if minimized
 				return;
@@ -301,7 +242,7 @@ namespace Movie_File_Merger
         /// <param name="e">The arguments that the implementor of this event may find useful.</param>
         void ScVerticalSplitterMoved( object sender, SplitterEventArgs e )
         {
-            SetColumnWidth( );
+            SetListTabColumnWidth( );
         }
 
         /// <summary>
@@ -330,10 +271,6 @@ namespace Movie_File_Merger
             SaveChangedListView( lvWish );
             SaveSettings( );
         }
-
-        #endregion Form Handling
-
-        #region Element Handling
 
         /// <summary>
         /// The mouse entered a rich text box.  
@@ -366,8 +303,7 @@ namespace Movie_File_Merger
         }
 
         /// <summary>
-        /// Go to the How to Organize Videos on Hard Disks Manual to get a brief description 
-        /// about how a video collection could be organized in general.
+        /// Go to How to Organize Videos on Hard Disks to read about how a video collection could be organized.
         /// </summary>
         /// <param name="sender">The object that invoked the event that fired the event handler.</param>
         /// <param name="e">The arguments that the implementor of this event may find useful.</param>
@@ -450,7 +386,7 @@ namespace Movie_File_Merger
 		}
 		
 		/// <summary>
-		/// Generates the lists to be handed over to TeraCopy and updated the colocrs of the lists.
+		/// Generates the lists to be handed over to TeraCopy and updates the colocrs of the lists.
 		/// </summary>
 		void ProcessImport()
 		{
@@ -529,7 +465,7 @@ namespace Movie_File_Merger
 							bSourceListOpen = true;
 							sOldTargetPath = sTargetPath;
 						}
-
+                        /*
 						if ( rbCopy.Checked ) {
 							LogMessage( "Add to Source List", Color.Blue, "Copy " + 
 							            sSourceFile + " -> " + sTargetPath );
@@ -538,7 +474,7 @@ namespace Movie_File_Merger
 							LogMessage( "Add to Source List", Color.Blue,  "Move " + 
 							            sSourceFile + " -> " + sTargetPath );
 						}
-						
+						*/
 						swSourceListFile.WriteLine( sSourceFile );
 						ListViewItem lviExisting;
 						lviExisting = AddItemToListView( lvExisting, lviImport );
@@ -567,29 +503,29 @@ namespace Movie_File_Merger
 			ClearStatus( );
 		}
 
-		/// <summary>
-		/// Does the final handover to TeraCopy.
-		/// </summary>
-		/// <param name="sSourceListFile">The file containing the sources files to be copied or moved.</param>
-		/// <param name="sTargetPath">The path to where the source files should be copied or moved. </param>
-		void DoTeraCopy( string sSourceListFile, string sTargetPath )
-		{
-			const string sOptions = " /SkipAll /Close ";
-			
-			if (rbCopy.Checked) {
-					System.Diagnostics.Process.Start ( strTeraCopyPath, "Copy *\"" + 
-					                                  sSourceListFile + "\" \"" + sTargetPath + "\" " + sOptions );
-					LogMessage( "Add Source List", Color.Purple,  "TeraCopy " + 
-					            sSourceListFile + " -> " + sTargetPath + sOptions );
-			}
-			else {
-					System.Diagnostics.Process.Start ( strTeraCopyPath, "Move *\"" + 
-				                                  sSourceListFile + "\" \"" + sTargetPath + "\" "  + sOptions );
-				LogMessage( "Add Source List", Color.Purple,  "TeraMove " + 
-				            sSourceListFile + " -> " + sTargetPath + sOptions );
-			}
-			System.Threading.Thread.Sleep( 1000 );
-		}
+        /// <summary>
+        /// Does the final handover to TeraCopy.
+        /// </summary>
+        /// <param name="sSourceListFile">The file containing the sources files to be copied or moved.</param>
+        /// <param name="sTargetPath">The path to where the source files should be copied or moved. </param>
+        void DoTeraCopy( string sSourceListFile, string sTargetPath )
+        {
+            const string sOptions = " /SkipAll /Close ";
+
+            if ( rbCopy.Checked ) {
+                System.Diagnostics.Process.Start( strTeraCopyPath, "Copy *\"" +
+                                                    sSourceListFile + "\" \"" + sTargetPath + "\" " + sOptions );
+                LogMessage( "Starting Process", Color.Purple, "TeraCopy " +
+                            sSourceListFile + " -> " + sTargetPath + sOptions );
+            }
+            else {
+                System.Diagnostics.Process.Start( strTeraCopyPath, "Move *\"" +
+                                              sSourceListFile + "\" \"" + sTargetPath + "\" " + sOptions );
+                LogMessage( "Starting Process", Color.Purple, "TeraMove " +
+                            sSourceListFile + " -> " + sTargetPath + sOptions );
+            }
+            System.Threading.Thread.Sleep( 1000 );
+        }
 
         /// <summary>
         /// The collection type has been changed.  
@@ -603,6 +539,7 @@ namespace Movie_File_Merger
 
             if ( rbRadioButton.Checked ) {
                 strCollectionType = rbRadioButton.Tag.ToString( );
+                LogInfo( "Switching to " + strCollectionType );
                 lvImport.Items.Clear( );
                 InitListViewFromFile( lvGarbage );
                 InitListViewFromFile( lvExisting );
@@ -640,7 +577,7 @@ namespace Movie_File_Merger
         }
 
         /// <summary>
-        /// Sart the processing of the files.
+        /// Sart the processing of the files in the import folder.
         /// </summary>
         /// <param name="sender">The object that invoked the event that fired the event handler.</param>
         /// <param name="e">The arguments that the implementor of this event may find useful.</param>
@@ -1119,7 +1056,6 @@ namespace Movie_File_Merger
             // tspbMFM.Value = 0;
         }
 
-
         /// <summary>
         /// Adds items contained in a folder to a list view.
         /// </summary>
@@ -1234,7 +1170,6 @@ namespace Movie_File_Merger
         void DeserializeListView( ListView lvListView, string strFileName )
         {
             var strcolStr = new StringCollection( );
-            SetStatus( "Adding " + lvListView.Tag + " " + strCollectionType + "..." );
             try {
                 var fsItems = new FileStream( strFileName, FileMode.Open );
                 var bf = new BinaryFormatter( );
@@ -1266,7 +1201,9 @@ namespace Movie_File_Merger
                 ColorAll( saParts[ 0 ] );
             }
             lvListView.Sorting = SortOrder.Ascending;
-            SetStatus( "Added " + lvListView.Items.Count + " items." );
+            if ( lvListView.Items.Count > 0 ) {
+                SetStatus( "Added " + lvListView.Items.Count + " items to " + lvListView.Tag + " " + strCollectionType + "." );
+            }
             ClearStatus( );
         }
 
@@ -2247,11 +2184,11 @@ namespace Movie_File_Merger
                     }
                 }
             }
+            LogInfo( "Just Scan It is finished..." );
             MessageBox.Show( "Finished sanning all concerned folders.\n" +
                                 "Check the log tab for detailed information...", "Movie File Merger - Info",
                             MessageBoxButtons.OK, MessageBoxIcon.Asterisk );
             Cursor.Current = Cursors.Default;
-            LogInfo( "Just Scann It is finished... " );
         }
 
         /// <summary>
@@ -2263,26 +2200,24 @@ namespace Movie_File_Merger
             SaveChangedListView( lvGarbage );
             SaveChangedListView( lvWish );
 
-            LogMessage( "Info", Color.Aquamarine, "Just scanning " + strCollectionType + "..." );
+            LogMessage( "Info", Color.Turquoise, "\nScanning folders contaning " + strCollectionType + " in the name on all connected hard disks..." );
 
             SearchOption soMovieFileMerger = SearchOption.AllDirectories;
             tspbMFM.Maximum = 0;
             tspbMFM.Value = 0;
-            SetStatus( "Calculating maximum progress..." );
             foreach ( var drive in DriveInfo.GetDrives( ) ) {
                 foreach ( var strPath in Directory.GetDirectories( drive.Name ) ) {
                     if ( strPath.Contains( strCollectionType ) ) {
                         var diFolder = new DirectoryInfo( strPath );
                         foreach ( FileInfo fiFile in diFolder.GetFiles( "*", soMovieFileMerger ) ) {
-                            if ( !rgxMainExtensions.IsMatch( fiFile.Extension.ToLower( ) ) ) {
-                                continue;
+                            if ( rgxMainExtensions.IsMatch( fiFile.Extension.ToLower( ) ) ) {
+                                tspbMFM.Maximum++;
                             }
-                            tspbMFM.Maximum++;
                         }
                     }
                 }
             }
-            SetStatus( "Starting Just Scan It thread..." );
+            SetStatus( "Calculated " + tspbMFM.Maximum + " items to check..." );
             // Add the files in a tread, so that not every freezes all the time
             var thrdExistingJustScanIt = new Thread( ExistingJustScanItInThread );
             thrdExistingJustScanIt.Start( );
@@ -2523,6 +2458,7 @@ namespace Movie_File_Merger
         #endregion Maintenance Tab Handling
 
         #region Messages and Log Tab Handling
+        // Functions realated to Status or Info Messages and Log tab.
 
         /// <summary>
         /// Adds a mesage, with the date, type, and a certain color, to the rich text box on the log tab. 
@@ -2532,6 +2468,11 @@ namespace Movie_File_Merger
         /// <param name="strMessage">The message itself.</param>
         void LogMessage( string strType, Color cColor, string strMessage )
         {
+            rtbLog.SelectionColor = cColor;
+            if ( strMessage[0] == '\n') {
+                rtbLog.AppendText( "\n" );
+                strMessage = strMessage.Substring( 1 );
+            }
             rtbLog.SelectionColor = cColor;
             rtbLog.AppendText( DateTime.Now + ": " + strType + " - " + strMessage + "\n" );
         }
@@ -2548,16 +2489,15 @@ namespace Movie_File_Merger
             rtbMaintenance.AppendText( DateTime.Now + ": " + strType + " - " + strMessage + "\n" );
         }
 
-
         /// <summary>
         /// Logs a status message, in black color, and activates the wait cursor.
         /// </summary>
         /// <param name="strMessage">The message itself.</param>
         void SetStatus( string strMessage )
         {
+            LogMessage( "Status", Color.Black, strMessage );
             tsslMFM.Text = strMessage;
             ssMFM.Update( );
-            LogMessage( "Status", Color.Black, strMessage );
             Cursor.Current = Cursors.WaitCursor;
         }
 
@@ -2615,16 +2555,17 @@ namespace Movie_File_Merger
         /// <returns>The user feedback.</returns>
         DialogResult ShowYesNoQuestion( string strMessage )
         {
-            LogMessage( "Question", Color.BlueViolet, strMessage );
+            LogMessage( "Question", Color.BlueViolet, "\n" + strMessage );
             DialogResult drAnswer = MessageBox.Show( strMessage, "Movie File Merger - Question",
                                     MessageBoxButtons.YesNo, MessageBoxIcon.Question );
-            LogMessage( "Answer", Color.BlueViolet, drAnswer.ToString( ) );
+            LogMessage( "Answer", Color.BlueViolet, drAnswer.ToString( ) + "\n" );
             return drAnswer;
         }
 
         #endregion Mesasges and Log Tab Handling
 
         #region Settings Tab Handling
+        // Functions related to the Settings tab and the settings itself.
 
         /// <summary>
         /// Assign all the regular expressions from the settings tab.
@@ -2833,10 +2774,63 @@ namespace Movie_File_Merger
         #endregion Settings Tab Handling
 
         #region Instructions Tab Handling
-
+        // Functions releated to the Instructions tab.
+        // So far there are no special functions and it's just a placeholder.
         #endregion Instructions Tab Handling
 
         #region About Tab Handling
+        // Functions related to the About tab.
+
+        /// <summary>
+        /// Check if the latest version of Movie File Merger is installed.
+        /// </summary>
+        void CheckLatestVersion( string sWhen )
+        {
+            string sLatestRelease = "";
+            string sReleaseNotes = "";
+            string sCurrentRelease = Application.ProductVersion.Remove( Application.ProductVersion.Length - 2 );
+            lblVersion.Text = sCurrentRelease;
+            var dtLastChecked = new DateTime( );
+            string sLastCheckedDate = lblLastChecked.Text.Substring( "Last Checked: ".Length );
+            if ( sLastCheckedDate == "Never" ) sLastCheckedDate = "1900-01-01";
+            dtLastChecked = Convert.ToDateTime( sLastCheckedDate );
+            var tsWaitForDays = new TimeSpan( 1, 0, 0, 0 ); // Check for updates daily...
+
+            switch ( cobCheckForUpdates.Text ) {
+                case "Check for updates weekly.":
+                    tsWaitForDays = new TimeSpan( 7, 0, 0, 0 );
+                    break;
+                case "Check for updates monthly.":
+                    tsWaitForDays = new TimeSpan( 30, 0, 0, 0 );
+                    break;
+            }
+
+            dtLastChecked += tsWaitForDays;
+
+            if ( dtLastChecked < DateTime.Now || sWhen.Contains( "Now" ) ) {
+                var xmlLatestVersion = new XmlDocument( );
+                try {
+                    xmlLatestVersion.Load( @"http://www.movie-file-merger.org/MFMVersion.xml" );
+                    sLatestRelease = readXmlSetting( xmlLatestVersion, "/MFMVersions/LatestRelease", "0.0.0" );
+                    sReleaseNotes = readXmlSetting( xmlLatestVersion, "/MFMVersions/ReleaseNotes", "Sorry, did not find any release notes..." );
+                    if ( sCurrentRelease != sLatestRelease ) {
+                        if ( ShowYesNoQuestion( "A different version (" + sLatestRelease + ") of MFM (currently " + sCurrentRelease + ") " +
+                                                 "is available.\n" + sReleaseNotes + "\n" +
+                                                 "Go to the Download page now?" ) == DialogResult.Yes ) {
+                            ExecuteThis( "http://www.movie-file-merger.org/downloads.html" );
+                            Application.Exit( );
+                        }
+                    }
+                    else if ( sWhen.Contains( "Now" ) ) {
+                        ShowInfo( sCurrentRelease + " is the latest version." );
+                    }
+                    lblLastChecked.Text = "Last Checked: " + StandardizeDate( DateTime.Now );
+                }
+                catch ( Exception e ) {
+                    ShowInfo( "Tried to check for updates but had a problem...\n" + e.Message );
+                }
+            }
+        }
 
         /// <summary>
         /// Check if the latest version is installed.
@@ -2848,15 +2842,6 @@ namespace Movie_File_Merger
 			CheckLatestVersion( "Now" );
 		}
 
-        /// <summary>
-        /// Launch the MFM website if the link label has been clicked.
-        /// </summary>
-		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
-		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
-        private void LlMovieFileMergerOrgClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            ExecuteThis("http://movie-file-merger.org/");
-        }
         /// <summary>
         /// Launch the MFM website if the link label has been clicked.
         /// </summary>

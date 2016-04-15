@@ -1991,9 +1991,9 @@ namespace Movie_File_Merger
             // llUserFeedbackForum
             // 
             this.llUserFeedbackForum.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.llUserFeedbackForum.Location = new System.Drawing.Point(4, 158);
+            this.llUserFeedbackForum.Location = new System.Drawing.Point(7, 160);
             this.llUserFeedbackForum.Name = "llUserFeedbackForum";
-            this.llUserFeedbackForum.Size = new System.Drawing.Size(216, 32);
+            this.llUserFeedbackForum.Size = new System.Drawing.Size(218, 30);
             this.llUserFeedbackForum.TabIndex = 13;
             this.llUserFeedbackForum.TabStop = true;
             this.llUserFeedbackForum.Text = "User Feedback Forum";
@@ -2068,7 +2068,7 @@ namespace Movie_File_Merger
             "Check for updates daily.",
             "Check for updates weekly.",
             "Check for updates monthly."});
-            this.cobCheckForUpdates.Location = new System.Drawing.Point(8, 130);
+            this.cobCheckForUpdates.Location = new System.Drawing.Point(8, 131);
             this.cobCheckForUpdates.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cobCheckForUpdates.Name = "cobCheckForUpdates";
             this.cobCheckForUpdates.Size = new System.Drawing.Size(216, 24);
@@ -2079,7 +2079,7 @@ namespace Movie_File_Merger
             // btnCheckNow
             // 
             this.btnCheckNow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCheckNow.Location = new System.Drawing.Point(598, 123);
+            this.btnCheckNow.Location = new System.Drawing.Point(598, 127);
             this.btnCheckNow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCheckNow.Name = "btnCheckNow";
             this.btnCheckNow.Size = new System.Drawing.Size(216, 32);
@@ -2124,11 +2124,11 @@ namespace Movie_File_Merger
             this.rtbCopyright.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.rtbCopyright.Location = new System.Drawing.Point(0, 192);
+            this.rtbCopyright.Location = new System.Drawing.Point(8, 192);
             this.rtbCopyright.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rtbCopyright.Name = "rtbCopyright";
             this.rtbCopyright.ReadOnly = true;
-            this.rtbCopyright.Size = new System.Drawing.Size(814, 274);
+            this.rtbCopyright.Size = new System.Drawing.Size(814, 272);
             this.rtbCopyright.TabIndex = 4;
             this.rtbCopyright.TabStop = false;
             this.rtbCopyright.Text = "";
@@ -2211,13 +2211,12 @@ namespace Movie_File_Merger
             // 
             // ttMovieFileMerger
             // 
-            this.ttMovieFileMerger.AutomaticDelay = 200;
-            this.ttMovieFileMerger.AutoPopDelay = 100000;
-            this.ttMovieFileMerger.InitialDelay = 200;
+            this.ttMovieFileMerger.AutomaticDelay = 400;
+            this.ttMovieFileMerger.AutoPopDelay = 60000;
+            this.ttMovieFileMerger.InitialDelay = 400;
             this.ttMovieFileMerger.IsBalloon = true;
-            this.ttMovieFileMerger.ReshowDelay = 40;
+            this.ttMovieFileMerger.ReshowDelay = 80;
             this.ttMovieFileMerger.ShowAlways = true;
-            this.ttMovieFileMerger.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
             // ofdTeraCopy
             // 
