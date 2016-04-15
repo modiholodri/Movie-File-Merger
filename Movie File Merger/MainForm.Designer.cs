@@ -756,7 +756,7 @@ namespace Movie_File_Merger
             this.dudMinimumResolution.Items.Add(" > 720p (HD)");
             this.dudMinimumResolution.Items.Add(" > 540p (qHD)");
             this.dudMinimumResolution.Items.Add(" > 360p (nHD)");
-            this.dudMinimumResolution.Items.Add(" > 0p (LD)");
+            this.dudMinimumResolution.Items.Add(" > 0p (FLD)");
             this.dudMinimumResolution.Location = new System.Drawing.Point(236, 22);
             this.dudMinimumResolution.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dudMinimumResolution.Name = "dudMinimumResolution";
@@ -816,7 +816,7 @@ namespace Movie_File_Merger
             this.rbMove.TabIndex = 23;
             this.rbMove.Text = "Move";
             this.rbMove.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ttMovieFileMerger.SetToolTip(this.rbMove, "If Move is checked and the Progress Bar clicked, the Wish colored items \r\nin the " +
+            this.ttMovieFileMerger.SetToolTip(this.rbMove, "If Move is checked and Start Process is clicked, the Wish colored items \r\nin the " +
         "Import list will be moved to the Target folder.");
             this.rbMove.UseVisualStyleBackColor = true;
             // 
@@ -833,8 +833,8 @@ namespace Movie_File_Merger
             this.rbCopy.TabStop = true;
             this.rbCopy.Text = "Copy";
             this.rbCopy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ttMovieFileMerger.SetToolTip(this.rbCopy, "If Copy is selected and you click the Progress Bar, the Wish colored items \r\nin t" +
-        "he Import list will be copied to the Target folder.");
+            this.ttMovieFileMerger.SetToolTip(this.rbCopy, "If Copy is selected and you click Start Process, the Wish colored items \r\nin the " +
+        "Import list will be copied to the Target folder.");
             this.rbCopy.UseVisualStyleBackColor = true;
             // 
             // scVertical
