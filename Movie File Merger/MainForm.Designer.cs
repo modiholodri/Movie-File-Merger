@@ -2211,11 +2211,13 @@ namespace Movie_File_Merger
             // 
             // ttMovieFileMerger
             // 
-            this.ttMovieFileMerger.AutoPopDelay = 10000;
-            this.ttMovieFileMerger.InitialDelay = 500;
+            this.ttMovieFileMerger.AutomaticDelay = 200;
+            this.ttMovieFileMerger.AutoPopDelay = 100000;
+            this.ttMovieFileMerger.InitialDelay = 200;
             this.ttMovieFileMerger.IsBalloon = true;
-            this.ttMovieFileMerger.ReshowDelay = 100;
+            this.ttMovieFileMerger.ReshowDelay = 40;
             this.ttMovieFileMerger.ShowAlways = true;
+            this.ttMovieFileMerger.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
             // ofdTeraCopy
             // 

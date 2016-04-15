@@ -1623,7 +1623,7 @@ namespace Movie_File_Merger
 			if ( bFullDetails ) {
 				SetStatus ( "Getting MediaInfo for " + fiFile.Name );
 				miThis.Open( fiFile.FullName );
-				miThis.Option( "Inform", "General;General:  %Duration/String% in %Format% format" ); // file size
+				miThis.Option( "Inform", "General;General:  %Duration/String% in %Format% container %Video_Format_List% format%" ); // file size
 				sMediaInfo += "\n\n" + miThis.Inform( );
 				miThis.Option( "Inform", "Video;Video:  %Width%x%Height% (%DisplayAspectRatio/String%) at %FrameRate/String% with %BitRate/String%" );
 				sMediaInfo += "\n" + miThis.Inform( );
