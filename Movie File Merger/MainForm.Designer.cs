@@ -308,11 +308,10 @@ namespace Movie_File_Merger
             this.tcMovieFileMerger.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tcMovieFileMerger.ImageList = this.ilMovieFileMerger;
             this.tcMovieFileMerger.Location = new System.Drawing.Point(0, 0);
-            this.tcMovieFileMerger.Margin = new System.Windows.Forms.Padding(4);
             this.tcMovieFileMerger.Name = "tcMovieFileMerger";
             this.tcMovieFileMerger.Padding = new System.Drawing.Point(9, 6);
             this.tcMovieFileMerger.SelectedIndex = 0;
-            this.tcMovieFileMerger.Size = new System.Drawing.Size(828, 467);
+            this.tcMovieFileMerger.Size = new System.Drawing.Size(622, 376);
             this.tcMovieFileMerger.TabIndex = 0;
             // 
             // tpSeparateLists
@@ -337,11 +336,10 @@ namespace Movie_File_Merger
             this.tpSeparateLists.Controls.Add(this.cobSearchDownload);
             this.tpSeparateLists.Controls.Add(this.cobSearchInfo);
             this.tpSeparateLists.ImageKey = "List.gif";
-            this.tpSeparateLists.Location = new System.Drawing.Point(4, 31);
-            this.tpSeparateLists.Margin = new System.Windows.Forms.Padding(4);
+            this.tpSeparateLists.Location = new System.Drawing.Point(4, 29);
             this.tpSeparateLists.Name = "tpSeparateLists";
-            this.tpSeparateLists.Padding = new System.Windows.Forms.Padding(4);
-            this.tpSeparateLists.Size = new System.Drawing.Size(820, 432);
+            this.tpSeparateLists.Padding = new System.Windows.Forms.Padding(3);
+            this.tpSeparateLists.Size = new System.Drawing.Size(614, 343);
             this.tpSeparateLists.TabIndex = 0;
             this.tpSeparateLists.Text = "Lists";
             // 
@@ -351,10 +349,9 @@ namespace Movie_File_Merger
             this.btnPlay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPlay.ImageKey = "Play.gif";
             this.btnPlay.ImageList = this.ilMovieFileMerger;
-            this.btnPlay.Location = new System.Drawing.Point(722, 93);
-            this.btnPlay.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPlay.Location = new System.Drawing.Point(543, 76);
             this.btnPlay.Name = "btnPlay";
-            this.btnPlay.Size = new System.Drawing.Size(92, 53);
+            this.btnPlay.Size = new System.Drawing.Size(69, 43);
             this.btnPlay.TabIndex = 31;
             this.btnPlay.TabStop = false;
             this.btnPlay.Text = "Play Video";
@@ -370,10 +367,10 @@ namespace Movie_File_Merger
             this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEdit.ImageKey = "Edit.png";
             this.btnEdit.ImageList = this.ilMovieFileMerger;
-            this.btnEdit.Location = new System.Drawing.Point(620, 401);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEdit.Location = new System.Drawing.Point(465, 312);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(2);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(80, 32);
+            this.btnEdit.Size = new System.Drawing.Size(60, 26);
             this.btnEdit.TabIndex = 46;
             this.btnEdit.Text = "Edit";
             this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -387,10 +384,10 @@ namespace Movie_File_Merger
             this.btnJustScanIt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnJustScanIt.ImageKey = "Process.gif";
             this.btnJustScanIt.ImageList = this.ilMovieFileMerger;
-            this.btnJustScanIt.Location = new System.Drawing.Point(8, 401);
-            this.btnJustScanIt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnJustScanIt.Location = new System.Drawing.Point(8, 312);
+            this.btnJustScanIt.Margin = new System.Windows.Forms.Padding(2);
             this.btnJustScanIt.Name = "btnJustScanIt";
-            this.btnJustScanIt.Size = new System.Drawing.Size(126, 32);
+            this.btnJustScanIt.Size = new System.Drawing.Size(94, 26);
             this.btnJustScanIt.TabIndex = 40;
             this.btnJustScanIt.Text = "Just Scan It";
             this.btnJustScanIt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -404,10 +401,10 @@ namespace Movie_File_Merger
             this.btnJustRipIt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnJustRipIt.ImageKey = "Process.gif";
             this.btnJustRipIt.ImageList = this.ilMovieFileMerger;
-            this.btnJustRipIt.Location = new System.Drawing.Point(705, 401);
-            this.btnJustRipIt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnJustRipIt.Location = new System.Drawing.Point(528, 312);
+            this.btnJustRipIt.Margin = new System.Windows.Forms.Padding(2);
             this.btnJustRipIt.Name = "btnJustRipIt";
-            this.btnJustRipIt.Size = new System.Drawing.Size(108, 32);
+            this.btnJustRipIt.Size = new System.Drawing.Size(81, 26);
             this.btnJustRipIt.TabIndex = 45;
             this.btnJustRipIt.Text = "Just Rip It";
             this.btnJustRipIt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -437,11 +434,11 @@ namespace Movie_File_Merger
             "6 Channels",
             "Series with \"SxxExx\"",
             "Movies with \"(Year)\""});
-            this.cobCriteria.Location = new System.Drawing.Point(401, 402);
-            this.cobCriteria.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cobCriteria.Location = new System.Drawing.Point(299, 314);
+            this.cobCriteria.Margin = new System.Windows.Forms.Padding(2);
             this.cobCriteria.MaxDropDownItems = 15;
             this.cobCriteria.Name = "cobCriteria";
-            this.cobCriteria.Size = new System.Drawing.Size(214, 24);
+            this.cobCriteria.Size = new System.Drawing.Size(163, 21);
             this.cobCriteria.TabIndex = 44;
             this.cobCriteria.Text = "Select the Criteria...";
             this.ttMovieFileMerger.SetToolTip(this.cobCriteria, "Select a predefined Tool Tip Regex,\r\nfor the Select, Bin, or Wish actions.");
@@ -454,10 +451,10 @@ namespace Movie_File_Merger
             this.btnAddToWish.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnAddToWish.ImageKey = "Wish.png";
             this.btnAddToWish.ImageList = this.ilMovieFileMerger;
-            this.btnAddToWish.Location = new System.Drawing.Point(316, 401);
-            this.btnAddToWish.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAddToWish.Location = new System.Drawing.Point(236, 312);
+            this.btnAddToWish.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddToWish.Name = "btnAddToWish";
-            this.btnAddToWish.Size = new System.Drawing.Size(80, 32);
+            this.btnAddToWish.Size = new System.Drawing.Size(60, 26);
             this.btnAddToWish.TabIndex = 43;
             this.btnAddToWish.Text = "Wish";
             this.btnAddToWish.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -471,10 +468,10 @@ namespace Movie_File_Merger
             this.btnBin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnBin.ImageKey = "Garbage.gif";
             this.btnBin.ImageList = this.ilMovieFileMerger;
-            this.btnBin.Location = new System.Drawing.Point(230, 401);
-            this.btnBin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBin.Location = new System.Drawing.Point(173, 312);
+            this.btnBin.Margin = new System.Windows.Forms.Padding(2);
             this.btnBin.Name = "btnBin";
-            this.btnBin.Size = new System.Drawing.Size(80, 32);
+            this.btnBin.Size = new System.Drawing.Size(60, 26);
             this.btnBin.TabIndex = 42;
             this.btnBin.Text = "Bin";
             this.btnBin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -489,10 +486,10 @@ namespace Movie_File_Merger
             this.btnSelect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnSelect.ImageKey = "Select.gif";
             this.btnSelect.ImageList = this.ilMovieFileMerger;
-            this.btnSelect.Location = new System.Drawing.Point(138, 401);
-            this.btnSelect.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSelect.Location = new System.Drawing.Point(105, 312);
+            this.btnSelect.Margin = new System.Windows.Forms.Padding(2);
             this.btnSelect.Name = "btnSelect";
-            this.btnSelect.Size = new System.Drawing.Size(87, 32);
+            this.btnSelect.Size = new System.Drawing.Size(65, 26);
             this.btnSelect.TabIndex = 41;
             this.btnSelect.Text = "Select";
             this.btnSelect.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -508,10 +505,9 @@ namespace Movie_File_Merger
             this.btnExportList.BackColor = System.Drawing.SystemColors.Control;
             this.btnExportList.ImageKey = "Save.gif";
             this.btnExportList.ImageList = this.ilMovieFileMerger;
-            this.btnExportList.Location = new System.Drawing.Point(8, 93);
-            this.btnExportList.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExportList.Location = new System.Drawing.Point(6, 76);
             this.btnExportList.Name = "btnExportList";
-            this.btnExportList.Size = new System.Drawing.Size(92, 53);
+            this.btnExportList.Size = new System.Drawing.Size(69, 43);
             this.btnExportList.TabIndex = 34;
             this.btnExportList.TabStop = false;
             this.btnExportList.Text = "Export List...";
@@ -528,10 +524,9 @@ namespace Movie_File_Merger
             this.btnEraseColor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEraseColor.ImageKey = "Color.gif";
             this.btnEraseColor.ImageList = this.ilMovieFileMerger;
-            this.btnEraseColor.Location = new System.Drawing.Point(423, 93);
-            this.btnEraseColor.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEraseColor.Location = new System.Drawing.Point(318, 76);
             this.btnEraseColor.Name = "btnEraseColor";
-            this.btnEraseColor.Size = new System.Drawing.Size(107, 53);
+            this.btnEraseColor.Size = new System.Drawing.Size(80, 43);
             this.btnEraseColor.TabIndex = 28;
             this.btnEraseColor.TabStop = false;
             this.btnEraseColor.Text = "Erase Color";
@@ -547,10 +542,9 @@ namespace Movie_File_Merger
             this.btnSearchDownload.AllowDrop = true;
             this.btnSearchDownload.ImageKey = "Download.png";
             this.btnSearchDownload.ImageList = this.ilMovieFileMerger;
-            this.btnSearchDownload.Location = new System.Drawing.Point(132, 93);
-            this.btnSearchDownload.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSearchDownload.Location = new System.Drawing.Point(99, 76);
             this.btnSearchDownload.Name = "btnSearchDownload";
-            this.btnSearchDownload.Size = new System.Drawing.Size(137, 53);
+            this.btnSearchDownload.Size = new System.Drawing.Size(103, 43);
             this.btnSearchDownload.TabIndex = 33;
             this.btnSearchDownload.TabStop = false;
             this.btnSearchDownload.Text = "Torrent Hound";
@@ -566,10 +560,9 @@ namespace Movie_File_Merger
             this.btnEraseSelected.AllowDrop = true;
             this.btnEraseSelected.ImageKey = "Erase.gif";
             this.btnEraseSelected.ImageList = this.ilMovieFileMerger;
-            this.btnEraseSelected.Location = new System.Drawing.Point(291, 93);
-            this.btnEraseSelected.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEraseSelected.Location = new System.Drawing.Point(218, 76);
             this.btnEraseSelected.Name = "btnEraseSelected";
-            this.btnEraseSelected.Size = new System.Drawing.Size(107, 53);
+            this.btnEraseSelected.Size = new System.Drawing.Size(80, 43);
             this.btnEraseSelected.TabIndex = 27;
             this.btnEraseSelected.TabStop = false;
             this.btnEraseSelected.Text = "Erase Selected";
@@ -586,10 +579,9 @@ namespace Movie_File_Merger
             this.btnSearchInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSearchInfo.ImageKey = "About.gif";
             this.btnSearchInfo.ImageList = this.ilMovieFileMerger;
-            this.btnSearchInfo.Location = new System.Drawing.Point(551, 93);
-            this.btnSearchInfo.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSearchInfo.Location = new System.Drawing.Point(414, 76);
             this.btnSearchInfo.Name = "btnSearchInfo";
-            this.btnSearchInfo.Size = new System.Drawing.Size(137, 53);
+            this.btnSearchInfo.Size = new System.Drawing.Size(103, 43);
             this.btnSearchInfo.TabIndex = 32;
             this.btnSearchInfo.TabStop = false;
             this.btnSearchInfo.Text = "Adult DVD Empire";
@@ -609,11 +601,9 @@ namespace Movie_File_Merger
             this.gbTypeSelection.Controls.Add(this.rbDocumentaries);
             this.gbTypeSelection.Controls.Add(this.rbMovies);
             this.gbTypeSelection.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.gbTypeSelection.Location = new System.Drawing.Point(8, 8);
-            this.gbTypeSelection.Margin = new System.Windows.Forms.Padding(4);
+            this.gbTypeSelection.Location = new System.Drawing.Point(6, 6);
             this.gbTypeSelection.Name = "gbTypeSelection";
-            this.gbTypeSelection.Padding = new System.Windows.Forms.Padding(4);
-            this.gbTypeSelection.Size = new System.Drawing.Size(397, 80);
+            this.gbTypeSelection.Size = new System.Drawing.Size(298, 65);
             this.gbTypeSelection.TabIndex = 10;
             this.gbTypeSelection.TabStop = false;
             this.gbTypeSelection.Text = "Collections";
@@ -624,10 +614,9 @@ namespace Movie_File_Merger
             this.rbMiscellaneous.Checked = true;
             this.rbMiscellaneous.ImageKey = "Miscellaneaous.gif";
             this.rbMiscellaneous.ImageList = this.ilMovieFileMerger;
-            this.rbMiscellaneous.Location = new System.Drawing.Point(130, 47);
-            this.rbMiscellaneous.Margin = new System.Windows.Forms.Padding(4);
+            this.rbMiscellaneous.Location = new System.Drawing.Point(98, 38);
             this.rbMiscellaneous.Name = "rbMiscellaneous";
-            this.rbMiscellaneous.Size = new System.Drawing.Size(155, 30);
+            this.rbMiscellaneous.Size = new System.Drawing.Size(116, 24);
             this.rbMiscellaneous.TabIndex = 15;
             this.rbMiscellaneous.TabStop = true;
             this.rbMiscellaneous.Tag = "Miscellaneous";
@@ -642,10 +631,9 @@ namespace Movie_File_Merger
             // 
             this.rbAdults.ImageKey = "Adult.gif";
             this.rbAdults.ImageList = this.ilMovieFileMerger;
-            this.rbAdults.Location = new System.Drawing.Point(16, 47);
-            this.rbAdults.Margin = new System.Windows.Forms.Padding(4);
+            this.rbAdults.Location = new System.Drawing.Point(12, 38);
             this.rbAdults.Name = "rbAdults";
-            this.rbAdults.Size = new System.Drawing.Size(107, 30);
+            this.rbAdults.Size = new System.Drawing.Size(80, 24);
             this.rbAdults.TabIndex = 14;
             this.rbAdults.Tag = "Adults";
             this.rbAdults.Text = "Adults";
@@ -659,10 +647,9 @@ namespace Movie_File_Merger
             // 
             this.rbClips.ImageKey = "Clips.gif";
             this.rbClips.ImageList = this.ilMovieFileMerger;
-            this.rbClips.Location = new System.Drawing.Point(292, 47);
-            this.rbClips.Margin = new System.Windows.Forms.Padding(4);
+            this.rbClips.Location = new System.Drawing.Point(219, 38);
             this.rbClips.Name = "rbClips";
-            this.rbClips.Size = new System.Drawing.Size(88, 30);
+            this.rbClips.Size = new System.Drawing.Size(66, 24);
             this.rbClips.TabIndex = 16;
             this.rbClips.Tag = "Clips";
             this.rbClips.Text = "Clips";
@@ -675,10 +662,9 @@ namespace Movie_File_Merger
             // 
             this.rbSeries.ImageKey = "Series.gif";
             this.rbSeries.ImageList = this.ilMovieFileMerger;
-            this.rbSeries.Location = new System.Drawing.Point(292, 18);
-            this.rbSeries.Margin = new System.Windows.Forms.Padding(4);
+            this.rbSeries.Location = new System.Drawing.Point(219, 15);
             this.rbSeries.Name = "rbSeries";
-            this.rbSeries.Size = new System.Drawing.Size(100, 30);
+            this.rbSeries.Size = new System.Drawing.Size(75, 24);
             this.rbSeries.TabIndex = 13;
             this.rbSeries.Tag = "Series";
             this.rbSeries.Text = "Series";
@@ -692,10 +678,9 @@ namespace Movie_File_Merger
             // 
             this.rbDocumentaries.ImageKey = "Documentaries.gif";
             this.rbDocumentaries.ImageList = this.ilMovieFileMerger;
-            this.rbDocumentaries.Location = new System.Drawing.Point(130, 18);
-            this.rbDocumentaries.Margin = new System.Windows.Forms.Padding(4);
+            this.rbDocumentaries.Location = new System.Drawing.Point(98, 15);
             this.rbDocumentaries.Name = "rbDocumentaries";
-            this.rbDocumentaries.Size = new System.Drawing.Size(155, 30);
+            this.rbDocumentaries.Size = new System.Drawing.Size(116, 24);
             this.rbDocumentaries.TabIndex = 12;
             this.rbDocumentaries.Tag = "Documentaries";
             this.rbDocumentaries.Text = "Documentaries";
@@ -709,10 +694,9 @@ namespace Movie_File_Merger
             // 
             this.rbMovies.ImageKey = "Movie.gif";
             this.rbMovies.ImageList = this.ilMovieFileMerger;
-            this.rbMovies.Location = new System.Drawing.Point(16, 18);
-            this.rbMovies.Margin = new System.Windows.Forms.Padding(4);
+            this.rbMovies.Location = new System.Drawing.Point(12, 15);
             this.rbMovies.Name = "rbMovies";
-            this.rbMovies.Size = new System.Drawing.Size(107, 30);
+            this.rbMovies.Size = new System.Drawing.Size(80, 24);
             this.rbMovies.TabIndex = 11;
             this.rbMovies.Tag = "Movies";
             this.rbMovies.Text = "Movies";
@@ -731,12 +715,10 @@ namespace Movie_File_Merger
             this.gbProcessImport.Controls.Add(this.cbGetHigherRes);
             this.gbProcessImport.Controls.Add(this.rbMove);
             this.gbProcessImport.Controls.Add(this.rbCopy);
-            this.gbProcessImport.Location = new System.Drawing.Point(422, 8);
-            this.gbProcessImport.Margin = new System.Windows.Forms.Padding(4);
+            this.gbProcessImport.Location = new System.Drawing.Point(317, 6);
             this.gbProcessImport.Name = "gbProcessImport";
-            this.gbProcessImport.Padding = new System.Windows.Forms.Padding(4);
             this.gbProcessImport.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.gbProcessImport.Size = new System.Drawing.Size(385, 80);
+            this.gbProcessImport.Size = new System.Drawing.Size(289, 65);
             this.gbProcessImport.TabIndex = 20;
             this.gbProcessImport.TabStop = false;
             this.gbProcessImport.Text = "Process Import";
@@ -757,12 +739,12 @@ namespace Movie_File_Merger
             this.dudMinimumResolution.Items.Add(" > 540p (qHD)");
             this.dudMinimumResolution.Items.Add(" > 360p (nHD)");
             this.dudMinimumResolution.Items.Add(" > 0p (FLD)");
-            this.dudMinimumResolution.Location = new System.Drawing.Point(236, 22);
-            this.dudMinimumResolution.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dudMinimumResolution.Location = new System.Drawing.Point(177, 18);
+            this.dudMinimumResolution.Margin = new System.Windows.Forms.Padding(2);
             this.dudMinimumResolution.Name = "dudMinimumResolution";
             this.dudMinimumResolution.ReadOnly = true;
             this.dudMinimumResolution.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dudMinimumResolution.Size = new System.Drawing.Size(140, 22);
+            this.dudMinimumResolution.Size = new System.Drawing.Size(105, 20);
             this.dudMinimumResolution.TabIndex = 1;
             this.dudMinimumResolution.Text = " > 720p (HD)";
             this.dudMinimumResolution.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -775,10 +757,10 @@ namespace Movie_File_Merger
             this.btnStart.BackColor = System.Drawing.SystemColors.Control;
             this.btnStart.ImageKey = "Start.gif";
             this.btnStart.ImageList = this.ilMovieFileMerger;
-            this.btnStart.Location = new System.Drawing.Point(11, 18);
-            this.btnStart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnStart.Location = new System.Drawing.Point(8, 15);
+            this.btnStart.Margin = new System.Windows.Forms.Padding(2);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(105, 57);
+            this.btnStart.Size = new System.Drawing.Size(79, 46);
             this.btnStart.TabIndex = 21;
             this.btnStart.Text = "Start Process";
             this.btnStart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -793,10 +775,9 @@ namespace Movie_File_Merger
             this.cbGetHigherRes.Checked = true;
             this.cbGetHigherRes.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbGetHigherRes.ImageKey = "Folder.gif";
-            this.cbGetHigherRes.Location = new System.Drawing.Point(236, 51);
-            this.cbGetHigherRes.Margin = new System.Windows.Forms.Padding(4);
+            this.cbGetHigherRes.Location = new System.Drawing.Point(177, 41);
             this.cbGetHigherRes.Name = "cbGetHigherRes";
-            this.cbGetHigherRes.Size = new System.Drawing.Size(140, 20);
+            this.cbGetHigherRes.Size = new System.Drawing.Size(105, 16);
             this.cbGetHigherRes.TabIndex = 25;
             this.cbGetHigherRes.Text = "Get Higher Res";
             this.cbGetHigherRes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -809,10 +790,9 @@ namespace Movie_File_Merger
             // 
             this.rbMove.ImageKey = "Move.gif";
             this.rbMove.ImageList = this.ilMovieFileMerger;
-            this.rbMove.Location = new System.Drawing.Point(118, 47);
-            this.rbMove.Margin = new System.Windows.Forms.Padding(4);
+            this.rbMove.Location = new System.Drawing.Point(88, 38);
             this.rbMove.Name = "rbMove";
-            this.rbMove.Size = new System.Drawing.Size(107, 30);
+            this.rbMove.Size = new System.Drawing.Size(80, 24);
             this.rbMove.TabIndex = 23;
             this.rbMove.Text = "Move";
             this.rbMove.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -825,10 +805,9 @@ namespace Movie_File_Merger
             this.rbCopy.Checked = true;
             this.rbCopy.ImageKey = "Copy.gif";
             this.rbCopy.ImageList = this.ilMovieFileMerger;
-            this.rbCopy.Location = new System.Drawing.Point(118, 18);
-            this.rbCopy.Margin = new System.Windows.Forms.Padding(4);
+            this.rbCopy.Location = new System.Drawing.Point(88, 15);
             this.rbCopy.Name = "rbCopy";
-            this.rbCopy.Size = new System.Drawing.Size(107, 30);
+            this.rbCopy.Size = new System.Drawing.Size(80, 24);
             this.rbCopy.TabIndex = 22;
             this.rbCopy.TabStop = true;
             this.rbCopy.Text = "Copy";
@@ -843,8 +822,7 @@ namespace Movie_File_Merger
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.scVertical.BackColor = System.Drawing.SystemColors.Control;
-            this.scVertical.Location = new System.Drawing.Point(8, 154);
-            this.scVertical.Margin = new System.Windows.Forms.Padding(4);
+            this.scVertical.Location = new System.Drawing.Point(6, 125);
             this.scVertical.Name = "scVertical";
             // 
             // scVertical.Panel1
@@ -854,9 +832,8 @@ namespace Movie_File_Merger
             // scVertical.Panel2
             // 
             this.scVertical.Panel2.Controls.Add(this.scVerticalRight);
-            this.scVertical.Size = new System.Drawing.Size(806, 240);
-            this.scVertical.SplitterDistance = 261;
-            this.scVertical.SplitterWidth = 5;
+            this.scVertical.Size = new System.Drawing.Size(605, 182);
+            this.scVertical.SplitterDistance = 195;
             this.scVertical.TabIndex = 7;
             this.scVertical.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.ScVerticalSplitterMoved);
             // 
@@ -873,10 +850,9 @@ namespace Movie_File_Merger
             this.lvExisting.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.lvExisting.LabelWrap = false;
             this.lvExisting.Location = new System.Drawing.Point(0, 0);
-            this.lvExisting.Margin = new System.Windows.Forms.Padding(4);
             this.lvExisting.Name = "lvExisting";
             this.lvExisting.ShowItemToolTips = true;
-            this.lvExisting.Size = new System.Drawing.Size(261, 240);
+            this.lvExisting.Size = new System.Drawing.Size(195, 182);
             this.lvExisting.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.lvExisting.TabIndex = 0;
             this.lvExisting.TabStop = false;
@@ -901,7 +877,6 @@ namespace Movie_File_Merger
             // 
             this.scVerticalRight.Dock = System.Windows.Forms.DockStyle.Fill;
             this.scVerticalRight.Location = new System.Drawing.Point(0, 0);
-            this.scVerticalRight.Margin = new System.Windows.Forms.Padding(4);
             this.scVerticalRight.Name = "scVerticalRight";
             // 
             // scVerticalRight.Panel1
@@ -911,9 +886,8 @@ namespace Movie_File_Merger
             // scVerticalRight.Panel2
             // 
             this.scVerticalRight.Panel2.Controls.Add(this.lvImport);
-            this.scVerticalRight.Size = new System.Drawing.Size(540, 240);
-            this.scVerticalRight.SplitterDistance = 271;
-            this.scVerticalRight.SplitterWidth = 5;
+            this.scVerticalRight.Size = new System.Drawing.Size(406, 182);
+            this.scVerticalRight.SplitterDistance = 203;
             this.scVerticalRight.TabIndex = 1;
             this.scVerticalRight.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.ScVerticalSplitterMoved);
             // 
@@ -921,7 +895,6 @@ namespace Movie_File_Merger
             // 
             this.scHorizontal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.scHorizontal.Location = new System.Drawing.Point(0, 0);
-            this.scHorizontal.Margin = new System.Windows.Forms.Padding(4);
             this.scHorizontal.Name = "scHorizontal";
             this.scHorizontal.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -932,9 +905,8 @@ namespace Movie_File_Merger
             // scHorizontal.Panel2
             // 
             this.scHorizontal.Panel2.Controls.Add(this.lvGarbage);
-            this.scHorizontal.Size = new System.Drawing.Size(271, 240);
-            this.scHorizontal.SplitterDistance = 115;
-            this.scHorizontal.SplitterWidth = 5;
+            this.scHorizontal.Size = new System.Drawing.Size(203, 182);
+            this.scHorizontal.SplitterDistance = 86;
             this.scHorizontal.TabIndex = 0;
             // 
             // lvWish
@@ -950,10 +922,9 @@ namespace Movie_File_Merger
             this.lvWish.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.lvWish.LabelWrap = false;
             this.lvWish.Location = new System.Drawing.Point(0, 0);
-            this.lvWish.Margin = new System.Windows.Forms.Padding(4);
             this.lvWish.Name = "lvWish";
             this.lvWish.ShowItemToolTips = true;
-            this.lvWish.Size = new System.Drawing.Size(271, 115);
+            this.lvWish.Size = new System.Drawing.Size(203, 86);
             this.lvWish.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.lvWish.TabIndex = 1;
             this.lvWish.TabStop = false;
@@ -987,10 +958,9 @@ namespace Movie_File_Merger
             this.lvGarbage.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.lvGarbage.LabelWrap = false;
             this.lvGarbage.Location = new System.Drawing.Point(0, 0);
-            this.lvGarbage.Margin = new System.Windows.Forms.Padding(4);
             this.lvGarbage.Name = "lvGarbage";
             this.lvGarbage.ShowItemToolTips = true;
-            this.lvGarbage.Size = new System.Drawing.Size(271, 120);
+            this.lvGarbage.Size = new System.Drawing.Size(203, 92);
             this.lvGarbage.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.lvGarbage.TabIndex = 1;
             this.lvGarbage.TabStop = false;
@@ -1024,10 +994,9 @@ namespace Movie_File_Merger
             this.lvImport.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.lvImport.LabelWrap = false;
             this.lvImport.Location = new System.Drawing.Point(0, 0);
-            this.lvImport.Margin = new System.Windows.Forms.Padding(4);
             this.lvImport.Name = "lvImport";
             this.lvImport.ShowItemToolTips = true;
-            this.lvImport.Size = new System.Drawing.Size(264, 240);
+            this.lvImport.Size = new System.Drawing.Size(199, 182);
             this.lvImport.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.lvImport.TabIndex = 0;
             this.lvImport.TabStop = false;
@@ -1071,11 +1040,11 @@ namespace Movie_File_Merger
             "Torrent Hound",
             "Torlock",
             "Yifi Torrents"});
-            this.cobSearchDownload.Location = new System.Drawing.Point(112, 106);
-            this.cobSearchDownload.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cobSearchDownload.Location = new System.Drawing.Point(84, 86);
+            this.cobSearchDownload.Margin = new System.Windows.Forms.Padding(2);
             this.cobSearchDownload.Name = "cobSearchDownload";
             this.cobSearchDownload.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cobSearchDownload.Size = new System.Drawing.Size(22, 24);
+            this.cobSearchDownload.Size = new System.Drawing.Size(18, 21);
             this.cobSearchDownload.TabIndex = 48;
             this.cobSearchDownload.Text = "Torrentz";
             this.ttMovieFileMerger.SetToolTip(this.cobSearchDownload, "Select where to search for torrents to download the item.");
@@ -1096,10 +1065,10 @@ namespace Movie_File_Merger
             "The TVDB",
             "Trailer Addict",
             "Adult DVD Empire"});
-            this.cobSearchInfo.Location = new System.Drawing.Point(687, 106);
-            this.cobSearchInfo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cobSearchInfo.Location = new System.Drawing.Point(516, 86);
+            this.cobSearchInfo.Margin = new System.Windows.Forms.Padding(2);
             this.cobSearchInfo.Name = "cobSearchInfo";
-            this.cobSearchInfo.Size = new System.Drawing.Size(22, 24);
+            this.cobSearchInfo.Size = new System.Drawing.Size(18, 21);
             this.cobSearchInfo.TabIndex = 47;
             this.cobSearchInfo.Text = "IMDb";
             this.ttMovieFileMerger.SetToolTip(this.cobSearchInfo, "Select where to search for additional information concerning the item.");
@@ -1120,21 +1089,21 @@ namespace Movie_File_Merger
             this.tpMaintenance.Controls.Add(this.lblSelect);
             this.tpMaintenance.Controls.Add(this.scMaintenance);
             this.tpMaintenance.ImageKey = "Process.gif";
-            this.tpMaintenance.Location = new System.Drawing.Point(4, 31);
-            this.tpMaintenance.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tpMaintenance.Location = new System.Drawing.Point(4, 29);
+            this.tpMaintenance.Margin = new System.Windows.Forms.Padding(2);
             this.tpMaintenance.Name = "tpMaintenance";
-            this.tpMaintenance.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tpMaintenance.Size = new System.Drawing.Size(820, 432);
+            this.tpMaintenance.Padding = new System.Windows.Forms.Padding(2);
+            this.tpMaintenance.Size = new System.Drawing.Size(614, 343);
             this.tpMaintenance.TabIndex = 5;
             this.tpMaintenance.Text = "Maintenance";
             // 
             // pbMaintenanceUserManual
             // 
             this.pbMaintenanceUserManual.Image = ((System.Drawing.Image)(resources.GetObject("pbMaintenanceUserManual.Image")));
-            this.pbMaintenanceUserManual.Location = new System.Drawing.Point(5, 374);
-            this.pbMaintenanceUserManual.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbMaintenanceUserManual.Location = new System.Drawing.Point(4, 304);
+            this.pbMaintenanceUserManual.Margin = new System.Windows.Forms.Padding(2);
             this.pbMaintenanceUserManual.Name = "pbMaintenanceUserManual";
-            this.pbMaintenanceUserManual.Size = new System.Drawing.Size(115, 110);
+            this.pbMaintenanceUserManual.Size = new System.Drawing.Size(86, 89);
             this.pbMaintenanceUserManual.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbMaintenanceUserManual.TabIndex = 51;
             this.pbMaintenanceUserManual.TabStop = false;
@@ -1145,10 +1114,10 @@ namespace Movie_File_Merger
             // 
             // btnGoodEpisode
             // 
-            this.btnGoodEpisode.Location = new System.Drawing.Point(7, 329);
-            this.btnGoodEpisode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnGoodEpisode.Location = new System.Drawing.Point(5, 267);
+            this.btnGoodEpisode.Margin = new System.Windows.Forms.Padding(2);
             this.btnGoodEpisode.Name = "btnGoodEpisode";
-            this.btnGoodEpisode.Size = new System.Drawing.Size(114, 26);
+            this.btnGoodEpisode.Size = new System.Drawing.Size(86, 21);
             this.btnGoodEpisode.TabIndex = 18;
             this.btnGoodEpisode.Text = "Good Episode";
             this.ttMovieFileMerger.SetToolTip(this.btnGoodEpisode, "Select all episodes with bad names.");
@@ -1157,10 +1126,10 @@ namespace Movie_File_Merger
             // 
             // btnGoodDocu
             // 
-            this.btnGoodDocu.Location = new System.Drawing.Point(7, 298);
-            this.btnGoodDocu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnGoodDocu.Location = new System.Drawing.Point(5, 242);
+            this.btnGoodDocu.Margin = new System.Windows.Forms.Padding(2);
             this.btnGoodDocu.Name = "btnGoodDocu";
-            this.btnGoodDocu.Size = new System.Drawing.Size(114, 26);
+            this.btnGoodDocu.Size = new System.Drawing.Size(86, 21);
             this.btnGoodDocu.TabIndex = 16;
             this.btnGoodDocu.Text = "Good Docu";
             this.ttMovieFileMerger.SetToolTip(this.btnGoodDocu, "Select all documentaries with good names.");
@@ -1169,10 +1138,10 @@ namespace Movie_File_Merger
             // 
             // btnGoodMovie
             // 
-            this.btnGoodMovie.Location = new System.Drawing.Point(7, 268);
-            this.btnGoodMovie.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnGoodMovie.Location = new System.Drawing.Point(5, 218);
+            this.btnGoodMovie.Margin = new System.Windows.Forms.Padding(2);
             this.btnGoodMovie.Name = "btnGoodMovie";
-            this.btnGoodMovie.Size = new System.Drawing.Size(114, 26);
+            this.btnGoodMovie.Size = new System.Drawing.Size(86, 21);
             this.btnGoodMovie.TabIndex = 15;
             this.btnGoodMovie.Text = "Good Movie";
             this.ttMovieFileMerger.SetToolTip(this.btnGoodMovie, "Select all movies with good names.");
@@ -1181,10 +1150,10 @@ namespace Movie_File_Merger
             // 
             // btnUnrelatedFile
             // 
-            this.btnUnrelatedFile.Location = new System.Drawing.Point(7, 238);
-            this.btnUnrelatedFile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnUnrelatedFile.Location = new System.Drawing.Point(5, 193);
+            this.btnUnrelatedFile.Margin = new System.Windows.Forms.Padding(2);
             this.btnUnrelatedFile.Name = "btnUnrelatedFile";
-            this.btnUnrelatedFile.Size = new System.Drawing.Size(114, 26);
+            this.btnUnrelatedFile.Size = new System.Drawing.Size(86, 21);
             this.btnUnrelatedFile.TabIndex = 14;
             this.btnUnrelatedFile.Text = "Unrelated File";
             this.ttMovieFileMerger.SetToolTip(this.btnUnrelatedFile, "Select all unrelated files, which are not main or add-on files.");
@@ -1193,10 +1162,10 @@ namespace Movie_File_Merger
             // 
             // btnBadEpisode
             // 
-            this.btnBadEpisode.Location = new System.Drawing.Point(7, 177);
-            this.btnBadEpisode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBadEpisode.Location = new System.Drawing.Point(5, 144);
+            this.btnBadEpisode.Margin = new System.Windows.Forms.Padding(2);
             this.btnBadEpisode.Name = "btnBadEpisode";
-            this.btnBadEpisode.Size = new System.Drawing.Size(114, 26);
+            this.btnBadEpisode.Size = new System.Drawing.Size(86, 21);
             this.btnBadEpisode.TabIndex = 12;
             this.btnBadEpisode.Text = "Bad Episode";
             this.ttMovieFileMerger.SetToolTip(this.btnBadEpisode, "Select all episodes with bad names.");
@@ -1205,10 +1174,10 @@ namespace Movie_File_Merger
             // 
             // btnBadName
             // 
-            this.btnBadName.Location = new System.Drawing.Point(7, 207);
-            this.btnBadName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBadName.Location = new System.Drawing.Point(5, 168);
+            this.btnBadName.Margin = new System.Windows.Forms.Padding(2);
             this.btnBadName.Name = "btnBadName";
-            this.btnBadName.Size = new System.Drawing.Size(114, 26);
+            this.btnBadName.Size = new System.Drawing.Size(86, 21);
             this.btnBadName.TabIndex = 13;
             this.btnBadName.Text = "Bad Name";
             this.ttMovieFileMerger.SetToolTip(this.btnBadName, "Select all remaining files with bad names.");
@@ -1217,10 +1186,10 @@ namespace Movie_File_Merger
             // 
             // btnBadDocu
             // 
-            this.btnBadDocu.Location = new System.Drawing.Point(7, 146);
-            this.btnBadDocu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBadDocu.Location = new System.Drawing.Point(5, 119);
+            this.btnBadDocu.Margin = new System.Windows.Forms.Padding(2);
             this.btnBadDocu.Name = "btnBadDocu";
-            this.btnBadDocu.Size = new System.Drawing.Size(114, 26);
+            this.btnBadDocu.Size = new System.Drawing.Size(86, 21);
             this.btnBadDocu.TabIndex = 11;
             this.btnBadDocu.Text = "Bad Docu";
             this.ttMovieFileMerger.SetToolTip(this.btnBadDocu, "Select all documentaries with bad names.");
@@ -1229,10 +1198,10 @@ namespace Movie_File_Merger
             // 
             // btnBadMovie
             // 
-            this.btnBadMovie.Location = new System.Drawing.Point(7, 116);
-            this.btnBadMovie.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBadMovie.Location = new System.Drawing.Point(5, 94);
+            this.btnBadMovie.Margin = new System.Windows.Forms.Padding(2);
             this.btnBadMovie.Name = "btnBadMovie";
-            this.btnBadMovie.Size = new System.Drawing.Size(114, 26);
+            this.btnBadMovie.Size = new System.Drawing.Size(86, 21);
             this.btnBadMovie.TabIndex = 10;
             this.btnBadMovie.Text = "Bad Movie";
             this.ttMovieFileMerger.SetToolTip(this.btnBadMovie, "Select all movies with with bad names.");
@@ -1243,10 +1212,10 @@ namespace Movie_File_Merger
             // 
             this.pbMFM.Image = ((System.Drawing.Image)(resources.GetObject("pbMFM.Image")));
             this.pbMFM.InitialImage = null;
-            this.pbMFM.Location = new System.Drawing.Point(20, 6);
-            this.pbMFM.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbMFM.Location = new System.Drawing.Point(15, 5);
+            this.pbMFM.Margin = new System.Windows.Forms.Padding(2);
             this.pbMFM.Name = "pbMFM";
-            this.pbMFM.Size = new System.Drawing.Size(85, 82);
+            this.pbMFM.Size = new System.Drawing.Size(64, 67);
             this.pbMFM.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbMFM.TabIndex = 44;
             this.pbMFM.TabStop = false;
@@ -1259,9 +1228,10 @@ namespace Movie_File_Merger
             // 
             this.lblSelect.AutoEllipsis = true;
             this.lblSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSelect.Location = new System.Drawing.Point(8, 95);
+            this.lblSelect.Location = new System.Drawing.Point(6, 77);
+            this.lblSelect.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSelect.Name = "lblSelect";
-            this.lblSelect.Size = new System.Drawing.Size(112, 18);
+            this.lblSelect.Size = new System.Drawing.Size(84, 15);
             this.lblSelect.TabIndex = 41;
             this.lblSelect.Text = "Select";
             this.lblSelect.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1271,8 +1241,8 @@ namespace Movie_File_Merger
             this.scMaintenance.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.scMaintenance.Location = new System.Drawing.Point(127, 5);
-            this.scMaintenance.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.scMaintenance.Location = new System.Drawing.Point(95, 4);
+            this.scMaintenance.Margin = new System.Windows.Forms.Padding(2);
             this.scMaintenance.Name = "scMaintenance";
             this.scMaintenance.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -1287,9 +1257,8 @@ namespace Movie_File_Merger
             // 
             this.scMaintenance.Panel2.Controls.Add(this.rtbMaintenance);
             this.scMaintenance.Panel2MinSize = 100;
-            this.scMaintenance.Size = new System.Drawing.Size(687, 435);
-            this.scMaintenance.SplitterDistance = 259;
-            this.scMaintenance.SplitterWidth = 5;
+            this.scMaintenance.Size = new System.Drawing.Size(516, 357);
+            this.scMaintenance.SplitterDistance = 211;
             this.scMaintenance.TabIndex = 39;
             // 
             // lvMaintenance
@@ -1304,10 +1273,9 @@ namespace Movie_File_Merger
             this.lvMaintenance.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.lvMaintenance.LabelWrap = false;
             this.lvMaintenance.Location = new System.Drawing.Point(1, 1);
-            this.lvMaintenance.Margin = new System.Windows.Forms.Padding(4);
             this.lvMaintenance.Name = "lvMaintenance";
             this.lvMaintenance.ShowItemToolTips = true;
-            this.lvMaintenance.Size = new System.Drawing.Size(685, 257);
+            this.lvMaintenance.Size = new System.Drawing.Size(514, 209);
             this.lvMaintenance.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.lvMaintenance.TabIndex = 38;
             this.lvMaintenance.Tag = "Maintenance";
@@ -1332,10 +1300,9 @@ namespace Movie_File_Merger
             // 
             this.rtbMaintenance.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rtbMaintenance.Location = new System.Drawing.Point(0, 0);
-            this.rtbMaintenance.Margin = new System.Windows.Forms.Padding(4);
             this.rtbMaintenance.Name = "rtbMaintenance";
             this.rtbMaintenance.ReadOnly = true;
-            this.rtbMaintenance.Size = new System.Drawing.Size(687, 171);
+            this.rtbMaintenance.Size = new System.Drawing.Size(516, 142);
             this.rtbMaintenance.TabIndex = 20;
             this.rtbMaintenance.Text = "";
             this.rtbMaintenance.WordWrap = false;
@@ -1348,21 +1315,20 @@ namespace Movie_File_Merger
             this.tpLog.Controls.Add(this.pbLogBanner);
             this.tpLog.Controls.Add(this.rtbLog);
             this.tpLog.ImageKey = "Log.gif";
-            this.tpLog.Location = new System.Drawing.Point(4, 31);
-            this.tpLog.Margin = new System.Windows.Forms.Padding(4);
+            this.tpLog.Location = new System.Drawing.Point(4, 29);
             this.tpLog.Name = "tpLog";
-            this.tpLog.Padding = new System.Windows.Forms.Padding(4);
-            this.tpLog.Size = new System.Drawing.Size(820, 432);
+            this.tpLog.Padding = new System.Windows.Forms.Padding(3);
+            this.tpLog.Size = new System.Drawing.Size(614, 343);
             this.tpLog.TabIndex = 2;
             this.tpLog.Text = "Log";
             // 
             // pbLogUserManual
             // 
             this.pbLogUserManual.Image = ((System.Drawing.Image)(resources.GetObject("pbLogUserManual.Image")));
-            this.pbLogUserManual.Location = new System.Drawing.Point(7, 6);
-            this.pbLogUserManual.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbLogUserManual.Location = new System.Drawing.Point(5, 5);
+            this.pbLogUserManual.Margin = new System.Windows.Forms.Padding(2);
             this.pbLogUserManual.Name = "pbLogUserManual";
-            this.pbLogUserManual.Size = new System.Drawing.Size(72, 83);
+            this.pbLogUserManual.Size = new System.Drawing.Size(54, 67);
             this.pbLogUserManual.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbLogUserManual.TabIndex = 50;
             this.pbLogUserManual.TabStop = false;
@@ -1375,10 +1341,10 @@ namespace Movie_File_Merger
             // 
             this.pbLogHowTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbLogHowTo.Image = ((System.Drawing.Image)(resources.GetObject("pbLogHowTo.Image")));
-            this.pbLogHowTo.Location = new System.Drawing.Point(742, 6);
-            this.pbLogHowTo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbLogHowTo.Location = new System.Drawing.Point(557, 5);
+            this.pbLogHowTo.Margin = new System.Windows.Forms.Padding(2);
             this.pbLogHowTo.Name = "pbLogHowTo";
-            this.pbLogHowTo.Size = new System.Drawing.Size(72, 83);
+            this.pbLogHowTo.Size = new System.Drawing.Size(54, 67);
             this.pbLogHowTo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbLogHowTo.TabIndex = 49;
             this.pbLogHowTo.TabStop = false;
@@ -1393,10 +1359,10 @@ namespace Movie_File_Merger
             this.pbLogBanner.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pbLogBanner.Image = ((System.Drawing.Image)(resources.GetObject("pbLogBanner.Image")));
-            this.pbLogBanner.Location = new System.Drawing.Point(7, 6);
-            this.pbLogBanner.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbLogBanner.Location = new System.Drawing.Point(5, 5);
+            this.pbLogBanner.Margin = new System.Windows.Forms.Padding(2);
             this.pbLogBanner.Name = "pbLogBanner";
-            this.pbLogBanner.Size = new System.Drawing.Size(807, 83);
+            this.pbLogBanner.Size = new System.Drawing.Size(606, 67);
             this.pbLogBanner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbLogBanner.TabIndex = 48;
             this.pbLogBanner.TabStop = false;
@@ -1410,11 +1376,10 @@ namespace Movie_File_Merger
             this.rtbLog.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.rtbLog.Location = new System.Drawing.Point(4, 96);
-            this.rtbLog.Margin = new System.Windows.Forms.Padding(4);
+            this.rtbLog.Location = new System.Drawing.Point(3, 78);
             this.rtbLog.Name = "rtbLog";
             this.rtbLog.ReadOnly = true;
-            this.rtbLog.Size = new System.Drawing.Size(814, 341);
+            this.rtbLog.Size = new System.Drawing.Size(613, 281);
             this.rtbLog.TabIndex = 0;
             this.rtbLog.Text = "";
             this.rtbLog.WordWrap = false;
@@ -1432,11 +1397,10 @@ namespace Movie_File_Merger
             this.tpSettings.Controls.Add(this.gbSettingsNameUnification);
             this.tpSettings.Controls.Add(this.gbSettingsConsideredFiles);
             this.tpSettings.ImageKey = "Settings.gif";
-            this.tpSettings.Location = new System.Drawing.Point(4, 31);
-            this.tpSettings.Margin = new System.Windows.Forms.Padding(4);
+            this.tpSettings.Location = new System.Drawing.Point(4, 29);
             this.tpSettings.Name = "tpSettings";
-            this.tpSettings.Padding = new System.Windows.Forms.Padding(4);
-            this.tpSettings.Size = new System.Drawing.Size(820, 432);
+            this.tpSettings.Padding = new System.Windows.Forms.Padding(3);
+            this.tpSettings.Size = new System.Drawing.Size(614, 343);
             this.tpSettings.TabIndex = 1;
             this.tpSettings.Text = "Settings";
             this.tpSettings.Leave += new System.EventHandler(this.TpSettingsLeave);
@@ -1453,11 +1417,11 @@ namespace Movie_File_Merger
             "Play",
             "Search Info",
             "Search Download"});
-            this.cobDoubleClickDefault.Location = new System.Drawing.Point(9, 358);
-            this.cobDoubleClickDefault.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cobDoubleClickDefault.Location = new System.Drawing.Point(8, 291);
+            this.cobDoubleClickDefault.Margin = new System.Windows.Forms.Padding(2);
             this.cobDoubleClickDefault.MaxDropDownItems = 15;
             this.cobDoubleClickDefault.Name = "cobDoubleClickDefault";
-            this.cobDoubleClickDefault.Size = new System.Drawing.Size(162, 24);
+            this.cobDoubleClickDefault.Size = new System.Drawing.Size(122, 21);
             this.cobDoubleClickDefault.TabIndex = 45;
             this.cobDoubleClickDefault.Text = "DoubleClick Default";
             this.ttMovieFileMerger.SetToolTip(this.cobDoubleClickDefault, "Select a predefined Tool Tip Regex,\r\nfor the Select, Bin, or Wish actions.");
@@ -1466,10 +1430,10 @@ namespace Movie_File_Merger
             // 
             this.pbSeetingsHowTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbSeetingsHowTo.Image = ((System.Drawing.Image)(resources.GetObject("pbSeetingsHowTo.Image")));
-            this.pbSeetingsHowTo.Location = new System.Drawing.Point(742, 6);
-            this.pbSeetingsHowTo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbSeetingsHowTo.Location = new System.Drawing.Point(557, 5);
+            this.pbSeetingsHowTo.Margin = new System.Windows.Forms.Padding(2);
             this.pbSeetingsHowTo.Name = "pbSeetingsHowTo";
-            this.pbSeetingsHowTo.Size = new System.Drawing.Size(72, 83);
+            this.pbSeetingsHowTo.Size = new System.Drawing.Size(54, 67);
             this.pbSeetingsHowTo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbSeetingsHowTo.TabIndex = 46;
             this.pbSeetingsHowTo.TabStop = false;
@@ -1482,10 +1446,10 @@ namespace Movie_File_Merger
             // btnResetSettings
             // 
             this.btnResetSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnResetSettings.Location = new System.Drawing.Point(651, 358);
-            this.btnResetSettings.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnResetSettings.Location = new System.Drawing.Point(489, 291);
+            this.btnResetSettings.Margin = new System.Windows.Forms.Padding(2);
             this.btnResetSettings.Name = "btnResetSettings";
-            this.btnResetSettings.Size = new System.Drawing.Size(162, 22);
+            this.btnResetSettings.Size = new System.Drawing.Size(122, 18);
             this.btnResetSettings.TabIndex = 39;
             this.btnResetSettings.Text = "Reset All Settings";
             this.btnResetSettings.UseVisualStyleBackColor = true;
@@ -1494,10 +1458,10 @@ namespace Movie_File_Merger
             // pbSettingsUserManual
             // 
             this.pbSettingsUserManual.Image = ((System.Drawing.Image)(resources.GetObject("pbSettingsUserManual.Image")));
-            this.pbSettingsUserManual.Location = new System.Drawing.Point(6, 6);
-            this.pbSettingsUserManual.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbSettingsUserManual.Location = new System.Drawing.Point(4, 5);
+            this.pbSettingsUserManual.Margin = new System.Windows.Forms.Padding(2);
             this.pbSettingsUserManual.Name = "pbSettingsUserManual";
-            this.pbSettingsUserManual.Size = new System.Drawing.Size(72, 83);
+            this.pbSettingsUserManual.Size = new System.Drawing.Size(54, 67);
             this.pbSettingsUserManual.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbSettingsUserManual.TabIndex = 48;
             this.pbSettingsUserManual.TabStop = false;
@@ -1511,10 +1475,10 @@ namespace Movie_File_Merger
             this.pbSettingsBanner.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pbSettingsBanner.Image = ((System.Drawing.Image)(resources.GetObject("pbSettingsBanner.Image")));
-            this.pbSettingsBanner.Location = new System.Drawing.Point(7, 6);
-            this.pbSettingsBanner.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbSettingsBanner.Location = new System.Drawing.Point(5, 5);
+            this.pbSettingsBanner.Margin = new System.Windows.Forms.Padding(2);
             this.pbSettingsBanner.Name = "pbSettingsBanner";
-            this.pbSettingsBanner.Size = new System.Drawing.Size(807, 83);
+            this.pbSettingsBanner.Size = new System.Drawing.Size(606, 67);
             this.pbSettingsBanner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbSettingsBanner.TabIndex = 47;
             this.pbSettingsBanner.TabStop = false;
@@ -1528,11 +1492,10 @@ namespace Movie_File_Merger
             this.rtbSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.rtbSettings.Location = new System.Drawing.Point(8, 386);
-            this.rtbSettings.Margin = new System.Windows.Forms.Padding(4);
+            this.rtbSettings.Location = new System.Drawing.Point(6, 314);
             this.rtbSettings.Name = "rtbSettings";
             this.rtbSettings.ReadOnly = true;
-            this.rtbSettings.Size = new System.Drawing.Size(806, 59);
+            this.rtbSettings.Size = new System.Drawing.Size(607, 52);
             this.rtbSettings.TabIndex = 3;
             this.rtbSettings.TabStop = false;
             this.rtbSettings.Text = "";
@@ -1563,11 +1526,9 @@ namespace Movie_File_Merger
             this.gbSettingsNameUnification.Controls.Add(this.tbEpisodesIdRegex);
             this.gbSettingsNameUnification.Controls.Add(this.lblCutNameBeforeRegex);
             this.gbSettingsNameUnification.Controls.Add(this.tbCutNameBeforeRegex);
-            this.gbSettingsNameUnification.Location = new System.Drawing.Point(7, 158);
-            this.gbSettingsNameUnification.Margin = new System.Windows.Forms.Padding(4);
+            this.gbSettingsNameUnification.Location = new System.Drawing.Point(5, 128);
             this.gbSettingsNameUnification.Name = "gbSettingsNameUnification";
-            this.gbSettingsNameUnification.Padding = new System.Windows.Forms.Padding(4);
-            this.gbSettingsNameUnification.Size = new System.Drawing.Size(806, 194);
+            this.gbSettingsNameUnification.Size = new System.Drawing.Size(605, 158);
             this.gbSettingsNameUnification.TabIndex = 20;
             this.gbSettingsNameUnification.TabStop = false;
             this.gbSettingsNameUnification.Text = "Name Unification Regular Expressions";
@@ -1576,10 +1537,9 @@ namespace Movie_File_Merger
             // 
             // lblBadMovieNameRegex
             // 
-            this.lblBadMovieNameRegex.Location = new System.Drawing.Point(428, 166);
-            this.lblBadMovieNameRegex.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBadMovieNameRegex.Location = new System.Drawing.Point(321, 135);
             this.lblBadMovieNameRegex.Name = "lblBadMovieNameRegex";
-            this.lblBadMovieNameRegex.Size = new System.Drawing.Size(136, 19);
+            this.lblBadMovieNameRegex.Size = new System.Drawing.Size(102, 15);
             this.lblBadMovieNameRegex.TabIndex = 38;
             this.lblBadMovieNameRegex.Text = "Bad Movie Name";
             this.ttMovieFileMerger.SetToolTip(this.lblBadMovieNameRegex, resources.GetString("lblBadMovieNameRegex.ToolTip"));
@@ -1589,20 +1549,18 @@ namespace Movie_File_Merger
             this.tbBadMovieNameRegex.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbBadMovieNameRegex.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbBadMovieNameRegex.Location = new System.Drawing.Point(572, 164);
-            this.tbBadMovieNameRegex.Margin = new System.Windows.Forms.Padding(4);
+            this.tbBadMovieNameRegex.Location = new System.Drawing.Point(429, 133);
             this.tbBadMovieNameRegex.Name = "tbBadMovieNameRegex";
-            this.tbBadMovieNameRegex.Size = new System.Drawing.Size(224, 23);
+            this.tbBadMovieNameRegex.Size = new System.Drawing.Size(170, 20);
             this.tbBadMovieNameRegex.TabIndex = 30;
             this.tbBadMovieNameRegex.Text = "[12]\\d{3}";
             this.ttMovieFileMerger.SetToolTip(this.tbBadMovieNameRegex, resources.GetString("tbBadMovieNameRegex.ToolTip"));
             // 
             // lblGoodMovieNameRegex
             // 
-            this.lblGoodMovieNameRegex.Location = new System.Drawing.Point(11, 166);
-            this.lblGoodMovieNameRegex.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblGoodMovieNameRegex.Location = new System.Drawing.Point(8, 135);
             this.lblGoodMovieNameRegex.Name = "lblGoodMovieNameRegex";
-            this.lblGoodMovieNameRegex.Size = new System.Drawing.Size(176, 19);
+            this.lblGoodMovieNameRegex.Size = new System.Drawing.Size(132, 15);
             this.lblGoodMovieNameRegex.TabIndex = 36;
             this.lblGoodMovieNameRegex.Text = "Good Movie Name";
             this.ttMovieFileMerger.SetToolTip(this.lblGoodMovieNameRegex, resources.GetString("lblGoodMovieNameRegex.ToolTip"));
@@ -1610,20 +1568,18 @@ namespace Movie_File_Merger
             // tbGoodMovieNameRegex
             // 
             this.tbGoodMovieNameRegex.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbGoodMovieNameRegex.Location = new System.Drawing.Point(194, 164);
-            this.tbGoodMovieNameRegex.Margin = new System.Windows.Forms.Padding(4);
+            this.tbGoodMovieNameRegex.Location = new System.Drawing.Point(146, 133);
             this.tbGoodMovieNameRegex.Name = "tbGoodMovieNameRegex";
-            this.tbGoodMovieNameRegex.Size = new System.Drawing.Size(209, 23);
+            this.tbGoodMovieNameRegex.Size = new System.Drawing.Size(158, 20);
             this.tbGoodMovieNameRegex.TabIndex = 29;
             this.tbGoodMovieNameRegex.Text = ".* \\([12]\\d{3}\\)$";
             this.ttMovieFileMerger.SetToolTip(this.tbGoodMovieNameRegex, resources.GetString("tbGoodMovieNameRegex.ToolTip"));
             // 
             // lblBadEpisodeNameRegex
             // 
-            this.lblBadEpisodeNameRegex.Location = new System.Drawing.Point(428, 138);
-            this.lblBadEpisodeNameRegex.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBadEpisodeNameRegex.Location = new System.Drawing.Point(321, 112);
             this.lblBadEpisodeNameRegex.Name = "lblBadEpisodeNameRegex";
-            this.lblBadEpisodeNameRegex.Size = new System.Drawing.Size(136, 19);
+            this.lblBadEpisodeNameRegex.Size = new System.Drawing.Size(102, 15);
             this.lblBadEpisodeNameRegex.TabIndex = 34;
             this.lblBadEpisodeNameRegex.Text = "Bad Episode Name";
             this.ttMovieFileMerger.SetToolTip(this.lblBadEpisodeNameRegex, resources.GetString("lblBadEpisodeNameRegex.ToolTip"));
@@ -1633,20 +1589,18 @@ namespace Movie_File_Merger
             this.tbBadEpisodeNameRegex.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbBadEpisodeNameRegex.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbBadEpisodeNameRegex.Location = new System.Drawing.Point(572, 135);
-            this.tbBadEpisodeNameRegex.Margin = new System.Windows.Forms.Padding(4);
+            this.tbBadEpisodeNameRegex.Location = new System.Drawing.Point(429, 110);
             this.tbBadEpisodeNameRegex.Name = "tbBadEpisodeNameRegex";
-            this.tbBadEpisodeNameRegex.Size = new System.Drawing.Size(224, 23);
+            this.tbBadEpisodeNameRegex.Size = new System.Drawing.Size(170, 20);
             this.tbBadEpisodeNameRegex.TabIndex = 28;
             this.tbBadEpisodeNameRegex.Text = "[Ss]\\d{1,2}[Ee]\\d{1,2}";
             this.ttMovieFileMerger.SetToolTip(this.tbBadEpisodeNameRegex, resources.GetString("tbBadEpisodeNameRegex.ToolTip"));
             // 
             // lblGoodEpisodeNameRegex
             // 
-            this.lblGoodEpisodeNameRegex.Location = new System.Drawing.Point(11, 138);
-            this.lblGoodEpisodeNameRegex.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblGoodEpisodeNameRegex.Location = new System.Drawing.Point(8, 112);
             this.lblGoodEpisodeNameRegex.Name = "lblGoodEpisodeNameRegex";
-            this.lblGoodEpisodeNameRegex.Size = new System.Drawing.Size(176, 19);
+            this.lblGoodEpisodeNameRegex.Size = new System.Drawing.Size(132, 15);
             this.lblGoodEpisodeNameRegex.TabIndex = 32;
             this.lblGoodEpisodeNameRegex.Text = "Good Episode Name";
             this.ttMovieFileMerger.SetToolTip(this.lblGoodEpisodeNameRegex, resources.GetString("lblGoodEpisodeNameRegex.ToolTip"));
@@ -1654,20 +1608,18 @@ namespace Movie_File_Merger
             // tbGoodEpisodeNameRegex
             // 
             this.tbGoodEpisodeNameRegex.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbGoodEpisodeNameRegex.Location = new System.Drawing.Point(194, 135);
-            this.tbGoodEpisodeNameRegex.Margin = new System.Windows.Forms.Padding(4);
+            this.tbGoodEpisodeNameRegex.Location = new System.Drawing.Point(146, 110);
             this.tbGoodEpisodeNameRegex.Name = "tbGoodEpisodeNameRegex";
-            this.tbGoodEpisodeNameRegex.Size = new System.Drawing.Size(209, 23);
+            this.tbGoodEpisodeNameRegex.Size = new System.Drawing.Size(158, 20);
             this.tbGoodEpisodeNameRegex.TabIndex = 27;
             this.tbGoodEpisodeNameRegex.Text = ".* S\\d{2}E\\d{2}(-E\\d{2})? .*$";
             this.ttMovieFileMerger.SetToolTip(this.tbGoodEpisodeNameRegex, resources.GetString("tbGoodEpisodeNameRegex.ToolTip"));
             // 
             // lblBadDocuNameRegex
             // 
-            this.lblBadDocuNameRegex.Location = new System.Drawing.Point(428, 109);
-            this.lblBadDocuNameRegex.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBadDocuNameRegex.Location = new System.Drawing.Point(321, 89);
             this.lblBadDocuNameRegex.Name = "lblBadDocuNameRegex";
-            this.lblBadDocuNameRegex.Size = new System.Drawing.Size(136, 19);
+            this.lblBadDocuNameRegex.Size = new System.Drawing.Size(102, 15);
             this.lblBadDocuNameRegex.TabIndex = 30;
             this.lblBadDocuNameRegex.Text = "Bad Docu Name";
             this.ttMovieFileMerger.SetToolTip(this.lblBadDocuNameRegex, resources.GetString("lblBadDocuNameRegex.ToolTip"));
@@ -1677,20 +1629,18 @@ namespace Movie_File_Merger
             this.tbBadDocuNameRegex.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbBadDocuNameRegex.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbBadDocuNameRegex.Location = new System.Drawing.Point(572, 106);
-            this.tbBadDocuNameRegex.Margin = new System.Windows.Forms.Padding(4);
+            this.tbBadDocuNameRegex.Location = new System.Drawing.Point(429, 86);
             this.tbBadDocuNameRegex.Name = "tbBadDocuNameRegex";
-            this.tbBadDocuNameRegex.Size = new System.Drawing.Size(224, 23);
+            this.tbBadDocuNameRegex.Size = new System.Drawing.Size(170, 20);
             this.tbBadDocuNameRegex.TabIndex = 26;
             this.tbBadDocuNameRegex.Text = "[Ss][12]\\d{3}[Ee]\\d{1,3}";
             this.ttMovieFileMerger.SetToolTip(this.tbBadDocuNameRegex, resources.GetString("tbBadDocuNameRegex.ToolTip"));
             // 
             // lblGoodDocuNameRegex
             // 
-            this.lblGoodDocuNameRegex.Location = new System.Drawing.Point(11, 109);
-            this.lblGoodDocuNameRegex.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblGoodDocuNameRegex.Location = new System.Drawing.Point(8, 89);
             this.lblGoodDocuNameRegex.Name = "lblGoodDocuNameRegex";
-            this.lblGoodDocuNameRegex.Size = new System.Drawing.Size(176, 19);
+            this.lblGoodDocuNameRegex.Size = new System.Drawing.Size(132, 15);
             this.lblGoodDocuNameRegex.TabIndex = 28;
             this.lblGoodDocuNameRegex.Text = "Good Docu Name";
             this.ttMovieFileMerger.SetToolTip(this.lblGoodDocuNameRegex, resources.GetString("lblGoodDocuNameRegex.ToolTip"));
@@ -1698,20 +1648,18 @@ namespace Movie_File_Merger
             // tbGoodDocuNameRegex
             // 
             this.tbGoodDocuNameRegex.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbGoodDocuNameRegex.Location = new System.Drawing.Point(194, 106);
-            this.tbGoodDocuNameRegex.Margin = new System.Windows.Forms.Padding(4);
+            this.tbGoodDocuNameRegex.Location = new System.Drawing.Point(146, 86);
             this.tbGoodDocuNameRegex.Name = "tbGoodDocuNameRegex";
-            this.tbGoodDocuNameRegex.Size = new System.Drawing.Size(209, 23);
+            this.tbGoodDocuNameRegex.Size = new System.Drawing.Size(158, 20);
             this.tbGoodDocuNameRegex.TabIndex = 25;
             this.tbGoodDocuNameRegex.Text = ".* S[12]\\d{3}E\\d{1,3} .*$";
             this.ttMovieFileMerger.SetToolTip(this.tbGoodDocuNameRegex, resources.GetString("tbGoodDocuNameRegex.ToolTip"));
             // 
             // lblToLowerRegex
             // 
-            this.lblToLowerRegex.Location = new System.Drawing.Point(11, 54);
-            this.lblToLowerRegex.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblToLowerRegex.Location = new System.Drawing.Point(8, 44);
             this.lblToLowerRegex.Name = "lblToLowerRegex";
-            this.lblToLowerRegex.Size = new System.Drawing.Size(144, 26);
+            this.lblToLowerRegex.Size = new System.Drawing.Size(108, 21);
             this.lblToLowerRegex.TabIndex = 26;
             this.lblToLowerRegex.Text = "Convert to Lower";
             this.ttMovieFileMerger.SetToolTip(this.lblToLowerRegex, resources.GetString("lblToLowerRegex.ToolTip"));
@@ -1721,21 +1669,19 @@ namespace Movie_File_Merger
             this.tbToLowerRegex.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbToLowerRegex.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbToLowerRegex.Location = new System.Drawing.Point(176, 52);
-            this.tbToLowerRegex.Margin = new System.Windows.Forms.Padding(4);
+            this.tbToLowerRegex.Location = new System.Drawing.Point(132, 42);
             this.tbToLowerRegex.Multiline = true;
             this.tbToLowerRegex.Name = "tbToLowerRegex";
-            this.tbToLowerRegex.Size = new System.Drawing.Size(451, 22);
+            this.tbToLowerRegex.Size = new System.Drawing.Size(340, 19);
             this.tbToLowerRegex.TabIndex = 22;
             this.tbToLowerRegex.Text = " On | A | The | Of | And | Or | To | From | For | In | As | At | With";
             this.ttMovieFileMerger.SetToolTip(this.tbToLowerRegex, resources.GetString("tbToLowerRegex.ToolTip"));
             // 
             // lblOnlyCharacters
             // 
-            this.lblOnlyCharacters.Location = new System.Drawing.Point(428, 80);
-            this.lblOnlyCharacters.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblOnlyCharacters.Location = new System.Drawing.Point(321, 65);
             this.lblOnlyCharacters.Name = "lblOnlyCharacters";
-            this.lblOnlyCharacters.Size = new System.Drawing.Size(136, 26);
+            this.lblOnlyCharacters.Size = new System.Drawing.Size(102, 21);
             this.lblOnlyCharacters.TabIndex = 24;
             this.lblOnlyCharacters.Text = "Only Characters";
             this.ttMovieFileMerger.SetToolTip(this.lblOnlyCharacters, resources.GetString("lblOnlyCharacters.ToolTip"));
@@ -1745,20 +1691,18 @@ namespace Movie_File_Merger
             this.tbOnlyCharactersRegex.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbOnlyCharactersRegex.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbOnlyCharactersRegex.Location = new System.Drawing.Point(572, 78);
-            this.tbOnlyCharactersRegex.Margin = new System.Windows.Forms.Padding(4);
+            this.tbOnlyCharactersRegex.Location = new System.Drawing.Point(429, 63);
             this.tbOnlyCharactersRegex.Name = "tbOnlyCharactersRegex";
-            this.tbOnlyCharactersRegex.Size = new System.Drawing.Size(224, 23);
+            this.tbOnlyCharactersRegex.Size = new System.Drawing.Size(170, 20);
             this.tbOnlyCharactersRegex.TabIndex = 24;
             this.tbOnlyCharactersRegex.Text = "[^\\p{L}\\p{N} -\'ก-์]";
             this.ttMovieFileMerger.SetToolTip(this.tbOnlyCharactersRegex, resources.GetString("tbOnlyCharactersRegex.ToolTip"));
             // 
             // lblEpisodesId
             // 
-            this.lblEpisodesId.Location = new System.Drawing.Point(11, 80);
-            this.lblEpisodesId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEpisodesId.Location = new System.Drawing.Point(8, 65);
             this.lblEpisodesId.Name = "lblEpisodesId";
-            this.lblEpisodesId.Size = new System.Drawing.Size(176, 26);
+            this.lblEpisodesId.Size = new System.Drawing.Size(132, 21);
             this.lblEpisodesId.TabIndex = 22;
             this.lblEpisodesId.Text = "Episodes Identification";
             this.ttMovieFileMerger.SetToolTip(this.lblEpisodesId, resources.GetString("lblEpisodesId.ToolTip"));
@@ -1766,20 +1710,18 @@ namespace Movie_File_Merger
             // tbEpisodesIdRegex
             // 
             this.tbEpisodesIdRegex.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbEpisodesIdRegex.Location = new System.Drawing.Point(194, 78);
-            this.tbEpisodesIdRegex.Margin = new System.Windows.Forms.Padding(4);
+            this.tbEpisodesIdRegex.Location = new System.Drawing.Point(146, 63);
             this.tbEpisodesIdRegex.Name = "tbEpisodesIdRegex";
-            this.tbEpisodesIdRegex.Size = new System.Drawing.Size(209, 23);
+            this.tbEpisodesIdRegex.Size = new System.Drawing.Size(158, 20);
             this.tbEpisodesIdRegex.TabIndex = 23;
             this.tbEpisodesIdRegex.Text = ".s\\d+e\\d+";
             this.ttMovieFileMerger.SetToolTip(this.tbEpisodesIdRegex, resources.GetString("tbEpisodesIdRegex.ToolTip"));
             // 
             // lblCutNameBeforeRegex
             // 
-            this.lblCutNameBeforeRegex.Location = new System.Drawing.Point(11, 27);
-            this.lblCutNameBeforeRegex.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCutNameBeforeRegex.Location = new System.Drawing.Point(8, 22);
             this.lblCutNameBeforeRegex.Name = "lblCutNameBeforeRegex";
-            this.lblCutNameBeforeRegex.Size = new System.Drawing.Size(144, 26);
+            this.lblCutNameBeforeRegex.Size = new System.Drawing.Size(108, 21);
             this.lblCutNameBeforeRegex.TabIndex = 16;
             this.lblCutNameBeforeRegex.Text = "Cut Name Before";
             this.ttMovieFileMerger.SetToolTip(this.lblCutNameBeforeRegex, "The Cut Name Before regular expression tells MFM what not to include in the name." +
@@ -1791,10 +1733,9 @@ namespace Movie_File_Merger
             this.tbCutNameBeforeRegex.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbCutNameBeforeRegex.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCutNameBeforeRegex.Location = new System.Drawing.Point(176, 23);
-            this.tbCutNameBeforeRegex.Margin = new System.Windows.Forms.Padding(4);
+            this.tbCutNameBeforeRegex.Location = new System.Drawing.Point(132, 19);
             this.tbCutNameBeforeRegex.Name = "tbCutNameBeforeRegex";
-            this.tbCutNameBeforeRegex.Size = new System.Drawing.Size(451, 23);
+            this.tbCutNameBeforeRegex.Size = new System.Drawing.Size(340, 20);
             this.tbCutNameBeforeRegex.TabIndex = 21;
             this.tbCutNameBeforeRegex.Text = "720p|1080p|(cd[12])|x264|aac|divx|xvid";
             this.ttMovieFileMerger.SetToolTip(this.tbCutNameBeforeRegex, "The Cut Name Before regular expression tells MFM what not to include in the name." +
@@ -1810,11 +1751,9 @@ namespace Movie_File_Merger
             this.gbSettingsConsideredFiles.Controls.Add(this.lblMainExtensions);
             this.gbSettingsConsideredFiles.Controls.Add(this.tbMainExtensionsRegex);
             this.gbSettingsConsideredFiles.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbSettingsConsideredFiles.Location = new System.Drawing.Point(7, 96);
-            this.gbSettingsConsideredFiles.Margin = new System.Windows.Forms.Padding(4);
+            this.gbSettingsConsideredFiles.Location = new System.Drawing.Point(5, 78);
             this.gbSettingsConsideredFiles.Name = "gbSettingsConsideredFiles";
-            this.gbSettingsConsideredFiles.Padding = new System.Windows.Forms.Padding(4);
-            this.gbSettingsConsideredFiles.Size = new System.Drawing.Size(806, 54);
+            this.gbSettingsConsideredFiles.Size = new System.Drawing.Size(605, 44);
             this.gbSettingsConsideredFiles.TabIndex = 10;
             this.gbSettingsConsideredFiles.TabStop = false;
             this.gbSettingsConsideredFiles.Text = "Considered Files Regular Expressions";
@@ -1822,10 +1761,9 @@ namespace Movie_File_Merger
             // 
             // lblAddonExtensions
             // 
-            this.lblAddonExtensions.Location = new System.Drawing.Point(428, 24);
-            this.lblAddonExtensions.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAddonExtensions.Location = new System.Drawing.Point(321, 20);
             this.lblAddonExtensions.Name = "lblAddonExtensions";
-            this.lblAddonExtensions.Size = new System.Drawing.Size(168, 23);
+            this.lblAddonExtensions.Size = new System.Drawing.Size(126, 19);
             this.lblAddonExtensions.TabIndex = 22;
             this.lblAddonExtensions.Text = "Add-on File Extensions";
             this.ttMovieFileMerger.SetToolTip(this.lblAddonExtensions, "The Add-on Files Extension identified add-on files like subtitles or posters. \r\nA" +
@@ -1836,10 +1774,9 @@ namespace Movie_File_Merger
             this.tbAddonExtensionsRegex.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbAddonExtensionsRegex.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbAddonExtensionsRegex.Location = new System.Drawing.Point(604, 22);
-            this.tbAddonExtensionsRegex.Margin = new System.Windows.Forms.Padding(4);
+            this.tbAddonExtensionsRegex.Location = new System.Drawing.Point(453, 18);
             this.tbAddonExtensionsRegex.Name = "tbAddonExtensionsRegex";
-            this.tbAddonExtensionsRegex.Size = new System.Drawing.Size(192, 23);
+            this.tbAddonExtensionsRegex.Size = new System.Drawing.Size(146, 20);
             this.tbAddonExtensionsRegex.TabIndex = 12;
             this.tbAddonExtensionsRegex.Text = "srt|sub";
             this.ttMovieFileMerger.SetToolTip(this.tbAddonExtensionsRegex, "The Add-on Files Extension identified add-on files like subtitles or posters. \r\nA" +
@@ -1847,10 +1784,9 @@ namespace Movie_File_Merger
             // 
             // lblMainExtensions
             // 
-            this.lblMainExtensions.Location = new System.Drawing.Point(7, 24);
-            this.lblMainExtensions.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMainExtensions.Location = new System.Drawing.Point(5, 20);
             this.lblMainExtensions.Name = "lblMainExtensions";
-            this.lblMainExtensions.Size = new System.Drawing.Size(162, 23);
+            this.lblMainExtensions.Size = new System.Drawing.Size(122, 19);
             this.lblMainExtensions.TabIndex = 20;
             this.lblMainExtensions.Text = "Main File Extensions";
             this.ttMovieFileMerger.SetToolTip(this.lblMainExtensions, "The Main Files Extension regular expression identifies main files. \r\nIf no main f" +
@@ -1859,10 +1795,9 @@ namespace Movie_File_Merger
             // tbMainExtensionsRegex
             // 
             this.tbMainExtensionsRegex.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbMainExtensionsRegex.Location = new System.Drawing.Point(176, 22);
-            this.tbMainExtensionsRegex.Margin = new System.Windows.Forms.Padding(4);
+            this.tbMainExtensionsRegex.Location = new System.Drawing.Point(132, 18);
             this.tbMainExtensionsRegex.Name = "tbMainExtensionsRegex";
-            this.tbMainExtensionsRegex.Size = new System.Drawing.Size(227, 23);
+            this.tbMainExtensionsRegex.Size = new System.Drawing.Size(171, 20);
             this.tbMainExtensionsRegex.TabIndex = 11;
             this.tbMainExtensionsRegex.Text = "avi|mkv|mp4";
             this.ttMovieFileMerger.SetToolTip(this.tbMainExtensionsRegex, "The Main Files Extension regular expression identifies main files. \r\nIf no main f" +
@@ -1876,21 +1811,20 @@ namespace Movie_File_Merger
             this.tpHelp.Controls.Add(this.pbInstructionsBanner);
             this.tpHelp.Controls.Add(this.rtbHelp);
             this.tpHelp.ImageKey = "Help.gif";
-            this.tpHelp.Location = new System.Drawing.Point(4, 31);
-            this.tpHelp.Margin = new System.Windows.Forms.Padding(4);
+            this.tpHelp.Location = new System.Drawing.Point(4, 29);
             this.tpHelp.Name = "tpHelp";
-            this.tpHelp.Padding = new System.Windows.Forms.Padding(4);
-            this.tpHelp.Size = new System.Drawing.Size(820, 432);
+            this.tpHelp.Padding = new System.Windows.Forms.Padding(3);
+            this.tpHelp.Size = new System.Drawing.Size(614, 343);
             this.tpHelp.TabIndex = 4;
             this.tpHelp.Text = "Instructions";
             // 
             // pbInstructionsUserManual
             // 
             this.pbInstructionsUserManual.Image = ((System.Drawing.Image)(resources.GetObject("pbInstructionsUserManual.Image")));
-            this.pbInstructionsUserManual.Location = new System.Drawing.Point(7, 6);
-            this.pbInstructionsUserManual.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbInstructionsUserManual.Location = new System.Drawing.Point(5, 5);
+            this.pbInstructionsUserManual.Margin = new System.Windows.Forms.Padding(2);
             this.pbInstructionsUserManual.Name = "pbInstructionsUserManual";
-            this.pbInstructionsUserManual.Size = new System.Drawing.Size(72, 83);
+            this.pbInstructionsUserManual.Size = new System.Drawing.Size(54, 67);
             this.pbInstructionsUserManual.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbInstructionsUserManual.TabIndex = 12;
             this.pbInstructionsUserManual.TabStop = false;
@@ -1903,10 +1837,10 @@ namespace Movie_File_Merger
             // 
             this.pbInstructionsHowTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbInstructionsHowTo.Image = ((System.Drawing.Image)(resources.GetObject("pbInstructionsHowTo.Image")));
-            this.pbInstructionsHowTo.Location = new System.Drawing.Point(742, 6);
-            this.pbInstructionsHowTo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbInstructionsHowTo.Location = new System.Drawing.Point(557, 5);
+            this.pbInstructionsHowTo.Margin = new System.Windows.Forms.Padding(2);
             this.pbInstructionsHowTo.Name = "pbInstructionsHowTo";
-            this.pbInstructionsHowTo.Size = new System.Drawing.Size(72, 83);
+            this.pbInstructionsHowTo.Size = new System.Drawing.Size(54, 67);
             this.pbInstructionsHowTo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbInstructionsHowTo.TabIndex = 11;
             this.pbInstructionsHowTo.TabStop = false;
@@ -1921,10 +1855,10 @@ namespace Movie_File_Merger
             this.pbInstructionsBanner.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pbInstructionsBanner.Image = ((System.Drawing.Image)(resources.GetObject("pbInstructionsBanner.Image")));
-            this.pbInstructionsBanner.Location = new System.Drawing.Point(7, 6);
-            this.pbInstructionsBanner.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbInstructionsBanner.Location = new System.Drawing.Point(5, 5);
+            this.pbInstructionsBanner.Margin = new System.Windows.Forms.Padding(2);
             this.pbInstructionsBanner.Name = "pbInstructionsBanner";
-            this.pbInstructionsBanner.Size = new System.Drawing.Size(807, 83);
+            this.pbInstructionsBanner.Size = new System.Drawing.Size(606, 67);
             this.pbInstructionsBanner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbInstructionsBanner.TabIndex = 7;
             this.pbInstructionsBanner.TabStop = false;
@@ -1938,11 +1872,10 @@ namespace Movie_File_Merger
             this.rtbHelp.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.rtbHelp.Location = new System.Drawing.Point(4, 96);
-            this.rtbHelp.Margin = new System.Windows.Forms.Padding(4);
+            this.rtbHelp.Location = new System.Drawing.Point(3, 78);
             this.rtbHelp.Name = "rtbHelp";
             this.rtbHelp.ReadOnly = true;
-            this.rtbHelp.Size = new System.Drawing.Size(814, 345);
+            this.rtbHelp.Size = new System.Drawing.Size(613, 285);
             this.rtbHelp.TabIndex = 0;
             this.rtbHelp.Text = "";
             this.rtbHelp.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.LinkClicked);
@@ -1965,11 +1898,10 @@ namespace Movie_File_Merger
             this.tpAbout.Controls.Add(this.lblVersion);
             this.tpAbout.Controls.Add(this.llMovieFileMergerOrg);
             this.tpAbout.ImageKey = "About.gif";
-            this.tpAbout.Location = new System.Drawing.Point(4, 31);
-            this.tpAbout.Margin = new System.Windows.Forms.Padding(4);
+            this.tpAbout.Location = new System.Drawing.Point(4, 29);
             this.tpAbout.Name = "tpAbout";
-            this.tpAbout.Padding = new System.Windows.Forms.Padding(4);
-            this.tpAbout.Size = new System.Drawing.Size(820, 432);
+            this.tpAbout.Padding = new System.Windows.Forms.Padding(3);
+            this.tpAbout.Size = new System.Drawing.Size(614, 343);
             this.tpAbout.TabIndex = 3;
             this.tpAbout.Text = "About";
             // 
@@ -1978,9 +1910,10 @@ namespace Movie_File_Merger
             this.llDonateABeerOrTwo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.llDonateABeerOrTwo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.llDonateABeerOrTwo.Location = new System.Drawing.Point(226, 158);
+            this.llDonateABeerOrTwo.Location = new System.Drawing.Point(170, 128);
+            this.llDonateABeerOrTwo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.llDonateABeerOrTwo.Name = "llDonateABeerOrTwo";
-            this.llDonateABeerOrTwo.Size = new System.Drawing.Size(366, 32);
+            this.llDonateABeerOrTwo.Size = new System.Drawing.Size(275, 26);
             this.llDonateABeerOrTwo.TabIndex = 14;
             this.llDonateABeerOrTwo.TabStop = true;
             this.llDonateABeerOrTwo.Text = "Donate a Beer or Two";
@@ -1991,9 +1924,10 @@ namespace Movie_File_Merger
             // llUserFeedbackForum
             // 
             this.llUserFeedbackForum.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.llUserFeedbackForum.Location = new System.Drawing.Point(7, 160);
+            this.llUserFeedbackForum.Location = new System.Drawing.Point(5, 130);
+            this.llUserFeedbackForum.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.llUserFeedbackForum.Name = "llUserFeedbackForum";
-            this.llUserFeedbackForum.Size = new System.Drawing.Size(218, 30);
+            this.llUserFeedbackForum.Size = new System.Drawing.Size(164, 24);
             this.llUserFeedbackForum.TabIndex = 13;
             this.llUserFeedbackForum.TabStop = true;
             this.llUserFeedbackForum.Text = "User Feedback Forum";
@@ -2006,9 +1940,10 @@ namespace Movie_File_Merger
             // 
             this.llGitHubSourceCode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.llGitHubSourceCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.llGitHubSourceCode.Location = new System.Drawing.Point(598, 158);
+            this.llGitHubSourceCode.Location = new System.Drawing.Point(449, 128);
+            this.llGitHubSourceCode.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.llGitHubSourceCode.Name = "llGitHubSourceCode";
-            this.llGitHubSourceCode.Size = new System.Drawing.Size(216, 32);
+            this.llGitHubSourceCode.Size = new System.Drawing.Size(162, 26);
             this.llGitHubSourceCode.TabIndex = 12;
             this.llGitHubSourceCode.TabStop = true;
             this.llGitHubSourceCode.Text = "GitHub Source Code";
@@ -2020,10 +1955,10 @@ namespace Movie_File_Merger
             // pbAboutUserManual
             // 
             this.pbAboutUserManual.Image = ((System.Drawing.Image)(resources.GetObject("pbAboutUserManual.Image")));
-            this.pbAboutUserManual.Location = new System.Drawing.Point(6, 6);
-            this.pbAboutUserManual.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbAboutUserManual.Location = new System.Drawing.Point(4, 5);
+            this.pbAboutUserManual.Margin = new System.Windows.Forms.Padding(2);
             this.pbAboutUserManual.Name = "pbAboutUserManual";
-            this.pbAboutUserManual.Size = new System.Drawing.Size(72, 83);
+            this.pbAboutUserManual.Size = new System.Drawing.Size(54, 67);
             this.pbAboutUserManual.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbAboutUserManual.TabIndex = 11;
             this.pbAboutUserManual.TabStop = false;
@@ -2036,10 +1971,10 @@ namespace Movie_File_Merger
             // 
             this.pbAboutHowTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbAboutHowTo.Image = ((System.Drawing.Image)(resources.GetObject("pbAboutHowTo.Image")));
-            this.pbAboutHowTo.Location = new System.Drawing.Point(742, 6);
-            this.pbAboutHowTo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbAboutHowTo.Location = new System.Drawing.Point(557, 5);
+            this.pbAboutHowTo.Margin = new System.Windows.Forms.Padding(2);
             this.pbAboutHowTo.Name = "pbAboutHowTo";
-            this.pbAboutHowTo.Size = new System.Drawing.Size(72, 83);
+            this.pbAboutHowTo.Size = new System.Drawing.Size(54, 67);
             this.pbAboutHowTo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbAboutHowTo.TabIndex = 10;
             this.pbAboutHowTo.TabStop = false;
@@ -2053,9 +1988,10 @@ namespace Movie_File_Merger
             // 
             this.lblLastChecked.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblLastChecked.Location = new System.Drawing.Point(230, 126);
+            this.lblLastChecked.Location = new System.Drawing.Point(172, 102);
+            this.lblLastChecked.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLastChecked.Name = "lblLastChecked";
-            this.lblLastChecked.Size = new System.Drawing.Size(362, 32);
+            this.lblLastChecked.Size = new System.Drawing.Size(273, 26);
             this.lblLastChecked.TabIndex = 9;
             this.lblLastChecked.Text = "Last Checked: Never";
             this.lblLastChecked.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2068,10 +2004,10 @@ namespace Movie_File_Merger
             "Check for updates daily.",
             "Check for updates weekly.",
             "Check for updates monthly."});
-            this.cobCheckForUpdates.Location = new System.Drawing.Point(8, 131);
-            this.cobCheckForUpdates.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cobCheckForUpdates.Location = new System.Drawing.Point(6, 106);
+            this.cobCheckForUpdates.Margin = new System.Windows.Forms.Padding(2);
             this.cobCheckForUpdates.Name = "cobCheckForUpdates";
-            this.cobCheckForUpdates.Size = new System.Drawing.Size(216, 24);
+            this.cobCheckForUpdates.Size = new System.Drawing.Size(163, 21);
             this.cobCheckForUpdates.TabIndex = 2;
             this.cobCheckForUpdates.Text = "Check for updates daily.";
             this.ttMovieFileMerger.SetToolTip(this.cobCheckForUpdates, "Change the frequency to check for updates.");
@@ -2079,10 +2015,10 @@ namespace Movie_File_Merger
             // btnCheckNow
             // 
             this.btnCheckNow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCheckNow.Location = new System.Drawing.Point(598, 127);
-            this.btnCheckNow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCheckNow.Location = new System.Drawing.Point(449, 103);
+            this.btnCheckNow.Margin = new System.Windows.Forms.Padding(2);
             this.btnCheckNow.Name = "btnCheckNow";
-            this.btnCheckNow.Size = new System.Drawing.Size(216, 32);
+            this.btnCheckNow.Size = new System.Drawing.Size(162, 26);
             this.btnCheckNow.TabIndex = 3;
             this.btnCheckNow.Text = "Check for updates now!";
             this.ttMovieFileMerger.SetToolTip(this.btnCheckNow, "Enforces to check for updates immediately.");
@@ -2094,10 +2030,10 @@ namespace Movie_File_Merger
             this.pbAboutBanner.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pbAboutBanner.Image = ((System.Drawing.Image)(resources.GetObject("pbAboutBanner.Image")));
-            this.pbAboutBanner.Location = new System.Drawing.Point(6, 6);
-            this.pbAboutBanner.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbAboutBanner.Location = new System.Drawing.Point(4, 5);
+            this.pbAboutBanner.Margin = new System.Windows.Forms.Padding(2);
             this.pbAboutBanner.Name = "pbAboutBanner";
-            this.pbAboutBanner.Size = new System.Drawing.Size(807, 83);
+            this.pbAboutBanner.Size = new System.Drawing.Size(606, 67);
             this.pbAboutBanner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbAboutBanner.TabIndex = 6;
             this.pbAboutBanner.TabStop = false;
@@ -2111,10 +2047,9 @@ namespace Movie_File_Merger
             this.lblCopyLeft.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblCopyLeft.BackColor = System.Drawing.Color.Transparent;
             this.lblCopyLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCopyLeft.Location = new System.Drawing.Point(637, 102);
-            this.lblCopyLeft.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCopyLeft.Location = new System.Drawing.Point(479, 83);
             this.lblCopyLeft.Name = "lblCopyLeft";
-            this.lblCopyLeft.Size = new System.Drawing.Size(178, 18);
+            this.lblCopyLeft.Size = new System.Drawing.Size(134, 15);
             this.lblCopyLeft.TabIndex = 2;
             this.lblCopyLeft.Text = "© 2016 Modi";
             this.lblCopyLeft.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -2124,11 +2059,11 @@ namespace Movie_File_Merger
             this.rtbCopyright.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.rtbCopyright.Location = new System.Drawing.Point(8, 192);
-            this.rtbCopyright.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rtbCopyright.Location = new System.Drawing.Point(6, 156);
+            this.rtbCopyright.Margin = new System.Windows.Forms.Padding(2);
             this.rtbCopyright.Name = "rtbCopyright";
             this.rtbCopyright.ReadOnly = true;
-            this.rtbCopyright.Size = new System.Drawing.Size(814, 272);
+            this.rtbCopyright.Size = new System.Drawing.Size(613, 225);
             this.rtbCopyright.TabIndex = 4;
             this.rtbCopyright.TabStop = false;
             this.rtbCopyright.Text = "";
@@ -2139,10 +2074,9 @@ namespace Movie_File_Merger
             // 
             this.lblVersion.BackColor = System.Drawing.Color.Transparent;
             this.lblVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVersion.Location = new System.Drawing.Point(8, 102);
-            this.lblVersion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblVersion.Location = new System.Drawing.Point(6, 83);
             this.lblVersion.Name = "lblVersion";
-            this.lblVersion.Size = new System.Drawing.Size(88, 18);
+            this.lblVersion.Size = new System.Drawing.Size(66, 15);
             this.lblVersion.TabIndex = 1;
             this.lblVersion.Text = "x.x.x";
             this.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -2152,9 +2086,10 @@ namespace Movie_File_Merger
             this.llMovieFileMergerOrg.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.llMovieFileMergerOrg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.llMovieFileMergerOrg.Location = new System.Drawing.Point(7, 90);
+            this.llMovieFileMergerOrg.Location = new System.Drawing.Point(5, 73);
+            this.llMovieFileMergerOrg.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.llMovieFileMergerOrg.Name = "llMovieFileMergerOrg";
-            this.llMovieFileMergerOrg.Size = new System.Drawing.Size(807, 34);
+            this.llMovieFileMergerOrg.Size = new System.Drawing.Size(606, 28);
             this.llMovieFileMergerOrg.TabIndex = 1;
             this.llMovieFileMergerOrg.TabStop = true;
             this.llMovieFileMergerOrg.Text = "www.Movie-File-Merger.org";
@@ -2174,13 +2109,13 @@ namespace Movie_File_Merger
             // 
             this.toolStripContainer1.ContentPanel.AutoScroll = true;
             this.toolStripContainer1.ContentPanel.Controls.Add(this.tcMovieFileMerger);
-            this.toolStripContainer1.ContentPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(828, 467);
+            this.toolStripContainer1.ContentPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(622, 376);
             this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStripContainer1.Location = new System.Drawing.Point(0, 0);
-            this.toolStripContainer1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.toolStripContainer1.Margin = new System.Windows.Forms.Padding(2);
             this.toolStripContainer1.Name = "toolStripContainer1";
-            this.toolStripContainer1.Size = new System.Drawing.Size(828, 522);
+            this.toolStripContainer1.Size = new System.Drawing.Size(622, 431);
             this.toolStripContainer1.TabIndex = 2;
             this.toolStripContainer1.Text = "toolStripContainer1";
             // 
@@ -2193,13 +2128,13 @@ namespace Movie_File_Merger
             this.tspbMFM});
             this.ssMFM.Location = new System.Drawing.Point(0, 0);
             this.ssMFM.Name = "ssMFM";
-            this.ssMFM.Size = new System.Drawing.Size(828, 30);
+            this.ssMFM.Size = new System.Drawing.Size(622, 30);
             this.ssMFM.TabIndex = 0;
             // 
             // tsslMFM
             // 
             this.tsslMFM.Name = "tsslMFM";
-            this.tsslMFM.Size = new System.Drawing.Size(511, 25);
+            this.tsslMFM.Size = new System.Drawing.Size(305, 25);
             this.tsslMFM.Spring = true;
             this.tsslMFM.Text = "Welcome to MFM";
             this.tsslMFM.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -2224,14 +2159,13 @@ namespace Movie_File_Merger
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(828, 522);
+            this.ClientSize = new System.Drawing.Size(622, 431);
             this.Controls.Add(this.toolStripContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.MinimumSize = new System.Drawing.Size(846, 569);
+            this.MinimumSize = new System.Drawing.Size(638, 470);
             this.Name = "MainForm";
             this.Text = "Movie File Merger";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MfFormClosing);

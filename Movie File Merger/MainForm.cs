@@ -886,7 +886,7 @@ namespace Movie_File_Merger
 
         #endregion Drop Area Handling
 
-        #region ListView File Handling
+        #region ListView File Import & Export
 
         /// <summary>
         /// Initialize a list view from a text file in MFM format.
@@ -1207,7 +1207,7 @@ namespace Movie_File_Merger
             ClearStatus( );
         }
 
-        #endregion ListView File Handling
+        #endregion ListView File Import & Export
 
         #region ListViewItem Name & Tooltip Handling
 
@@ -1373,7 +1373,7 @@ namespace Movie_File_Merger
                 miThis.Open( fiFile.FullName );
                 miThis.Option( "Inform", "General;General:  %Duration/String% in %Format% container %Video_Format_List% codec" ); // file size
                 sMediaInfo += "\n\n" + miThis.Inform( );
-                miThis.Option( "Inform", "Video;Video:  %Width%x%Height% (%DisplayAspectRatio/String%) at %FrameRate/String% with %BitRate/String%" );
+                miThis.Option( "Inform", "Video;Video:  %Width% x%Height% (%DisplayAspectRatio/String%) at %FrameRate/String% with %BitRate/String%" );
                 sMediaInfo += "\n" + miThis.Inform( );
                 miThis.Option( "Inform", "Audio;Audio:  %Channel(s)/String% at %SamplingRate/String% %Format% %Language/String%" );
                 sMediaInfo += miThis.Inform( ).Replace( "Audio: ", "\nAudio: " ).Replace( "Audio:  ,", "Audio:" );
@@ -2088,10 +2088,10 @@ namespace Movie_File_Merger
                 case "Square Format": sResult = @"\(((4:3)|(5:4)|(3:2)|(1\.[0-5]\d+))\)"; break;
                 case "Wide Screen": sResult = @"\(((16:9)|(1\.85:1)|(1\.[6-9]\d+)|(2\.[0-2]\d+))\)"; break;
                 case "Cinema Scope": sResult = @"\((([23]\.*\d*:1)|(2\.[3-9]\d+)|(3\.\d+))\)"; break;
-                case "<699 horizontal": sResult = @"Video:  [1-6]\d{2} x"; break;
-                case ">699 & <1000 horizontal": sResult = @"Video:  [7-9]\d{2} x"; break;
-                case ">700 horizontal": sResult = @"(Video:  [7-9]\d{2} x)|(Video:  [1-9]\d{3} x)"; break;
-                case ">1000 horizontal": sResult = @"Video:  [1-9]\d{3} x"; break;
+                case "<699 horizontal": sResult = @"Video:  [1-6]\d{2} *x"; break;
+                case ">699 & <1000 horizontal": sResult = @"Video:  [7-9]\d{2} *x"; break;
+                case ">700 horizontal": sResult = @"(Video:  [7-9]\d{2} x)|(Video:  [1-9]\d{3} *x)"; break;
+                case ">1000 horizontal": sResult = @"Video:  [1-9]\d{3} *x"; break;
                 case "2 Channels": sResult = @"2 channels"; break;
                 case "6 Channels": sResult = @"6 channels"; break;
                 case "Series with \"SxxExx\"": sResult = @".[Ss]\d+[Ee]\d+"; break;
