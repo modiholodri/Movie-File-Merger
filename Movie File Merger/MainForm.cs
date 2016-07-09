@@ -30,148 +30,147 @@ using MediaInfoLib;
 
 namespace Movie_File_Merger
 {
-	/// <summary>
-	/// Application to selectively combine collections on hard disks.
-	/// </summary>
-	public partial class MainForm : Form
-	{
-		ListView lvDragSource = null;  // the list view from which has been dragged
-		Color DragColor = Color.Red;  // the color of the item which has been dragged
-		string[] saCollections = {"Miscellaneous", "Adults", "Movies", "Documentaries", "Series", "Clips"}; // all collections
-		string strCollectionType = "Miscellaneous";  // the active collection type
-		MediaInfo miThis = new MediaInfo( );  // detailed information about the video file from MediaInfo
+    /// <summary>
+    /// Application to selectively combine collections on hard disks.
+    /// </summary>
+    public partial class MainForm : Form {
+        ListView lvDragSource = null;  // the list view from which has been dragged
+        Color DragColor = Color.Red;  // the color of the item which has been dragged
+        string[] saCollections = { "Miscellaneous", "Adults", "Movies", "Documentaries", "Series", "Clips" }; // all collections
+        string strCollectionType = "Miscellaneous";  // the active collection type
+        MediaInfo miThis = new MediaInfo( );  // detailed information about the video file from MediaInfo
         int iAddedCount = 1;
 
         // item colors		
         Color GarbageColor = Color.SaddleBrown;
-		Color ExistingColor = Color.ForestGreen;
-		Color WishColor = Color.LimeGreen;
-		Color NeutralColor = Color.Silver;
+        Color ExistingColor = Color.ForestGreen;
+        Color WishColor = Color.LimeGreen;
+        Color NeutralColor = Color.Silver;
 
-		Color LowResColor = Color.IndianRed;
-		Color HigherResColor = Color.MediumSpringGreen;
-		
-		Color GoodMovieColor = Color.SeaGreen;
-		Color GoodDocuColor = Color.LawnGreen;
-		Color GoodEpisodeColor = Color.PaleGreen;
-		Color BadMovieColor = Color.MediumVioletRed;
-		Color BadDocuColor = Color.HotPink;
-		Color BadEpisodeColor = Color.PaleVioletRed;
-		Color BadNameColor = Color.Pink;
-		
-		// list change indicators when exiting a collection type
-		bool bExistingChanged = false;
-		bool bGarbageChanged = false;
-		bool bWishChanged = false;
+        Color LowResColor = Color.IndianRed;
+        Color HigherResColor = Color.MediumSpringGreen;
 
-		// paths to standard files and folders
-		string strPrivatePath = Path.Combine( Path.GetDirectoryName(Application.StartupPath), @"MFM Private\" );
-		string strCollectionsPath = Path.Combine( Path.GetDirectoryName(Application.StartupPath), @"MFM Collections\" );
-		string strTeraCopyPath = "";
-		string strTeraCopyListsPath = "";
-		string strXmlSettingsFilePath = "";
-		string strNickName = "";
-		
-		string strImportFolder = "";
-		string strTargetFolder = "";
-		
-		// regular expressions to filter the messed up file names
-		Regex rgxMainExtensions;  // to find the main files
-		Regex rgxAddonExtensions;  // to find wanted addon files, like subtitles
-		Regex rgxEpisodesId;  // to find the episode identifier
-		Regex rgxTrimBefore;  // the names will be cut of before, like 720p
-		Regex rgxAphanumeric;  // only accept clean charaecters in the name
-		Regex rgxToLower;  // words in the name that should be lower case, like the, to, for, of
-		Regex rgxMultiSpace = new Regex( @"[ ]{2,}" );  // two spaces in a row
-		Regex rgxNumber = new Regex( @"\d+" );  // any integer number
-		
-		// Thread Stuff
-		private delegate void UpdateListViewDelegate( string strName, FileInfo fiFile, ListView lvThis );
+        Color GoodMovieColor = Color.SeaGreen;
+        Color GoodDocuColor = Color.LawnGreen;
+        Color GoodEpisodeColor = Color.PaleGreen;
+        Color BadMovieColor = Color.MediumVioletRed;
+        Color BadDocuColor = Color.HotPink;
+        Color BadEpisodeColor = Color.PaleVioletRed;
+        Color BadNameColor = Color.Pink;
+
+        // list change indicators when exiting a collection type
+        bool bExistingChanged = false;
+        bool bGarbageChanged = false;
+        bool bWishChanged = false;
+
+        // paths to standard files and folders
+        string strPrivatePath = Path.Combine( Path.GetDirectoryName( Application.StartupPath ), @"MFM Private\" );
+        string strCollectionsPath = Path.Combine( Path.GetDirectoryName( Application.StartupPath ), @"MFM Collections\" );
+        string strTeraCopyPath = "";
+        string strTeraCopyListsPath = "";
+        string strXmlSettingsFilePath = "";
+        string strNickName = "";
+
+        string strImportFolder = "";
+        string strTargetFolder = "";
+
+        // regular expressions to filter the messed up file names
+        Regex rgxMainExtensions;  // to find the main files
+        Regex rgxAddonExtensions;  // to find wanted addon files, like subtitles
+        Regex rgxEpisodesId;  // to find the episode identifier
+        Regex rgxTrimBefore;  // the names will be cut of before, like 720p
+        Regex rgxAphanumeric;  // only accept clean charaecters in the name
+        Regex rgxToLower;  // words in the name that should be lower case, like the, to, for, of
+        Regex rgxMultiSpace = new Regex( @"[ ]{2,}" );  // two spaces in a row
+        Regex rgxNumber = new Regex( @"\d+" );  // any integer number
+
+        // Thread Stuff
+        private delegate void UpdateListViewDelegate( string strName, FileInfo fiFile, ListView lvThis );
         private delegate void UpdateStatusDelegate( string strMessage );
-		ListView lvToAdd = null;
-		string strGlobalFolderName;
+        ListView lvToAdd = null;
+        string strGlobalFolderName;
 
 
         /// <summary>
         /// MFM main form to selectivley combine video collections
         /// </summary>
-        public MainForm()
-		{
-			InitializeComponent();
+        public MainForm( )
+        {
+            InitializeComponent( );
             LogInfo( "Initializing Movie File Merger..." );
 
-			// make sure that all needed directroies and files are there
-			if ( !Directory.Exists( strPrivatePath ) ) {
-				Directory.CreateDirectory( strPrivatePath );
-			}
-			if ( !Directory.Exists( strCollectionsPath ) ) {
-				Directory.CreateDirectory( strCollectionsPath );
-			}
-			strTeraCopyListsPath = Path.Combine( strPrivatePath, @"TeraCopy Lists\" );
-			if ( !Directory.Exists( strTeraCopyListsPath ) ) {
-				Directory.CreateDirectory( strTeraCopyListsPath );
-			}
-			sfdMovieFileMerger.InitialDirectory = strCollectionsPath;
-			
-			LoadSettings( false );
-			
-			Text = strNickName + " - Movie File Merger";
+            // make sure that all needed directroies and files are there
+            if ( !Directory.Exists( strPrivatePath ) ) {
+                Directory.CreateDirectory( strPrivatePath );
+            }
+            if ( !Directory.Exists( strCollectionsPath ) ) {
+                Directory.CreateDirectory( strCollectionsPath );
+            }
+            strTeraCopyListsPath = Path.Combine( strPrivatePath, @"TeraCopy Lists\" );
+            if ( !Directory.Exists( strTeraCopyListsPath ) ) {
+                Directory.CreateDirectory( strTeraCopyListsPath );
+            }
+            sfdMovieFileMerger.InitialDirectory = strCollectionsPath;
 
-			// load the instruction and copyright files
-			string strMFMInstructionsPath = Path.Combine( Application.StartupPath, "Movie File Merger Instructions.rtf" );
-			try { 
-				rtbHelp.LoadFile( strMFMInstructionsPath, RichTextBoxStreamType.RichText );
-			} catch ( IOException e ) { 
-				ShowInfo( e.Message ); 
-				rtbHelp.Text = "Error: Had problems loading the help file " + strMFMInstructionsPath + ".";
-			}
-			
-			string strMFMSettingsPath = Path.Combine(Application.StartupPath, "Movie File Merger Settings.rtf");
-			try {
-				rtbSettings.LoadFile( strMFMSettingsPath, RichTextBoxStreamType.RichText);
-			} catch ( IOException e ) { 
-				ShowInfo( e.Message );
-				rtbSettings.Text = "Error: Had problems loading the settings instructions file " + strMFMSettingsPath + ".";
-			}
-			
-			string strMFMCopyrightPath = Path.Combine(Application.StartupPath, "Movie File Merger Copyright.rtf");
-			try {
-				rtbCopyright.LoadFile( strMFMCopyrightPath, RichTextBoxStreamType.RichText);
-			} catch ( IOException e ) { 
-				ShowInfo( e.Message ); 
-				rtbCopyright.Text = "Error: Had problems loading the copyright file " + strMFMSettingsPath + ".";
-			}
-			
-			SetListTabColumnWidth( );
-			// set the button colors in the list tab
-			lvGarbage.BackColor = GarbageColor;
-			lvExisting.BackColor = ExistingColor;
-			lvWish.BackColor = WishColor;
+            LoadSettings( false );
+
+            Text = strNickName + " - Movie File Merger";
+
+            // load the instruction and copyright files
+            string strMFMInstructionsPath = Path.Combine( Application.StartupPath, "Movie File Merger Instructions.rtf" );
+            try {
+                rtbHelp.LoadFile( strMFMInstructionsPath, RichTextBoxStreamType.RichText );
+            } catch ( IOException e ) {
+                ShowInfo( e.Message );
+                rtbHelp.Text = "Error: Had problems loading the help file " + strMFMInstructionsPath + ".";
+            }
+
+            string strMFMSettingsPath = Path.Combine( Application.StartupPath, "Movie File Merger Settings.rtf" );
+            try {
+                rtbSettings.LoadFile( strMFMSettingsPath, RichTextBoxStreamType.RichText );
+            } catch ( IOException e ) {
+                ShowInfo( e.Message );
+                rtbSettings.Text = "Error: Had problems loading the settings instructions file " + strMFMSettingsPath + ".";
+            }
+
+            string strMFMCopyrightPath = Path.Combine( Application.StartupPath, "Movie File Merger Copyright.rtf" );
+            try {
+                rtbCopyright.LoadFile( strMFMCopyrightPath, RichTextBoxStreamType.RichText );
+            } catch ( IOException e ) {
+                ShowInfo( e.Message );
+                rtbCopyright.Text = "Error: Had problems loading the copyright file " + strMFMSettingsPath + ".";
+            }
+
+            SetListTabColumnWidth( );
+            // set the button colors in the list tab
+            lvGarbage.BackColor = GarbageColor;
+            lvExisting.BackColor = ExistingColor;
+            lvWish.BackColor = WishColor;
             lvImport.BackColor = NeutralColor;
-			
-			dudMinimumResolution.BackColor = LowResColor;
-			cbGetHigherRes.BackColor = HigherResColor;
-			
-			// set the button and lable colors in the maintenance tab
-			btnBadDocu.BackColor = BadDocuColor;
-			lblBadDocuNameRegex.BackColor = BadDocuColor;
-			btnBadEpisode.BackColor = BadEpisodeColor;
-			lblBadEpisodeNameRegex.BackColor = BadEpisodeColor;
-			btnBadMovie.BackColor = BadMovieColor;
-			lblBadMovieNameRegex.BackColor = BadMovieColor;
 
-			btnBadName.BackColor = BadNameColor;
-			btnUnrelatedFile.BackColor = NeutralColor;
+            dudMinimumResolution.BackColor = LowResColor;
+            cbGetHigherRes.BackColor = HigherResColor;
 
-			btnGoodDocu.BackColor = GoodDocuColor;
-			lblGoodDocuNameRegex.BackColor = GoodDocuColor;
-			btnGoodEpisode.BackColor = GoodEpisodeColor;
-			lblGoodEpisodeNameRegex.BackColor = GoodEpisodeColor;
-			btnGoodMovie.BackColor = GoodMovieColor;
-			lblGoodMovieNameRegex.BackColor = GoodMovieColor;
+            // set the button and lable colors in the maintenance tab
+            btnBadDocu.BackColor = BadDocuColor;
+            lblBadDocuNameRegex.BackColor = BadDocuColor;
+            btnBadEpisode.BackColor = BadEpisodeColor;
+            lblBadEpisodeNameRegex.BackColor = BadEpisodeColor;
+            btnBadMovie.BackColor = BadMovieColor;
+            lblBadMovieNameRegex.BackColor = BadMovieColor;
 
-			CheckLatestVersion( "Startup" );
-		}
+            btnBadName.BackColor = BadNameColor;
+            btnUnrelatedFile.BackColor = NeutralColor;
+
+            btnGoodDocu.BackColor = GoodDocuColor;
+            lblGoodDocuNameRegex.BackColor = GoodDocuColor;
+            btnGoodEpisode.BackColor = GoodEpisodeColor;
+            lblGoodEpisodeNameRegex.BackColor = GoodEpisodeColor;
+            btnGoodMovie.BackColor = GoodMovieColor;
+            lblGoodMovieNameRegex.BackColor = GoodMovieColor;
+
+            CheckLatestVersion( "Startup" );
+        }
 
         /************************************************************************************************/
         /*                                    Supporting Functions                                      */
@@ -202,25 +201,25 @@ namespace Movie_File_Merger
                     dtToSStandardize.Minute.ToString( "D2" ) + "-" +
                     dtToSStandardize.Second.ToString( "D2" );
         }
-        
+
         /// <summary>
         /// Readjusts the column width of the lists in the Lists tab if the Window is resized. 
         /// </summary>
         void SetListTabColumnWidth( )
-		{
-			if ( this.WindowState == FormWindowState.Minimized ) {	// Not if minimized
-				return;
-			}
-			int iColumnWidth = ( this.Size.Width - 37 ) / 3;
-			scVertical.SplitterDistance = iColumnWidth;
-			scVerticalRight.Width = iColumnWidth * 2;
-			scVerticalRight.SplitterDistance = iColumnWidth + 3;
-			scVerticalRight.SplitterWidth = 3;
-			lvExisting.Columns[0].Width = lvExisting.Width - 35;
-			lvGarbage.Columns[0].Width = lvGarbage.Width - 35;
-			lvImport.Columns[0].Width = lvImport.Width - 35;
-			lvWish.Columns[0].Width = lvWish.Width - 35;
-		}
+        {
+            if ( this.WindowState == FormWindowState.Minimized ) {  // Not if minimized
+                return;
+            }
+            int iColumnWidth = (this.Size.Width - 37) / 3;
+            scVertical.SplitterDistance = iColumnWidth;
+            scVerticalRight.Width = iColumnWidth * 2;
+            scVerticalRight.SplitterDistance = iColumnWidth + 3;
+            scVerticalRight.SplitterWidth = 3;
+            lvExisting.Columns[ 0 ].Width = lvExisting.Width - 35;
+            lvGarbage.Columns[ 0 ].Width = lvGarbage.Width - 35;
+            lvImport.Columns[ 0 ].Width = lvImport.Width - 35;
+            lvWish.Columns[ 0 ].Width = lvWish.Width - 35;
+        }
 
         /// <summary>
         /// Readjusts the column width of the horizoltal splitter in the Lists tab if the Window is resized. 
@@ -228,12 +227,12 @@ namespace Movie_File_Merger
         /// <param name="sender"></param>
         /// <param name="e"></param>
         void MainFormSizeChanged( object sender, EventArgs e )
-		{
-			if ( this.WindowState == FormWindowState.Minimized ) {	// Not if minimized
-				return;
-			}
-			scHorizontal.SplitterDistance = scHorizontal.Size.Height / 2;
-		}
+        {
+            if ( this.WindowState == FormWindowState.Minimized ) {  // Not if minimized
+                return;
+            }
+            scHorizontal.SplitterDistance = scHorizontal.Size.Height / 2;
+        }
 
         /// <summary>
         /// Resize the columns if the spliter has been moved.
@@ -366,105 +365,105 @@ namespace Movie_File_Merger
         /// <param name="fiImportFile">The file to be copied or moved.</param>
         /// <returns>The path of the new file.</returns>
         string MakeTargetPath( FileInfo fiImportFile )
-		{
-			string strTargetPath = "";
+        {
+            string strTargetPath = "";
 
-			// TODO: fix later, just a placeholder for now
-			// if ( true ) { // move all relevant file into the same folder
-				strTargetPath = strTargetFolder;
-			// }
-			// else { // keep the folder structure as it is in the source folder
-			//	string sSubPath = fiImportFile.DirectoryName.Substring( fiImportFile.DirectoryName.IndexOf( '\\' )+1 );
-			//	strTargetPath = Path.Combine( strTargetFolder, sSubPath );
-			//}
+            // TODO: fix later, just a placeholder for now
+            // if ( true ) { // move all relevant file into the same folder
+            strTargetPath = strTargetFolder;
+            // }
+            // else { // keep the folder structure as it is in the source folder
+            //	string sSubPath = fiImportFile.DirectoryName.Substring( fiImportFile.DirectoryName.IndexOf( '\\' )+1 );
+            //	strTargetPath = Path.Combine( strTargetFolder, sSubPath );
+            //}
 
-			if( !Directory.Exists( strTargetPath ) ) {
-				Directory.CreateDirectory( strTargetPath );
-			}
+            if ( !Directory.Exists( strTargetPath ) ) {
+                Directory.CreateDirectory( strTargetPath );
+            }
 
-			return strTargetPath;
-		}
-		
-		/// <summary>
-		/// Generates the lists to be handed over to TeraCopy and updates the colocrs of the lists.
-		/// </summary>
-		void ProcessImport()
-		{
-			if(!Directory.Exists(strImportFolder)) {
-				ShowInfo("Select a folder with the " + strCollectionType + " to import...\n" + 
-				         "Just drop the folder in the Import list." );
-				return;
-			}
-			if(!Directory.Exists(strTargetFolder)) {
-				ShowInfo("Select a target folder...\n" +
-				         "Just drop the folder in the Existing list." );
-				return;
-			}
-			
-			SetStatus("Start processing...");
-			string sSourceListFileName = "";
-			StreamWriter swSourceListFile = null;
-			string sOldTargetPath = "";
-			string sTargetPath = "";
-			string sSourceFile;
-			bool bSourceListOpen = false;
-			bool bCopiedOrMovedSomething = false;
-			
-			if ( !File.Exists ( strTeraCopyPath ) ) {
-				ShowInfo( "Could not find TeraCopy. You can download it from\n    www.movie-file-merger.org/downloads.html\nOr set the path in the next dialog..." );
-				ofdTeraCopy.InitialDirectory = @"C:\Program Files";
-				ofdTeraCopy.ShowDialog ( );
-				strTeraCopyPath = ofdTeraCopy.FileName;
-				return;
-			}
+            return strTargetPath;
+        }
 
-			// tag the items to be copied or moved
-			foreach ( ListViewItem lviThis in lvImport.Items ) {
-				lviThis.Tag = (lviThis.BackColor == WishColor) || (lviThis.BackColor == HigherResColor);
-			}
+        /// <summary>
+        /// Generates the lists to be handed over to TeraCopy and updates the colocrs of the lists.
+        /// </summary>
+        void ProcessImport( )
+        {
+            if ( !Directory.Exists( strImportFolder ) ) {
+                ShowInfo( "Select a folder with the " + strCollectionType + " to import...\n" +
+                         "Just drop the folder in the Import list." );
+                return;
+            }
+            if ( !Directory.Exists( strTargetFolder ) ) {
+                ShowInfo( "Select a target folder...\n" +
+                         "Just drop the folder in the Existing list." );
+                return;
+            }
 
-			var diImportFolder = new DirectoryInfo( strImportFolder );
-			SearchOption soMovieFileMerger = SearchOption.AllDirectories;
+            SetStatus( "Start processing..." );
+            string sSourceListFileName = "";
+            StreamWriter swSourceListFile = null;
+            string sOldTargetPath = "";
+            string sTargetPath = "";
+            string sSourceFile;
+            bool bSourceListOpen = false;
+            bool bCopiedOrMovedSomething = false;
 
-			foreach( FileInfo fiImportFile in diImportFolder.GetFiles( "*", soMovieFileMerger ) ) {
-				string strImportName = fiImportFile.Name;
-				// ignore not relevant files
-				if ( !rgxMainExtensions.IsMatch( fiImportFile.Extension.ToLower() ) &&
-				    !rgxAddonExtensions.IsMatch( fiImportFile.Extension.ToLower() ) ) {
-					continue;
-				}
-				
-				// cut the file extension, to reduce list entries to only one per item
-				if ( strImportName.LastIndexOf( '.' ) != -1 ) {
-					strImportName = strImportName.Substring( 0, strImportName.LastIndexOf( '.' ) );
-				}
-				
-				strImportName = CleanName( RemoveEpisodeInfo( strImportName ) );
-				ListViewItem lviImport = FindItem( lvImport, strImportName );
-				if ( lviImport != null ) {
-					if( (bool)lviImport.Tag == true ) {
-						sTargetPath = MakeTargetPath( fiImportFile );
-						sSourceFile = fiImportFile.FullName; //" \"" +  + "\" ";
-						
-						if ( sOldTargetPath != sTargetPath ) {
-							if( bSourceListOpen ) {
-								swSourceListFile.Close( );
-								bSourceListOpen = false;
-								DoTeraCopy( sSourceListFileName, sOldTargetPath );
-							}
-							sOldTargetPath = sTargetPath;
-						}
-						if ( !bSourceListOpen ) {
-							sSourceListFileName = "TeraCopy List - " + strNickName + " " +
-							                      StandardizeDate(DateTime.Now) +  " " +
-							                      StandardizeTime(DateTime.Now) + " " +
-							                      sTargetPath.Replace( "\\", " - " ).Replace( ':', ' ' ) +
-							                      ".tcl";
-							sSourceListFileName = Path.Combine( strTeraCopyListsPath, sSourceListFileName );
-							swSourceListFile = new StreamWriter( sSourceListFileName, false, Encoding.Unicode );
-							bSourceListOpen = true;
-							sOldTargetPath = sTargetPath;
-						}
+            if ( !File.Exists( strTeraCopyPath ) ) {
+                ShowInfo( "Could not find TeraCopy. You can download it from\n    www.movie-file-merger.org/downloads.html\nOr set the path in the next dialog..." );
+                ofdTeraCopy.InitialDirectory = @"C:\Program Files";
+                ofdTeraCopy.ShowDialog( );
+                strTeraCopyPath = ofdTeraCopy.FileName;
+                return;
+            }
+
+            // tag the items to be copied or moved
+            foreach ( ListViewItem lviThis in lvImport.Items ) {
+                lviThis.Tag = (lviThis.BackColor == WishColor) || (lviThis.BackColor == HigherResColor);
+            }
+
+            var diImportFolder = new DirectoryInfo( strImportFolder );
+            SearchOption soMovieFileMerger = SearchOption.AllDirectories;
+
+            foreach ( FileInfo fiImportFile in diImportFolder.GetFiles( "*", soMovieFileMerger ) ) {
+                string strImportName = fiImportFile.Name;
+                // ignore not relevant files
+                if ( !rgxMainExtensions.IsMatch( fiImportFile.Extension.ToLower( ) ) &&
+                    !rgxAddonExtensions.IsMatch( fiImportFile.Extension.ToLower( ) ) ) {
+                    continue;
+                }
+
+                // cut the file extension, to reduce list entries to only one per item
+                if ( strImportName.LastIndexOf( '.' ) != -1 ) {
+                    strImportName = strImportName.Substring( 0, strImportName.LastIndexOf( '.' ) );
+                }
+
+                strImportName = CleanName( RemoveEpisodeInfo( strImportName ) );
+                ListViewItem lviImport = FindItem( lvImport, strImportName );
+                if ( lviImport != null ) {
+                    if ( (bool)lviImport.Tag == true ) {
+                        sTargetPath = MakeTargetPath( fiImportFile );
+                        sSourceFile = fiImportFile.FullName; //" \"" +  + "\" ";
+
+                        if ( sOldTargetPath != sTargetPath ) {
+                            if ( bSourceListOpen ) {
+                                swSourceListFile.Close( );
+                                bSourceListOpen = false;
+                                DoTeraCopy( sSourceListFileName, sOldTargetPath );
+                            }
+                            sOldTargetPath = sTargetPath;
+                        }
+                        if ( !bSourceListOpen ) {
+                            sSourceListFileName = "TeraCopy List - " + strNickName + " " +
+                                                  StandardizeDate( DateTime.Now ) + " " +
+                                                  StandardizeTime( DateTime.Now ) + " " +
+                                                  sTargetPath.Replace( "\\", " - " ).Replace( ':', ' ' ) +
+                                                  ".tcl";
+                            sSourceListFileName = Path.Combine( strTeraCopyListsPath, sSourceListFileName );
+                            swSourceListFile = new StreamWriter( sSourceListFileName, false, Encoding.Unicode );
+                            bSourceListOpen = true;
+                            sOldTargetPath = sTargetPath;
+                        }
                         /*
 						if ( rbCopy.Checked ) {
 							LogMessage( "Add to Source List", Color.Blue, "Copy " + 
@@ -475,33 +474,32 @@ namespace Movie_File_Merger
 							            sSourceFile + " -> " + sTargetPath );
 						}
 						*/
-						swSourceListFile.WriteLine( sSourceFile );
-						ListViewItem lviExisting;
-						lviExisting = AddItemToListView( lvExisting, lviImport );
-						if ( HorizontalResolutionIsHigher ( lviExisting, lviImport ) )
-						{
-							lviExisting.ToolTipText = lviImport.ToolTipText;
-							ColorAll( lviExisting.Text );
-							SetListViewChanged( lvExisting, true );
-						}
-						bCopiedOrMovedSomething = true;
-					}
-				}
-			}
-			if ( bSourceListOpen ) {
-				swSourceListFile.Close( );
-				DoTeraCopy( sSourceListFileName, sOldTargetPath );
-			}
-			if ( bCopiedOrMovedSomething ) {
-				if ( File.Exists ( strTeraCopyPath ) ) {
-					ShowInfo( "Finished processing..." );
-				}
-			}
-			else {
-				ShowInfo( "Did not find anything to copy or move...\nDid you put something in the Wish list?" );
-			}
-			ClearStatus( );
-		}
+                        swSourceListFile.WriteLine( sSourceFile );
+                        ListViewItem lviExisting;
+                        lviExisting = AddItemToListView( lvExisting, lviImport );
+                        if ( HorizontalResolutionIsHigher( lviExisting, lviImport ) ) {
+                            lviExisting.ToolTipText = lviImport.ToolTipText;
+                            ColorAll( lviExisting.Text );
+                            SetListViewChanged( lvExisting, true );
+                        }
+                        bCopiedOrMovedSomething = true;
+                    }
+                }
+            }
+            if ( bSourceListOpen ) {
+                swSourceListFile.Close( );
+                DoTeraCopy( sSourceListFileName, sOldTargetPath );
+            }
+            if ( bCopiedOrMovedSomething ) {
+                if ( File.Exists( strTeraCopyPath ) ) {
+                    ShowInfo( "Finished processing..." );
+                }
+            }
+            else {
+                ShowInfo( "Did not find anything to copy or move...\nDid you put something in the Wish list?" );
+            }
+            ClearStatus( );
+        }
 
         /// <summary>
         /// Does the final handover to TeraCopy.
@@ -595,45 +593,45 @@ namespace Movie_File_Merger
         /// The file to be played has to be located in the Import folder.
         /// </summary>
         void Play( )
-		{
-			bool bPlayedSomething = false;
-			if( !Directory.Exists( strImportFolder ) ) {
-				ShowInfo( "Select a folder with " + strCollectionType + " to play..." );
-				return;
-			}
+        {
+            bool bPlayedSomething = false;
+            if ( !Directory.Exists( strImportFolder ) ) {
+                ShowInfo( "Select a folder with " + strCollectionType + " to play..." );
+                return;
+            }
 
-			var diImportFolder = new DirectoryInfo( strImportFolder );
-			SearchOption soMovieFileMerger = SearchOption.AllDirectories;
+            var diImportFolder = new DirectoryInfo( strImportFolder );
+            SearchOption soMovieFileMerger = SearchOption.AllDirectories;
 
-			foreach( FileInfo fiImportFile in diImportFolder.GetFiles( "*", soMovieFileMerger ) ) {
-				if ( !rgxMainExtensions.IsMatch( fiImportFile.Extension.ToLower() ) ) {
-					continue;
-				}
-				
-				string strImportName = fiImportFile.Name;
-				if ( fiImportFile.Name.LastIndexOf( '.' ) != -1 ) {
-					strImportName = strImportName.Substring( 0, fiImportFile.Name.LastIndexOf( '.' ) );
-				}
-				strImportName = CleanName( strImportName );
-				ListViewItem lviImport = FindItem( lvImport, strImportName );
-				if ( lviImport != null ) {
-					if( lviImport.Selected ) {
-						SetStatus( "Playing " + fiImportFile.Name + "..." );
-						try {
-							ExecuteThis( fiImportFile.FullName );
-							bPlayedSomething = true;
-						}
-						catch ( Exception e ) { 
-							ShowInfo( e.Message ); 
-						}
-					}
-				}
-				ClearStatus( );
-			}
-			if ( !bPlayedSomething ) {
-				ShowInfo ( "Did not find an according file under the Import path." );
-			}
-		}
+            foreach ( FileInfo fiImportFile in diImportFolder.GetFiles( "*", soMovieFileMerger ) ) {
+                if ( !rgxMainExtensions.IsMatch( fiImportFile.Extension.ToLower( ) ) ) {
+                    continue;
+                }
+
+                string strImportName = fiImportFile.Name;
+                if ( fiImportFile.Name.LastIndexOf( '.' ) != -1 ) {
+                    strImportName = strImportName.Substring( 0, fiImportFile.Name.LastIndexOf( '.' ) );
+                }
+                strImportName = CleanName( strImportName );
+                ListViewItem lviImport = FindItem( lvImport, strImportName );
+                if ( lviImport != null ) {
+                    if ( lviImport.Selected ) {
+                        SetStatus( "Playing " + fiImportFile.Name + "..." );
+                        try {
+                            ExecuteThis( fiImportFile.FullName );
+                            bPlayedSomething = true;
+                        }
+                        catch ( Exception e ) {
+                            ShowInfo( e.Message );
+                        }
+                    }
+                }
+                ClearStatus( );
+            }
+            if ( !bPlayedSomething ) {
+                ShowInfo( "Did not find an according file under the Import path." );
+            }
+        }
 
         /// <summary>
         /// Something has been draged over a droparea.  
@@ -927,6 +925,11 @@ namespace Movie_File_Merger
                        " to " + lvThis.Tag + " " + strCollectionType + "..." );
         }
 
+        string CleanXml ( string strMess )
+        {
+            return strMess.Replace( "&amp;", "&" ).Replace( "&lt;", "<" ).Replace( "&gt;", ">" ).Replace( "&quot;", "\"" ).Replace( "&apos;", "'" );
+        }
+
         /// <summary>
         /// Adds items to a list view from a XML file.
         /// </summary>
@@ -939,14 +942,19 @@ namespace Movie_File_Merger
             LogInfo( "Loading " + Path.GetFileNameWithoutExtension( strPath ) +
                        " to " + lvThis.Tag + " " + strCollectionType + "..." );
 
+
             foreach ( XmlNode node in xmlFile.DocumentElement.ChildNodes ) {
                 string strToolTip = "";
-                var lviThis = new ListViewItem( node.FirstChild.InnerXml );
+                string strName = "";
                 foreach ( XmlNode xmlaThis in node.ChildNodes ) {
-                    if ( xmlaThis.Name == "Name" ) continue;
+                    if ( xmlaThis.Name == "Name" ) {
+                        strName = CleanXml ( node.FirstChild.InnerXml );
+                        continue;
+                    }
                     if ( xmlaThis.Name == "General" ) strToolTip += "\n";
-                    strToolTip += xmlaThis.Name + ":  " + xmlaThis.InnerXml + "\n";
+                    strToolTip += xmlaThis.Name + ":  " + CleanXml ( xmlaThis.InnerXml ) + "\n";
                 }
+                var lviThis = new ListViewItem( strName );
                 lviThis.ToolTipText = strToolTip;
                 lviThis = AddItemToListView( lvThis, lviThis );
             }
@@ -1026,7 +1034,7 @@ namespace Movie_File_Merger
             lvExisting.Update( );
             lvWish.Update( );
             lvImport.Update( );
-            MakeToolTip( fiFile, lvThis, lviThis, true );
+            MakeToolTip( fiFile, lvThis, lviThis );
             ColorAll( lviThis.Text );  // color again to get info from tooltip
             tspbMFM.Value++;
         }
@@ -1091,7 +1099,10 @@ namespace Movie_File_Merger
         void SaveListViewToXmlFile( ListView lvListView, string strFileName )
         {
             Regex rgxXmlStuff = new Regex( @"_x\d{4}" );
-            using ( XmlWriter writer = XmlWriter.Create( strFileName.Replace( ".csv", ".xml" ) ) ) {
+            var settings = new XmlWriterSettings( );
+            settings.Indent = true;
+
+            using ( XmlWriter writer = XmlWriter.Create( strFileName.Replace( ".csv", ".xml" ), settings ) ) {
                 writer.WriteStartDocument( );
                 writer.WriteStartElement( rgxXmlStuff.Replace( XmlConvert.EncodeName( strFileName.Substring( strFileName.LastIndexOf( "\\" ) + 1 ) ), "" ) );  // root exlement
                 foreach ( ListViewItem lviItem in lvListView.Items ) {
@@ -1213,7 +1224,7 @@ namespace Movie_File_Merger
 
         /// <summary>
         /// Cleans up and tries to standardize the name of movies or series, so that they 
-        /// can be comparted better.
+        /// can be compared better.
         /// </summary>
         /// <param name="strMessyName">The messy name, for example when downloaded.</param>
         /// <returns>The cleaned up name.</returns>
@@ -1328,6 +1339,16 @@ namespace Movie_File_Merger
             return bResolutionIsHigher;
         }
 
+        int GetFileSize( string strItemToolTip )
+        {
+            Match mtFileSize = Regex.Match( strItemToolTip, @"\d+ MiB" );
+            if ( mtFileSize.Success ) {
+                string strFileSize = Regex.Match( mtFileSize.Value, @"\d+" ).Value;
+                return Int32.Parse( Regex.Match( strFileSize, @"\d+" ).Value );
+            }
+            return 0;
+        }
+
         /// <summary>
         /// Checks if the horizoltal resolution in the tool tip of the list item too low.
         /// </summary>
@@ -1347,28 +1368,70 @@ namespace Movie_File_Merger
             return bResolutionIsLower;
         }
 
+        string GetExistingMediaInfo( string strItemName, long iMiB )
+        {
+            ListViewItem lviExisting = FindItem( lvExisting, strItemName );
+
+            if ( lviExisting != null &&
+                    GetFileSize( lviExisting.ToolTipText ) == iMiB ) {
+                if ( lviExisting.ToolTipText.Contains( "\n\nGeneral: " ) ) {
+                    return lviExisting.ToolTipText.Substring( lviExisting.ToolTipText.IndexOf( "\n\nGeneral: " ) );
+                }
+            }
+            return "";
+        }
+
         /// <summary>
-        /// Extracts full information of a file with MediaInfo, but returns only selected infomration. 
+        /// Extracts full information of a file with MediaInfo, but returns only selected information. 
         /// </summary>
         /// <param name="fiFile">The file to analyse.</param>
         /// <param name="lvThis">The list view in question.</param>
         /// <param name="lviThis">The list view item in question.</param>
-        /// <param name="bGetMediaInfo">Get detailed ModiaInfo if needed.</param>
         /// <returns>Selected media information.</returns>
-        void MakeToolTip( FileInfo fiFile, ListView lvThis, ListViewItem lviThis, bool bGetMediaInfo )
+        void MakeToolTip( FileInfo fiFile, ListView lvThis, ListViewItem lviThis )
         {
+            string strListType = (string)lvThis.Tag;
             bool bItemMissing = FindItem( lvThis, lviThis.Text ) == null;
             bool bHasMediaInfo = lviThis.ToolTipText.Contains( "Video: " );
+            bool bHasNewMediaInfo = lviThis.ToolTipText.Contains( "General: " );
+            long lMiB = fiFile.Length / 1024 / 1024;
+
+            string sMediaInfo = "";
+            bool bGetFullDetails = false;
+            string sInfo = lMiB + " MiB,  " + fiFile.Extension.ToUpper( ).Substring( 1 );
 
             string sFileInfo = "File:  " + fiFile.Name + "\n" +
                                "Path:  " + fiFile.DirectoryName + "\n" +
-                               "Info:  " + fiFile.Length / 1024 / 1024 + " MiB,  " + fiFile.Extension.ToUpper( ).Substring( 1 ) +
+                               "Info:  " + sInfo +
                                ", Last Written " + StandardizeDate( fiFile.LastWriteTime );
-            bool bDifferentFile = !lviThis.ToolTipText.Contains( sFileInfo );
-            bool bFullDetails = (bItemMissing || !bHasMediaInfo || bDifferentFile) && bGetMediaInfo;
+            bool bDifferentFileInfo = !lviThis.ToolTipText.Contains( sFileInfo );
 
-            string sMediaInfo = "";
-            if ( bFullDetails ) {
+            switch ( strListType ) {
+                case "Import":
+                    bool bIsGarbage = FindItem( lvGarbage, lviThis.Text ) == null;
+
+                    sMediaInfo = GetExistingMediaInfo( lviThis.Text, lMiB );
+                    if ( sMediaInfo == "" && !bHasMediaInfo && cbGetHigherRes.Checked && !bIsGarbage ) {
+                        bGetFullDetails = true;
+                    }
+                    break;
+                case "Existing":
+                    if ( !bHasNewMediaInfo ) {
+                        bGetFullDetails = true;
+                    }
+                    break;
+                case "Garbage":
+                    // don't get details
+                    break;
+                case "Wish":
+                    // don't get details
+                    break;
+                case "Maintenance":
+                    // don't get details
+                    break;
+            }
+
+            if ( bGetFullDetails ) {
                 SetStatus( "Getting MediaInfo for " + fiFile.Name );
                 miThis.Open( fiFile.FullName );
                 miThis.Option( "Inform", "General;General:  %Duration/String% in %Format% container %Video_Format_List% codec" ); // file size
@@ -1378,17 +1441,14 @@ namespace Movie_File_Merger
                 miThis.Option( "Inform", "Audio;Audio:  %Channel(s)/String% at %SamplingRate/String% %Format% %Language/String%" );
                 sMediaInfo += miThis.Inform( ).Replace( "Audio: ", "\nAudio: " ).Replace( "Audio:  ,", "Audio:" );
                 miThis.Close( );
-            }
-
-            if ( bFullDetails || bItemMissing || !bHasMediaInfo ) {
+                // Make new tool tip 
                 lviThis.ToolTipText = sFileInfo + sMediaInfo;
                 SetListViewChanged( lvThis, true );
             }
-            else if ( bDifferentFile ) {
-                if ( !bHasMediaInfo || sMediaInfo != "" ) {
-                    lviThis.ToolTipText = sFileInfo + sMediaInfo;
-                    SetListViewChanged( lvThis, true );
-                }
+            else if ( bDifferentFileInfo ) {
+                SetStatus( "Different File Info for " + fiFile.Name );
+                lviThis.ToolTipText = sFileInfo + sMediaInfo;
+                SetListViewChanged( lvThis, true );
             }
         }
 
@@ -1894,7 +1954,7 @@ namespace Movie_File_Merger
                         var fiFile = new FileInfo( strPath );
                         var lviThis = new ListViewItem( CleanName( strJustName ) );
                         lviThis = AddItemToListView( lvThis, lviThis );
-                        MakeToolTip( fiFile, lvThis, lviThis, cbGetHigherRes.Checked );
+                        MakeToolTip( fiFile, lvThis, lviThis );
                         if ( cbGetHigherRes.Checked ) ColorAll( lviThis.Text );  // color again to get info from tooltip
                     }
                     // from txt file
@@ -2356,7 +2416,7 @@ namespace Movie_File_Merger
             foreach ( FileInfo fiFile in diFolder.GetFiles( "*", soMovieFileMerger ) ) {
                 var lviThis = new ListViewItem( fiFile.FullName );
                 lviThis = AddItemToMaintenanceListView( lviThis );
-                MakeToolTip( fiFile, lvMaintenance, lviThis, false );
+                MakeToolTip( fiFile, lvMaintenance, lviThis );
                 tspbMFM.Value++;
             }
             lvMaintenance.Sorting = SortOrder.Ascending;
@@ -2383,7 +2443,7 @@ namespace Movie_File_Merger
                     var fiFile = new FileInfo( strPath );
                     var lviThis = new ListViewItem( strPath );
                     lviThis = AddItemToMaintenanceListView( lviThis );
-                    MakeToolTip( fiFile, lvMaintenance, lviThis, false );
+                    MakeToolTip( fiFile, lvMaintenance, lviThis );
                 }
             }
         }

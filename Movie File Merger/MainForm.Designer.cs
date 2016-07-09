@@ -313,6 +313,7 @@ namespace Movie_File_Merger
             this.tcMovieFileMerger.SelectedIndex = 0;
             this.tcMovieFileMerger.Size = new System.Drawing.Size(622, 376);
             this.tcMovieFileMerger.TabIndex = 0;
+            this.tcMovieFileMerger.Tag = "Maintenance";
             // 
             // tpSeparateLists
             // 
@@ -906,7 +907,7 @@ namespace Movie_File_Merger
             // 
             this.scHorizontal.Panel2.Controls.Add(this.lvGarbage);
             this.scHorizontal.Size = new System.Drawing.Size(203, 182);
-            this.scHorizontal.SplitterDistance = 86;
+            this.scHorizontal.SplitterDistance = 85;
             this.scHorizontal.TabIndex = 0;
             // 
             // lvWish
@@ -924,7 +925,7 @@ namespace Movie_File_Merger
             this.lvWish.Location = new System.Drawing.Point(0, 0);
             this.lvWish.Name = "lvWish";
             this.lvWish.ShowItemToolTips = true;
-            this.lvWish.Size = new System.Drawing.Size(203, 86);
+            this.lvWish.Size = new System.Drawing.Size(203, 85);
             this.lvWish.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.lvWish.TabIndex = 1;
             this.lvWish.TabStop = false;
@@ -960,7 +961,7 @@ namespace Movie_File_Merger
             this.lvGarbage.Location = new System.Drawing.Point(0, 0);
             this.lvGarbage.Name = "lvGarbage";
             this.lvGarbage.ShowItemToolTips = true;
-            this.lvGarbage.Size = new System.Drawing.Size(203, 92);
+            this.lvGarbage.Size = new System.Drawing.Size(203, 93);
             this.lvGarbage.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.lvGarbage.TabIndex = 1;
             this.lvGarbage.TabStop = false;
