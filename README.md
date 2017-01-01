@@ -27,7 +27,7 @@ MFM makes it easier for you to select which items are copied or moved and which 
 
 ### [The MIT License (MIT)](http://opensource.org/licenses/MIT)
 
-Copyright :copyright: 2012-2015 Reinhold Lauer
+Copyright :copyright: 2012-2017 Reinhold Lauer
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
