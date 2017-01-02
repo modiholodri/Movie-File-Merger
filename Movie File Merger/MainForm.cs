@@ -772,20 +772,23 @@ namespace Movie_File_Merger
             switch ( cobSearchDownload.Text ) {
                 case "All Below":
                     ExecuteThis( "https://1337x.to/search/" + strCleanName + "/1/" );
+                    ExecuteThis( "https://rarbg.to/torrents.php?search=" + strCleanName );
                     ExecuteThis( "http://bitsnoop.com/search/all/" + strCleanName );
                     ExecuteThis( "http://www.demonoid.pw/files/?query=" + strCleanName );
                     ExecuteThis( "http://extratorrent.cc/search/?search=" + strCleanName );
                     ExecuteThis( "https://eztv.ag/search/" + strCleanName );
                     // ExecuteThis( "https://kat.cr/usearch/" + strCleanName + "  category:movies/" );
-                    ExecuteThis( "http://magnetseed.net/search/index?q=" + strCleanName );
-                    ExecuteThis( "https://rarbg.to/torrents.php?search=" + strCleanName );
+                    // ExecuteThis( "http://magnetseed.net/search/index?q=" + strCleanName );
                     ExecuteThis( "https://isohunt.to/torrents/?ihq=" + strCleanName );
                     ExecuteThis( "https://www.limetorrents.cc/search/all/" + strCleanName );
-                    ExecuteThis( "https://thepiratebay.la/search/" + strCleanName );
-                    ExecuteThis( "http://torrentz.eu/search?f=" + strCleanName );
-                    ExecuteThis( "http://www.torrenthound.com/search/" + strCleanName );
-                    ExecuteThis( "http://www.torlock.com/all/torrents/" + strCleanName );
-                    ExecuteThis( "https://www.yify-torrent.org/search/" + strCleanName );
+                    // ExecuteThis( "https://thepiratebay.la/search/" + strCleanName );
+                    // ExecuteThis( "http://torrentz.eu/search?f=" + strCleanName );
+                    // ExecuteThis( "http://www.torrenthound.com/search/" + strCleanName );
+                    // ExecuteThis( "http://www.torlock.com/all/torrents/" + strCleanName );
+                    // ExecuteThis( "https://www.yify-torrent.org/search/" + strCleanName );
+                    break;
+                case "Rarbg":
+                    ExecuteThis( "https://rarbg.to/torrents.php?search=" + strCleanName );
                     break;
                 case "1337X":
                     ExecuteThis( "https://1337x.to/search/" + strCleanName + "/1/" );
@@ -802,23 +805,19 @@ namespace Movie_File_Merger
                 case "Eztv":
                     ExecuteThis( "https://eztv.ag/search/" + strCleanName );
                     break;
-                case "Magnet Seed":
-                    ExecuteThis( "http://magnetseed.net/search/index?q=" + strCleanName );
-                    break;
-                case "Rarbg":
-                    ExecuteThis( "https://rarbg.to/torrents.php?search=" + strCleanName );
-                    break;
                 case "ISO Hunt":
                     ExecuteThis( "https://isohunt.to/torrents/?ihq=" + strCleanName );
                     break;
                 case "Lime Torrents":
                     ExecuteThis( "https://www.limetorrents.cc/search/all/" + strCleanName );
                     break;
-                case "The Piratebay":
-                    ExecuteThis( "https://thepiratebay.la/search/" + strCleanName );
+                default:
+                    ExecuteThis( "https://rarbg.to/torrents.php?search=" + strCleanName );
+                    LogMessage( "Warning", Color.Orange, "Could not find " + cobSearchDownload.Text + " -> Searching Rarbg instead." );
                     break;
-                case "Torrentz":
-                    ExecuteThis( "http://torrentz.eu/search?f=" + strCleanName );
+                    /*
+                case "Magnet Seed":
+                    ExecuteThis( "http://magnetseed.net/search/index?q=" + strCleanName );
                     break;
                 case "Torrent Hound":
                     ExecuteThis( "http://www.torrenthound.com/search/" + strCleanName );
@@ -829,11 +828,12 @@ namespace Movie_File_Merger
                 case "Yifi Torrents":
                     ExecuteThis( "https://www.yify-torrent.org/search/" + strCleanName );
                     break;
-                default:
-                    ExecuteThis( "http://torrentz.eu/search?f=" + strCleanName );
-                    LogMessage( "Warning", Color.Orange, "Could not find " + cobSearchDownload.Text + " -> Searching Torrenz instead." );
+                case "The Piratebay":
+                    ExecuteThis( "https://thepiratebay.la/search/" + strCleanName );
                     break;
-                    /*
+                case "Torrentz":
+                    ExecuteThis( "http://torrentz.eu/search?f=" + strCleanName );
+                    break;
                 case "Kickass":
                     ExecuteThis( "https://kat.cr/usearch/" + strCleanName + "  category:movies/" );
                     break;
