@@ -644,6 +644,9 @@ namespace Movie_File_Merger
             if ( e.Data.GetDataPresent( typeof( ListView.SelectedListViewItemCollection ) ) ) {
                 e.Effect = e.AllowedEffect;
             }
+            if ( e.Data.GetDataPresent( DataFormats.FileDrop ) ) {
+                e.Effect = e.AllowedEffect;
+            }
         }
 
         /// <summary>
@@ -699,11 +702,18 @@ namespace Movie_File_Merger
         /// <param name="e">The arguments that the implementor of this event may find useful.</param>
         void BtnPlayDragDrop( object sender, DragEventArgs e )
         {
-            if ( (string)lvDragSource.Tag == "Import" ) {
+            if ( (string)lvDragSource.Tag == "Maintenance" ) {
+                foreach ( string strPath in (string[])e.Data.GetData( DataFormats.FileDrop ) ) {
+                    if ( rgxMainExtensions.IsMatch( strPath ) ) {
+                        ExecuteThis( strPath );
+                    }
+                }
+            }
+            else if ( (string)lvDragSource.Tag == "Import" ) {
                 Play( );
             }
             else {
-                ShowInfo( "Playing is only supported from the Import list." );
+                ShowInfo( "Playing is only supported from the Import or Maintenance list." );
             }
         }
 
@@ -711,48 +721,123 @@ namespace Movie_File_Merger
         /// Searches on the internet for the selected items of the list view, 
         /// which has been droped on the Search Info droparea.
         /// </summary>
-        /// <param name="lvListView">The list view with the selected items.</param>
-        void SearchInfo( ListView lvListView )
+        /// <param name="strCleanName">The clean name for which to search.</param>
+        void SearchInfo( string strCleanName )
         {
-            string strCleanName = "";
-            foreach ( ListViewItem lviItem in lvListView.SelectedItems ) {
-                strCleanName = RemoveEpisodeInfo( lviItem.Text ).Replace( ' ', '+' );
-                LogMessage( "Info", Color.Blue, "Searching " + cobSearchInfo.Text + " for " + strCleanName );
-                switch ( cobSearchInfo.Text ) {
-                    case "Nearly All Below":
-                        ExecuteThis( "http://www.allmovie.com/search/all/" + strCleanName );
-                        ExecuteThis( "http://www.imdb.com/find?q=" + strCleanName + "&s=tt" );
-                        ExecuteThis( "https://www.themoviedb.org/search?query=" + strCleanName );
-                        ExecuteThis( "http://www.movieposterdb.com/search/?query=" + strCleanName );
-                        ExecuteThis( "http://thetvdb.com/?string=" + strCleanName + "&searchseriesid=&tab=listseries&function=Search" );
-                        ExecuteThis( "http://www.traileraddict.com/search/" + strCleanName );
-                        break;
-                    case "All Movie":
-                        ExecuteThis( "http://www.allmovie.com/search/all/" + strCleanName );
-                        break;
-                    case "IMDb":
-                        ExecuteThis( "http://www.imdb.com/find?q=" + strCleanName + "&s=tt" );
-                        break;
-                    case "The Movie DB":
-                        ExecuteThis( "https://www.themoviedb.org/search?query=" + strCleanName );
-                        break;
-                    case "The Movie Poster DB":
-                        ExecuteThis( "http://www.movieposterdb.com/search/?query=" + strCleanName );
-                        break;
-                    case "The TVDB":
-                        ExecuteThis( "http://thetvdb.com/?string=" + strCleanName + "&searchseriesid=&tab=listseries&function=Search" );
-                        break;
-                    case "Trailer Addict":
-                        ExecuteThis( "http://www.traileraddict.com/search/" + strCleanName );
-                        break;
-                    case "Adult DVD Empire":
-                        ExecuteThis( "http://www.adultdvdempire.com/allsearch/search?q=" + strCleanName );
-                        break;
-                    default:
-                        ExecuteThis( "http://www.imdb.com/find?q=" + strCleanName + "&s=tt" );
-                        LogMessage( "Warning", Color.Orange, "Could not find " + cobSearchDownload.Text + " -> Searching IMDb instead." );
-                        break;
-                }
+            LogMessage( "Info", Color.Blue, "Searching " + cobSearchInfo.Text + " for " + strCleanName );
+            switch ( cobSearchInfo.Text ) {
+                case "Nearly All Below":
+                    ExecuteThis( "http://www.allmovie.com/search/all/" + strCleanName );
+                    ExecuteThis( "http://www.imdb.com/find?q=" + strCleanName + "&s=tt" );
+                    ExecuteThis( "https://www.themoviedb.org/search?query=" + strCleanName );
+                    ExecuteThis( "http://www.movieposterdb.com/search/?query=" + strCleanName );
+                    ExecuteThis( "http://thetvdb.com/?string=" + strCleanName + "&searchseriesid=&tab=listseries&function=Search" );
+                    ExecuteThis( "http://www.traileraddict.com/search/" + strCleanName );
+                    break;
+                case "All Movie":
+                    ExecuteThis( "http://www.allmovie.com/search/all/" + strCleanName );
+                    break;
+                case "IMDb":
+                    ExecuteThis( "http://www.imdb.com/find?q=" + strCleanName + "&s=tt" );
+                    break;
+                case "The Movie DB":
+                    ExecuteThis( "https://www.themoviedb.org/search?query=" + strCleanName );
+                    break;
+                case "The Movie Poster DB":
+                    ExecuteThis( "http://www.movieposterdb.com/search/?query=" + strCleanName );
+                    break;
+                case "The TVDB":
+                    ExecuteThis( "http://thetvdb.com/?string=" + strCleanName + "&searchseriesid=&tab=listseries&function=Search" );
+                    break;
+                case "Trailer Addict":
+                    ExecuteThis( "http://www.traileraddict.com/search/" + strCleanName );
+                    break;
+                case "Adult DVD Empire":
+                    ExecuteThis( "http://www.adultdvdempire.com/allsearch/search?q=" + strCleanName );
+                    break;
+                default:
+                    ExecuteThis( "http://www.imdb.com/find?q=" + strCleanName + "&s=tt" );
+                    LogMessage( "Warning", Color.Orange, "Could not find " + cobSearchDownload.Text + " -> Searching IMDb instead." );
+                    break;
+            }
+        }
+
+        /// <summary>
+        /// Searches the internet for a clean name.
+        /// </summary>
+        /// <param name="strCleanName">The clean name of the item to serach for.</param>
+        void SearchDownload( string strCleanName )
+        {
+            LogMessage( "Info", Color.Blue, "Searching " + cobSearchDownload.Text + " for " + strCleanName );
+            switch ( cobSearchDownload.Text ) {
+                case "All Below":
+                    ExecuteThis( "https://1337x.to/search/" + strCleanName + "/1/" );
+                    ExecuteThis( "http://bitsnoop.com/search/all/" + strCleanName );
+                    ExecuteThis( "http://www.demonoid.pw/files/?query=" + strCleanName );
+                    ExecuteThis( "http://extratorrent.cc/search/?search=" + strCleanName );
+                    ExecuteThis( "https://eztv.ag/search/" + strCleanName );
+                    // ExecuteThis( "https://kat.cr/usearch/" + strCleanName + "  category:movies/" );
+                    ExecuteThis( "http://magnetseed.net/search/index?q=" + strCleanName );
+                    ExecuteThis( "https://rarbg.to/torrents.php?search=" + strCleanName );
+                    ExecuteThis( "https://isohunt.to/torrents/?ihq=" + strCleanName );
+                    ExecuteThis( "https://www.limetorrents.cc/search/all/" + strCleanName );
+                    ExecuteThis( "https://thepiratebay.la/search/" + strCleanName );
+                    ExecuteThis( "http://torrentz.eu/search?f=" + strCleanName );
+                    ExecuteThis( "http://www.torrenthound.com/search/" + strCleanName );
+                    ExecuteThis( "http://www.torlock.com/all/torrents/" + strCleanName );
+                    ExecuteThis( "https://www.yify-torrent.org/search/" + strCleanName );
+                    break;
+                case "1337X":
+                    ExecuteThis( "https://1337x.to/search/" + strCleanName + "/1/" );
+                    break;
+                case "Bit Snoop":
+                    ExecuteThis( "http://bitsnoop.com/search/all/" + strCleanName );
+                    break;
+                case "Demonoid":
+                    ExecuteThis( "http://www.demonoid.pw/files/?query=" + strCleanName );
+                    break;
+                case "Extra Torrent":
+                    ExecuteThis( "http://extratorrent.cc/search/?search=" + strCleanName );
+                    break;
+                case "Eztv":
+                    ExecuteThis( "https://eztv.ag/search/" + strCleanName );
+                    break;
+                case "Magnet Seed":
+                    ExecuteThis( "http://magnetseed.net/search/index?q=" + strCleanName );
+                    break;
+                case "Rarbg":
+                    ExecuteThis( "https://rarbg.to/torrents.php?search=" + strCleanName );
+                    break;
+                case "ISO Hunt":
+                    ExecuteThis( "https://isohunt.to/torrents/?ihq=" + strCleanName );
+                    break;
+                case "Lime Torrents":
+                    ExecuteThis( "https://www.limetorrents.cc/search/all/" + strCleanName );
+                    break;
+                case "The Piratebay":
+                    ExecuteThis( "https://thepiratebay.la/search/" + strCleanName );
+                    break;
+                case "Torrentz":
+                    ExecuteThis( "http://torrentz.eu/search?f=" + strCleanName );
+                    break;
+                case "Torrent Hound":
+                    ExecuteThis( "http://www.torrenthound.com/search/" + strCleanName );
+                    break;
+                case "Torlock":
+                    ExecuteThis( "http://www.torlock.com/all/torrents/" + strCleanName );
+                    break;
+                case "Yifi Torrents":
+                    ExecuteThis( "https://www.yify-torrent.org/search/" + strCleanName );
+                    break;
+                default:
+                    ExecuteThis( "http://torrentz.eu/search?f=" + strCleanName );
+                    LogMessage( "Warning", Color.Orange, "Could not find " + cobSearchDownload.Text + " -> Searching Torrenz instead." );
+                    break;
+                    /*
+                case "Kickass":
+                    ExecuteThis( "https://kat.cr/usearch/" + strCleanName + "  category:movies/" );
+                    break;
+                    */
             }
         }
 
@@ -766,75 +851,49 @@ namespace Movie_File_Merger
             string strCleanName = "";
             foreach ( ListViewItem lviItem in lvListView.SelectedItems ) {
                 strCleanName = RemoveEpisodeInfo( lviItem.Text ).Replace( ' ', '+' );
-                LogMessage( "Info", Color.Blue, "Searching " + cobSearchDownload.Text + " for " + strCleanName );
-                switch ( cobSearchDownload.Text ) {
-                    case "All Below":
-                        ExecuteThis( "https://1337x.to/search/" + strCleanName + "/1/" );
-                        ExecuteThis( "http://bitsnoop.com/search/all/" + strCleanName );
-                        ExecuteThis( "http://www.demonoid.pw/files/?query=" + strCleanName );
-                        ExecuteThis( "http://extratorrent.cc/search/?search=" + strCleanName );
-                        ExecuteThis( "https://eztv.ag/search/" + strCleanName );
-                        ExecuteThis( "https://kat.cr/usearch/" + strCleanName + "  category:movies/" );
-                        ExecuteThis( "http://magnetseed.net/search/index?q=" + strCleanName );
-                        ExecuteThis( "https://rarbg.to/torrents.php?search=" + strCleanName );
-                        ExecuteThis( "https://isohunt.to/torrents/?ihq=" + strCleanName );
-                        ExecuteThis( "https://www.limetorrents.cc/search/all/" + strCleanName );
-                        ExecuteThis( "https://thepiratebay.la/search/" + strCleanName );
-                        ExecuteThis( "http://torrentz.eu/search?f=" + strCleanName );
-                        ExecuteThis( "http://www.torrenthound.com/search/" + strCleanName );
-                        ExecuteThis( "http://www.torlock.com/all/torrents/" + strCleanName );
-                        ExecuteThis( "https://www.yify-torrent.org/search/" + strCleanName );
-                        break;
-                    case "1337X":
-                        ExecuteThis( "https://1337x.to/search/" + strCleanName + "/1/" );
-                        break;
-                    case "Bit Snoop":
-                        ExecuteThis( "http://bitsnoop.com/search/all/" + strCleanName );
-                        break;
-                    case "Demonoid":
-                        ExecuteThis( "http://www.demonoid.pw/files/?query=" + strCleanName );
-                        break;
-                    case "Extra Torrent":
-                        ExecuteThis( "http://extratorrent.cc/search/?search=" + strCleanName );
-                        break;
-                    case "Eztv":
-                        ExecuteThis( "https://eztv.ag/search/" + strCleanName );
-                        break;
-                    case "Kickass":
-                        ExecuteThis( "https://kat.cr/usearch/" + strCleanName + "  category:movies/" );
-                        break;
-                    case "Magnet Seed":
-                        ExecuteThis( "http://magnetseed.net/search/index?q=" + strCleanName );
-                        break;
-                    case "Rarbg":
-                        ExecuteThis( "https://rarbg.to/torrents.php?search=" + strCleanName );
-                        break;
-                    case "ISO Hunt":
-                        ExecuteThis( "https://isohunt.to/torrents/?ihq=" + strCleanName );
-                        break;
-                    case "Lime Torrents":
-                        ExecuteThis( "https://www.limetorrents.cc/search/all/" + strCleanName );
-                        break;
-                    case "The Piratebay":
-                        ExecuteThis( "https://thepiratebay.la/search/" + strCleanName );
-                        break;
-                    case "Torrentz":
-                        ExecuteThis( "http://torrentz.eu/search?f=" + strCleanName );
-                        break;
-                    case "Torrent Hound":
-                        ExecuteThis( "http://www.torrenthound.com/search/" + strCleanName );
-                        break;
-                    case "Torlock":
-                        ExecuteThis( "http://www.torlock.com/all/torrents/" + strCleanName );
-                        break;
-                    case "Yifi Torrents":
-                        ExecuteThis( "https://www.yify-torrent.org/search/" + strCleanName );
-                        break;
-                    default:
-                        ExecuteThis( "http://torrentz.eu/search?f=" + strCleanName );
-                        LogMessage( "Warning", Color.Orange, "Could not find " + cobSearchDownload.Text + " -> Searching Torrenz instead." );
-                        break;
-                }
+                SearchDownload( strCleanName );
+            }
+        }
+
+        /// <summary>
+        /// Searches the internet for the selected items of the string array, 
+        /// which has been droped on the Search Download droparea.
+        /// </summary>
+        /// <param name="strcolToSearch">The list view with the selected items.</param>
+        void SearchDownload( string[] strcolToSearch )
+        {
+            foreach ( string strPath in strcolToSearch ) {
+                string strCleanName = CleanName( RemoveEpisodeInfo( Path.GetFileNameWithoutExtension( strPath ) ) ).Replace( ' ', '+' );
+                LogMessage( "Info", Color.Blue, "Searching " + cobSearchDownloadMaintenance.Text + " for " + strCleanName );
+                SearchDownload( strCleanName );
+            }
+        }
+
+        /// <summary>
+        /// Searches the internet for the selected items of the list view, 
+        /// which has been droped on the Search Download droparea.
+        /// </summary>
+        /// <param name="lvListView">The list view with the selected items.</param>
+        void SearchInfo( ListView lvListView )
+        {
+            string strCleanName = "";
+            foreach ( ListViewItem lviItem in lvListView.SelectedItems ) {
+                strCleanName = RemoveEpisodeInfo( lviItem.Text ).Replace( ' ', '+' );
+                SearchInfo( strCleanName );
+            }
+        }
+
+        /// <summary>
+        /// Searches the internet for the selected items of the string array, 
+        /// which has been droped on the Search Download droparea.
+        /// </summary>
+        /// <param name="strcolToSearch">The list view with the selected items.</param>
+        void SearchInfo( string[] strcolToSearch )
+        {
+            foreach ( string strPath in strcolToSearch ) {
+                string strCleanName = CleanName( RemoveEpisodeInfo( Path.GetFileNameWithoutExtension( strPath ) ) ).Replace( ' ', '+' );
+                LogMessage( "Info", Color.Blue, "Searching " + cobSearchDownloadMaintenance.Text + " for " + strCleanName );
+                SearchInfo( strCleanName );
             }
         }
 
@@ -846,7 +905,12 @@ namespace Movie_File_Merger
         /// <param name="e">The arguments that the implementor of this event may find useful.</param>
         void BtnSearchInfoDragDrop( object sender, DragEventArgs e )
         {
-            SearchInfo( lvDragSource );
+            if ( (string)lvDragSource.Tag == "Maintenance" ) {
+                SearchInfo( (string[])e.Data.GetData( DataFormats.FileDrop ) );
+            }
+            else {
+                SearchInfo( lvDragSource );
+            }
         }
 
         /// <summary>
@@ -857,7 +921,12 @@ namespace Movie_File_Merger
         /// <param name="e">The arguments that the implementor of this event may find useful.</param>
         void BtnSearchDownloadDragDrop( object sender, DragEventArgs e )
         {
-            SearchDownload( lvDragSource );
+            if ( (string)lvDragSource.Tag == "Maintenance" ) {
+                SearchDownload( (string[])e.Data.GetData( DataFormats.FileDrop ) );
+            }
+            else {
+                SearchDownload( lvDragSource );
+            }
         }
 
         /// <summary>
@@ -867,7 +936,14 @@ namespace Movie_File_Merger
         /// <param name="e">The arguments that the implementor of this event may find useful.</param>
         void CobSearchInfoSelectedIndexChanged( object sender, EventArgs e )
         {
+            if ( sender == cobSearchInfoMaintenance ) {
+                cobSearchInfo.Text = cobSearchInfoMaintenance.Text;
+            }
+            else {
+                cobSearchInfoMaintenance.Text = cobSearchInfo.Text;
+            }
             btnSearchInfo.Text = cobSearchInfo.Text;
+            btnSearchInfoMaintenance.Text = cobSearchInfo.Text;
             SaveSettings( );
         }
 
@@ -878,7 +954,14 @@ namespace Movie_File_Merger
         /// <param name="e">The arguments that the implementor of this event may find useful.</param>
         void CobSearchDownloadSelectedIndexChanged( object sender, EventArgs e )
         {
+            if ( sender == cobSearchDownloadMaintenance ) {
+                cobSearchDownload.Text = cobSearchDownloadMaintenance.Text;
+            }
+            else {
+                cobSearchDownloadMaintenance.Text = cobSearchDownload.Text;
+            }
             btnSearchDownload.Text = cobSearchDownload.Text;
+            btnSearchDownloadMaintenance.Text = cobSearchDownload.Text;
             SaveSettings( );
         }
 
@@ -1108,7 +1191,7 @@ namespace Movie_File_Merger
                 foreach ( ListViewItem lviItem in lvListView.Items ) {
                     string strGoodName = lviItem.Text;
                     if ( strGoodName == "" ) continue;
-                    if ( Char.IsDigit( strGoodName[ 0 ] ) ) strGoodName = "_" + strGoodName;
+                    if ( char.IsDigit( strGoodName[ 0 ] ) ) strGoodName = "_" + strGoodName;
                     strGoodName = rgxXmlStuff.Replace( XmlConvert.EncodeName( strGoodName ), "" );
                     writer.WriteStartElement( strGoodName );  // list entry
                     writer.WriteElementString( "Name", lviItem.Text );
@@ -1861,7 +1944,7 @@ namespace Movie_File_Merger
         /// </summary>
         /// <param name="sender">The object that invoked the event that fired the event handler.</param>
         /// <param name="e">The arguments that the implementor of this event may find useful.</param>
-        void LvItemDrag( object sender, ItemDragEventArgs e )
+        void LvItemsDrag( object sender, ItemDragEventArgs e )
         {
             lvDragSource = (ListView)sender;
             lvDragSource.DoDragDrop( lvDragSource.SelectedItems, DragDropEffects.Copy );
@@ -2311,6 +2394,27 @@ namespace Movie_File_Merger
 
         #region Maintenance Tab Handling
 
+
+
+        /// <summary>
+        /// Drag files from a list view, to drop and on FileBot, the Windows Explorer, ... 
+        /// </summary>
+        /// <param name="sender">The object that invoked the event that fired the event handler.</param>
+        /// <param name="e">The arguments that the implementor of this event may find useful.</param>
+        void LvFileListDrag( object sender, ItemDragEventArgs e )
+        {
+            lvDragSource = (ListView)sender;
+            var strcolFileList = new StringCollection( );
+            foreach ( ListViewItem lviThis in lvDragSource.SelectedItems ) {
+                strcolFileList.Add( lviThis.Text );
+                lvDragSource.Items.Remove( lviThis );
+            }
+
+            var doFileList = new DataObject( );
+            doFileList.SetFileDropList( strcolFileList );
+            lvDragSource.DoDragDrop( doFileList, DragDropEffects.Move );
+        }
+
         /// <summary>
         /// Adds an item to the maintenance list view, if it does not exist already.
         /// </summary>
@@ -2327,25 +2431,6 @@ namespace Movie_File_Merger
                 lvMaintenance.Items.Add( lviThis );
             }
             return lviThis;
-        }
-
-        /// <summary>
-        /// Drag files from a list view, to drop and on FileBot, the Windows Explorer, ... 
-        /// </summary>
-        /// <param name="sender">The object that invoked the event that fired the event handler.</param>
-        /// <param name="e">The arguments that the implementor of this event may find useful.</param>
-        void LvFileListDrag( object sender, ItemDragEventArgs e )
-        {
-            lvDragSource = (ListView)sender;
-            var strcolThis = new StringCollection( );
-            foreach ( ListViewItem lviThis in lvDragSource.SelectedItems ) {
-                strcolThis.Add( lviThis.Text );
-                lvDragSource.Items.Remove( lviThis );
-            }
-
-            var doThis = new DataObject( );
-            doThis.SetFileDropList( strcolThis );
-            lvDragSource.DoDragDrop( doThis, DragDropEffects.Move );
         }
 
         /// <summary>
@@ -2457,18 +2542,17 @@ namespace Movie_File_Merger
         /// <param name="e">The arguments that the implementor of this event may find useful.</param>
         void LvMaintenanceDragDrop( object sender, DragEventArgs e )
         {
-            lvMaintenance.Items.Clear( );
-
             if ( e.AllowedEffect == DragDropEffects.None ) return;
-            Cursor.Current = Cursors.WaitCursor;
 
             // from folders or files
             if ( e.Data.GetDataPresent( DataFormats.FileDrop ) ) {
+                Cursor.Current = Cursors.WaitCursor;
+                lvMaintenance.Items.Clear( );
                 lvMaintenanceAddFiles( (string[])e.Data.GetData( DataFormats.FileDrop ) );
+                ColorMaintenance( );
+                rtbMaintenance.ScrollToCaret( );
+                Cursor.Current = Cursors.Default;
             }
-            ColorMaintenance( );
-            rtbMaintenance.ScrollToCaret( );
-            Cursor.Current = Cursors.Default;
         }
 
         void SelectColorInList( ListView lvThis, Color ThisColor )
@@ -2713,7 +2797,11 @@ namespace Movie_File_Merger
             }
             AssignRegexes( );
             btnSearchDownload.Text = cobSearchDownload.Text;
+            cobSearchDownloadMaintenance.Text = cobSearchDownload.Text;
+            btnSearchDownloadMaintenance.Text = cobSearchDownload.Text;
             btnSearchInfo.Text = cobSearchInfo.Text;
+            cobSearchInfoMaintenance.Text = cobSearchInfo.Text;
+            btnSearchInfoMaintenance.Text = cobSearchInfo.Text;
         }
 
         /// <summary>
