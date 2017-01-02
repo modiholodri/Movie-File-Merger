@@ -2211,7 +2211,7 @@ namespace Movie_File_Merger
             this.lblCopyLeft.Name = "lblCopyLeft";
             this.lblCopyLeft.Size = new System.Drawing.Size(134, 15);
             this.lblCopyLeft.TabIndex = 2;
-            this.lblCopyLeft.Text = "© 2016 Modi";
+            this.lblCopyLeft.Text = "© 2017 Modi";
             this.lblCopyLeft.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // rtbCopyright
