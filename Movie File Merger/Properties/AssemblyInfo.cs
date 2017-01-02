@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Movie File Merger")]
-[assembly: AssemblyDescription("Selectively Merge Collections on Hard Disks")]
+[assembly: AssemblyDescription("Selectively Combine/Maintain Collections on Hard Disks")]
 
 #if DEBUG
 [assembly: AssemblyConfiguration("Debug")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 
 [assembly: AssemblyCompany("Reinhold Lauer")]
 [assembly: AssemblyProduct("Movie File Merger")]
-[assembly: AssemblyCopyright("Copyright © 2016 Reinhold Lauer")]
+[assembly: AssemblyCopyright("Copyright © 2017 Reinhold Lauer")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

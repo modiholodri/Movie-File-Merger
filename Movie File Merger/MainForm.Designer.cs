@@ -1243,7 +1243,7 @@ namespace Movie_File_Merger
             this.cobSearchInfoMaintenance.DropDownWidth = 130;
             this.cobSearchInfoMaintenance.FormattingEnabled = true;
             this.cobSearchInfoMaintenance.Items.AddRange(new object[] {
-            "Nearly All Below",
+            "Best Below",
             "All Movie",
             "IMDb",
             "The Movie DB",
@@ -1569,7 +1569,6 @@ namespace Movie_File_Merger
             // 
             this.cobDoubleClickDefault.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
             this.cobDoubleClickDefault.AllowDrop = true;
-            this.cobDoubleClickDefault.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cobDoubleClickDefault.BackColor = System.Drawing.SystemColors.Control;
             this.cobDoubleClickDefault.FormattingEnabled = true;
             this.cobDoubleClickDefault.Items.AddRange(new object[] {
@@ -1609,7 +1608,7 @@ namespace Movie_File_Merger
             this.btnResetSettings.Location = new System.Drawing.Point(489, 291);
             this.btnResetSettings.Margin = new System.Windows.Forms.Padding(2);
             this.btnResetSettings.Name = "btnResetSettings";
-            this.btnResetSettings.Size = new System.Drawing.Size(122, 18);
+            this.btnResetSettings.Size = new System.Drawing.Size(122, 21);
             this.btnResetSettings.TabIndex = 39;
             this.btnResetSettings.Text = "Reset All Settings";
             this.btnResetSettings.UseVisualStyleBackColor = true;
@@ -1652,10 +1651,10 @@ namespace Movie_File_Merger
             this.rtbSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.rtbSettings.Location = new System.Drawing.Point(6, 314);
+            this.rtbSettings.Location = new System.Drawing.Point(6, 317);
             this.rtbSettings.Name = "rtbSettings";
             this.rtbSettings.ReadOnly = true;
-            this.rtbSettings.Size = new System.Drawing.Size(607, 52);
+            this.rtbSettings.Size = new System.Drawing.Size(607, 26);
             this.rtbSettings.TabIndex = 3;
             this.rtbSettings.TabStop = false;
             this.rtbSettings.Text = "";

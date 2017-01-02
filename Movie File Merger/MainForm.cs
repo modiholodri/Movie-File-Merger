@@ -918,7 +918,7 @@ namespace Movie_File_Merger
         {
             string strCleanName = "";
             foreach ( ListViewItem lviItem in lvListView.SelectedItems ) {
-                strCleanName = lviItem.Text.Replace( ' ', '+' );
+                strCleanName = Path.GetFileNameWithoutExtension( lviItem.Text ).Replace( ' ', '+' );
                 SearchDownload( strCleanName );
             }
         }
@@ -931,7 +931,7 @@ namespace Movie_File_Merger
         void SearchDownload( string[] strcolToSearch )
         {
             foreach ( string strPath in strcolToSearch ) {
-                string strCleanName = CleanName( RemoveEpisodeInfo( Path.GetFileNameWithoutExtension( strPath ) ) ).Replace( ' ', '+' );
+                string strCleanName = Path.GetFileNameWithoutExtension( strPath ).Replace( ' ', '+' );
                 LogMessage( "Info", Color.Blue, "Searching " + cobSearchDownloadMaintenance.Text + " for " + strCleanName );
                 SearchDownload( strCleanName );
             }
@@ -946,7 +946,7 @@ namespace Movie_File_Merger
         {
             string strCleanName = "";
             foreach ( ListViewItem lviItem in lvListView.SelectedItems ) {
-                strCleanName = RemoveEpisodeInfo( lviItem.Text ).Replace( ' ', '+' );
+                strCleanName = RemoveEpisodeInfo( Path.GetFileNameWithoutExtension( lviItem.Text ) ).Replace( ' ', '+' );
                 SearchInfo( strCleanName );
             }
         }
@@ -959,7 +959,7 @@ namespace Movie_File_Merger
         void SearchInfo( string[] strcolToSearch )
         {
             foreach ( string strPath in strcolToSearch ) {
-                string strCleanName = CleanName( RemoveEpisodeInfo( Path.GetFileNameWithoutExtension( strPath ) ) ).Replace( ' ', '+' );
+                string strCleanName = RemoveEpisodeInfo( Path.GetFileNameWithoutExtension( strPath ) ).Replace( ' ', '+' );
                 LogMessage( "Info", Color.Blue, "Searching " + cobSearchDownloadMaintenance.Text + " for " + strCleanName );
                 SearchInfo( strCleanName );
             }
@@ -1442,8 +1442,7 @@ namespace Movie_File_Merger
         /// <returns>The series name.</returns>
         string RemoveEpisodeInfo( string strCleanName )
         {
-            return (rbSeries.Checked) ? Regex.Replace( strCleanName, @" S\d+e\d+$", "" ) :
-                                          strCleanName;
+            return Regex.Replace( strCleanName, @" [Ss]\d+[Ee]\d+$", "" );
         }
 
         /// <summary>
