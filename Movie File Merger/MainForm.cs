@@ -726,13 +726,43 @@ namespace Movie_File_Merger
         {
             LogMessage( "Info", Color.Blue, "Searching " + cobSearchInfo.Text + " for " + strCleanName );
             switch ( cobSearchInfo.Text ) {
-                case "Nearly All Below":
+                case "Best Below":
+                    // All Movie
                     ExecuteThis( "http://www.allmovie.com/search/all/" + strCleanName );
+                    // IMDb
                     ExecuteThis( "http://www.imdb.com/find?q=" + strCleanName + "&s=tt" );
+                    // The Movie Dd
                     ExecuteThis( "https://www.themoviedb.org/search?query=" + strCleanName );
-                    ExecuteThis( "http://www.movieposterdb.com/search/?query=" + strCleanName );
+                    // ExecuteThis( "http://www.movieposterdb.com/search/?query=" + strCleanName );
                     ExecuteThis( "http://thetvdb.com/?string=" + strCleanName + "&searchseriesid=&tab=listseries&function=Search" );
+                    // TrailerAddict http://www.traileraddict.com/search/Abraham+Lincoln+Vampire+Hunter
                     ExecuteThis( "http://www.traileraddict.com/search/" + strCleanName );
+                    // Open Movie Database http://www.omdbapi.com/?t=Kill+Bill&y=&&type=movie&plot=full&r=xml
+                    // ExecuteThis( "http://www.omdbapi.com/?t=/" + strCleanName + "&y=&&type=movie&plot=full&r=xml" );
+                    // Google https://www.google.com/search?q=kill+bill+movie
+                    ExecuteThis( "https://www.google.com/search?q=" + strCleanName + "+movie" );
+                    // Yahoo https://search.yahoo.com/search?p=kill+bill+movie
+                    ExecuteThis( "https://search.yahoo.com/search?p=" + strCleanName + "+movie" );
+                    // Rotten Tomatoes https://www.rottentomatoes.com/search/?search=kill%20bill
+                    ExecuteThis( "https://www.rottentomatoes.com/search/?search=" + strCleanName );
+                    // FMovies https://fmovies.se/search?keyword=kill%20bill
+                    ExecuteThis( "https://fmovies.se/search?keyword=" + strCleanName );
+                    // DuckDuckGo https://duckduckgo.com/?q=kill+bill+movie
+                    ExecuteThis( "https://duckduckgo.com/?q=" + strCleanName + "+movie" );
+                    // Movie Web http://movieweb.com/search/q=kill+bill
+                    // ExecuteThis( "http://movieweb.com/search/q=" + strCleanName );
+                    // YouTube https://www.youtube.com/results?search_query=kill+bill+movie
+                    ExecuteThis( "https://www.youtube.com/results?search_query=" + strCleanName + "+movie" );
+                    // Fandom http://wikia.com/wiki/Special:Search?query=kill+bill+movie
+                    // ExecuteThis( "http://wikia.com/wiki/Special:Search?query=" + strCleanName + "+movie" );
+                    // TV Guide http://www.tvguide.com/movies/database/moviesearch.asp?SearchType=0&name=kill+bill
+                    // ExecuteThis( "http://www.tvguide.com/movies/database/moviesearch.asp?SearchType=0&name=" + strCleanName );
+                    // MRQE http://www.mrqe.com/search?q=kill+bill
+                    ExecuteThis( "http://www.mrqe.com/search?q=" + strCleanName );
+                    // Hollywood.com http://www.hollywood.com/search/?s=kill%20bill
+                    ExecuteThis( "http://www.hollywood.com/search/?s=" + strCleanName );
+                    // CineMaterial https://www.cinematerial.com/search?q=kill+bill
+                    ExecuteThis( "https://www.cinematerial.com/search?q=" + strCleanName );
                     break;
                 case "All Movie":
                     ExecuteThis( "http://www.allmovie.com/search/all/" + strCleanName );
@@ -754,6 +784,45 @@ namespace Movie_File_Merger
                     break;
                 case "Adult DVD Empire":
                     ExecuteThis( "http://www.adultdvdempire.com/allsearch/search?q=" + strCleanName );
+                    break;
+                case "Open Movie Database":
+                    ExecuteThis( "http://www.omdbapi.com/?t=/" + strCleanName + "&y=&&type=movie&plot=full&r=xml" );
+                    break;
+                case "Google":
+                    ExecuteThis( "https://www.google.com/search?q=" + strCleanName + "+movie" );
+                    break;
+                case "Yahoo":
+                    ExecuteThis( "https://search.yahoo.com/search?p=" + strCleanName + "+movie" );
+                    break;
+                case "Rotten Tomatoes":
+                    ExecuteThis( "https://www.rottentomatoes.com/search/?search=" + strCleanName );
+                    break;
+                case "FMovies":
+                    ExecuteThis( "https://fmovies.se/search?keyword=" + strCleanName );
+                    break;
+                case "DuckDuckGo":
+                    ExecuteThis( "https://duckduckgo.com/?q=" + strCleanName + "+movie" );
+                    break;
+                case "Movie Web":
+                    ExecuteThis( "http://movieweb.com/search/q=" + strCleanName );
+                    break;
+                case "YouTube":
+                    ExecuteThis( "https://www.youtube.com/results?search_query=" + strCleanName + "+movie" );
+                    break;
+                case "Fandom":
+                    ExecuteThis( "http://wikia.com/wiki/Special:Search?query=" + strCleanName + "+movie" );
+                    break;
+                case "TV Guide":
+                    ExecuteThis( "http://www.tvguide.com/movies/database/moviesearch.asp?SearchType=0&name=" + strCleanName );
+                    break;
+                case "MRQE":
+                    ExecuteThis( "http://www.mrqe.com/search?q=" + strCleanName );
+                    break;
+                case "Hollywood.com":
+                    ExecuteThis( "http://www.hollywood.com/search/?s=" + strCleanName );
+                    break;
+                case "CineMaterial":
+                    ExecuteThis( "https://www.cinematerial.com/search?q=" + strCleanName );
                     break;
                 default:
                     ExecuteThis( "http://www.imdb.com/find?q=" + strCleanName + "&s=tt" );

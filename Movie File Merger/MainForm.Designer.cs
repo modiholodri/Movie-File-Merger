@@ -1061,14 +1061,27 @@ namespace Movie_File_Merger
             this.cobSearchInfo.DropDownWidth = 130;
             this.cobSearchInfo.FormattingEnabled = true;
             this.cobSearchInfo.Items.AddRange(new object[] {
-            "Nearly All Below",
+            "Best Below",
             "All Movie",
             "IMDb",
             "The Movie DB",
             "The Movie Poster DB",
             "The TVDB",
             "Trailer Addict",
-            "Adult DVD Empire"});
+            "Adult DVD Empire",
+            "Open Movie Database",
+            "Google",
+            "Yahoo",
+            "Rotten Tomatoes",
+            "FMovies",
+            "DuckDuckGo",
+            "Movie Web",
+            "YouTube",
+            "Fandom",
+            "TV Guide",
+            "MRQE",
+            "Hollywood.com",
+            "CineMaterial"});
             this.cobSearchInfo.Location = new System.Drawing.Point(516, 86);
             this.cobSearchInfo.Margin = new System.Windows.Forms.Padding(2);
             this.cobSearchInfo.Name = "cobSearchInfo";
@@ -1237,7 +1250,20 @@ namespace Movie_File_Merger
             "The Movie Poster DB",
             "The TVDB",
             "Trailer Addict",
-            "Adult DVD Empire"});
+            "Adult DVD Empire",
+            "Open Movie Database",
+            "Google",
+            "Yahoo",
+            "Rotten Tomatoes",
+            "FMovies",
+            "DuckDuckGo",
+            "Movie Web",
+            "YouTube",
+            "Fandom",
+            "TV Guide",
+            "MRQE",
+            "Hollywood.com",
+            "CineMaterial"});
             this.cobSearchInfoMaintenance.Location = new System.Drawing.Point(515, 15);
             this.cobSearchInfoMaintenance.Margin = new System.Windows.Forms.Padding(2);
             this.cobSearchInfoMaintenance.Name = "cobSearchInfoMaintenance";
