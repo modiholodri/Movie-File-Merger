@@ -1031,15 +1031,19 @@ namespace Movie_File_Merger
             this.cobSearchDownload.DropDownWidth = 130;
             this.cobSearchDownload.FormattingEnabled = true;
             this.cobSearchDownload.Items.AddRange(new object[] {
-            "All Below",
+            "Best Below",
             "1337X",
+            "Rarbg",
             "Bit Snoop",
             "Demonoid",
             "Extra Torrent",
             "Eztv",
-            "Rarbg",
+            "Kickass",
             "ISO Hunt",
-            "Lime Torrents"});
+            "Lime Torrents",
+            "World Wide Torrents",
+            "Yifi",
+            "Zoogle"});
             this.cobSearchDownload.Location = new System.Drawing.Point(84, 86);
             this.cobSearchDownload.Margin = new System.Windows.Forms.Padding(2);
             this.cobSearchDownload.Name = "cobSearchDownload";
@@ -1196,15 +1200,19 @@ namespace Movie_File_Merger
             this.cobSearchDownloadMaintenance.DropDownWidth = 130;
             this.cobSearchDownloadMaintenance.FormattingEnabled = true;
             this.cobSearchDownloadMaintenance.Items.AddRange(new object[] {
-            "All Below",
+            "Best Below",
             "1337X",
+            "Rarbg",
             "Bit Snoop",
             "Demonoid",
             "Extra Torrent",
             "Eztv",
-            "Rarbg",
+            "Kickass",
             "ISO Hunt",
-            "Lime Torrents"});
+            "Lime Torrents",
+            "World Wide Torrents",
+            "Yifi",
+            "Zoogle"});
             this.cobSearchDownloadMaintenance.Location = new System.Drawing.Point(174, 15);
             this.cobSearchDownloadMaintenance.Margin = new System.Windows.Forms.Padding(2);
             this.cobSearchDownloadMaintenance.Name = "cobSearchDownloadMaintenance";
