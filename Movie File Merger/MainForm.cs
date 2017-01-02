@@ -1564,7 +1564,7 @@ namespace Movie_File_Merger
 
             switch ( strListType ) {
                 case "Import":
-                    bool bIsGarbage = FindItem( lvGarbage, lviThis.Text ) == null;
+                    bool bIsGarbage = FindItem( lvGarbage, lviThis.Text ) != null;
 
                     sMediaInfo = GetExistingMediaInfo( lviThis.Text, lMiB );
                     if ( sMediaInfo == "" && !bHasMediaInfo && cbGetHigherRes.Checked && !bIsGarbage ) {
