@@ -918,7 +918,7 @@ namespace Movie_File_Merger
         {
             string strCleanName = "";
             foreach ( ListViewItem lviItem in lvListView.SelectedItems ) {
-                strCleanName = RemoveEpisodeInfo( lviItem.Text ).Replace( ' ', '+' );
+                strCleanName = lviItem.Text.Replace( ' ', '+' );
                 SearchDownload( strCleanName );
             }
         }
