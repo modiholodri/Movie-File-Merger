@@ -169,6 +169,7 @@ namespace Movie_File_Merger
             btnGoodMovie.BackColor = GoodMovieColor;
             lblGoodMovieNameRegex.BackColor = GoodMovieColor;
 
+            lvDragSource = lvExisting; // to avoid null exception
             CheckLatestVersion( "Startup" );
         }
 
@@ -657,6 +658,9 @@ namespace Movie_File_Merger
         /// <param name="e">The arguments that the implementor of this event may find useful.</param>
         void BtnExportListDragDrop( object sender, DragEventArgs e )
         {
+            if ( (string)lvDragSource.Tag == "Maintenance" ) {
+                LvMaintenanceDragDrop( sender, e );
+            }
             sfdMovieFileMerger.FileName =
                 strNickName + " " +
                 (string)lvDragSource.Tag + " " +
@@ -665,6 +669,9 @@ namespace Movie_File_Merger
             if ( sfdMovieFileMerger.ShowDialog( ) == DialogResult.OK ) {
                 sfdMovieFileMerger.InitialDirectory = "";  // take the same folder next time
                 SaveListViewToXmlFile( lvDragSource, sfdMovieFileMerger.FileName );
+            }
+            if ( (string)lvDragSource.Tag == "Maintenance" ) {
+                lvDragSource = lvExisting;
             }
         }
 
@@ -708,6 +715,8 @@ namespace Movie_File_Merger
                         ExecuteThis( strPath );
                     }
                 }
+                LvMaintenanceDragDrop( sender, e );
+                lvDragSource = lvExisting;
             }
             else if ( (string)lvDragSource.Tag == "Import" ) {
                 Play( );
@@ -966,6 +975,8 @@ namespace Movie_File_Merger
         {
             if ( (string)lvDragSource.Tag == "Maintenance" ) {
                 SearchInfo( (string[])e.Data.GetData( DataFormats.FileDrop ) );
+                LvMaintenanceDragDrop( sender, e );
+                lvDragSource = lvExisting;
             }
             else {
                 SearchInfo( lvDragSource );
@@ -982,6 +993,8 @@ namespace Movie_File_Merger
         {
             if ( (string)lvDragSource.Tag == "Maintenance" ) {
                 SearchDownload( (string[])e.Data.GetData( DataFormats.FileDrop ) );
+                LvMaintenanceDragDrop( sender, e );
+                lvDragSource = lvExisting;
             }
             else {
                 SearchDownload( lvDragSource );
@@ -1240,7 +1253,7 @@ namespace Movie_File_Merger
         /// <param name="strFileName">The name of the file to where to save the list view items.</param>
         void SaveListViewToXmlFile( ListView lvListView, string strFileName )
         {
-            Regex rgxXmlStuff = new Regex( @"_x\d{4}" );
+            Regex rgxXmlStuff = new Regex( @"_x[0-9a-fA-F]{4}" );
             var settings = new XmlWriterSettings( );
             settings.Indent = true;
 
@@ -1252,6 +1265,7 @@ namespace Movie_File_Merger
                     if ( strGoodName == "" ) continue;
                     if ( char.IsDigit( strGoodName[ 0 ] ) ) strGoodName = "_" + strGoodName;
                     strGoodName = rgxXmlStuff.Replace( XmlConvert.EncodeName( strGoodName ), "" );
+                    strGoodName = strGoodName.Replace( ':', '_' );
                     writer.WriteStartElement( strGoodName );  // list entry
                     writer.WriteElementString( "Name", lviItem.Text );
                     foreach ( string strLine in lviItem.ToolTipText.Split( '\n' ) ) {
@@ -2606,7 +2620,9 @@ namespace Movie_File_Merger
             // from folders or files
             if ( e.Data.GetDataPresent( DataFormats.FileDrop ) ) {
                 Cursor.Current = Cursors.WaitCursor;
-                lvMaintenance.Items.Clear( );
+                if ( (string)lvDragSource.Tag != "Maintenance" ) {
+                    lvMaintenance.Items.Clear( );
+                }
                 lvMaintenanceAddFiles( (string[])e.Data.GetData( DataFormats.FileDrop ) );
                 ColorMaintenance( );
                 rtbMaintenance.ScrollToCaret( );
