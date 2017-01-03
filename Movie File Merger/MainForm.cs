@@ -148,7 +148,7 @@ namespace Movie_File_Merger
             lvWish.BackColor = WishColor;
             lvImport.BackColor = NeutralColor;
 
-            dudMinimumResolution.BackColor = LowResColor;
+            cobMinimumResolution.BackColor = LowResColor;
             cbGetHigherRes.BackColor = HigherResColor;
 
             // set the button and lable colors in the maintenance tab
@@ -558,21 +558,21 @@ namespace Movie_File_Merger
         int GetMinimumResolution( )
         {
             int iMinimumResolution = 0;
-            switch ( dudMinimumResolution.Text ) {
-                case " > 0p (FLD)": iMinimumResolution = 0; break;
-                case " > 360p (nHD)": iMinimumResolution = 640; break;
-                case " > 540p (qHD)": iMinimumResolution = 960; break;
-                case " > 720p (HD)": iMinimumResolution = 1280; break;
-                case " > 900p (HD+)": iMinimumResolution = 1600; break;
-                case " > 1080p (Full HD)": iMinimumResolution = 1920; break;
-                case " > 1440p (WQHD)": iMinimumResolution = 2560; break;
-                case " > 2160p (4K UHD)": iMinimumResolution = 3840; break;
-                case " > 2880p (UHD+)": iMinimumResolution = 5120; break;
-                case " > 4320p (8K FUHD)": iMinimumResolution = 7680; break;
-                case " > 8640p (16k QUHD)": iMinimumResolution = 15360; break;
+            switch ( cobMinimumResolution.Text ) {
+                case "<~0p (FLD)": iMinimumResolution = 0; break;
+                case "<~360p (nHD)": iMinimumResolution = 640; break;
+                case "<~540p (qHD)": iMinimumResolution = 960; break;
+                case "<~720p (HD)": iMinimumResolution = 1280; break;
+                case "<~900p (HD+)": iMinimumResolution = 1600; break;
+                case "<~1080p (Full HD)": iMinimumResolution = 1920; break;
+                case "<~1440p (WQHD)": iMinimumResolution = 2560; break;
+                case "<~2160p (4K UHD)": iMinimumResolution = 3840; break;
+                case "<~2880p (UHD+)": iMinimumResolution = 5120; break;
+                case "<~4320p (8K FUHD)": iMinimumResolution = 7680; break;
+                case "<~8640p (16k QUHD)": iMinimumResolution = 15360; break;
                 default: iMinimumResolution = 0; break;
             }
-            return iMinimumResolution;
+            return iMinimumResolution * 97 / 100;  // cut off 3 percent to make it more tolerant
         }
 
         /// <summary>
@@ -1471,17 +1471,17 @@ namespace Movie_File_Merger
         /// <summary>
         /// Checks if the horizoltal resolution in the tool tip of the new list view item is higher.
         /// </summary>
-        /// <param name="lviOld">Old ListViewItem</param>
-        /// <param name="lviNew">New ListViewItem</param>
+        /// <param name="lviExisting">Existing ListViewItem</param>
+        /// <param name="lviImport">Import ListViewItem</param>
         /// <returns>True: if New Item Resolution is higher.</returns>
-        bool HorizontalResolutionIsHigher( ListViewItem lviOld, ListViewItem lviNew )
+        bool HorizontalResolutionIsHigher( ListViewItem lviExisting, ListViewItem lviImport )
         {
             bool bResolutionIsHigher = false;
 
             if ( cbGetHigherRes.Checked ) {
-                Match mtExistingResolution = Regex.Match( lviOld.ToolTipText, "Video:  \\d+" );
+                Match mtExistingResolution = Regex.Match( lviExisting.ToolTipText, "Video:  \\d+" );
                 if ( mtExistingResolution.Success ) {
-                    Match mtImportResolution = Regex.Match( lviNew.ToolTipText, "Video:  \\d+" );
+                    Match mtImportResolution = Regex.Match( lviImport.ToolTipText, "Video:  \\d+" );
                     if ( mtImportResolution.Success ) {
                         string sExistingResolution = Regex.Match( mtExistingResolution.Value, @"\d+" ).Value;
                         int iExistingResolution = Int32.Parse( sExistingResolution );
@@ -1512,7 +1512,7 @@ namespace Movie_File_Merger
         bool HorizontalResolutionTooLow( ListViewItem lviThis )
         {
             bool bResolutionIsLower = false;
-            if ( dudMinimumResolution.Text != " > 0p (FLD)" ) {
+            if ( cobMinimumResolution.Text != "<~0p (FLD)" ) {
                 Match mtResolution = Regex.Match( lviThis.ToolTipText, @"Video:  \d+" );
                 if ( mtResolution.Success ) {
                     string sResolution = Regex.Match( mtResolution.Value, @"\d+" ).Value;
@@ -2844,7 +2844,7 @@ namespace Movie_File_Merger
             cbGetHigherRes.Checked = readXmlSetting( xmlSettings, "/MFMSettings/General/GetHigherRes", "True" ) == "True";
             lblLastChecked.Text = readXmlSetting( xmlSettings, "/MFMSettings/General/LastChecked", "Last Checked: Never" );
             cobCheckForUpdates.Text = readXmlSetting( xmlSettings, "/MFMSettings/General/CheckForUpdates", "Last Checked: Never" );
-            dudMinimumResolution.Text = readXmlSetting( xmlSettings, "/MFMSettings/General/MinimumResolution", " > 720p (HD)" );
+            cobMinimumResolution.Text = readXmlSetting( xmlSettings, "/MFMSettings/General/MinimumResolution", "<~720p (HD)" );
 
             // Considered Files settings 
             tbMainExtensionsRegex.Text = readXmlSetting( xmlSettings, "/MFMSettings/ConsideredFiles/MainExtensionsRegex", @"avi|mkv|mp4" );
@@ -2931,7 +2931,7 @@ namespace Movie_File_Merger
                 writer.WriteElementString( "GetHigherRes", cbGetHigherRes.Checked.ToString( ) );
                 writer.WriteElementString( "LastChecked", lblLastChecked.Text );
                 writer.WriteElementString( "CheckForUpdates", cobCheckForUpdates.Text );
-                writer.WriteElementString( "MinimumResolution", dudMinimumResolution.Text );
+                writer.WriteElementString( "MinimumResolution", cobMinimumResolution.Text );
                 writer.WriteEndElement( );
 
                 writer.WriteStartElement( "ConsideredFiles" );  // Considered Files settings group
