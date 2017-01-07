@@ -2294,17 +2294,17 @@ namespace Movie_File_Merger
             this.cobMinimumResolution.BackColor = System.Drawing.Color.IndianRed;
             this.cobMinimumResolution.FormattingEnabled = true;
             this.cobMinimumResolution.Items.AddRange(new object[] {
-            "<~8640p (16k QUHD)",
-            "<~4320p (8K FUHD)",
-            "<~2880p (UHD+)",
-            "<~2160p (4K UHD)",
-            "<~1440p (WQHD)",
-            "<~1080p (Full HD)",
-            "<~900p (HD+)",
-            "<~720p (HD)",
-            "<~540p (qHD)",
-            "<~360p (nHD)",
-            "<~0p (FLD)"});
+            " <~8640p (16k QUHD)",
+            " <~4320p (8K FUHD)",
+            " <~2880p (UHD+)",
+            " <~2160p (4K UHD)",
+            " <~1440p (WQHD)",
+            " <~1080p (Full HD)",
+            " <~900p (HD+)",
+            " <~720p (HD)",
+            " <~540p (qHD)",
+            " <~360p (nHD)",
+            " <~0p (FLD)"});
             this.cobMinimumResolution.Location = new System.Drawing.Point(177, 14);
             this.cobMinimumResolution.Name = "cobMinimumResolution";
             this.cobMinimumResolution.RightToLeft = System.Windows.Forms.RightToLeft.No;

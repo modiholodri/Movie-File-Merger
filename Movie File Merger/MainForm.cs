@@ -559,17 +559,17 @@ namespace Movie_File_Merger
         {
             int iMinimumResolution = 0;
             switch ( cobMinimumResolution.Text ) {
-                case "<~0p (FLD)": iMinimumResolution = 0; break;
-                case "<~360p (nHD)": iMinimumResolution = 640; break;
-                case "<~540p (qHD)": iMinimumResolution = 960; break;
-                case "<~720p (HD)": iMinimumResolution = 1280; break;
-                case "<~900p (HD+)": iMinimumResolution = 1600; break;
-                case "<~1080p (Full HD)": iMinimumResolution = 1920; break;
-                case "<~1440p (WQHD)": iMinimumResolution = 2560; break;
-                case "<~2160p (4K UHD)": iMinimumResolution = 3840; break;
-                case "<~2880p (UHD+)": iMinimumResolution = 5120; break;
-                case "<~4320p (8K FUHD)": iMinimumResolution = 7680; break;
-                case "<~8640p (16k QUHD)": iMinimumResolution = 15360; break;
+                case " <~0p (FLD)": iMinimumResolution = 0; break;
+                case " <~360p (nHD)": iMinimumResolution = 640; break;
+                case " <~540p (qHD)": iMinimumResolution = 960; break;
+                case " <~720p (HD)": iMinimumResolution = 1280; break;
+                case " <~900p (HD+)": iMinimumResolution = 1600; break;
+                case " <~1080p (Full HD)": iMinimumResolution = 1920; break;
+                case " <~1440p (WQHD)": iMinimumResolution = 2560; break;
+                case " <~2160p (4K UHD)": iMinimumResolution = 3840; break;
+                case " <~2880p (UHD+)": iMinimumResolution = 5120; break;
+                case " <~4320p (8K FUHD)": iMinimumResolution = 7680; break;
+                case " <~8640p (16k QUHD)": iMinimumResolution = 15360; break;
                 default: iMinimumResolution = 0; break;
             }
             return iMinimumResolution * 97 / 100;  // cut off 3 percent to make it more tolerant
@@ -1512,7 +1512,7 @@ namespace Movie_File_Merger
         bool HorizontalResolutionTooLow( ListViewItem lviThis )
         {
             bool bResolutionIsLower = false;
-            if ( cobMinimumResolution.Text != "<~0p (FLD)" ) {
+            if ( cobMinimumResolution.Text != " <~0p (FLD)" ) {
                 Match mtResolution = Regex.Match( lviThis.ToolTipText, @"Video:  \d+" );
                 if ( mtResolution.Success ) {
                     string sResolution = Regex.Match( mtResolution.Value, @"\d+" ).Value;
@@ -2000,14 +2000,16 @@ namespace Movie_File_Merger
         }
 
         /// <summary>
-        /// The mose entered a list view.  
+        /// The mouse entered a list view.  
         /// Make the list view acitve, so that the scrolling works.
         /// </summary>
         /// <param name="sender">The object that invoked the event that fired the event handler.</param>
         /// <param name="e">The arguments that the implementor of this event may find useful.</param>
         void LvMouseEnter( object sender, EventArgs e )
         {
-            ((ListView)sender).Select( );
+            if ( !cobCriteria.ContainsFocus ) { // don't take away the focus from the Criteria entry field
+                ((ListView)sender).Select( );
+            }
         }
 
         /// <summary>
