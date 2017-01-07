@@ -3093,7 +3093,7 @@ namespace Movie_File_Merger
 		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
         private void llDonateABeerOrTwo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            ExecuteThis("http://movie-file-merger.org/donations.html");
+            ExecuteThis( "http://movie-file-merger.org/donations.html#Donations" );
         }
 
         /// <summary>
