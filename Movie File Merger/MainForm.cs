@@ -738,10 +738,20 @@ namespace Movie_File_Merger
         /// Searches on the internet for the selected items of the list view, 
         /// which has been droped on the Search Info droparea.
         /// </summary>
-        /// <param name="strCleanName">The clean name for which to search.</param>
-        void SearchInfo( string strCleanName )
+        /// <param name="strName">The name for which to search. Can be also the file path.</param>
+        void SearchInfo( string strName )
         {
-            LogMessage( "Info", Color.Blue, "Searching " + cobSearchInfo.Text + " for " + strCleanName );
+            string strSearchWhat = "+Movie";
+            string strCleanName = Path.GetFileNameWithoutExtension( strName );  // get only the name
+            LogMessage( "Info", Color.Blue, "Searching info for " + strCleanName );
+
+            if ( rgxEpisodesId.IsMatch( strName ) || ( rbSeries.Checked && tpSeparateLists.ContainsFocus ) ) {
+                strSearchWhat = "+TV+Series";
+            }
+            strCleanName = CleanName( strCleanName );
+            strCleanName = RemoveEpisodeInfo( strCleanName );
+            strCleanName = strCleanName.Replace( ' ', '+' );
+
             switch ( cobSearchInfo.Text ) {
                 case "Best Below":
                     // All Movie
@@ -757,19 +767,19 @@ namespace Movie_File_Merger
                     // Open Movie Database http://www.omdbapi.com/?t=Kill+Bill&y=&&type=movie&plot=full&r=xml
                     // ExecuteThis( "http://www.omdbapi.com/?t=/" + strCleanName + "&y=&&type=movie&plot=full&r=xml" );
                     // Google https://www.google.com/search?q=kill+bill+movie
-                    ExecuteThis( "https://www.google.com/search?q=" + strCleanName + "+movie" );
+                    ExecuteThis( "https://www.google.com/search?q=" + strCleanName + strSearchWhat );
                     // Yahoo https://search.yahoo.com/search?p=kill+bill+movie
-                    ExecuteThis( "https://search.yahoo.com/search?p=" + strCleanName + "+movie" );
+                    ExecuteThis( "https://search.yahoo.com/search?p=" + strCleanName + strSearchWhat );
                     // Rotten Tomatoes https://www.rottentomatoes.com/search/?search=kill%20bill
                     ExecuteThis( "https://www.rottentomatoes.com/search/?search=" + strCleanName );
                     // FMovies https://fmovies.se/search?keyword=kill%20bill
                     ExecuteThis( "https://fmovies.se/search?keyword=" + strCleanName );
                     // DuckDuckGo https://duckduckgo.com/?q=kill+bill+movie
-                    ExecuteThis( "https://duckduckgo.com/?q=" + strCleanName + "+movie" );
+                    ExecuteThis( "https://duckduckgo.com/?q=" + strCleanName + strSearchWhat );
                     // Movie Web http://movieweb.com/search/q=kill+bill
                     // ExecuteThis( "http://movieweb.com/search/q=" + strCleanName );
                     // YouTube https://www.youtube.com/results?search_query=kill+bill+movie
-                    ExecuteThis( "https://www.youtube.com/results?search_query=" + strCleanName + "+movie" );
+                    ExecuteThis( "https://www.youtube.com/results?search_query=" + strCleanName + strSearchWhat );
                     // Fandom http://wikia.com/wiki/Special:Search?query=kill+bill+movie
                     // ExecuteThis( "http://wikia.com/wiki/Special:Search?query=" + strCleanName + "+movie" );
                     // TV Guide http://www.tvguide.com/movies/database/moviesearch.asp?SearchType=0&name=kill+bill
@@ -806,10 +816,10 @@ namespace Movie_File_Merger
                     ExecuteThis( "http://www.omdbapi.com/?t=/" + strCleanName + "&y=&&type=movie&plot=full&r=xml" );
                     break;
                 case "Google":
-                    ExecuteThis( "https://www.google.com/search?q=" + strCleanName + "+movie" );
+                    ExecuteThis( "https://www.google.com/search?q=" + strCleanName + strSearchWhat );
                     break;
                 case "Yahoo":
-                    ExecuteThis( "https://search.yahoo.com/search?p=" + strCleanName + "+movie" );
+                    ExecuteThis( "https://search.yahoo.com/search?p=" + strCleanName + strSearchWhat );
                     break;
                 case "Rotten Tomatoes":
                     ExecuteThis( "https://www.rottentomatoes.com/search/?search=" + strCleanName );
@@ -818,16 +828,16 @@ namespace Movie_File_Merger
                     ExecuteThis( "https://fmovies.se/search?keyword=" + strCleanName );
                     break;
                 case "DuckDuckGo":
-                    ExecuteThis( "https://duckduckgo.com/?q=" + strCleanName + "+movie" );
+                    ExecuteThis( "https://duckduckgo.com/?q=" + strCleanName + strSearchWhat );
                     break;
                 case "Movie Web":
                     ExecuteThis( "http://movieweb.com/search/q=" + strCleanName );
                     break;
                 case "YouTube":
-                    ExecuteThis( "https://www.youtube.com/results?search_query=" + strCleanName + "+movie" );
+                    ExecuteThis( "https://www.youtube.com/results?search_query=" + strCleanName + strSearchWhat );
                     break;
                 case "Fandom":
-                    ExecuteThis( "http://wikia.com/wiki/Special:Search?query=" + strCleanName + "+movie" );
+                    ExecuteThis( "http://wikia.com/wiki/Special:Search?query=" + strCleanName + strSearchWhat );
                     break;
                 case "TV Guide":
                     ExecuteThis( "http://www.tvguide.com/movies/database/moviesearch.asp?SearchType=0&name=" + strCleanName );
@@ -954,8 +964,7 @@ namespace Movie_File_Merger
         {
             string strCleanName = "";
             foreach ( ListViewItem lviItem in lvListView.SelectedItems ) {
-                strCleanName = RemoveEpisodeInfo( Path.GetFileNameWithoutExtension( lviItem.Text ) ).Replace( ' ', '+' );
-                SearchInfo( strCleanName );
+                SearchInfo( lviItem.Text );
             }
         }
 
@@ -967,9 +976,7 @@ namespace Movie_File_Merger
         void SearchInfo( string[] strcolToSearch )
         {
             foreach ( string strPath in strcolToSearch ) {
-                string strCleanName = RemoveEpisodeInfo( Path.GetFileNameWithoutExtension( strPath ) ).Replace( ' ', '+' );
-                LogMessage( "Info", Color.Blue, "Searching " + cobSearchDownloadMaintenance.Text + " for " + strCleanName );
-                SearchInfo( strCleanName );
+                SearchInfo( strPath );
             }
         }
 
