@@ -1,3 +1,0 @@
-## :open_file_folder: IMDb Lists Folder :open_file_folder:
-
-The IMDb Lists folder contains some predefined lists for movie genres from IMDb.  The names of the lists should be more or less self explanatory...
