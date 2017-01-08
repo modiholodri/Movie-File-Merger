@@ -263,8 +263,9 @@ namespace Movie_File_Merger
             // 
             // sfdMovieFileMerger
             // 
-            this.sfdMovieFileMerger.DefaultExt = "csv";
-            this.sfdMovieFileMerger.Filter = "Comma Searated Value files|*.csv";
+            this.sfdMovieFileMerger.DefaultExt = "xml";
+            this.sfdMovieFileMerger.Filter = "Extensible Markup Language files|*.xml|Tab Searated Value files|*.tsv|Comma Seara" +
+    "ted Value files|*.csv";
             // 
             // BottomToolStripPanel
             // 

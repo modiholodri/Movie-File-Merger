@@ -3,7 +3,7 @@
  * Date: 2012-04-09
  */
  
-// Copyright 2012-2016 Reinhold Lauer
+// Copyright 2012-2017 Reinhold Lauer
 // 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -668,10 +668,18 @@ namespace Movie_File_Merger
                 StandardizeDate( DateTime.Today );
             if ( sfdMovieFileMerger.ShowDialog( ) == DialogResult.OK ) {
                 sfdMovieFileMerger.InitialDirectory = "";  // take the same folder next time
-                SaveListViewToXmlFile( lvDragSource, sfdMovieFileMerger.FileName );
-            }
-            if ( (string)lvDragSource.Tag == "Maintenance" ) {
-                lvDragSource = lvExisting;
+                if ( sfdMovieFileMerger.FileName.EndsWith( ".xml" ) ) {
+                    SaveListViewToXmlFile( lvDragSource, sfdMovieFileMerger.FileName );
+                }
+                if ( sfdMovieFileMerger.FileName.EndsWith( ".csv" ) ) {
+                    SaveListViewToCsvFile( lvDragSource, sfdMovieFileMerger.FileName );
+                }
+                if ( sfdMovieFileMerger.FileName.EndsWith( ".tsv" ) ) {
+                    SaveListViewToTsvFile( lvDragSource, sfdMovieFileMerger.FileName );
+                }
+                if ( (string)lvDragSource.Tag == "Maintenance" ) {
+                    lvDragSource = lvExisting;
+                }
             }
         }
 
@@ -1100,16 +1108,23 @@ namespace Movie_File_Merger
 
             foreach ( XmlNode node in xmlFile.DocumentElement.ChildNodes ) {
                 string strToolTip = "";
-                string strName = "";
+                string strListEntryName = "";
+                string strNodeName = "";
                 foreach ( XmlNode xmlaThis in node.ChildNodes ) {
-                    if ( xmlaThis.Name == "Name" ) {
-                        strName = CleanXml ( node.FirstChild.InnerXml );
+                    strNodeName = xmlaThis.Name;
+                    if ( strNodeName == "Name" ) {
+                        strListEntryName = CleanXml ( node.FirstChild.InnerXml );
                         continue;
                     }
-                    if ( xmlaThis.Name == "General" ) strToolTip += "\n";
-                    strToolTip += xmlaThis.Name + ":  " + CleanXml ( xmlaThis.InnerXml ) + "\n";
+                    else if ( strNodeName == "General" ) strToolTip += "\n";
+                    else if ( strNodeName == "Line" ) {
+                        strToolTip += CleanXml( xmlaThis.InnerXml ) + "\n";
+                    }
+                    else {
+                        strToolTip += strNodeName.Replace( '_', ' ' ) + ":  " + CleanXml( xmlaThis.InnerXml ) + "\n";
+                    }
                 }
-                var lviThis = new ListViewItem( strName );
+                var lviThis = new ListViewItem( strListEntryName );
                 lviThis.ToolTipText = strToolTip;
                 lviThis = AddItemToListView( lvThis, lviThis );
             }
@@ -1164,7 +1179,7 @@ namespace Movie_File_Merger
                 if ( (string)lvThis.Tag == "Wish" ) ColorWishAndUp( );
             }
             srMovies.Close( );
-            LogInfo( "Added " + Path.GetFileNameWithoutExtension( strPath ) + " to " + lvToAdd.Tag + " " + strCollectionType + "..." );
+            LogInfo( "Added " + Path.GetFileNameWithoutExtension( strPath ) + " to " + lvThis.Tag + " " + strCollectionType + "..." );
         }
 
         /// <summary>
@@ -1257,7 +1272,7 @@ namespace Movie_File_Merger
             var settings = new XmlWriterSettings( );
             settings.Indent = true;
 
-            using ( XmlWriter writer = XmlWriter.Create( strFileName.Replace( ".csv", ".xml" ), settings ) ) {
+            using ( XmlWriter writer = XmlWriter.Create( strFileName, settings ) ) {
                 writer.WriteStartDocument( );
                 writer.WriteStartElement( rgxXmlStuff.Replace( XmlConvert.EncodeName( strFileName.Substring( strFileName.LastIndexOf( "\\" ) + 1 ) ), "" ) );  // root exlement
                 foreach ( ListViewItem lviItem in lvListView.Items ) {
@@ -1271,7 +1286,7 @@ namespace Movie_File_Merger
                     foreach ( string strLine in lviItem.ToolTipText.Split( '\n' ) ) {
                         if ( strLine == "" ) continue;
                         if ( strLine.Contains( ":  " ) ) {
-                            var strElementName = strLine.Substring( 0, strLine.IndexOf( ":  " ) );
+                            var strElementName = rgxXmlStuff.Replace( XmlConvert.EncodeName( strLine.Substring( 0, strLine.IndexOf( ":  " ) ) ), "" );
                             writer.WriteElementString( strElementName, strLine.Substring( strLine.IndexOf( ":  " ) + 3 ) );
                         }
                         else {
@@ -1284,6 +1299,36 @@ namespace Movie_File_Merger
                 writer.WriteEndElement( );  // close the root element
                 writer.WriteEndDocument( );
             }
+        }
+
+        /// <summary>
+        /// Saves all items contained in a list view to a file, so that it can be later reloaded by MFM.
+        /// </summary>
+        /// <param name="lvListView">The list view containing the items.</param>
+        /// <param name="strFileName">The name of the file to where to save the list view items.</param>
+        void SaveListViewToCsvFile( ListView lvListView, string strFileName )
+        {
+            var swFile = new StreamWriter( strFileName );
+
+            foreach ( ListViewItem lviItem in lvListView.Items ) {
+                swFile.WriteLine( lviItem.Text + "\t" + lviItem.ToolTipText.Replace( '\n', '*' ) );
+            }
+            swFile.Close( );
+        }
+
+        /// <summary>
+        /// Saves all items contained in a list view to a file, so that it can be opened later with a spread sheet app.
+        /// </summary>
+        /// <param name="lvListView">The list view containing the items.</param>
+        /// <param name="strFileName">The name of the file to where to save the list view items.</param>
+        void SaveListViewToTsvFile( ListView lvListView, string strFileName )
+        {
+            var swFile = new StreamWriter( strFileName );
+
+            foreach ( ListViewItem lviItem in lvListView.Items ) {
+                swFile.WriteLine( lviItem.Text + "\t" + lviItem.ToolTipText.Replace( '\n', '\t' ) );
+            }
+            swFile.Close( );
         }
 
         /// <summary>
