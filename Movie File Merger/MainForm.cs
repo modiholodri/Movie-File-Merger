@@ -962,7 +962,6 @@ namespace Movie_File_Merger
         /// <param name="lvListView">The list view with the selected items.</param>
         void SearchInfo( ListView lvListView )
         {
-            string strCleanName = "";
             foreach ( ListViewItem lviItem in lvListView.SelectedItems ) {
                 SearchInfo( lviItem.Text );
             }
