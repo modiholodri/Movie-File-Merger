@@ -9,7 +9,7 @@ Have a look at the [Movie File Merger Website][], where you can download the lat
 [Movie File Merger Website]: https://movie-file-merger.org/downloads.html
 
 Or get the [Latest Successful Build][] for the newest features to test.  Just replace "Movie File Merger.exe" in the MFM Program folder with the downloaded one, if you want to have your existing configuration, or put it in any folder if you want to startover new.
-[Latest Successful Build]: https://movie-file-merger.org/Movie+File+Merger/bin/Debug/Movie+File+Merger.exe
+[Latest Successful Build]: https://movie-file-merger.org/Movie%20File%20Merger/bin/Debug/Movie%20File%20Merger.exe
 [![Build status](https://ci.appveyor.com/api/projects/status/j2l1vfyagkq6dsdu?svg=true)](https://ci.appveyor.com/project/Modi/movie-file-merger)
 
 ### :book: User Manuals
