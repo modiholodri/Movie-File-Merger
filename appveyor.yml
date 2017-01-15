@@ -2,7 +2,7 @@ version: 0.5.0.{build}
 build:
   verbosity: minimal
 artifacts:
-- path: '\bin\Debug\Movie File Merger.exe'
+- path: 'Movie File Merger\bin\Debug\Movie File Merger.exe'
   type: WebDeployPackage
 deploy:
 - provider: FTP
