@@ -319,7 +319,7 @@ namespace Movie_File_Merger
         /// <param name="e">The arguments that the implementor of this event may find useful.</param>
         void PbBannerClick( object sender, EventArgs e )
         {
-            ExecuteThis( "http://www.movie-file-merger.org" );
+            ExecuteThis( "https://movie-file-merger.org" );
         }
 
         /// <summary>
@@ -3085,14 +3085,14 @@ namespace Movie_File_Merger
             if ( dtLastChecked < DateTime.Now || sWhen.Contains( "Now" ) ) {
                 var xmlLatestVersion = new XmlDocument( );
                 try {
-                    xmlLatestVersion.Load( @"http://www.movie-file-merger.org/MFMVersion.xml" );
+                    xmlLatestVersion.Load( @"https://movie-file-merger.org/MFMVersion.xml" );
                     sLatestRelease = readXmlSetting( xmlLatestVersion, "/MFMVersions/LatestRelease", "0.0.0" );
                     sReleaseNotes = readXmlSetting( xmlLatestVersion, "/MFMVersions/ReleaseNotes", "Sorry, did not find any release notes..." );
                     if ( sCurrentRelease != sLatestRelease ) {
                         if ( ShowYesNoQuestion( "A different version (" + sLatestRelease + ") of MFM (currently " + sCurrentRelease + ") " +
                                                  "is available.\n" + sReleaseNotes + "\n" +
                                                  "Go to the Download page now?" ) == DialogResult.Yes ) {
-                            ExecuteThis( "http://www.movie-file-merger.org/downloads.html" );
+                            ExecuteThis( "https://movie-file-merger.org/downloads.html" );
                             Application.Exit( );
                         }
                     }
@@ -3124,7 +3124,7 @@ namespace Movie_File_Merger
 		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
         private void llMovieFileMergerOrg_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            ExecuteThis("http://movie-file-merger.org/");
+            ExecuteThis("https://movie-file-merger.org/");
         }
 
         /// <summary>
@@ -3134,7 +3134,7 @@ namespace Movie_File_Merger
 		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
         private void llUserFeedbackForum_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            ExecuteThis("http://movie-file-merger.org/forum/index.php");
+            ExecuteThis("https://movie-file-merger.org/forum/index.php");
         }
 
         /// <summary>
@@ -3144,7 +3144,7 @@ namespace Movie_File_Merger
 		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
         private void llDonateABeerOrTwo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            ExecuteThis( "http://movie-file-merger.org/donations.html#Donations" );
+            ExecuteThis( "https://movie-file-merger.org/donations.html#Donations" );
         }
 
         /// <summary>
