@@ -1,10 +1,4 @@
 ### Welcome to the Movie File Merger!
-MFM runs under Winindows 7, 8, and 10.  MFM has also been used on a Mac with Parallels installed.
-MFM uses [Semantic Versioning][] and is programmed in [C#][] and .net framework 4.0.
-[Semantic Versioning]: http://semver.org/
-[C#]: http://www.c-sharpcorner.com/
-
-### :arrow_double_down: The Download & Website...
 Have a look at the [Movie File Merger Website][], where you can download the latest stable version as Setup.
 [Movie File Merger Website]: https://movie-file-merger.org/downloads.html
 
@@ -23,7 +17,12 @@ There are two manuals, which are more or less interconnected, involved in the wh
 [GitHub HtOVoYHD]: https://github.com/Modi777/How-to-Organize-Videos-on-Your-Hard-Disks
 
 ### :sunflower: Basic Info  
-MFM supports you with the selective combination of video collections, like home movies, movies, series, or documentaries.
+MFM runs under Winindows 7, 8, and 10.  MFM has also been used on a Mac with Parallels installed.
+MFM uses [Semantic Versioning][] and is programmed in [C#][] and .net framework 4.0.
+[Semantic Versioning]: http://semver.org/
+[C#]: http://www.c-sharpcorner.com/
+
+MFM supports you with the selective combination/maintenance of video collections, like movies, series, or documentaries.
 MFM makes it easier for you to select which items are copied or moved and which items are not touched.  It only considers relevant files and ignores the rest. MFM helps you to select the items to copy before hand, and hence reduces the hassle of selecting the items when they actually should be copied or moved.
 ![Movie File Merger](https://movie-file-merger.org/images/MFM.gif)
 
