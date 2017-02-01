@@ -33,7 +33,7 @@ namespace Movie_File_Merger
     /// <summary>
     /// Application to selectively combine collections on hard disks.
     /// </summary>
-    public partial class MainForm : Form {
+    public partial class MFMForm : Form {
         ListView lvDragSource = null;  // the list view from which has been dragged
         Color DragColor = Color.Red;  // the color of the item which has been dragged
         string[] saCollections = { "Miscellaneous", "Adults", "Movies", "Documentaries", "Series", "Clips" }; // all collections
@@ -94,7 +94,7 @@ namespace Movie_File_Merger
         /// <summary>
         /// MFM main form to selectivley combine video collections
         /// </summary>
-        public MainForm( )
+        public MFMForm( )
         {
             InitializeComponent( );
             LogInfo( "Initializing Movie File Merger..." );
@@ -182,13 +182,13 @@ namespace Movie_File_Merger
         /// <summary>
         /// Converts a datetime to the standard date format yyyy-mm-dd.
         /// </summary>
-        /// <param name="dtToSStandardize">The date time to standardize.</param>
+        /// <param name="dtToStandardize">The date time to standardize.</param>
         /// <returns>The standzadized date string.</returns>
-        string StandardizeDate( DateTime dtToSStandardize )
+        public string StandardizeDate( DateTime dtToStandardize )
         {
-            return dtToSStandardize.Year.ToString( "D4" ) + "-" +
-                    dtToSStandardize.Month.ToString( "D2" ) + "-" +
-                    dtToSStandardize.Day.ToString( "D2" );
+            return dtToStandardize.Year.ToString( "D4" ) + "-" +
+                    dtToStandardize.Month.ToString( "D2" ) + "-" +
+                    dtToStandardize.Day.ToString( "D2" );
         }
 
         /// <summary>
@@ -196,11 +196,11 @@ namespace Movie_File_Merger
         /// </summary>
         /// <param name="dtToSStandardize">The date time to standardize.</param>
         /// <returns>The standzadized time string.</returns>
-        string StandardizeTime( DateTime dtToSStandardize )
+        string StandardizeTime( DateTime dtToStandardize )
         {
-            return dtToSStandardize.Hour.ToString( "D2" ) + "-" +
-                    dtToSStandardize.Minute.ToString( "D2" ) + "-" +
-                    dtToSStandardize.Second.ToString( "D2" );
+            return dtToStandardize.Hour.ToString( "D2" ) + "-" +
+                    dtToStandardize.Minute.ToString( "D2" ) + "-" +
+                    dtToStandardize.Second.ToString( "D2" );
         }
 
         /// <summary>

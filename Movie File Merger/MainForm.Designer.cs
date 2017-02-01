@@ -5,7 +5,7 @@
  */
 namespace Movie_File_Merger
 {
-	partial class MainForm
+	partial class MFMForm
 	{
 		/// <summary>
 		/// Designer variable used to keep track of non-visual components.
@@ -36,7 +36,7 @@ namespace Movie_File_Merger
         private void InitializeComponent()
 		{
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MFMForm));
             this.fbdMovieFileMerger = new System.Windows.Forms.FolderBrowserDialog();
             this.ilMovieFileMerger = new System.Windows.Forms.ImageList(this.components);
             this.tmrUpdateCounters = new System.Windows.Forms.Timer(this.components);

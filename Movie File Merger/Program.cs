@@ -21,7 +21,7 @@ namespace Movie_File_Merger
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new MainForm());
+			Application.Run(new MFMForm());
 		}
 		
 	}
