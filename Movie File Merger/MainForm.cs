@@ -865,6 +865,9 @@ namespace Movie_File_Merger
         void SearchDownload( string strCleanName )
         {
             LogMessage( "Info", Color.Blue, "Searching " + cobSearchDownload.Text + " for " + strCleanName );
+            if ( cobDownloadCriteria.Text != "Don't Care" ) {
+                strCleanName += "+" + cobDownloadCriteria.Text;
+            }
             switch ( cobSearchDownload.Text ) {
                 case "Best Below":
                     ExecuteThis( "https://1337x.to/search/" + strCleanName + "/1/" );
@@ -2893,6 +2896,7 @@ namespace Movie_File_Merger
             strNickName = readXmlSetting( xmlSettings, "/MFMSettings/General/NickName", "Anonymous" );
             cobSearchInfo.Text = readXmlSetting( xmlSettings, "/MFMSettings/General/SeachInfo", "IMDb" );
             cobSearchDownload.Text = readXmlSetting( xmlSettings, "/MFMSettings/General/SeachDownload", "Torrentz" );
+            cobDownloadCriteria.Text = readXmlSetting( xmlSettings, "/MFMSettings/General/DownloadCriteria", "720p" );
             cobDoubleClickDefault.Text = readXmlSetting( xmlSettings, "/MFMSettings/General/DoubleClickDefault", "Play" );
             cbGetHigherRes.Checked = readXmlSetting( xmlSettings, "/MFMSettings/General/GetHigherRes", "True" ) == "True";
             lblLastChecked.Text = readXmlSetting( xmlSettings, "/MFMSettings/General/LastChecked", "Last Checked: Never" );
@@ -2980,6 +2984,7 @@ namespace Movie_File_Merger
                 writer.WriteElementString( "NickName", strNickName );
                 writer.WriteElementString( "SeachInfo", cobSearchInfo.Text );
                 writer.WriteElementString( "SeachDownload", cobSearchDownload.Text );
+                writer.WriteElementString( "DownloadCriteria", cobDownloadCriteria.Text );
                 writer.WriteElementString( "DoubleClickDefault", cobDoubleClickDefault.Text );
                 writer.WriteElementString( "GetHigherRes", cbGetHigherRes.Checked.ToString( ) );
                 writer.WriteElementString( "LastChecked", lblLastChecked.Text );

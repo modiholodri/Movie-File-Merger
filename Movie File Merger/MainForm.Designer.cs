@@ -172,6 +172,7 @@ namespace Movie_File_Merger
             this.tspbMFM = new System.Windows.Forms.ToolStripProgressBar();
             this.ttMovieFileMerger = new System.Windows.Forms.ToolTip(this.components);
             this.ofdTeraCopy = new System.Windows.Forms.OpenFileDialog();
+            this.cobDownloadCriteria = new System.Windows.Forms.ComboBox();
             this.tcMovieFileMerger.SuspendLayout();
             this.tpSeparateLists.SuspendLayout();
             this.gbTypeSelection.SuspendLayout();
@@ -325,6 +326,7 @@ namespace Movie_File_Merger
             // tpSeparateLists
             // 
             this.tpSeparateLists.BackColor = System.Drawing.SystemColors.Control;
+            this.tpSeparateLists.Controls.Add(this.cobDownloadCriteria);
             this.tpSeparateLists.Controls.Add(this.btnPlay);
             this.tpSeparateLists.Controls.Add(this.btnEdit);
             this.tpSeparateLists.Controls.Add(this.btnJustScanIt);
@@ -594,7 +596,7 @@ namespace Movie_File_Merger
             this.btnEraseSelected.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEraseSelected.ImageKey = "Erase.gif";
             this.btnEraseSelected.ImageList = this.ilMovieFileMerger;
-            this.btnEraseSelected.Location = new System.Drawing.Point(218, 76);
+            this.btnEraseSelected.Location = new System.Drawing.Point(229, 76);
             this.btnEraseSelected.Name = "btnEraseSelected";
             this.btnEraseSelected.Size = new System.Drawing.Size(80, 43);
             this.btnEraseSelected.TabIndex = 27;
@@ -2418,7 +2420,30 @@ namespace Movie_File_Merger
             // 
             this.ofdTeraCopy.FileName = "C:\\Program Files\\TeraCopy\\TeraCopy.exe";
             // 
-            // MainForm
+            // cobDownloadCriteria
+            // 
+            this.cobDownloadCriteria.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cobDownloadCriteria.BackColor = System.Drawing.SystemColors.Control;
+            this.cobDownloadCriteria.DropDownWidth = 130;
+            this.cobDownloadCriteria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cobDownloadCriteria.FormattingEnabled = true;
+            this.cobDownloadCriteria.Items.AddRange(new object[] {
+            "4k",
+            "2160p",
+            "HDTV",
+            "1080p",
+            "720p",
+            "x264",
+            "Don\'t Care"});
+            this.cobDownloadCriteria.Location = new System.Drawing.Point(202, 86);
+            this.cobDownloadCriteria.Margin = new System.Windows.Forms.Padding(2);
+            this.cobDownloadCriteria.Name = "cobDownloadCriteria";
+            this.cobDownloadCriteria.Size = new System.Drawing.Size(18, 21);
+            this.cobDownloadCriteria.TabIndex = 49;
+            this.cobDownloadCriteria.Text = "IMDb";
+            this.ttMovieFileMerger.SetToolTip(this.cobDownloadCriteria, "Select additional download criteria or simply Don\'t Care.");
+            // 
+            // MFMForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -2427,7 +2452,7 @@ namespace Movie_File_Merger
             this.Controls.Add(this.toolStripContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(638, 469);
-            this.Name = "MainForm";
+            this.Name = "MFMForm";
             this.Text = "Movie File Merger";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MfFormClosing);
             this.Shown += new System.EventHandler(this.MfShown);
@@ -2624,5 +2649,6 @@ namespace Movie_File_Merger
         private System.Windows.Forms.ComboBox cobSearchInfoMaintenance;
         private System.Windows.Forms.PictureBox pbMFM;
         private System.Windows.Forms.ComboBox cobMinimumResolution;
+        private System.Windows.Forms.ComboBox cobDownloadCriteria;
     }
 }
