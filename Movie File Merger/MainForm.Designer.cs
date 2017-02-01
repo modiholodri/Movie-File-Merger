@@ -48,6 +48,7 @@ namespace Movie_File_Merger
             this.ContentPanel = new System.Windows.Forms.ToolStripContentPanel();
             this.tcMovieFileMerger = new System.Windows.Forms.TabControl();
             this.tpSeparateLists = new System.Windows.Forms.TabPage();
+            this.cobDownloadCriteria = new System.Windows.Forms.ComboBox();
             this.btnPlay = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnJustScanIt = new System.Windows.Forms.Button();
@@ -172,7 +173,6 @@ namespace Movie_File_Merger
             this.tspbMFM = new System.Windows.Forms.ToolStripProgressBar();
             this.ttMovieFileMerger = new System.Windows.Forms.ToolTip(this.components);
             this.ofdTeraCopy = new System.Windows.Forms.OpenFileDialog();
-            this.cobDownloadCriteria = new System.Windows.Forms.ComboBox();
             this.tcMovieFileMerger.SuspendLayout();
             this.tpSeparateLists.SuspendLayout();
             this.gbTypeSelection.SuspendLayout();
@@ -352,6 +352,28 @@ namespace Movie_File_Merger
             this.tpSeparateLists.Size = new System.Drawing.Size(643, 342);
             this.tpSeparateLists.TabIndex = 0;
             this.tpSeparateLists.Text = "Lists";
+            // 
+            // cobDownloadCriteria
+            // 
+            this.cobDownloadCriteria.BackColor = System.Drawing.SystemColors.Control;
+            this.cobDownloadCriteria.DropDownWidth = 130;
+            this.cobDownloadCriteria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cobDownloadCriteria.FormattingEnabled = true;
+            this.cobDownloadCriteria.Items.AddRange(new object[] {
+            "4k",
+            "2160p",
+            "HDTV",
+            "1080p",
+            "720p",
+            "x264",
+            "Don\'t Care"});
+            this.cobDownloadCriteria.Location = new System.Drawing.Point(202, 86);
+            this.cobDownloadCriteria.Margin = new System.Windows.Forms.Padding(2);
+            this.cobDownloadCriteria.Name = "cobDownloadCriteria";
+            this.cobDownloadCriteria.Size = new System.Drawing.Size(18, 21);
+            this.cobDownloadCriteria.TabIndex = 49;
+            this.cobDownloadCriteria.Text = "IMDb";
+            this.ttMovieFileMerger.SetToolTip(this.cobDownloadCriteria, "Select additional download criteria or simply Don\'t Care.");
             // 
             // btnPlay
             // 
@@ -2419,29 +2441,6 @@ namespace Movie_File_Merger
             // ofdTeraCopy
             // 
             this.ofdTeraCopy.FileName = "C:\\Program Files\\TeraCopy\\TeraCopy.exe";
-            // 
-            // cobDownloadCriteria
-            // 
-            this.cobDownloadCriteria.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cobDownloadCriteria.BackColor = System.Drawing.SystemColors.Control;
-            this.cobDownloadCriteria.DropDownWidth = 130;
-            this.cobDownloadCriteria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cobDownloadCriteria.FormattingEnabled = true;
-            this.cobDownloadCriteria.Items.AddRange(new object[] {
-            "4k",
-            "2160p",
-            "HDTV",
-            "1080p",
-            "720p",
-            "x264",
-            "Don\'t Care"});
-            this.cobDownloadCriteria.Location = new System.Drawing.Point(202, 86);
-            this.cobDownloadCriteria.Margin = new System.Windows.Forms.Padding(2);
-            this.cobDownloadCriteria.Name = "cobDownloadCriteria";
-            this.cobDownloadCriteria.Size = new System.Drawing.Size(18, 21);
-            this.cobDownloadCriteria.TabIndex = 49;
-            this.cobDownloadCriteria.Text = "IMDb";
-            this.ttMovieFileMerger.SetToolTip(this.cobDownloadCriteria, "Select additional download criteria or simply Don\'t Care.");
             // 
             // MFMForm
             // 
