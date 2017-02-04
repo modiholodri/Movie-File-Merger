@@ -2894,14 +2894,14 @@ namespace Movie_File_Merger
 
             // General settings			
             strNickName = readXmlSetting( xmlSettings, "/MFMSettings/General/NickName", "Anonymous" );
-            cobSearchInfo.Text = readXmlSetting( xmlSettings, "/MFMSettings/General/SeachInfo", "IMDb" );
-            cobSearchDownload.Text = readXmlSetting( xmlSettings, "/MFMSettings/General/SeachDownload", "Torrentz" );
+            cobSearchInfo.Text = readXmlSetting( xmlSettings, "/MFMSettings/General/SeachInfo", "Google" );
+            cobSearchDownload.Text = readXmlSetting( xmlSettings, "/MFMSettings/General/SeachDownload", "Rarbg" );
             cobDownloadCriteria.Text = readXmlSetting( xmlSettings, "/MFMSettings/General/DownloadCriteria", "720p" );
             cobDoubleClickDefault.Text = readXmlSetting( xmlSettings, "/MFMSettings/General/DoubleClickDefault", "Play" );
             cbGetHigherRes.Checked = readXmlSetting( xmlSettings, "/MFMSettings/General/GetHigherRes", "True" ) == "True";
             lblLastChecked.Text = readXmlSetting( xmlSettings, "/MFMSettings/General/LastChecked", "Last Checked: Never" );
-            cobCheckForUpdates.Text = readXmlSetting( xmlSettings, "/MFMSettings/General/CheckForUpdates", "Last Checked: Never" );
-            cobMinimumResolution.Text = readXmlSetting( xmlSettings, "/MFMSettings/General/MinimumResolution", "<~720p (HD)" );
+            cobCheckForUpdates.Text = readXmlSetting( xmlSettings, "/MFMSettings/General/CheckForUpdates", "Check for updates daily." );
+            cobMinimumResolution.Text = readXmlSetting( xmlSettings, "/MFMSettings/General/MinimumResolution", " <~720p (HD)" );
 
             // Considered Files settings 
             tbMainExtensionsRegex.Text = readXmlSetting( xmlSettings, "/MFMSettings/ConsideredFiles/MainExtensionsRegex", @"avi|mkv|mp4" );
