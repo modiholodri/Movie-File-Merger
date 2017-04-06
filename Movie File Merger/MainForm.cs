@@ -16,6 +16,7 @@
 // all copies or substantial portions of the Software.
 
 using System;
+using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Drawing;
 using System.Windows.Forms;
@@ -27,6 +28,8 @@ using System.Globalization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Threading;
 using MediaInfoLib;
+using WinSCP;
+
 
 namespace Movie_File_Merger
 {
@@ -194,7 +197,7 @@ namespace Movie_File_Merger
         /// <summary>
         /// Converts a datetime to the standard time format hh:mm:ss.
         /// </summary>
-        /// <param name="dtToSStandardize">The date time to standardize.</param>
+        /// <param name="dtToStandardize">The date time to standardize.</param>
         /// <returns>The standzadized time string.</returns>
         string StandardizeTime( DateTime dtToStandardize )
         {
@@ -1367,7 +1370,7 @@ namespace Movie_File_Merger
             SetStatus( "Serializing " + lvListView.Tag + " " + strCollectionType + "..." );
             var fsListView = new FileStream( strFileName, FileMode.Create );
             var bf = new BinaryFormatter( );
-            var strcolItems = new StringCollection( );
+            var strcolItems = new System.Collections.Specialized.StringCollection( );
 
             foreach ( ListViewItem lviItem in lvListView.Items ) {
                 strcolItems.Add( lviItem.Text + "\t" + lviItem.ToolTipText );
@@ -1390,11 +1393,11 @@ namespace Movie_File_Merger
         /// <param name="strFileName">The source file name.</param>
         void DeserializeListView( ListView lvListView, string strFileName )
         {
-            var strcolStr = new StringCollection( );
+            var strcolStr = new System.Collections.Specialized.StringCollection( );
             try {
                 var fsItems = new FileStream( strFileName, FileMode.Open );
                 var bf = new BinaryFormatter( );
-                strcolStr = (StringCollection)bf.Deserialize( fsItems );
+                strcolStr = (System.Collections.Specialized.StringCollection)bf.Deserialize( fsItems );
                 fsItems.Close( );
             }
             catch ( IOException e ) {
@@ -1996,7 +1999,7 @@ namespace Movie_File_Merger
                 }
             }
             if ( e.Control && e.KeyCode == Keys.X ) {  // Ctrl-X: Cut
-                var strcolThis = new StringCollection( );
+                var strcolThis = new System.Collections.Specialized.StringCollection( );
                 foreach ( ListViewItem lviThis in lvThis.SelectedItems ) {
                     strcolThis.Add( lviThis.Text );
                     lvThis.Items.Remove( lviThis );
@@ -2005,7 +2008,7 @@ namespace Movie_File_Merger
             }
             if ( e.Control && e.KeyCode == Keys.C ) {  // Ctrl-C: Copy
                 if ( lvThis.SelectedItems.Count > 0 ) {
-                    var strcolThis = new StringCollection( );
+                    var strcolThis = new System.Collections.Specialized.StringCollection( );
                     foreach ( ListViewItem lviThis in lvThis.SelectedItems ) {
                         strcolThis.Add( lviThis.Text );
                     }
@@ -2014,7 +2017,7 @@ namespace Movie_File_Merger
             }
             if ( e.Control && e.KeyCode == Keys.V ) {  // Ctrl-V: Paste
                 if ( Clipboard.ContainsFileDropList( ) ) {
-                    StringCollection scFileNames = Clipboard.GetFileDropList( );
+                    System.Collections.Specialized.StringCollection scFileNames = Clipboard.GetFileDropList( );
                     var saFileNames = new string[ scFileNames.Count ];
                     int iIndex = 0;
                     foreach ( string sFileName in scFileNames ) {
@@ -2532,7 +2535,7 @@ namespace Movie_File_Merger
         void LvFileListDrag( object sender, ItemDragEventArgs e )
         {
             lvDragSource = (ListView)sender;
-            var strcolFileList = new StringCollection( );
+            var strcolFileList = new System.Collections.Specialized.StringCollection( );
             foreach ( ListViewItem lviThis in lvDragSource.SelectedItems ) {
                 strcolFileList.Add( lviThis.Text );
                 lvDragSource.Items.Remove( lviThis );
@@ -3164,5 +3167,169 @@ namespace Movie_File_Merger
 
         #endregion About Tab Handling
 
+        #region FTP Sucker
+
+        void LogFTPSuckerMessage(string strType, Color cColor, string strMessage)
+        {
+            rtbFTPSucker.SelectionColor = cColor;
+            rtbFTPSucker.AppendText(DateTime.Now + ": " + strType + " - " + strMessage + "\n");
+            rtbFTPSucker.ScrollToCaret();
+        }
+
+        void LogFTPSuckerMajorAction(string strMessage)
+        {
+            LogFTPSuckerMessage("Info", Color.Purple, strMessage);
+        }
+
+        void LogFTPSuckerAction(string strMessage)
+        {
+            LogFTPSuckerMessage("Info", Color.Blue, strMessage);
+        }
+
+        void LogFTPSuckerInfo(string strMessage)
+        {
+            LogFTPSuckerMessage("Info", Color.Gray, strMessage);
+        }
+
+        void LogFTPSuckerError(string strMessage)
+        {
+            LogFTPSuckerMessage("Error", Color.Red, strMessage);
+        }
+
+        private void btnGetRemoteFileNames_Click(object sender, EventArgs e)
+        {
+
+            LogFTPSuckerMajorAction("Trying to get Remote File Names...");
+            try
+            {
+                // Set up session options
+                SessionOptions sessionOptions = new SessionOptions
+                {
+                    Protocol = Protocol.Ftp,
+                    HostName = tbHostName.Text,
+                    PortNumber = Convert.ToInt32(tbPortNumber.Text),
+                    UserName = tbUserName.Text,
+                    Password = tbPassword.Text,
+                };
+
+                string localPath = tbLocalPath.Text;
+                string remotePath = tbRemotePath.Text;
+
+                using (Session session = new Session())
+                {
+                    // Connect
+                    LogFTPSuckerAction("Opening Session to " + sessionOptions.HostName);
+                    session.Open(sessionOptions);
+
+                    // Enumerate files and directories
+                    LogFTPSuckerAction("Getting file Infos...");
+                    IEnumerable<RemoteFileInfo> fileInfos =
+                        session.EnumerateRemoteFiles(remotePath, null, EnumerationOptions.EnumerateDirectories | EnumerationOptions.AllDirectories);
+
+                    foreach (RemoteFileInfo fileInfo in fileInfos)
+                    {
+                        if (fileInfo.IsDirectory)
+                        {
+                            LogFTPSuckerInfo("Found directory: " + fileInfo.FullName);
+                        }
+                        else
+                        {
+                            LogFTPSuckerInfo("Found file: " + fileInfo.FullName);
+                            ListViewItem lviRemoteFile = new ListViewItem(fileInfo.FullName);
+                            lvRemoteFiles.Items.Add(lviRemoteFile);
+                            lviRemoteFile.EnsureVisible();
+                            lviRemoteFile.Focused = true;
+                        }
+                    }
+                }
+            }
+            catch (Exception exception)
+            {
+                LogFTPSuckerError(exception.Message);
+            }
+            LogFTPSuckerMajorAction("Finshed getting Remote File Names...");
+        }
+
+        private void btnDownloadWishedRemoteFiles_Click(object sender, EventArgs e)
+        {
+
+            LogFTPSuckerMajorAction("Trying to download Wished Remote Files...");
+            try
+            {
+                // Set up session options
+                SessionOptions sessionOptions = new SessionOptions
+                {
+                    Protocol = Protocol.Ftp,
+                    HostName = tbHostName.Text,
+                    PortNumber = Convert.ToInt32(tbPortNumber.Text),
+                    UserName = tbUserName.Text,
+                    Password = tbPassword.Text,
+                };
+
+                string localPath = tbLocalPath.Text;
+                string remotePath = tbRemotePath.Text;
+
+                using (Session session = new Session())
+                {
+                    // Connect
+                    LogFTPSuckerAction("Opening Session to " + sessionOptions.HostName);
+                    session.Open(sessionOptions);
+
+                    // Enumerate files and directories
+                    LogFTPSuckerAction("Getting file Infos...");
+                    IEnumerable<RemoteFileInfo> fileInfos =
+                        session.EnumerateRemoteFiles(remotePath, null, EnumerationOptions.EnumerateDirectories | EnumerationOptions.AllDirectories);
+
+                    foreach (RemoteFileInfo fileInfo in fileInfos)
+                    {
+                        string localFilePath = session.TranslateRemotePathToLocal(fileInfo.FullName, remotePath, localPath);
+
+                        if (fileInfo.IsDirectory)
+                        {
+                            // Create local subdirectory, if it does not exist yet
+                            LogFTPSuckerInfo("Found directory: " + fileInfo.FullName);
+                            if (!Directory.Exists(localFilePath))
+                            {
+                                LogFTPSuckerAction("Creating directory: " + localFilePath);
+                                Directory.CreateDirectory(localFilePath);
+                            }
+                        }
+                        else
+                        {
+                            LogFTPSuckerInfo("Found file: " + fileInfo.FullName);
+
+                            ListViewItem lviRemote = FindItem(lvRemoteFiles, fileInfo.FullName);
+                            if (lviRemote != null)
+                            {
+                                if (lviRemote.Selected)
+                                {
+                                    LogFTPSuckerAction("Downloading " + lviRemote.Text);
+                                    // Download file
+                                    TransferOperationResult transferResult = session.GetFiles(session.EscapeFileMask(fileInfo.FullName), localFilePath);
+
+                                    // Did the download succeeded?
+                                    if (!transferResult.IsSuccess)
+                                    {
+                                        // Log error (but continue with other files)
+                                        LogFTPSuckerError("Error downloading file " + fileInfo.FullName + " because " + transferResult.Failures[0].Message);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception exception)
+            {
+                LogFTPSuckerError(exception.Message);
+            }
+            LogFTPSuckerMajorAction("Finshed downloading Wished Remote Files...");
+        }
+
+        private void lvFTPSuckerResize(object sender, EventArgs e)
+        {
+            lvRemoteFiles.Columns[0].Width = lvRemoteFiles.Width - 35;
+        }
     }
+#endregion FTP Sucker
 }
