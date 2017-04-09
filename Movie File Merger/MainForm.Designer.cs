@@ -72,7 +72,7 @@ namespace Movie_File_Merger
             this.lvRemoteFiles = new System.Windows.Forms.ListView();
             this.chRemoteFiles = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.rtbFTPSucker = new System.Windows.Forms.RichTextBox();
-            this.btnDownloadWishedRemoteFiles = new System.Windows.Forms.Button();
+            this.btnGetWishedRemoteFiles = new System.Windows.Forms.Button();
             this.tpSeparateLists = new System.Windows.Forms.TabPage();
             this.cobDownloadCriteria = new System.Windows.Forms.ComboBox();
             this.btnPlay = new System.Windows.Forms.Button();
@@ -199,6 +199,8 @@ namespace Movie_File_Merger
             this.tspbMFM = new System.Windows.Forms.ToolStripProgressBar();
             this.ttMovieFileMerger = new System.Windows.Forms.ToolTip(this.components);
             this.ofdTeraCopy = new System.Windows.Forms.OpenFileDialog();
+            this.btnWishSelected = new System.Windows.Forms.Button();
+            this.btnBinSelected = new System.Windows.Forms.Button();
             this.tcMovieFileMerger.SuspendLayout();
             this.tpFTPSucker.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFTPSuckerUserManual)).BeginInit();
@@ -344,9 +346,9 @@ namespace Movie_File_Merger
             // 
             // tcMovieFileMerger
             // 
-            this.tcMovieFileMerger.Controls.Add(this.tpFTPSucker);
             this.tcMovieFileMerger.Controls.Add(this.tpSeparateLists);
             this.tcMovieFileMerger.Controls.Add(this.tpLog);
+            this.tcMovieFileMerger.Controls.Add(this.tpFTPSucker);
             this.tcMovieFileMerger.Controls.Add(this.tpMaintenance);
             this.tcMovieFileMerger.Controls.Add(this.tpSettings);
             this.tcMovieFileMerger.Controls.Add(this.tpHelp);
@@ -363,6 +365,8 @@ namespace Movie_File_Merger
             // 
             // tpFTPSucker
             // 
+            this.tpFTPSucker.Controls.Add(this.btnBinSelected);
+            this.tpFTPSucker.Controls.Add(this.btnWishSelected);
             this.tpFTPSucker.Controls.Add(this.lblCloudImage);
             this.tpFTPSucker.Controls.Add(this.btnBrowseLocalPath);
             this.tpFTPSucker.Controls.Add(this.tbPassword);
@@ -384,7 +388,7 @@ namespace Movie_File_Merger
             this.tpFTPSucker.Controls.Add(this.btnOpenWinSCP);
             this.tpFTPSucker.Controls.Add(this.btnGetRemoteFileNames);
             this.tpFTPSucker.Controls.Add(this.scFTPSucker);
-            this.tpFTPSucker.Controls.Add(this.btnDownloadWishedRemoteFiles);
+            this.tpFTPSucker.Controls.Add(this.btnGetWishedRemoteFiles);
             this.tpFTPSucker.ImageKey = "ftp.png";
             this.tpFTPSucker.Location = new System.Drawing.Point(4, 29);
             this.tpFTPSucker.Name = "tpFTPSucker";
@@ -411,7 +415,7 @@ namespace Movie_File_Merger
             this.btnBrowseLocalPath.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBrowseLocalPath.ImageKey = "Folder.gif";
             this.btnBrowseLocalPath.ImageList = this.ilMovieFileMerger;
-            this.btnBrowseLocalPath.Location = new System.Drawing.Point(90, 236);
+            this.btnBrowseLocalPath.Location = new System.Drawing.Point(92, 279);
             this.btnBrowseLocalPath.Name = "btnBrowseLocalPath";
             this.btnBrowseLocalPath.Size = new System.Drawing.Size(71, 23);
             this.btnBrowseLocalPath.TabIndex = 66;
@@ -444,7 +448,7 @@ namespace Movie_File_Merger
             this.btnColorList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnColorList.ImageKey = "Color.gif";
             this.btnColorList.ImageList = this.ilMovieFileMerger;
-            this.btnColorList.Location = new System.Drawing.Point(306, 6);
+            this.btnColorList.Location = new System.Drawing.Point(275, 6);
             this.btnColorList.Name = "btnColorList";
             this.btnColorList.Size = new System.Drawing.Size(65, 43);
             this.btnColorList.TabIndex = 65;
@@ -506,7 +510,7 @@ namespace Movie_File_Merger
             this.lblLocalPath.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.lblLocalPath.ImageKey = "Folder.gif";
             this.lblLocalPath.ImageList = this.ilMovieFileMerger;
-            this.lblLocalPath.Location = new System.Drawing.Point(3, 237);
+            this.lblLocalPath.Location = new System.Drawing.Point(5, 280);
             this.lblLocalPath.Name = "lblLocalPath";
             this.lblLocalPath.Size = new System.Drawing.Size(80, 20);
             this.lblLocalPath.TabIndex = 61;
@@ -564,7 +568,7 @@ namespace Movie_File_Merger
             this.tbLocalPath.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.tbLocalPath.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbLocalPath.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbLocalPath.Location = new System.Drawing.Point(6, 265);
+            this.tbLocalPath.Location = new System.Drawing.Point(8, 308);
             this.tbLocalPath.Name = "tbLocalPath";
             this.tbLocalPath.Size = new System.Drawing.Size(155, 13);
             this.tbLocalPath.TabIndex = 60;
@@ -618,9 +622,9 @@ namespace Movie_File_Merger
             this.btnOpenWinSCP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOpenWinSCP.ImageKey = "WinSCP.png";
             this.btnOpenWinSCP.ImageList = this.ilMovieFileMerger;
-            this.btnOpenWinSCP.Location = new System.Drawing.Point(454, 6);
+            this.btnOpenWinSCP.Location = new System.Drawing.Point(6, 208);
             this.btnOpenWinSCP.Name = "btnOpenWinSCP";
-            this.btnOpenWinSCP.Size = new System.Drawing.Size(82, 43);
+            this.btnOpenWinSCP.Size = new System.Drawing.Size(153, 24);
             this.btnOpenWinSCP.TabIndex = 58;
             this.btnOpenWinSCP.TabStop = false;
             this.btnOpenWinSCP.Text = "Open WinSCP";
@@ -718,25 +722,25 @@ namespace Movie_File_Merger
             this.rtbFTPSucker.Text = "";
             this.rtbFTPSucker.WordWrap = false;
             // 
-            // btnDownloadWishedRemoteFiles
+            // btnGetWishedRemoteFiles
             // 
-            this.btnDownloadWishedRemoteFiles.AllowDrop = true;
-            this.btnDownloadWishedRemoteFiles.BackColor = System.Drawing.SystemColors.Control;
-            this.btnDownloadWishedRemoteFiles.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
-            this.btnDownloadWishedRemoteFiles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDownloadWishedRemoteFiles.ImageKey = "DownloadCloud.png";
-            this.btnDownloadWishedRemoteFiles.ImageList = this.ilMovieFileMerger;
-            this.btnDownloadWishedRemoteFiles.Location = new System.Drawing.Point(167, 6);
-            this.btnDownloadWishedRemoteFiles.Name = "btnDownloadWishedRemoteFiles";
-            this.btnDownloadWishedRemoteFiles.Size = new System.Drawing.Size(133, 43);
-            this.btnDownloadWishedRemoteFiles.TabIndex = 59;
-            this.btnDownloadWishedRemoteFiles.TabStop = false;
-            this.btnDownloadWishedRemoteFiles.Text = "Download Wished Remote Files";
-            this.btnDownloadWishedRemoteFiles.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDownloadWishedRemoteFiles.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ttMovieFileMerger.SetToolTip(this.btnDownloadWishedRemoteFiles, "Click here to download the Wish files from the Remote Host.");
-            this.btnDownloadWishedRemoteFiles.UseVisualStyleBackColor = false;
-            this.btnDownloadWishedRemoteFiles.Click += new System.EventHandler(this.btnDownloadWishedRemoteFiles_Click);
+            this.btnGetWishedRemoteFiles.AllowDrop = true;
+            this.btnGetWishedRemoteFiles.BackColor = System.Drawing.SystemColors.Control;
+            this.btnGetWishedRemoteFiles.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.btnGetWishedRemoteFiles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGetWishedRemoteFiles.ImageKey = "DownloadCloud.png";
+            this.btnGetWishedRemoteFiles.ImageList = this.ilMovieFileMerger;
+            this.btnGetWishedRemoteFiles.Location = new System.Drawing.Point(167, 6);
+            this.btnGetWishedRemoteFiles.Name = "btnGetWishedRemoteFiles";
+            this.btnGetWishedRemoteFiles.Size = new System.Drawing.Size(102, 43);
+            this.btnGetWishedRemoteFiles.TabIndex = 59;
+            this.btnGetWishedRemoteFiles.TabStop = false;
+            this.btnGetWishedRemoteFiles.Text = "Get Wished Remote Files";
+            this.btnGetWishedRemoteFiles.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGetWishedRemoteFiles.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ttMovieFileMerger.SetToolTip(this.btnGetWishedRemoteFiles, "Click here to download the Wish files from the Remote Host.");
+            this.btnGetWishedRemoteFiles.UseVisualStyleBackColor = false;
+            this.btnGetWishedRemoteFiles.Click += new System.EventHandler(this.btnDownloadWishedRemoteFiles_Click);
             // 
             // tpSeparateLists
             // 
@@ -979,7 +983,7 @@ namespace Movie_File_Merger
             this.btnExportList.Text = "Export List...";
             this.btnExportList.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnExportList.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ttMovieFileMerger.SetToolTip(this.btnExportList, "Drop an item of a list here to export the complete list as .CSV file.");
+            this.ttMovieFileMerger.SetToolTip(this.btnExportList, "Drop an item of a list here to export the complete list as .XML file.");
             this.btnExportList.UseVisualStyleBackColor = false;
             this.btnExportList.DragDrop += new System.Windows.Forms.DragEventHandler(this.BtnExportListDragDrop);
             this.btnExportList.DragOver += new System.Windows.Forms.DragEventHandler(this.BtnDragOver);
@@ -1719,7 +1723,7 @@ namespace Movie_File_Merger
             this.btnExportListMaintenance.Text = "Export List...";
             this.btnExportListMaintenance.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnExportListMaintenance.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ttMovieFileMerger.SetToolTip(this.btnExportListMaintenance, "Drop an item of a list here to export the complete list as .CSV file.");
+            this.ttMovieFileMerger.SetToolTip(this.btnExportListMaintenance, "Drop an item of a list here to export the complete list as .XML file.");
             this.btnExportListMaintenance.UseVisualStyleBackColor = false;
             this.btnExportListMaintenance.DragDrop += new System.Windows.Forms.DragEventHandler(this.BtnExportListDragDrop);
             this.btnExportListMaintenance.DragOver += new System.Windows.Forms.DragEventHandler(this.BtnDragOver);
@@ -2857,6 +2861,44 @@ namespace Movie_File_Merger
             // 
             this.ofdTeraCopy.FileName = "C:\\Program Files\\TeraCopy\\TeraCopy.exe";
             // 
+            // btnWishSelected
+            // 
+            this.btnWishSelected.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.btnWishSelected.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnWishSelected.ImageKey = "Wish.png";
+            this.btnWishSelected.ImageList = this.ilMovieFileMerger;
+            this.btnWishSelected.Location = new System.Drawing.Point(345, 6);
+            this.btnWishSelected.Margin = new System.Windows.Forms.Padding(2);
+            this.btnWishSelected.Name = "btnWishSelected";
+            this.btnWishSelected.Size = new System.Drawing.Size(82, 43);
+            this.btnWishSelected.TabIndex = 68;
+            this.btnWishSelected.Text = "Wish Selected";
+            this.btnWishSelected.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnWishSelected.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ttMovieFileMerger.SetToolTip(this.btnWishSelected, "Wish all items in the Import list according to the selection criteria.");
+            this.btnWishSelected.UseVisualStyleBackColor = false;
+            this.btnWishSelected.Click += new System.EventHandler(this.btnWishSelected_Click);
+            // 
+            // btnBinSelected
+            // 
+            this.btnBinSelected.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBinSelected.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.btnBinSelected.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBinSelected.ImageKey = "Garbage.gif";
+            this.btnBinSelected.ImageList = this.ilMovieFileMerger;
+            this.btnBinSelected.Location = new System.Drawing.Point(453, 6);
+            this.btnBinSelected.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBinSelected.Name = "btnBinSelected";
+            this.btnBinSelected.Size = new System.Drawing.Size(84, 43);
+            this.btnBinSelected.TabIndex = 69;
+            this.btnBinSelected.Text = "Bin Selected";
+            this.btnBinSelected.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBinSelected.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.ttMovieFileMerger.SetToolTip(this.btnBinSelected, "Put all items in all lists in the Garbage list according to the selection ctriter" +
+        "ia.");
+            this.btnBinSelected.UseVisualStyleBackColor = false;
+            this.btnBinSelected.Click += new System.EventHandler(this.btnBinSelected_Click);
+            // 
             // MFMForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3090,7 +3132,7 @@ namespace Movie_File_Merger
         private System.Windows.Forms.ListView lvRemoteFiles;
         private System.Windows.Forms.ColumnHeader chRemoteFiles;
         private System.Windows.Forms.RichTextBox rtbFTPSucker;
-        private System.Windows.Forms.Button btnDownloadWishedRemoteFiles;
+        private System.Windows.Forms.Button btnGetWishedRemoteFiles;
         private System.Windows.Forms.Label lblAddonExtensions;
         private System.Windows.Forms.TextBox tbAddonExtensionsRegex;
         private System.Windows.Forms.Button btnColorList;
@@ -3098,5 +3140,7 @@ namespace Movie_File_Merger
         private System.Windows.Forms.Button btnOpenWinSCP;
         private System.Windows.Forms.Label lblCloudImage;
         private System.Windows.Forms.Button btnBrowseLocalPath;
+        private System.Windows.Forms.Button btnWishSelected;
+        private System.Windows.Forms.Button btnBinSelected;
     }
 }

@@ -3192,6 +3192,7 @@ namespace Movie_File_Merger
         void LogFTPSuckerAction(string strMessage)
         {
             LogFTPSuckerMessage("Info", Color.Blue, strMessage);
+            SetStatus(strMessage);
         }
 
         void LogFTPSuckerInfo(string strMessage)
@@ -3253,7 +3254,10 @@ namespace Movie_File_Merger
             {
                 LogFTPSuckerError(exception.Message);
             }
+            AddRemoteListToImport();
+            ColorRemoteList();
             LogFTPSuckerMajorAction("Finshed getting Remote File Names...");
+            ShowInfo("Finshed getting Remote File Names...");
         }
 
         private void btnDownloadWishedRemoteFiles_Click(object sender, EventArgs e)
@@ -3288,7 +3292,6 @@ namespace Movie_File_Merger
 
                     foreach (RemoteFileInfo fileInfo in fileInfos)
                     {
-
                         if (!fileInfo.IsDirectory)
                         {
                             LogFTPSuckerInfo("Found file: " + fileInfo.FullName);
@@ -3299,11 +3302,12 @@ namespace Movie_File_Merger
                                 if (lviRemote.BackColor == WishColor)
                                 {
                                     string localFilePath = session.TranslateRemotePathToLocal(fileInfo.FullName, remotePath, localPath);
+                                    
                                     // Create local subdirectory, if it does not exist yet
-                                    if (!Directory.Exists(localFilePath))
+                                    if (!Directory.Exists(Path.GetDirectoryName(localFilePath)))
                                     {
-                                        LogFTPSuckerAction("Creating directory: " + localFilePath);
-                                        Directory.CreateDirectory(localFilePath);
+                                        LogFTPSuckerAction("Creating directory: " + Path.GetDirectoryName(localFilePath));
+                                        Directory.CreateDirectory(Path.GetDirectoryName(localFilePath));
                                     }
 
                                     SetStatus("Downloading " + lviRemote.Text);
@@ -3314,7 +3318,18 @@ namespace Movie_File_Merger
                                     // Did the download succeeded?
                                     if (transferResult.IsSuccess)
                                     {
-                                        LogFTPSuckerAction ("Success downloading file " + fileInfo.FullName );
+                                        FileInfo fiRemoteFile = new FileInfo(lviRemote.Text);
+                                        string strCleanName = JustCleanName(fiRemoteFile.Name);
+                                        string strExtension = fiRemoteFile.Extension.ToLower();
+
+                                        if ( rgxMainExtensions.IsMatch(strExtension))  // add to existing if it main file
+                                        {
+                                            tspbMFM.Value = 0;
+                                            DoAddFileToListView(strCleanName, fiRemoteFile, lvExisting);
+                                            lviRemote.Selected = false;
+                                        }
+                                        ColorRemoteList();
+                                        LogFTPSuckerAction("Success downloading file " + fileInfo.FullName );
                                     }
                                     else
                                     { 
@@ -3330,8 +3345,8 @@ namespace Movie_File_Merger
             {
                 LogFTPSuckerError(exception.Message);
             }
-            SetStatus("Finshed downloading Wished Remote Files...");
             LogFTPSuckerMajorAction("Finshed downloading Wished Remote Files...");
+            ShowInfo("Finshed downloading Wished Remote Files...");
         }
 
         private void lvFTPSuckerResize(object sender, EventArgs e)
@@ -3339,18 +3354,22 @@ namespace Movie_File_Merger
             lvRemoteFiles.Columns[0].Width = lvRemoteFiles.Width - 35;
         }
 
-        private void btnColorList_Click(object sender, EventArgs e)
+        private string JustCleanName (string sPath)
+        {
+            string strJustName = sPath;
+            if (strJustName.LastIndexOf('.') != -1)
+            {
+                strJustName = strJustName.Substring(0, strJustName.LastIndexOf('.'));
+            }
+            return CleanName(strJustName);
+        }
+
+        private void AddRemoteListToImport()
         {
             foreach (ListViewItem lviRemoteFile in lvRemoteFiles.Items)
             {
                 FileInfo fiRemoteFile = new FileInfo(lviRemoteFile.Text);
-
-                string strJustName = fiRemoteFile.Name;
-                if (strJustName.LastIndexOf('.') != -1)
-                {
-                    strJustName = strJustName.Substring(0, strJustName.LastIndexOf('.'));
-                }
-                string strCleanName = CleanName(strJustName);
+                string strCleanName = JustCleanName(fiRemoteFile.Name);
                 string strExtension = fiRemoteFile.Extension.ToLower();
 
                 if (rgxMainExtensions.IsMatch(strExtension))
@@ -3358,6 +3377,16 @@ namespace Movie_File_Merger
                     tspbMFM.Value = 0;
                     DoAddFileToListView(strCleanName, fiRemoteFile, lvImport);
                 }
+            }
+        }
+
+        private void ColorRemoteList()
+        {
+            foreach (ListViewItem lviRemoteFile in lvRemoteFiles.Items)
+            {
+                FileInfo fiRemoteFile = new FileInfo(lviRemoteFile.Text);
+                string strCleanName = JustCleanName(fiRemoteFile.Name);
+                string strExtension = fiRemoteFile.Extension.ToLower();
 
                 if (rgxMainExtensions.IsMatch(strExtension) || rgxAddonExtensions.IsMatch(strExtension))
                 {
@@ -3370,8 +3399,10 @@ namespace Movie_File_Merger
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnColorList_Click(object sender, EventArgs e)
         {
+            AddRemoteListToImport();
+            ColorRemoteList();
         }
 
         private void btnOpenWinSCP_Click(object sender, EventArgs e)
@@ -3385,6 +3416,42 @@ namespace Movie_File_Merger
             fbdMovieFileMerger.SelectedPath = tbLocalPath.Text;
             fbdMovieFileMerger.ShowDialog();
             tbLocalPath.Text = fbdMovieFileMerger.SelectedPath;
+        }
+
+        private void btnWishSelected_Click(object sender, EventArgs e)
+        {
+            foreach (ListViewItem lviRemoteFile in lvRemoteFiles.Items)
+            {
+                FileInfo fiRemoteFile = new FileInfo(lviRemoteFile.Text);
+                string strCleanName = JustCleanName(fiRemoteFile.Name);
+                string strExtension = fiRemoteFile.Extension.ToLower();
+
+                if (lviRemoteFile.Selected && rgxMainExtensions.IsMatch(strExtension))
+                {
+                    tspbMFM.Value = 0;
+                    DoAddFileToListView(strCleanName, fiRemoteFile, lvWish);
+                    lviRemoteFile.Selected = false;
+                }
+            }
+            ColorRemoteList();
+        }
+
+        private void btnBinSelected_Click(object sender, EventArgs e)
+        {
+            foreach (ListViewItem lviRemoteFile in lvRemoteFiles.Items)
+            {
+                FileInfo fiRemoteFile = new FileInfo(lviRemoteFile.Text);
+                string strCleanName = JustCleanName(fiRemoteFile.Name);
+                string strExtension = fiRemoteFile.Extension.ToLower();
+
+                if (lviRemoteFile.Selected && rgxMainExtensions.IsMatch(strExtension))
+                {
+                    tspbMFM.Value = 0;
+                    DoAddFileToListView(strCleanName, fiRemoteFile, lvGarbage);
+                    lviRemoteFile.Selected = false;
+                }
+            }
+            ColorRemoteList();
         }
     }
 #endregion FTP Sucker
