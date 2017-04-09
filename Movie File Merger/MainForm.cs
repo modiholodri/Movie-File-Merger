@@ -1606,11 +1606,16 @@ namespace Movie_File_Merger
             bool bItemMissing = FindItem( lvThis, lviThis.Text ) == null;
             bool bHasMediaInfo = lviThis.ToolTipText.Contains( "Video: " );
             bool bHasNewMediaInfo = lviThis.ToolTipText.Contains( "General: " );
-            long lMiB = fiFile.Length / 1024 / 1024;
 
             string sMediaInfo = "";
             bool bGetFullDetails = false;
-            string sInfo = lMiB + " MiB,  " + fiFile.Extension.ToUpper( ).Substring( 1 );
+
+            long lMiB = 0;
+            if (File.Exists(fiFile.FullName))
+            {
+                lMiB = fiFile.Length / 1024 / 1024;
+            }
+            string sInfo = lMiB + " MiB,  " + fiFile.Extension.ToUpper().Substring(1);
 
             string sFileInfo = "File:  " + fiFile.Name + "\n" +
                                "Path:  " + fiFile.DirectoryName + "\n" +
@@ -1643,16 +1648,19 @@ namespace Movie_File_Merger
                     break;
             }
 
-            if ( bGetFullDetails ) {
-                SetStatus( "Getting MediaInfo for " + fiFile.Name );
-                miThis.Open( fiFile.FullName );
-                miThis.Option( "Inform", "General;General:  %Duration/String% in %Format% container %Video_Format_List% codec" ); // file size
-                sMediaInfo += "\n\n" + miThis.Inform( );
-                miThis.Option( "Inform", "Video;Video:  %Width% x%Height% (%DisplayAspectRatio/String%) at %FrameRate/String% with %BitRate/String%" );
-                sMediaInfo += "\n" + miThis.Inform( );
-                miThis.Option( "Inform", "Audio;Audio:  %Channel(s)/String% at %SamplingRate/String% %Format% %Language/String%" );
-                sMediaInfo += miThis.Inform( ).Replace( "Audio: ", "\nAudio: " ).Replace( "Audio:  ,", "Audio:" );
-                miThis.Close( );
+            if (bGetFullDetails) {
+                if (File.Exists(fiFile.FullName))
+                { 
+                    SetStatus("Getting MediaInfo for " + fiFile.Name);
+                    miThis.Open(fiFile.FullName);
+                    miThis.Option("Inform", "General;General:  %Duration/String% in %Format% container %Video_Format_List% codec"); // file size
+                    sMediaInfo += "\n\n" + miThis.Inform();
+                    miThis.Option("Inform", "Video;Video:  %Width% x%Height% (%DisplayAspectRatio/String%) at %FrameRate/String% with %BitRate/String%");
+                    sMediaInfo += "\n" + miThis.Inform();
+                    miThis.Option("Inform", "Audio;Audio:  %Channel(s)/String% at %SamplingRate/String% %Format% %Language/String%");
+                    sMediaInfo += miThis.Inform().Replace("Audio: ", "\nAudio: ").Replace("Audio:  ,", "Audio:");
+                    miThis.Close();
+                }
                 // Make new tool tip 
                 lviThis.ToolTipText = sFileInfo + sMediaInfo;
                 SetListViewChanged( lvThis, true );
@@ -3236,9 +3244,7 @@ namespace Movie_File_Merger
                         {
                             LogFTPSuckerInfo("Found file: " + fileInfo.FullName);
                             ListViewItem lviRemoteFile = new ListViewItem(fileInfo.FullName);
-                            lvRemoteFiles.Items.Add(lviRemoteFile);
-                            lviRemoteFile.EnsureVisible();
-                            lviRemoteFile.Focused = true;
+                            AddItemToListView(lvRemoteFiles, lviRemoteFile);
                         }
                     }
                 }
@@ -3282,35 +3288,36 @@ namespace Movie_File_Merger
 
                     foreach (RemoteFileInfo fileInfo in fileInfos)
                     {
-                        string localFilePath = session.TranslateRemotePathToLocal(fileInfo.FullName, remotePath, localPath);
 
-                        if (fileInfo.IsDirectory)
-                        {
-                            // Create local subdirectory, if it does not exist yet
-                            LogFTPSuckerInfo("Found directory: " + fileInfo.FullName);
-                            if (!Directory.Exists(localFilePath))
-                            {
-                                LogFTPSuckerAction("Creating directory: " + localFilePath);
-                                Directory.CreateDirectory(localFilePath);
-                            }
-                        }
-                        else
+                        if (!fileInfo.IsDirectory)
                         {
                             LogFTPSuckerInfo("Found file: " + fileInfo.FullName);
 
                             ListViewItem lviRemote = FindItem(lvRemoteFiles, fileInfo.FullName);
                             if (lviRemote != null)
                             {
-                                if (lviRemote.Selected)
+                                if (lviRemote.BackColor == WishColor)
                                 {
+                                    string localFilePath = session.TranslateRemotePathToLocal(fileInfo.FullName, remotePath, localPath);
+                                    // Create local subdirectory, if it does not exist yet
+                                    if (!Directory.Exists(localFilePath))
+                                    {
+                                        LogFTPSuckerAction("Creating directory: " + localFilePath);
+                                        Directory.CreateDirectory(localFilePath);
+                                    }
+
+                                    SetStatus("Downloading " + lviRemote.Text);
                                     LogFTPSuckerAction("Downloading " + lviRemote.Text);
                                     // Download file
                                     TransferOperationResult transferResult = session.GetFiles(session.EscapeFileMask(fileInfo.FullName), localFilePath);
 
                                     // Did the download succeeded?
-                                    if (!transferResult.IsSuccess)
+                                    if (transferResult.IsSuccess)
                                     {
-                                        // Log error (but continue with other files)
+                                        LogFTPSuckerAction ("Success downloading file " + fileInfo.FullName );
+                                    }
+                                    else
+                                    { 
                                         LogFTPSuckerError("Error downloading file " + fileInfo.FullName + " because " + transferResult.Failures[0].Message);
                                     }
                                 }
@@ -3323,12 +3330,54 @@ namespace Movie_File_Merger
             {
                 LogFTPSuckerError(exception.Message);
             }
+            SetStatus("Finshed downloading Wished Remote Files...");
             LogFTPSuckerMajorAction("Finshed downloading Wished Remote Files...");
         }
 
         private void lvFTPSuckerResize(object sender, EventArgs e)
         {
             lvRemoteFiles.Columns[0].Width = lvRemoteFiles.Width - 35;
+        }
+
+        private void btnColorList_Click(object sender, EventArgs e)
+        {
+            foreach (ListViewItem lviRemoteFile in lvRemoteFiles.Items)
+            {
+                FileInfo fiRemoteFile = new FileInfo(lviRemoteFile.Text);
+
+                string strJustName = fiRemoteFile.Name;
+                if (strJustName.LastIndexOf('.') != -1)
+                {
+                    strJustName = strJustName.Substring(0, strJustName.LastIndexOf('.'));
+                }
+                string strCleanName = CleanName(strJustName);
+                string strExtension = fiRemoteFile.Extension.ToLower();
+
+                if (rgxMainExtensions.IsMatch(strExtension))
+                {
+                    tspbMFM.Value = 0;
+                    DoAddFileToListView(strCleanName, fiRemoteFile, lvImport);
+                }
+
+                if (rgxMainExtensions.IsMatch(strExtension) || rgxAddonExtensions.IsMatch(strExtension))
+                {
+                    ListViewItem lviImport = FindItem(lvImport, strCleanName);
+                    if (lviImport != null)
+                    {
+                        lviRemoteFile.BackColor = lviImport.BackColor;
+                    }
+                }
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void btnOpenWinSCP_Click(object sender, EventArgs e)
+        {
+            // ExecuteThis(Path.GetDirectoryName(Application.ExecutablePath) + "\\WinSCP.exe /command open ftp://" + tbUserName.Text + ":" + tbPassword.Text + "@" + tbHostName.Text);
+            ExecuteThis(Path.GetDirectoryName(Application.ExecutablePath) + "\\WinSCP.exe");
         }
     }
 #endregion FTP Sucker
