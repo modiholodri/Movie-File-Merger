@@ -405,6 +405,9 @@ namespace Movie_File_Merger
             // 
             // btnBrowseLocalPath
             // 
+            this.btnBrowseLocalPath.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBrowseLocalPath.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.btnBrowseLocalPath.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBrowseLocalPath.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBrowseLocalPath.ImageKey = "Folder.gif";
             this.btnBrowseLocalPath.ImageList = this.ilMovieFileMerger;
@@ -412,9 +415,12 @@ namespace Movie_File_Merger
             this.btnBrowseLocalPath.Name = "btnBrowseLocalPath";
             this.btnBrowseLocalPath.Size = new System.Drawing.Size(71, 23);
             this.btnBrowseLocalPath.TabIndex = 66;
+            this.btnBrowseLocalPath.TabStop = false;
             this.btnBrowseLocalPath.Text = "Browse";
             this.btnBrowseLocalPath.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBrowseLocalPath.UseVisualStyleBackColor = true;
+            this.ttMovieFileMerger.SetToolTip(this.btnBrowseLocalPath, "Click to change the local file path.");
+            this.btnBrowseLocalPath.UseVisualStyleBackColor = false;
+            this.btnBrowseLocalPath.Click += new System.EventHandler(this.btnBrowseLocalPath_Click);
             // 
             // tbPassword
             // 
@@ -428,6 +434,7 @@ namespace Movie_File_Merger
             this.tbPassword.TabIndex = 60;
             this.tbPassword.Text = "!Sasimapon";
             this.tbPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ttMovieFileMerger.SetToolTip(this.tbPassword, "Enter the passowrd used to connect to the remote host.");
             // 
             // btnColorList
             // 
@@ -445,7 +452,7 @@ namespace Movie_File_Merger
             this.btnColorList.Text = "Color List";
             this.btnColorList.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnColorList.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ttMovieFileMerger.SetToolTip(this.btnColorList, "Drop an item of a list here to export the complete list as .CSV file.");
+            this.ttMovieFileMerger.SetToolTip(this.btnColorList, "Click here to move the files in the Import list and color them accordingly.");
             this.btnColorList.UseVisualStyleBackColor = false;
             this.btnColorList.Click += new System.EventHandler(this.btnColorList_Click);
             // 
@@ -550,6 +557,7 @@ namespace Movie_File_Merger
             this.tbRemotePath.Size = new System.Drawing.Size(120, 13);
             this.tbRemotePath.TabIndex = 60;
             this.tbRemotePath.Text = "/videos";
+            this.ttMovieFileMerger.SetToolTip(this.tbRemotePath, "Enter the path of the remote host, where to seach for videos.");
             // 
             // tbLocalPath
             // 
@@ -561,6 +569,7 @@ namespace Movie_File_Merger
             this.tbLocalPath.Size = new System.Drawing.Size(155, 13);
             this.tbLocalPath.TabIndex = 60;
             this.tbLocalPath.Text = "C:\\Downloads";
+            this.ttMovieFileMerger.SetToolTip(this.tbLocalPath, "Enter the path where the downloaded videos should be stored locally.");
             // 
             // tbPortNumber
             // 
@@ -573,6 +582,7 @@ namespace Movie_File_Merger
             this.tbPortNumber.TabIndex = 60;
             this.tbPortNumber.Text = "21";
             this.tbPortNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ttMovieFileMerger.SetToolTip(this.tbPortNumber, "Enter the port number to connect to the remote host.");
             // 
             // tbHostName
             // 
@@ -585,6 +595,7 @@ namespace Movie_File_Merger
             this.tbHostName.TabIndex = 60;
             this.tbHostName.Text = "ftp.movie-file-merger.org";
             this.tbHostName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ttMovieFileMerger.SetToolTip(this.tbHostName, "Enter the name or IP address of the remote host.");
             // 
             // tbUserName
             // 
@@ -597,8 +608,7 @@ namespace Movie_File_Merger
             this.tbUserName.TabIndex = 60;
             this.tbUserName.Text = "movie-file-merger.org";
             this.tbUserName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ttMovieFileMerger.SetToolTip(this.tbUserName, "The Add-on Files Extension identified add-on files like subtitles or posters. \r\nA" +
-        "dd-on files will be only considered if a main video file exists.");
+            this.ttMovieFileMerger.SetToolTip(this.tbUserName, "Enter the user name for the remote host.");
             // 
             // btnOpenWinSCP
             // 
@@ -616,6 +626,7 @@ namespace Movie_File_Merger
             this.btnOpenWinSCP.Text = "Open WinSCP";
             this.btnOpenWinSCP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnOpenWinSCP.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.ttMovieFileMerger.SetToolTip(this.btnOpenWinSCP, "Click here to open the WinSCP FTP application.");
             this.btnOpenWinSCP.UseVisualStyleBackColor = false;
             this.btnOpenWinSCP.Click += new System.EventHandler(this.btnOpenWinSCP_Click);
             // 
@@ -635,7 +646,7 @@ namespace Movie_File_Merger
             this.btnGetRemoteFileNames.Text = "Get Remote File Names";
             this.btnGetRemoteFileNames.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGetRemoteFileNames.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.ttMovieFileMerger.SetToolTip(this.btnGetRemoteFileNames, "Drop an item here to play it with your movie player.");
+            this.ttMovieFileMerger.SetToolTip(this.btnGetRemoteFileNames, "Click here to get the file names fromt the Remote Host.");
             this.btnGetRemoteFileNames.UseVisualStyleBackColor = false;
             this.btnGetRemoteFileNames.Click += new System.EventHandler(this.btnGetRemoteFileNames_Click);
             // 
@@ -723,7 +734,7 @@ namespace Movie_File_Merger
             this.btnDownloadWishedRemoteFiles.Text = "Download Wished Remote Files";
             this.btnDownloadWishedRemoteFiles.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDownloadWishedRemoteFiles.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ttMovieFileMerger.SetToolTip(this.btnDownloadWishedRemoteFiles, "Drop an item of a list here to export the complete list as .CSV file.");
+            this.ttMovieFileMerger.SetToolTip(this.btnDownloadWishedRemoteFiles, "Click here to download the Wish files from the Remote Host.");
             this.btnDownloadWishedRemoteFiles.UseVisualStyleBackColor = false;
             this.btnDownloadWishedRemoteFiles.Click += new System.EventHandler(this.btnDownloadWishedRemoteFiles_Click);
             // 

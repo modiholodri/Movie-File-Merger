@@ -3379,6 +3379,13 @@ namespace Movie_File_Merger
             // ExecuteThis(Path.GetDirectoryName(Application.ExecutablePath) + "\\WinSCP.exe /command open ftp://" + tbUserName.Text + ":" + tbPassword.Text + "@" + tbHostName.Text);
             ExecuteThis(Path.GetDirectoryName(Application.ExecutablePath) + "\\WinSCP.exe");
         }
+
+        private void btnBrowseLocalPath_Click(object sender, EventArgs e)
+        {
+            fbdMovieFileMerger.SelectedPath = tbLocalPath.Text;
+            fbdMovieFileMerger.ShowDialog();
+            tbLocalPath.Text = fbdMovieFileMerger.SelectedPath;
+        }
     }
 #endregion FTP Sucker
 }
