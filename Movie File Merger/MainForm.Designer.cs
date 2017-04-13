@@ -1343,7 +1343,7 @@ namespace Movie_File_Merger
             // 
             this.lblCloudImage.ImageKey = "ftp.png";
             this.lblCloudImage.ImageList = this.ilMovieFileMerger;
-            this.lblCloudImage.Location = new System.Drawing.Point(131, 109);
+            this.lblCloudImage.Location = new System.Drawing.Point(131, 129);
             this.lblCloudImage.Name = "lblCloudImage";
             this.lblCloudImage.Size = new System.Drawing.Size(30, 23);
             this.lblCloudImage.TabIndex = 67;
@@ -1356,7 +1356,7 @@ namespace Movie_File_Merger
             this.btnBrowseLocalPath.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBrowseLocalPath.ImageKey = "Folder.gif";
             this.btnBrowseLocalPath.ImageList = this.ilMovieFileMerger;
-            this.btnBrowseLocalPath.Location = new System.Drawing.Point(92, 279);
+            this.btnBrowseLocalPath.Location = new System.Drawing.Point(90, 268);
             this.btnBrowseLocalPath.Name = "btnBrowseLocalPath";
             this.btnBrowseLocalPath.Size = new System.Drawing.Size(71, 23);
             this.btnBrowseLocalPath.TabIndex = 66;
@@ -1372,10 +1372,10 @@ namespace Movie_File_Merger
             this.tbPassword.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.tbPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPassword.Location = new System.Drawing.Point(104, 189);
+            this.tbPassword.Location = new System.Drawing.Point(104, 209);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.PasswordChar = 'X';
-            this.tbPassword.Size = new System.Drawing.Size(55, 13);
+            this.tbPassword.Size = new System.Drawing.Size(57, 13);
             this.tbPassword.TabIndex = 60;
             this.tbPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.ttMovieFileMerger.SetToolTip(this.tbPassword, "Enter the passowrd used to connect to the remote host.");
@@ -1403,7 +1403,7 @@ namespace Movie_File_Merger
             // pbFTPSuckerUserManual
             // 
             this.pbFTPSuckerUserManual.Image = ((System.Drawing.Image)(resources.GetObject("pbFTPSuckerUserManual.Image")));
-            this.pbFTPSuckerUserManual.Location = new System.Drawing.Point(10, 6);
+            this.pbFTPSuckerUserManual.Location = new System.Drawing.Point(14, 6);
             this.pbFTPSuckerUserManual.Margin = new System.Windows.Forms.Padding(2);
             this.pbFTPSuckerUserManual.Name = "pbFTPSuckerUserManual";
             this.pbFTPSuckerUserManual.Size = new System.Drawing.Size(65, 85);
@@ -1427,7 +1427,7 @@ namespace Movie_File_Merger
             // 
             // lblRemotePath
             // 
-            this.lblRemotePath.Location = new System.Drawing.Point(5, 170);
+            this.lblRemotePath.Location = new System.Drawing.Point(5, 190);
             this.lblRemotePath.Name = "lblRemotePath";
             this.lblRemotePath.Size = new System.Drawing.Size(32, 13);
             this.lblRemotePath.TabIndex = 61;
@@ -1438,7 +1438,7 @@ namespace Movie_File_Merger
             this.lblRemoteHhost.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.lblRemoteHhost.ImageKey = "ftp.png";
             this.lblRemoteHhost.ImageList = this.ilMovieFileMerger;
-            this.lblRemoteHhost.Location = new System.Drawing.Point(8, 109);
+            this.lblRemoteHhost.Location = new System.Drawing.Point(8, 129);
             this.lblRemoteHhost.Name = "lblRemoteHhost";
             this.lblRemoteHhost.Size = new System.Drawing.Size(153, 20);
             this.lblRemoteHhost.TabIndex = 61;
@@ -1450,7 +1450,7 @@ namespace Movie_File_Merger
             this.lblLocalPath.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.lblLocalPath.ImageKey = "Folder.gif";
             this.lblLocalPath.ImageList = this.ilMovieFileMerger;
-            this.lblLocalPath.Location = new System.Drawing.Point(5, 280);
+            this.lblLocalPath.Location = new System.Drawing.Point(3, 269);
             this.lblLocalPath.Name = "lblLocalPath";
             this.lblLocalPath.Size = new System.Drawing.Size(80, 20);
             this.lblLocalPath.TabIndex = 61;
@@ -1459,7 +1459,7 @@ namespace Movie_File_Merger
             // 
             // lblPortNumber
             // 
-            this.lblPortNumber.Location = new System.Drawing.Point(5, 189);
+            this.lblPortNumber.Location = new System.Drawing.Point(5, 209);
             this.lblPortNumber.Name = "lblPortNumber";
             this.lblPortNumber.Size = new System.Drawing.Size(30, 13);
             this.lblPortNumber.TabIndex = 61;
@@ -1467,7 +1467,7 @@ namespace Movie_File_Merger
             // 
             // lblPassword
             // 
-            this.lblPassword.Location = new System.Drawing.Point(67, 189);
+            this.lblPassword.Location = new System.Drawing.Point(67, 209);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(31, 13);
             this.lblPassword.TabIndex = 61;
@@ -1475,7 +1475,7 @@ namespace Movie_File_Merger
             // 
             // lblHostName
             // 
-            this.lblHostName.Location = new System.Drawing.Point(5, 151);
+            this.lblHostName.Location = new System.Drawing.Point(5, 171);
             this.lblHostName.Name = "lblHostName";
             this.lblHostName.Size = new System.Drawing.Size(30, 13);
             this.lblHostName.TabIndex = 61;
@@ -1483,7 +1483,7 @@ namespace Movie_File_Merger
             // 
             // lblUserName
             // 
-            this.lblUserName.Location = new System.Drawing.Point(5, 132);
+            this.lblUserName.Location = new System.Drawing.Point(5, 152);
             this.lblUserName.Name = "lblUserName";
             this.lblUserName.Size = new System.Drawing.Size(30, 13);
             this.lblUserName.TabIndex = 61;
@@ -1496,7 +1496,7 @@ namespace Movie_File_Merger
             this.tbRemotePath.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.tbRemotePath.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbRemotePath.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbRemotePath.Location = new System.Drawing.Point(41, 170);
+            this.tbRemotePath.Location = new System.Drawing.Point(41, 190);
             this.tbRemotePath.Name = "tbRemotePath";
             this.tbRemotePath.Size = new System.Drawing.Size(120, 13);
             this.tbRemotePath.TabIndex = 60;
@@ -1508,7 +1508,7 @@ namespace Movie_File_Merger
             this.tbLocalPath.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.tbLocalPath.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbLocalPath.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbLocalPath.Location = new System.Drawing.Point(8, 308);
+            this.tbLocalPath.Location = new System.Drawing.Point(6, 297);
             this.tbLocalPath.Name = "tbLocalPath";
             this.tbLocalPath.Size = new System.Drawing.Size(155, 13);
             this.tbLocalPath.TabIndex = 60;
@@ -1520,7 +1520,7 @@ namespace Movie_File_Merger
             this.tbPortNumber.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.tbPortNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbPortNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPortNumber.Location = new System.Drawing.Point(41, 189);
+            this.tbPortNumber.Location = new System.Drawing.Point(41, 209);
             this.tbPortNumber.Name = "tbPortNumber";
             this.tbPortNumber.Size = new System.Drawing.Size(20, 13);
             this.tbPortNumber.TabIndex = 60;
@@ -1533,7 +1533,7 @@ namespace Movie_File_Merger
             this.tbHostName.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.tbHostName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbHostName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbHostName.Location = new System.Drawing.Point(41, 151);
+            this.tbHostName.Location = new System.Drawing.Point(41, 171);
             this.tbHostName.Name = "tbHostName";
             this.tbHostName.Size = new System.Drawing.Size(120, 13);
             this.tbHostName.TabIndex = 60;
@@ -1546,7 +1546,7 @@ namespace Movie_File_Merger
             this.tbUserName.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.tbUserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbUserName.Location = new System.Drawing.Point(41, 132);
+            this.tbUserName.Location = new System.Drawing.Point(41, 152);
             this.tbUserName.Name = "tbUserName";
             this.tbUserName.Size = new System.Drawing.Size(120, 13);
             this.tbUserName.TabIndex = 60;
@@ -1561,14 +1561,14 @@ namespace Movie_File_Merger
             this.btnOpenWinSCP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOpenWinSCP.ImageKey = "WinSCP.png";
             this.btnOpenWinSCP.ImageList = this.ilMovieFileMerger;
-            this.btnOpenWinSCP.Location = new System.Drawing.Point(6, 208);
+            this.btnOpenWinSCP.Location = new System.Drawing.Point(8, 96);
             this.btnOpenWinSCP.Name = "btnOpenWinSCP";
             this.btnOpenWinSCP.Size = new System.Drawing.Size(153, 24);
             this.btnOpenWinSCP.TabIndex = 58;
             this.btnOpenWinSCP.TabStop = false;
             this.btnOpenWinSCP.Text = "Open WinSCP";
             this.btnOpenWinSCP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnOpenWinSCP.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnOpenWinSCP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ttMovieFileMerger.SetToolTip(this.btnOpenWinSCP, "Click here to open the WinSCP FTP application.");
             this.btnOpenWinSCP.UseVisualStyleBackColor = false;
             this.btnOpenWinSCP.Click += new System.EventHandler(this.btnOpenWinSCP_Click);
@@ -1581,14 +1581,14 @@ namespace Movie_File_Merger
             this.btnGetRemoteFileNames.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGetRemoteFileNames.ImageKey = "RemoteNames.png";
             this.btnGetRemoteFileNames.ImageList = this.ilMovieFileMerger;
-            this.btnGetRemoteFileNames.Location = new System.Drawing.Point(542, 6);
+            this.btnGetRemoteFileNames.Location = new System.Drawing.Point(8, 227);
             this.btnGetRemoteFileNames.Name = "btnGetRemoteFileNames";
-            this.btnGetRemoteFileNames.Size = new System.Drawing.Size(95, 43);
+            this.btnGetRemoteFileNames.Size = new System.Drawing.Size(153, 24);
             this.btnGetRemoteFileNames.TabIndex = 58;
             this.btnGetRemoteFileNames.TabStop = false;
             this.btnGetRemoteFileNames.Text = "Get Remote File Names";
             this.btnGetRemoteFileNames.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGetRemoteFileNames.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnGetRemoteFileNames.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ttMovieFileMerger.SetToolTip(this.btnGetRemoteFileNames, "Click here to get the file names fromt the Remote Host.");
             this.btnGetRemoteFileNames.UseVisualStyleBackColor = false;
             this.btnGetRemoteFileNames.Click += new System.EventHandler(this.btnGetRemoteFileNames_Click);
@@ -1669,12 +1669,12 @@ namespace Movie_File_Merger
             this.btnGetWishedRemoteFiles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGetWishedRemoteFiles.ImageKey = "DownloadCloud.png";
             this.btnGetWishedRemoteFiles.ImageList = this.ilMovieFileMerger;
-            this.btnGetWishedRemoteFiles.Location = new System.Drawing.Point(167, 6);
+            this.btnGetWishedRemoteFiles.Location = new System.Drawing.Point(8, 316);
             this.btnGetWishedRemoteFiles.Name = "btnGetWishedRemoteFiles";
-            this.btnGetWishedRemoteFiles.Size = new System.Drawing.Size(102, 43);
+            this.btnGetWishedRemoteFiles.Size = new System.Drawing.Size(152, 24);
             this.btnGetWishedRemoteFiles.TabIndex = 59;
             this.btnGetWishedRemoteFiles.TabStop = false;
-            this.btnGetWishedRemoteFiles.Text = "Get Wished Remote Files";
+            this.btnGetWishedRemoteFiles.Text = "Get Wish Remote Files";
             this.btnGetWishedRemoteFiles.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGetWishedRemoteFiles.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ttMovieFileMerger.SetToolTip(this.btnGetWishedRemoteFiles, "Click here to download the Wish files from the Remote Host.");
