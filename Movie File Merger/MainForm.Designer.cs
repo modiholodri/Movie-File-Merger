@@ -47,32 +47,6 @@ namespace Movie_File_Merger
             this.LeftToolStripPanel = new System.Windows.Forms.ToolStripPanel();
             this.ContentPanel = new System.Windows.Forms.ToolStripContentPanel();
             this.tcMovieFileMerger = new System.Windows.Forms.TabControl();
-            this.tpFTPSucker = new System.Windows.Forms.TabPage();
-            this.lblCloudImage = new System.Windows.Forms.Label();
-            this.btnBrowseLocalPath = new System.Windows.Forms.Button();
-            this.tbPassword = new System.Windows.Forms.TextBox();
-            this.btnColorList = new System.Windows.Forms.Button();
-            this.pbFTPSuckerUserManual = new System.Windows.Forms.PictureBox();
-            this.pbFTPSuckerHowTo = new System.Windows.Forms.PictureBox();
-            this.lblRemotePath = new System.Windows.Forms.Label();
-            this.lblRemoteHhost = new System.Windows.Forms.Label();
-            this.lblLocalPath = new System.Windows.Forms.Label();
-            this.lblPortNumber = new System.Windows.Forms.Label();
-            this.lblPassword = new System.Windows.Forms.Label();
-            this.lblHostName = new System.Windows.Forms.Label();
-            this.lblUserName = new System.Windows.Forms.Label();
-            this.tbRemotePath = new System.Windows.Forms.TextBox();
-            this.tbLocalPath = new System.Windows.Forms.TextBox();
-            this.tbPortNumber = new System.Windows.Forms.TextBox();
-            this.tbHostName = new System.Windows.Forms.TextBox();
-            this.tbUserName = new System.Windows.Forms.TextBox();
-            this.btnOpenWinSCP = new System.Windows.Forms.Button();
-            this.btnGetRemoteFileNames = new System.Windows.Forms.Button();
-            this.scFTPSucker = new System.Windows.Forms.SplitContainer();
-            this.lvRemoteFiles = new System.Windows.Forms.ListView();
-            this.chRemoteFiles = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.rtbFTPSucker = new System.Windows.Forms.RichTextBox();
-            this.btnGetWishedRemoteFiles = new System.Windows.Forms.Button();
             this.tpSeparateLists = new System.Windows.Forms.TabPage();
             this.cobDownloadCriteria = new System.Windows.Forms.ComboBox();
             this.btnPlay = new System.Windows.Forms.Button();
@@ -119,6 +93,34 @@ namespace Movie_File_Merger
             this.pbLogHowTo = new System.Windows.Forms.PictureBox();
             this.pbLogBanner = new System.Windows.Forms.PictureBox();
             this.rtbLog = new System.Windows.Forms.RichTextBox();
+            this.tpFTPSucker = new System.Windows.Forms.TabPage();
+            this.btnBinSelected = new System.Windows.Forms.Button();
+            this.btnWishSelected = new System.Windows.Forms.Button();
+            this.lblCloudImage = new System.Windows.Forms.Label();
+            this.btnBrowseLocalPath = new System.Windows.Forms.Button();
+            this.tbPassword = new System.Windows.Forms.TextBox();
+            this.btnColorList = new System.Windows.Forms.Button();
+            this.pbFTPSuckerUserManual = new System.Windows.Forms.PictureBox();
+            this.pbFTPSuckerHowTo = new System.Windows.Forms.PictureBox();
+            this.lblRemotePath = new System.Windows.Forms.Label();
+            this.lblRemoteHhost = new System.Windows.Forms.Label();
+            this.lblLocalPath = new System.Windows.Forms.Label();
+            this.lblPortNumber = new System.Windows.Forms.Label();
+            this.lblPassword = new System.Windows.Forms.Label();
+            this.lblHostName = new System.Windows.Forms.Label();
+            this.lblUserName = new System.Windows.Forms.Label();
+            this.tbRemotePath = new System.Windows.Forms.TextBox();
+            this.tbLocalPath = new System.Windows.Forms.TextBox();
+            this.tbPortNumber = new System.Windows.Forms.TextBox();
+            this.tbHostName = new System.Windows.Forms.TextBox();
+            this.tbUserName = new System.Windows.Forms.TextBox();
+            this.btnOpenWinSCP = new System.Windows.Forms.Button();
+            this.btnGetRemoteFileNames = new System.Windows.Forms.Button();
+            this.scFTPSucker = new System.Windows.Forms.SplitContainer();
+            this.lvRemoteFiles = new System.Windows.Forms.ListView();
+            this.chRemoteFiles = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.rtbFTPSucker = new System.Windows.Forms.RichTextBox();
+            this.btnGetWishedRemoteFiles = new System.Windows.Forms.Button();
             this.tpMaintenance = new System.Windows.Forms.TabPage();
             this.pbMFM = new System.Windows.Forms.PictureBox();
             this.btnPlayMaintenance = new System.Windows.Forms.Button();
@@ -199,16 +201,7 @@ namespace Movie_File_Merger
             this.tspbMFM = new System.Windows.Forms.ToolStripProgressBar();
             this.ttMovieFileMerger = new System.Windows.Forms.ToolTip(this.components);
             this.ofdTeraCopy = new System.Windows.Forms.OpenFileDialog();
-            this.btnWishSelected = new System.Windows.Forms.Button();
-            this.btnBinSelected = new System.Windows.Forms.Button();
             this.tcMovieFileMerger.SuspendLayout();
-            this.tpFTPSucker.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbFTPSuckerUserManual)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbFTPSuckerHowTo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.scFTPSucker)).BeginInit();
-            this.scFTPSucker.Panel1.SuspendLayout();
-            this.scFTPSucker.Panel2.SuspendLayout();
-            this.scFTPSucker.SuspendLayout();
             this.tpSeparateLists.SuspendLayout();
             this.gbTypeSelection.SuspendLayout();
             this.gbProcessImport.SuspendLayout();
@@ -228,6 +221,13 @@ namespace Movie_File_Merger
             ((System.ComponentModel.ISupportInitialize)(this.pbLogUserManual)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogHowTo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogBanner)).BeginInit();
+            this.tpFTPSucker.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFTPSuckerUserManual)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFTPSuckerHowTo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scFTPSucker)).BeginInit();
+            this.scFTPSucker.Panel1.SuspendLayout();
+            this.scFTPSucker.Panel2.SuspendLayout();
+            this.scFTPSucker.SuspendLayout();
             this.tpMaintenance.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMFM)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMaintenanceUserManual)).BeginInit();
@@ -362,385 +362,6 @@ namespace Movie_File_Merger
             this.tcMovieFileMerger.Size = new System.Drawing.Size(651, 375);
             this.tcMovieFileMerger.TabIndex = 0;
             this.tcMovieFileMerger.Tag = "Maintenance";
-            // 
-            // tpFTPSucker
-            // 
-            this.tpFTPSucker.Controls.Add(this.btnBinSelected);
-            this.tpFTPSucker.Controls.Add(this.btnWishSelected);
-            this.tpFTPSucker.Controls.Add(this.lblCloudImage);
-            this.tpFTPSucker.Controls.Add(this.btnBrowseLocalPath);
-            this.tpFTPSucker.Controls.Add(this.tbPassword);
-            this.tpFTPSucker.Controls.Add(this.btnColorList);
-            this.tpFTPSucker.Controls.Add(this.pbFTPSuckerUserManual);
-            this.tpFTPSucker.Controls.Add(this.pbFTPSuckerHowTo);
-            this.tpFTPSucker.Controls.Add(this.lblRemotePath);
-            this.tpFTPSucker.Controls.Add(this.lblRemoteHhost);
-            this.tpFTPSucker.Controls.Add(this.lblLocalPath);
-            this.tpFTPSucker.Controls.Add(this.lblPortNumber);
-            this.tpFTPSucker.Controls.Add(this.lblPassword);
-            this.tpFTPSucker.Controls.Add(this.lblHostName);
-            this.tpFTPSucker.Controls.Add(this.lblUserName);
-            this.tpFTPSucker.Controls.Add(this.tbRemotePath);
-            this.tpFTPSucker.Controls.Add(this.tbLocalPath);
-            this.tpFTPSucker.Controls.Add(this.tbPortNumber);
-            this.tpFTPSucker.Controls.Add(this.tbHostName);
-            this.tpFTPSucker.Controls.Add(this.tbUserName);
-            this.tpFTPSucker.Controls.Add(this.btnOpenWinSCP);
-            this.tpFTPSucker.Controls.Add(this.btnGetRemoteFileNames);
-            this.tpFTPSucker.Controls.Add(this.scFTPSucker);
-            this.tpFTPSucker.Controls.Add(this.btnGetWishedRemoteFiles);
-            this.tpFTPSucker.ImageKey = "ftp.png";
-            this.tpFTPSucker.Location = new System.Drawing.Point(4, 29);
-            this.tpFTPSucker.Name = "tpFTPSucker";
-            this.tpFTPSucker.Padding = new System.Windows.Forms.Padding(3);
-            this.tpFTPSucker.Size = new System.Drawing.Size(643, 342);
-            this.tpFTPSucker.TabIndex = 6;
-            this.tpFTPSucker.Text = "FTP Sucker";
-            this.tpFTPSucker.UseVisualStyleBackColor = true;
-            // 
-            // lblCloudImage
-            // 
-            this.lblCloudImage.ImageKey = "ftp.png";
-            this.lblCloudImage.ImageList = this.ilMovieFileMerger;
-            this.lblCloudImage.Location = new System.Drawing.Point(131, 109);
-            this.lblCloudImage.Name = "lblCloudImage";
-            this.lblCloudImage.Size = new System.Drawing.Size(30, 23);
-            this.lblCloudImage.TabIndex = 67;
-            // 
-            // btnBrowseLocalPath
-            // 
-            this.btnBrowseLocalPath.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBrowseLocalPath.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
-            this.btnBrowseLocalPath.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBrowseLocalPath.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBrowseLocalPath.ImageKey = "Folder.gif";
-            this.btnBrowseLocalPath.ImageList = this.ilMovieFileMerger;
-            this.btnBrowseLocalPath.Location = new System.Drawing.Point(92, 279);
-            this.btnBrowseLocalPath.Name = "btnBrowseLocalPath";
-            this.btnBrowseLocalPath.Size = new System.Drawing.Size(71, 23);
-            this.btnBrowseLocalPath.TabIndex = 66;
-            this.btnBrowseLocalPath.TabStop = false;
-            this.btnBrowseLocalPath.Text = "Browse";
-            this.btnBrowseLocalPath.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ttMovieFileMerger.SetToolTip(this.btnBrowseLocalPath, "Click to change the local file path.");
-            this.btnBrowseLocalPath.UseVisualStyleBackColor = false;
-            this.btnBrowseLocalPath.Click += new System.EventHandler(this.btnBrowseLocalPath_Click);
-            // 
-            // tbPassword
-            // 
-            this.tbPassword.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.tbPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPassword.Location = new System.Drawing.Point(104, 189);
-            this.tbPassword.Name = "tbPassword";
-            this.tbPassword.PasswordChar = 'X';
-            this.tbPassword.Size = new System.Drawing.Size(55, 13);
-            this.tbPassword.TabIndex = 60;
-            this.tbPassword.Text = "!Sasimapon";
-            this.tbPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ttMovieFileMerger.SetToolTip(this.tbPassword, "Enter the passowrd used to connect to the remote host.");
-            // 
-            // btnColorList
-            // 
-            this.btnColorList.AllowDrop = true;
-            this.btnColorList.BackColor = System.Drawing.SystemColors.Control;
-            this.btnColorList.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
-            this.btnColorList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnColorList.ImageKey = "Color.gif";
-            this.btnColorList.ImageList = this.ilMovieFileMerger;
-            this.btnColorList.Location = new System.Drawing.Point(275, 6);
-            this.btnColorList.Name = "btnColorList";
-            this.btnColorList.Size = new System.Drawing.Size(65, 43);
-            this.btnColorList.TabIndex = 65;
-            this.btnColorList.TabStop = false;
-            this.btnColorList.Text = "Color List";
-            this.btnColorList.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnColorList.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ttMovieFileMerger.SetToolTip(this.btnColorList, "Click here to move the files in the Import list and color them accordingly.");
-            this.btnColorList.UseVisualStyleBackColor = false;
-            this.btnColorList.Click += new System.EventHandler(this.btnColorList_Click);
-            // 
-            // pbFTPSuckerUserManual
-            // 
-            this.pbFTPSuckerUserManual.Image = ((System.Drawing.Image)(resources.GetObject("pbFTPSuckerUserManual.Image")));
-            this.pbFTPSuckerUserManual.Location = new System.Drawing.Point(10, 6);
-            this.pbFTPSuckerUserManual.Margin = new System.Windows.Forms.Padding(2);
-            this.pbFTPSuckerUserManual.Name = "pbFTPSuckerUserManual";
-            this.pbFTPSuckerUserManual.Size = new System.Drawing.Size(65, 85);
-            this.pbFTPSuckerUserManual.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbFTPSuckerUserManual.TabIndex = 63;
-            this.pbFTPSuckerUserManual.TabStop = false;
-            this.ttMovieFileMerger.SetToolTip(this.pbFTPSuckerUserManual, "Go To the MFM User Manual to read more details about how to use MFM.");
-            // 
-            // pbFTPSuckerHowTo
-            // 
-            this.pbFTPSuckerHowTo.Image = ((System.Drawing.Image)(resources.GetObject("pbFTPSuckerHowTo.Image")));
-            this.pbFTPSuckerHowTo.Location = new System.Drawing.Point(90, 6);
-            this.pbFTPSuckerHowTo.Margin = new System.Windows.Forms.Padding(2);
-            this.pbFTPSuckerHowTo.Name = "pbFTPSuckerHowTo";
-            this.pbFTPSuckerHowTo.Size = new System.Drawing.Size(65, 85);
-            this.pbFTPSuckerHowTo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbFTPSuckerHowTo.TabIndex = 62;
-            this.pbFTPSuckerHowTo.TabStop = false;
-            this.ttMovieFileMerger.SetToolTip(this.pbFTPSuckerHowTo, "Go to the How to Organize Videos on Hard Disks Manual to get a brief description " +
-        "about how a video collection could be organized in general.");
-            // 
-            // lblRemotePath
-            // 
-            this.lblRemotePath.Location = new System.Drawing.Point(5, 170);
-            this.lblRemotePath.Name = "lblRemotePath";
-            this.lblRemotePath.Size = new System.Drawing.Size(32, 13);
-            this.lblRemotePath.TabIndex = 61;
-            this.lblRemotePath.Text = "Path";
-            // 
-            // lblRemoteHhost
-            // 
-            this.lblRemoteHhost.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.lblRemoteHhost.ImageKey = "ftp.png";
-            this.lblRemoteHhost.ImageList = this.ilMovieFileMerger;
-            this.lblRemoteHhost.Location = new System.Drawing.Point(8, 109);
-            this.lblRemoteHhost.Name = "lblRemoteHhost";
-            this.lblRemoteHhost.Size = new System.Drawing.Size(153, 20);
-            this.lblRemoteHhost.TabIndex = 61;
-            this.lblRemoteHhost.Text = "Remote Host";
-            this.lblRemoteHhost.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblLocalPath
-            // 
-            this.lblLocalPath.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.lblLocalPath.ImageKey = "Folder.gif";
-            this.lblLocalPath.ImageList = this.ilMovieFileMerger;
-            this.lblLocalPath.Location = new System.Drawing.Point(5, 280);
-            this.lblLocalPath.Name = "lblLocalPath";
-            this.lblLocalPath.Size = new System.Drawing.Size(80, 20);
-            this.lblLocalPath.TabIndex = 61;
-            this.lblLocalPath.Text = "Local Path";
-            this.lblLocalPath.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lblPortNumber
-            // 
-            this.lblPortNumber.Location = new System.Drawing.Point(5, 189);
-            this.lblPortNumber.Name = "lblPortNumber";
-            this.lblPortNumber.Size = new System.Drawing.Size(30, 13);
-            this.lblPortNumber.TabIndex = 61;
-            this.lblPortNumber.Text = "Port";
-            // 
-            // lblPassword
-            // 
-            this.lblPassword.Location = new System.Drawing.Point(67, 189);
-            this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(31, 13);
-            this.lblPassword.TabIndex = 61;
-            this.lblPassword.Text = "Pwd";
-            // 
-            // lblHostName
-            // 
-            this.lblHostName.Location = new System.Drawing.Point(5, 151);
-            this.lblHostName.Name = "lblHostName";
-            this.lblHostName.Size = new System.Drawing.Size(30, 13);
-            this.lblHostName.TabIndex = 61;
-            this.lblHostName.Text = "Host";
-            // 
-            // lblUserName
-            // 
-            this.lblUserName.Location = new System.Drawing.Point(5, 132);
-            this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(30, 13);
-            this.lblUserName.TabIndex = 61;
-            this.lblUserName.Text = "User";
-            this.ttMovieFileMerger.SetToolTip(this.lblUserName, "The Add-on Files Extension identified add-on files like subtitles or posters. \r\nA" +
-        "dd-on files will be only considered if a main video file exists.");
-            // 
-            // tbRemotePath
-            // 
-            this.tbRemotePath.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.tbRemotePath.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbRemotePath.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbRemotePath.Location = new System.Drawing.Point(41, 170);
-            this.tbRemotePath.Name = "tbRemotePath";
-            this.tbRemotePath.Size = new System.Drawing.Size(120, 13);
-            this.tbRemotePath.TabIndex = 60;
-            this.tbRemotePath.Text = "/videos";
-            this.ttMovieFileMerger.SetToolTip(this.tbRemotePath, "Enter the path of the remote host, where to seach for videos.");
-            // 
-            // tbLocalPath
-            // 
-            this.tbLocalPath.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.tbLocalPath.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbLocalPath.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbLocalPath.Location = new System.Drawing.Point(8, 308);
-            this.tbLocalPath.Name = "tbLocalPath";
-            this.tbLocalPath.Size = new System.Drawing.Size(155, 13);
-            this.tbLocalPath.TabIndex = 60;
-            this.tbLocalPath.Text = "C:\\Downloads";
-            this.ttMovieFileMerger.SetToolTip(this.tbLocalPath, "Enter the path where the downloaded videos should be stored locally.");
-            // 
-            // tbPortNumber
-            // 
-            this.tbPortNumber.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.tbPortNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbPortNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPortNumber.Location = new System.Drawing.Point(41, 189);
-            this.tbPortNumber.Name = "tbPortNumber";
-            this.tbPortNumber.Size = new System.Drawing.Size(20, 13);
-            this.tbPortNumber.TabIndex = 60;
-            this.tbPortNumber.Text = "21";
-            this.tbPortNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ttMovieFileMerger.SetToolTip(this.tbPortNumber, "Enter the port number to connect to the remote host.");
-            // 
-            // tbHostName
-            // 
-            this.tbHostName.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.tbHostName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbHostName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbHostName.Location = new System.Drawing.Point(41, 151);
-            this.tbHostName.Name = "tbHostName";
-            this.tbHostName.Size = new System.Drawing.Size(120, 13);
-            this.tbHostName.TabIndex = 60;
-            this.tbHostName.Text = "ftp.movie-file-merger.org";
-            this.tbHostName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ttMovieFileMerger.SetToolTip(this.tbHostName, "Enter the name or IP address of the remote host.");
-            // 
-            // tbUserName
-            // 
-            this.tbUserName.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.tbUserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbUserName.Location = new System.Drawing.Point(41, 132);
-            this.tbUserName.Name = "tbUserName";
-            this.tbUserName.Size = new System.Drawing.Size(120, 13);
-            this.tbUserName.TabIndex = 60;
-            this.tbUserName.Text = "movie-file-merger.org";
-            this.tbUserName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ttMovieFileMerger.SetToolTip(this.tbUserName, "Enter the user name for the remote host.");
-            // 
-            // btnOpenWinSCP
-            // 
-            this.btnOpenWinSCP.AllowDrop = true;
-            this.btnOpenWinSCP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnOpenWinSCP.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
-            this.btnOpenWinSCP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOpenWinSCP.ImageKey = "WinSCP.png";
-            this.btnOpenWinSCP.ImageList = this.ilMovieFileMerger;
-            this.btnOpenWinSCP.Location = new System.Drawing.Point(6, 208);
-            this.btnOpenWinSCP.Name = "btnOpenWinSCP";
-            this.btnOpenWinSCP.Size = new System.Drawing.Size(153, 24);
-            this.btnOpenWinSCP.TabIndex = 58;
-            this.btnOpenWinSCP.TabStop = false;
-            this.btnOpenWinSCP.Text = "Open WinSCP";
-            this.btnOpenWinSCP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnOpenWinSCP.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.ttMovieFileMerger.SetToolTip(this.btnOpenWinSCP, "Click here to open the WinSCP FTP application.");
-            this.btnOpenWinSCP.UseVisualStyleBackColor = false;
-            this.btnOpenWinSCP.Click += new System.EventHandler(this.btnOpenWinSCP_Click);
-            // 
-            // btnGetRemoteFileNames
-            // 
-            this.btnGetRemoteFileNames.AllowDrop = true;
-            this.btnGetRemoteFileNames.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGetRemoteFileNames.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
-            this.btnGetRemoteFileNames.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGetRemoteFileNames.ImageKey = "RemoteNames.png";
-            this.btnGetRemoteFileNames.ImageList = this.ilMovieFileMerger;
-            this.btnGetRemoteFileNames.Location = new System.Drawing.Point(542, 6);
-            this.btnGetRemoteFileNames.Name = "btnGetRemoteFileNames";
-            this.btnGetRemoteFileNames.Size = new System.Drawing.Size(95, 43);
-            this.btnGetRemoteFileNames.TabIndex = 58;
-            this.btnGetRemoteFileNames.TabStop = false;
-            this.btnGetRemoteFileNames.Text = "Get Remote File Names";
-            this.btnGetRemoteFileNames.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGetRemoteFileNames.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.ttMovieFileMerger.SetToolTip(this.btnGetRemoteFileNames, "Click here to get the file names fromt the Remote Host.");
-            this.btnGetRemoteFileNames.UseVisualStyleBackColor = false;
-            this.btnGetRemoteFileNames.Click += new System.EventHandler(this.btnGetRemoteFileNames_Click);
-            // 
-            // scFTPSucker
-            // 
-            this.scFTPSucker.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.scFTPSucker.Location = new System.Drawing.Point(166, 54);
-            this.scFTPSucker.Margin = new System.Windows.Forms.Padding(2);
-            this.scFTPSucker.Name = "scFTPSucker";
-            this.scFTPSucker.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // scFTPSucker.Panel1
-            // 
-            this.scFTPSucker.Panel1.Controls.Add(this.lvRemoteFiles);
-            this.scFTPSucker.Panel1.Margin = new System.Windows.Forms.Padding(1);
-            this.scFTPSucker.Panel1.Padding = new System.Windows.Forms.Padding(1);
-            this.scFTPSucker.Panel1MinSize = 100;
-            // 
-            // scFTPSucker.Panel2
-            // 
-            this.scFTPSucker.Panel2.Controls.Add(this.rtbFTPSucker);
-            this.scFTPSucker.Panel2MinSize = 100;
-            this.scFTPSucker.Size = new System.Drawing.Size(470, 283);
-            this.scFTPSucker.SplitterDistance = 179;
-            this.scFTPSucker.TabIndex = 40;
-            // 
-            // lvRemoteFiles
-            // 
-            this.lvRemoteFiles.Activation = System.Windows.Forms.ItemActivation.OneClick;
-            this.lvRemoteFiles.AllowDrop = true;
-            this.lvRemoteFiles.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.lvRemoteFiles.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.chRemoteFiles});
-            this.lvRemoteFiles.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lvRemoteFiles.FullRowSelect = true;
-            this.lvRemoteFiles.GridLines = true;
-            this.lvRemoteFiles.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.lvRemoteFiles.LabelWrap = false;
-            this.lvRemoteFiles.Location = new System.Drawing.Point(1, 1);
-            this.lvRemoteFiles.Name = "lvRemoteFiles";
-            this.lvRemoteFiles.ShowItemToolTips = true;
-            this.lvRemoteFiles.Size = new System.Drawing.Size(468, 177);
-            this.lvRemoteFiles.Sorting = System.Windows.Forms.SortOrder.Ascending;
-            this.lvRemoteFiles.TabIndex = 38;
-            this.lvRemoteFiles.TabStop = false;
-            this.lvRemoteFiles.Tag = "FTP Sucker";
-            this.lvRemoteFiles.TileSize = new System.Drawing.Size(1, 1);
-            this.lvRemoteFiles.UseCompatibleStateImageBehavior = false;
-            this.lvRemoteFiles.View = System.Windows.Forms.View.Details;
-            this.lvRemoteFiles.Resize += new System.EventHandler(this.lvFTPSuckerResize);
-            // 
-            // chRemoteFiles
-            // 
-            this.chRemoteFiles.Text = "Remote Files";
-            this.chRemoteFiles.Width = 700;
-            // 
-            // rtbFTPSucker
-            // 
-            this.rtbFTPSucker.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.rtbFTPSucker.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtbFTPSucker.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rtbFTPSucker.Location = new System.Drawing.Point(0, 0);
-            this.rtbFTPSucker.Name = "rtbFTPSucker";
-            this.rtbFTPSucker.ReadOnly = true;
-            this.rtbFTPSucker.Size = new System.Drawing.Size(470, 100);
-            this.rtbFTPSucker.TabIndex = 20;
-            this.rtbFTPSucker.Text = "";
-            this.rtbFTPSucker.WordWrap = false;
-            // 
-            // btnGetWishedRemoteFiles
-            // 
-            this.btnGetWishedRemoteFiles.AllowDrop = true;
-            this.btnGetWishedRemoteFiles.BackColor = System.Drawing.SystemColors.Control;
-            this.btnGetWishedRemoteFiles.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
-            this.btnGetWishedRemoteFiles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGetWishedRemoteFiles.ImageKey = "DownloadCloud.png";
-            this.btnGetWishedRemoteFiles.ImageList = this.ilMovieFileMerger;
-            this.btnGetWishedRemoteFiles.Location = new System.Drawing.Point(167, 6);
-            this.btnGetWishedRemoteFiles.Name = "btnGetWishedRemoteFiles";
-            this.btnGetWishedRemoteFiles.Size = new System.Drawing.Size(102, 43);
-            this.btnGetWishedRemoteFiles.TabIndex = 59;
-            this.btnGetWishedRemoteFiles.TabStop = false;
-            this.btnGetWishedRemoteFiles.Text = "Get Wished Remote Files";
-            this.btnGetWishedRemoteFiles.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGetWishedRemoteFiles.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ttMovieFileMerger.SetToolTip(this.btnGetWishedRemoteFiles, "Click here to download the Wish files from the Remote Host.");
-            this.btnGetWishedRemoteFiles.UseVisualStyleBackColor = false;
-            this.btnGetWishedRemoteFiles.Click += new System.EventHandler(this.btnDownloadWishedRemoteFiles_Click);
             // 
             // tpSeparateLists
             // 
@@ -1644,6 +1265,421 @@ namespace Movie_File_Merger
             this.rtbLog.Text = "";
             this.rtbLog.WordWrap = false;
             this.rtbLog.MouseEnter += new System.EventHandler(this.RtbMouseEnter);
+            // 
+            // tpFTPSucker
+            // 
+            this.tpFTPSucker.Controls.Add(this.btnBinSelected);
+            this.tpFTPSucker.Controls.Add(this.btnWishSelected);
+            this.tpFTPSucker.Controls.Add(this.lblCloudImage);
+            this.tpFTPSucker.Controls.Add(this.btnBrowseLocalPath);
+            this.tpFTPSucker.Controls.Add(this.tbPassword);
+            this.tpFTPSucker.Controls.Add(this.btnColorList);
+            this.tpFTPSucker.Controls.Add(this.pbFTPSuckerUserManual);
+            this.tpFTPSucker.Controls.Add(this.pbFTPSuckerHowTo);
+            this.tpFTPSucker.Controls.Add(this.lblRemotePath);
+            this.tpFTPSucker.Controls.Add(this.lblRemoteHhost);
+            this.tpFTPSucker.Controls.Add(this.lblLocalPath);
+            this.tpFTPSucker.Controls.Add(this.lblPortNumber);
+            this.tpFTPSucker.Controls.Add(this.lblPassword);
+            this.tpFTPSucker.Controls.Add(this.lblHostName);
+            this.tpFTPSucker.Controls.Add(this.lblUserName);
+            this.tpFTPSucker.Controls.Add(this.tbRemotePath);
+            this.tpFTPSucker.Controls.Add(this.tbLocalPath);
+            this.tpFTPSucker.Controls.Add(this.tbPortNumber);
+            this.tpFTPSucker.Controls.Add(this.tbHostName);
+            this.tpFTPSucker.Controls.Add(this.tbUserName);
+            this.tpFTPSucker.Controls.Add(this.btnOpenWinSCP);
+            this.tpFTPSucker.Controls.Add(this.btnGetRemoteFileNames);
+            this.tpFTPSucker.Controls.Add(this.scFTPSucker);
+            this.tpFTPSucker.Controls.Add(this.btnGetWishedRemoteFiles);
+            this.tpFTPSucker.ImageKey = "ftp.png";
+            this.tpFTPSucker.Location = new System.Drawing.Point(4, 29);
+            this.tpFTPSucker.Name = "tpFTPSucker";
+            this.tpFTPSucker.Padding = new System.Windows.Forms.Padding(3);
+            this.tpFTPSucker.Size = new System.Drawing.Size(643, 342);
+            this.tpFTPSucker.TabIndex = 6;
+            this.tpFTPSucker.Text = "FTP Sucker";
+            this.tpFTPSucker.UseVisualStyleBackColor = true;
+            // 
+            // btnBinSelected
+            // 
+            this.btnBinSelected.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBinSelected.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.btnBinSelected.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBinSelected.ImageKey = "Garbage.gif";
+            this.btnBinSelected.ImageList = this.ilMovieFileMerger;
+            this.btnBinSelected.Location = new System.Drawing.Point(453, 6);
+            this.btnBinSelected.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBinSelected.Name = "btnBinSelected";
+            this.btnBinSelected.Size = new System.Drawing.Size(84, 43);
+            this.btnBinSelected.TabIndex = 69;
+            this.btnBinSelected.Text = "Bin Selected";
+            this.btnBinSelected.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBinSelected.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.ttMovieFileMerger.SetToolTip(this.btnBinSelected, "Put all items in all lists in the Garbage list according to the selection ctriter" +
+        "ia.");
+            this.btnBinSelected.UseVisualStyleBackColor = false;
+            this.btnBinSelected.Click += new System.EventHandler(this.btnBinSelected_Click);
+            // 
+            // btnWishSelected
+            // 
+            this.btnWishSelected.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.btnWishSelected.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnWishSelected.ImageKey = "Wish.png";
+            this.btnWishSelected.ImageList = this.ilMovieFileMerger;
+            this.btnWishSelected.Location = new System.Drawing.Point(345, 6);
+            this.btnWishSelected.Margin = new System.Windows.Forms.Padding(2);
+            this.btnWishSelected.Name = "btnWishSelected";
+            this.btnWishSelected.Size = new System.Drawing.Size(82, 43);
+            this.btnWishSelected.TabIndex = 68;
+            this.btnWishSelected.Text = "Wish Selected";
+            this.btnWishSelected.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnWishSelected.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ttMovieFileMerger.SetToolTip(this.btnWishSelected, "Wish all items in the Import list according to the selection criteria.");
+            this.btnWishSelected.UseVisualStyleBackColor = false;
+            this.btnWishSelected.Click += new System.EventHandler(this.btnWishSelected_Click);
+            // 
+            // lblCloudImage
+            // 
+            this.lblCloudImage.ImageKey = "ftp.png";
+            this.lblCloudImage.ImageList = this.ilMovieFileMerger;
+            this.lblCloudImage.Location = new System.Drawing.Point(131, 109);
+            this.lblCloudImage.Name = "lblCloudImage";
+            this.lblCloudImage.Size = new System.Drawing.Size(30, 23);
+            this.lblCloudImage.TabIndex = 67;
+            // 
+            // btnBrowseLocalPath
+            // 
+            this.btnBrowseLocalPath.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBrowseLocalPath.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.btnBrowseLocalPath.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBrowseLocalPath.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBrowseLocalPath.ImageKey = "Folder.gif";
+            this.btnBrowseLocalPath.ImageList = this.ilMovieFileMerger;
+            this.btnBrowseLocalPath.Location = new System.Drawing.Point(92, 279);
+            this.btnBrowseLocalPath.Name = "btnBrowseLocalPath";
+            this.btnBrowseLocalPath.Size = new System.Drawing.Size(71, 23);
+            this.btnBrowseLocalPath.TabIndex = 66;
+            this.btnBrowseLocalPath.TabStop = false;
+            this.btnBrowseLocalPath.Text = "Browse";
+            this.btnBrowseLocalPath.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ttMovieFileMerger.SetToolTip(this.btnBrowseLocalPath, "Click to change the local file path.");
+            this.btnBrowseLocalPath.UseVisualStyleBackColor = false;
+            this.btnBrowseLocalPath.Click += new System.EventHandler(this.btnBrowseLocalPath_Click);
+            // 
+            // tbPassword
+            // 
+            this.tbPassword.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.tbPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPassword.Location = new System.Drawing.Point(104, 189);
+            this.tbPassword.Name = "tbPassword";
+            this.tbPassword.PasswordChar = 'X';
+            this.tbPassword.Size = new System.Drawing.Size(55, 13);
+            this.tbPassword.TabIndex = 60;
+            this.tbPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ttMovieFileMerger.SetToolTip(this.tbPassword, "Enter the passowrd used to connect to the remote host.");
+            // 
+            // btnColorList
+            // 
+            this.btnColorList.AllowDrop = true;
+            this.btnColorList.BackColor = System.Drawing.SystemColors.Control;
+            this.btnColorList.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.btnColorList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnColorList.ImageKey = "Color.gif";
+            this.btnColorList.ImageList = this.ilMovieFileMerger;
+            this.btnColorList.Location = new System.Drawing.Point(275, 6);
+            this.btnColorList.Name = "btnColorList";
+            this.btnColorList.Size = new System.Drawing.Size(65, 43);
+            this.btnColorList.TabIndex = 65;
+            this.btnColorList.TabStop = false;
+            this.btnColorList.Text = "Color List";
+            this.btnColorList.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnColorList.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ttMovieFileMerger.SetToolTip(this.btnColorList, "Click here to move the files in the Import list and color them accordingly.");
+            this.btnColorList.UseVisualStyleBackColor = false;
+            this.btnColorList.Click += new System.EventHandler(this.btnColorList_Click);
+            // 
+            // pbFTPSuckerUserManual
+            // 
+            this.pbFTPSuckerUserManual.Image = ((System.Drawing.Image)(resources.GetObject("pbFTPSuckerUserManual.Image")));
+            this.pbFTPSuckerUserManual.Location = new System.Drawing.Point(10, 6);
+            this.pbFTPSuckerUserManual.Margin = new System.Windows.Forms.Padding(2);
+            this.pbFTPSuckerUserManual.Name = "pbFTPSuckerUserManual";
+            this.pbFTPSuckerUserManual.Size = new System.Drawing.Size(65, 85);
+            this.pbFTPSuckerUserManual.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbFTPSuckerUserManual.TabIndex = 63;
+            this.pbFTPSuckerUserManual.TabStop = false;
+            this.ttMovieFileMerger.SetToolTip(this.pbFTPSuckerUserManual, "Go To the MFM User Manual to read more details about how to use MFM.");
+            // 
+            // pbFTPSuckerHowTo
+            // 
+            this.pbFTPSuckerHowTo.Image = ((System.Drawing.Image)(resources.GetObject("pbFTPSuckerHowTo.Image")));
+            this.pbFTPSuckerHowTo.Location = new System.Drawing.Point(90, 6);
+            this.pbFTPSuckerHowTo.Margin = new System.Windows.Forms.Padding(2);
+            this.pbFTPSuckerHowTo.Name = "pbFTPSuckerHowTo";
+            this.pbFTPSuckerHowTo.Size = new System.Drawing.Size(65, 85);
+            this.pbFTPSuckerHowTo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbFTPSuckerHowTo.TabIndex = 62;
+            this.pbFTPSuckerHowTo.TabStop = false;
+            this.ttMovieFileMerger.SetToolTip(this.pbFTPSuckerHowTo, "Go to the How to Organize Videos on Hard Disks Manual to get a brief description " +
+        "about how a video collection could be organized in general.");
+            // 
+            // lblRemotePath
+            // 
+            this.lblRemotePath.Location = new System.Drawing.Point(5, 170);
+            this.lblRemotePath.Name = "lblRemotePath";
+            this.lblRemotePath.Size = new System.Drawing.Size(32, 13);
+            this.lblRemotePath.TabIndex = 61;
+            this.lblRemotePath.Text = "Path";
+            // 
+            // lblRemoteHhost
+            // 
+            this.lblRemoteHhost.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.lblRemoteHhost.ImageKey = "ftp.png";
+            this.lblRemoteHhost.ImageList = this.ilMovieFileMerger;
+            this.lblRemoteHhost.Location = new System.Drawing.Point(8, 109);
+            this.lblRemoteHhost.Name = "lblRemoteHhost";
+            this.lblRemoteHhost.Size = new System.Drawing.Size(153, 20);
+            this.lblRemoteHhost.TabIndex = 61;
+            this.lblRemoteHhost.Text = "Remote Host";
+            this.lblRemoteHhost.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblLocalPath
+            // 
+            this.lblLocalPath.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.lblLocalPath.ImageKey = "Folder.gif";
+            this.lblLocalPath.ImageList = this.ilMovieFileMerger;
+            this.lblLocalPath.Location = new System.Drawing.Point(5, 280);
+            this.lblLocalPath.Name = "lblLocalPath";
+            this.lblLocalPath.Size = new System.Drawing.Size(80, 20);
+            this.lblLocalPath.TabIndex = 61;
+            this.lblLocalPath.Text = "Local Path";
+            this.lblLocalPath.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblPortNumber
+            // 
+            this.lblPortNumber.Location = new System.Drawing.Point(5, 189);
+            this.lblPortNumber.Name = "lblPortNumber";
+            this.lblPortNumber.Size = new System.Drawing.Size(30, 13);
+            this.lblPortNumber.TabIndex = 61;
+            this.lblPortNumber.Text = "Port";
+            // 
+            // lblPassword
+            // 
+            this.lblPassword.Location = new System.Drawing.Point(67, 189);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(31, 13);
+            this.lblPassword.TabIndex = 61;
+            this.lblPassword.Text = "Pwd";
+            // 
+            // lblHostName
+            // 
+            this.lblHostName.Location = new System.Drawing.Point(5, 151);
+            this.lblHostName.Name = "lblHostName";
+            this.lblHostName.Size = new System.Drawing.Size(30, 13);
+            this.lblHostName.TabIndex = 61;
+            this.lblHostName.Text = "Host";
+            // 
+            // lblUserName
+            // 
+            this.lblUserName.Location = new System.Drawing.Point(5, 132);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(30, 13);
+            this.lblUserName.TabIndex = 61;
+            this.lblUserName.Text = "User";
+            this.ttMovieFileMerger.SetToolTip(this.lblUserName, "The Add-on Files Extension identified add-on files like subtitles or posters. \r\nA" +
+        "dd-on files will be only considered if a main video file exists.");
+            // 
+            // tbRemotePath
+            // 
+            this.tbRemotePath.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.tbRemotePath.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbRemotePath.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbRemotePath.Location = new System.Drawing.Point(41, 170);
+            this.tbRemotePath.Name = "tbRemotePath";
+            this.tbRemotePath.Size = new System.Drawing.Size(120, 13);
+            this.tbRemotePath.TabIndex = 60;
+            this.tbRemotePath.Text = "/videos";
+            this.ttMovieFileMerger.SetToolTip(this.tbRemotePath, "Enter the path of the remote host, where to seach for videos.");
+            // 
+            // tbLocalPath
+            // 
+            this.tbLocalPath.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.tbLocalPath.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbLocalPath.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbLocalPath.Location = new System.Drawing.Point(8, 308);
+            this.tbLocalPath.Name = "tbLocalPath";
+            this.tbLocalPath.Size = new System.Drawing.Size(155, 13);
+            this.tbLocalPath.TabIndex = 60;
+            this.tbLocalPath.Text = "C:\\Downloads";
+            this.ttMovieFileMerger.SetToolTip(this.tbLocalPath, "Enter the path where the downloaded videos should be stored locally.");
+            // 
+            // tbPortNumber
+            // 
+            this.tbPortNumber.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.tbPortNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbPortNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPortNumber.Location = new System.Drawing.Point(41, 189);
+            this.tbPortNumber.Name = "tbPortNumber";
+            this.tbPortNumber.Size = new System.Drawing.Size(20, 13);
+            this.tbPortNumber.TabIndex = 60;
+            this.tbPortNumber.Text = "21";
+            this.tbPortNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ttMovieFileMerger.SetToolTip(this.tbPortNumber, "Enter the port number to connect to the remote host.");
+            // 
+            // tbHostName
+            // 
+            this.tbHostName.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.tbHostName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbHostName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbHostName.Location = new System.Drawing.Point(41, 151);
+            this.tbHostName.Name = "tbHostName";
+            this.tbHostName.Size = new System.Drawing.Size(120, 13);
+            this.tbHostName.TabIndex = 60;
+            this.tbHostName.Text = "ftp.movie-file-merger.org";
+            this.tbHostName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ttMovieFileMerger.SetToolTip(this.tbHostName, "Enter the name or IP address of the remote host.");
+            // 
+            // tbUserName
+            // 
+            this.tbUserName.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.tbUserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbUserName.Location = new System.Drawing.Point(41, 132);
+            this.tbUserName.Name = "tbUserName";
+            this.tbUserName.Size = new System.Drawing.Size(120, 13);
+            this.tbUserName.TabIndex = 60;
+            this.tbUserName.Text = "movie-file-merger.org";
+            this.tbUserName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ttMovieFileMerger.SetToolTip(this.tbUserName, "Enter the user name for the remote host.");
+            // 
+            // btnOpenWinSCP
+            // 
+            this.btnOpenWinSCP.AllowDrop = true;
+            this.btnOpenWinSCP.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.btnOpenWinSCP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOpenWinSCP.ImageKey = "WinSCP.png";
+            this.btnOpenWinSCP.ImageList = this.ilMovieFileMerger;
+            this.btnOpenWinSCP.Location = new System.Drawing.Point(6, 208);
+            this.btnOpenWinSCP.Name = "btnOpenWinSCP";
+            this.btnOpenWinSCP.Size = new System.Drawing.Size(153, 24);
+            this.btnOpenWinSCP.TabIndex = 58;
+            this.btnOpenWinSCP.TabStop = false;
+            this.btnOpenWinSCP.Text = "Open WinSCP";
+            this.btnOpenWinSCP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnOpenWinSCP.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.ttMovieFileMerger.SetToolTip(this.btnOpenWinSCP, "Click here to open the WinSCP FTP application.");
+            this.btnOpenWinSCP.UseVisualStyleBackColor = false;
+            this.btnOpenWinSCP.Click += new System.EventHandler(this.btnOpenWinSCP_Click);
+            // 
+            // btnGetRemoteFileNames
+            // 
+            this.btnGetRemoteFileNames.AllowDrop = true;
+            this.btnGetRemoteFileNames.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGetRemoteFileNames.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.btnGetRemoteFileNames.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGetRemoteFileNames.ImageKey = "RemoteNames.png";
+            this.btnGetRemoteFileNames.ImageList = this.ilMovieFileMerger;
+            this.btnGetRemoteFileNames.Location = new System.Drawing.Point(542, 6);
+            this.btnGetRemoteFileNames.Name = "btnGetRemoteFileNames";
+            this.btnGetRemoteFileNames.Size = new System.Drawing.Size(95, 43);
+            this.btnGetRemoteFileNames.TabIndex = 58;
+            this.btnGetRemoteFileNames.TabStop = false;
+            this.btnGetRemoteFileNames.Text = "Get Remote File Names";
+            this.btnGetRemoteFileNames.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGetRemoteFileNames.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.ttMovieFileMerger.SetToolTip(this.btnGetRemoteFileNames, "Click here to get the file names fromt the Remote Host.");
+            this.btnGetRemoteFileNames.UseVisualStyleBackColor = false;
+            this.btnGetRemoteFileNames.Click += new System.EventHandler(this.btnGetRemoteFileNames_Click);
+            // 
+            // scFTPSucker
+            // 
+            this.scFTPSucker.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.scFTPSucker.Location = new System.Drawing.Point(166, 54);
+            this.scFTPSucker.Margin = new System.Windows.Forms.Padding(2);
+            this.scFTPSucker.Name = "scFTPSucker";
+            this.scFTPSucker.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // scFTPSucker.Panel1
+            // 
+            this.scFTPSucker.Panel1.Controls.Add(this.lvRemoteFiles);
+            this.scFTPSucker.Panel1.Margin = new System.Windows.Forms.Padding(1);
+            this.scFTPSucker.Panel1.Padding = new System.Windows.Forms.Padding(1);
+            this.scFTPSucker.Panel1MinSize = 100;
+            // 
+            // scFTPSucker.Panel2
+            // 
+            this.scFTPSucker.Panel2.Controls.Add(this.rtbFTPSucker);
+            this.scFTPSucker.Panel2MinSize = 100;
+            this.scFTPSucker.Size = new System.Drawing.Size(470, 283);
+            this.scFTPSucker.SplitterDistance = 179;
+            this.scFTPSucker.TabIndex = 40;
+            // 
+            // lvRemoteFiles
+            // 
+            this.lvRemoteFiles.Activation = System.Windows.Forms.ItemActivation.OneClick;
+            this.lvRemoteFiles.AllowDrop = true;
+            this.lvRemoteFiles.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.lvRemoteFiles.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.chRemoteFiles});
+            this.lvRemoteFiles.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvRemoteFiles.FullRowSelect = true;
+            this.lvRemoteFiles.GridLines = true;
+            this.lvRemoteFiles.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.lvRemoteFiles.LabelWrap = false;
+            this.lvRemoteFiles.Location = new System.Drawing.Point(1, 1);
+            this.lvRemoteFiles.Name = "lvRemoteFiles";
+            this.lvRemoteFiles.ShowItemToolTips = true;
+            this.lvRemoteFiles.Size = new System.Drawing.Size(468, 177);
+            this.lvRemoteFiles.Sorting = System.Windows.Forms.SortOrder.Ascending;
+            this.lvRemoteFiles.TabIndex = 38;
+            this.lvRemoteFiles.TabStop = false;
+            this.lvRemoteFiles.Tag = "FTP Sucker";
+            this.lvRemoteFiles.TileSize = new System.Drawing.Size(1, 1);
+            this.lvRemoteFiles.UseCompatibleStateImageBehavior = false;
+            this.lvRemoteFiles.View = System.Windows.Forms.View.Details;
+            this.lvRemoteFiles.Resize += new System.EventHandler(this.lvFTPSuckerResize);
+            // 
+            // chRemoteFiles
+            // 
+            this.chRemoteFiles.Text = "Remote Files";
+            this.chRemoteFiles.Width = 700;
+            // 
+            // rtbFTPSucker
+            // 
+            this.rtbFTPSucker.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.rtbFTPSucker.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtbFTPSucker.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rtbFTPSucker.Location = new System.Drawing.Point(0, 0);
+            this.rtbFTPSucker.Name = "rtbFTPSucker";
+            this.rtbFTPSucker.ReadOnly = true;
+            this.rtbFTPSucker.Size = new System.Drawing.Size(470, 100);
+            this.rtbFTPSucker.TabIndex = 20;
+            this.rtbFTPSucker.Text = "";
+            this.rtbFTPSucker.WordWrap = false;
+            // 
+            // btnGetWishedRemoteFiles
+            // 
+            this.btnGetWishedRemoteFiles.AllowDrop = true;
+            this.btnGetWishedRemoteFiles.BackColor = System.Drawing.SystemColors.Control;
+            this.btnGetWishedRemoteFiles.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.btnGetWishedRemoteFiles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGetWishedRemoteFiles.ImageKey = "DownloadCloud.png";
+            this.btnGetWishedRemoteFiles.ImageList = this.ilMovieFileMerger;
+            this.btnGetWishedRemoteFiles.Location = new System.Drawing.Point(167, 6);
+            this.btnGetWishedRemoteFiles.Name = "btnGetWishedRemoteFiles";
+            this.btnGetWishedRemoteFiles.Size = new System.Drawing.Size(102, 43);
+            this.btnGetWishedRemoteFiles.TabIndex = 59;
+            this.btnGetWishedRemoteFiles.TabStop = false;
+            this.btnGetWishedRemoteFiles.Text = "Get Wished Remote Files";
+            this.btnGetWishedRemoteFiles.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGetWishedRemoteFiles.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ttMovieFileMerger.SetToolTip(this.btnGetWishedRemoteFiles, "Click here to download the Wish files from the Remote Host.");
+            this.btnGetWishedRemoteFiles.UseVisualStyleBackColor = false;
+            this.btnGetWishedRemoteFiles.Click += new System.EventHandler(this.btnDownloadWishedRemoteFiles_Click);
             // 
             // tpMaintenance
             // 
@@ -2861,44 +2897,6 @@ namespace Movie_File_Merger
             // 
             this.ofdTeraCopy.FileName = "C:\\Program Files\\TeraCopy\\TeraCopy.exe";
             // 
-            // btnWishSelected
-            // 
-            this.btnWishSelected.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
-            this.btnWishSelected.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnWishSelected.ImageKey = "Wish.png";
-            this.btnWishSelected.ImageList = this.ilMovieFileMerger;
-            this.btnWishSelected.Location = new System.Drawing.Point(345, 6);
-            this.btnWishSelected.Margin = new System.Windows.Forms.Padding(2);
-            this.btnWishSelected.Name = "btnWishSelected";
-            this.btnWishSelected.Size = new System.Drawing.Size(82, 43);
-            this.btnWishSelected.TabIndex = 68;
-            this.btnWishSelected.Text = "Wish Selected";
-            this.btnWishSelected.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnWishSelected.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ttMovieFileMerger.SetToolTip(this.btnWishSelected, "Wish all items in the Import list according to the selection criteria.");
-            this.btnWishSelected.UseVisualStyleBackColor = false;
-            this.btnWishSelected.Click += new System.EventHandler(this.btnWishSelected_Click);
-            // 
-            // btnBinSelected
-            // 
-            this.btnBinSelected.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBinSelected.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
-            this.btnBinSelected.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBinSelected.ImageKey = "Garbage.gif";
-            this.btnBinSelected.ImageList = this.ilMovieFileMerger;
-            this.btnBinSelected.Location = new System.Drawing.Point(453, 6);
-            this.btnBinSelected.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBinSelected.Name = "btnBinSelected";
-            this.btnBinSelected.Size = new System.Drawing.Size(84, 43);
-            this.btnBinSelected.TabIndex = 69;
-            this.btnBinSelected.Text = "Bin Selected";
-            this.btnBinSelected.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBinSelected.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.ttMovieFileMerger.SetToolTip(this.btnBinSelected, "Put all items in all lists in the Garbage list according to the selection ctriter" +
-        "ia.");
-            this.btnBinSelected.UseVisualStyleBackColor = false;
-            this.btnBinSelected.Click += new System.EventHandler(this.btnBinSelected_Click);
-            // 
             // MFMForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2914,14 +2912,6 @@ namespace Movie_File_Merger
             this.Shown += new System.EventHandler(this.MfShown);
             this.SizeChanged += new System.EventHandler(this.MainFormSizeChanged);
             this.tcMovieFileMerger.ResumeLayout(false);
-            this.tpFTPSucker.ResumeLayout(false);
-            this.tpFTPSucker.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbFTPSuckerUserManual)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbFTPSuckerHowTo)).EndInit();
-            this.scFTPSucker.Panel1.ResumeLayout(false);
-            this.scFTPSucker.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.scFTPSucker)).EndInit();
-            this.scFTPSucker.ResumeLayout(false);
             this.tpSeparateLists.ResumeLayout(false);
             this.gbTypeSelection.ResumeLayout(false);
             this.gbProcessImport.ResumeLayout(false);
@@ -2941,6 +2931,14 @@ namespace Movie_File_Merger
             ((System.ComponentModel.ISupportInitialize)(this.pbLogUserManual)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogHowTo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogBanner)).EndInit();
+            this.tpFTPSucker.ResumeLayout(false);
+            this.tpFTPSucker.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFTPSuckerUserManual)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFTPSuckerHowTo)).EndInit();
+            this.scFTPSucker.Panel1.ResumeLayout(false);
+            this.scFTPSucker.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.scFTPSucker)).EndInit();
+            this.scFTPSucker.ResumeLayout(false);
             this.tpMaintenance.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbMFM)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMaintenanceUserManual)).EndInit();
