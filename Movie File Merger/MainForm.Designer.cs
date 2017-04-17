@@ -94,6 +94,8 @@ namespace Movie_File_Merger
             this.pbLogBanner = new System.Windows.Forms.PictureBox();
             this.rtbLog = new System.Windows.Forms.RichTextBox();
             this.tpFTPSucker = new System.Windows.Forms.TabPage();
+            this.btnEraseColorSucker = new System.Windows.Forms.Button();
+            this.btnEraseSelcectedSucker = new System.Windows.Forms.Button();
             this.btnBinSelected = new System.Windows.Forms.Button();
             this.btnWishSelected = new System.Windows.Forms.Button();
             this.lblCloudImage = new System.Windows.Forms.Label();
@@ -965,7 +967,7 @@ namespace Movie_File_Merger
             this.lvExisting.DragOver += new System.Windows.Forms.DragEventHandler(this.LvDragOver);
             this.lvExisting.GiveFeedback += new System.Windows.Forms.GiveFeedbackEventHandler(this.LvGiveFeedback);
             this.lvExisting.DoubleClick += new System.EventHandler(this.LvDoubleClick);
-            this.lvExisting.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lvKeyDown);
+            this.lvExisting.KeyDown += new System.Windows.Forms.KeyEventHandler(this.LvKeyDown);
             this.lvExisting.MouseEnter += new System.EventHandler(this.LvMouseEnter);
             // 
             // chNameExisting
@@ -1037,7 +1039,7 @@ namespace Movie_File_Merger
             this.lvWish.DragOver += new System.Windows.Forms.DragEventHandler(this.LvDragOver);
             this.lvWish.GiveFeedback += new System.Windows.Forms.GiveFeedbackEventHandler(this.LvGiveFeedback);
             this.lvWish.DoubleClick += new System.EventHandler(this.LvDoubleClick);
-            this.lvWish.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lvKeyDown);
+            this.lvWish.KeyDown += new System.Windows.Forms.KeyEventHandler(this.LvKeyDown);
             this.lvWish.MouseEnter += new System.EventHandler(this.LvMouseEnter);
             // 
             // columnHeader1
@@ -1073,7 +1075,7 @@ namespace Movie_File_Merger
             this.lvGarbage.DragOver += new System.Windows.Forms.DragEventHandler(this.LvDragOver);
             this.lvGarbage.GiveFeedback += new System.Windows.Forms.GiveFeedbackEventHandler(this.LvGiveFeedback);
             this.lvGarbage.DoubleClick += new System.EventHandler(this.LvDoubleClick);
-            this.lvGarbage.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lvKeyDown);
+            this.lvGarbage.KeyDown += new System.Windows.Forms.KeyEventHandler(this.LvKeyDown);
             this.lvGarbage.MouseEnter += new System.EventHandler(this.LvMouseEnter);
             // 
             // chNameGarbage
@@ -1110,7 +1112,7 @@ namespace Movie_File_Merger
             this.lvImport.DragOver += new System.Windows.Forms.DragEventHandler(this.LvDragOver);
             this.lvImport.GiveFeedback += new System.Windows.Forms.GiveFeedbackEventHandler(this.LvGiveFeedback);
             this.lvImport.DoubleClick += new System.EventHandler(this.LvDoubleClick);
-            this.lvImport.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lvKeyDown);
+            this.lvImport.KeyDown += new System.Windows.Forms.KeyEventHandler(this.LvKeyDown);
             this.lvImport.MouseEnter += new System.EventHandler(this.LvMouseEnter);
             // 
             // chNameImport
@@ -1268,6 +1270,8 @@ namespace Movie_File_Merger
             // 
             // tpFTPSucker
             // 
+            this.tpFTPSucker.Controls.Add(this.btnEraseColorSucker);
+            this.tpFTPSucker.Controls.Add(this.btnEraseSelcectedSucker);
             this.tpFTPSucker.Controls.Add(this.btnBinSelected);
             this.tpFTPSucker.Controls.Add(this.btnWishSelected);
             this.tpFTPSucker.Controls.Add(this.lblCloudImage);
@@ -1301,6 +1305,50 @@ namespace Movie_File_Merger
             this.tpFTPSucker.Text = "FTP Sucker";
             this.tpFTPSucker.UseVisualStyleBackColor = true;
             // 
+            // btnEraseColorSucker
+            // 
+            this.btnEraseColorSucker.AllowDrop = true;
+            this.btnEraseColorSucker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEraseColorSucker.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.btnEraseColorSucker.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEraseColorSucker.ImageKey = "Color.gif";
+            this.btnEraseColorSucker.ImageList = this.ilMovieFileMerger;
+            this.btnEraseColorSucker.Location = new System.Drawing.Point(385, 6);
+            this.btnEraseColorSucker.Name = "btnEraseColorSucker";
+            this.btnEraseColorSucker.Size = new System.Drawing.Size(80, 43);
+            this.btnEraseColorSucker.TabIndex = 71;
+            this.btnEraseColorSucker.TabStop = false;
+            this.btnEraseColorSucker.Text = "Erase Color";
+            this.btnEraseColorSucker.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEraseColorSucker.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.ttMovieFileMerger.SetToolTip(this.btnEraseColorSucker, "Drop an item with a color here to erase all items of the same color from a list.");
+            this.btnEraseColorSucker.UseVisualStyleBackColor = false;
+            this.btnEraseColorSucker.Click += new System.EventHandler(this.BtnEraseColorSucker_Click);
+            this.btnEraseColorSucker.DragDrop += new System.Windows.Forms.DragEventHandler(this.BtnEraseColorDragDrop);
+            this.btnEraseColorSucker.DragOver += new System.Windows.Forms.DragEventHandler(this.BtnDragOver);
+            // 
+            // btnEraseSelcectedSucker
+            // 
+            this.btnEraseSelcectedSucker.AllowDrop = true;
+            this.btnEraseSelcectedSucker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEraseSelcectedSucker.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.btnEraseSelcectedSucker.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEraseSelcectedSucker.ImageKey = "Erase.gif";
+            this.btnEraseSelcectedSucker.ImageList = this.ilMovieFileMerger;
+            this.btnEraseSelcectedSucker.Location = new System.Drawing.Point(299, 6);
+            this.btnEraseSelcectedSucker.Name = "btnEraseSelcectedSucker";
+            this.btnEraseSelcectedSucker.Size = new System.Drawing.Size(80, 43);
+            this.btnEraseSelcectedSucker.TabIndex = 70;
+            this.btnEraseSelcectedSucker.TabStop = false;
+            this.btnEraseSelcectedSucker.Text = "Erase Selected";
+            this.btnEraseSelcectedSucker.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEraseSelcectedSucker.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ttMovieFileMerger.SetToolTip(this.btnEraseSelcectedSucker, "Drop items here to erase them from a list.");
+            this.btnEraseSelcectedSucker.UseVisualStyleBackColor = false;
+            this.btnEraseSelcectedSucker.Click += new System.EventHandler(this.BtnEraseSelcectedSucker_Click);
+            this.btnEraseSelcectedSucker.DragDrop += new System.Windows.Forms.DragEventHandler(this.BtnEraseSelectedDragDrop);
+            this.btnEraseSelcectedSucker.DragOver += new System.Windows.Forms.DragEventHandler(this.BtnDragOver);
+            // 
             // btnBinSelected
             // 
             this.btnBinSelected.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -1308,10 +1356,10 @@ namespace Movie_File_Merger
             this.btnBinSelected.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBinSelected.ImageKey = "Garbage.gif";
             this.btnBinSelected.ImageList = this.ilMovieFileMerger;
-            this.btnBinSelected.Location = new System.Drawing.Point(453, 6);
+            this.btnBinSelected.Location = new System.Drawing.Point(554, 6);
             this.btnBinSelected.Margin = new System.Windows.Forms.Padding(2);
             this.btnBinSelected.Name = "btnBinSelected";
-            this.btnBinSelected.Size = new System.Drawing.Size(84, 43);
+            this.btnBinSelected.Size = new System.Drawing.Size(80, 43);
             this.btnBinSelected.TabIndex = 69;
             this.btnBinSelected.Text = "Bin Selected";
             this.btnBinSelected.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1319,25 +1367,26 @@ namespace Movie_File_Merger
             this.ttMovieFileMerger.SetToolTip(this.btnBinSelected, "Put all items in all lists in the Garbage list according to the selection ctriter" +
         "ia.");
             this.btnBinSelected.UseVisualStyleBackColor = false;
-            this.btnBinSelected.Click += new System.EventHandler(this.btnBinSelected_Click);
+            this.btnBinSelected.Click += new System.EventHandler(this.BtnBinSelected_Click);
             // 
             // btnWishSelected
             // 
+            this.btnWishSelected.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnWishSelected.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
             this.btnWishSelected.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnWishSelected.ImageKey = "Wish.png";
             this.btnWishSelected.ImageList = this.ilMovieFileMerger;
-            this.btnWishSelected.Location = new System.Drawing.Point(345, 6);
+            this.btnWishSelected.Location = new System.Drawing.Point(470, 6);
             this.btnWishSelected.Margin = new System.Windows.Forms.Padding(2);
             this.btnWishSelected.Name = "btnWishSelected";
-            this.btnWishSelected.Size = new System.Drawing.Size(82, 43);
+            this.btnWishSelected.Size = new System.Drawing.Size(80, 43);
             this.btnWishSelected.TabIndex = 68;
             this.btnWishSelected.Text = "Wish Selected";
             this.btnWishSelected.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnWishSelected.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ttMovieFileMerger.SetToolTip(this.btnWishSelected, "Wish all items in the Import list according to the selection criteria.");
             this.btnWishSelected.UseVisualStyleBackColor = false;
-            this.btnWishSelected.Click += new System.EventHandler(this.btnWishSelected_Click);
+            this.btnWishSelected.Click += new System.EventHandler(this.BtnWishSelected_Click);
             // 
             // lblCloudImage
             // 
@@ -1365,7 +1414,7 @@ namespace Movie_File_Merger
             this.btnBrowseLocalPath.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ttMovieFileMerger.SetToolTip(this.btnBrowseLocalPath, "Click to change the local file path.");
             this.btnBrowseLocalPath.UseVisualStyleBackColor = false;
-            this.btnBrowseLocalPath.Click += new System.EventHandler(this.btnBrowseLocalPath_Click);
+            this.btnBrowseLocalPath.Click += new System.EventHandler(this.BtnBrowseLocalPath_Click);
             // 
             // tbPassword
             // 
@@ -1388,9 +1437,9 @@ namespace Movie_File_Merger
             this.btnColorList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnColorList.ImageKey = "Color.gif";
             this.btnColorList.ImageList = this.ilMovieFileMerger;
-            this.btnColorList.Location = new System.Drawing.Point(275, 6);
+            this.btnColorList.Location = new System.Drawing.Point(166, 6);
             this.btnColorList.Name = "btnColorList";
-            this.btnColorList.Size = new System.Drawing.Size(65, 43);
+            this.btnColorList.Size = new System.Drawing.Size(60, 43);
             this.btnColorList.TabIndex = 65;
             this.btnColorList.TabStop = false;
             this.btnColorList.Text = "Color List";
@@ -1398,7 +1447,7 @@ namespace Movie_File_Merger
             this.btnColorList.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ttMovieFileMerger.SetToolTip(this.btnColorList, "Click here to move the files in the Import list and color them accordingly.");
             this.btnColorList.UseVisualStyleBackColor = false;
-            this.btnColorList.Click += new System.EventHandler(this.btnColorList_Click);
+            this.btnColorList.Click += new System.EventHandler(this.BtnColorList_Click);
             // 
             // pbFTPSuckerUserManual
             // 
@@ -1571,12 +1620,11 @@ namespace Movie_File_Merger
             this.btnOpenWinSCP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ttMovieFileMerger.SetToolTip(this.btnOpenWinSCP, "Click here to open the WinSCP FTP application.");
             this.btnOpenWinSCP.UseVisualStyleBackColor = false;
-            this.btnOpenWinSCP.Click += new System.EventHandler(this.btnOpenWinSCP_Click);
+            this.btnOpenWinSCP.Click += new System.EventHandler(this.BtnOpenWinSCP_Click);
             // 
             // btnGetRemoteFileNames
             // 
             this.btnGetRemoteFileNames.AllowDrop = true;
-            this.btnGetRemoteFileNames.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGetRemoteFileNames.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
             this.btnGetRemoteFileNames.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGetRemoteFileNames.ImageKey = "RemoteNames.png";
@@ -1591,7 +1639,7 @@ namespace Movie_File_Merger
             this.btnGetRemoteFileNames.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ttMovieFileMerger.SetToolTip(this.btnGetRemoteFileNames, "Click here to get the file names fromt the Remote Host.");
             this.btnGetRemoteFileNames.UseVisualStyleBackColor = false;
-            this.btnGetRemoteFileNames.Click += new System.EventHandler(this.btnGetRemoteFileNames_Click);
+            this.btnGetRemoteFileNames.Click += new System.EventHandler(this.BtnGetRemoteFileNames_Click);
             // 
             // scFTPSucker
             // 
@@ -1641,7 +1689,14 @@ namespace Movie_File_Merger
             this.lvRemoteFiles.TileSize = new System.Drawing.Size(1, 1);
             this.lvRemoteFiles.UseCompatibleStateImageBehavior = false;
             this.lvRemoteFiles.View = System.Windows.Forms.View.Details;
-            this.lvRemoteFiles.Resize += new System.EventHandler(this.lvFTPSuckerResize);
+            this.lvRemoteFiles.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.LvItemsDrag);
+            this.lvRemoteFiles.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.LvItemSelectionChanged);
+            this.lvRemoteFiles.DragDrop += new System.Windows.Forms.DragEventHandler(this.LvDragDrop);
+            this.lvRemoteFiles.DragOver += new System.Windows.Forms.DragEventHandler(this.LvDragOver);
+            this.lvRemoteFiles.GiveFeedback += new System.Windows.Forms.GiveFeedbackEventHandler(this.LvGiveFeedback);
+            this.lvRemoteFiles.KeyDown += new System.Windows.Forms.KeyEventHandler(this.LvKeyDown);
+            this.lvRemoteFiles.MouseEnter += new System.EventHandler(this.LvMouseEnter);
+            this.lvRemoteFiles.Resize += new System.EventHandler(this.LvFTPSuckerResize);
             // 
             // chRemoteFiles
             // 
@@ -1679,7 +1734,7 @@ namespace Movie_File_Merger
             this.btnGetWishedRemoteFiles.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ttMovieFileMerger.SetToolTip(this.btnGetWishedRemoteFiles, "Click here to download the Wish files from the Remote Host.");
             this.btnGetWishedRemoteFiles.UseVisualStyleBackColor = false;
-            this.btnGetWishedRemoteFiles.Click += new System.EventHandler(this.btnDownloadWishedRemoteFiles_Click);
+            this.btnGetWishedRemoteFiles.Click += new System.EventHandler(this.BtnDownloadWishedRemoteFiles_Click);
             // 
             // tpMaintenance
             // 
@@ -2066,7 +2121,7 @@ namespace Movie_File_Merger
             this.lvMaintenance.DragOver += new System.Windows.Forms.DragEventHandler(this.LvDragOver);
             this.lvMaintenance.GiveFeedback += new System.Windows.Forms.GiveFeedbackEventHandler(this.LvGiveFeedback);
             this.lvMaintenance.DoubleClick += new System.EventHandler(this.LvDoubleClick);
-            this.lvMaintenance.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lvKeyDown);
+            this.lvMaintenance.KeyDown += new System.Windows.Forms.KeyEventHandler(this.LvKeyDown);
             this.lvMaintenance.MouseEnter += new System.EventHandler(this.LvMouseEnter);
             this.lvMaintenance.Resize += new System.EventHandler(this.LvMaintenanceResize);
             // 
@@ -3140,5 +3195,7 @@ namespace Movie_File_Merger
         private System.Windows.Forms.Button btnBrowseLocalPath;
         private System.Windows.Forms.Button btnWishSelected;
         private System.Windows.Forms.Button btnBinSelected;
+        private System.Windows.Forms.Button btnEraseColorSucker;
+        private System.Windows.Forms.Button btnEraseSelcectedSucker;
     }
 }

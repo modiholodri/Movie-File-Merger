@@ -1994,7 +1994,7 @@ namespace Movie_File_Merger
         /// </summary>
         /// <param name="sender">The object that invoked the event that fired the event handler.</param>
         /// <param name="e">The arguments that the implementor of this event may find useful.</param>
-        void lvKeyDown( object sender, KeyEventArgs e )
+        void LvKeyDown( object sender, KeyEventArgs e )
         {
             var lvThis = (ListView)sender;
 
@@ -3205,9 +3205,8 @@ namespace Movie_File_Merger
             LogFTPSuckerMessage("Error", Color.Red, strMessage);
         }
 
-        private void btnGetRemoteFileNames_Click(object sender, EventArgs e)
+        private void BtnGetRemoteFileNames_Click(object sender, EventArgs e)
         {
-
             LogFTPSuckerMajorAction("Trying to get Remote File Names...");
             try
             {
@@ -3260,7 +3259,7 @@ namespace Movie_File_Merger
             ShowInfo("Finshed getting Remote File Names...");
         }
 
-        private void btnDownloadWishedRemoteFiles_Click(object sender, EventArgs e)
+        private void BtnDownloadWishedRemoteFiles_Click(object sender, EventArgs e)
         {
 
             LogFTPSuckerMajorAction("Trying to download Wished Remote Files...");
@@ -3349,7 +3348,7 @@ namespace Movie_File_Merger
             ShowInfo("Finshed downloading Wished Remote Files...");
         }
 
-        private void lvFTPSuckerResize(object sender, EventArgs e)
+        private void LvFTPSuckerResize(object sender, EventArgs e)
         {
             lvRemoteFiles.Columns[0].Width = lvRemoteFiles.Width - 35;
         }
@@ -3399,26 +3398,26 @@ namespace Movie_File_Merger
             }
         }
 
-        private void btnColorList_Click(object sender, EventArgs e)
+        private void BtnColorList_Click(object sender, EventArgs e)
         {
             AddRemoteListToImport();
             ColorRemoteList();
         }
 
-        private void btnOpenWinSCP_Click(object sender, EventArgs e)
+        private void BtnOpenWinSCP_Click(object sender, EventArgs e)
         {
             // ExecuteThis(Path.GetDirectoryName(Application.ExecutablePath) + "\\WinSCP.exe /command open ftp://" + tbUserName.Text + ":" + tbPassword.Text + "@" + tbHostName.Text);
             ExecuteThis(Path.GetDirectoryName(Application.ExecutablePath) + "\\WinSCP.exe");
         }
 
-        private void btnBrowseLocalPath_Click(object sender, EventArgs e)
+        private void BtnBrowseLocalPath_Click(object sender, EventArgs e)
         {
             fbdMovieFileMerger.SelectedPath = tbLocalPath.Text;
             fbdMovieFileMerger.ShowDialog();
             tbLocalPath.Text = fbdMovieFileMerger.SelectedPath;
         }
 
-        private void btnWishSelected_Click(object sender, EventArgs e)
+        private void BtnWishSelected_Click(object sender, EventArgs e)
         {
             foreach (ListViewItem lviRemoteFile in lvRemoteFiles.Items)
             {
@@ -3436,7 +3435,7 @@ namespace Movie_File_Merger
             ColorRemoteList();
         }
 
-        private void btnBinSelected_Click(object sender, EventArgs e)
+        private void BtnBinSelected_Click(object sender, EventArgs e)
         {
             foreach (ListViewItem lviRemoteFile in lvRemoteFiles.Items)
             {
@@ -3452,6 +3451,16 @@ namespace Movie_File_Merger
                 }
             }
             ColorRemoteList();
+        }
+
+        private void BtnEraseSelcectedSucker_Click( object sender, EventArgs e )
+        {
+            ShowInfo( "Sorry! Not yet implemented..." );
+        }
+
+        private void BtnEraseColorSucker_Click( object sender, EventArgs e )
+        {
+            ShowInfo( "Sorry! Not yet implemented..." );
         }
     }
 #endregion FTP Sucker
