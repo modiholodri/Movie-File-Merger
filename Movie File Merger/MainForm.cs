@@ -2930,6 +2930,13 @@ namespace Movie_File_Merger
             tbBadEpisodeNameRegex.Text = readXmlSetting( xmlSettings, "/MFMSettings/NameUnification/BadEpisodeRegex", @".[Ss]\d{1,2}[Ee]\d{1,2}" );
             tbBadMovieNameRegex.Text = readXmlSetting( xmlSettings, "/MFMSettings/NameUnification/BadMovieRegex", @".[12]\d{3}" );
 
+            // FTP Sucker settings
+            tbUserName.Text = readXmlSetting( xmlSettings, "/MFMSettings/FTPSucker/UserName", "" );
+            tbHostName.Text = readXmlSetting( xmlSettings, "/MFMSettings/FTPSucker/HostName", "" );
+            tbRemotePath.Text = readXmlSetting( xmlSettings, "/MFMSettings/FTPSucker/RemotePath", @"/videos" );
+            tbPortNumber.Text = readXmlSetting( xmlSettings, "/MFMSettings/FTPSucker/PortNumber", "21" );
+            tbLocalPath.Text = readXmlSetting( xmlSettings, "/MFMSettings/FTPSucker/LocalPath", @"C:\Downloads" );
+
             // Supporting Programms settings 
             strTeraCopyPath = readXmlSetting( xmlSettings, "/MFMSettings/SupportingProgramms/TeraCopyPath", @"C:\Program Files\TeraCopy\TeraCopy.exe" );
 
@@ -3023,6 +3030,14 @@ namespace Movie_File_Merger
 
                 writer.WriteStartElement( "SupportingProgramms" );  // Supporting Programms settings group
                 writer.WriteElementString( "TeraCopyPath", strTeraCopyPath );
+                writer.WriteEndElement( );
+
+                writer.WriteStartElement( "FTPSucker" );  // FTP Sucker settings group
+                writer.WriteElementString( "UserName", tbUserName.Text );
+                writer.WriteElementString( "HostName", tbHostName.Text );
+                writer.WriteElementString( "RemotePath", tbRemotePath.Text );
+                writer.WriteElementString( "PortNumber", tbPortNumber.Text );
+                writer.WriteElementString( "LocalPath", tbLocalPath.Text );
                 writer.WriteEndElement( );
 
                 writer.WriteEndElement( );  // close the root element
