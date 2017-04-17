@@ -940,10 +940,13 @@ namespace Movie_File_Merger
         /// <param name="lvListView">The list view with the selected items.</param>
         void SearchDownload( ListView lvListView )
         {
-            string strCleanName = "";
+            int iCount = 1;
             foreach ( ListViewItem lviItem in lvListView.SelectedItems ) {
-                strCleanName = Path.GetFileNameWithoutExtension( lviItem.Text ).Replace( ' ', '+' );
+                string strCleanName = Path.GetFileNameWithoutExtension( lviItem.Text ).Replace( ' ', '+' );
                 SearchDownload( strCleanName );
+                if ( iCount++ % 10 == 0 ) {
+                    if ( ShowYesNoQuestion( "You searched for 10 Items already.\nSearch for the next 10?" ) == DialogResult.No ) break;
+                }
             }
         }
 
@@ -954,10 +957,14 @@ namespace Movie_File_Merger
         /// <param name="strcolToSearch">The list view with the selected items.</param>
         void SearchDownload( string[] strcolToSearch )
         {
+            int iCount = 1;
             foreach ( string strPath in strcolToSearch ) {
                 string strCleanName = Path.GetFileNameWithoutExtension( strPath ).Replace( ' ', '+' );
                 LogMessage( "Info", Color.Blue, "Searching " + cobSearchDownloadMaintenance.Text + " for " + strCleanName );
                 SearchDownload( strCleanName );
+                if ( iCount++ % 10 == 0 ) {
+                    if ( ShowYesNoQuestion( "You searched for 10 Items already.\nSearch for the next 10?" ) == DialogResult.No ) break;
+                }
             }
         }
 
@@ -968,8 +975,12 @@ namespace Movie_File_Merger
         /// <param name="lvListView">The list view with the selected items.</param>
         void SearchInfo( ListView lvListView )
         {
+            int iCount = 1;
             foreach ( ListViewItem lviItem in lvListView.SelectedItems ) {
                 SearchInfo( lviItem.Text );
+                if ( iCount++ % 10 == 0 ) {
+                    if ( ShowYesNoQuestion( "You searched for 10 Items already.\nSearch for the next 10?" ) == DialogResult.No ) break;
+                }
             }
         }
 
@@ -980,8 +991,12 @@ namespace Movie_File_Merger
         /// <param name="strcolToSearch">The list view with the selected items.</param>
         void SearchInfo( string[] strcolToSearch )
         {
+            int iCount = 1;
             foreach ( string strPath in strcolToSearch ) {
                 SearchInfo( strPath );
+                if ( iCount++ % 10 == 0 ) {
+                    if ( ShowYesNoQuestion( "You searched for 10 Items already.\nSearch for the next 10?" ) == DialogResult.No ) break;
+                }
             }
         }
 
