@@ -3455,12 +3455,12 @@ namespace Movie_File_Merger
 
         private void BtnEraseSelcectedSucker_Click( object sender, EventArgs e )
         {
-            ShowInfo( "Sorry! Not yet implemented..." );
-        }
-
-        private void BtnEraseColorSucker_Click( object sender, EventArgs e )
-        {
-            ShowInfo( "Sorry! Not yet implemented..." );
+            foreach ( ListViewItem lviRemoteFile in lvRemoteFiles.Items ) {
+                if ( lviRemoteFile.Selected ) {
+                    lvRemoteFiles.Items.Remove( lviRemoteFile );
+                }
+            }
+            ColorRemoteList( );
         }
     }
 #endregion FTP Sucker

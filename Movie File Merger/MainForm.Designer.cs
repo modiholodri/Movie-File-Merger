@@ -1323,7 +1323,6 @@ namespace Movie_File_Merger
             this.btnEraseColorSucker.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.ttMovieFileMerger.SetToolTip(this.btnEraseColorSucker, "Drop an item with a color here to erase all items of the same color from a list.");
             this.btnEraseColorSucker.UseVisualStyleBackColor = false;
-            this.btnEraseColorSucker.Click += new System.EventHandler(this.BtnEraseColorSucker_Click);
             this.btnEraseColorSucker.DragDrop += new System.Windows.Forms.DragEventHandler(this.BtnEraseColorDragDrop);
             this.btnEraseColorSucker.DragOver += new System.Windows.Forms.DragEventHandler(this.BtnDragOver);
             // 
@@ -1364,8 +1363,8 @@ namespace Movie_File_Merger
             this.btnBinSelected.Text = "Bin Selected";
             this.btnBinSelected.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBinSelected.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.ttMovieFileMerger.SetToolTip(this.btnBinSelected, "Put all items in all lists in the Garbage list according to the selection ctriter" +
-        "ia.");
+            this.ttMovieFileMerger.SetToolTip(this.btnBinSelected, "Put all selected Remote File items in the Garbage list, if they are a main or add" +
+        "-on item.");
             this.btnBinSelected.UseVisualStyleBackColor = false;
             this.btnBinSelected.Click += new System.EventHandler(this.BtnBinSelected_Click);
             // 
@@ -1384,7 +1383,8 @@ namespace Movie_File_Merger
             this.btnWishSelected.Text = "Wish Selected";
             this.btnWishSelected.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnWishSelected.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ttMovieFileMerger.SetToolTip(this.btnWishSelected, "Wish all items in the Import list according to the selection criteria.");
+            this.ttMovieFileMerger.SetToolTip(this.btnWishSelected, "Wish all selected items in the Remote Files list, if they are a main or add-on it" +
+        "em.");
             this.btnWishSelected.UseVisualStyleBackColor = false;
             this.btnWishSelected.Click += new System.EventHandler(this.BtnWishSelected_Click);
             // 
@@ -1445,7 +1445,7 @@ namespace Movie_File_Merger
             this.btnColorList.Text = "Color List";
             this.btnColorList.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnColorList.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ttMovieFileMerger.SetToolTip(this.btnColorList, "Click here to move the files in the Import list and color them accordingly.");
+            this.ttMovieFileMerger.SetToolTip(this.btnColorList, "Click here to color the FTP Sucker items according to the Lists tab.");
             this.btnColorList.UseVisualStyleBackColor = false;
             this.btnColorList.Click += new System.EventHandler(this.BtnColorList_Click);
             // 
