@@ -414,7 +414,7 @@ namespace Movie_File_Merger
             this.cobDownloadCriteria.Name = "cobDownloadCriteria";
             this.cobDownloadCriteria.Size = new System.Drawing.Size(18, 21);
             this.cobDownloadCriteria.TabIndex = 49;
-            this.cobDownloadCriteria.Text = "IMDb";
+            this.cobDownloadCriteria.Text = "1080p";
             this.ttMovieFileMerger.SetToolTip(this.cobDownloadCriteria, "Select additional download criteria or simply Don\'t Care.");
             // 
             // btnPlay
@@ -2120,7 +2120,7 @@ namespace Movie_File_Merger
             this.lvMaintenance.DragDrop += new System.Windows.Forms.DragEventHandler(this.LvMaintenanceDragDrop);
             this.lvMaintenance.DragOver += new System.Windows.Forms.DragEventHandler(this.LvDragOver);
             this.lvMaintenance.GiveFeedback += new System.Windows.Forms.GiveFeedbackEventHandler(this.LvGiveFeedback);
-            this.lvMaintenance.DoubleClick += new System.EventHandler(this.LvDoubleClick);
+            this.lvMaintenance.DoubleClick += new System.EventHandler(this.LvMaintenanceDoubleClick);
             this.lvMaintenance.KeyDown += new System.Windows.Forms.KeyEventHandler(this.LvKeyDown);
             this.lvMaintenance.MouseEnter += new System.EventHandler(this.LvMouseEnter);
             this.lvMaintenance.Resize += new System.EventHandler(this.LvMaintenanceResize);

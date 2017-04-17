@@ -2746,6 +2746,36 @@ namespace Movie_File_Merger
         // Functions realated to Status or Info Messages and Log tab.
 
         /// <summary>
+        /// A list view item has been double clicked.  Seach IMDb.
+        /// </summary>
+        /// <param name="sender">The object that invoked the event that fired the event handler.</param>
+        /// <param name="e">The arguments that the implementor of this event may find useful.</param>
+        private void LvMaintenanceDoubleClick( object sender, EventArgs e )
+        {
+            string strPath = "";
+            foreach ( ListViewItem lviThis in lvMaintenance.SelectedItems ) {
+                strPath = lviThis.Text;
+            }
+            string strCleanName = CleanName( Path.GetFileNameWithoutExtension( strPath ) );
+            switch ( cobDoubleClickDefault.Text ) {
+                case "Play":
+                    ExecuteThis( strPath );
+                    break;
+                case "Search Info":
+                    SearchInfo( strCleanName );
+                    break;
+                case "Search Download":
+                    SearchDownload( strCleanName );
+                    break;
+                default:
+                    ExecuteThis( strPath );
+                    break;
+            }
+        }
+
+
+
+        /// <summary>
         /// Adds a mesage, with the date, type, and a certain color, to the rich text box on the log tab. 
         /// </summary>
         /// <param name="strType">The type name of the message.</param>
@@ -2907,7 +2937,7 @@ namespace Movie_File_Merger
             strNickName = readXmlSetting( xmlSettings, "/MFMSettings/General/NickName", "Anonymous" );
             cobSearchInfo.Text = readXmlSetting( xmlSettings, "/MFMSettings/General/SeachInfo", "Google" );
             cobSearchDownload.Text = readXmlSetting( xmlSettings, "/MFMSettings/General/SeachDownload", "Rarbg" );
-            cobDownloadCriteria.Text = readXmlSetting( xmlSettings, "/MFMSettings/General/DownloadCriteria", "720p" );
+            cobDownloadCriteria.Text = readXmlSetting( xmlSettings, "/MFMSettings/General/DownloadCriteria", "1080p" );
             cobDoubleClickDefault.Text = readXmlSetting( xmlSettings, "/MFMSettings/General/DoubleClickDefault", "Play" );
             cbGetHigherRes.Checked = readXmlSetting( xmlSettings, "/MFMSettings/General/GetHigherRes", "True" ) == "True";
             lblLastChecked.Text = readXmlSetting( xmlSettings, "/MFMSettings/General/LastChecked", "Last Checked: Never" );
