@@ -2740,7 +2740,7 @@ namespace Movie_File_Merger
         void LvGiveFeedback( object sender, GiveFeedbackEventArgs e )
         {
             e.UseDefaultCursors = false;
-            var bmp = new Bitmap( pbMFM.Image );
+            var bmp = new Bitmap( pbMaintenanceDonate.Image );
             var cur = new Cursor( bmp.GetHicon( ) );
             Cursor.Current = cur;
         }
@@ -3214,11 +3214,11 @@ namespace Movie_File_Merger
         }
 
         /// <summary>
-        /// Launch the MFM Donation page if the link label has been clicked.
+        /// Launch the MFM Donation page if a donation thing has been clicked.
         /// </summary>
 		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
 		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
-        private void llDonateABeerOrTwo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void pbDonate_Click( object sender, EventArgs e )
         {
             ExecuteThis( "https://movie-file-merger.org/donations.html#Donations" );
         }
@@ -3229,6 +3229,9 @@ namespace Movie_File_Merger
 		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
 		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
         private void llGitHubSourceCode_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+        }
+        private void pbGitHubSocialCoding_Click( object sender, EventArgs e )
         {
             ExecuteThis("https://github.com/Modi777/Movie-File-Merger");
         }
@@ -3521,6 +3524,11 @@ namespace Movie_File_Merger
                 }
             }
             ColorRemoteList( );
+        }
+
+        private void pbMaintenanceBitCoins_Click( object sender, EventArgs e )
+        {
+            ExecuteThis( "https://www.coinbase.com/modi" );
         }
     }
 #endregion FTP Sucker

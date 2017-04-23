@@ -59,5 +59,15 @@ namespace Movie_File_Merger.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DonateButtonLong {
+            get {
+                object obj = ResourceManager.GetObject("DonateButtonLong", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

@@ -131,6 +131,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Icons\DonateButtonLong.png" />
     <Content Include="ProfilingSessions\Session20141230_105717.sdps" />
   </ItemGroup>
   <ItemGroup>
