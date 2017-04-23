@@ -1320,7 +1320,9 @@ namespace Movie_File_Merger
             // 
             // pictureBox1
             // 
+            this.pictureBox1.ErrorImage = null;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.InitialImage = null;
             this.pictureBox1.Location = new System.Drawing.Point(6, 5);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(154, 69);
@@ -1478,7 +1480,9 @@ namespace Movie_File_Merger
             // 
             // pbFTPSuckerUserManual
             // 
+            this.pbFTPSuckerUserManual.ErrorImage = null;
             this.pbFTPSuckerUserManual.Image = ((System.Drawing.Image)(resources.GetObject("pbFTPSuckerUserManual.Image")));
+            this.pbFTPSuckerUserManual.InitialImage = null;
             this.pbFTPSuckerUserManual.Location = new System.Drawing.Point(10, 340);
             this.pbFTPSuckerUserManual.Margin = new System.Windows.Forms.Padding(2);
             this.pbFTPSuckerUserManual.Name = "pbFTPSuckerUserManual";
@@ -1493,7 +1497,9 @@ namespace Movie_File_Merger
             // 
             // pbFTPSuckerHowTo
             // 
+            this.pbFTPSuckerHowTo.ErrorImage = null;
             this.pbFTPSuckerHowTo.Image = ((System.Drawing.Image)(resources.GetObject("pbFTPSuckerHowTo.Image")));
+            this.pbFTPSuckerHowTo.InitialImage = null;
             this.pbFTPSuckerHowTo.Location = new System.Drawing.Point(88, 340);
             this.pbFTPSuckerHowTo.Margin = new System.Windows.Forms.Padding(2);
             this.pbFTPSuckerHowTo.Name = "pbFTPSuckerHowTo";
@@ -1801,8 +1807,9 @@ namespace Movie_File_Merger
             // 
             // pbMaintenanceDonate
             // 
+            this.pbMaintenanceDonate.ErrorImage = null;
             this.pbMaintenanceDonate.Image = ((System.Drawing.Image)(resources.GetObject("pbMaintenanceDonate.Image")));
-            this.pbMaintenanceDonate.InitialImage = ((System.Drawing.Image)(resources.GetObject("pbMaintenanceDonate.InitialImage")));
+            this.pbMaintenanceDonate.InitialImage = null;
             this.pbMaintenanceDonate.Location = new System.Drawing.Point(2, 5);
             this.pbMaintenanceDonate.Margin = new System.Windows.Forms.Padding(2);
             this.pbMaintenanceDonate.Name = "pbMaintenanceDonate";
@@ -1971,7 +1978,9 @@ namespace Movie_File_Merger
             // 
             // pbMaintenanceUserManual
             // 
+            this.pbMaintenanceUserManual.ErrorImage = null;
             this.pbMaintenanceUserManual.Image = ((System.Drawing.Image)(resources.GetObject("pbMaintenanceUserManual.Image")));
+            this.pbMaintenanceUserManual.InitialImage = null;
             this.pbMaintenanceUserManual.Location = new System.Drawing.Point(9, 300);
             this.pbMaintenanceUserManual.Margin = new System.Windows.Forms.Padding(2);
             this.pbMaintenanceUserManual.Name = "pbMaintenanceUserManual";
@@ -2243,7 +2252,9 @@ namespace Movie_File_Merger
             // pbSeetingsHowTo
             // 
             this.pbSeetingsHowTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbSeetingsHowTo.ErrorImage = null;
             this.pbSeetingsHowTo.Image = ((System.Drawing.Image)(resources.GetObject("pbSeetingsHowTo.Image")));
+            this.pbSeetingsHowTo.InitialImage = null;
             this.pbSeetingsHowTo.Location = new System.Drawing.Point(586, 5);
             this.pbSeetingsHowTo.Margin = new System.Windows.Forms.Padding(2);
             this.pbSeetingsHowTo.Name = "pbSeetingsHowTo";
@@ -2268,12 +2279,16 @@ namespace Movie_File_Merger
             this.btnResetSettings.Size = new System.Drawing.Size(122, 21);
             this.btnResetSettings.TabIndex = 39;
             this.btnResetSettings.Text = "Reset All Settings";
+            this.ttMovieFileMerger.SetToolTip(this.btnResetSettings, "Resets all settings to the default values.  If you want to keep the old settings " +
+        "make a manual backup first.");
             this.btnResetSettings.UseVisualStyleBackColor = true;
             this.btnResetSettings.Click += new System.EventHandler(this.BtnResetSettingsClick);
             // 
             // pbSettingsUserManual
             // 
+            this.pbSettingsUserManual.ErrorImage = null;
             this.pbSettingsUserManual.Image = ((System.Drawing.Image)(resources.GetObject("pbSettingsUserManual.Image")));
+            this.pbSettingsUserManual.InitialImage = null;
             this.pbSettingsUserManual.Location = new System.Drawing.Point(4, 5);
             this.pbSettingsUserManual.Margin = new System.Windows.Forms.Padding(2);
             this.pbSettingsUserManual.Name = "pbSettingsUserManual";
@@ -2290,7 +2305,9 @@ namespace Movie_File_Merger
             // 
             this.pbSettingsBanner.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbSettingsBanner.ErrorImage = null;
             this.pbSettingsBanner.Image = ((System.Drawing.Image)(resources.GetObject("pbSettingsBanner.Image")));
+            this.pbSettingsBanner.InitialImage = null;
             this.pbSettingsBanner.Location = new System.Drawing.Point(5, 5);
             this.pbSettingsBanner.Margin = new System.Windows.Forms.Padding(2);
             this.pbSettingsBanner.Name = "pbSettingsBanner";
@@ -2663,7 +2680,9 @@ namespace Movie_File_Merger
             // 
             // pbInstructionsUserManual
             // 
+            this.pbInstructionsUserManual.ErrorImage = null;
             this.pbInstructionsUserManual.Image = ((System.Drawing.Image)(resources.GetObject("pbInstructionsUserManual.Image")));
+            this.pbInstructionsUserManual.InitialImage = null;
             this.pbInstructionsUserManual.Location = new System.Drawing.Point(5, 5);
             this.pbInstructionsUserManual.Margin = new System.Windows.Forms.Padding(2);
             this.pbInstructionsUserManual.Name = "pbInstructionsUserManual";
@@ -2679,7 +2698,9 @@ namespace Movie_File_Merger
             // pbInstructionsHowTo
             // 
             this.pbInstructionsHowTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbInstructionsHowTo.ErrorImage = null;
             this.pbInstructionsHowTo.Image = ((System.Drawing.Image)(resources.GetObject("pbInstructionsHowTo.Image")));
+            this.pbInstructionsHowTo.InitialImage = null;
             this.pbInstructionsHowTo.Location = new System.Drawing.Point(586, 5);
             this.pbInstructionsHowTo.Margin = new System.Windows.Forms.Padding(2);
             this.pbInstructionsHowTo.Name = "pbInstructionsHowTo";
@@ -2697,7 +2718,9 @@ namespace Movie_File_Merger
             // 
             this.pbInstructionsBanner.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbInstructionsBanner.ErrorImage = null;
             this.pbInstructionsBanner.Image = ((System.Drawing.Image)(resources.GetObject("pbInstructionsBanner.Image")));
+            this.pbInstructionsBanner.InitialImage = null;
             this.pbInstructionsBanner.Location = new System.Drawing.Point(5, 5);
             this.pbInstructionsBanner.Margin = new System.Windows.Forms.Padding(2);
             this.pbInstructionsBanner.Name = "pbInstructionsBanner";
@@ -2750,7 +2773,9 @@ namespace Movie_File_Merger
             // 
             // pbGitHubSocialCodingLeft
             // 
+            this.pbGitHubSocialCodingLeft.ErrorImage = null;
             this.pbGitHubSocialCodingLeft.Image = ((System.Drawing.Image)(resources.GetObject("pbGitHubSocialCodingLeft.Image")));
+            this.pbGitHubSocialCodingLeft.InitialImage = null;
             this.pbGitHubSocialCodingLeft.Location = new System.Drawing.Point(9, 78);
             this.pbGitHubSocialCodingLeft.Name = "pbGitHubSocialCodingLeft";
             this.pbGitHubSocialCodingLeft.Size = new System.Drawing.Size(190, 68);
@@ -2765,7 +2790,9 @@ namespace Movie_File_Merger
             // pbGitHubSocialCoding
             // 
             this.pbGitHubSocialCoding.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbGitHubSocialCoding.ErrorImage = null;
             this.pbGitHubSocialCoding.Image = ((System.Drawing.Image)(resources.GetObject("pbGitHubSocialCoding.Image")));
+            this.pbGitHubSocialCoding.InitialImage = null;
             this.pbGitHubSocialCoding.Location = new System.Drawing.Point(447, 79);
             this.pbGitHubSocialCoding.Name = "pbGitHubSocialCoding";
             this.pbGitHubSocialCoding.Size = new System.Drawing.Size(190, 67);
@@ -2781,7 +2808,9 @@ namespace Movie_File_Merger
             // 
             this.pbAboutDonate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbAboutDonate.ErrorImage = null;
             this.pbAboutDonate.Image = global::Movie_File_Merger.Properties.Resources.DonateButtonLong;
+            this.pbAboutDonate.InitialImage = null;
             this.pbAboutDonate.Location = new System.Drawing.Point(205, 79);
             this.pbAboutDonate.Name = "pbAboutDonate";
             this.pbAboutDonate.Size = new System.Drawing.Size(236, 67);
@@ -2795,7 +2824,9 @@ namespace Movie_File_Merger
             // 
             // pbAboutUserManual
             // 
+            this.pbAboutUserManual.ErrorImage = null;
             this.pbAboutUserManual.Image = ((System.Drawing.Image)(resources.GetObject("pbAboutUserManual.Image")));
+            this.pbAboutUserManual.InitialImage = null;
             this.pbAboutUserManual.Location = new System.Drawing.Point(4, 5);
             this.pbAboutUserManual.Margin = new System.Windows.Forms.Padding(2);
             this.pbAboutUserManual.Name = "pbAboutUserManual";
@@ -2811,7 +2842,9 @@ namespace Movie_File_Merger
             // pbAboutHowTo
             // 
             this.pbAboutHowTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbAboutHowTo.ErrorImage = null;
             this.pbAboutHowTo.Image = ((System.Drawing.Image)(resources.GetObject("pbAboutHowTo.Image")));
+            this.pbAboutHowTo.InitialImage = null;
             this.pbAboutHowTo.Location = new System.Drawing.Point(586, 5);
             this.pbAboutHowTo.Margin = new System.Windows.Forms.Padding(2);
             this.pbAboutHowTo.Name = "pbAboutHowTo";
@@ -2827,8 +2860,6 @@ namespace Movie_File_Merger
             // 
             // lblLastChecked
             // 
-            this.lblLastChecked.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblLastChecked.Location = new System.Drawing.Point(3, 149);
             this.lblLastChecked.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLastChecked.Name = "lblLastChecked";
@@ -2857,7 +2888,9 @@ namespace Movie_File_Merger
             // 
             this.pbAboutBanner.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbAboutBanner.ErrorImage = null;
             this.pbAboutBanner.Image = ((System.Drawing.Image)(resources.GetObject("pbAboutBanner.Image")));
+            this.pbAboutBanner.InitialImage = null;
             this.pbAboutBanner.Location = new System.Drawing.Point(4, 5);
             this.pbAboutBanner.Margin = new System.Windows.Forms.Padding(2);
             this.pbAboutBanner.Name = "pbAboutBanner";
@@ -2972,7 +3005,9 @@ namespace Movie_File_Merger
             // 
             // pbMaintenanceHowTo
             // 
+            this.pbMaintenanceHowTo.ErrorImage = null;
             this.pbMaintenanceHowTo.Image = ((System.Drawing.Image)(resources.GetObject("pbMaintenanceHowTo.Image")));
+            this.pbMaintenanceHowTo.InitialImage = null;
             this.pbMaintenanceHowTo.Location = new System.Drawing.Point(10, 429);
             this.pbMaintenanceHowTo.Margin = new System.Windows.Forms.Padding(2);
             this.pbMaintenanceHowTo.Name = "pbMaintenanceHowTo";
