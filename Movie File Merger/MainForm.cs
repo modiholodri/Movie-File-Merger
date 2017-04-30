@@ -120,14 +120,6 @@ namespace Movie_File_Merger
             Text = strNickName + " - Movie File Merger";
 
             // load the instruction and copyright files
-            string strMFMInstructionsPath = Path.Combine( Application.StartupPath, "Movie File Merger Instructions.rtf" );
-            try {
-                rtbHelp.LoadFile( strMFMInstructionsPath, RichTextBoxStreamType.RichText );
-            } catch ( IOException e ) {
-                ShowInfo( e.Message );
-                rtbHelp.Text = "Error: Had problems loading the help file " + strMFMInstructionsPath + ".";
-            }
-
             string strMFMSettingsPath = Path.Combine( Application.StartupPath, "Movie File Merger Settings.rtf" );
             try {
                 rtbSettings.LoadFile( strMFMSettingsPath, RichTextBoxStreamType.RichText );
@@ -236,6 +228,16 @@ namespace Movie_File_Merger
                 return;
             }
             scHorizontal.SplitterDistance = scHorizontal.Size.Height / 2;
+
+            // show & hide the manual pictures on the Lists tab
+            if (pbListsUserManual.Location.X+pbListsUserManual.Width+5 > pbListsHowTo.Location.X ) {
+                pbListsUserManual.Visible = false;
+                pbListsHowTo.Visible = false;
+            }
+            else {
+                pbListsUserManual.Visible = true;
+                pbListsHowTo.Visible = true;
+            }
         }
 
         /// <summary>
@@ -2740,7 +2742,7 @@ namespace Movie_File_Merger
         void LvGiveFeedback( object sender, GiveFeedbackEventArgs e )
         {
             e.UseDefaultCursors = false;
-            var bmp = new Bitmap( pbMaintenanceDonate.Image );
+            var bmp = new Bitmap( pbMousePointerMFM.Image );
             var cur = new Cursor( bmp.GetHicon( ) );
             Cursor.Current = cur;
         }
