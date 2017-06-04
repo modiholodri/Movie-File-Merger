@@ -75,6 +75,7 @@ namespace Movie_File_Merger
             this.cbGetHigherRes = new System.Windows.Forms.CheckBox();
             this.rbMove = new System.Windows.Forms.RadioButton();
             this.rbCopy = new System.Windows.Forms.RadioButton();
+            this.pbInstructionsBanner = new System.Windows.Forms.PictureBox();
             this.scVertical = new System.Windows.Forms.SplitContainer();
             this.lvExisting = new System.Windows.Forms.ListView();
             this.chNameExisting = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -88,6 +89,8 @@ namespace Movie_File_Merger
             this.chNameImport = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cobSearchDownload = new System.Windows.Forms.ComboBox();
             this.cobSearchInfo = new System.Windows.Forms.ComboBox();
+            this.pbListsHowTo = new System.Windows.Forms.PictureBox();
+            this.pbListsUserManual = new System.Windows.Forms.PictureBox();
             this.tpLog = new System.Windows.Forms.TabPage();
             this.pbLogUserManual = new System.Windows.Forms.PictureBox();
             this.pbLogHowTo = new System.Windows.Forms.PictureBox();
@@ -200,13 +203,11 @@ namespace Movie_File_Merger
             this.tspbMFM = new System.Windows.Forms.ToolStripProgressBar();
             this.ttMovieFileMerger = new System.Windows.Forms.ToolTip(this.components);
             this.ofdTeraCopy = new System.Windows.Forms.OpenFileDialog();
-            this.pbListsUserManual = new System.Windows.Forms.PictureBox();
-            this.pbListsHowTo = new System.Windows.Forms.PictureBox();
-            this.pbInstructionsBanner = new System.Windows.Forms.PictureBox();
             this.tcMovieFileMerger.SuspendLayout();
             this.tpSeparateLists.SuspendLayout();
             this.gbTypeSelection.SuspendLayout();
             this.gbProcessImport.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbInstructionsBanner)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scVertical)).BeginInit();
             this.scVertical.Panel1.SuspendLayout();
             this.scVertical.Panel2.SuspendLayout();
@@ -219,6 +220,8 @@ namespace Movie_File_Merger
             this.scHorizontal.Panel1.SuspendLayout();
             this.scHorizontal.Panel2.SuspendLayout();
             this.scHorizontal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbListsHowTo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbListsUserManual)).BeginInit();
             this.tpLog.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogUserManual)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogHowTo)).BeginInit();
@@ -257,9 +260,6 @@ namespace Movie_File_Merger
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
             this.ssMFM.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbListsUserManual)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbListsHowTo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbInstructionsBanner)).BeginInit();
             this.SuspendLayout();
             // 
             // fbdMovieFileMerger
@@ -535,7 +535,7 @@ namespace Movie_File_Merger
         " on the small arrow to the right to change the search criteria.");
             this.cobCriteria.TextChanged += new System.EventHandler(this.SettingsChanged);
             this.cobCriteria.DragDrop += new System.Windows.Forms.DragEventHandler(this.CobCriteriaDragDrop);
-            this.cobCriteria.DragOver += new System.Windows.Forms.DragEventHandler(this.CobCriteriaDragOver);
+            this.cobCriteria.DragOver += new System.Windows.Forms.DragEventHandler(this.LvMaintenanceDragDrop);
             // 
             // btnAddToWish
             // 
@@ -571,8 +571,8 @@ namespace Movie_File_Merger
             this.btnBin.Text = "Bin";
             this.btnBin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ttMovieFileMerger.SetToolTip(this.btnBin, "Put all items in all lists in the Garbage list according to the selection ctriter" +
-        "ia.");
+            this.ttMovieFileMerger.SetToolTip(this.btnBin, "Put all items in all lists in the Garbage list according to the selection criteri" +
+        "a.");
             this.btnBin.UseVisualStyleBackColor = false;
             this.btnBin.Click += new System.EventHandler(this.BtnBinClick);
             // 
@@ -592,7 +592,7 @@ namespace Movie_File_Merger
             this.btnSelect.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSelect.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ttMovieFileMerger.SetToolTip(this.btnSelect, "Select all items in all lists according to the selection criteria.\r\nYou have to h" +
-        "oover with the mouse of the list to see the selected items.");
+        "over with the mouse of the list to see the selected items.");
             this.btnSelect.UseVisualStyleBackColor = false;
             this.btnSelect.Click += new System.EventHandler(this.BtnSelectClick);
             // 
@@ -612,7 +612,7 @@ namespace Movie_File_Merger
             this.btnExportList.Text = "Export List...";
             this.btnExportList.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnExportList.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ttMovieFileMerger.SetToolTip(this.btnExportList, "Drop an item of a list here to export the complete list as .XML file.");
+            this.ttMovieFileMerger.SetToolTip(this.btnExportList, "Drop an item of a list here to export the complete list as an XML file.");
             this.btnExportList.UseVisualStyleBackColor = false;
             this.btnExportList.DragDrop += new System.Windows.Forms.DragEventHandler(this.BtnExportListDragDrop);
             this.btnExportList.DragOver += new System.Windows.Forms.DragEventHandler(this.BtnDragOver);
@@ -794,8 +794,9 @@ namespace Movie_File_Merger
             this.rbDocumentaries.Tag = "Documentaries";
             this.rbDocumentaries.Text = "Documentaries";
             this.rbDocumentaries.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ttMovieFileMerger.SetToolTip(this.rbDocumentaries, "A documentary is video that is telling a more real story by the use of presenters" +
-        " or \r\na movie or a television program that provides a factual record or report.");
+            this.ttMovieFileMerger.SetToolTip(this.rbDocumentaries, "A documentary is a video that is telling a more real story by the use of presente" +
+        "rs or \r\na movie or a television program that provides a factual record or report" +
+        ".");
             this.rbDocumentaries.UseVisualStyleBackColor = true;
             this.rbDocumentaries.CheckedChanged += new System.EventHandler(this.RbCollectionsClick);
             // 
@@ -811,7 +812,7 @@ namespace Movie_File_Merger
             this.rbMovies.Text = "Movies";
             this.rbMovies.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ttMovieFileMerger.SetToolTip(this.rbMovies, "A movie is a video telling a fictive story by the use of actors or \r\na story or e" +
-        "vent recorded by a camera as a set of moving images and \r\nshown in a theatre or " +
+        "vent recorded by a camera as a set of moving images and \r\nshown in a theater or " +
         "on television; a motion picture.");
             this.rbMovies.UseVisualStyleBackColor = true;
             this.rbMovies.CheckedChanged += new System.EventHandler(this.RbCollectionsClick);
@@ -890,8 +891,8 @@ namespace Movie_File_Merger
             this.cbGetHigherRes.TabIndex = 25;
             this.cbGetHigherRes.Text = "Get Higher Resolution";
             this.cbGetHigherRes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ttMovieFileMerger.SetToolTip(this.cbGetHigherRes, "Check to copy higer horizontal resolution files, even if they are existing alread" +
-        "y.");
+            this.ttMovieFileMerger.SetToolTip(this.cbGetHigherRes, "Check to copy higher horizontal resolution files, even if they are existing alrea" +
+        "dy.");
             this.cbGetHigherRes.UseVisualStyleBackColor = false;
             this.cbGetHigherRes.CheckedChanged += new System.EventHandler(this.SettingsChanged);
             // 
@@ -924,6 +925,22 @@ namespace Movie_File_Merger
             this.ttMovieFileMerger.SetToolTip(this.rbCopy, "If Copy is selected and you click Start Process, the Wish colored items \r\nin the " +
         "Import list will be copied to the Target folder.");
             this.rbCopy.UseVisualStyleBackColor = true;
+            // 
+            // pbInstructionsBanner
+            // 
+            this.pbInstructionsBanner.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbInstructionsBanner.ErrorImage = null;
+            this.pbInstructionsBanner.Image = ((System.Drawing.Image)(resources.GetObject("pbInstructionsBanner.Image")));
+            this.pbInstructionsBanner.InitialImage = null;
+            this.pbInstructionsBanner.Location = new System.Drawing.Point(-258, 0);
+            this.pbInstructionsBanner.Margin = new System.Windows.Forms.Padding(2);
+            this.pbInstructionsBanner.Name = "pbInstructionsBanner";
+            this.pbInstructionsBanner.Size = new System.Drawing.Size(253, 67);
+            this.pbInstructionsBanner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbInstructionsBanner.TabIndex = 50;
+            this.pbInstructionsBanner.TabStop = false;
+            this.ttMovieFileMerger.SetToolTip(this.pbInstructionsBanner, "Go to the MFM web site to get additional information or access the forum.");
             // 
             // scVertical
             // 
@@ -1195,6 +1212,36 @@ namespace Movie_File_Merger
             this.ttMovieFileMerger.SetToolTip(this.cobSearchInfo, "Select where to search for additional information concerning the item.");
             this.cobSearchInfo.SelectedIndexChanged += new System.EventHandler(this.CobSearchInfoSelectedIndexChanged);
             // 
+            // pbListsHowTo
+            // 
+            this.pbListsHowTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbListsHowTo.ErrorImage = null;
+            this.pbListsHowTo.Image = ((System.Drawing.Image)(resources.GetObject("pbListsHowTo.Image")));
+            this.pbListsHowTo.InitialImage = null;
+            this.pbListsHowTo.Location = new System.Drawing.Point(508, 6);
+            this.pbListsHowTo.Margin = new System.Windows.Forms.Padding(2);
+            this.pbListsHowTo.Name = "pbListsHowTo";
+            this.pbListsHowTo.Size = new System.Drawing.Size(54, 65);
+            this.pbListsHowTo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbListsHowTo.TabIndex = 51;
+            this.pbListsHowTo.TabStop = false;
+            this.ttMovieFileMerger.SetToolTip(this.pbListsHowTo, "Go to the online How to Organize Videos on Hard Disks Manual to get a brief descr" +
+        "iption of how a video collection could be organized in general.");
+            // 
+            // pbListsUserManual
+            // 
+            this.pbListsUserManual.ErrorImage = null;
+            this.pbListsUserManual.Image = ((System.Drawing.Image)(resources.GetObject("pbListsUserManual.Image")));
+            this.pbListsUserManual.InitialImage = null;
+            this.pbListsUserManual.Location = new System.Drawing.Point(309, 6);
+            this.pbListsUserManual.Margin = new System.Windows.Forms.Padding(2);
+            this.pbListsUserManual.Name = "pbListsUserManual";
+            this.pbListsUserManual.Size = new System.Drawing.Size(56, 65);
+            this.pbListsUserManual.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbListsUserManual.TabIndex = 52;
+            this.pbListsUserManual.TabStop = false;
+            this.ttMovieFileMerger.SetToolTip(this.pbListsUserManual, "Go to the online MFM User Manual to read more details about how to use MFM.");
+            // 
             // tpLog
             // 
             this.tpLog.BackColor = System.Drawing.SystemColors.Control;
@@ -1222,7 +1269,7 @@ namespace Movie_File_Merger
             this.pbLogUserManual.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbLogUserManual.TabIndex = 50;
             this.pbLogUserManual.TabStop = false;
-            this.ttMovieFileMerger.SetToolTip(this.pbLogUserManual, "Go To the MFM User Manual to read more details about how to use MFM.");
+            this.ttMovieFileMerger.SetToolTip(this.pbLogUserManual, "Go To the online MFM User Manual to read more details about how to use MFM.");
             this.pbLogUserManual.Click += new System.EventHandler(this.PbUserManualClick);
             this.pbLogUserManual.MouseEnter += new System.EventHandler(this.PbPictureLinkMouseEnter);
             this.pbLogUserManual.MouseLeave += new System.EventHandler(this.PbPictureLinkMouseLeave);
@@ -1240,8 +1287,8 @@ namespace Movie_File_Merger
             this.pbLogHowTo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbLogHowTo.TabIndex = 49;
             this.pbLogHowTo.TabStop = false;
-            this.ttMovieFileMerger.SetToolTip(this.pbLogHowTo, "Go to the How to Organize Videos on Hard Disks Manual to get a brief description " +
-        "about how a video collection could be organized in general.");
+            this.ttMovieFileMerger.SetToolTip(this.pbLogHowTo, "Go to the online How to Organize Videos on Hard Disks Manual to get a brief descr" +
+        "iption of how a video collection could be organized in general.");
             this.pbLogHowTo.Click += new System.EventHandler(this.PbHowToClick);
             this.pbLogHowTo.MouseEnter += new System.EventHandler(this.PbPictureLinkMouseEnter);
             this.pbLogHowTo.MouseLeave += new System.EventHandler(this.PbPictureLinkMouseLeave);
@@ -1260,7 +1307,7 @@ namespace Movie_File_Merger
             this.pbLogBanner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbLogBanner.TabIndex = 48;
             this.pbLogBanner.TabStop = false;
-            this.ttMovieFileMerger.SetToolTip(this.pbLogBanner, "Go to the MFM web site to get additional information or access the forum.");
+            this.ttMovieFileMerger.SetToolTip(this.pbLogBanner, "Go to the MFM website to get additional information or access the forum.");
             this.pbLogBanner.Click += new System.EventHandler(this.PbBannerClick);
             this.pbLogBanner.MouseEnter += new System.EventHandler(this.PbPictureLinkMouseEnter);
             this.pbLogBanner.MouseLeave += new System.EventHandler(this.PbPictureLinkMouseLeave);
@@ -1333,7 +1380,7 @@ namespace Movie_File_Merger
             this.pbMousePointerMFM.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pbMousePointerMFM.TabIndex = 73;
             this.pbMousePointerMFM.TabStop = false;
-            this.ttMovieFileMerger.SetToolTip(this.pbMousePointerMFM, "Click on me to make a small donation for Modi.");
+            this.ttMovieFileMerger.SetToolTip(this.pbMousePointerMFM, "Make a small donation for Modi.");
             // 
             // pictureBox1
             // 
@@ -1346,7 +1393,7 @@ namespace Movie_File_Merger
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 72;
             this.pictureBox1.TabStop = false;
-            this.ttMovieFileMerger.SetToolTip(this.pictureBox1, "Click on me to make a small donation for Modi.");
+            this.ttMovieFileMerger.SetToolTip(this.pictureBox1, "Make a small donation for Modi.");
             this.pictureBox1.Click += new System.EventHandler(this.pbDonate_Click);
             this.pictureBox1.MouseEnter += new System.EventHandler(this.PbPictureLinkMouseEnter);
             this.pictureBox1.MouseLeave += new System.EventHandler(this.PbPictureLinkMouseLeave);
@@ -1367,7 +1414,8 @@ namespace Movie_File_Merger
             this.btnEraseColorSucker.Text = "Erase Color";
             this.btnEraseColorSucker.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEraseColorSucker.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.ttMovieFileMerger.SetToolTip(this.btnEraseColorSucker, "Drop an item with a color here to erase all items of the same color from a list.");
+            this.ttMovieFileMerger.SetToolTip(this.btnEraseColorSucker, "Drop an item with a color here to erase all items of the same color from the list" +
+        ".");
             this.btnEraseColorSucker.UseVisualStyleBackColor = false;
             this.btnEraseColorSucker.DragDrop += new System.Windows.Forms.DragEventHandler(this.BtnEraseColorDragDrop);
             this.btnEraseColorSucker.DragOver += new System.Windows.Forms.DragEventHandler(this.BtnDragOver);
@@ -1388,7 +1436,7 @@ namespace Movie_File_Merger
             this.btnEraseSelcectedSucker.Text = "Erase Selected";
             this.btnEraseSelcectedSucker.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEraseSelcectedSucker.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ttMovieFileMerger.SetToolTip(this.btnEraseSelcectedSucker, "Drop items here to erase them from a list.");
+            this.ttMovieFileMerger.SetToolTip(this.btnEraseSelcectedSucker, "Drop items here to erase them from the list.");
             this.btnEraseSelcectedSucker.UseVisualStyleBackColor = false;
             this.btnEraseSelcectedSucker.Click += new System.EventHandler(this.BtnEraseSelcectedSucker_Click);
             this.btnEraseSelcectedSucker.DragDrop += new System.Windows.Forms.DragEventHandler(this.BtnEraseSelectedDragDrop);
@@ -1473,7 +1521,7 @@ namespace Movie_File_Merger
             this.tbPassword.Size = new System.Drawing.Size(57, 13);
             this.tbPassword.TabIndex = 60;
             this.tbPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ttMovieFileMerger.SetToolTip(this.tbPassword, "Enter the passowrd used to connect to the remote host.");
+            this.ttMovieFileMerger.SetToolTip(this.tbPassword, "Enter the password used to connect to the remote host.");
             // 
             // btnColorList
             // 
@@ -1507,7 +1555,7 @@ namespace Movie_File_Merger
             this.pbFTPSuckerUserManual.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbFTPSuckerUserManual.TabIndex = 63;
             this.pbFTPSuckerUserManual.TabStop = false;
-            this.ttMovieFileMerger.SetToolTip(this.pbFTPSuckerUserManual, "Go To the MFM User Manual to read more details about how to use MFM.");
+            this.ttMovieFileMerger.SetToolTip(this.pbFTPSuckerUserManual, "Go to the online MFM User Manual to read more details about how to use MFM.");
             this.pbFTPSuckerUserManual.Click += new System.EventHandler(this.PbUserManualClick);
             this.pbFTPSuckerUserManual.MouseEnter += new System.EventHandler(this.PbPictureLinkMouseEnter);
             this.pbFTPSuckerUserManual.MouseLeave += new System.EventHandler(this.PbPictureLinkMouseLeave);
@@ -1524,8 +1572,8 @@ namespace Movie_File_Merger
             this.pbFTPSuckerHowTo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbFTPSuckerHowTo.TabIndex = 62;
             this.pbFTPSuckerHowTo.TabStop = false;
-            this.ttMovieFileMerger.SetToolTip(this.pbFTPSuckerHowTo, "Go to the How to Organize Videos on Hard Disks Manual to get a brief description " +
-        "about how a video collection could be organized in general.");
+            this.ttMovieFileMerger.SetToolTip(this.pbFTPSuckerHowTo, "Go to the online How to Organize Videos on Hard Disks Manual to get a brief descr" +
+        "iption of how a video collection could be organized in general.");
             this.pbFTPSuckerHowTo.Click += new System.EventHandler(this.PbHowToClick);
             this.pbFTPSuckerHowTo.MouseEnter += new System.EventHandler(this.PbPictureLinkMouseEnter);
             this.pbFTPSuckerHowTo.MouseLeave += new System.EventHandler(this.PbPictureLinkMouseLeave);
@@ -1537,6 +1585,7 @@ namespace Movie_File_Merger
             this.lblRemotePath.Size = new System.Drawing.Size(32, 13);
             this.lblRemotePath.TabIndex = 61;
             this.lblRemotePath.Text = "Path";
+            this.ttMovieFileMerger.SetToolTip(this.lblRemotePath, "Enter the path of the remote host, where to seach for videos.");
             // 
             // lblRemoteHhost
             // 
@@ -1549,6 +1598,7 @@ namespace Movie_File_Merger
             this.lblRemoteHhost.TabIndex = 61;
             this.lblRemoteHhost.Text = "Remote Host";
             this.lblRemoteHhost.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ttMovieFileMerger.SetToolTip(this.lblRemoteHhost, "The login information for the FTP Remote Host.");
             // 
             // lblLocalPath
             // 
@@ -1561,6 +1611,7 @@ namespace Movie_File_Merger
             this.lblLocalPath.TabIndex = 61;
             this.lblLocalPath.Text = "Local Path";
             this.lblLocalPath.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ttMovieFileMerger.SetToolTip(this.lblLocalPath, "Enter the path where the downloaded videos should be stored locally.");
             // 
             // lblPortNumber
             // 
@@ -1569,6 +1620,7 @@ namespace Movie_File_Merger
             this.lblPortNumber.Size = new System.Drawing.Size(30, 13);
             this.lblPortNumber.TabIndex = 61;
             this.lblPortNumber.Text = "Port";
+            this.ttMovieFileMerger.SetToolTip(this.lblPortNumber, "Enter the port number to connect to the remote host.");
             // 
             // lblPassword
             // 
@@ -1577,6 +1629,7 @@ namespace Movie_File_Merger
             this.lblPassword.Size = new System.Drawing.Size(31, 13);
             this.lblPassword.TabIndex = 61;
             this.lblPassword.Text = "Pwd";
+            this.ttMovieFileMerger.SetToolTip(this.lblPassword, "Enter the passowrd used to connect to the remote host.");
             // 
             // lblHostName
             // 
@@ -1585,6 +1638,7 @@ namespace Movie_File_Merger
             this.lblHostName.Size = new System.Drawing.Size(30, 13);
             this.lblHostName.TabIndex = 61;
             this.lblHostName.Text = "Host";
+            this.ttMovieFileMerger.SetToolTip(this.lblHostName, "Enter the name or IP address of the remote host.");
             // 
             // lblUserName
             // 
@@ -1593,8 +1647,7 @@ namespace Movie_File_Merger
             this.lblUserName.Size = new System.Drawing.Size(30, 13);
             this.lblUserName.TabIndex = 61;
             this.lblUserName.Text = "User";
-            this.ttMovieFileMerger.SetToolTip(this.lblUserName, "The Add-on Files Extension identified add-on files like subtitles or posters. \r\nA" +
-        "dd-on files will be only considered if a main video file exists.");
+            this.ttMovieFileMerger.SetToolTip(this.lblUserName, "Enter the user name for the remote host.");
             // 
             // tbRemotePath
             // 
@@ -1606,7 +1659,7 @@ namespace Movie_File_Merger
             this.tbRemotePath.Size = new System.Drawing.Size(120, 13);
             this.tbRemotePath.TabIndex = 60;
             this.tbRemotePath.Text = "/videos";
-            this.ttMovieFileMerger.SetToolTip(this.tbRemotePath, "Enter the path of the remote host, where to seach for videos.");
+            this.ttMovieFileMerger.SetToolTip(this.tbRemotePath, "Enter the path of the remote host, where to search for videos.");
             // 
             // tbLocalPath
             // 
@@ -1674,7 +1727,7 @@ namespace Movie_File_Merger
             this.btnOpenWinSCP.Text = "Open WinSCP";
             this.btnOpenWinSCP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnOpenWinSCP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ttMovieFileMerger.SetToolTip(this.btnOpenWinSCP, "Click here to open the WinSCP FTP application.");
+            this.ttMovieFileMerger.SetToolTip(this.btnOpenWinSCP, "Open the WinSCP FTP application.");
             this.btnOpenWinSCP.UseVisualStyleBackColor = false;
             this.btnOpenWinSCP.Click += new System.EventHandler(this.BtnOpenWinSCP_Click);
             // 
@@ -1693,7 +1746,7 @@ namespace Movie_File_Merger
             this.btnGetRemoteFileNames.Text = "Get Remote File Names";
             this.btnGetRemoteFileNames.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGetRemoteFileNames.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ttMovieFileMerger.SetToolTip(this.btnGetRemoteFileNames, "Click here to get the file names fromt the Remote Host.");
+            this.ttMovieFileMerger.SetToolTip(this.btnGetRemoteFileNames, "Click here to get the file names from the Remote Host.");
             this.btnGetRemoteFileNames.UseVisualStyleBackColor = false;
             this.btnGetRemoteFileNames.Click += new System.EventHandler(this.BtnGetRemoteFileNames_Click);
             // 
@@ -1833,7 +1886,7 @@ namespace Movie_File_Merger
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 64;
             this.pictureBox2.TabStop = false;
-            this.ttMovieFileMerger.SetToolTip(this.pictureBox2, "Click on me to make a small donation for Modi.");
+            this.ttMovieFileMerger.SetToolTip(this.pictureBox2, "Make a small donation for Modi.");
             this.pictureBox2.Click += new System.EventHandler(this.pbDonate_Click);
             this.pictureBox2.MouseEnter += new System.EventHandler(this.PbPictureLinkMouseEnter);
             this.pictureBox2.MouseLeave += new System.EventHandler(this.PbPictureLinkMouseLeave);
@@ -1850,8 +1903,8 @@ namespace Movie_File_Merger
             this.pbMaintenanceHowTo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbMaintenanceHowTo.TabIndex = 63;
             this.pbMaintenanceHowTo.TabStop = false;
-            this.ttMovieFileMerger.SetToolTip(this.pbMaintenanceHowTo, "Go to the How to Organize Videos on Hard Disks Manual to get a brief description " +
-        "about how a video collection could be organized in general.");
+            this.ttMovieFileMerger.SetToolTip(this.pbMaintenanceHowTo, "Go to the online How to Organize Videos on Hard Disks Manual to get a brief descr" +
+        "iption of how a video collection could be organized in general.");
             // 
             // btnPlayMaintenance
             // 
@@ -1890,7 +1943,7 @@ namespace Movie_File_Merger
             this.btnExportListMaintenance.Text = "Export List...";
             this.btnExportListMaintenance.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnExportListMaintenance.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ttMovieFileMerger.SetToolTip(this.btnExportListMaintenance, "Drop an item of a list here to export the complete list as .XML file.");
+            this.ttMovieFileMerger.SetToolTip(this.btnExportListMaintenance, "Drop an item of a list here to export the complete list as an XML file.");
             this.btnExportListMaintenance.UseVisualStyleBackColor = false;
             this.btnExportListMaintenance.DragDrop += new System.Windows.Forms.DragEventHandler(this.BtnExportListDragDrop);
             this.btnExportListMaintenance.DragOver += new System.Windows.Forms.DragEventHandler(this.BtnDragOver);
@@ -2019,7 +2072,7 @@ namespace Movie_File_Merger
             this.pbMaintenanceUserManual.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbMaintenanceUserManual.TabIndex = 51;
             this.pbMaintenanceUserManual.TabStop = false;
-            this.ttMovieFileMerger.SetToolTip(this.pbMaintenanceUserManual, "Go To the MFM User Manual to read more details about how to use MFM.");
+            this.ttMovieFileMerger.SetToolTip(this.pbMaintenanceUserManual, "Go to the online MFM User Manual to read more details about how to use MFM.");
             this.pbMaintenanceUserManual.Click += new System.EventHandler(this.PbUserManualClick);
             this.pbMaintenanceUserManual.MouseEnter += new System.EventHandler(this.PbPictureLinkMouseEnter);
             this.pbMaintenanceUserManual.MouseLeave += new System.EventHandler(this.PbPictureLinkMouseLeave);
@@ -2132,7 +2185,7 @@ namespace Movie_File_Merger
             this.btnBadMovie.Size = new System.Drawing.Size(99, 21);
             this.btnBadMovie.TabIndex = 10;
             this.btnBadMovie.Text = "Bad Movie";
-            this.ttMovieFileMerger.SetToolTip(this.btnBadMovie, "Select all movies with with bad names.");
+            this.ttMovieFileMerger.SetToolTip(this.btnBadMovie, "Select all movies with bad names.");
             this.btnBadMovie.UseVisualStyleBackColor = true;
             this.btnBadMovie.Click += new System.EventHandler(this.BtnSelectMaintenanceClick);
             // 
@@ -2293,8 +2346,8 @@ namespace Movie_File_Merger
             this.pbSeetingsHowTo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbSeetingsHowTo.TabIndex = 46;
             this.pbSeetingsHowTo.TabStop = false;
-            this.ttMovieFileMerger.SetToolTip(this.pbSeetingsHowTo, "Go to the How to Organize Videos on Hard Disks Manual to get a brief description " +
-        "about how a video collection could be organized in general.");
+            this.ttMovieFileMerger.SetToolTip(this.pbSeetingsHowTo, "Go to the online How to Organize Videos on Hard Disks Manual to get a brief descr" +
+        "iption of how a video collection could be organized in general.");
             this.pbSeetingsHowTo.Click += new System.EventHandler(this.PbHowToClick);
             this.pbSeetingsHowTo.MouseEnter += new System.EventHandler(this.PbPictureLinkMouseEnter);
             this.pbSeetingsHowTo.MouseLeave += new System.EventHandler(this.PbPictureLinkMouseLeave);
@@ -2327,7 +2380,7 @@ namespace Movie_File_Merger
             this.pbSettingsUserManual.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbSettingsUserManual.TabIndex = 48;
             this.pbSettingsUserManual.TabStop = false;
-            this.ttMovieFileMerger.SetToolTip(this.pbSettingsUserManual, "Go To the MFM User Manual to read more details about how to use MFM.");
+            this.ttMovieFileMerger.SetToolTip(this.pbSettingsUserManual, "Go to the online MFM User Manual to read more details about how to use MFM.");
             this.pbSettingsUserManual.Click += new System.EventHandler(this.PbUserManualClick);
             this.pbSettingsUserManual.MouseEnter += new System.EventHandler(this.PbPictureLinkMouseEnter);
             this.pbSettingsUserManual.MouseLeave += new System.EventHandler(this.PbPictureLinkMouseLeave);
@@ -2346,7 +2399,7 @@ namespace Movie_File_Merger
             this.pbSettingsBanner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbSettingsBanner.TabIndex = 47;
             this.pbSettingsBanner.TabStop = false;
-            this.ttMovieFileMerger.SetToolTip(this.pbSettingsBanner, "Go to the MFM web site to get additional information or access the forum.");
+            this.ttMovieFileMerger.SetToolTip(this.pbSettingsBanner, "Go to the MFM website to get additional information or access the forum.");
             this.pbSettingsBanner.Click += new System.EventHandler(this.PbBannerClick);
             this.pbSettingsBanner.MouseEnter += new System.EventHandler(this.PbPictureLinkMouseEnter);
             this.pbSettingsBanner.MouseLeave += new System.EventHandler(this.PbPictureLinkMouseLeave);
@@ -2408,7 +2461,8 @@ namespace Movie_File_Merger
             this.lblBadMovieNameRegex.Size = new System.Drawing.Size(102, 15);
             this.lblBadMovieNameRegex.TabIndex = 38;
             this.lblBadMovieNameRegex.Text = "Bad Movie Name";
-            this.ttMovieFileMerger.SetToolTip(this.lblBadMovieNameRegex, resources.GetString("lblBadMovieNameRegex.ToolTip"));
+            this.ttMovieFileMerger.SetToolTip(this.lblBadMovieNameRegex, "The Bad Movie Name regular expression tells MFM if a file name is a bad movie nam" +
+        "e.");
             // 
             // tbBadMovieNameRegex
             // 
@@ -2422,7 +2476,8 @@ namespace Movie_File_Merger
             this.tbBadMovieNameRegex.Size = new System.Drawing.Size(455, 13);
             this.tbBadMovieNameRegex.TabIndex = 30;
             this.tbBadMovieNameRegex.Text = "[12]\\d{3}";
-            this.ttMovieFileMerger.SetToolTip(this.tbBadMovieNameRegex, resources.GetString("tbBadMovieNameRegex.ToolTip"));
+            this.ttMovieFileMerger.SetToolTip(this.tbBadMovieNameRegex, "The Bad Movie Name regular expression tells MFM if a file name is a bad movie nam" +
+        "e.");
             // 
             // lblGoodMovieNameRegex
             // 
@@ -2431,7 +2486,8 @@ namespace Movie_File_Merger
             this.lblGoodMovieNameRegex.Size = new System.Drawing.Size(119, 15);
             this.lblGoodMovieNameRegex.TabIndex = 36;
             this.lblGoodMovieNameRegex.Text = "Good Movie Name";
-            this.ttMovieFileMerger.SetToolTip(this.lblGoodMovieNameRegex, resources.GetString("lblGoodMovieNameRegex.ToolTip"));
+            this.ttMovieFileMerger.SetToolTip(this.lblGoodMovieNameRegex, "The Good Movie Name regular expression tells MFM if a file name is a good movie n" +
+        "ame.");
             // 
             // tbGoodMovieNameRegex
             // 
@@ -2443,7 +2499,8 @@ namespace Movie_File_Merger
             this.tbGoodMovieNameRegex.Size = new System.Drawing.Size(172, 13);
             this.tbGoodMovieNameRegex.TabIndex = 29;
             this.tbGoodMovieNameRegex.Text = ".* \\([12]\\d{3}\\)$";
-            this.ttMovieFileMerger.SetToolTip(this.tbGoodMovieNameRegex, resources.GetString("tbGoodMovieNameRegex.ToolTip"));
+            this.ttMovieFileMerger.SetToolTip(this.tbGoodMovieNameRegex, "The Good Movie Name regular expression tells MFM if a file name is a good movie n" +
+        "ame.");
             // 
             // lblBadEpisodeNameRegex
             // 
@@ -2452,7 +2509,8 @@ namespace Movie_File_Merger
             this.lblBadEpisodeNameRegex.Size = new System.Drawing.Size(102, 15);
             this.lblBadEpisodeNameRegex.TabIndex = 34;
             this.lblBadEpisodeNameRegex.Text = "Bad Episode Name";
-            this.ttMovieFileMerger.SetToolTip(this.lblBadEpisodeNameRegex, resources.GetString("lblBadEpisodeNameRegex.ToolTip"));
+            this.ttMovieFileMerger.SetToolTip(this.lblBadEpisodeNameRegex, "The Bad Episode Name regular expression tells MFM if a file name is a bad episode" +
+        " name.");
             // 
             // tbBadEpisodeNameRegex
             // 
@@ -2466,7 +2524,8 @@ namespace Movie_File_Merger
             this.tbBadEpisodeNameRegex.Size = new System.Drawing.Size(455, 13);
             this.tbBadEpisodeNameRegex.TabIndex = 28;
             this.tbBadEpisodeNameRegex.Text = "[Ss]\\d{1,2}[Ee]\\d{1,2}";
-            this.ttMovieFileMerger.SetToolTip(this.tbBadEpisodeNameRegex, resources.GetString("tbBadEpisodeNameRegex.ToolTip"));
+            this.ttMovieFileMerger.SetToolTip(this.tbBadEpisodeNameRegex, "The Bad Episode Name regular expression tells MFM if a file name is a bad episode" +
+        " name.");
             // 
             // lblGoodEpisodeNameRegex
             // 
@@ -2475,7 +2534,8 @@ namespace Movie_File_Merger
             this.lblGoodEpisodeNameRegex.Size = new System.Drawing.Size(119, 15);
             this.lblGoodEpisodeNameRegex.TabIndex = 32;
             this.lblGoodEpisodeNameRegex.Text = "Good Episode Name";
-            this.ttMovieFileMerger.SetToolTip(this.lblGoodEpisodeNameRegex, resources.GetString("lblGoodEpisodeNameRegex.ToolTip"));
+            this.ttMovieFileMerger.SetToolTip(this.lblGoodEpisodeNameRegex, "The Good Episode Name regular expression tells MFM if a file name is a good episo" +
+        "de name.");
             // 
             // tbGoodEpisodeNameRegex
             // 
@@ -2487,7 +2547,8 @@ namespace Movie_File_Merger
             this.tbGoodEpisodeNameRegex.Size = new System.Drawing.Size(172, 13);
             this.tbGoodEpisodeNameRegex.TabIndex = 27;
             this.tbGoodEpisodeNameRegex.Text = ".* S\\d{2}E\\d{2}(-E\\d{2})? .*$";
-            this.ttMovieFileMerger.SetToolTip(this.tbGoodEpisodeNameRegex, resources.GetString("tbGoodEpisodeNameRegex.ToolTip"));
+            this.ttMovieFileMerger.SetToolTip(this.tbGoodEpisodeNameRegex, "The Good Episode Name regular expression tells MFM if a file name is a good episo" +
+        "de name.");
             // 
             // lblBadDocuNameRegex
             // 
@@ -2496,7 +2557,8 @@ namespace Movie_File_Merger
             this.lblBadDocuNameRegex.Size = new System.Drawing.Size(102, 15);
             this.lblBadDocuNameRegex.TabIndex = 30;
             this.lblBadDocuNameRegex.Text = "Bad Docu Name";
-            this.ttMovieFileMerger.SetToolTip(this.lblBadDocuNameRegex, resources.GetString("lblBadDocuNameRegex.ToolTip"));
+            this.ttMovieFileMerger.SetToolTip(this.lblBadDocuNameRegex, "The Bad Docu Name regular expression tells MFM if a file name is a bad documentat" +
+        "ion name.");
             // 
             // tbBadDocuNameRegex
             // 
@@ -2510,7 +2572,8 @@ namespace Movie_File_Merger
             this.tbBadDocuNameRegex.Size = new System.Drawing.Size(455, 13);
             this.tbBadDocuNameRegex.TabIndex = 26;
             this.tbBadDocuNameRegex.Text = "[Ss][12]\\d{3}[Ee]\\d{1,3}";
-            this.ttMovieFileMerger.SetToolTip(this.tbBadDocuNameRegex, resources.GetString("tbBadDocuNameRegex.ToolTip"));
+            this.ttMovieFileMerger.SetToolTip(this.tbBadDocuNameRegex, "The Bad Docu Name regular expression tells MFM if a file name is a bad documentat" +
+        "ion name.");
             // 
             // lblGoodDocuNameRegex
             // 
@@ -2519,7 +2582,8 @@ namespace Movie_File_Merger
             this.lblGoodDocuNameRegex.Size = new System.Drawing.Size(119, 15);
             this.lblGoodDocuNameRegex.TabIndex = 28;
             this.lblGoodDocuNameRegex.Text = "Good Docu Name";
-            this.ttMovieFileMerger.SetToolTip(this.lblGoodDocuNameRegex, resources.GetString("lblGoodDocuNameRegex.ToolTip"));
+            this.ttMovieFileMerger.SetToolTip(this.lblGoodDocuNameRegex, "The Good Docu Name regular expression tells MFM if a file name is a good document" +
+        "ation name.");
             // 
             // tbGoodDocuNameRegex
             // 
@@ -2531,7 +2595,8 @@ namespace Movie_File_Merger
             this.tbGoodDocuNameRegex.Size = new System.Drawing.Size(172, 13);
             this.tbGoodDocuNameRegex.TabIndex = 25;
             this.tbGoodDocuNameRegex.Text = ".* S[12]\\d{3}E\\d{1,3} .*$";
-            this.ttMovieFileMerger.SetToolTip(this.tbGoodDocuNameRegex, resources.GetString("tbGoodDocuNameRegex.ToolTip"));
+            this.ttMovieFileMerger.SetToolTip(this.tbGoodDocuNameRegex, "The Good Docu Name regular expression tells MFM if a file name is a good document" +
+        "ation name.");
             // 
             // lblToLowerRegex
             // 
@@ -2653,7 +2718,7 @@ namespace Movie_File_Merger
             this.lblAddonExtensions.TabIndex = 22;
             this.lblAddonExtensions.Text = "Add-on File Extensions";
             this.ttMovieFileMerger.SetToolTip(this.lblAddonExtensions, "The Add-on Files Extension identified add-on files like subtitles or posters. \r\nA" +
-        "dd-on files will be only considered if a main video file exists.");
+        "dd-on files will be only considered if the main video file exists.");
             // 
             // tbAddonExtensionsRegex
             // 
@@ -2668,7 +2733,7 @@ namespace Movie_File_Merger
             this.tbAddonExtensionsRegex.TabIndex = 12;
             this.tbAddonExtensionsRegex.Text = "srt|sub";
             this.ttMovieFileMerger.SetToolTip(this.tbAddonExtensionsRegex, "The Add-on Files Extension identified add-on files like subtitles or posters. \r\nA" +
-        "dd-on files will be only considered if a main video file exists.");
+        "dd-on files will be only considered if the main video file exists.");
             // 
             // lblMainExtensions
             // 
@@ -2727,7 +2792,7 @@ namespace Movie_File_Merger
             this.pbGitHubSocialCodingLeft.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbGitHubSocialCodingLeft.TabIndex = 17;
             this.pbGitHubSocialCodingLeft.TabStop = false;
-            this.ttMovieFileMerger.SetToolTip(this.pbGitHubSocialCodingLeft, "Click on me to contribute to or have a look at the source code on GitHub.");
+            this.ttMovieFileMerger.SetToolTip(this.pbGitHubSocialCodingLeft, "Contribute to or have a look at the source code on GitHub.");
             this.pbGitHubSocialCodingLeft.Click += new System.EventHandler(this.pbGitHubSocialCoding_Click);
             this.pbGitHubSocialCodingLeft.MouseEnter += new System.EventHandler(this.PbPictureLinkMouseEnter);
             this.pbGitHubSocialCodingLeft.MouseLeave += new System.EventHandler(this.PbPictureLinkMouseLeave);
@@ -2744,7 +2809,7 @@ namespace Movie_File_Merger
             this.pbGitHubSocialCoding.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbGitHubSocialCoding.TabIndex = 16;
             this.pbGitHubSocialCoding.TabStop = false;
-            this.ttMovieFileMerger.SetToolTip(this.pbGitHubSocialCoding, "Click on me to contribute to or have a look at the source code on GitHub.");
+            this.ttMovieFileMerger.SetToolTip(this.pbGitHubSocialCoding, "Contribute to or have a look at the source code on GitHub.");
             this.pbGitHubSocialCoding.Click += new System.EventHandler(this.pbGitHubSocialCoding_Click);
             this.pbGitHubSocialCoding.MouseEnter += new System.EventHandler(this.PbPictureLinkMouseEnter);
             this.pbGitHubSocialCoding.MouseLeave += new System.EventHandler(this.PbPictureLinkMouseLeave);
@@ -2762,7 +2827,7 @@ namespace Movie_File_Merger
             this.pbAboutDonate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbAboutDonate.TabIndex = 15;
             this.pbAboutDonate.TabStop = false;
-            this.ttMovieFileMerger.SetToolTip(this.pbAboutDonate, "Click on me to make a small donation for Modi.");
+            this.ttMovieFileMerger.SetToolTip(this.pbAboutDonate, "Make a small donation for Modi.");
             this.pbAboutDonate.Click += new System.EventHandler(this.pbDonate_Click);
             this.pbAboutDonate.MouseEnter += new System.EventHandler(this.PbPictureLinkMouseEnter);
             this.pbAboutDonate.MouseLeave += new System.EventHandler(this.PbPictureLinkMouseLeave);
@@ -2779,7 +2844,7 @@ namespace Movie_File_Merger
             this.pbAboutUserManual.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbAboutUserManual.TabIndex = 11;
             this.pbAboutUserManual.TabStop = false;
-            this.ttMovieFileMerger.SetToolTip(this.pbAboutUserManual, "Go To the MFM User Manual to read more details about how to use MFM.");
+            this.ttMovieFileMerger.SetToolTip(this.pbAboutUserManual, "Go to the online MFM User Manual to read more details about how to use MFM.");
             this.pbAboutUserManual.Click += new System.EventHandler(this.PbUserManualClick);
             this.pbAboutUserManual.MouseEnter += new System.EventHandler(this.PbPictureLinkMouseEnter);
             this.pbAboutUserManual.MouseLeave += new System.EventHandler(this.PbPictureLinkMouseLeave);
@@ -2797,8 +2862,8 @@ namespace Movie_File_Merger
             this.pbAboutHowTo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbAboutHowTo.TabIndex = 10;
             this.pbAboutHowTo.TabStop = false;
-            this.ttMovieFileMerger.SetToolTip(this.pbAboutHowTo, "Go to the How to Organize Videos on Hard Disks Manual to get a brief description " +
-        "about how a video collection could be organized in general.");
+            this.ttMovieFileMerger.SetToolTip(this.pbAboutHowTo, "Go to the online How to Organize Videos on Hard Disks Manual to get a brief descr" +
+        "iption of how a video collection could be organized in general.");
             this.pbAboutHowTo.Click += new System.EventHandler(this.PbHowToClick);
             this.pbAboutHowTo.MouseEnter += new System.EventHandler(this.PbPictureLinkMouseEnter);
             this.pbAboutHowTo.MouseLeave += new System.EventHandler(this.PbPictureLinkMouseLeave);
@@ -2843,7 +2908,7 @@ namespace Movie_File_Merger
             this.pbAboutBanner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbAboutBanner.TabIndex = 6;
             this.pbAboutBanner.TabStop = false;
-            this.ttMovieFileMerger.SetToolTip(this.pbAboutBanner, "Go to the MFM web site to get additional information or access the forum.");
+            this.ttMovieFileMerger.SetToolTip(this.pbAboutBanner, "Go to the MFM website to get additional information or access the forum.");
             this.pbAboutBanner.Click += new System.EventHandler(this.PbBannerClick);
             this.pbAboutBanner.MouseEnter += new System.EventHandler(this.PbPictureLinkMouseEnter);
             this.pbAboutBanner.MouseLeave += new System.EventHandler(this.PbPictureLinkMouseLeave);
@@ -2859,6 +2924,7 @@ namespace Movie_File_Merger
             this.lblCopyLeft.TabIndex = 2;
             this.lblCopyLeft.Text = "© 2017 Modi";
             this.lblCopyLeft.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ttMovieFileMerger.SetToolTip(this.lblCopyLeft, "MFM is copyrighted by Modi (Reinhold Lauer).");
             // 
             // rtbCopyright
             // 
@@ -2888,6 +2954,7 @@ namespace Movie_File_Merger
             this.lblVersion.TabIndex = 1;
             this.lblVersion.Text = "x.x.x";
             this.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ttMovieFileMerger.SetToolTip(this.lblVersion, "The installed MFM version.");
             // 
             // toolStripContainer1
             // 
@@ -2938,61 +3005,16 @@ namespace Movie_File_Merger
             // ttMovieFileMerger
             // 
             this.ttMovieFileMerger.AutomaticDelay = 400;
-            this.ttMovieFileMerger.AutoPopDelay = 60000;
-            this.ttMovieFileMerger.InitialDelay = 400;
+            this.ttMovieFileMerger.AutoPopDelay = 90000;
+            this.ttMovieFileMerger.InitialDelay = 1000;
             this.ttMovieFileMerger.IsBalloon = true;
             this.ttMovieFileMerger.ReshowDelay = 80;
             this.ttMovieFileMerger.ShowAlways = true;
+            this.ttMovieFileMerger.ToolTipTitle = "Movie File Merger Help";
             // 
             // ofdTeraCopy
             // 
             this.ofdTeraCopy.FileName = "C:\\Program Files\\TeraCopy\\TeraCopy.exe";
-            // 
-            // pbListsUserManual
-            // 
-            this.pbListsUserManual.ErrorImage = null;
-            this.pbListsUserManual.Image = ((System.Drawing.Image)(resources.GetObject("pbListsUserManual.Image")));
-            this.pbListsUserManual.InitialImage = null;
-            this.pbListsUserManual.Location = new System.Drawing.Point(309, 6);
-            this.pbListsUserManual.Margin = new System.Windows.Forms.Padding(2);
-            this.pbListsUserManual.Name = "pbListsUserManual";
-            this.pbListsUserManual.Size = new System.Drawing.Size(56, 65);
-            this.pbListsUserManual.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbListsUserManual.TabIndex = 52;
-            this.pbListsUserManual.TabStop = false;
-            this.ttMovieFileMerger.SetToolTip(this.pbListsUserManual, "Go To the MFM User Manual to read more details about how to use MFM.");
-            // 
-            // pbListsHowTo
-            // 
-            this.pbListsHowTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbListsHowTo.ErrorImage = null;
-            this.pbListsHowTo.Image = ((System.Drawing.Image)(resources.GetObject("pbListsHowTo.Image")));
-            this.pbListsHowTo.InitialImage = null;
-            this.pbListsHowTo.Location = new System.Drawing.Point(508, 6);
-            this.pbListsHowTo.Margin = new System.Windows.Forms.Padding(2);
-            this.pbListsHowTo.Name = "pbListsHowTo";
-            this.pbListsHowTo.Size = new System.Drawing.Size(54, 65);
-            this.pbListsHowTo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbListsHowTo.TabIndex = 51;
-            this.pbListsHowTo.TabStop = false;
-            this.ttMovieFileMerger.SetToolTip(this.pbListsHowTo, "Go to the How to Organize Videos on Hard Disks Manual to get a brief description " +
-        "about how a video collection could be organized in general.");
-            // 
-            // pbInstructionsBanner
-            // 
-            this.pbInstructionsBanner.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbInstructionsBanner.ErrorImage = null;
-            this.pbInstructionsBanner.Image = ((System.Drawing.Image)(resources.GetObject("pbInstructionsBanner.Image")));
-            this.pbInstructionsBanner.InitialImage = null;
-            this.pbInstructionsBanner.Location = new System.Drawing.Point(-258, 0);
-            this.pbInstructionsBanner.Margin = new System.Windows.Forms.Padding(2);
-            this.pbInstructionsBanner.Name = "pbInstructionsBanner";
-            this.pbInstructionsBanner.Size = new System.Drawing.Size(253, 67);
-            this.pbInstructionsBanner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbInstructionsBanner.TabIndex = 50;
-            this.pbInstructionsBanner.TabStop = false;
-            this.ttMovieFileMerger.SetToolTip(this.pbInstructionsBanner, "Go to the MFM web site to get additional information or access the forum.");
             // 
             // MFMForm
             // 
@@ -3012,6 +3034,7 @@ namespace Movie_File_Merger
             this.tpSeparateLists.ResumeLayout(false);
             this.gbTypeSelection.ResumeLayout(false);
             this.gbProcessImport.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbInstructionsBanner)).EndInit();
             this.scVertical.Panel1.ResumeLayout(false);
             this.scVertical.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.scVertical)).EndInit();
@@ -3024,6 +3047,8 @@ namespace Movie_File_Merger
             this.scHorizontal.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.scHorizontal)).EndInit();
             this.scHorizontal.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbListsHowTo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbListsUserManual)).EndInit();
             this.tpLog.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogUserManual)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogHowTo)).EndInit();
@@ -3068,9 +3093,6 @@ namespace Movie_File_Merger
             this.toolStripContainer1.PerformLayout();
             this.ssMFM.ResumeLayout(false);
             this.ssMFM.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbListsUserManual)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbListsHowTo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbInstructionsBanner)).EndInit();
             this.ResumeLayout(false);
 
 		}

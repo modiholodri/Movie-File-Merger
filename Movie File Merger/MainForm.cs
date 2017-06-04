@@ -2,7 +2,7 @@
  * Created by Modi
  * Date: 2012-04-09
  */
- 
+
 // Copyright 2012-2017 Reinhold Lauer
 // 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -17,7 +17,6 @@
 
 using System;
 using System.Collections.Generic;
-using System.Collections.Specialized;
 using System.Drawing;
 using System.Windows.Forms;
 using System.IO;
@@ -31,8 +30,7 @@ using MediaInfoLib;
 using WinSCP;
 
 
-namespace Movie_File_Merger
-{
+namespace Movie_File_Merger {
     /// <summary>
     /// Application to selectively combine collections on hard disks.
     /// </summary>
@@ -1235,7 +1233,7 @@ namespace Movie_File_Merger
             lvImport.Update( );
             MakeToolTip( fiFile, lvThis, lviThis );
             ColorAll( lviThis.Text );  // color again to get info from tooltip
-            tspbMFM.Value++;
+            if (tspbMFM.Value < tspbMFM.Maximum ) tspbMFM.Value++;
         }
 
         /// <summary>
@@ -2089,7 +2087,8 @@ namespace Movie_File_Merger
         /// <param name="e">The arguments that the implementor of this event may find useful.</param>
         void LvMouseEnter( object sender, EventArgs e )
         {
-            if ( !cobCriteria.ContainsFocus ) { // don't take away the focus from the Criteria entry field
+            if ( !(cobCriteria.ContainsFocus || tbLocalPath.ContainsFocus || tbRemotePath.ContainsFocus ||
+                 tbHostName.ContainsFocus || tbUserName.ContainsFocus || tbPassword.ContainsFocus || tbPortNumber.ContainsFocus ) ) { // don't take away the focus from the Criteria entry field
                 ((ListView)sender).Select( );
             }
         }
@@ -2353,9 +2352,7 @@ namespace Movie_File_Merger
         /// <param name="e">The arguments that the implementor of this event may find useful.</param>
         void CobCriteriaDragOver( object sender, DragEventArgs e )
         {
-            if ( e.Data.GetDataPresent( typeof( ListView.SelectedListViewItemCollection ) ) ) {
-                e.Effect = e.AllowedEffect;
-            }
+
         }
 
         /// <summary>
@@ -2465,22 +2462,33 @@ namespace Movie_File_Merger
         {
             SearchOption soMovieFileMerger = SearchOption.AllDirectories;
             foreach ( var drive in DriveInfo.GetDrives( ) ) {
-                foreach ( var strPath in Directory.GetDirectories( drive.Name ) ) {
-                    if ( strPath.Contains( strCollectionType ) ) {
-                        strTargetFolder = strPath;
-                        LogInfo( "Scanning folder " + strPath );
-                        var diFolder = new DirectoryInfo( strPath );
-                        foreach ( FileInfo fiFile in diFolder.GetFiles( "*", soMovieFileMerger ) ) {
-                            if ( !rgxMainExtensions.IsMatch( fiFile.Extension.ToLower( ) ) ) {
-                                continue;
+                try {
+                    if ( drive.IsReady ) {
+                        LogInfo( "Checking Drive " + drive.Name );
+                        foreach ( var strPath in Directory.GetDirectories( drive.Name ) ) {
+                            if ( strPath.Contains( strCollectionType ) ) {
+                                strTargetFolder = strPath;
+                                LogInfo( "Scanning folder " + strPath );
+                                var diFolder = new DirectoryInfo( strPath );
+                                foreach ( FileInfo fiFile in diFolder.GetFiles( "*", soMovieFileMerger ) ) {
+                                    if ( !rgxMainExtensions.IsMatch( fiFile.Extension.ToLower( ) ) ) {
+                                        continue;
+                                    }
+                                    string strJustName = fiFile.Name;
+                                    if ( strJustName.LastIndexOf( '.' ) != -1 ) {
+                                        strJustName = strJustName.Substring( 0, strJustName.LastIndexOf( '.' ) );
+                                    }
+                                    DoAddFileToListView( CleanName( strJustName ), fiFile, lvExisting );
+                                }
                             }
-                            string strJustName = fiFile.Name;
-                            if ( strJustName.LastIndexOf( '.' ) != -1 ) {
-                                strJustName = strJustName.Substring( 0, strJustName.LastIndexOf( '.' ) );
-                            }
-                            DoAddFileToListView( CleanName( strJustName ), fiFile, lvExisting );
                         }
                     }
+                    else {
+                        LogInfo( " Not ready to read on " + drive.Name );
+                    }
+                }
+                catch ( Exception e ) {
+                   ShowError( e.Message );
                 }
             }
             LogInfo( "Just Scan It is finished..." );
@@ -3244,8 +3252,13 @@ namespace Movie_File_Merger
 
         void LogFTPSuckerMessage(string strType, Color cColor, string strMessage)
         {
-            rtbFTPSucker.SelectionColor = cColor;
-            rtbFTPSucker.AppendText(DateTime.Now + ": " + strType + " - " + strMessage + "\n");
+            string[] saLines = strMessage.Split( '\r' );
+            foreach ( string strLine in saLines ) {
+                if ( strLine.Length > 1 ) {
+                    rtbFTPSucker.SelectionColor = cColor;
+                    rtbFTPSucker.AppendText( DateTime.Now + ": " + strType + " - " + strMessage + "\n" );
+                }
+            }
             rtbFTPSucker.ScrollToCaret();
         }
 

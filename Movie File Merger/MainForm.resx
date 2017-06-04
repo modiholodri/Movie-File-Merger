@@ -128,7 +128,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAC4
-        KAAAAk1TRnQBSQFMAgEBHwEAAXgBAAF4AQABEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        KAAAAk1TRnQBSQFMAgEBHwEAAYABAAGAAQABEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAAYADAAEBAQABCAYAASAYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -313,13 +313,16 @@
   <metadata name="ttMovieFileMerger.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>794, 17</value>
   </metadata>
+  <metadata name="ttMovieFileMerger.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>794, 17</value>
+  </metadata>
   <data name="gbTypeSelection.ToolTip" xml:space="preserve">
     <value>A collection is the sum of items, which match certain criteria, like Movies, Documentaries or Series. Try to keep the
 collections in separate top level folders on your hard disks, to make your life easier when processing your collections.</value>
   </data>
   <data name="cobMinimumResolution.ToolTip" xml:space="preserve">
     <value>Select the minimum horizontal resolution for import items, so that they are considered to be processed at all. 
-Note that there is a tolderance of 3% to accept nearly Ok videos. Click on the small arrow to the right to change the minimum resolution.</value>
+Note that there is a tolerance of 3% to accept nearly Ok videos. Click on the small arrow to the right to change the minimum resolution.</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pbInstructionsBanner.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -6228,66 +6231,6 @@ Note that there is a tolderance of 3% to accept nearly Ok videos. Click on the s
         QhtcsGcTKqGqQFbyAwIAOw==
 </value>
   </data>
-  <data name="lblBadMovieNameRegex.ToolTip" xml:space="preserve">
-    <value>The Only Characters regular expression tells MFM which characters to accept. 
-All other characters will be removed from the item name. 
-The only character regular expression has to start with “[^” and end with “]”.</value>
-  </data>
-  <data name="tbBadMovieNameRegex.ToolTip" xml:space="preserve">
-    <value>The Only Characters regular expression tells MFM which characters to accept. 
-All other characters will be removed from the item name. 
-The only character regular expression has to start with “[^” and end with “]”.</value>
-  </data>
-  <data name="lblGoodMovieNameRegex.ToolTip" xml:space="preserve">
-    <value>The Episodes Identification regular expression tells MFM where to find the episode identification in the file name. 
-The episode identification has to contain 2 numbers of which the first number is for the season and 
-the second number for the episode. Episode names will be truncated after the episode identification.</value>
-  </data>
-  <data name="tbGoodMovieNameRegex.ToolTip" xml:space="preserve">
-    <value>The Episodes Identification regular expression tells MFM where to find the episode identification in the file name. 
-The episode identification has to contain 2 numbers of which the first number is for the season and 
-the second number for the episode. Episode names will be truncated after the episode identification.</value>
-  </data>
-  <data name="lblBadEpisodeNameRegex.ToolTip" xml:space="preserve">
-    <value>The Only Characters regular expression tells MFM which characters to accept. 
-All other characters will be removed from the item name. 
-The only character regular expression has to start with “[^” and end with “]”.</value>
-  </data>
-  <data name="tbBadEpisodeNameRegex.ToolTip" xml:space="preserve">
-    <value>The Only Characters regular expression tells MFM which characters to accept. 
-All other characters will be removed from the item name. 
-The only character regular expression has to start with “[^” and end with “]”.</value>
-  </data>
-  <data name="lblGoodEpisodeNameRegex.ToolTip" xml:space="preserve">
-    <value>The Episodes Identification regular expression tells MFM where to find the episode identification in the file name. 
-The episode identification has to contain 2 numbers of which the first number is for the season and 
-the second number for the episode. Episode names will be truncated after the episode identification.</value>
-  </data>
-  <data name="tbGoodEpisodeNameRegex.ToolTip" xml:space="preserve">
-    <value>The Episodes Identification regular expression tells MFM where to find the episode identification in the file name. 
-The episode identification has to contain 2 numbers of which the first number is for the season and 
-the second number for the episode. Episode names will be truncated after the episode identification.</value>
-  </data>
-  <data name="lblBadDocuNameRegex.ToolTip" xml:space="preserve">
-    <value>The Only Characters regular expression tells MFM which characters to accept. 
-All other characters will be removed from the item name. 
-The only character regular expression has to start with “[^” and end with “]”.</value>
-  </data>
-  <data name="tbBadDocuNameRegex.ToolTip" xml:space="preserve">
-    <value>The Only Characters regular expression tells MFM which characters to accept. 
-All other characters will be removed from the item name. 
-The only character regular expression has to start with “[^” and end with “]”.</value>
-  </data>
-  <data name="lblGoodDocuNameRegex.ToolTip" xml:space="preserve">
-    <value>The Episodes Identification regular expression tells MFM where to find the episode identification in the file name. 
-The episode identification has to contain 2 numbers of which the first number is for the season and 
-the second number for the episode. Episode names will be truncated after the episode identification.</value>
-  </data>
-  <data name="tbGoodDocuNameRegex.ToolTip" xml:space="preserve">
-    <value>The Episodes Identification regular expression tells MFM where to find the episode identification in the file name. 
-The episode identification has to contain 2 numbers of which the first number is for the season and 
-the second number for the episode. Episode names will be truncated after the episode identification.</value>
-  </data>
   <data name="lblToLowerRegex.ToolTip" xml:space="preserve">
     <value>MFM capitalizes the first letter of each word in a name by default, to make the item name easier to read. 
 The Convert to Lower regular expression tells MFM which words in the name to convert to lower case. 
@@ -8733,7 +8676,7 @@ the second number for the episode. Episode names will be truncated after the epi
     <value>1102, 17</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>62</value>
+    <value>68</value>
   </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
