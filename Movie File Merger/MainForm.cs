@@ -3164,6 +3164,9 @@ namespace Movie_File_Merger {
                 case "Check for updates monthly.":
                     tsWaitForDays = new TimeSpan( 30, 0, 0, 0 );
                     break;
+                case "Check for updates yearly.":
+                    tsWaitForDays = new TimeSpan( 365, 0, 0, 0 );
+                    break;
             }
 
             dtLastChecked += tsWaitForDays;
@@ -3171,7 +3174,7 @@ namespace Movie_File_Merger {
             if ( dtLastChecked < DateTime.Now || sWhen.Contains( "Now" ) ) {
                 var xmlLatestVersion = new XmlDocument( );
                 try {
-                    xmlLatestVersion.Load( @"https://movie-file-merger.org/MFMVersion.xml" );
+                    xmlLatestVersion.Load( "http://movie-file-merger.org/MFMVersion.xml" );
                     sLatestRelease = readXmlSetting( xmlLatestVersion, "/MFMVersions/LatestRelease", "0.0.0" );
                     sReleaseNotes = readXmlSetting( xmlLatestVersion, "/MFMVersions/ReleaseNotes", "Sorry, did not find any release notes..." );
                     if ( sCurrentRelease != sLatestRelease ) {
