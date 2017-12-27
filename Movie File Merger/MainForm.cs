@@ -3231,7 +3231,7 @@ namespace Movie_File_Merger {
         /// </summary>
 		/// <param name="sender">The object that invoked the event that fired the event handler.</param>
 		/// <param name="e">The arguments that the implementor of this event may find useful.</param>
-        private void pbDonate_Click( object sender, EventArgs e )
+        private void pbDonateClick( object sender, EventArgs e )
         {
             ExecuteThis( "https://movie-file-merger.org/donations.html#Donations" );
         }
