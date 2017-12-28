@@ -631,7 +631,7 @@ namespace Movie_File_Merger {
             if ( e.Data.GetDataPresent( typeof( ListView.SelectedListViewItemCollection ) ) ) {
                 e.Effect = e.AllowedEffect;
             }
-            if ( e.Data.GetDataPresent( DataFormats.FileDrop ) ) {
+            if ( e.Data.GetDataPresent( DataFormats.FileDrop ) ) {  // Modi: should it really be allowed?
                 e.Effect = e.AllowedEffect;
             }
         }
@@ -1810,7 +1810,11 @@ namespace Movie_File_Merger {
 			}
 			else if ( lviExisting != null ) {
 				lviExisting.BackColor = ExistingColor;
-				if ( lviWish != null ) {
+                if (HorizontalResolutionTooLow(lviExisting))
+                {
+                    lviExisting.BackColor = LowResColor;
+                }
+                if ( lviWish != null ) {
 					lviWish.BackColor = ExistingColor;
 				}
 				if ( lviImport != null ) {
@@ -2409,6 +2413,24 @@ namespace Movie_File_Merger {
                 if ( SelectInList( lvDragSource, GetCriteriaRegEx( cobCriteria.Text ) ) == 0 ) {
                     ShowInfo( "Selected no items." );
                 }
+            }
+        }
+
+
+        /// <summary>
+        /// A list view has been dropped on the Minimum Resolution selection.
+        /// Select items in the list view according to the minimum resolution.
+        /// </summary>
+        /// <param name="sender">The object that invoked the event that fired the event handler.</param>
+        /// <param name="e">The arguments that the implementor of this event may find useful.</param>
+        private void cobMinimumResolution_DragDrop(object sender, DragEventArgs e)
+        {
+            if (e.AllowedEffect == DragDropEffects.None) {
+                return;
+            }
+            foreach ( ListViewItem lviThis in lvDragSource.Items ) {
+                ColorAll( lviThis.Text );
+                lviThis.Selected = lviThis.BackColor == LowResColor; // select if lowres video
             }
         }
 
@@ -3586,6 +3608,11 @@ namespace Movie_File_Merger {
         private void pbMaintenanceBitCoins_Click( object sender, EventArgs e )
         {
             ExecuteThis( "https://www.coinbase.com/modi" );
+        }
+
+        private void btnEraseSelected_Click(object sender, EventArgs e)
+        {
+
         }
     }
 #endregion FTP Sucker

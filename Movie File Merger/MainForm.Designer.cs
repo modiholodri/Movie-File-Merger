@@ -684,6 +684,7 @@ namespace Movie_File_Merger
             this.btnEraseSelected.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ttMovieFileMerger.SetToolTip(this.btnEraseSelected, "Drop items here to erase them from a list.");
             this.btnEraseSelected.UseVisualStyleBackColor = false;
+            this.btnEraseSelected.Click += new System.EventHandler(this.btnEraseSelected_Click);
             this.btnEraseSelected.DragDrop += new System.Windows.Forms.DragEventHandler(this.BtnEraseSelectedDragDrop);
             this.btnEraseSelected.DragOver += new System.Windows.Forms.DragEventHandler(this.BtnDragOver);
             // 
@@ -857,6 +858,7 @@ namespace Movie_File_Merger
             // 
             // cobMinimumResolution
             // 
+            this.cobMinimumResolution.AllowDrop = true;
             this.cobMinimumResolution.BackColor = System.Drawing.Color.IndianRed;
             this.cobMinimumResolution.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cobMinimumResolution.FormattingEnabled = true;
@@ -879,6 +881,8 @@ namespace Movie_File_Merger
             this.cobMinimumResolution.Size = new System.Drawing.Size(184, 24);
             this.cobMinimumResolution.TabIndex = 26;
             this.ttMovieFileMerger.SetToolTip(this.cobMinimumResolution, resources.GetString("cobMinimumResolution.ToolTip"));
+            this.cobMinimumResolution.DragDrop += new System.Windows.Forms.DragEventHandler(this.cobMinimumResolution_DragDrop);
+            this.cobMinimumResolution.DragOver += new System.Windows.Forms.DragEventHandler(this.BtnDragOver);
             // 
             // btnStart
             // 
