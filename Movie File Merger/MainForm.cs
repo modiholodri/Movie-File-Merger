@@ -36,6 +36,7 @@ namespace Movie_File_Merger {
     /// </summary>
     public partial class MFMForm : Form {
         ListView lvDragSource = null;  // the list view from which has been dragged
+        ListView lvLastClicked = null;  // the list view which has been last clicked
         Color DragColor = Color.Red;  // the color of the item which has been dragged
         string[] saCollections = { "Miscellaneous", "Adults", "Movies", "Documentaries", "Series", "Clips" }; // all collections
         string strCollectionType = "Miscellaneous";  // the active collection type
@@ -2625,6 +2626,32 @@ namespace Movie_File_Merger {
             cobCriteria.Text = GetCriteriaRegEx( cobCriteria.Text );
         }
 
+        /// <summary>
+        /// Invert the selected items of a list view.
+        /// </summary>
+        /// <param name="lvThis">The list view in which to invert the selection.</param>
+        void InvertSelected(ListView lvThis)
+        {
+            foreach (ListViewItem lviThis in lvThis.Items)
+            {
+                lviThis.Selected = !lviThis.Selected;
+            }
+        }
+
+        /// <summary>
+        /// Invert the selected items in all list views.
+        /// </summary>
+        /// <param name="sender">The object that invoked the event that fired the event handler.</param>
+        /// <param name="e">The arguments that the implementor of this event may find useful.</param>
+        private void BtnInvertSelection_Click(object sender, EventArgs e)
+        {
+            InvertSelected(lvGarbage);
+            InvertSelected(lvExisting);
+            InvertSelected(lvWish);
+            InvertSelected(lvImport);
+            lvLastClicked.Select();
+        }
+
         #endregion Action Bar Interface
 
         /************************************************************************************************/
@@ -3674,6 +3701,11 @@ namespace Movie_File_Merger {
         private void BtnEraseSelected_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void LvClick(object sender, EventArgs e)
+        {
+            lvLastClicked = (ListView)sender;
         }
     }
 #endregion FTP Sucker
