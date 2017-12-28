@@ -356,9 +356,9 @@ namespace Movie_File_Merger
             // 
             this.tcMovieFileMerger.Controls.Add(this.tpSeparateLists);
             this.tcMovieFileMerger.Controls.Add(this.tpLog);
-            this.tcMovieFileMerger.Controls.Add(this.tpFTPSucker);
             this.tcMovieFileMerger.Controls.Add(this.tpMaintenance);
             this.tcMovieFileMerger.Controls.Add(this.tpSettings);
+            this.tcMovieFileMerger.Controls.Add(this.tpFTPSucker);
             this.tcMovieFileMerger.Controls.Add(this.tpAbout);
             this.tcMovieFileMerger.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tcMovieFileMerger.ImageList = this.ilMovieFileMerger;
@@ -2429,8 +2429,12 @@ namespace Movie_File_Merger
             this.cobDoubleClickDefault.Items.AddRange(new object[] {
             "DoubleClick Default",
             "Play",
+            "Play & Info",
+            "Play & Download",
+            "Play & Info & Download",
             "Search Info",
-            "Search Download"});
+            "Search Download",
+            "Search Info & Download"});
             this.cobDoubleClickDefault.Location = new System.Drawing.Point(11, 358);
             this.cobDoubleClickDefault.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cobDoubleClickDefault.MaxDropDownItems = 15;

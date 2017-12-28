@@ -2045,17 +2045,31 @@ namespace Movie_File_Merger {
         void LvDoubleClick( object sender, EventArgs e )
         {
             switch ( cobDoubleClickDefault.Text ) {
-                case "DoubleClick Default":
-                    Play((ListView)sender);
-                    break;
                 case "Play":
                     Play((ListView)sender);
+                    break;
+                case "Play & Info":
+                    Play((ListView)sender);
+                    SearchInfo((ListView)sender);
+                    break;
+                case "Play & Download":
+                    Play((ListView)sender);
+                    SearchDownload((ListView)sender);
+                    break;
+                case "Play & Info & Download":
+                    Play((ListView)sender);
+                    SearchInfo((ListView)sender);
+                    SearchDownload((ListView)sender);
                     break;
                 case "Search Info":
                     SearchInfo( (ListView)sender );
                     break;
                 case "Search Download":
                     SearchDownload( (ListView)sender );
+                    break;
+                case "Search Info & Download":
+                    SearchInfo((ListView)sender);
+                    SearchDownload((ListView)sender);
                     break;
                 default:
                     Play((ListView)sender);
