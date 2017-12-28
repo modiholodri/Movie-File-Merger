@@ -129,6 +129,7 @@ namespace Movie_File_Merger
             this.rtbFTPSucker = new System.Windows.Forms.RichTextBox();
             this.btnGetWishedRemoteFiles = new System.Windows.Forms.Button();
             this.tpMaintenance = new System.Windows.Forms.TabPage();
+            this.BntDeleteUnrelated = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pbMaintenanceHowTo = new System.Windows.Forms.PictureBox();
             this.btnPlayMaintenance = new System.Windows.Forms.Button();
@@ -684,7 +685,7 @@ namespace Movie_File_Merger
             this.btnEraseSelected.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ttMovieFileMerger.SetToolTip(this.btnEraseSelected, "Drop items here to erase them from a list.");
             this.btnEraseSelected.UseVisualStyleBackColor = false;
-            this.btnEraseSelected.Click += new System.EventHandler(this.btnEraseSelected_Click);
+            this.btnEraseSelected.Click += new System.EventHandler(this.BtnEraseSelected_Click);
             this.btnEraseSelected.DragDrop += new System.Windows.Forms.DragEventHandler(this.BtnEraseSelectedDragDrop);
             this.btnEraseSelected.DragOver += new System.Windows.Forms.DragEventHandler(this.BtnDragOver);
             // 
@@ -1918,6 +1919,7 @@ namespace Movie_File_Merger
             // 
             // tpMaintenance
             // 
+            this.tpMaintenance.Controls.Add(this.BntDeleteUnrelated);
             this.tpMaintenance.Controls.Add(this.pictureBox2);
             this.tpMaintenance.Controls.Add(this.pbMaintenanceHowTo);
             this.tpMaintenance.Controls.Add(this.btnPlayMaintenance);
@@ -1945,6 +1947,28 @@ namespace Movie_File_Merger
             this.tpMaintenance.Size = new System.Drawing.Size(1201, 684);
             this.tpMaintenance.TabIndex = 5;
             this.tpMaintenance.Text = "Maintenance";
+            // 
+            // BntDeleteUnrelated
+            // 
+            this.BntDeleteUnrelated.AllowDrop = true;
+            this.BntDeleteUnrelated.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BntDeleteUnrelated.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.BntDeleteUnrelated.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BntDeleteUnrelated.ImageKey = "Garbage.gif";
+            this.BntDeleteUnrelated.ImageList = this.ilMovieFileMerger;
+            this.BntDeleteUnrelated.Location = new System.Drawing.Point(1077, 7);
+            this.BntDeleteUnrelated.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BntDeleteUnrelated.Name = "BntDeleteUnrelated";
+            this.BntDeleteUnrelated.Size = new System.Drawing.Size(114, 52);
+            this.BntDeleteUnrelated.TabIndex = 65;
+            this.BntDeleteUnrelated.Text = "Delete Unrelated";
+            this.BntDeleteUnrelated.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BntDeleteUnrelated.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ttMovieFileMerger.SetToolTip(this.BntDeleteUnrelated, "Put all items in all lists in the Garbage list according to the selection criteri" +
+        "a.");
+            this.BntDeleteUnrelated.UseVisualStyleBackColor = false;
+            this.BntDeleteUnrelated.DragDrop += new System.Windows.Forms.DragEventHandler(this.BntDeleteUnrelated_DragDrop);
+            this.BntDeleteUnrelated.DragOver += new System.Windows.Forms.DragEventHandler(this.BtnDragOver);
             // 
             // pictureBox2
             // 
@@ -1989,7 +2013,7 @@ namespace Movie_File_Merger
             this.btnPlayMaintenance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPlayMaintenance.ImageKey = "Play.gif";
             this.btnPlayMaintenance.ImageList = this.ilMovieFileMerger;
-            this.btnPlayMaintenance.Location = new System.Drawing.Point(1103, 6);
+            this.btnPlayMaintenance.Location = new System.Drawing.Point(777, 7);
             this.btnPlayMaintenance.Margin = new System.Windows.Forms.Padding(4);
             this.btnPlayMaintenance.Name = "btnPlayMaintenance";
             this.btnPlayMaintenance.Size = new System.Drawing.Size(92, 53);
@@ -2055,7 +2079,7 @@ namespace Movie_File_Merger
             this.btnSearchInfoMaintenance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearchInfoMaintenance.ImageKey = "About.gif";
             this.btnSearchInfoMaintenance.ImageList = this.ilMovieFileMerger;
-            this.btnSearchInfoMaintenance.Location = new System.Drawing.Point(931, 6);
+            this.btnSearchInfoMaintenance.Location = new System.Drawing.Point(877, 6);
             this.btnSearchInfoMaintenance.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearchInfoMaintenance.Name = "btnSearchInfoMaintenance";
             this.btnSearchInfoMaintenance.Size = new System.Drawing.Size(137, 53);
@@ -2130,7 +2154,7 @@ namespace Movie_File_Merger
             "MRQE",
             "Hollywood.com",
             "CineMaterial"});
-            this.cobSearchInfoMaintenance.Location = new System.Drawing.Point(1068, 18);
+            this.cobSearchInfoMaintenance.Location = new System.Drawing.Point(1014, 18);
             this.cobSearchInfoMaintenance.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cobSearchInfoMaintenance.Name = "cobSearchInfoMaintenance";
             this.cobSearchInfoMaintenance.Size = new System.Drawing.Size(23, 24);
@@ -3384,5 +3408,6 @@ namespace Movie_File_Merger
         private System.Windows.Forms.PictureBox pbListsUserManual;
         private System.Windows.Forms.PictureBox pbListsHowTo;
         private System.Windows.Forms.PictureBox pbInstructionsBanner;
+        private System.Windows.Forms.Button BntDeleteUnrelated;
     }
 }

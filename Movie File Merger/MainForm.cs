@@ -2663,6 +2663,7 @@ namespace Movie_File_Merger {
         /// </summary>
         void ColorMaintenance( )
         {
+            LogMaintenance("Info:  ", Color.Black, "Coloring files...");
             foreach ( ListViewItem lviThis in lvMaintenance.Items ) {
                 string sFileName = Path.GetFileNameWithoutExtension( lviThis.Text );
                 string sExtension = Path.GetExtension( lviThis.Text ).ToLower( );
@@ -2712,27 +2713,53 @@ namespace Movie_File_Merger {
         void AddFolderToMaintenanceListView( string strFolderName )
         {
             var diFolder = new DirectoryInfo( strFolderName );
-            SearchOption soMovieFileMerger = SearchOption.AllDirectories;
 
-            SetStatus( "Adding folder " + strFolderName + " to " + lvMaintenance.Tag + "..." );
+            SetStatus( "Adding folder " + strFolderName + " to " + lvMaintenance.Tag  );
+            LogMaintenance("Info:  ", Color.Black, "Adding folder " + strFolderName );
 
             lvMaintenance.BeginUpdate( );
             lvMaintenance.Sorting = SortOrder.None;
             tspbMFM.Maximum = 1;
             tspbMFM.Value = 0;
-            foreach ( FileInfo fiFile in diFolder.GetFiles( "*", soMovieFileMerger ) ) {
+
+            // count the files
+            foreach ( FileInfo fiFile in diFolder.GetFiles( "*", SearchOption.AllDirectories) ) {
                 tspbMFM.Maximum++;
             }
-            foreach ( FileInfo fiFile in diFolder.GetFiles( "*", soMovieFileMerger ) ) {
+
+            // add the files
+            foreach ( FileInfo fiFile in diFolder.GetFiles( "*", SearchOption.AllDirectories) ) {
                 var lviThis = new ListViewItem( fiFile.FullName );
                 lviThis = AddItemToMaintenanceListView( lviThis );
                 MakeToolTip( fiFile, lvMaintenance, lviThis );
+                LogMaintenance("Info:  ", Color.Blue, "Adding file " + fiFile.Name );
                 tspbMFM.Value++;
+            }
+
+            // delte empty folders
+            List<string> strcolFoldersToDelete = new List<string>();
+            foreach (DirectoryInfo diSubDirectory in diFolder.GetDirectories("*", SearchOption.AllDirectories ))
+            {
+                LogMaintenance("Info:  ", Color.Black, "Checking folder " + diSubDirectory.FullName );
+                bool bHasFiles = false;
+                foreach (FileInfo fiFile in diSubDirectory.GetFiles("*", SearchOption.AllDirectories ))
+                {
+                    bHasFiles = true;
+                    break;
+                }
+                if ( !bHasFiles ) {
+                    strcolFoldersToDelete.Add(diSubDirectory.FullName);
+                }
+            }
+            strcolFoldersToDelete.Reverse();
+            foreach (string sPath in strcolFoldersToDelete)
+            {
+                Directory.Delete(sPath);
+                LogMaintenance("Info:  ", Color.Red, "Deleting empty folder " + sPath);
             }
             lvMaintenance.Sorting = SortOrder.Ascending;
             lvMaintenance.EndUpdate( );
             tspbMFM.Value = 0;
-            SetStatus( "Added all files!" );
             ClearStatus( );
         }
 
@@ -2758,6 +2785,26 @@ namespace Movie_File_Merger {
             }
         }
 
+        /// <summary>
+        /// Delete unrelated files in the Maintenance list.
+        /// </summary>
+        /// <param name="sender">The object that invoked the event that fired the event handler.</param>
+        /// <param name="e">The arguments that the implementor of this event may find useful.</param>
+        private void BntDeleteUnrelated_DragDrop(object sender, DragEventArgs e)
+        {
+            if (e.AllowedEffect == DragDropEffects.None) return;
+
+            LvMaintenanceDragDrop(sender, e); // add the draged items so that they can be deleted ;-)
+            foreach (ListViewItem lviThis in lvMaintenance.Items)
+            {
+                if (lviThis.BackColor == NeutralColor)
+                {
+                    LogMaintenance("Info:  ", Color.Red, "Deleting unrelated file " + lviThis.Name);
+                    File.Delete( GetMainFilePathFromToolTip(lviThis.ToolTipText) );
+                    lvMaintenance.Items.Remove(lviThis);
+                }
+            }
+        }
 
         /// <summary>
         /// Something has been droped on the maintenance list view.  
@@ -3605,12 +3652,12 @@ namespace Movie_File_Merger {
             ColorRemoteList( );
         }
 
-        private void pbMaintenanceBitCoins_Click( object sender, EventArgs e )
+        private void PbMaintenanceBitCoins_Click( object sender, EventArgs e )
         {
             ExecuteThis( "https://www.coinbase.com/modi" );
         }
 
-        private void btnEraseSelected_Click(object sender, EventArgs e)
+        private void BtnEraseSelected_Click(object sender, EventArgs e)
         {
 
         }
