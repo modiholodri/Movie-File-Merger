@@ -593,48 +593,31 @@ namespace Movie_File_Merger {
         #region Drop Area Handling
 
         /// <summary>
-        /// Plays the video of the item dropped on the Play droparea with the default system player.
-        /// The file to be played has to be located in the Import folder.
+        /// Plays the video of the selected items dropped on the Play droparea or double clicked 
+        /// with the default system player.
         /// </summary>
-        void Play( )
+        /// <param name="lvListView">The list view to check for selected items.</param>
+        void Play( ListView lvListView )
         {
-            bool bPlayedSomething = false;
-            if ( !Directory.Exists( strImportFolder ) ) {
-                ShowInfo( "Select a folder with " + strCollectionType + " to play..." );
-                return;
-            }
-
-            var diImportFolder = new DirectoryInfo( strImportFolder );
-            SearchOption soMovieFileMerger = SearchOption.AllDirectories;
-
-            foreach ( FileInfo fiImportFile in diImportFolder.GetFiles( "*", soMovieFileMerger ) ) {
-                if ( !rgxMainExtensions.IsMatch( fiImportFile.Extension.ToLower( ) ) ) {
-                    continue;
-                }
-
-                string strImportName = fiImportFile.Name;
-                if ( fiImportFile.Name.LastIndexOf( '.' ) != -1 ) {
-                    strImportName = strImportName.Substring( 0, fiImportFile.Name.LastIndexOf( '.' ) );
-                }
-                strImportName = CleanName( strImportName );
-                ListViewItem lviImport = FindItem( lvImport, strImportName );
-                if ( lviImport != null ) {
-                    if ( lviImport.Selected ) {
-                        SetStatus( "Playing " + fiImportFile.Name + "..." );
-                        try {
-                            ExecuteThis( fiImportFile.FullName );
-                            bPlayedSomething = true;
-                        }
-                        catch ( Exception e ) {
-                            ShowInfo( e.Message );
-                        }
+            int iCount = 1;
+            foreach (ListViewItem lviItem in lvListView.SelectedItems)
+            {
+                string sMainFilePath = GetMainFilePathFromToolTip(lviItem.ToolTipText);
+                if (sMainFilePath != "" )
+                {
+                    SetStatus("Playing " + lviItem.Text + "...");
+                    try {
+                        ExecuteThis(sMainFilePath);
+                    }
+                    catch (Exception e) {
+                        ShowInfo(e.Message + "\nThe related list entry is " + lviItem.Text + "..." );
                     }
                 }
-                ClearStatus( );
+                if (iCount++ % 10 == 0) {
+                    if (ShowYesNoQuestion("You palyed 10 Items already.\nPlay the next 10?") == DialogResult.No) break;
+                }
             }
-            if ( !bPlayedSomething ) {
-                ShowInfo( "Did not find an according file under the Import path." );
-            }
+            ClearStatus();
         }
 
         /// <summary>
@@ -729,11 +712,8 @@ namespace Movie_File_Merger {
                 LvMaintenanceDragDrop( sender, e );
                 lvDragSource = lvExisting;
             }
-            else if ( (string)lvDragSource.Tag == "Import" ) {
-                Play( );
-            }
             else {
-                ShowInfo( "Playing is only supported from the Import or Maintenance list." );
+                Play(lvDragSource);
             }
         }
 
@@ -2062,10 +2042,10 @@ namespace Movie_File_Merger {
         {
             switch ( cobDoubleClickDefault.Text ) {
                 case "DoubleClick Default":
-                    Play( );
+                    Play((ListView)sender);
                     break;
                 case "Play":
-                    Play( );
+                    Play((ListView)sender);
                     break;
                 case "Search Info":
                     SearchInfo( (ListView)sender );
@@ -2074,7 +2054,7 @@ namespace Movie_File_Merger {
                     SearchDownload( (ListView)sender );
                     break;
                 default:
-                    Play( );
+                    Play((ListView)sender);
                     break;
             }
         }
@@ -2342,10 +2322,8 @@ namespace Movie_File_Merger {
             if ( Path.IsPathRooted (sPath) )
             {
                 DriveInfo diThis = new DriveInfo(Path.GetPathRoot(sPath));
-                if (diThis.IsReady)
-                {
-                    if (!File.Exists(sPath))
-                    {
+                if (diThis.IsReady) {
+                    if (!File.Exists(sPath)) {
                         return true;
                     }
                 }
