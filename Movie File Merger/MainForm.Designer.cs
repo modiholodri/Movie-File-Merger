@@ -526,7 +526,8 @@ namespace Movie_File_Merger
             "2 Channels",
             "6 Channels",
             "Series with \"SxxExx\"",
-            "Movies with \"(Year)\""});
+            "Movies with \"(Year)\"",
+            "Main file not existing but drive ready"});
             this.cobCriteria.Location = new System.Drawing.Point(399, 639);
             this.cobCriteria.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cobCriteria.MaxDropDownItems = 15;

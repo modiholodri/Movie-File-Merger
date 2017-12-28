@@ -2313,27 +2313,88 @@ namespace Movie_File_Merger {
 			}
 		}
 
-		/// <summary>
-		/// Select items in a list according to a regular expression.
-		/// </summary>
-		/// <param name="lvThis">The list to select from.</param>
-		/// <param name="sRegex">The regular expression according to which to select.</param>
-		int SelectInList( ListView lvThis, string sRegex )
+        /// <summary>
+        /// Extracts the main file path from the tool tip text.
+        /// </summary>
+        /// <param name="sToolTipText">The tool tip text.</param>
+        /// <returns></returns>
+        string GetMainFilePathFromToolTip ( string sToolTipText )
+        {
+            string sPath = Regex.Match(sToolTipText, "Path:  (.*)").Groups[1].Value;
+            if ( sPath != "" )
+            {
+                string sMainFile = Regex.Match(sToolTipText, "File:  (.*)").Groups[1].Value;
+                if (sMainFile != "") {
+                    return sPath + "\\" + sMainFile;
+                }
+            }
+            return "";
+        }
+
+        /// <summary>
+        /// Checks if the main file is missing when the drive is connected.
+        /// </summary>
+        /// <param name="sToolTipText">The tool tip text.</param>
+        /// <returns></returns>
+        bool MainFileMissing( string sToolTipText )
+        {
+            string sPath = GetMainFilePathFromToolTip(sToolTipText);
+            if ( Path.IsPathRooted (sPath) )
+            {
+                DriveInfo diThis = new DriveInfo(Path.GetPathRoot(sPath));
+                if (diThis.IsReady)
+                {
+                    if (!File.Exists(sPath))
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// Select items in a list according to a regular expression.
+        /// </summary>
+        /// <param name="lvThis">The list to select from.</param>
+        /// <param name="sRegex">The regular expression according to which to select.</param>
+        int SelectInList( ListView lvThis, string sRegex )
 		{
 			int iSelected = 0;
-			var rgxToolTip = new Regex( sRegex );
-			
-			Cursor.Current = Cursors.WaitCursor;
-			foreach ( ListViewItem lviThis in lvThis.Items ) {
-				if( rgxToolTip.IsMatch( lviThis.ToolTipText ) ) {
-					lviThis.Selected = true;
-					iSelected++;
-				}
-				else {
-					lviThis.Selected = false;
-				}
-			}
-			Cursor.Current = Cursors.Default;
+            Cursor.Current = Cursors.WaitCursor;
+
+            if ( sRegex == "Main file not existing but drive ready" )  // search for missing files
+            {
+                foreach (ListViewItem lviThis in lvThis.Items)
+                {
+                    if (MainFileMissing(lviThis.ToolTipText))
+                    {
+                        lviThis.Selected = true;
+                        iSelected++;
+                    }
+                    else
+                    {
+                        lviThis.Selected = false;
+                    }
+                }
+            }
+            else    // just search for the regular expression
+            {
+                var rgxToolTip = new Regex(sRegex);
+                foreach (ListViewItem lviThis in lvThis.Items)
+                {
+                    if (rgxToolTip.IsMatch(lviThis.ToolTipText))
+                    {
+                        lviThis.Selected = true;
+                        iSelected++;
+                    }
+                    else
+                    {
+                        lviThis.Selected = false;
+                    }
+                }
+            }
+            Cursor.Current = Cursors.Default;
 			if( iSelected > 0 ) {
 				ShowInfo( "Selected " + iSelected + " items in " + lvThis.Tag  + " " + strCollectionType + ".");
 			}
