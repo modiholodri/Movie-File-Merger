@@ -2648,7 +2648,10 @@ namespace Movie_File_Merger {
             InvertSelected(lvExisting);
             InvertSelected(lvWish);
             InvertSelected(lvImport);
-            lvLastClicked.Select();
+            if (lvLastClicked != null)
+            {
+                lvLastClicked.Select();
+            }
         }
 
         #endregion Action Bar Interface
