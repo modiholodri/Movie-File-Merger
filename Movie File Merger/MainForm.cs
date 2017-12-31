@@ -99,7 +99,13 @@ namespace Movie_File_Merger {
         public MFMForm( )
         {
             InitializeComponent( );
-            LogInfo( "Initializing Movie File Merger..." );
+            SetStatus( "Initializing Movie File Merger..." );
+            LogInfo("You can find additional information by clicking on the User Manual picture.");
+            LogInfo("The Log shows mainly messages about what has happened in the Lists tab.");
+            LogInfo("Hover over the Log and roll the mouse wheel to zoom in or out.");
+            LogInfo("You can use the Log to find duplicated videos.");
+            LogMessage("Donation", Color.DarkRed, "If you like Movie File Merger consider to donate a beer or two...");
+            
 
             // make sure that all needed directroies and files are there
             if ( !Directory.Exists( strPrivatePath ) ) {
@@ -2683,6 +2689,11 @@ namespace Movie_File_Merger {
             return iColored;
         }
 
+        /// <summary>
+        /// Color the item according to the search criteria.
+        /// </summary>
+        /// <param name="sender">The object that invoked the event that fired the event handler.</param>
+        /// <param name="e">The arguments that the implementor of this event may find useful.</param>
         private void BtnColorSelection_Click(object sender, EventArgs e)
         {
             int iTotalColored = 0;

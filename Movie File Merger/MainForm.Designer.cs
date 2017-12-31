@@ -48,6 +48,7 @@ namespace Movie_File_Merger
             this.ContentPanel = new System.Windows.Forms.ToolStripContentPanel();
             this.tcMovieFileMerger = new System.Windows.Forms.TabControl();
             this.tpSeparateLists = new System.Windows.Forms.TabPage();
+            this.btnColorSelection = new System.Windows.Forms.Button();
             this.btnSelectColor = new System.Windows.Forms.Button();
             this.btnInvertSelection = new System.Windows.Forms.Button();
             this.cobDownloadCriteria = new System.Windows.Forms.ComboBox();
@@ -209,7 +210,8 @@ namespace Movie_File_Merger
             this.tspbMFM = new System.Windows.Forms.ToolStripProgressBar();
             this.ttMovieFileMerger = new System.Windows.Forms.ToolTip(this.components);
             this.ofdTeraCopy = new System.Windows.Forms.OpenFileDialog();
-            this.btnColorSelection = new System.Windows.Forms.Button();
+            this.pbLogDonateLeft = new System.Windows.Forms.PictureBox();
+            this.pbLodDonateRight = new System.Windows.Forms.PictureBox();
             this.tcMovieFileMerger.SuspendLayout();
             this.tpSeparateLists.SuspendLayout();
             this.gbTypeSelection.SuspendLayout();
@@ -271,6 +273,8 @@ namespace Movie_File_Merger
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
             this.ssMFM.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogDonateLeft)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLodDonateRight)).BeginInit();
             this.SuspendLayout();
             // 
             // fbdMovieFileMerger
@@ -420,6 +424,25 @@ namespace Movie_File_Merger
             this.tpSeparateLists.Size = new System.Drawing.Size(1054, 684);
             this.tpSeparateLists.TabIndex = 0;
             this.tpSeparateLists.Text = "Lists";
+            // 
+            // btnColorSelection
+            // 
+            this.btnColorSelection.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnColorSelection.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.btnColorSelection.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnColorSelection.ImageKey = "Star.png";
+            this.btnColorSelection.ImageList = this.ilMovieFileMerger;
+            this.btnColorSelection.Location = new System.Drawing.Point(223, 646);
+            this.btnColorSelection.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnColorSelection.Name = "btnColorSelection";
+            this.btnColorSelection.Size = new System.Drawing.Size(37, 32);
+            this.btnColorSelection.TabIndex = 55;
+            this.btnColorSelection.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnColorSelection.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ttMovieFileMerger.SetToolTip(this.btnColorSelection, "Star items in all lists according to the selection criteria, which is the same as" +
+        " make them yellow.  ;-)");
+            this.btnColorSelection.UseVisualStyleBackColor = false;
+            this.btnColorSelection.Click += new System.EventHandler(this.BtnColorSelection_Click);
             // 
             // btnSelectColor
             // 
@@ -1216,7 +1239,7 @@ namespace Movie_File_Merger
             // 
             this.scHorizontalRight.Panel2.Controls.Add(this.lvExport);
             this.scHorizontalRight.Size = new System.Drawing.Size(352, 487);
-            this.scHorizontalRight.SplitterDistance = 217;
+            this.scHorizontalRight.SplitterDistance = 216;
             this.scHorizontalRight.TabIndex = 0;
             // 
             // lvImport
@@ -1236,7 +1259,7 @@ namespace Movie_File_Merger
             this.lvImport.Margin = new System.Windows.Forms.Padding(4);
             this.lvImport.Name = "lvImport";
             this.lvImport.ShowItemToolTips = true;
-            this.lvImport.Size = new System.Drawing.Size(352, 217);
+            this.lvImport.Size = new System.Drawing.Size(352, 216);
             this.lvImport.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.lvImport.TabIndex = 0;
             this.lvImport.TabStop = false;
@@ -1276,7 +1299,7 @@ namespace Movie_File_Merger
             this.lvExport.Margin = new System.Windows.Forms.Padding(4);
             this.lvExport.Name = "lvExport";
             this.lvExport.ShowItemToolTips = true;
-            this.lvExport.Size = new System.Drawing.Size(352, 266);
+            this.lvExport.Size = new System.Drawing.Size(352, 267);
             this.lvExport.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.lvExport.TabIndex = 39;
             this.lvExport.Tag = "Export";
@@ -1404,6 +1427,8 @@ namespace Movie_File_Merger
             // tpLog
             // 
             this.tpLog.BackColor = System.Drawing.SystemColors.Control;
+            this.tpLog.Controls.Add(this.pbLodDonateRight);
+            this.tpLog.Controls.Add(this.pbLogDonateLeft);
             this.tpLog.Controls.Add(this.pbLogUserManual);
             this.tpLog.Controls.Add(this.pbLogHowTo);
             this.tpLog.Controls.Add(this.pbLogBanner);
@@ -1422,10 +1447,10 @@ namespace Movie_File_Merger
             this.pbLogUserManual.ErrorImage = null;
             this.pbLogUserManual.Image = ((System.Drawing.Image)(resources.GetObject("pbLogUserManual.Image")));
             this.pbLogUserManual.InitialImage = null;
-            this.pbLogUserManual.Location = new System.Drawing.Point(7, 6);
+            this.pbLogUserManual.Location = new System.Drawing.Point(8, 96);
             this.pbLogUserManual.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbLogUserManual.Name = "pbLogUserManual";
-            this.pbLogUserManual.Size = new System.Drawing.Size(72, 82);
+            this.pbLogUserManual.Size = new System.Drawing.Size(138, 186);
             this.pbLogUserManual.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbLogUserManual.TabIndex = 50;
             this.pbLogUserManual.TabStop = false;
@@ -1436,14 +1461,13 @@ namespace Movie_File_Merger
             // 
             // pbLogHowTo
             // 
-            this.pbLogHowTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbLogHowTo.ErrorImage = null;
             this.pbLogHowTo.Image = ((System.Drawing.Image)(resources.GetObject("pbLogHowTo.Image")));
             this.pbLogHowTo.InitialImage = null;
-            this.pbLogHowTo.Location = new System.Drawing.Point(976, 6);
+            this.pbLogHowTo.Location = new System.Drawing.Point(8, 286);
             this.pbLogHowTo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbLogHowTo.Name = "pbLogHowTo";
-            this.pbLogHowTo.Size = new System.Drawing.Size(72, 82);
+            this.pbLogHowTo.Size = new System.Drawing.Size(138, 178);
             this.pbLogHowTo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbLogHowTo.TabIndex = 49;
             this.pbLogHowTo.TabStop = false;
@@ -1479,11 +1503,11 @@ namespace Movie_File_Merger
             | System.Windows.Forms.AnchorStyles.Right)));
             this.rtbLog.BackColor = System.Drawing.SystemColors.ControlLight;
             this.rtbLog.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtbLog.Location = new System.Drawing.Point(4, 96);
+            this.rtbLog.Location = new System.Drawing.Point(153, 96);
             this.rtbLog.Margin = new System.Windows.Forms.Padding(4);
             this.rtbLog.Name = "rtbLog";
             this.rtbLog.ReadOnly = true;
-            this.rtbLog.Size = new System.Drawing.Size(1050, 593);
+            this.rtbLog.Size = new System.Drawing.Size(901, 593);
             this.rtbLog.TabIndex = 0;
             this.rtbLog.Text = "";
             this.rtbLog.WordWrap = false;
@@ -3277,23 +3301,42 @@ namespace Movie_File_Merger
             // 
             this.ofdTeraCopy.FileName = "C:\\Program Files\\TeraCopy\\TeraCopy.exe";
             // 
-            // btnColorSelection
+            // pbLogDonateLeft
             // 
-            this.btnColorSelection.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnColorSelection.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
-            this.btnColorSelection.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnColorSelection.ImageKey = "Star.png";
-            this.btnColorSelection.ImageList = this.ilMovieFileMerger;
-            this.btnColorSelection.Location = new System.Drawing.Point(223, 646);
-            this.btnColorSelection.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnColorSelection.Name = "btnColorSelection";
-            this.btnColorSelection.Size = new System.Drawing.Size(37, 32);
-            this.btnColorSelection.TabIndex = 55;
-            this.btnColorSelection.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnColorSelection.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ttMovieFileMerger.SetToolTip(this.btnColorSelection, "Star the selection, which is the same as make it yellow.  ;-)");
-            this.btnColorSelection.UseVisualStyleBackColor = false;
-            this.btnColorSelection.Click += new System.EventHandler(this.BtnColorSelection_Click);
+            this.pbLogDonateLeft.ErrorImage = null;
+            this.pbLogDonateLeft.Image = global::Movie_File_Merger.Properties.Resources.DonateButtonLong;
+            this.pbLogDonateLeft.InitialImage = null;
+            this.pbLogDonateLeft.Location = new System.Drawing.Point(1, 4);
+            this.pbLogDonateLeft.Margin = new System.Windows.Forms.Padding(4);
+            this.pbLogDonateLeft.Name = "pbLogDonateLeft";
+            this.pbLogDonateLeft.Padding = new System.Windows.Forms.Padding(15);
+            this.pbLogDonateLeft.Size = new System.Drawing.Size(200, 86);
+            this.pbLogDonateLeft.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLogDonateLeft.TabIndex = 51;
+            this.pbLogDonateLeft.TabStop = false;
+            this.ttMovieFileMerger.SetToolTip(this.pbLogDonateLeft, "Make a small donation for Modi.");
+            this.pbLogDonateLeft.Click += new System.EventHandler(this.pbDonateClick);
+            this.pbLogDonateLeft.MouseEnter += new System.EventHandler(this.PbPictureLinkMouseEnter);
+            this.pbLogDonateLeft.MouseLeave += new System.EventHandler(this.PbPictureLinkMouseLeave);
+            // 
+            // pbLodDonateRight
+            // 
+            this.pbLodDonateRight.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbLodDonateRight.ErrorImage = null;
+            this.pbLodDonateRight.Image = global::Movie_File_Merger.Properties.Resources.DonateButtonLong;
+            this.pbLodDonateRight.InitialImage = null;
+            this.pbLodDonateRight.Location = new System.Drawing.Point(848, 4);
+            this.pbLodDonateRight.Margin = new System.Windows.Forms.Padding(4);
+            this.pbLodDonateRight.Name = "pbLodDonateRight";
+            this.pbLodDonateRight.Padding = new System.Windows.Forms.Padding(15);
+            this.pbLodDonateRight.Size = new System.Drawing.Size(200, 86);
+            this.pbLodDonateRight.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLodDonateRight.TabIndex = 52;
+            this.pbLodDonateRight.TabStop = false;
+            this.ttMovieFileMerger.SetToolTip(this.pbLodDonateRight, "Make a small donation for Modi.");
+            this.pbLodDonateRight.Click += new System.EventHandler(this.pbDonateClick);
+            this.pbLodDonateRight.MouseEnter += new System.EventHandler(this.PbPictureLinkMouseEnter);
+            this.pbLodDonateRight.MouseLeave += new System.EventHandler(this.PbPictureLinkMouseLeave);
             // 
             // MFMForm
             // 
@@ -3377,6 +3420,8 @@ namespace Movie_File_Merger
             this.toolStripContainer1.PerformLayout();
             this.ssMFM.ResumeLayout(false);
             this.ssMFM.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogDonateLeft)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLodDonateRight)).EndInit();
             this.ResumeLayout(false);
 
 		}
@@ -3557,5 +3602,7 @@ namespace Movie_File_Merger
         private System.Windows.Forms.ListView lvExport;
         private System.Windows.Forms.ColumnHeader chNameExport;
         private System.Windows.Forms.Button btnColorSelection;
+        private System.Windows.Forms.PictureBox pbLodDonateRight;
+        private System.Windows.Forms.PictureBox pbLogDonateLeft;
     }
 }
