@@ -3293,6 +3293,7 @@ namespace Movie_File_Merger
             this.btnColorSelection.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ttMovieFileMerger.SetToolTip(this.btnColorSelection, "Star the selection, which is the same as make it yellow.  ;-)");
             this.btnColorSelection.UseVisualStyleBackColor = false;
+            this.btnColorSelection.Click += new System.EventHandler(this.BtnColorSelection_Click);
             // 
             // MFMForm
             // 

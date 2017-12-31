@@ -2654,6 +2654,48 @@ namespace Movie_File_Merger {
             }
         }
 
+
+        /// <summary>
+        /// Color the selected items of a list view.
+        /// </summary>
+        /// <param name="lvThis">The list view in which to invert the selection.</param>
+        /// <param name="sRegex">The regular expression according to which to collor the items.</param>
+        int ColorInList(ListView lvThis, string sRegex)
+        {
+            int iColored = 0;
+            Cursor.Current = Cursors.WaitCursor;
+
+            var rgxToolTip = new Regex(sRegex);
+            foreach (ListViewItem lviThis in lvThis.Items)
+            {
+                if (rgxToolTip.IsMatch(lviThis.ToolTipText))
+                {
+                    lviThis.BackColor = Color.Yellow;
+                    iColored++;
+                }
+            }
+
+            Cursor.Current = Cursors.Default;
+            if (iColored > 0)
+            {
+                ShowInfo("Colored " + iColored + " items in " + lvThis.Tag + " " + strCollectionType + ".");
+            }
+            return iColored;
+        }
+
+        private void BtnColorSelection_Click(object sender, EventArgs e)
+        {
+            int iTotalColored = 0;
+            iTotalColored += ColorInList(lvGarbage, GetCriteriaRegEx(cobCriteria.Text));
+            iTotalColored += ColorInList(lvExisting, GetCriteriaRegEx(cobCriteria.Text));
+            iTotalColored += ColorInList(lvWish, GetCriteriaRegEx(cobCriteria.Text));
+            iTotalColored += ColorInList(lvImport, GetCriteriaRegEx(cobCriteria.Text));
+            if (iTotalColored == 0)
+            {
+                ShowInfo("Colored no items.");
+            }
+        }
+
         #endregion Action Bar Interface
 
         /************************************************************************************************/
