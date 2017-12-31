@@ -104,8 +104,7 @@ namespace Movie_File_Merger {
             LogInfo("The Log shows mainly messages about what has happened in the Lists tab.");
             LogInfo("Hover over the Log and roll the mouse wheel to zoom in or out.");
             LogInfo("You can use the Log to find duplicated videos.");
-            LogMessage("Donation", Color.DarkRed, "If you like Movie File Merger consider to donate a beer or two...");
-            
+            LogMessage("Donation", Color.DarkRed, "To support the development of Movie File Merger donate a beer or two...");
 
             // make sure that all needed directroies and files are there
             if ( !Directory.Exists( strPrivatePath ) ) {
@@ -3378,10 +3377,12 @@ namespace Movie_File_Merger {
             if ( dtLastChecked < DateTime.Now || sWhen.Contains( "Now" ) ) {
                 var xmlLatestVersion = new XmlDocument( );
                 try {
+                    SetStatus("Getting info about latest version from https://movie-file-merger.org...");
                     xmlLatestVersion.Load( "http://movie-file-merger.org/MFMVersion.xml" );
                     sLatestRelease = readXmlSetting( xmlLatestVersion, "/MFMVersions/LatestRelease", "0.0.0" );
                     sReleaseNotes = readXmlSetting( xmlLatestVersion, "/MFMVersions/ReleaseNotes", "Sorry, did not find any release notes..." );
                     if ( sCurrentRelease != sLatestRelease ) {
+                        SetStatus("A newer version of MFM is available...");
                         if ( ShowYesNoQuestion( "A different version (" + sLatestRelease + ") of MFM (currently " + sCurrentRelease + ") " +
                                                  "is available.\n" + sReleaseNotes + "\n" +
                                                  "Go to the Download page now?" ) == DialogResult.Yes ) {
@@ -3390,7 +3391,7 @@ namespace Movie_File_Merger {
                         }
                     }
                     else if ( sWhen.Contains( "Now" ) ) {
-                        ShowInfo( sCurrentRelease + " is the latest version." );
+                        ShowInfo( sCurrentRelease + " is the latest version.\n" + sReleaseNotes );
                     }
                     lblLastChecked.Text = "Last Checked: " + StandardizeDate( DateTime.Now );
                 }
@@ -3398,6 +3399,7 @@ namespace Movie_File_Merger {
                     ShowInfo( "Tried to check for updates but had a problem...\n" + e.Message );
                 }
             }
+            ClearStatus();
         }
 
         /// <summary>
