@@ -210,10 +210,11 @@ namespace Movie_File_Merger {
             scVerticalRight.Width = iColumnWidth * 2;
             scVerticalRight.SplitterDistance = iColumnWidth + 3;
             scVerticalRight.SplitterWidth = 3;
-            lvExisting.Columns[ 0 ].Width = lvExisting.Width - 35;
-            lvGarbage.Columns[ 0 ].Width = lvGarbage.Width - 35;
-            lvImport.Columns[ 0 ].Width = lvImport.Width - 35;
-            lvWish.Columns[ 0 ].Width = lvWish.Width - 35;
+            lvGarbage.Columns[0].Width = lvGarbage.Width - 35;
+            lvExisting.Columns[0].Width = lvExisting.Width - 35;
+            lvWish.Columns[0].Width = lvWish.Width - 35;
+            lvImport.Columns[0].Width = lvImport.Width - 35;
+            lvExport.Columns[0].Width = lvExport.Width - 35;
         }
 
         /// <summary>
@@ -227,16 +228,7 @@ namespace Movie_File_Merger {
                 return;
             }
             scHorizontal.SplitterDistance = scHorizontal.Size.Height / 2;
-
-            // show & hide the manual pictures on the Lists tab
-            if (pbListsUserManual.Location.X+pbListsUserManual.Width+5 > pbListsHowTo.Location.X ) {
-                pbListsUserManual.Visible = false;
-                pbListsHowTo.Visible = false;
-            }
-            else {
-                pbListsUserManual.Visible = true;
-                pbListsHowTo.Visible = true;
-            }
+            scHorizontalRight.SplitterDistance = scHorizontalRight.Size.Height / 2;
         }
 
         /// <summary>
@@ -1220,7 +1212,7 @@ namespace Movie_File_Merger {
         /// <summary>
         /// Add files to a list view ina thread
         /// </summary>
-        void lvAddFilesInThread( )
+        void LvAddFilesInThread( )
         {
             var diFolder = new DirectoryInfo( strGlobalFolderName );
             SearchOption soMovieFileMerger = SearchOption.AllDirectories;
@@ -1265,7 +1257,7 @@ namespace Movie_File_Merger {
             // Add the files in a tread, so that not every freezes all the time
             lvToAdd = lvThis;
             strGlobalFolderName = strFolderName;
-            var thrdAddFilesToListView = new Thread( lvAddFilesInThread );
+            var thrdAddFilesToListView = new Thread( LvAddFilesInThread );
             thrdAddFilesToListView.Start( );
         }
 
@@ -1971,12 +1963,14 @@ namespace Movie_File_Merger {
         /// <param name="e">The arguments that the implementor of this event may find useful.</param>
         void TmrUpdateCountersTick( object sender, EventArgs e )
         {
+            // Existing column
             if ( strTargetFolder != "" && lvExisting.Columns[ 0 ].Text != strTargetFolder ) {
                 lvExisting.Columns[ 0 ].Text = strTargetFolder;
             }
             else {
                 lvExisting.Columns[ 0 ].Text = lvExisting.Items.Count + " Existing " + strCollectionType;
             }
+            // Garbage column
             lvGarbage.Columns[ 0 ].Text = lvGarbage.Items.Count + " Garbage " + strCollectionType;
             if ( strImportFolder != "" && lvImport.Columns[ 0 ].Text != strImportFolder ) {
                 lvImport.Columns[ 0 ].Text = strImportFolder;
@@ -1984,7 +1978,12 @@ namespace Movie_File_Merger {
             else {
                 lvImport.Columns[ 0 ].Text = lvImport.Items.Count + " Import " + strCollectionType;
             }
+            // Wish column
             lvWish.Columns[ 0 ].Text = lvWish.Items.Count + " Wish " + strCollectionType;
+            // Export column
+            lvExport.Columns[0].Text = lvExport.Items.Count + " Export Items";
+
+            // Maintenance column
             lvMaintenance.Columns[ 0 ].Text = lvMaintenance.Items.Count + " Maintenance Items";
         }
 
@@ -2684,17 +2683,17 @@ namespace Movie_File_Merger {
         /// <summary>
         /// Adds an item to the maintenance list view, if it does not exist already.
         /// </summary>
+        /// <param name="lvThis">The list view to which to add the item.</param>
         /// <param name="lviToAdd">The item to add.</param>
         /// <returns>The reference of the added item.</returns>
-
-        ListViewItem AddItemToMaintenanceListView( ListViewItem lviToAdd )
+        ListViewItem AddSimpleItemToListView( ListView lvThis, ListViewItem lviToAdd )
         {
-            ListViewItem lviThis = FindItem( lvMaintenance, lviToAdd.Text );
+            ListViewItem lviThis = FindItem(lvThis, lviToAdd.Text );
 
             if ( lviThis == null ) {
                 lviThis = new ListViewItem( lviToAdd.Text );
                 lviThis.ToolTipText = lviToAdd.ToolTipText;
-                lvMaintenance.Items.Add( lviThis );
+                lvThis.Items.Add( lviThis );
             }
             return lviThis;
         }
@@ -2771,7 +2770,7 @@ namespace Movie_File_Merger {
             // add the files
             foreach ( FileInfo fiFile in diFolder.GetFiles( "*", SearchOption.AllDirectories) ) {
                 var lviThis = new ListViewItem( fiFile.FullName );
-                lviThis = AddItemToMaintenanceListView( lviThis );
+                lviThis = AddSimpleItemToListView( lvMaintenance, lviThis );
                 MakeToolTip( fiFile, lvMaintenance, lviThis );
                 LogMaintenance("Info:  ", Color.Blue, "Adding file " + fiFile.Name );
                 tspbMFM.Value++;
@@ -2820,7 +2819,7 @@ namespace Movie_File_Merger {
                 else if ( File.Exists( strPath ) ) { // from video file
                     var fiFile = new FileInfo( strPath );
                     var lviThis = new ListViewItem( strPath );
-                    lviThis = AddItemToMaintenanceListView( lviThis );
+                    lviThis = AddSimpleItemToListView( lvMaintenance, lviThis );
                     MakeToolTip( fiFile, lvMaintenance, lviThis );
                 }
             }
@@ -3706,6 +3705,132 @@ namespace Movie_File_Merger {
         private void LvClick(object sender, EventArgs e)
         {
             lvLastClicked = (ListView)sender;
+        }
+
+        private void LvExport_DragDrop(object sender, DragEventArgs e)
+        {
+            if (e.AllowedEffect == DragDropEffects.None) return;
+            Cursor.Current = Cursors.WaitCursor;
+
+            lvExport.Items.Clear();
+
+            // from another list view
+            if (e.Data.GetDataPresent(typeof(ListView.SelectedListViewItemCollection)))
+            {
+                foreach (ListViewItem lviToAdd in (ListView.SelectedListViewItemCollection)e.Data.GetData(typeof(ListView.SelectedListViewItemCollection)))
+                {
+                    ListViewItem lviThis = FindItem(lvExport, GetMainFilePathFromToolTip(lviToAdd.ToolTipText));
+
+                    if (lviThis == null)
+                    {
+                        lviThis = new ListViewItem(GetMainFilePathFromToolTip(lviToAdd.ToolTipText));
+                        lviThis.ToolTipText = lviToAdd.ToolTipText;
+                        lvExport.Items.Add(lviThis);
+                    }
+                    else
+                    {
+                        lviThis.ToolTipText = lviToAdd.ToolTipText;
+                    }
+                }
+            }
+
+            // from folders or files
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+            {
+                LvExportAddFiles((string[])e.Data.GetData(DataFormats.FileDrop));
+            }
+
+            Cursor.Current = Cursors.Default;
+        }
+
+
+        /// <summary>
+        /// Adds items contained in a folder to a list view.
+        /// </summary>
+        /// <param name="strFolderName">The name of the folder containing the items to be added.</param>
+        void AddFolderToExportListView(string strFolderName)
+        {
+            var diFolder = new DirectoryInfo(strFolderName);
+
+            SetStatus("Adding folder " + strFolderName + " to " + lvExport.Tag);
+
+            lvExport.BeginUpdate();
+            lvExport.Sorting = SortOrder.None;
+            tspbMFM.Maximum = 1;
+            tspbMFM.Value = 0;
+
+            // count the files
+            foreach (FileInfo fiFile in diFolder.GetFiles("*", SearchOption.AllDirectories))
+            {
+                tspbMFM.Maximum++;
+            }
+
+            // add the files
+            foreach (FileInfo fiFile in diFolder.GetFiles("*", SearchOption.AllDirectories))
+            {
+                var lviThis = new ListViewItem(fiFile.FullName);
+                lviThis = AddSimpleItemToListView(lvExport, lviThis);
+                MakeToolTip(fiFile, lvExport, lviThis);
+                tspbMFM.Value++;
+            }
+
+
+            lvExport.Sorting = SortOrder.Ascending;
+            lvExport.EndUpdate();
+            tspbMFM.Value = 0;
+            ClearStatus();
+        }
+
+        /// <summary>
+        /// Add dropped file to the Export list.
+        /// </summary>
+        /// <param name="saFileList">The string array with the file names.</param>
+        void LvExportAddFiles(string[] saFileList)
+        {
+            foreach (string strPath in saFileList)
+            {
+                FileAttributes attr = File.GetAttributes(strPath);
+                bool isFolder = (attr & FileAttributes.Directory) == FileAttributes.Directory;
+
+                if (isFolder)
+                { // from folder
+                    AddFolderToExportListView(strPath);
+                }
+                else if (File.Exists(strPath))
+                { // from video file
+                    var fiFile = new FileInfo(strPath);
+                    var lviThis = new ListViewItem(strPath);
+                    lviThis = AddSimpleItemToListView(lvExport, lviThis);
+                    MakeToolTip(fiFile, lvExport, lviThis);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Drag files from a list view, to drop and on FileBot, the Windows Explorer, ... 
+        /// </summary>
+        /// <param name="sender">The object that invoked the event that fired the event handler.</param>
+        /// <param name="e">The arguments that the implementor of this event may find useful.</param>
+        private void LvExport_ItemDrag(object sender, ItemDragEventArgs e)
+        {
+            lvDragSource = (ListView)sender;
+            var strcolFileList = new System.Collections.Specialized.StringCollection();
+            foreach (ListViewItem lviThis in lvDragSource.SelectedItems)
+            {
+                strcolFileList.Add(lviThis.Text);
+                lvDragSource.Items.Remove(lviThis);
+            }
+
+            var doFileList = new DataObject();
+            doFileList.SetFileDropList(strcolFileList);
+            if (rbCopy.Checked)
+            {
+                lvDragSource.DoDragDrop(doFileList, DragDropEffects.Copy);
+            }
+            else
+            {
+                lvDragSource.DoDragDrop(doFileList, DragDropEffects.Move);
+            }
         }
     }
 #endregion FTP Sucker
