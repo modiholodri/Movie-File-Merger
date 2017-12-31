@@ -2464,10 +2464,12 @@ namespace Movie_File_Merger {
                 case "Square Format": sResult = @"\(((4:3)|(5:4)|(3:2)|(1\.[0-5]\d+))\)"; break;
                 case "Wide Screen": sResult = @"\(((16:9)|(1\.85:1)|(1\.[6-9]\d+)|(2\.[0-2]\d+))\)"; break;
                 case "Cinema Scope": sResult = @"\((([23]\.*\d*:1)|(2\.[3-9]\d+)|(3\.\d+))\)"; break;
-                case "<699 horizontal": sResult = @"Video:  [1-6]\d{2} *x"; break;
-                case ">699 & <1000 horizontal": sResult = @"Video:  [7-9]\d{2} *x"; break;
-                case ">700 horizontal": sResult = @"(Video:  [7-9]\d{2} x)|(Video:  [1-9]\d{3} *x)"; break;
-                case ">1000 horizontal": sResult = @"Video:  [1-9]\d{3} *x"; break;
+                case "<699 horizontal (less than 480p)": sResult = @"Video:  [1-6]\d{2} *x"; break;
+                case ">699 & <1000 horizontal (between 480p and 720p)": sResult = @"Video:  [7-9]\d{2} *x"; break;
+                case ">700 horizontal (480p and greater)": sResult = @"(Video:  [7-9]\d{2} x)|(Video:  [1-9]\d{3} *x)"; break;
+                case ">1000 horizontal (720p and greater)": sResult = @"Video:  [1-9]\d{3} *x"; break;
+                case ">1900 horizontal (1080p and greater)": sResult = @"(Video:  1[8-9]\d{2} *x)|(Video:  [2-9]\d{3} *x)"; break;
+                case ">3800 horizontal (2160p and greater)": sResult = @"(Video:  3[8-9]\d{2} *x)|(Video:  [4-9]\d{3} *x)"; break;
                 case "2 Channels": sResult = @"2 channels"; break;
                 case "6 Channels": sResult = @"6 channels"; break;
                 case "Series with \"SxxExx\"": sResult = @".[Ss]\d+[Ee]\d+"; break;
