@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 
 [assembly: AssemblyCompany("Reinhold Lauer")]
 [assembly: AssemblyProduct("Movie File Merger")]
-[assembly: AssemblyCopyright("Copyright © 2017 Reinhold Lauer")]
+[assembly: AssemblyCopyright("Copyright © 2018 Reinhold Lauer")]
 [assembly: AssemblyTrademark( "Movie File Merger" )]
 [assembly: AssemblyCulture("")]
 
@@ -34,4 +34,4 @@ using System.Runtime.InteropServices;
 //
 // You can specify all the values or you can use the default the Revision and 
 // Build Numbers by using the '*' as shown below:
-[assembly: AssemblyVersion("0.6.1.0")]
+[assembly: AssemblyVersion("0.7.0.0")]

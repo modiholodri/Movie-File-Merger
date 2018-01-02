@@ -98,6 +98,8 @@ namespace Movie_File_Merger
             this.pbListsHowTo = new System.Windows.Forms.PictureBox();
             this.pbListsUserManual = new System.Windows.Forms.PictureBox();
             this.tpLog = new System.Windows.Forms.TabPage();
+            this.pbLodDonateRight = new System.Windows.Forms.PictureBox();
+            this.pbLogDonateLeft = new System.Windows.Forms.PictureBox();
             this.pbLogUserManual = new System.Windows.Forms.PictureBox();
             this.pbLogHowTo = new System.Windows.Forms.PictureBox();
             this.pbLogBanner = new System.Windows.Forms.PictureBox();
@@ -210,8 +212,6 @@ namespace Movie_File_Merger
             this.tspbMFM = new System.Windows.Forms.ToolStripProgressBar();
             this.ttMovieFileMerger = new System.Windows.Forms.ToolTip(this.components);
             this.ofdTeraCopy = new System.Windows.Forms.OpenFileDialog();
-            this.pbLogDonateLeft = new System.Windows.Forms.PictureBox();
-            this.pbLodDonateRight = new System.Windows.Forms.PictureBox();
             this.tcMovieFileMerger.SuspendLayout();
             this.tpSeparateLists.SuspendLayout();
             this.gbTypeSelection.SuspendLayout();
@@ -236,6 +236,8 @@ namespace Movie_File_Merger
             ((System.ComponentModel.ISupportInitialize)(this.pbListsHowTo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbListsUserManual)).BeginInit();
             this.tpLog.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLodDonateRight)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogDonateLeft)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogUserManual)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogHowTo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogBanner)).BeginInit();
@@ -273,8 +275,6 @@ namespace Movie_File_Merger
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
             this.ssMFM.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogDonateLeft)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLodDonateRight)).BeginInit();
             this.SuspendLayout();
             // 
             // fbdMovieFileMerger
@@ -1443,6 +1443,43 @@ namespace Movie_File_Merger
             this.tpLog.Size = new System.Drawing.Size(1054, 684);
             this.tpLog.TabIndex = 2;
             this.tpLog.Text = "Log";
+            // 
+            // pbLodDonateRight
+            // 
+            this.pbLodDonateRight.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbLodDonateRight.ErrorImage = null;
+            this.pbLodDonateRight.Image = global::Movie_File_Merger.Properties.Resources.DonateButtonLong;
+            this.pbLodDonateRight.InitialImage = null;
+            this.pbLodDonateRight.Location = new System.Drawing.Point(848, 4);
+            this.pbLodDonateRight.Margin = new System.Windows.Forms.Padding(4);
+            this.pbLodDonateRight.Name = "pbLodDonateRight";
+            this.pbLodDonateRight.Padding = new System.Windows.Forms.Padding(15);
+            this.pbLodDonateRight.Size = new System.Drawing.Size(200, 86);
+            this.pbLodDonateRight.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLodDonateRight.TabIndex = 52;
+            this.pbLodDonateRight.TabStop = false;
+            this.ttMovieFileMerger.SetToolTip(this.pbLodDonateRight, "Make a small donation for Modi.");
+            this.pbLodDonateRight.Click += new System.EventHandler(this.pbDonateClick);
+            this.pbLodDonateRight.MouseEnter += new System.EventHandler(this.PbPictureLinkMouseEnter);
+            this.pbLodDonateRight.MouseLeave += new System.EventHandler(this.PbPictureLinkMouseLeave);
+            // 
+            // pbLogDonateLeft
+            // 
+            this.pbLogDonateLeft.ErrorImage = null;
+            this.pbLogDonateLeft.Image = global::Movie_File_Merger.Properties.Resources.DonateButtonLong;
+            this.pbLogDonateLeft.InitialImage = null;
+            this.pbLogDonateLeft.Location = new System.Drawing.Point(1, 4);
+            this.pbLogDonateLeft.Margin = new System.Windows.Forms.Padding(4);
+            this.pbLogDonateLeft.Name = "pbLogDonateLeft";
+            this.pbLogDonateLeft.Padding = new System.Windows.Forms.Padding(15);
+            this.pbLogDonateLeft.Size = new System.Drawing.Size(200, 86);
+            this.pbLogDonateLeft.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLogDonateLeft.TabIndex = 51;
+            this.pbLogDonateLeft.TabStop = false;
+            this.ttMovieFileMerger.SetToolTip(this.pbLogDonateLeft, "Make a small donation for Modi.");
+            this.pbLogDonateLeft.Click += new System.EventHandler(this.pbDonateClick);
+            this.pbLogDonateLeft.MouseEnter += new System.EventHandler(this.PbPictureLinkMouseEnter);
+            this.pbLogDonateLeft.MouseLeave += new System.EventHandler(this.PbPictureLinkMouseLeave);
             // 
             // pbLogUserManual
             // 
@@ -3208,7 +3245,7 @@ namespace Movie_File_Merger
             this.lblCopyLeft.Name = "lblCopyLeft";
             this.lblCopyLeft.Size = new System.Drawing.Size(123, 21);
             this.lblCopyLeft.TabIndex = 2;
-            this.lblCopyLeft.Text = "© 2017 Modi";
+            this.lblCopyLeft.Text = "© 2018 Modi";
             this.lblCopyLeft.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ttMovieFileMerger.SetToolTip(this.lblCopyLeft, "MFM is copyrighted by Modi (Reinhold Lauer).");
             // 
@@ -3223,7 +3260,7 @@ namespace Movie_File_Merger
             this.rtbCopyright.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rtbCopyright.Name = "rtbCopyright";
             this.rtbCopyright.ReadOnly = true;
-            this.rtbCopyright.Size = new System.Drawing.Size(1050, 498);
+            this.rtbCopyright.Size = new System.Drawing.Size(1050, 459);
             this.rtbCopyright.TabIndex = 4;
             this.rtbCopyright.TabStop = false;
             this.rtbCopyright.Text = "";
@@ -3303,43 +3340,6 @@ namespace Movie_File_Merger
             // 
             this.ofdTeraCopy.FileName = "C:\\Program Files\\TeraCopy\\TeraCopy.exe";
             // 
-            // pbLogDonateLeft
-            // 
-            this.pbLogDonateLeft.ErrorImage = null;
-            this.pbLogDonateLeft.Image = global::Movie_File_Merger.Properties.Resources.DonateButtonLong;
-            this.pbLogDonateLeft.InitialImage = null;
-            this.pbLogDonateLeft.Location = new System.Drawing.Point(1, 4);
-            this.pbLogDonateLeft.Margin = new System.Windows.Forms.Padding(4);
-            this.pbLogDonateLeft.Name = "pbLogDonateLeft";
-            this.pbLogDonateLeft.Padding = new System.Windows.Forms.Padding(15);
-            this.pbLogDonateLeft.Size = new System.Drawing.Size(200, 86);
-            this.pbLogDonateLeft.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbLogDonateLeft.TabIndex = 51;
-            this.pbLogDonateLeft.TabStop = false;
-            this.ttMovieFileMerger.SetToolTip(this.pbLogDonateLeft, "Make a small donation for Modi.");
-            this.pbLogDonateLeft.Click += new System.EventHandler(this.pbDonateClick);
-            this.pbLogDonateLeft.MouseEnter += new System.EventHandler(this.PbPictureLinkMouseEnter);
-            this.pbLogDonateLeft.MouseLeave += new System.EventHandler(this.PbPictureLinkMouseLeave);
-            // 
-            // pbLodDonateRight
-            // 
-            this.pbLodDonateRight.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbLodDonateRight.ErrorImage = null;
-            this.pbLodDonateRight.Image = global::Movie_File_Merger.Properties.Resources.DonateButtonLong;
-            this.pbLodDonateRight.InitialImage = null;
-            this.pbLodDonateRight.Location = new System.Drawing.Point(848, 4);
-            this.pbLodDonateRight.Margin = new System.Windows.Forms.Padding(4);
-            this.pbLodDonateRight.Name = "pbLodDonateRight";
-            this.pbLodDonateRight.Padding = new System.Windows.Forms.Padding(15);
-            this.pbLodDonateRight.Size = new System.Drawing.Size(200, 86);
-            this.pbLodDonateRight.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbLodDonateRight.TabIndex = 52;
-            this.pbLodDonateRight.TabStop = false;
-            this.ttMovieFileMerger.SetToolTip(this.pbLodDonateRight, "Make a small donation for Modi.");
-            this.pbLodDonateRight.Click += new System.EventHandler(this.pbDonateClick);
-            this.pbLodDonateRight.MouseEnter += new System.EventHandler(this.PbPictureLinkMouseEnter);
-            this.pbLodDonateRight.MouseLeave += new System.EventHandler(this.PbPictureLinkMouseLeave);
-            // 
             // MFMForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -3379,6 +3379,8 @@ namespace Movie_File_Merger
             ((System.ComponentModel.ISupportInitialize)(this.pbListsHowTo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbListsUserManual)).EndInit();
             this.tpLog.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbLodDonateRight)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogDonateLeft)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogUserManual)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogHowTo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogBanner)).EndInit();
@@ -3422,8 +3424,6 @@ namespace Movie_File_Merger
             this.toolStripContainer1.PerformLayout();
             this.ssMFM.ResumeLayout(false);
             this.ssMFM.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogDonateLeft)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLodDonateRight)).EndInit();
             this.ResumeLayout(false);
 
 		}

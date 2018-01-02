@@ -3,7 +3,7 @@
  * Date: 2012-04-09
  */
 
-// Copyright 2012-2017 Reinhold Lauer
+// Copyright 2012-2018 Reinhold Lauer
 // 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
