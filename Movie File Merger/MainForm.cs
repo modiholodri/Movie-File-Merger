@@ -99,12 +99,17 @@ namespace Movie_File_Merger {
         public MFMForm( )
         {
             InitializeComponent( );
+            // add basic info to the log tab
             SetStatus( "Initializing Movie File Merger..." );
             LogInfo("You can find additional information by clicking on the User Manual picture.");
             LogInfo("The Log shows mainly messages about what has happened in the Lists tab.");
             LogInfo("Hover over the Log and roll the mouse wheel to zoom in or out.");
             LogInfo("You can use the Log to find duplicated videos.");
             LogMessage("Donation", Color.DarkRed, "To support the development of Movie File Merger donate a beer or two...");
+
+            // add basic info to the maintenance log
+            LogMaintenance ("STatus", Color.Black, "Initializing Movie File Merger...");
+            LogMaintenance("Info", Color.Blue, "Hover over the Log and roll the mouse wheel to zoom in or out.").
 
             // make sure that all needed directroies and files are there
             if ( !Directory.Exists( strPrivatePath ) ) {
