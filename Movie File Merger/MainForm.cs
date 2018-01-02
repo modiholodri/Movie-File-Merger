@@ -4093,5 +4093,45 @@ namespace Movie_File_Merger {
                 }
             }
         }
+
+        private void btnSelectColor_DragDrop(object sender, DragEventArgs e)
+        {
+            foreach (ListViewItem lviThis in lvDragSource.SelectedItems)
+            {
+                DragColor = lviThis.BackColor;
+                break;
+            }
+            foreach (ListViewItem lviThis in lvDragSource.Items)
+            {
+                if (lviThis.BackColor == DragColor )
+                {
+                    lviThis.Selected = true;
+                }
+                else
+                {
+                    lviThis.Selected = false;
+                }
+            }
+        }
+
+        private void btnSelectColor_Click(object sender, EventArgs e)
+        {
+            foreach (ListViewItem lviThis in lvLastClicked.SelectedItems)
+            {
+                DragColor = lviThis.BackColor;
+                break;
+            }
+            foreach (ListViewItem lviThis in lvLastClicked.Items)
+            {
+                if (lviThis.BackColor == DragColor)
+                {
+                    lviThis.Selected = true;
+                }
+                else
+                {
+                    lviThis.Selected = false;
+                }
+            }
+        }
     }
 }

@@ -484,6 +484,9 @@ namespace Movie_File_Merger
             this.ttMovieFileMerger.SetToolTip(this.btnSelectColor, "Drop an item with a color here to select all items of the same color from a list." +
         "");
             this.btnSelectColor.UseVisualStyleBackColor = false;
+            this.btnSelectColor.Click += new System.EventHandler(this.btnSelectColor_Click);
+            this.btnSelectColor.DragDrop += new System.Windows.Forms.DragEventHandler(this.btnSelectColor_DragDrop);
+            this.btnSelectColor.DragOver += new System.Windows.Forms.DragEventHandler(this.BtnDragOver);
             // 
             // btnInvertSelection
             // 
