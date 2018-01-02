@@ -672,8 +672,7 @@ namespace Movie_File_Merger
             this.btnSelect.TabIndex = 41;
             this.btnSelect.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSelect.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ttMovieFileMerger.SetToolTip(this.btnSelect, "Select all items in all lists according to the selection criteria.\r\nYou have to h" +
-        "over with the mouse of the list to see the selected items.");
+            this.ttMovieFileMerger.SetToolTip(this.btnSelect, "Select all items in all lists according to the selection criteria.");
             this.btnSelect.UseVisualStyleBackColor = false;
             this.btnSelect.Click += new System.EventHandler(this.BtnSelectClick);
             // 
@@ -1458,7 +1457,7 @@ namespace Movie_File_Merger
             this.pbLodDonateRight.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbLodDonateRight.TabIndex = 52;
             this.pbLodDonateRight.TabStop = false;
-            this.ttMovieFileMerger.SetToolTip(this.pbLodDonateRight, "Make a small donation for Modi.");
+            this.ttMovieFileMerger.SetToolTip(this.pbLodDonateRight, "Donate a beer or two for Modi.");
             this.pbLodDonateRight.Click += new System.EventHandler(this.pbDonateClick);
             this.pbLodDonateRight.MouseEnter += new System.EventHandler(this.PbPictureLinkMouseEnter);
             this.pbLodDonateRight.MouseLeave += new System.EventHandler(this.PbPictureLinkMouseLeave);
@@ -1476,7 +1475,7 @@ namespace Movie_File_Merger
             this.pbLogDonateLeft.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbLogDonateLeft.TabIndex = 51;
             this.pbLogDonateLeft.TabStop = false;
-            this.ttMovieFileMerger.SetToolTip(this.pbLogDonateLeft, "Make a small donation for Modi.");
+            this.ttMovieFileMerger.SetToolTip(this.pbLogDonateLeft, "Donate a beer or two for Modi.");
             this.pbLogDonateLeft.Click += new System.EventHandler(this.pbDonateClick);
             this.pbLogDonateLeft.MouseEnter += new System.EventHandler(this.PbPictureLinkMouseEnter);
             this.pbLogDonateLeft.MouseLeave += new System.EventHandler(this.PbPictureLinkMouseLeave);
@@ -1616,7 +1615,7 @@ namespace Movie_File_Merger
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 64;
             this.pictureBox2.TabStop = false;
-            this.ttMovieFileMerger.SetToolTip(this.pictureBox2, "Make a small donation for Modi.");
+            this.ttMovieFileMerger.SetToolTip(this.pictureBox2, "Donate a beer or two for Modi.");
             this.pictureBox2.Click += new System.EventHandler(this.pbDonateClick);
             this.pictureBox2.MouseEnter += new System.EventHandler(this.PbPictureLinkMouseEnter);
             this.pictureBox2.MouseLeave += new System.EventHandler(this.PbPictureLinkMouseLeave);
@@ -2601,7 +2600,7 @@ namespace Movie_File_Merger
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 72;
             this.pictureBox1.TabStop = false;
-            this.ttMovieFileMerger.SetToolTip(this.pictureBox1, "Make a small donation for Modi.");
+            this.ttMovieFileMerger.SetToolTip(this.pictureBox1, "Donate a beer or two for Modi.");
             this.pictureBox1.Click += new System.EventHandler(this.pbDonateClick);
             this.pictureBox1.MouseEnter += new System.EventHandler(this.PbPictureLinkMouseEnter);
             this.pictureBox1.MouseLeave += new System.EventHandler(this.PbPictureLinkMouseLeave);
@@ -3150,7 +3149,7 @@ namespace Movie_File_Merger
             this.pbAboutDonate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbAboutDonate.TabIndex = 15;
             this.pbAboutDonate.TabStop = false;
-            this.ttMovieFileMerger.SetToolTip(this.pbAboutDonate, "Make a small donation for Modi.");
+            this.ttMovieFileMerger.SetToolTip(this.pbAboutDonate, "Donate a beer or two for Modi.");
             this.pbAboutDonate.Click += new System.EventHandler(this.pbDonateClick);
             this.pbAboutDonate.MouseEnter += new System.EventHandler(this.PbPictureLinkMouseEnter);
             this.pbAboutDonate.MouseLeave += new System.EventHandler(this.PbPictureLinkMouseLeave);
