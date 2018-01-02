@@ -102,14 +102,18 @@ namespace Movie_File_Merger {
             // add basic info to the log tab
             SetStatus( "Initializing Movie File Merger..." );
             LogInfo("You can find additional information by clicking on the User Manual picture.");
-            LogInfo("The Log shows mainly messages about what has happened in the Lists tab.");
+            LogInfo("This Log shows mainly messages about what has happened in the Lists tab.");
             LogInfo("Hover over the Log and roll the mouse wheel to zoom in or out.");
             LogInfo("You can use the Log to find duplicated videos.");
+            LogInfo("To safe the log copy and past the text in a rich text editor, like MS Word.");
             LogMessage("Donation", Color.DarkRed, "To support the development of Movie File Merger donate a beer or two...");
 
             // add basic info to the maintenance log
             LogMaintenance ("STatus", Color.Black, "Initializing Movie File Merger...");
-            LogMaintenance("Info", Color.Blue, "Hover over the Log and roll the mouse wheel to zoom in or out.").
+            LogMaintenance("Info", Color.Blue, "You can find additional information by clicking on the User Manual picture.");
+            LogMaintenance("Info", Color.Blue, "This Log shows messages about what has happened in the Mantenance tab.");
+            LogMaintenance("Info", Color.Blue, "Hover over the Log and roll the mouse wheel to zoom in or out.");
+            LogMaintenance("Info", Color.Blue, "To safe the log copy and past the text in a rich text editor, like MS Word.");
 
             // make sure that all needed directroies and files are there
             if ( !Directory.Exists( strPrivatePath ) ) {
@@ -640,6 +644,38 @@ namespace Movie_File_Merger {
         }
 
         /// <summary>
+        /// Save the list view to a file.
+        /// </summary>
+        void ExportList(ListView lvThis)
+        {
+            sfdMovieFileMerger.FileName =
+                strNickName + " " +
+                (string)lvThis.Tag + " " +
+                strCollectionType + " " +
+                StandardizeDate(DateTime.Today);
+            if (sfdMovieFileMerger.ShowDialog() == DialogResult.OK)
+            {
+                sfdMovieFileMerger.InitialDirectory = "";  // take the same folder next time
+                if (sfdMovieFileMerger.FileName.EndsWith(".xml"))
+                {
+                    SaveListViewToXmlFile(lvThis, sfdMovieFileMerger.FileName);
+                }
+                if (sfdMovieFileMerger.FileName.EndsWith(".csv"))
+                {
+                    SaveListViewToCsvFile(lvThis, sfdMovieFileMerger.FileName);
+                }
+                if (sfdMovieFileMerger.FileName.EndsWith(".tsv"))
+                {
+                    SaveListViewToTsvFile(lvThis, sfdMovieFileMerger.FileName);
+                }
+                if ((string)lvThis.Tag == "Maintenance")
+                {
+                    lvDragSource = lvExisting;
+                }
+            }
+        }
+
+        /// <summary>
         /// A list view has been drop on the Export Lists droparea.
         /// Save the list view to a CSV file.
         /// </summary>
@@ -650,26 +686,7 @@ namespace Movie_File_Merger {
             if ( (string)lvDragSource.Tag == "Maintenance" ) {
                 LvMaintenanceDragDrop( sender, e );
             }
-            sfdMovieFileMerger.FileName =
-                strNickName + " " +
-                (string)lvDragSource.Tag + " " +
-                strCollectionType + " " +
-                StandardizeDate( DateTime.Today );
-            if ( sfdMovieFileMerger.ShowDialog( ) == DialogResult.OK ) {
-                sfdMovieFileMerger.InitialDirectory = "";  // take the same folder next time
-                if ( sfdMovieFileMerger.FileName.EndsWith( ".xml" ) ) {
-                    SaveListViewToXmlFile( lvDragSource, sfdMovieFileMerger.FileName );
-                }
-                if ( sfdMovieFileMerger.FileName.EndsWith( ".csv" ) ) {
-                    SaveListViewToCsvFile( lvDragSource, sfdMovieFileMerger.FileName );
-                }
-                if ( sfdMovieFileMerger.FileName.EndsWith( ".tsv" ) ) {
-                    SaveListViewToTsvFile( lvDragSource, sfdMovieFileMerger.FileName );
-                }
-                if ( (string)lvDragSource.Tag == "Maintenance" ) {
-                    lvDragSource = lvExisting;
-                }
-            }
+            ExportList(lvLastClicked);
         }
 
         /// <summary>
@@ -2890,6 +2907,23 @@ namespace Movie_File_Merger {
         /// <summary>
         /// Delete unrelated files in the Maintenance list.
         /// </summary>
+        /// <param name="lvThis">The list view from where to delte the unrelated items.</param>
+        void DeleteUnrelated ( ListView lvThis )
+        {
+            foreach (ListViewItem lviThis in lvThis.Items)
+            {
+                if (lviThis.BackColor == NeutralColor)
+                {
+                    LogMaintenance("Info:  ", Color.Red, "Deleting unrelated file " + lviThis.Name);
+                    File.Delete(GetMainFilePathFromToolTip(lviThis.ToolTipText));
+                    lvMaintenance.Items.Remove(lviThis);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Delete unrelated files in the Maintenance list.
+        /// </summary>
         /// <param name="sender">The object that invoked the event that fired the event handler.</param>
         /// <param name="e">The arguments that the implementor of this event may find useful.</param>
         private void BntDeleteUnrelated_DragDrop(object sender, DragEventArgs e)
@@ -2897,15 +2931,7 @@ namespace Movie_File_Merger {
             if (e.AllowedEffect == DragDropEffects.None) return;
 
             LvMaintenanceDragDrop(sender, e); // add the draged items so that they can be deleted ;-)
-            foreach (ListViewItem lviThis in lvMaintenance.Items)
-            {
-                if (lviThis.BackColor == NeutralColor)
-                {
-                    LogMaintenance("Info:  ", Color.Red, "Deleting unrelated file " + lviThis.Name);
-                    File.Delete( GetMainFilePathFromToolTip(lviThis.ToolTipText) );
-                    lvMaintenance.Items.Remove(lviThis);
-                }
-            }
+            DeleteUnrelated(lvMaintenance);
         }
 
         /// <summary>
@@ -3757,6 +3783,7 @@ namespace Movie_File_Merger {
             ColorRemoteList( );
         }
 
+        // TODO: not used remove...
         private void PbMaintenanceBitCoins_Click( object sender, EventArgs e )
         {
             ExecuteThis( "https://www.coinbase.com/modi" );
@@ -3764,7 +3791,7 @@ namespace Movie_File_Merger {
 
         private void BtnEraseSelected_Click(object sender, EventArgs e)
         {
-
+            EraseSelected(lvLastClicked);
         }
 
         private void LvClick(object sender, EventArgs e)
@@ -3883,7 +3910,7 @@ namespace Movie_File_Merger {
             foreach (ListViewItem lviThis in lvDragSource.SelectedItems)
             {
                 strcolFileList.Add(lviThis.Text);
-                lvDragSource.Items.Remove(lviThis);
+                lvDragSource.Items.Remove(lviThis); // remove items also when copied, so that they are not used double
             }
 
             var doFileList = new DataObject();
@@ -3896,6 +3923,71 @@ namespace Movie_File_Merger {
             {
                 lvDragSource.DoDragDrop(doFileList, DragDropEffects.Move);
             }
+        }
+
+        /// <summary>
+        /// Search the internet for relevant downloads.
+        /// </summary>
+        /// <param name="sender">The object that invoked the event that fired the event handler.</param>
+        /// <param name="e">The arguments that the implementor of this event may find useful.</param>
+        private void BtnSearchDownload_Click(object sender, EventArgs e)
+        {
+            SearchDownload(lvLastClicked);
+        }
+
+        /// <summary>
+        /// Erase all items withthe same color as the first selected item.
+        /// </summary>
+        /// <param name="sender">The object that invoked the event that fired the event handler.</param>
+        /// <param name="e">The arguments that the implementor of this event may find useful.</param>
+        private void BtnEraseColor_Click(object sender, EventArgs e)
+        {
+            foreach (ListViewItem lviThis in lvLastClicked.SelectedItems)
+            {
+                DragColor = lviThis.BackColor;
+                break;
+            }
+            EraseColorFromListView(lvLastClicked, DragColor);
+        }
+
+        /// <summary>
+        /// Seach the internet for relevant information.
+        /// </summary>
+        /// <param name="sender">The object that invoked the event that fired the event handler.</param>
+        /// <param name="e">The arguments that the implementor of this event may find useful.</param>
+        private void BtnSearchInfo_Click(object sender, EventArgs e)
+        {
+            SearchInfo(lvLastClicked);
+        }
+
+        /// <summary>
+        /// Play the selected videos with the default player.
+        /// </summary>
+        /// <param name="sender">The object that invoked the event that fired the event handler.</param>
+        /// <param name="e">The arguments that the implementor of this event may find useful.</param>
+        private void BtnPlay_Click(object sender, EventArgs e)
+        {
+            Play(lvLastClicked);
+        }
+
+        /// <summary>
+        /// Play the selected videos with the default player.
+        /// </summary>
+        /// <param name="sender">The object that invoked the event that fired the event handler.</param>
+        /// <param name="e">The arguments that the implementor of this event may find useful.</param>
+        private void BtnExportList_Click(object sender, EventArgs e)
+        {
+            ExportList(lvLastClicked);
+        }
+
+        /// <summary>
+        /// Delete unrelated files from the Maintenance list.
+        /// </summary>
+        /// <param name="sender">The object that invoked the event that fired the event handler.</param>
+        /// <param name="e">The arguments that the implementor of this event may find useful.</param>
+        private void BntDeleteUnrelated_Click(object sender, EventArgs e)
+        {
+            DeleteUnrelated(lvMaintenance);
         }
     }
 #endregion FTP Sucker

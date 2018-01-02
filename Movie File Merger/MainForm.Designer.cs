@@ -523,6 +523,7 @@ namespace Movie_File_Merger
             this.btnPlay.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.ttMovieFileMerger.SetToolTip(this.btnPlay, "Drop an item here to play it with your movie player.");
             this.btnPlay.UseVisualStyleBackColor = false;
+            this.btnPlay.Click += new System.EventHandler(this.BtnPlay_Click);
             this.btnPlay.DragDrop += new System.Windows.Forms.DragEventHandler(this.BtnPlayDragDrop);
             this.btnPlay.DragOver += new System.Windows.Forms.DragEventHandler(this.BtnDragOver);
             // 
@@ -695,6 +696,7 @@ namespace Movie_File_Merger
             this.btnExportList.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ttMovieFileMerger.SetToolTip(this.btnExportList, "Drop an item of a list here to export the complete list as an XML file.");
             this.btnExportList.UseVisualStyleBackColor = false;
+            this.btnExportList.Click += new System.EventHandler(this.BtnExportList_Click);
             this.btnExportList.DragDrop += new System.Windows.Forms.DragEventHandler(this.BtnExportListDragDrop);
             this.btnExportList.DragOver += new System.Windows.Forms.DragEventHandler(this.BtnDragOver);
             // 
@@ -717,6 +719,7 @@ namespace Movie_File_Merger
             this.btnEraseColor.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.ttMovieFileMerger.SetToolTip(this.btnEraseColor, "Drop an item with a color here to erase all items of the same color from a list.");
             this.btnEraseColor.UseVisualStyleBackColor = false;
+            this.btnEraseColor.Click += new System.EventHandler(this.BtnEraseColor_Click);
             this.btnEraseColor.DragDrop += new System.Windows.Forms.DragEventHandler(this.BtnEraseColorDragDrop);
             this.btnEraseColor.DragOver += new System.Windows.Forms.DragEventHandler(this.BtnDragOver);
             // 
@@ -739,6 +742,7 @@ namespace Movie_File_Merger
             this.ttMovieFileMerger.SetToolTip(this.btnSearchDownload, "Drop items here to download them from the internet.  Click on the small arrow to " +
         "the left to change the download site.");
             this.btnSearchDownload.UseVisualStyleBackColor = false;
+            this.btnSearchDownload.Click += new System.EventHandler(this.BtnSearchDownload_Click);
             this.btnSearchDownload.DragDrop += new System.Windows.Forms.DragEventHandler(this.BtnSearchDownloadDragDrop);
             this.btnSearchDownload.DragOver += new System.Windows.Forms.DragEventHandler(this.BtnDragOver);
             // 
@@ -784,6 +788,7 @@ namespace Movie_File_Merger
             this.ttMovieFileMerger.SetToolTip(this.btnSearchInfo, "Drop items here to search for them on the internet. Click on the small arrow to t" +
         "he right to change the info site.");
             this.btnSearchInfo.UseVisualStyleBackColor = false;
+            this.btnSearchInfo.Click += new System.EventHandler(this.BtnSearchInfo_Click);
             this.btnSearchInfo.DragDrop += new System.Windows.Forms.DragEventHandler(this.BtnSearchInfoDragDrop);
             this.btnSearchInfo.DragOver += new System.Windows.Forms.DragEventHandler(this.BtnDragOver);
             // 
@@ -1600,6 +1605,7 @@ namespace Movie_File_Merger
             this.BntDeleteUnrelated.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ttMovieFileMerger.SetToolTip(this.BntDeleteUnrelated, "Permanently delete (not in Recycle Bin) all file marked as unrelated.");
             this.BntDeleteUnrelated.UseVisualStyleBackColor = false;
+            this.BntDeleteUnrelated.Click += new System.EventHandler(this.BntDeleteUnrelated_Click);
             this.BntDeleteUnrelated.DragDrop += new System.Windows.Forms.DragEventHandler(this.BntDeleteUnrelated_DragDrop);
             this.BntDeleteUnrelated.DragOver += new System.Windows.Forms.DragEventHandler(this.BtnDragOver);
             // 
@@ -1657,6 +1663,7 @@ namespace Movie_File_Merger
             this.btnPlayMaintenance.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.ttMovieFileMerger.SetToolTip(this.btnPlayMaintenance, "Drop an item here to play it with your movie player.");
             this.btnPlayMaintenance.UseVisualStyleBackColor = false;
+            this.btnPlayMaintenance.Click += new System.EventHandler(this.BtnPlay_Click);
             this.btnPlayMaintenance.DragDrop += new System.Windows.Forms.DragEventHandler(this.BtnPlayDragDrop);
             this.btnPlayMaintenance.DragOver += new System.Windows.Forms.DragEventHandler(this.BtnDragOver);
             // 
@@ -1679,7 +1686,8 @@ namespace Movie_File_Merger
             this.btnExportListMaintenance.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ttMovieFileMerger.SetToolTip(this.btnExportListMaintenance, "Drop an item of a list here to export the complete list as an XML file.");
             this.btnExportListMaintenance.UseVisualStyleBackColor = false;
-            this.btnExportListMaintenance.DragDrop += new System.Windows.Forms.DragEventHandler(this.BtnExportListDragDrop);
+            this.btnExportListMaintenance.Click += new System.EventHandler(this.BtnExportList_Click);
+            this.btnExportListMaintenance.DragDrop += new System.Windows.Forms.DragEventHandler(this.BtnEraseColorDragDrop);
             this.btnExportListMaintenance.DragOver += new System.Windows.Forms.DragEventHandler(this.BtnDragOver);
             // 
             // btnSearchDownloadMaintenance
@@ -1701,6 +1709,7 @@ namespace Movie_File_Merger
             this.ttMovieFileMerger.SetToolTip(this.btnSearchDownloadMaintenance, "Drop items here to download them from the internet.  Click on the small arrow to " +
         "the left to change the download site.");
             this.btnSearchDownloadMaintenance.UseVisualStyleBackColor = false;
+            this.btnSearchDownloadMaintenance.Click += new System.EventHandler(this.BtnSearchDownload_Click);
             this.btnSearchDownloadMaintenance.DragDrop += new System.Windows.Forms.DragEventHandler(this.BtnSearchDownloadDragDrop);
             this.btnSearchDownloadMaintenance.DragOver += new System.Windows.Forms.DragEventHandler(this.BtnDragOver);
             // 
@@ -1724,6 +1733,7 @@ namespace Movie_File_Merger
             this.ttMovieFileMerger.SetToolTip(this.btnSearchInfoMaintenance, "Drop items here to search for them on the internet.  Click on the small arrow to " +
         "the right to change the info site.");
             this.btnSearchInfoMaintenance.UseVisualStyleBackColor = false;
+            this.btnSearchInfoMaintenance.Click += new System.EventHandler(this.BtnSearchInfo_Click);
             this.btnSearchInfoMaintenance.DragDrop += new System.Windows.Forms.DragEventHandler(this.BtnSearchInfoDragDrop);
             this.btnSearchInfoMaintenance.DragOver += new System.Windows.Forms.DragEventHandler(this.BtnDragOver);
             // 
@@ -1986,6 +1996,7 @@ namespace Movie_File_Merger
             this.lvMaintenance.UseCompatibleStateImageBehavior = false;
             this.lvMaintenance.View = System.Windows.Forms.View.Details;
             this.lvMaintenance.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.LvFileListDrag);
+            this.lvMaintenance.Click += new System.EventHandler(this.LvClick);
             this.lvMaintenance.DragDrop += new System.Windows.Forms.DragEventHandler(this.LvMaintenanceDragDrop);
             this.lvMaintenance.DragOver += new System.Windows.Forms.DragEventHandler(this.LvDragOver);
             this.lvMaintenance.GiveFeedback += new System.Windows.Forms.GiveFeedbackEventHandler(this.LvGiveFeedback);
