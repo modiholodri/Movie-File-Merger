@@ -1338,6 +1338,7 @@ namespace Movie_File_Merger
             this.lvExport.UseCompatibleStateImageBehavior = false;
             this.lvExport.View = System.Windows.Forms.View.Details;
             this.lvExport.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.LvExport_ItemDrag);
+            this.lvExport.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.LvItemSelectionChanged);
             this.lvExport.Click += new System.EventHandler(this.LvClick);
             this.lvExport.DragDrop += new System.Windows.Forms.DragEventHandler(this.LvExport_DragDrop);
             this.lvExport.DragOver += new System.Windows.Forms.DragEventHandler(this.LvDragOver);

@@ -1929,6 +1929,10 @@ namespace Movie_File_Merger {
             if ( lvImport.Focused ) {
                 return lvImport.SelectedItems.Count < 2;
             }
+            if ( lvExport.Focused )
+            {
+                return lvExport.SelectedItems.Count < 2;
+            }
             return false;
         }
 
@@ -1962,10 +1966,16 @@ namespace Movie_File_Merger {
         void LvItemSelectionChanged( object sender, ListViewItemSelectionChangedEventArgs e )
         {
             if ( e.Item.Selected && OneItemSelected( ) ) {
-                ShowClosestItem( lvExisting, e.Item.Text );
-                ShowClosestItem( lvGarbage, e.Item.Text );
-                ShowClosestItem( lvWish, e.Item.Text );
-                ShowClosestItem( lvImport, e.Item.Text );
+                string sCleanName = e.Item.Text;
+                if (lvExisting.Focused)
+                {
+                    sCleanName = CleanName(Path.GetFileNameWithoutExtension(sCleanName));
+                }
+                ShowClosestItem( lvExisting, sCleanName );
+                ShowClosestItem( lvGarbage, sCleanName );
+                ShowClosestItem( lvWish, sCleanName );
+                ShowClosestItem( lvImport, sCleanName );
+                ShowClosestItem(lvExport, GetMainFilePathFromToolTip(e.Item.ToolTipText));
             }
         }
 
