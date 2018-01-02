@@ -315,6 +315,16 @@ namespace Movie_File_Merger {
         }
 
         /// <summary>
+        /// Execute the command in the system.
+        /// </summary>
+        /// <param name="sCommand">The command to execute.</param>
+        /// <param name="sArguments">The arguments for the command.</param>
+        void ExecuteThis(string sCommand, string sArguments)
+        {
+            System.Diagnostics.Process.Start(sCommand, sArguments);
+        }
+
+        /// <summary>
         /// Go to How to Organize Videos on Hard Disks to read about how a video collection could be organized.
         /// </summary>
         /// <param name="sender">The object that invoked the event that fired the event handler.</param>
@@ -4033,6 +4043,25 @@ namespace Movie_File_Merger {
             {
                 lviThis.BackColor = GarbageColor;
                 lviThis.Selected = false;
+            }
+        }
+
+        private void Lv_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right) {
+                string sFilePath = "";
+                foreach (ListViewItem lviThis in lvLastClicked.Items )
+                {
+                    if (lviThis.Selected)
+                    {   // put the path in double quaotes to handle ',' and stuff like that
+                        sFilePath = @"""" + GetMainFilePathFromToolTip(lviThis.ToolTipText) + @"""";
+                        break;
+                    }
+                }
+                if (sFilePath != "")
+                {
+                    ExecuteThis("explorer.exe", "/n /e,/select," + sFilePath );
+                }
             }
         }
     }

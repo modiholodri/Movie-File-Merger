@@ -106,6 +106,7 @@ namespace Movie_File_Merger
             this.pbLogBanner = new System.Windows.Forms.PictureBox();
             this.rtbLog = new System.Windows.Forms.RichTextBox();
             this.tpMaintenance = new System.Windows.Forms.TabPage();
+            this.btnOrphanAddon = new System.Windows.Forms.Button();
             this.BntDeleteUnrelated = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pbMaintenanceHowTo = new System.Windows.Forms.PictureBox();
@@ -213,7 +214,6 @@ namespace Movie_File_Merger
             this.tspbMFM = new System.Windows.Forms.ToolStripProgressBar();
             this.ttMovieFileMerger = new System.Windows.Forms.ToolTip(this.components);
             this.ofdTeraCopy = new System.Windows.Forms.OpenFileDialog();
-            this.btnOrphanAddon = new System.Windows.Forms.Button();
             this.tcMovieFileMerger.SuspendLayout();
             this.tpSeparateLists.SuspendLayout();
             this.gbTypeSelection.SuspendLayout();
@@ -1126,6 +1126,7 @@ namespace Movie_File_Merger
             this.lvExisting.GiveFeedback += new System.Windows.Forms.GiveFeedbackEventHandler(this.LvGiveFeedback);
             this.lvExisting.DoubleClick += new System.EventHandler(this.LvDoubleClick);
             this.lvExisting.KeyDown += new System.Windows.Forms.KeyEventHandler(this.LvKeyDown);
+            this.lvExisting.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Lv_MouseClick);
             this.lvExisting.MouseEnter += new System.EventHandler(this.LvMouseEnter);
             // 
             // chNameExisting
@@ -1205,6 +1206,7 @@ namespace Movie_File_Merger
             this.lvWish.GiveFeedback += new System.Windows.Forms.GiveFeedbackEventHandler(this.LvGiveFeedback);
             this.lvWish.DoubleClick += new System.EventHandler(this.LvDoubleClick);
             this.lvWish.KeyDown += new System.Windows.Forms.KeyEventHandler(this.LvKeyDown);
+            this.lvWish.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Lv_MouseClick);
             this.lvWish.MouseEnter += new System.EventHandler(this.LvMouseEnter);
             // 
             // columnHeader1
@@ -1244,6 +1246,7 @@ namespace Movie_File_Merger
             this.lvGarbage.GiveFeedback += new System.Windows.Forms.GiveFeedbackEventHandler(this.LvGiveFeedback);
             this.lvGarbage.DoubleClick += new System.EventHandler(this.LvDoubleClick);
             this.lvGarbage.KeyDown += new System.Windows.Forms.KeyEventHandler(this.LvKeyDown);
+            this.lvGarbage.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Lv_MouseClick);
             this.lvGarbage.MouseEnter += new System.EventHandler(this.LvMouseEnter);
             // 
             // chNameGarbage
@@ -1302,6 +1305,7 @@ namespace Movie_File_Merger
             this.lvImport.GiveFeedback += new System.Windows.Forms.GiveFeedbackEventHandler(this.LvGiveFeedback);
             this.lvImport.DoubleClick += new System.EventHandler(this.LvDoubleClick);
             this.lvImport.KeyDown += new System.Windows.Forms.KeyEventHandler(this.LvKeyDown);
+            this.lvImport.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Lv_MouseClick);
             this.lvImport.MouseEnter += new System.EventHandler(this.LvMouseEnter);
             // 
             // chNameImport
@@ -1340,6 +1344,7 @@ namespace Movie_File_Merger
             this.lvExport.GiveFeedback += new System.Windows.Forms.GiveFeedbackEventHandler(this.LvGiveFeedback);
             this.lvExport.DoubleClick += new System.EventHandler(this.LvDoubleClick);
             this.lvExport.KeyDown += new System.Windows.Forms.KeyEventHandler(this.LvKeyDown);
+            this.lvExport.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Lv_MouseClick);
             this.lvExport.MouseEnter += new System.EventHandler(this.LvMouseEnter);
             // 
             // chNameExport
@@ -1608,6 +1613,20 @@ namespace Movie_File_Merger
             this.tpMaintenance.Size = new System.Drawing.Size(1054, 684);
             this.tpMaintenance.TabIndex = 5;
             this.tpMaintenance.Text = "Maintenance";
+            // 
+            // btnOrphanAddon
+            // 
+            this.btnOrphanAddon.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.btnOrphanAddon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOrphanAddon.Location = new System.Drawing.Point(8, 231);
+            this.btnOrphanAddon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnOrphanAddon.Name = "btnOrphanAddon";
+            this.btnOrphanAddon.Size = new System.Drawing.Size(132, 26);
+            this.btnOrphanAddon.TabIndex = 66;
+            this.btnOrphanAddon.Text = "Orphan Addon";
+            this.ttMovieFileMerger.SetToolTip(this.btnOrphanAddon, "Select all remaining files with bad names.");
+            this.btnOrphanAddon.UseVisualStyleBackColor = true;
+            this.btnOrphanAddon.Click += new System.EventHandler(this.BtnSelectMaintenanceClick);
             // 
             // BntDeleteUnrelated
             // 
@@ -2024,6 +2043,7 @@ namespace Movie_File_Merger
             this.lvMaintenance.GiveFeedback += new System.Windows.Forms.GiveFeedbackEventHandler(this.LvGiveFeedback);
             this.lvMaintenance.DoubleClick += new System.EventHandler(this.LvMaintenanceDoubleClick);
             this.lvMaintenance.KeyDown += new System.Windows.Forms.KeyEventHandler(this.LvKeyDown);
+            this.lvMaintenance.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Lv_MouseClick);
             this.lvMaintenance.MouseEnter += new System.EventHandler(this.LvMouseEnter);
             this.lvMaintenance.Resize += new System.EventHandler(this.LvMaintenanceResize);
             // 
@@ -3376,20 +3396,6 @@ namespace Movie_File_Merger
             // ofdTeraCopy
             // 
             this.ofdTeraCopy.FileName = "C:\\Program Files\\TeraCopy\\TeraCopy.exe";
-            // 
-            // btnOrphanAddon
-            // 
-            this.btnOrphanAddon.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
-            this.btnOrphanAddon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOrphanAddon.Location = new System.Drawing.Point(8, 231);
-            this.btnOrphanAddon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnOrphanAddon.Name = "btnOrphanAddon";
-            this.btnOrphanAddon.Size = new System.Drawing.Size(132, 26);
-            this.btnOrphanAddon.TabIndex = 66;
-            this.btnOrphanAddon.Text = "Orphan Addon";
-            this.ttMovieFileMerger.SetToolTip(this.btnOrphanAddon, "Select all remaining files with bad names.");
-            this.btnOrphanAddon.UseVisualStyleBackColor = true;
-            this.btnOrphanAddon.Click += new System.EventHandler(this.BtnSelectMaintenanceClick);
             // 
             // MFMForm
             // 
