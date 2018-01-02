@@ -33,25 +33,3 @@ MFM makes it easier for you to select which items are copied or moved and which 
 ![Movie File Merger About](https://movie-file-merger.org/images/MFM0.6.0About.png)
 
 :information_source: MFM is not a movie database program; MFM is designed so that the lists can be easily updated once out of date.  MFM is designed to run in Dropbox or as portable program, what makes it easier to share lists with other people, update the program, and store your settings and lists in a save place.  MFM is also designed to work together with multiple other programs, which can be downloaded and used for free.
-
-### [The MIT License (MIT)](http://opensource.org/licenses/MIT)
-
-Copyright :copyright: 2012-2017 Reinhold Lauer
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
