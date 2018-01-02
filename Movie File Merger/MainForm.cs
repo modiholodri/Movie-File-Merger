@@ -446,9 +446,8 @@ namespace Movie_File_Merger {
             }
 
             var diImportFolder = new DirectoryInfo( strImportFolder );
-            SearchOption soMovieFileMerger = SearchOption.AllDirectories;
 
-            foreach ( FileInfo fiImportFile in diImportFolder.GetFiles( "*", soMovieFileMerger ) ) {
+            foreach ( FileInfo fiImportFile in diImportFolder.GetFiles( "*", SearchOption.AllDirectories) ) {
                 string strImportName = fiImportFile.Name;
                 // ignore not relevant files
                 if ( !rgxMainExtensions.IsMatch( fiImportFile.Extension.ToLower( ) ) &&
@@ -1254,9 +1253,8 @@ namespace Movie_File_Merger {
         void LvAddFilesInThread( )
         {
             var diFolder = new DirectoryInfo( strGlobalFolderName );
-            SearchOption soMovieFileMerger = SearchOption.AllDirectories;
 
-            foreach ( FileInfo fiFile in diFolder.GetFiles( "*", soMovieFileMerger ) ) {
+            foreach ( FileInfo fiFile in diFolder.GetFiles( "*", SearchOption.AllDirectories) ) {
                 if ( !rgxMainExtensions.IsMatch( fiFile.Extension.ToLower( ) ) ) {
                     continue;
                 }
@@ -1281,13 +1279,11 @@ namespace Movie_File_Merger {
         void AddFolderToListView( ListView lvThis, string strFolderName )
         {
             var diFolder = new DirectoryInfo( strFolderName );
-            SearchOption soMovieFileMerger = SearchOption.AllDirectories;
-
             SetStatus( "Adding folder " + strFolderName + " to " + lvThis.Tag + "..." );
 
             tspbMFM.Maximum = 0;
             tspbMFM.Value = 0;
-            foreach ( FileInfo fiFile in diFolder.GetFiles( "*", soMovieFileMerger ) ) {
+            foreach ( FileInfo fiFile in diFolder.GetFiles( "*", SearchOption.AllDirectories) ) {
                 if ( rgxMainExtensions.IsMatch( fiFile.Extension.ToLower( ) ) ) {
                     tspbMFM.Maximum++;
                 }
@@ -2586,7 +2582,6 @@ namespace Movie_File_Merger {
 
         void ExistingJustScanItInThread( )
         {
-            SearchOption soMovieFileMerger = SearchOption.AllDirectories;
             foreach ( var drive in DriveInfo.GetDrives( ) ) {
                 try {
                     if ( drive.IsReady ) {
@@ -2596,7 +2591,7 @@ namespace Movie_File_Merger {
                                 strTargetFolder = strPath;
                                 LogInfo( "Scanning folder " + strPath );
                                 var diFolder = new DirectoryInfo( strPath );
-                                foreach ( FileInfo fiFile in diFolder.GetFiles( "*", soMovieFileMerger ) ) {
+                                foreach ( FileInfo fiFile in diFolder.GetFiles( "*", SearchOption.AllDirectories) ) {
                                     if ( !rgxMainExtensions.IsMatch( fiFile.Extension.ToLower( ) ) ) {
                                         continue;
                                     }
@@ -2635,14 +2630,13 @@ namespace Movie_File_Merger {
 
             LogMessage( "Info", Color.Turquoise, "\nScanning folders contaning " + strCollectionType + " in the name on all connected hard disks..." );
 
-            SearchOption soMovieFileMerger = SearchOption.AllDirectories;
             tspbMFM.Maximum = 0;
             tspbMFM.Value = 0;
             foreach ( var drive in DriveInfo.GetDrives( ) ) {
                 foreach ( var strPath in Directory.GetDirectories( drive.Name ) ) {
                     if ( strPath.Contains( strCollectionType ) ) {
                         var diFolder = new DirectoryInfo( strPath );
-                        foreach ( FileInfo fiFile in diFolder.GetFiles( "*", soMovieFileMerger ) ) {
+                        foreach ( FileInfo fiFile in diFolder.GetFiles( "*", SearchOption.AllDirectories) ) {
                             if ( rgxMainExtensions.IsMatch( fiFile.Extension.ToLower( ) ) ) {
                                 tspbMFM.Maximum++;
                             }
@@ -3833,6 +3827,7 @@ namespace Movie_File_Merger {
             }
             ColorRemoteList( );
         }
+#endregion FTP Sucker
 
         // TODO: not used remove...
         private void PbMaintenanceBitCoins_Click( object sender, EventArgs e )
@@ -3862,17 +3857,38 @@ namespace Movie_File_Merger {
             {
                 foreach (ListViewItem lviToAdd in (ListView.SelectedListViewItemCollection)e.Data.GetData(typeof(ListView.SelectedListViewItemCollection)))
                 {
-                    ListViewItem lviThis = FindItem(lvExport, GetMainFilePathFromToolTip(lviToAdd.ToolTipText));
+                    string sFilePath = GetMainFilePathFromToolTip(lviToAdd.ToolTipText);
+                    ListViewItem lviThis = FindItem(lvExport, sFilePath);
 
                     if (lviThis == null)
                     {
-                        lviThis = new ListViewItem(GetMainFilePathFromToolTip(lviToAdd.ToolTipText));
+                        lviThis = new ListViewItem(sFilePath);
                         lviThis.ToolTipText = lviToAdd.ToolTipText;
                         lvExport.Items.Add(lviThis);
                     }
                     else
                     {
                         lviThis.ToolTipText = lviToAdd.ToolTipText;
+                    }
+
+                    // get the add-on files
+                    DirectoryInfo diFolder = new DirectoryInfo(Path.GetDirectoryName(sFilePath));
+                    string sCleanMainName = CleanName(Path.GetFileNameWithoutExtension(sFilePath));
+                    List<string> slFileList = new List<string>();
+                    foreach (FileInfo fiFile in diFolder.GetFiles("*", SearchOption.TopDirectoryOnly))
+                    {
+                        if (rgxAddonExtensions.IsMatch(fiFile.Extension.ToLower()))
+                        {
+                            string sCleanAddonName = CleanName(Path.GetFileNameWithoutExtension(fiFile.Name));
+                            if (sCleanAddonName == sCleanMainName)
+                            {
+                                slFileList.Add(fiFile.FullName);
+                            }
+                        }
+                    }
+                    if (slFileList.Count > 0)
+                    {
+                        LvExportAddFiles(slFileList.ToArray());
                     }
                 }
             }
@@ -3932,19 +3948,22 @@ namespace Movie_File_Merger {
         {
             foreach (string strPath in saFileList)
             {
-                FileAttributes attr = File.GetAttributes(strPath);
-                bool isFolder = (attr & FileAttributes.Directory) == FileAttributes.Directory;
+                if (File.Exists(strPath))
+                {
+                    FileAttributes attr = File.GetAttributes(strPath);
+                    bool isFolder = (attr & FileAttributes.Directory) == FileAttributes.Directory;
 
-                if (isFolder)
-                { // from folder
-                    AddFolderToExportListView(strPath);
-                }
-                else if (File.Exists(strPath))
-                { // from video file
-                    var fiFile = new FileInfo(strPath);
-                    var lviThis = new ListViewItem(strPath);
-                    lviThis = AddSimpleItemToListView(lvExport, lviThis);
-                    MakeToolTip(fiFile, lvExport, lviThis);
+                    if (isFolder)
+                    { // from folder
+                        AddFolderToExportListView(strPath);
+                    }
+                    else if (File.Exists(strPath))
+                    { // from video file
+                        var fiFile = new FileInfo(strPath);
+                        var lviThis = new ListViewItem(strPath);
+                        lviThis = AddSimpleItemToListView(lvExport, lviThis);
+                        MakeToolTip(fiFile, lvExport, lviThis);
+                    }
                 }
             }
         }
@@ -4075,5 +4094,4 @@ namespace Movie_File_Merger {
             }
         }
     }
-#endregion FTP Sucker
 }
