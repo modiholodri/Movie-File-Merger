@@ -59,6 +59,7 @@ namespace Movie_File_Merger {
         Color BadDocuColor = Color.HotPink;
         Color BadEpisodeColor = Color.PaleVioletRed;
         Color BadNameColor = Color.Pink;
+        Color OrphanAddonColor = Color.Orange;
 
         // list change indicators when exiting a collection type
         bool bExistingChanged = false;
@@ -169,6 +170,7 @@ namespace Movie_File_Merger {
 
             btnBadName.BackColor = BadNameColor;
             btnUnrelatedFile.BackColor = NeutralColor;
+            btnOrphanAddon.BackColor = OrphanAddonColor;
 
             btnGoodDocu.BackColor = GoodDocuColor;
             lblGoodDocuNameRegex.BackColor = GoodDocuColor;
@@ -2787,40 +2789,69 @@ namespace Movie_File_Merger {
                 string sFileName = Path.GetFileNameWithoutExtension( lviThis.Text );
                 string sExtension = Path.GetExtension( lviThis.Text ).ToLower( );
 
-                if ( rgxMainExtensions.IsMatch( sExtension ) || rgxAddonExtensions.IsMatch( sExtension ) ) {
+                if (rgxMainExtensions.IsMatch(sExtension) || rgxAddonExtensions.IsMatch(sExtension))
+                {
                     // the file is or beloongs to a video
-                    if ( Regex.IsMatch( sFileName, tbGoodDocuNameRegex.Text ) ) {
+                    if (Regex.IsMatch(sFileName, tbGoodDocuNameRegex.Text))
+                    {
                         lviThis.BackColor = GoodDocuColor;  // found good documentary
-                        LogMaintenance( "Good documentary: ", GoodDocuColor, sFileName );
+                        LogMaintenance("Good documentary: ", GoodDocuColor, sFileName);
                     }
-                    else if ( Regex.IsMatch( sFileName, tbGoodEpisodeNameRegex.Text ) ) {
+                    else if (Regex.IsMatch(sFileName, tbGoodEpisodeNameRegex.Text))
+                    {
                         lviThis.BackColor = GoodEpisodeColor;  // found good episode
-                        LogMaintenance( "Good episode: ", GoodEpisodeColor, sFileName );
+                        LogMaintenance("Good episode: ", GoodEpisodeColor, sFileName);
                     }
-                    else if ( Regex.IsMatch( sFileName, tbGoodMovieNameRegex.Text ) ) {
+                    else if (Regex.IsMatch(sFileName, tbGoodMovieNameRegex.Text))
+                    {
                         lviThis.BackColor = GoodMovieColor;  // found good movie
-                        LogMaintenance( "Good movie: ", GoodMovieColor, sFileName );
+                        LogMaintenance("Good movie: ", GoodMovieColor, sFileName);
                     }
-                    else if ( Regex.IsMatch( sFileName, tbBadDocuNameRegex.Text ) ) {
+                    else if (Regex.IsMatch(sFileName, tbBadDocuNameRegex.Text))
+                    {
                         lviThis.BackColor = BadDocuColor;  // found bad documentary
-                        LogMaintenance( "Bad documentary: ", BadDocuColor, sFileName );
+                        LogMaintenance("Bad documentary: ", BadDocuColor, sFileName);
                     }
-                    else if ( Regex.IsMatch( sFileName, tbBadEpisodeNameRegex.Text ) ) {
+                    else if (Regex.IsMatch(sFileName, tbBadEpisodeNameRegex.Text))
+                    {
                         lviThis.BackColor = BadEpisodeColor;  // found bad episode
-                        LogMaintenance( "Bad episode: ", BadEpisodeColor, sFileName );
+                        LogMaintenance("Bad episode: ", BadEpisodeColor, sFileName);
                     }
-                    else if ( Regex.IsMatch( sFileName, tbBadMovieNameRegex.Text ) ) {
+                    else if (Regex.IsMatch(sFileName, tbBadMovieNameRegex.Text))
+                    {
                         lviThis.BackColor = BadMovieColor;  // found bad movie
-                        LogMaintenance( "Bad movie: ", BadMovieColor, sFileName );
+                        LogMaintenance("Bad movie: ", BadMovieColor, sFileName);
                     }
-                    else {
+                    else
+                    {
                         lviThis.BackColor = BadNameColor;  // found bad name, not sure of what
-                        LogMaintenance( "Invalid item: ", BadNameColor, sFileName );
+                        LogMaintenance("Invalid item: ", BadNameColor, sFileName);
                     }
                 }
-                else {  // the file doesn't belong to a video
+                else
+                {  // the file doesn't belong to a video
                     lviThis.BackColor = NeutralColor;
-                    LogMaintenance( "Invalid item: ", NeutralColor, sFileName );
+                    LogMaintenance("Invalid item: ", NeutralColor, sFileName);
+                }
+                if (rgxAddonExtensions.IsMatch(sExtension))
+                {
+                    DirectoryInfo diFolder = new DirectoryInfo(Path.GetDirectoryName(lviThis.Text));
+                    string sCleanName = CleanName(sFileName);
+                    bool bHasMainFile = false;
+                    foreach (FileInfo fiFile in diFolder.GetFiles("*", SearchOption.TopDirectoryOnly))
+                    {
+                        if (rgxMainExtensions.IsMatch(fiFile.Extension.ToLower()))
+                        {
+                            if (sCleanName == CleanName(Path.GetFileNameWithoutExtension(fiFile.Name)))
+                            {
+                                bHasMainFile = true;
+                            }
+                        }
+                    }
+                    if ( !bHasMainFile )
+                    {
+                        lviThis.BackColor = OrphanAddonColor;
+                    }
                 }
             }
         }

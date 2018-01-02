@@ -213,6 +213,7 @@ namespace Movie_File_Merger
             this.tspbMFM = new System.Windows.Forms.ToolStripProgressBar();
             this.ttMovieFileMerger = new System.Windows.Forms.ToolTip(this.components);
             this.ofdTeraCopy = new System.Windows.Forms.OpenFileDialog();
+            this.btnOrphanAddon = new System.Windows.Forms.Button();
             this.tcMovieFileMerger.SuspendLayout();
             this.tpSeparateLists.SuspendLayout();
             this.gbTypeSelection.SuspendLayout();
@@ -1578,6 +1579,7 @@ namespace Movie_File_Merger
             // 
             // tpMaintenance
             // 
+            this.tpMaintenance.Controls.Add(this.btnOrphanAddon);
             this.tpMaintenance.Controls.Add(this.BntDeleteUnrelated);
             this.tpMaintenance.Controls.Add(this.pictureBox2);
             this.tpMaintenance.Controls.Add(this.pbMaintenanceHowTo);
@@ -1651,7 +1653,7 @@ namespace Movie_File_Merger
             this.pbMaintenanceHowTo.ErrorImage = null;
             this.pbMaintenanceHowTo.Image = ((System.Drawing.Image)(resources.GetObject("pbMaintenanceHowTo.Image")));
             this.pbMaintenanceHowTo.InitialImage = null;
-            this.pbMaintenanceHowTo.Location = new System.Drawing.Point(8, 537);
+            this.pbMaintenanceHowTo.Location = new System.Drawing.Point(8, 587);
             this.pbMaintenanceHowTo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbMaintenanceHowTo.Name = "pbMaintenanceHowTo";
             this.pbMaintenanceHowTo.Size = new System.Drawing.Size(131, 169);
@@ -1831,7 +1833,7 @@ namespace Movie_File_Merger
             this.pbMaintenanceUserManual.ErrorImage = null;
             this.pbMaintenanceUserManual.Image = ((System.Drawing.Image)(resources.GetObject("pbMaintenanceUserManual.Image")));
             this.pbMaintenanceUserManual.InitialImage = null;
-            this.pbMaintenanceUserManual.Location = new System.Drawing.Point(8, 352);
+            this.pbMaintenanceUserManual.Location = new System.Drawing.Point(8, 402);
             this.pbMaintenanceUserManual.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbMaintenanceUserManual.Name = "pbMaintenanceUserManual";
             this.pbMaintenanceUserManual.Size = new System.Drawing.Size(131, 171);
@@ -1847,7 +1849,7 @@ namespace Movie_File_Merger
             // 
             this.btnGoodEpisode.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
             this.btnGoodEpisode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGoodEpisode.Location = new System.Drawing.Point(8, 322);
+            this.btnGoodEpisode.Location = new System.Drawing.Point(8, 352);
             this.btnGoodEpisode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGoodEpisode.Name = "btnGoodEpisode";
             this.btnGoodEpisode.Size = new System.Drawing.Size(132, 26);
@@ -1861,7 +1863,7 @@ namespace Movie_File_Merger
             // 
             this.btnGoodDocu.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
             this.btnGoodDocu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGoodDocu.Location = new System.Drawing.Point(8, 292);
+            this.btnGoodDocu.Location = new System.Drawing.Point(8, 322);
             this.btnGoodDocu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGoodDocu.Name = "btnGoodDocu";
             this.btnGoodDocu.Size = new System.Drawing.Size(132, 26);
@@ -1875,7 +1877,7 @@ namespace Movie_File_Merger
             // 
             this.btnGoodMovie.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
             this.btnGoodMovie.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGoodMovie.Location = new System.Drawing.Point(8, 261);
+            this.btnGoodMovie.Location = new System.Drawing.Point(8, 291);
             this.btnGoodMovie.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGoodMovie.Name = "btnGoodMovie";
             this.btnGoodMovie.Size = new System.Drawing.Size(132, 26);
@@ -1889,7 +1891,7 @@ namespace Movie_File_Merger
             // 
             this.btnUnrelatedFile.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
             this.btnUnrelatedFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUnrelatedFile.Location = new System.Drawing.Point(8, 231);
+            this.btnUnrelatedFile.Location = new System.Drawing.Point(8, 261);
             this.btnUnrelatedFile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUnrelatedFile.Name = "btnUnrelatedFile";
             this.btnUnrelatedFile.Size = new System.Drawing.Size(132, 26);
@@ -3375,6 +3377,20 @@ namespace Movie_File_Merger
             // 
             this.ofdTeraCopy.FileName = "C:\\Program Files\\TeraCopy\\TeraCopy.exe";
             // 
+            // btnOrphanAddon
+            // 
+            this.btnOrphanAddon.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.btnOrphanAddon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOrphanAddon.Location = new System.Drawing.Point(8, 231);
+            this.btnOrphanAddon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnOrphanAddon.Name = "btnOrphanAddon";
+            this.btnOrphanAddon.Size = new System.Drawing.Size(132, 26);
+            this.btnOrphanAddon.TabIndex = 66;
+            this.btnOrphanAddon.Text = "Orphan Addon";
+            this.ttMovieFileMerger.SetToolTip(this.btnOrphanAddon, "Select all remaining files with bad names.");
+            this.btnOrphanAddon.UseVisualStyleBackColor = true;
+            this.btnOrphanAddon.Click += new System.EventHandler(this.BtnSelectMaintenanceClick);
+            // 
             // MFMForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -3642,5 +3658,6 @@ namespace Movie_File_Merger
         private System.Windows.Forms.PictureBox pbLodDonateRight;
         private System.Windows.Forms.PictureBox pbLogDonateLeft;
         private System.Windows.Forms.Button btnResetColors;
+        private System.Windows.Forms.Button btnOrphanAddon;
     }
 }
