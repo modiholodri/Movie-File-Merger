@@ -3989,6 +3989,21 @@ namespace Movie_File_Merger {
         {
             DeleteUnrelated(lvMaintenance);
         }
+
+        /// <summary>
+        /// Reset the colors not considering the search criteria.
+        /// </summary>
+        /// <param name="sender">The object that invoked the event that fired the event handler.</param>
+        /// <param name="e">The arguments that the implementor of this event may find useful.</param>
+        private void BtnResetColors_Click(object sender, EventArgs e)
+        {
+            ColorExistingAndUp();
+            foreach (ListViewItem lviThis in lvGarbage.Items)
+            {
+                lviThis.BackColor = GarbageColor;
+                lviThis.Selected = false;
+            }
+        }
     }
 #endregion FTP Sucker
 }

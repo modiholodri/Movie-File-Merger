@@ -48,6 +48,7 @@ namespace Movie_File_Merger
             this.ContentPanel = new System.Windows.Forms.ToolStripContentPanel();
             this.tcMovieFileMerger = new System.Windows.Forms.TabControl();
             this.tpSeparateLists = new System.Windows.Forms.TabPage();
+            this.btnResetColors = new System.Windows.Forms.Button();
             this.btnColorSelection = new System.Windows.Forms.Button();
             this.btnSelectColor = new System.Windows.Forms.Button();
             this.btnInvertSelection = new System.Windows.Forms.Button();
@@ -310,15 +311,15 @@ namespace Movie_File_Merger
             this.ilMovieFileMerger.Images.SetKeyName(22, "Wish.png");
             this.ilMovieFileMerger.Images.SetKeyName(23, "Start.gif");
             this.ilMovieFileMerger.Images.SetKeyName(24, "Download.png");
-            this.ilMovieFileMerger.Images.SetKeyName(25, "Edit.gif");
-            this.ilMovieFileMerger.Images.SetKeyName(26, "Edit.png");
-            this.ilMovieFileMerger.Images.SetKeyName(27, "ftp.png");
-            this.ilMovieFileMerger.Images.SetKeyName(28, "DownloadCloud.png");
-            this.ilMovieFileMerger.Images.SetKeyName(29, "RemoteNames.png");
-            this.ilMovieFileMerger.Images.SetKeyName(30, "WinSCP.png");
-            this.ilMovieFileMerger.Images.SetKeyName(31, "InvertSelection.png");
-            this.ilMovieFileMerger.Images.SetKeyName(32, "ListFileExchange.png");
-            this.ilMovieFileMerger.Images.SetKeyName(33, "Star.png");
+            this.ilMovieFileMerger.Images.SetKeyName(25, "Edit.png");
+            this.ilMovieFileMerger.Images.SetKeyName(26, "ftp.png");
+            this.ilMovieFileMerger.Images.SetKeyName(27, "DownloadCloud.png");
+            this.ilMovieFileMerger.Images.SetKeyName(28, "RemoteNames.png");
+            this.ilMovieFileMerger.Images.SetKeyName(29, "WinSCP.png");
+            this.ilMovieFileMerger.Images.SetKeyName(30, "InvertSelection.png");
+            this.ilMovieFileMerger.Images.SetKeyName(31, "ListFileExchange.png");
+            this.ilMovieFileMerger.Images.SetKeyName(32, "Star.png");
+            this.ilMovieFileMerger.Images.SetKeyName(33, "Reset.png");
             // 
             // tmrUpdateCounters
             // 
@@ -392,6 +393,7 @@ namespace Movie_File_Merger
             // tpSeparateLists
             // 
             this.tpSeparateLists.BackColor = System.Drawing.SystemColors.Control;
+            this.tpSeparateLists.Controls.Add(this.btnResetColors);
             this.tpSeparateLists.Controls.Add(this.btnColorSelection);
             this.tpSeparateLists.Controls.Add(this.btnSelectColor);
             this.tpSeparateLists.Controls.Add(this.btnInvertSelection);
@@ -424,6 +426,24 @@ namespace Movie_File_Merger
             this.tpSeparateLists.Size = new System.Drawing.Size(1054, 684);
             this.tpSeparateLists.TabIndex = 0;
             this.tpSeparateLists.Text = "Lists";
+            // 
+            // btnResetColors
+            // 
+            this.btnResetColors.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnResetColors.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.btnResetColors.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnResetColors.ImageKey = "Reset.png";
+            this.btnResetColors.ImageList = this.ilMovieFileMerger;
+            this.btnResetColors.Location = new System.Drawing.Point(889, 647);
+            this.btnResetColors.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnResetColors.Name = "btnResetColors";
+            this.btnResetColors.Size = new System.Drawing.Size(37, 32);
+            this.btnResetColors.TabIndex = 56;
+            this.btnResetColors.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnResetColors.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ttMovieFileMerger.SetToolTip(this.btnResetColors, "Reset the colors and selection in all lists.");
+            this.btnResetColors.UseVisualStyleBackColor = false;
+            this.btnResetColors.Click += new System.EventHandler(this.BtnResetColors_Click);
             // 
             // btnColorSelection
             // 
@@ -534,7 +554,7 @@ namespace Movie_File_Merger
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.ImageKey = "Edit.png";
             this.btnEdit.ImageList = this.ilMovieFileMerger;
-            this.btnEdit.Location = new System.Drawing.Point(803, 647);
+            this.btnEdit.Location = new System.Drawing.Point(760, 647);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(37, 32);
@@ -613,7 +633,7 @@ namespace Movie_File_Merger
             this.cobCriteria.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cobCriteria.MaxDropDownItems = 15;
             this.cobCriteria.Name = "cobCriteria";
-            this.cobCriteria.Size = new System.Drawing.Size(531, 24);
+            this.cobCriteria.Size = new System.Drawing.Size(488, 24);
             this.cobCriteria.TabIndex = 44;
             this.cobCriteria.Text = "Select the Search Criteria...";
             this.ttMovieFileMerger.SetToolTip(this.cobCriteria, "Select a predefined Tool Tip Regex, for the Select, Bin, or Wish actions.   Click" +
@@ -629,7 +649,7 @@ namespace Movie_File_Merger
             this.btnAddToWish.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddToWish.ImageKey = "Wish.png";
             this.btnAddToWish.ImageList = this.ilMovieFileMerger;
-            this.btnAddToWish.Location = new System.Drawing.Point(846, 647);
+            this.btnAddToWish.Location = new System.Drawing.Point(803, 647);
             this.btnAddToWish.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddToWish.Name = "btnAddToWish";
             this.btnAddToWish.Size = new System.Drawing.Size(37, 32);
@@ -647,7 +667,7 @@ namespace Movie_File_Merger
             this.btnBin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBin.ImageKey = "Garbage.gif";
             this.btnBin.ImageList = this.ilMovieFileMerger;
-            this.btnBin.Location = new System.Drawing.Point(889, 647);
+            this.btnBin.Location = new System.Drawing.Point(846, 647);
             this.btnBin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBin.Name = "btnBin";
             this.btnBin.Size = new System.Drawing.Size(37, 32);
@@ -2113,12 +2133,17 @@ namespace Movie_File_Merger
             this.btnResetSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnResetSettings.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
             this.btnResetSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnResetSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnResetSettings.ImageKey = "Reset.png";
+            this.btnResetSettings.ImageList = this.ilMovieFileMerger;
             this.btnResetSettings.Location = new System.Drawing.Point(885, 358);
             this.btnResetSettings.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnResetSettings.Name = "btnResetSettings";
             this.btnResetSettings.Size = new System.Drawing.Size(163, 26);
             this.btnResetSettings.TabIndex = 39;
             this.btnResetSettings.Text = "Reset All Settings";
+            this.btnResetSettings.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnResetSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ttMovieFileMerger.SetToolTip(this.btnResetSettings, "Resets all settings to the default values.  If you want to keep the old settings " +
         "make a manual backup first.");
             this.btnResetSettings.UseVisualStyleBackColor = true;
@@ -3616,5 +3641,6 @@ namespace Movie_File_Merger
         private System.Windows.Forms.Button btnColorSelection;
         private System.Windows.Forms.PictureBox pbLodDonateRight;
         private System.Windows.Forms.PictureBox pbLogDonateLeft;
+        private System.Windows.Forms.Button btnResetColors;
     }
 }
