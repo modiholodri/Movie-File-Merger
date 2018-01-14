@@ -27,7 +27,6 @@ using System.Globalization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Threading;
 using MediaInfoLib;
-using WinSCP;
 
 
 namespace Movie_File_Merger {
@@ -69,13 +68,8 @@ namespace Movie_File_Merger {
         // paths to standard files and folders
         string strPrivatePath = Path.Combine( Path.GetDirectoryName( Application.StartupPath ), @"MFM Private\" );
         string strCollectionsPath = Path.Combine( Path.GetDirectoryName( Application.StartupPath ), @"MFM Collections\" );
-        string strTeraCopyPath = "";
-        string strTeraCopyListsPath = "";
         string strXmlSettingsFilePath = "";
         string strNickName = "";
-
-        string strImportFolder = "";
-        string strTargetFolder = "";
 
         // regular expressions to filter the messed up file names
         Regex rgxMainExtensions;  // to find the main files
@@ -122,10 +116,6 @@ namespace Movie_File_Merger {
             }
             if ( !Directory.Exists( strCollectionsPath ) ) {
                 Directory.CreateDirectory( strCollectionsPath );
-            }
-            strTeraCopyListsPath = Path.Combine( strPrivatePath, @"TeraCopy Lists\" );
-            if ( !Directory.Exists( strTeraCopyListsPath ) ) {
-                Directory.CreateDirectory( strTeraCopyListsPath );
             }
             sfdMovieFileMerger.InitialDirectory = strCollectionsPath;
 
@@ -385,171 +375,6 @@ namespace Movie_File_Merger {
         #region Collections Processing
 
         /// <summary>
-        /// Make the target path, including file name, for file to be copied or moved.
-        /// </summary>
-        /// <param name="fiImportFile">The file to be copied or moved.</param>
-        /// <returns>The path of the new file.</returns>
-        string MakeTargetPath( FileInfo fiImportFile )
-        {
-            string strTargetPath = "";
-
-            // TODO: fix later, just a placeholder for now
-            // if ( true ) { // move all relevant file into the same folder
-            strTargetPath = strTargetFolder;
-            // }
-            // else { // keep the folder structure as it is in the source folder
-            //	string sSubPath = fiImportFile.DirectoryName.Substring( fiImportFile.DirectoryName.IndexOf( '\\' )+1 );
-            //	strTargetPath = Path.Combine( strTargetFolder, sSubPath );
-            //}
-
-            if ( !Directory.Exists( strTargetPath ) ) {
-                Directory.CreateDirectory( strTargetPath );
-            }
-
-            return strTargetPath;
-        }
-
-        /// <summary>
-        /// Generates the lists to be handed over to TeraCopy and updates the colocrs of the lists.
-        /// </summary>
-        void ProcessImport( )
-        {
-            if ( !Directory.Exists( strImportFolder ) ) {
-                ShowInfo( "Select a folder with the " + strCollectionType + " to import...\n" +
-                         "Just drop the folder in the Import list." );
-                return;
-            }
-            if ( !Directory.Exists( strTargetFolder ) ) {
-                ShowInfo( "Select a target folder...\n" +
-                         "Just drop the folder in the Existing list." );
-                return;
-            }
-
-            SetStatus( "Start processing..." );
-            string sSourceListFileName = "";
-            StreamWriter swSourceListFile = null;
-            string sOldTargetPath = "";
-            string sTargetPath = "";
-            string sSourceFile;
-            bool bSourceListOpen = false;
-            bool bCopiedOrMovedSomething = false;
-
-            if ( !File.Exists( strTeraCopyPath ) ) {
-                ShowInfo( "Could not find TeraCopy. You can download it from\n    www.movie-file-merger.org/downloads.html\nOr set the path in the next dialog..." );
-                ofdTeraCopy.InitialDirectory = @"C:\Program Files";
-                ofdTeraCopy.ShowDialog( );
-                strTeraCopyPath = ofdTeraCopy.FileName;
-                return;
-            }
-
-            // tag the items to be copied or moved
-            foreach ( ListViewItem lviThis in lvImport.Items ) {
-                lviThis.Tag = (lviThis.BackColor == WishColor) || (lviThis.BackColor == HigherResColor);
-            }
-
-            var diImportFolder = new DirectoryInfo( strImportFolder );
-
-            foreach ( FileInfo fiImportFile in diImportFolder.GetFiles( "*", SearchOption.AllDirectories) ) {
-                string strImportName = fiImportFile.Name;
-                // ignore not relevant files
-                if ( !rgxMainExtensions.IsMatch( fiImportFile.Extension.ToLower( ) ) &&
-                    !rgxAddonExtensions.IsMatch( fiImportFile.Extension.ToLower( ) ) ) {
-                    continue;
-                }
-
-                // cut the file extension, to reduce list entries to only one per item
-                if ( strImportName.LastIndexOf( '.' ) != -1 ) {
-                    strImportName = strImportName.Substring( 0, strImportName.LastIndexOf( '.' ) );
-                }
-
-                strImportName = CleanName( RemoveEpisodeInfo( strImportName ) );
-                ListViewItem lviImport = FindItem( lvImport, strImportName );
-                if ( lviImport != null ) {
-                    if ( (bool)lviImport.Tag == true ) {
-                        sTargetPath = MakeTargetPath( fiImportFile );
-                        sSourceFile = fiImportFile.FullName; //" \"" +  + "\" ";
-
-                        if ( sOldTargetPath != sTargetPath ) {
-                            if ( bSourceListOpen ) {
-                                swSourceListFile.Close( );
-                                bSourceListOpen = false;
-                                DoTeraCopy( sSourceListFileName, sOldTargetPath );
-                            }
-                            sOldTargetPath = sTargetPath;
-                        }
-                        if ( !bSourceListOpen ) {
-                            sSourceListFileName = "TeraCopy List - " + strNickName + " " +
-                                                  StandardizeDate( DateTime.Now ) + " " +
-                                                  StandardizeTime( DateTime.Now ) + " " +
-                                                  sTargetPath.Replace( "\\", " - " ).Replace( ':', ' ' ) +
-                                                  ".tcl";
-                            sSourceListFileName = Path.Combine( strTeraCopyListsPath, sSourceListFileName );
-                            swSourceListFile = new StreamWriter( sSourceListFileName, false, Encoding.Unicode );
-                            bSourceListOpen = true;
-                            sOldTargetPath = sTargetPath;
-                        }
-                        /*
-						if ( rbCopy.Checked ) {
-							LogMessage( "Add to Source List", Color.Blue, "Copy " + 
-							            sSourceFile + " -> " + sTargetPath );
-						}
-						else {
-							LogMessage( "Add to Source List", Color.Blue,  "Move " + 
-							            sSourceFile + " -> " + sTargetPath );
-						}
-						*/
-                        swSourceListFile.WriteLine( sSourceFile );
-                        ListViewItem lviExisting;
-                        lviExisting = AddItemToListView( lvExisting, lviImport );
-                        if ( HorizontalResolutionIsHigher( lviExisting, lviImport ) ) {
-                            lviExisting.ToolTipText = lviImport.ToolTipText;
-                            ColorAll( lviExisting.Text );
-                            SetListViewChanged( lvExisting, true );
-                        }
-                        bCopiedOrMovedSomething = true;
-                    }
-                }
-            }
-            if ( bSourceListOpen ) {
-                swSourceListFile.Close( );
-                DoTeraCopy( sSourceListFileName, sOldTargetPath );
-            }
-            if ( bCopiedOrMovedSomething ) {
-                if ( File.Exists( strTeraCopyPath ) ) {
-                    ShowInfo( "Finished processing..." );
-                }
-            }
-            else {
-                ShowInfo( "Did not find anything to copy or move...\nDid you put something in the Wish list?" );
-            }
-            ClearStatus( );
-        }
-
-        /// <summary>
-        /// Does the final handover to TeraCopy.
-        /// </summary>
-        /// <param name="sSourceListFile">The file containing the sources files to be copied or moved.</param>
-        /// <param name="sTargetPath">The path to where the source files should be copied or moved. </param>
-        void DoTeraCopy( string sSourceListFile, string sTargetPath )
-        {
-            const string sOptions = " /SkipAll /Close ";
-
-            if ( rbCopy.Checked ) {
-                System.Diagnostics.Process.Start( strTeraCopyPath, "Copy *\"" +
-                                                    sSourceListFile + "\" \"" + sTargetPath + "\" " + sOptions );
-                LogMessage( "Starting Process", Color.Purple, "TeraCopy " +
-                            sSourceListFile + " -> " + sTargetPath + sOptions );
-            }
-            else {
-                System.Diagnostics.Process.Start( strTeraCopyPath, "Move *\"" +
-                                              sSourceListFile + "\" \"" + sTargetPath + "\" " + sOptions );
-                LogMessage( "Starting Process", Color.Purple, "TeraMove " +
-                            sSourceListFile + " -> " + sTargetPath + sOptions );
-            }
-            System.Threading.Thread.Sleep( 1000 );
-        }
-
-        /// <summary>
         /// The collection type has been changed.  
         /// Save changed list and load the new ones.
         /// </summary>
@@ -593,17 +418,6 @@ namespace Movie_File_Merger {
             return iMinimumResolution * 97 / 100;  // cut off 3 percent to make it more tolerant
         }
 
-        /// <summary>
-        /// Sart the processing of the files in the import folder.
-        /// </summary>
-        /// <param name="sender">The object that invoked the event that fired the event handler.</param>
-        /// <param name="e">The arguments that the implementor of this event may find useful.</param>
-        /*
-        void BtnStartProcessClick( object sender, EventArgs e )
-        {
-            ProcessImport( );
-        }
-        */
         #endregion Collections Processing
 
         #region Drop Area Handling
@@ -2006,27 +1820,11 @@ namespace Movie_File_Merger {
         /// <param name="e">The arguments that the implementor of this event may find useful.</param>
         void TmrUpdateCountersTick( object sender, EventArgs e )
         {
-            // Existing column
-            if ( strTargetFolder != "" && lvExisting.Columns[ 0 ].Text != strTargetFolder ) {
-                lvExisting.Columns[ 0 ].Text = strTargetFolder;
-            }
-            else {
-                lvExisting.Columns[ 0 ].Text = lvExisting.Items.Count + " Existing " + strCollectionType;
-            }
-            // Garbage column
+            lvExisting.Columns[ 0 ].Text = lvExisting.Items.Count + " Existing " + strCollectionType;
             lvGarbage.Columns[ 0 ].Text = lvGarbage.Items.Count + " Garbage " + strCollectionType;
-            if ( strImportFolder != "" && lvImport.Columns[ 0 ].Text != strImportFolder ) {
-                lvImport.Columns[ 0 ].Text = strImportFolder;
-            }
-            else {
-                lvImport.Columns[ 0 ].Text = lvImport.Items.Count + " Import " + strCollectionType;
-            }
-            // Wish column
+            lvImport.Columns[ 0 ].Text = lvImport.Items.Count + " Import " + strCollectionType;
             lvWish.Columns[ 0 ].Text = lvWish.Items.Count + " Wish " + strCollectionType;
-            // Export column
-            lvExport.Columns[0].Text = lvExport.Items.Count + " Export Items";
-
-            // Maintenance column
+            lvExport.Columns[0].Text = lvExport.Items.Count + " Export " + strCollectionType;
             lvMaintenance.Columns[ 0 ].Text = lvMaintenance.Items.Count + " Maintenance Items";
         }
 
@@ -2205,12 +2003,6 @@ namespace Movie_File_Merger {
                     // from folder
                     if ( isFolder ) {
                         iFolderCount++;
-                        if ( (string)lvThis.Tag == "Existing" ) {
-                            strTargetFolder = (iFolderCount == 1) ? strPath : Path.GetDirectoryName( strPath );
-                        }
-                        if ( (string)lvThis.Tag == "Import" ) {
-                            strImportFolder = (iFolderCount == 1) ? strPath : Path.GetDirectoryName( strPath );
-                        }
                         if ( iFolderCount == 1 ) {
                             AddFolderToListView( lvThis, strPath );
                             strConsideredFolder = strPath;
@@ -2223,12 +2015,6 @@ namespace Movie_File_Merger {
                     // from video file
                     else if ( rgxMainExtensions.IsMatch( Path.GetExtension( strPath ).ToLower( ) ) ) {
                         string strJustName = Path.GetFileNameWithoutExtension( strPath );
-                        if ( (string)lvThis.Tag == "Existing" ) {
-                            strTargetFolder = Path.GetDirectoryName( strPath );
-                        }
-                        if ( (string)lvThis.Tag == "Import" ) {
-                            strImportFolder = Path.GetDirectoryName( strPath );
-                        }
                         var fiFile = new FileInfo( strPath );
                         var lviThis = new ListViewItem( CleanName( strJustName ) );
                         lviThis = AddItemToListView( lvThis, lviThis );
@@ -2570,11 +2356,21 @@ namespace Movie_File_Merger {
         /// <param name="e">The arguments that the implementor of this event may find useful.</param>
         void BtnJustRipItClick( object sender, EventArgs e )
         {
+            SetStatus("Start processing...");
+
             foreach ( ListViewItem lviThis in lvImport.Items ) {
                 lviThis.Selected = lviThis.BackColor == NeutralColor;
             }
             CopySelected( lvImport, lvWish );
-            ProcessImport( );
+
+            foreach (ListViewItem lviThis in lvImport.Items)
+            {
+                if ((lviThis.BackColor == WishColor) || (lviThis.BackColor == HigherResColor))
+                {
+                    AddLviToExportList(lviThis);
+                }
+            }
+            ClearStatus();
         }
 
         void ExistingJustScanItInThread( )
@@ -2585,7 +2381,6 @@ namespace Movie_File_Merger {
                         LogInfo( "Checking Drive " + drive.Name );
                         foreach ( var strPath in Directory.GetDirectories( drive.Name ) ) {
                             if ( strPath.Contains( strCollectionType ) ) {
-                                strTargetFolder = strPath;
                                 LogInfo( "Scanning folder " + strPath );
                                 var diFolder = new DirectoryInfo( strPath );
                                 foreach ( FileInfo fiFile in diFolder.GetFiles( "*", SearchOption.AllDirectories) ) {
@@ -3265,8 +3060,6 @@ namespace Movie_File_Merger {
             tbBadMovieNameRegex.Text = ReadXmlSetting( xmlSettings, "/MFMSettings/NameUnification/BadMovieRegex", @".[12]\d{3}" );
 
             // Supporting Programms settings 
-            strTeraCopyPath = ReadXmlSetting( xmlSettings, "/MFMSettings/SupportingProgramms/TeraCopyPath", @"C:\Program Files\TeraCopy\TeraCopy.exe" );
-
             if ( strNickName == "Anonymous" ) {
                 ShowInputDialog( "Please enter your nickname.", ref strNickName );
                 Text = strNickName + " - Movie File Merger";
@@ -3323,9 +3116,12 @@ namespace Movie_File_Merger {
         {
             using ( XmlWriter writer = XmlWriter.Create( strXmlSettingsFilePath ) ) {
                 writer.WriteStartDocument( );
-                writer.WriteStartElement( "MFMSettings" );  // root exlement
 
-                writer.WriteStartElement( "General" );  // General settings group
+                // root exlement
+                writer.WriteStartElement( "MFMSettings" );
+
+                // General settings group
+                writer.WriteStartElement( "General" );  
                 writer.WriteElementString( "NickName", strNickName );
                 writer.WriteElementString( "SeachInfo", cobSearchInfo.Text );
                 writer.WriteElementString( "SeachDownload", cobSearchDownload.Text );
@@ -3337,12 +3133,14 @@ namespace Movie_File_Merger {
                 writer.WriteElementString( "MinimumResolution", cobMinimumResolution.Text );
                 writer.WriteEndElement( );
 
-                writer.WriteStartElement( "ConsideredFiles" );  // Considered Files settings group
+                // Considered Files settings group
+                writer.WriteStartElement( "ConsideredFiles" );  
                 writer.WriteElementString( "MainExtensionsRegex", tbMainExtensionsRegex.Text );
                 writer.WriteElementString( "AddonExtensionsRegex", tbAddonExtensionsRegex.Text );
                 writer.WriteEndElement( );
 
-                writer.WriteStartElement( "NameUnification" );  // Name Unification settings group
+                // Name Unification settings group
+                writer.WriteStartElement( "NameUnification" );  
                 writer.WriteElementString( "CutNameBeforeRegex", tbCutNameBeforeRegex.Text );
                 writer.WriteElementString( "OnlyCharactersRegex", tbOnlyCharactersRegex.Text );
                 writer.WriteElementString( "ToLowerRegex", tbToLowerRegex.Text );
@@ -3353,10 +3151,6 @@ namespace Movie_File_Merger {
                 writer.WriteElementString( "BadDocuNameRegex", tbBadDocuNameRegex.Text );
                 writer.WriteElementString( "BadEpisodeNameRegex", tbBadEpisodeNameRegex.Text );
                 writer.WriteElementString( "BadMovieNameRegex", tbBadMovieNameRegex.Text );
-                writer.WriteEndElement( );
-
-                writer.WriteStartElement( "SupportingProgramms" );  // Supporting Programms settings group
-                writer.WriteElementString( "TeraCopyPath", strTeraCopyPath );
                 writer.WriteEndElement( );
 
                 writer.WriteEndElement( );  // close the root element
@@ -3535,6 +3329,43 @@ namespace Movie_File_Merger {
             lvLastClicked = (ListView)sender;
         }
 
+        void AddLviToExportList (ListViewItem lviToAdd)
+        {
+            string sFilePath = GetMainFilePathFromToolTip(lviToAdd.ToolTipText);
+            ListViewItem lviThis = FindItem(lvExport, sFilePath);
+
+            if (lviThis == null)
+            {
+                lviThis = new ListViewItem(sFilePath);
+                lviThis.ToolTipText = lviToAdd.ToolTipText;
+                lvExport.Items.Add(lviThis);
+            }
+            else
+            {
+                lviThis.ToolTipText = lviToAdd.ToolTipText;
+            }
+
+            // get the add-on files
+            DirectoryInfo diFolder = new DirectoryInfo(Path.GetDirectoryName(sFilePath));
+            string sCleanMainName = CleanName(Path.GetFileNameWithoutExtension(sFilePath));
+            List<string> slFileList = new List<string>();
+            foreach (FileInfo fiFile in diFolder.GetFiles("*", SearchOption.TopDirectoryOnly))
+            {
+                if (rgxAddonExtensions.IsMatch(fiFile.Extension.ToLower()))
+                {
+                    string sCleanAddonName = CleanName(Path.GetFileNameWithoutExtension(fiFile.Name));
+                    if (sCleanAddonName == sCleanMainName)
+                    {
+                        slFileList.Add(fiFile.FullName);
+                    }
+                }
+            }
+            if (slFileList.Count > 0)
+            {
+                LvExportAddFiles(slFileList.ToArray());
+            }
+        }
+
         private void LvExport_DragDrop(object sender, DragEventArgs e)
         {
             if (e.AllowedEffect == DragDropEffects.None) return;
@@ -3547,39 +3378,7 @@ namespace Movie_File_Merger {
             {
                 foreach (ListViewItem lviToAdd in (ListView.SelectedListViewItemCollection)e.Data.GetData(typeof(ListView.SelectedListViewItemCollection)))
                 {
-                    string sFilePath = GetMainFilePathFromToolTip(lviToAdd.ToolTipText);
-                    ListViewItem lviThis = FindItem(lvExport, sFilePath);
-
-                    if (lviThis == null)
-                    {
-                        lviThis = new ListViewItem(sFilePath);
-                        lviThis.ToolTipText = lviToAdd.ToolTipText;
-                        lvExport.Items.Add(lviThis);
-                    }
-                    else
-                    {
-                        lviThis.ToolTipText = lviToAdd.ToolTipText;
-                    }
-
-                    // get the add-on files
-                    DirectoryInfo diFolder = new DirectoryInfo(Path.GetDirectoryName(sFilePath));
-                    string sCleanMainName = CleanName(Path.GetFileNameWithoutExtension(sFilePath));
-                    List<string> slFileList = new List<string>();
-                    foreach (FileInfo fiFile in diFolder.GetFiles("*", SearchOption.TopDirectoryOnly))
-                    {
-                        if (rgxAddonExtensions.IsMatch(fiFile.Extension.ToLower()))
-                        {
-                            string sCleanAddonName = CleanName(Path.GetFileNameWithoutExtension(fiFile.Name));
-                            if (sCleanAddonName == sCleanMainName)
-                            {
-                                slFileList.Add(fiFile.FullName);
-                            }
-                        }
-                    }
-                    if (slFileList.Count > 0)
-                    {
-                        LvExportAddFiles(slFileList.ToArray());
-                    }
+                    AddLviToExportList(lviToAdd);
                 }
             }
 
