@@ -275,41 +275,35 @@ namespace Movie_File_Merger
             // 
             this.ilMovieFileMerger.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ilMovieFileMerger.ImageStream")));
             this.ilMovieFileMerger.TransparentColor = System.Drawing.Color.Transparent;
-            this.ilMovieFileMerger.Images.SetKeyName(0, "Color.gif");
-            this.ilMovieFileMerger.Images.SetKeyName(1, "Copy.gif");
-            this.ilMovieFileMerger.Images.SetKeyName(2, "Erase.gif");
-            this.ilMovieFileMerger.Images.SetKeyName(3, "Erase Color.gif");
-            this.ilMovieFileMerger.Images.SetKeyName(4, "Folder.gif");
-            this.ilMovieFileMerger.Images.SetKeyName(5, "Log.gif");
-            this.ilMovieFileMerger.Images.SetKeyName(6, "Move.gif");
+            this.ilMovieFileMerger.Images.SetKeyName(0, "Copy.gif");
+            this.ilMovieFileMerger.Images.SetKeyName(1, "Move.gif");
+            this.ilMovieFileMerger.Images.SetKeyName(2, "Color.gif");
+            this.ilMovieFileMerger.Images.SetKeyName(3, "Erase.gif");
+            this.ilMovieFileMerger.Images.SetKeyName(4, "Erase Color.gif");
+            this.ilMovieFileMerger.Images.SetKeyName(5, "Folder.gif");
+            this.ilMovieFileMerger.Images.SetKeyName(6, "Log.gif");
             this.ilMovieFileMerger.Images.SetKeyName(7, "Save.gif");
             this.ilMovieFileMerger.Images.SetKeyName(8, "Settings.gif");
             this.ilMovieFileMerger.Images.SetKeyName(9, "About.gif");
-            this.ilMovieFileMerger.Images.SetKeyName(10, "Documentaries.gif");
-            this.ilMovieFileMerger.Images.SetKeyName(11, "Help.gif");
-            this.ilMovieFileMerger.Images.SetKeyName(12, "Series.gif");
-            this.ilMovieFileMerger.Images.SetKeyName(13, "Clips.gif");
-            this.ilMovieFileMerger.Images.SetKeyName(14, "MediaInfo.gif");
-            this.ilMovieFileMerger.Images.SetKeyName(15, "List.gif");
-            this.ilMovieFileMerger.Images.SetKeyName(16, "Adult.gif");
-            this.ilMovieFileMerger.Images.SetKeyName(17, "Miscellaneaous.gif");
-            this.ilMovieFileMerger.Images.SetKeyName(18, "Movie.gif");
-            this.ilMovieFileMerger.Images.SetKeyName(19, "Play.gif");
-            this.ilMovieFileMerger.Images.SetKeyName(20, "Garbage.gif");
-            this.ilMovieFileMerger.Images.SetKeyName(21, "Process.gif");
-            this.ilMovieFileMerger.Images.SetKeyName(22, "Select.gif");
-            this.ilMovieFileMerger.Images.SetKeyName(23, "Wish.png");
-            this.ilMovieFileMerger.Images.SetKeyName(24, "Start.gif");
-            this.ilMovieFileMerger.Images.SetKeyName(25, "Download.png");
-            this.ilMovieFileMerger.Images.SetKeyName(26, "Edit.png");
-            this.ilMovieFileMerger.Images.SetKeyName(27, "ftp.png");
-            this.ilMovieFileMerger.Images.SetKeyName(28, "DownloadCloud.png");
-            this.ilMovieFileMerger.Images.SetKeyName(29, "RemoteNames.png");
-            this.ilMovieFileMerger.Images.SetKeyName(30, "WinSCP.png");
-            this.ilMovieFileMerger.Images.SetKeyName(31, "InvertSelection.png");
-            this.ilMovieFileMerger.Images.SetKeyName(32, "ListFileExchange.png");
-            this.ilMovieFileMerger.Images.SetKeyName(33, "Star.png");
-            this.ilMovieFileMerger.Images.SetKeyName(34, "Reset.png");
+            this.ilMovieFileMerger.Images.SetKeyName(10, "Help.gif");
+            this.ilMovieFileMerger.Images.SetKeyName(11, "MediaInfo.gif");
+            this.ilMovieFileMerger.Images.SetKeyName(12, "List.gif");
+            this.ilMovieFileMerger.Images.SetKeyName(13, "Play.gif");
+            this.ilMovieFileMerger.Images.SetKeyName(14, "Garbage.gif");
+            this.ilMovieFileMerger.Images.SetKeyName(15, "Process.gif");
+            this.ilMovieFileMerger.Images.SetKeyName(16, "Select.gif");
+            this.ilMovieFileMerger.Images.SetKeyName(17, "Wish.png");
+            this.ilMovieFileMerger.Images.SetKeyName(18, "Start.gif");
+            this.ilMovieFileMerger.Images.SetKeyName(19, "Download.png");
+            this.ilMovieFileMerger.Images.SetKeyName(20, "Edit.png");
+            this.ilMovieFileMerger.Images.SetKeyName(21, "ftp.png");
+            this.ilMovieFileMerger.Images.SetKeyName(22, "DownloadCloud.png");
+            this.ilMovieFileMerger.Images.SetKeyName(23, "RemoteNames.png");
+            this.ilMovieFileMerger.Images.SetKeyName(24, "WinSCP.png");
+            this.ilMovieFileMerger.Images.SetKeyName(25, "InvertSelection.png");
+            this.ilMovieFileMerger.Images.SetKeyName(26, "ListFileExchange.png");
+            this.ilMovieFileMerger.Images.SetKeyName(27, "Star.png");
+            this.ilMovieFileMerger.Images.SetKeyName(28, "Reset.png");
             // 
             // tmrUpdateCounters
             // 
@@ -3214,7 +3208,7 @@ namespace Movie_File_Merger
             // tsslMFM
             // 
             this.tsslMFM.Name = "tsslMFM";
-            this.tsslMFM.Size = new System.Drawing.Size(905, 25);
+            this.tsslMFM.Size = new System.Drawing.Size(725, 25);
             this.tsslMFM.Spring = true;
             this.tsslMFM.Text = "Welcome to MFM";
             this.tsslMFM.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

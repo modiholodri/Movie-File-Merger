@@ -555,26 +555,6 @@ namespace Movie_File_Merger {
         /// </summary>
         /// <param name="sender">The object that invoked the event that fired the event handler.</param>
         /// <param name="e">The arguments that the implementor of this event may find useful.</param>
-        void RbCollectionsClick( object sender, EventArgs e )
-        {
-            var rbRadioButton = (RadioButton)sender;
-
-            if ( rbRadioButton.Checked ) {
-                strCollectionType = rbRadioButton.Tag.ToString( );
-                LogInfo( "Switching to " + strCollectionType );
-                lvImport.Items.Clear( );
-                InitListViewFromFile( lvGarbage );
-                InitListViewFromFile( lvExisting );
-                InitListViewFromFile( lvWish );
-            }
-            else {
-                SaveChangedListView( lvGarbage );
-                SaveChangedListView( lvExisting );
-                SaveChangedListView( lvWish );
-            }
-        }
-
-
         private void CobCollections_SelectedIndexChanged(object sender, EventArgs e)
         {
             SaveChangedListView(lvGarbage);
@@ -3267,6 +3247,7 @@ namespace Movie_File_Merger {
             lblLastChecked.Text = ReadXmlSetting( xmlSettings, "/MFMSettings/General/LastChecked", "Last Checked: Never" );
             cobCheckForUpdates.Text = ReadXmlSetting( xmlSettings, "/MFMSettings/General/CheckForUpdates", "Check for updates daily." );
             cobMinimumResolution.Text = ReadXmlSetting( xmlSettings, "/MFMSettings/General/MinimumResolution", " <~720p (HD)" );
+            cobMinimumResolution.SelectedItem = cobMinimumResolution.Text;
 
             // Considered Files settings 
             tbMainExtensionsRegex.Text = ReadXmlSetting( xmlSettings, "/MFMSettings/ConsideredFiles/MainExtensionsRegex", @"avi|mkv|mp4" );
