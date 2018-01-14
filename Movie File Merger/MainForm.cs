@@ -179,6 +179,8 @@ namespace Movie_File_Merger {
             btnGoodMovie.BackColor = GoodMovieColor;
             lblGoodMovieNameRegex.BackColor = GoodMovieColor;
 
+            cobCollections.SelectedIndex = 3;  // Miselaneouse
+
             lvDragSource = lvExisting; // to avoid null exception
             CheckLatestVersion( "Startup" );
         }
@@ -572,6 +574,21 @@ namespace Movie_File_Merger {
             }
         }
 
+
+        private void CobCollections_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SaveChangedListView(lvGarbage);
+            SaveChangedListView(lvExisting);
+            SaveChangedListView(lvWish);
+
+            strCollectionType = cobCollections.Text;
+            LogInfo("Switching to " + strCollectionType);
+            lvImport.Items.Clear();
+            InitListViewFromFile(lvGarbage);
+            InitListViewFromFile(lvExisting);
+            InitListViewFromFile(lvWish);
+        }
+
         /// <summary>
         /// Converts the selected minimum vertical pixels into the horizontal pixels.
         /// </summary>
@@ -601,11 +618,12 @@ namespace Movie_File_Merger {
         /// </summary>
         /// <param name="sender">The object that invoked the event that fired the event handler.</param>
         /// <param name="e">The arguments that the implementor of this event may find useful.</param>
+        /*
         void BtnStartProcessClick( object sender, EventArgs e )
         {
             ProcessImport( );
         }
-
+        */
         #endregion Collections Processing
 
         #region Drop Area Handling
@@ -759,7 +777,7 @@ namespace Movie_File_Merger {
             string strCleanName = Path.GetFileNameWithoutExtension( strName );  // get only the name
             LogMessage( "Info", Color.Blue, "Searching info for " + strCleanName );
 
-            if ( rgxEpisodesId.IsMatch( strName ) || ( rbSeries.Checked && tpSeparateLists.ContainsFocus ) ) {
+            if ( rgxEpisodesId.IsMatch( strName ) || ( cobCollections.Text == "Series" && tpSeparateLists.ContainsFocus ) ) {
                 strSearchWhat = "+TV+Series";
             }
             strCleanName = CleanName( strCleanName );
@@ -1167,7 +1185,7 @@ namespace Movie_File_Merger {
                 lviThis = AddItemToListView( lvThis, lviThis );
             }
 
-            if ( rbSeries.Checked ) {
+            if ( cobCollections.Text == "Series" ) {
                 if ( (string)lvThis.Tag == "Garbage" ) ColorExistingAndUp( );
                 if ( (string)lvThis.Tag == "Existing" ) ColorWishAndUp( );
                 if ( (string)lvThis.Tag == "Wish" ) ColorWishAndUp( );
@@ -1212,7 +1230,7 @@ namespace Movie_File_Merger {
                 }
                 line = srMovies.ReadLine( );
             }
-            if ( rbSeries.Checked ) {
+            if (cobCollections.Text == "Series") {
                 if ( (string)lvThis.Tag == "Garbage" ) ColorExistingAndUp( );
                 if ( (string)lvThis.Tag == "Wish" ) ColorWishAndUp( );
             }
@@ -1761,7 +1779,7 @@ namespace Movie_File_Merger {
 			}
 			else {
 				ListViewItem lviExisting;
-				lviExisting = ( rbSeries.Checked ) ? FindItemStart( lvExisting, lviWish.Text ) : 
+				lviExisting = (cobCollections.Text == "Series") ? FindItemStart( lvExisting, lviWish.Text ) : 
 				                                     FindItem( lvExisting, lviWish.Text );
 				lviWish.BackColor = ( lviExisting != null ) ? ExistingColor : 
 					                                          WishColor;
@@ -1819,7 +1837,7 @@ namespace Movie_File_Merger {
 		{
 			ListViewItem lviGarbage = FindItem( lvGarbage, RemoveEpisodeInfo( strItemName ) );
 			ListViewItem lviExisting;
-			lviExisting = ( rbSeries.Checked ) ? FindItemStart( lvExisting, strItemName ) : 
+			lviExisting = (cobCollections.Text == "Series") ? FindItemStart( lvExisting, strItemName ) : 
 			                                     FindItem( lvExisting, strItemName );
 			ListViewItem lviWish = FindItem( lvWish, RemoveEpisodeInfo( strItemName ) );
 			ListViewItem lviImport = FindItem( lvImport, strItemName );
@@ -1854,7 +1872,7 @@ namespace Movie_File_Merger {
 				}
 			}
 			else if ( lviWish != null ) {
-				if ( rbSeries.Checked ) {
+				if (cobCollections.Text == "Series") {
 					lviExisting = FindItemStart( lvExisting, RemoveEpisodeInfo( strItemName ) );
 				}
 				lviExisting = FindItem( lvExisting, strItemName );
@@ -2183,7 +2201,7 @@ namespace Movie_File_Merger {
             // from another list view
             if ( e.Data.GetDataPresent( typeof( ListView.SelectedListViewItemCollection ) ) ) {
                 foreach ( ListViewItem lviThis in (ListView.SelectedListViewItemCollection)e.Data.GetData( typeof( ListView.SelectedListViewItemCollection ) ) ) {
-                    if ( rbSeries.Checked &&
+                    if (cobCollections.Text == "Series" &&
                          ((string)lvThis.Tag == "Garbage" ||
                            (string)lvThis.Tag == "Wish") ) {
                         var lviToAdd = new ListViewItem( RemoveEpisodeInfo( lviThis.Text ) );
@@ -2193,7 +2211,7 @@ namespace Movie_File_Merger {
                         AddItemToListView( lvThis, lviThis );
                     }
                 }
-                if ( rbSeries.Checked ) {
+                if (cobCollections.Text == "Series") {
                     if ( (string)lvThis.Tag == "Garbage" ) ColorExistingAndUp( );
                     if ( (string)lvThis.Tag == "Wish" ) ColorWishAndUp( );
                 }
@@ -2302,11 +2320,11 @@ namespace Movie_File_Merger {
 			SetListViewChanged( lvThis, true );
 			foreach ( ListViewItem lviItem in lvThis.SelectedItems ) {
 				lvThis.Items.Remove( lviItem );
-                if ( !rbSeries.Checked && (string)lvThis.Tag != "Import" ) {
+                if ( cobCollections.Text != "Series" && (string)lvThis.Tag != "Import" ) {
                     ColorAll( lviItem.Text );
                 }
 			}
-			if ( rbSeries.Checked ) {
+			if (cobCollections.Text == "Series") {
 				if ( (string)lvThis.Tag == "Garbage" ) ColorExistingAndUp( );
 				if ( (string)lvThis.Tag == "Existing" ) ColorWishAndUp( );
 				if ( (string)lvThis.Tag == "Wish" ) ColorImport( );
@@ -2341,7 +2359,7 @@ namespace Movie_File_Merger {
 		void CopySelected ( ListView lvSource, ListView lvTarget )
 		{
 			foreach ( ListViewItem lviThis in lvSource.SelectedItems ) {
-				if ( rbSeries.Checked &&
+				if (cobCollections.Text == "Series" &&
 				     ( (string)lvTarget.Tag == "Garbage" ||
 				       (string)lvTarget.Tag == "Wish" ) ) {
 					var lviToAdd = new ListViewItem( RemoveEpisodeInfo( lviThis.Text ) );
@@ -2350,7 +2368,7 @@ namespace Movie_File_Merger {
 					AddItemToListView( lvTarget, lviThis );
 				}
 			}
-			if ( rbSeries.Checked ) {
+			if (cobCollections.Text == "Series") {
 				if ( (string)lvTarget.Tag == "Garbage" ) ColorExistingAndUp( );
 				if ( (string)lvTarget.Tag == "Wish" ) ColorWishAndUp( );
 			}
@@ -3208,7 +3226,7 @@ namespace Movie_File_Merger {
         /// <param name="sSettingName">The XML element name.</param>
         /// <param name="sDefault">The default value if the setting is not found.</param>
         /// <returns>The setting as string, if found, otherwise the default value.</returns>
-        string readXmlSetting( XmlDocument doc, string sSettingName, string sDefault )
+        string ReadXmlSetting( XmlDocument doc, string sSettingName, string sDefault )
         {
             string sText = "";
             XmlNode node = doc.DocumentElement.SelectSingleNode( sSettingName );
@@ -3240,41 +3258,41 @@ namespace Movie_File_Merger {
             xmlSettings.Load( strXmlSettingsFilePath );
 
             // General settings			
-            strNickName = readXmlSetting( xmlSettings, "/MFMSettings/General/NickName", "Anonymous" );
-            cobSearchInfo.Text = readXmlSetting( xmlSettings, "/MFMSettings/General/SeachInfo", "Google" );
-            cobSearchDownload.Text = readXmlSetting( xmlSettings, "/MFMSettings/General/SeachDownload", "Rarbg" );
-            cobDownloadCriteria.Text = readXmlSetting( xmlSettings, "/MFMSettings/General/DownloadCriteria", "1080p" );
-            cobDoubleClickDefault.Text = readXmlSetting( xmlSettings, "/MFMSettings/General/DoubleClickDefault", "Play" );
-            cbGetHigherRes.Checked = readXmlSetting( xmlSettings, "/MFMSettings/General/GetHigherRes", "True" ) == "True";
-            lblLastChecked.Text = readXmlSetting( xmlSettings, "/MFMSettings/General/LastChecked", "Last Checked: Never" );
-            cobCheckForUpdates.Text = readXmlSetting( xmlSettings, "/MFMSettings/General/CheckForUpdates", "Check for updates daily." );
-            cobMinimumResolution.Text = readXmlSetting( xmlSettings, "/MFMSettings/General/MinimumResolution", " <~720p (HD)" );
+            strNickName = ReadXmlSetting( xmlSettings, "/MFMSettings/General/NickName", "Anonymous" );
+            cobSearchInfo.Text = ReadXmlSetting( xmlSettings, "/MFMSettings/General/SeachInfo", "Google" );
+            cobSearchDownload.Text = ReadXmlSetting( xmlSettings, "/MFMSettings/General/SeachDownload", "Rarbg" );
+            cobDownloadCriteria.Text = ReadXmlSetting( xmlSettings, "/MFMSettings/General/DownloadCriteria", "1080p" );
+            cobDoubleClickDefault.Text = ReadXmlSetting( xmlSettings, "/MFMSettings/General/DoubleClickDefault", "Play" );
+            cbGetHigherRes.Checked = ReadXmlSetting( xmlSettings, "/MFMSettings/General/GetHigherRes", "True" ) == "True";
+            lblLastChecked.Text = ReadXmlSetting( xmlSettings, "/MFMSettings/General/LastChecked", "Last Checked: Never" );
+            cobCheckForUpdates.Text = ReadXmlSetting( xmlSettings, "/MFMSettings/General/CheckForUpdates", "Check for updates daily." );
+            cobMinimumResolution.Text = ReadXmlSetting( xmlSettings, "/MFMSettings/General/MinimumResolution", " <~720p (HD)" );
 
             // Considered Files settings 
-            tbMainExtensionsRegex.Text = readXmlSetting( xmlSettings, "/MFMSettings/ConsideredFiles/MainExtensionsRegex", @"avi|mkv|mp4" );
-            tbAddonExtensionsRegex.Text = readXmlSetting( xmlSettings, "/MFMSettings/ConsideredFiles/AddonExtensionsRegex", @"srt|sub" );
+            tbMainExtensionsRegex.Text = ReadXmlSetting( xmlSettings, "/MFMSettings/ConsideredFiles/MainExtensionsRegex", @"avi|mkv|mp4" );
+            tbAddonExtensionsRegex.Text = ReadXmlSetting( xmlSettings, "/MFMSettings/ConsideredFiles/AddonExtensionsRegex", @"srt|sub" );
 
             // Name Unification settings 
-            tbCutNameBeforeRegex.Text = readXmlSetting( xmlSettings, "/MFMSettings/NameUnification/CutNameBeforeRegex", @"720p|1080p|(cd[1234])|x264|aac|divx|xvid|dvd" );
-            tbOnlyCharactersRegex.Text = readXmlSetting( xmlSettings, "/MFMSettings/NameUnification/OnlyCharactersRegex", @"[^\p{L}\p{N} -'ก-์]" );
-            tbToLowerRegex.Text = readXmlSetting( xmlSettings, "/MFMSettings/NameUnification/ToLowerRegex", @" On | A | The | Of | And | Or | To | From | For | In | As | At | With " );
-            tbEpisodesIdRegex.Text = readXmlSetting( xmlSettings, "/MFMSettings/NameUnification/EpisodesIdRegex", @".s\d+[e ]\d+" );
-            tbGoodDocuNameRegex.Text = readXmlSetting( xmlSettings, "/MFMSettings/NameUnification/GoodDocuRegex", @".* S[12]\d{3}E\d{1,3} .*$" );
-            tbGoodEpisodeNameRegex.Text = readXmlSetting( xmlSettings, "/MFMSettings/NameUnification/GoodEpisodeRegex", @".* S\d{2}E\d{2}(-E\d{2})? .*$" );
-            tbGoodMovieNameRegex.Text = readXmlSetting( xmlSettings, "/MFMSettings/NameUnification/GoodMovieRegex", @".* \([12]\d{3}\)$" );
-            tbBadDocuNameRegex.Text = readXmlSetting( xmlSettings, "/MFMSettings/NameUnification/BadDocuRegex", @".[Ss][12]\d{3}[Ee]\d{1,3}" );
-            tbBadEpisodeNameRegex.Text = readXmlSetting( xmlSettings, "/MFMSettings/NameUnification/BadEpisodeRegex", @".[Ss]\d{1,2}[Ee]\d{1,2}" );
-            tbBadMovieNameRegex.Text = readXmlSetting( xmlSettings, "/MFMSettings/NameUnification/BadMovieRegex", @".[12]\d{3}" );
+            tbCutNameBeforeRegex.Text = ReadXmlSetting( xmlSettings, "/MFMSettings/NameUnification/CutNameBeforeRegex", @"720p|1080p|(cd[1234])|x264|aac|divx|xvid|dvd" );
+            tbOnlyCharactersRegex.Text = ReadXmlSetting( xmlSettings, "/MFMSettings/NameUnification/OnlyCharactersRegex", @"[^\p{L}\p{N} -'ก-์]" );
+            tbToLowerRegex.Text = ReadXmlSetting( xmlSettings, "/MFMSettings/NameUnification/ToLowerRegex", @" On | A | The | Of | And | Or | To | From | For | In | As | At | With " );
+            tbEpisodesIdRegex.Text = ReadXmlSetting( xmlSettings, "/MFMSettings/NameUnification/EpisodesIdRegex", @".s\d+[e ]\d+" );
+            tbGoodDocuNameRegex.Text = ReadXmlSetting( xmlSettings, "/MFMSettings/NameUnification/GoodDocuRegex", @".* S[12]\d{3}E\d{1,3} .*$" );
+            tbGoodEpisodeNameRegex.Text = ReadXmlSetting( xmlSettings, "/MFMSettings/NameUnification/GoodEpisodeRegex", @".* S\d{2}E\d{2}(-E\d{2})? .*$" );
+            tbGoodMovieNameRegex.Text = ReadXmlSetting( xmlSettings, "/MFMSettings/NameUnification/GoodMovieRegex", @".* \([12]\d{3}\)$" );
+            tbBadDocuNameRegex.Text = ReadXmlSetting( xmlSettings, "/MFMSettings/NameUnification/BadDocuRegex", @".[Ss][12]\d{3}[Ee]\d{1,3}" );
+            tbBadEpisodeNameRegex.Text = ReadXmlSetting( xmlSettings, "/MFMSettings/NameUnification/BadEpisodeRegex", @".[Ss]\d{1,2}[Ee]\d{1,2}" );
+            tbBadMovieNameRegex.Text = ReadXmlSetting( xmlSettings, "/MFMSettings/NameUnification/BadMovieRegex", @".[12]\d{3}" );
 
             // FTP Sucker settings
-            tbUserName.Text = readXmlSetting( xmlSettings, "/MFMSettings/FTPSucker/UserName", "" );
-            tbHostName.Text = readXmlSetting( xmlSettings, "/MFMSettings/FTPSucker/HostName", "" );
-            tbRemotePath.Text = readXmlSetting( xmlSettings, "/MFMSettings/FTPSucker/RemotePath", @"/videos" );
-            tbPortNumber.Text = readXmlSetting( xmlSettings, "/MFMSettings/FTPSucker/PortNumber", "21" );
-            tbLocalPath.Text = readXmlSetting( xmlSettings, "/MFMSettings/FTPSucker/LocalPath", @"C:\Downloads" );
+            tbUserName.Text = ReadXmlSetting( xmlSettings, "/MFMSettings/FTPSucker/UserName", "" );
+            tbHostName.Text = ReadXmlSetting( xmlSettings, "/MFMSettings/FTPSucker/HostName", "" );
+            tbRemotePath.Text = ReadXmlSetting( xmlSettings, "/MFMSettings/FTPSucker/RemotePath", @"/videos" );
+            tbPortNumber.Text = ReadXmlSetting( xmlSettings, "/MFMSettings/FTPSucker/PortNumber", "21" );
+            tbLocalPath.Text = ReadXmlSetting( xmlSettings, "/MFMSettings/FTPSucker/LocalPath", @"C:\Downloads" );
 
             // Supporting Programms settings 
-            strTeraCopyPath = readXmlSetting( xmlSettings, "/MFMSettings/SupportingProgramms/TeraCopyPath", @"C:\Program Files\TeraCopy\TeraCopy.exe" );
+            strTeraCopyPath = ReadXmlSetting( xmlSettings, "/MFMSettings/SupportingProgramms/TeraCopyPath", @"C:\Program Files\TeraCopy\TeraCopy.exe" );
 
             if ( strNickName == "Anonymous" ) {
                 ShowInputDialog( "Please enter your nickname.", ref strNickName );
@@ -3457,8 +3475,8 @@ namespace Movie_File_Merger {
                 try {
                     SetStatus("Getting info about latest version from https://movie-file-merger.org...");
                     xmlLatestVersion.Load( "http://movie-file-merger.org/MFMVersion.xml" );
-                    sLatestRelease = readXmlSetting( xmlLatestVersion, "/MFMVersions/LatestRelease", "0.0.0" );
-                    sReleaseNotes = readXmlSetting( xmlLatestVersion, "/MFMVersions/ReleaseNotes", "Sorry, did not find any release notes..." );
+                    sLatestRelease = ReadXmlSetting( xmlLatestVersion, "/MFMVersions/LatestRelease", "0.0.0" );
+                    sReleaseNotes = ReadXmlSetting( xmlLatestVersion, "/MFMVersions/ReleaseNotes", "Sorry, did not find any release notes..." );
                     if ( sCurrentRelease != sLatestRelease ) {
                         SetStatus("A newer version of MFM is available...");
                         if ( ShowYesNoQuestion( "A different version (" + sLatestRelease + ") of MFM (currently " + sCurrentRelease + ") " +

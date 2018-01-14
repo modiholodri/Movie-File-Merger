@@ -48,7 +48,11 @@ namespace Movie_File_Merger
             this.ContentPanel = new System.Windows.Forms.ToolStripContentPanel();
             this.tcMovieFileMerger = new System.Windows.Forms.TabControl();
             this.tpSeparateLists = new System.Windows.Forms.TabPage();
+            this.cobMinimumResolution = new System.Windows.Forms.ComboBox();
+            this.cbGetHigherRes = new System.Windows.Forms.CheckBox();
+            this.rbMove = new System.Windows.Forms.RadioButton();
             this.btnResetColors = new System.Windows.Forms.Button();
+            this.rbCopy = new System.Windows.Forms.RadioButton();
             this.btnColorSelection = new System.Windows.Forms.Button();
             this.btnSelectColor = new System.Windows.Forms.Button();
             this.btnInvertSelection = new System.Windows.Forms.Button();
@@ -66,11 +70,6 @@ namespace Movie_File_Merger
             this.btnSearchDownload = new System.Windows.Forms.Button();
             this.btnEraseSelected = new System.Windows.Forms.Button();
             this.btnSearchInfo = new System.Windows.Forms.Button();
-            this.cobMinimumResolution = new System.Windows.Forms.ComboBox();
-            this.btnStart = new System.Windows.Forms.Button();
-            this.cbGetHigherRes = new System.Windows.Forms.CheckBox();
-            this.rbMove = new System.Windows.Forms.RadioButton();
-            this.rbCopy = new System.Windows.Forms.RadioButton();
             this.scVertical = new System.Windows.Forms.SplitContainer();
             this.lvExisting = new System.Windows.Forms.ListView();
             this.chNameExisting = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -89,6 +88,7 @@ namespace Movie_File_Merger
             this.cobSearchInfo = new System.Windows.Forms.ComboBox();
             this.pbListsHowTo = new System.Windows.Forms.PictureBox();
             this.pbListsUserManual = new System.Windows.Forms.PictureBox();
+            this.cobCollections = new System.Windows.Forms.ComboBox();
             this.tpLog = new System.Windows.Forms.TabPage();
             this.pbLodDonateRight = new System.Windows.Forms.PictureBox();
             this.pbLogDonateLeft = new System.Windows.Forms.PictureBox();
@@ -205,13 +205,6 @@ namespace Movie_File_Merger
             this.tspbMFM = new System.Windows.Forms.ToolStripProgressBar();
             this.ttMovieFileMerger = new System.Windows.Forms.ToolTip(this.components);
             this.ofdTeraCopy = new System.Windows.Forms.OpenFileDialog();
-            this.gbTypeSelection = new System.Windows.Forms.GroupBox();
-            this.rbMiscellaneous = new System.Windows.Forms.RadioButton();
-            this.rbAdults = new System.Windows.Forms.RadioButton();
-            this.rbClips = new System.Windows.Forms.RadioButton();
-            this.rbSeries = new System.Windows.Forms.RadioButton();
-            this.rbDocumentaries = new System.Windows.Forms.RadioButton();
-            this.rbMovies = new System.Windows.Forms.RadioButton();
             this.tcMovieFileMerger.SuspendLayout();
             this.tpSeparateLists.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.scVertical)).BeginInit();
@@ -272,7 +265,6 @@ namespace Movie_File_Merger
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
             this.ssMFM.SuspendLayout();
-            this.gbTypeSelection.SuspendLayout();
             this.SuspendLayout();
             // 
             // fbdMovieFileMerger
@@ -286,37 +278,38 @@ namespace Movie_File_Merger
             this.ilMovieFileMerger.Images.SetKeyName(0, "Color.gif");
             this.ilMovieFileMerger.Images.SetKeyName(1, "Copy.gif");
             this.ilMovieFileMerger.Images.SetKeyName(2, "Erase.gif");
-            this.ilMovieFileMerger.Images.SetKeyName(3, "Folder.gif");
-            this.ilMovieFileMerger.Images.SetKeyName(4, "Log.gif");
-            this.ilMovieFileMerger.Images.SetKeyName(5, "Move.gif");
-            this.ilMovieFileMerger.Images.SetKeyName(6, "Save.gif");
-            this.ilMovieFileMerger.Images.SetKeyName(7, "Settings.gif");
-            this.ilMovieFileMerger.Images.SetKeyName(8, "About.gif");
-            this.ilMovieFileMerger.Images.SetKeyName(9, "Documentaries.gif");
-            this.ilMovieFileMerger.Images.SetKeyName(10, "Help.gif");
-            this.ilMovieFileMerger.Images.SetKeyName(11, "Series.gif");
-            this.ilMovieFileMerger.Images.SetKeyName(12, "Clips.gif");
-            this.ilMovieFileMerger.Images.SetKeyName(13, "MediaInfo.gif");
-            this.ilMovieFileMerger.Images.SetKeyName(14, "List.gif");
-            this.ilMovieFileMerger.Images.SetKeyName(15, "Adult.gif");
-            this.ilMovieFileMerger.Images.SetKeyName(16, "Miscellaneaous.gif");
-            this.ilMovieFileMerger.Images.SetKeyName(17, "Movie.gif");
-            this.ilMovieFileMerger.Images.SetKeyName(18, "Play.gif");
-            this.ilMovieFileMerger.Images.SetKeyName(19, "Garbage.gif");
-            this.ilMovieFileMerger.Images.SetKeyName(20, "Process.gif");
-            this.ilMovieFileMerger.Images.SetKeyName(21, "Select.gif");
-            this.ilMovieFileMerger.Images.SetKeyName(22, "Wish.png");
-            this.ilMovieFileMerger.Images.SetKeyName(23, "Start.gif");
-            this.ilMovieFileMerger.Images.SetKeyName(24, "Download.png");
-            this.ilMovieFileMerger.Images.SetKeyName(25, "Edit.png");
-            this.ilMovieFileMerger.Images.SetKeyName(26, "ftp.png");
-            this.ilMovieFileMerger.Images.SetKeyName(27, "DownloadCloud.png");
-            this.ilMovieFileMerger.Images.SetKeyName(28, "RemoteNames.png");
-            this.ilMovieFileMerger.Images.SetKeyName(29, "WinSCP.png");
-            this.ilMovieFileMerger.Images.SetKeyName(30, "InvertSelection.png");
-            this.ilMovieFileMerger.Images.SetKeyName(31, "ListFileExchange.png");
-            this.ilMovieFileMerger.Images.SetKeyName(32, "Star.png");
-            this.ilMovieFileMerger.Images.SetKeyName(33, "Reset.png");
+            this.ilMovieFileMerger.Images.SetKeyName(3, "Erase Color.gif");
+            this.ilMovieFileMerger.Images.SetKeyName(4, "Folder.gif");
+            this.ilMovieFileMerger.Images.SetKeyName(5, "Log.gif");
+            this.ilMovieFileMerger.Images.SetKeyName(6, "Move.gif");
+            this.ilMovieFileMerger.Images.SetKeyName(7, "Save.gif");
+            this.ilMovieFileMerger.Images.SetKeyName(8, "Settings.gif");
+            this.ilMovieFileMerger.Images.SetKeyName(9, "About.gif");
+            this.ilMovieFileMerger.Images.SetKeyName(10, "Documentaries.gif");
+            this.ilMovieFileMerger.Images.SetKeyName(11, "Help.gif");
+            this.ilMovieFileMerger.Images.SetKeyName(12, "Series.gif");
+            this.ilMovieFileMerger.Images.SetKeyName(13, "Clips.gif");
+            this.ilMovieFileMerger.Images.SetKeyName(14, "MediaInfo.gif");
+            this.ilMovieFileMerger.Images.SetKeyName(15, "List.gif");
+            this.ilMovieFileMerger.Images.SetKeyName(16, "Adult.gif");
+            this.ilMovieFileMerger.Images.SetKeyName(17, "Miscellaneaous.gif");
+            this.ilMovieFileMerger.Images.SetKeyName(18, "Movie.gif");
+            this.ilMovieFileMerger.Images.SetKeyName(19, "Play.gif");
+            this.ilMovieFileMerger.Images.SetKeyName(20, "Garbage.gif");
+            this.ilMovieFileMerger.Images.SetKeyName(21, "Process.gif");
+            this.ilMovieFileMerger.Images.SetKeyName(22, "Select.gif");
+            this.ilMovieFileMerger.Images.SetKeyName(23, "Wish.png");
+            this.ilMovieFileMerger.Images.SetKeyName(24, "Start.gif");
+            this.ilMovieFileMerger.Images.SetKeyName(25, "Download.png");
+            this.ilMovieFileMerger.Images.SetKeyName(26, "Edit.png");
+            this.ilMovieFileMerger.Images.SetKeyName(27, "ftp.png");
+            this.ilMovieFileMerger.Images.SetKeyName(28, "DownloadCloud.png");
+            this.ilMovieFileMerger.Images.SetKeyName(29, "RemoteNames.png");
+            this.ilMovieFileMerger.Images.SetKeyName(30, "WinSCP.png");
+            this.ilMovieFileMerger.Images.SetKeyName(31, "InvertSelection.png");
+            this.ilMovieFileMerger.Images.SetKeyName(32, "ListFileExchange.png");
+            this.ilMovieFileMerger.Images.SetKeyName(33, "Star.png");
+            this.ilMovieFileMerger.Images.SetKeyName(34, "Reset.png");
             // 
             // tmrUpdateCounters
             // 
@@ -383,19 +376,19 @@ namespace Movie_File_Merger
             this.tcMovieFileMerger.Padding = new System.Drawing.Point(9, 6);
             this.tcMovieFileMerger.SelectedIndex = 0;
             this.tcMovieFileMerger.ShowToolTips = true;
-            this.tcMovieFileMerger.Size = new System.Drawing.Size(1062, 719);
+            this.tcMovieFileMerger.Size = new System.Drawing.Size(882, 471);
             this.tcMovieFileMerger.TabIndex = 0;
             this.tcMovieFileMerger.Tag = "Maintenance";
             // 
             // tpSeparateLists
             // 
             this.tpSeparateLists.BackColor = System.Drawing.SystemColors.Control;
-            this.tpSeparateLists.Controls.Add(this.rbMove);
-            this.tpSeparateLists.Controls.Add(this.rbCopy);
-            this.tpSeparateLists.Controls.Add(this.cbGetHigherRes);
+            this.tpSeparateLists.Controls.Add(this.cobCollections);
             this.tpSeparateLists.Controls.Add(this.cobMinimumResolution);
+            this.tpSeparateLists.Controls.Add(this.cbGetHigherRes);
+            this.tpSeparateLists.Controls.Add(this.rbMove);
             this.tpSeparateLists.Controls.Add(this.btnResetColors);
-            this.tpSeparateLists.Controls.Add(this.btnStart);
+            this.tpSeparateLists.Controls.Add(this.rbCopy);
             this.tpSeparateLists.Controls.Add(this.btnColorSelection);
             this.tpSeparateLists.Controls.Add(this.btnSelectColor);
             this.tpSeparateLists.Controls.Add(this.btnInvertSelection);
@@ -423,9 +416,73 @@ namespace Movie_File_Merger
             this.tpSeparateLists.Margin = new System.Windows.Forms.Padding(4);
             this.tpSeparateLists.Name = "tpSeparateLists";
             this.tpSeparateLists.Padding = new System.Windows.Forms.Padding(4);
-            this.tpSeparateLists.Size = new System.Drawing.Size(1054, 684);
+            this.tpSeparateLists.Size = new System.Drawing.Size(874, 436);
             this.tpSeparateLists.TabIndex = 0;
             this.tpSeparateLists.Text = "Lists";
+            // 
+            // cobMinimumResolution
+            // 
+            this.cobMinimumResolution.AllowDrop = true;
+            this.cobMinimumResolution.BackColor = System.Drawing.Color.IndianRed;
+            this.cobMinimumResolution.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cobMinimumResolution.FormattingEnabled = true;
+            this.cobMinimumResolution.Items.AddRange(new object[] {
+            " <~8640p (16k QUHD)",
+            " <~4320p (8K FUHD)",
+            " <~2880p (UHD+)",
+            " <~2160p (4K UHD)",
+            " <~1440p (WQHD)",
+            " <~1080p (Full HD)",
+            " <~900p (HD+)",
+            " <~720p (HD)",
+            " <~540p (qHD)",
+            " <~360p (nHD)",
+            " <~0p (FLD)"});
+            this.cobMinimumResolution.Location = new System.Drawing.Point(279, 14);
+            this.cobMinimumResolution.Margin = new System.Windows.Forms.Padding(4);
+            this.cobMinimumResolution.Name = "cobMinimumResolution";
+            this.cobMinimumResolution.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.cobMinimumResolution.Size = new System.Drawing.Size(184, 24);
+            this.cobMinimumResolution.TabIndex = 26;
+            this.ttMovieFileMerger.SetToolTip(this.cobMinimumResolution, resources.GetString("cobMinimumResolution.ToolTip"));
+            this.cobMinimumResolution.DragDrop += new System.Windows.Forms.DragEventHandler(this.cobMinimumResolution_DragDrop);
+            this.cobMinimumResolution.DragOver += new System.Windows.Forms.DragEventHandler(this.BtnDragOver);
+            // 
+            // cbGetHigherRes
+            // 
+            this.cbGetHigherRes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbGetHigherRes.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.cbGetHigherRes.Checked = true;
+            this.cbGetHigherRes.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbGetHigherRes.ImageKey = "Folder.gif";
+            this.cbGetHigherRes.Location = new System.Drawing.Point(511, 15);
+            this.cbGetHigherRes.Margin = new System.Windows.Forms.Padding(4);
+            this.cbGetHigherRes.Name = "cbGetHigherRes";
+            this.cbGetHigherRes.Size = new System.Drawing.Size(152, 22);
+            this.cbGetHigherRes.TabIndex = 25;
+            this.cbGetHigherRes.Text = "Higher Resolution";
+            this.cbGetHigherRes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ttMovieFileMerger.SetToolTip(this.cbGetHigherRes, "Check to copy higher horizontal resolution files, even if they are existing alrea" +
+        "dy.");
+            this.cbGetHigherRes.UseVisualStyleBackColor = false;
+            this.cbGetHigherRes.CheckedChanged += new System.EventHandler(this.SettingsChanged);
+            // 
+            // rbMove
+            // 
+            this.rbMove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rbMove.BackColor = System.Drawing.Color.Transparent;
+            this.rbMove.ImageKey = "Move.gif";
+            this.rbMove.ImageList = this.ilMovieFileMerger;
+            this.rbMove.Location = new System.Drawing.Point(671, 9);
+            this.rbMove.Margin = new System.Windows.Forms.Padding(4);
+            this.rbMove.Name = "rbMove";
+            this.rbMove.Size = new System.Drawing.Size(98, 32);
+            this.rbMove.TabIndex = 23;
+            this.rbMove.Text = "Move";
+            this.rbMove.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ttMovieFileMerger.SetToolTip(this.rbMove, "If Move is checked and Start Process is clicked, the Wish colored items \r\nin the " +
+        "Import list will be moved to the Target folder.");
+            this.rbMove.UseVisualStyleBackColor = false;
             // 
             // btnResetColors
             // 
@@ -434,7 +491,7 @@ namespace Movie_File_Merger
             this.btnResetColors.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnResetColors.ImageKey = "Reset.png";
             this.btnResetColors.ImageList = this.ilMovieFileMerger;
-            this.btnResetColors.Location = new System.Drawing.Point(889, 647);
+            this.btnResetColors.Location = new System.Drawing.Point(709, 399);
             this.btnResetColors.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnResetColors.Name = "btnResetColors";
             this.btnResetColors.Size = new System.Drawing.Size(37, 32);
@@ -445,6 +502,24 @@ namespace Movie_File_Merger
             this.btnResetColors.UseVisualStyleBackColor = false;
             this.btnResetColors.Click += new System.EventHandler(this.BtnResetColors_Click);
             // 
+            // rbCopy
+            // 
+            this.rbCopy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rbCopy.Checked = true;
+            this.rbCopy.ImageKey = "Copy.gif";
+            this.rbCopy.ImageList = this.ilMovieFileMerger;
+            this.rbCopy.Location = new System.Drawing.Point(779, 9);
+            this.rbCopy.Margin = new System.Windows.Forms.Padding(4);
+            this.rbCopy.Name = "rbCopy";
+            this.rbCopy.Size = new System.Drawing.Size(91, 32);
+            this.rbCopy.TabIndex = 22;
+            this.rbCopy.TabStop = true;
+            this.rbCopy.Text = "Copy";
+            this.rbCopy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ttMovieFileMerger.SetToolTip(this.rbCopy, "If Copy is selected and you click Start Process, the Wish colored items \r\nin the " +
+        "Import list will be copied to the Target folder.");
+            this.rbCopy.UseVisualStyleBackColor = true;
+            // 
             // btnColorSelection
             // 
             this.btnColorSelection.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -452,7 +527,7 @@ namespace Movie_File_Merger
             this.btnColorSelection.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnColorSelection.ImageKey = "Star.png";
             this.btnColorSelection.ImageList = this.ilMovieFileMerger;
-            this.btnColorSelection.Location = new System.Drawing.Point(223, 646);
+            this.btnColorSelection.Location = new System.Drawing.Point(223, 398);
             this.btnColorSelection.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnColorSelection.Name = "btnColorSelection";
             this.btnColorSelection.Size = new System.Drawing.Size(37, 32);
@@ -467,17 +542,17 @@ namespace Movie_File_Merger
             // btnSelectColor
             // 
             this.btnSelectColor.AllowDrop = true;
+            this.btnSelectColor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSelectColor.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
             this.btnSelectColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSelectColor.ImageKey = "Color.gif";
             this.btnSelectColor.ImageList = this.ilMovieFileMerger;
-            this.btnSelectColor.Location = new System.Drawing.Point(247, 9);
+            this.btnSelectColor.Location = new System.Drawing.Point(532, 49);
             this.btnSelectColor.Margin = new System.Windows.Forms.Padding(4);
             this.btnSelectColor.Name = "btnSelectColor";
-            this.btnSelectColor.Size = new System.Drawing.Size(107, 53);
+            this.btnSelectColor.Size = new System.Drawing.Size(53, 53);
             this.btnSelectColor.TabIndex = 54;
             this.btnSelectColor.TabStop = false;
-            this.btnSelectColor.Text = "Select Color";
             this.btnSelectColor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSelectColor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ttMovieFileMerger.SetToolTip(this.btnSelectColor, "Drop an item with a color here to select all items of the same color from a list." +
@@ -494,7 +569,7 @@ namespace Movie_File_Merger
             this.btnInvertSelection.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInvertSelection.ImageKey = "InvertSelection.png";
             this.btnInvertSelection.ImageList = this.ilMovieFileMerger;
-            this.btnInvertSelection.Location = new System.Drawing.Point(180, 647);
+            this.btnInvertSelection.Location = new System.Drawing.Point(180, 399);
             this.btnInvertSelection.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnInvertSelection.Name = "btnInvertSelection";
             this.btnInvertSelection.Size = new System.Drawing.Size(37, 32);
@@ -519,7 +594,7 @@ namespace Movie_File_Merger
             "720p",
             "x264",
             "Don\'t Care"});
-            this.cobDownloadCriteria.Location = new System.Drawing.Point(217, 20);
+            this.cobDownloadCriteria.Location = new System.Drawing.Point(216, 60);
             this.cobDownloadCriteria.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cobDownloadCriteria.Name = "cobDownloadCriteria";
             this.cobDownloadCriteria.Size = new System.Drawing.Size(23, 24);
@@ -535,13 +610,12 @@ namespace Movie_File_Merger
             this.btnPlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPlay.ImageKey = "Play.gif";
             this.btnPlay.ImageList = this.ilMovieFileMerger;
-            this.btnPlay.Location = new System.Drawing.Point(901, 9);
+            this.btnPlay.Location = new System.Drawing.Point(593, 49);
             this.btnPlay.Margin = new System.Windows.Forms.Padding(4);
             this.btnPlay.Name = "btnPlay";
-            this.btnPlay.Size = new System.Drawing.Size(92, 53);
+            this.btnPlay.Size = new System.Drawing.Size(53, 53);
             this.btnPlay.TabIndex = 31;
             this.btnPlay.TabStop = false;
-            this.btnPlay.Text = "Play Video";
             this.btnPlay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPlay.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.ttMovieFileMerger.SetToolTip(this.btnPlay, "Drop an item here to play it with your movie player.");
@@ -557,7 +631,7 @@ namespace Movie_File_Merger
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.ImageKey = "Edit.png";
             this.btnEdit.ImageList = this.ilMovieFileMerger;
-            this.btnEdit.Location = new System.Drawing.Point(760, 647);
+            this.btnEdit.Location = new System.Drawing.Point(580, 399);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(37, 32);
@@ -575,7 +649,7 @@ namespace Movie_File_Merger
             this.btnJustScanIt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnJustScanIt.ImageKey = "Process.gif";
             this.btnJustScanIt.ImageList = this.ilMovieFileMerger;
-            this.btnJustScanIt.Location = new System.Drawing.Point(6, 646);
+            this.btnJustScanIt.Location = new System.Drawing.Point(6, 398);
             this.btnJustScanIt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnJustScanIt.Name = "btnJustScanIt";
             this.btnJustScanIt.Size = new System.Drawing.Size(125, 32);
@@ -594,7 +668,7 @@ namespace Movie_File_Merger
             this.btnJustRipIt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnJustRipIt.ImageKey = "Process.gif";
             this.btnJustRipIt.ImageList = this.ilMovieFileMerger;
-            this.btnJustRipIt.Location = new System.Drawing.Point(932, 646);
+            this.btnJustRipIt.Location = new System.Drawing.Point(752, 398);
             this.btnJustRipIt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnJustRipIt.Name = "btnJustRipIt";
             this.btnJustRipIt.Size = new System.Drawing.Size(108, 32);
@@ -632,11 +706,11 @@ namespace Movie_File_Merger
             "Series with \"SxxExx\"",
             "Movies with \"(Year)\"",
             "Main file not existing but drive ready"});
-            this.cobCriteria.Location = new System.Drawing.Point(266, 651);
+            this.cobCriteria.Location = new System.Drawing.Point(266, 403);
             this.cobCriteria.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cobCriteria.MaxDropDownItems = 15;
             this.cobCriteria.Name = "cobCriteria";
-            this.cobCriteria.Size = new System.Drawing.Size(488, 24);
+            this.cobCriteria.Size = new System.Drawing.Size(308, 24);
             this.cobCriteria.TabIndex = 44;
             this.cobCriteria.Text = "Select the Search Criteria...";
             this.ttMovieFileMerger.SetToolTip(this.cobCriteria, "Select a predefined Tool Tip Regex, for the Select, Bin, or Wish actions.   Click" +
@@ -652,7 +726,7 @@ namespace Movie_File_Merger
             this.btnAddToWish.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddToWish.ImageKey = "Wish.png";
             this.btnAddToWish.ImageList = this.ilMovieFileMerger;
-            this.btnAddToWish.Location = new System.Drawing.Point(803, 647);
+            this.btnAddToWish.Location = new System.Drawing.Point(623, 399);
             this.btnAddToWish.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddToWish.Name = "btnAddToWish";
             this.btnAddToWish.Size = new System.Drawing.Size(37, 32);
@@ -670,7 +744,7 @@ namespace Movie_File_Merger
             this.btnBin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBin.ImageKey = "Garbage.gif";
             this.btnBin.ImageList = this.ilMovieFileMerger;
-            this.btnBin.Location = new System.Drawing.Point(846, 647);
+            this.btnBin.Location = new System.Drawing.Point(666, 399);
             this.btnBin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBin.Name = "btnBin";
             this.btnBin.Size = new System.Drawing.Size(37, 32);
@@ -689,7 +763,7 @@ namespace Movie_File_Merger
             this.btnSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSelect.ImageKey = "Select.gif";
             this.btnSelect.ImageList = this.ilMovieFileMerger;
-            this.btnSelect.Location = new System.Drawing.Point(137, 647);
+            this.btnSelect.Location = new System.Drawing.Point(137, 399);
             this.btnSelect.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSelect.Name = "btnSelect";
             this.btnSelect.Size = new System.Drawing.Size(37, 32);
@@ -703,13 +777,12 @@ namespace Movie_File_Merger
             // btnExportList
             // 
             this.btnExportList.AllowDrop = true;
-            this.btnExportList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnExportList.BackColor = System.Drawing.SystemColors.Control;
             this.btnExportList.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
             this.btnExportList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExportList.ImageKey = "Save.gif";
             this.btnExportList.ImageList = this.ilMovieFileMerger;
-            this.btnExportList.Location = new System.Drawing.Point(0, 608);
+            this.btnExportList.Location = new System.Drawing.Point(146, 9);
             this.btnExportList.Margin = new System.Windows.Forms.Padding(4);
             this.btnExportList.Name = "btnExportList";
             this.btnExportList.Size = new System.Drawing.Size(125, 32);
@@ -727,18 +800,16 @@ namespace Movie_File_Merger
             // btnEraseColor
             // 
             this.btnEraseColor.AllowDrop = true;
-            this.btnEraseColor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEraseColor.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
             this.btnEraseColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEraseColor.ImageKey = "Color.gif";
+            this.btnEraseColor.ImageKey = "Erase Color.gif";
             this.btnEraseColor.ImageList = this.ilMovieFileMerger;
-            this.btnEraseColor.Location = new System.Drawing.Point(614, 9);
+            this.btnEraseColor.Location = new System.Drawing.Point(307, 49);
             this.btnEraseColor.Margin = new System.Windows.Forms.Padding(4);
             this.btnEraseColor.Name = "btnEraseColor";
-            this.btnEraseColor.Size = new System.Drawing.Size(107, 53);
+            this.btnEraseColor.Size = new System.Drawing.Size(53, 53);
             this.btnEraseColor.TabIndex = 28;
             this.btnEraseColor.TabStop = false;
-            this.btnEraseColor.Text = "Erase Color";
             this.btnEraseColor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEraseColor.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.ttMovieFileMerger.SetToolTip(this.btnEraseColor, "Drop an item with a color here to erase all items of the same color from a list.");
@@ -754,7 +825,7 @@ namespace Movie_File_Merger
             this.btnSearchDownload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearchDownload.ImageKey = "Download.png";
             this.btnSearchDownload.ImageList = this.ilMovieFileMerger;
-            this.btnSearchDownload.Location = new System.Drawing.Point(80, 8);
+            this.btnSearchDownload.Location = new System.Drawing.Point(79, 48);
             this.btnSearchDownload.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearchDownload.Name = "btnSearchDownload";
             this.btnSearchDownload.Size = new System.Drawing.Size(137, 53);
@@ -777,13 +848,12 @@ namespace Movie_File_Merger
             this.btnEraseSelected.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEraseSelected.ImageKey = "Erase.gif";
             this.btnEraseSelected.ImageList = this.ilMovieFileMerger;
-            this.btnEraseSelected.Location = new System.Drawing.Point(362, 8);
+            this.btnEraseSelected.Location = new System.Drawing.Point(246, 49);
             this.btnEraseSelected.Margin = new System.Windows.Forms.Padding(4);
             this.btnEraseSelected.Name = "btnEraseSelected";
-            this.btnEraseSelected.Size = new System.Drawing.Size(107, 53);
+            this.btnEraseSelected.Size = new System.Drawing.Size(53, 53);
             this.btnEraseSelected.TabIndex = 27;
             this.btnEraseSelected.TabStop = false;
-            this.btnEraseSelected.Text = "Erase Selected";
             this.btnEraseSelected.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEraseSelected.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ttMovieFileMerger.SetToolTip(this.btnEraseSelected, "Drop items here to erase them from a list.");
@@ -800,7 +870,7 @@ namespace Movie_File_Merger
             this.btnSearchInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearchInfo.ImageKey = "About.gif";
             this.btnSearchInfo.ImageList = this.ilMovieFileMerger;
-            this.btnSearchInfo.Location = new System.Drawing.Point(729, 9);
+            this.btnSearchInfo.Location = new System.Drawing.Point(654, 49);
             this.btnSearchInfo.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearchInfo.Name = "btnSearchInfo";
             this.btnSearchInfo.Size = new System.Drawing.Size(137, 53);
@@ -816,116 +886,13 @@ namespace Movie_File_Merger
             this.btnSearchInfo.DragDrop += new System.Windows.Forms.DragEventHandler(this.BtnSearchInfoDragDrop);
             this.btnSearchInfo.DragOver += new System.Windows.Forms.DragEventHandler(this.BtnDragOver);
             // 
-            // cobMinimumResolution
-            // 
-            this.cobMinimumResolution.AllowDrop = true;
-            this.cobMinimumResolution.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.cobMinimumResolution.BackColor = System.Drawing.Color.IndianRed;
-            this.cobMinimumResolution.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cobMinimumResolution.FormattingEnabled = true;
-            this.cobMinimumResolution.Items.AddRange(new object[] {
-            " <~8640p (16k QUHD)",
-            " <~4320p (8K FUHD)",
-            " <~2880p (UHD+)",
-            " <~2160p (4K UHD)",
-            " <~1440p (WQHD)",
-            " <~1080p (Full HD)",
-            " <~900p (HD+)",
-            " <~720p (HD)",
-            " <~540p (qHD)",
-            " <~360p (nHD)",
-            " <~0p (FLD)"});
-            this.cobMinimumResolution.Location = new System.Drawing.Point(297, 612);
-            this.cobMinimumResolution.Margin = new System.Windows.Forms.Padding(4);
-            this.cobMinimumResolution.Name = "cobMinimumResolution";
-            this.cobMinimumResolution.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cobMinimumResolution.Size = new System.Drawing.Size(184, 24);
-            this.cobMinimumResolution.TabIndex = 26;
-            this.ttMovieFileMerger.SetToolTip(this.cobMinimumResolution, resources.GetString("cobMinimumResolution.ToolTip"));
-            this.cobMinimumResolution.DragDrop += new System.Windows.Forms.DragEventHandler(this.cobMinimumResolution_DragDrop);
-            this.cobMinimumResolution.DragOver += new System.Windows.Forms.DragEventHandler(this.BtnDragOver);
-            // 
-            // btnStart
-            // 
-            this.btnStart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnStart.BackColor = System.Drawing.SystemColors.Control;
-            this.btnStart.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
-            this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStart.ImageKey = "Start.gif";
-            this.btnStart.ImageList = this.ilMovieFileMerger;
-            this.btnStart.Location = new System.Drawing.Point(681, 608);
-            this.btnStart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(155, 32);
-            this.btnStart.TabIndex = 21;
-            this.btnStart.Text = "Start Process";
-            this.btnStart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ttMovieFileMerger.SetToolTip(this.btnStart, "Click to start the copying or moving of the files, which are marked as Wish in th" +
-        "e Import list.");
-            this.btnStart.UseVisualStyleBackColor = false;
-            this.btnStart.Click += new System.EventHandler(this.BtnStartProcessClick);
-            // 
-            // cbGetHigherRes
-            // 
-            this.cbGetHigherRes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbGetHigherRes.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.cbGetHigherRes.Checked = true;
-            this.cbGetHigherRes.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbGetHigherRes.ImageKey = "Folder.gif";
-            this.cbGetHigherRes.Location = new System.Drawing.Point(489, 613);
-            this.cbGetHigherRes.Margin = new System.Windows.Forms.Padding(4);
-            this.cbGetHigherRes.Name = "cbGetHigherRes";
-            this.cbGetHigherRes.Size = new System.Drawing.Size(185, 22);
-            this.cbGetHigherRes.TabIndex = 25;
-            this.cbGetHigherRes.Text = "Get Higher Resolution";
-            this.cbGetHigherRes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ttMovieFileMerger.SetToolTip(this.cbGetHigherRes, "Check to copy higher horizontal resolution files, even if they are existing alrea" +
-        "dy.");
-            this.cbGetHigherRes.UseVisualStyleBackColor = false;
-            this.cbGetHigherRes.CheckedChanged += new System.EventHandler(this.SettingsChanged);
-            // 
-            // rbMove
-            // 
-            this.rbMove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.rbMove.BackColor = System.Drawing.Color.Transparent;
-            this.rbMove.ImageKey = "Move.gif";
-            this.rbMove.ImageList = this.ilMovieFileMerger;
-            this.rbMove.Location = new System.Drawing.Point(843, 608);
-            this.rbMove.Margin = new System.Windows.Forms.Padding(4);
-            this.rbMove.Name = "rbMove";
-            this.rbMove.Size = new System.Drawing.Size(98, 32);
-            this.rbMove.TabIndex = 23;
-            this.rbMove.Text = "Move";
-            this.rbMove.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ttMovieFileMerger.SetToolTip(this.rbMove, "If Move is checked and Start Process is clicked, the Wish colored items \r\nin the " +
-        "Import list will be moved to the Target folder.");
-            this.rbMove.UseVisualStyleBackColor = false;
-            // 
-            // rbCopy
-            // 
-            this.rbCopy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.rbCopy.Checked = true;
-            this.rbCopy.ImageKey = "Copy.gif";
-            this.rbCopy.ImageList = this.ilMovieFileMerger;
-            this.rbCopy.Location = new System.Drawing.Point(949, 608);
-            this.rbCopy.Margin = new System.Windows.Forms.Padding(4);
-            this.rbCopy.Name = "rbCopy";
-            this.rbCopy.Size = new System.Drawing.Size(91, 32);
-            this.rbCopy.TabIndex = 22;
-            this.rbCopy.TabStop = true;
-            this.rbCopy.Text = "Copy";
-            this.rbCopy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ttMovieFileMerger.SetToolTip(this.rbCopy, "If Copy is selected and you click Start Process, the Wish colored items \r\nin the " +
-        "Import list will be copied to the Target folder.");
-            this.rbCopy.UseVisualStyleBackColor = true;
-            // 
             // scVertical
             // 
             this.scVertical.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.scVertical.BackColor = System.Drawing.SystemColors.Control;
-            this.scVertical.Location = new System.Drawing.Point(8, 70);
+            this.scVertical.Location = new System.Drawing.Point(8, 110);
             this.scVertical.Margin = new System.Windows.Forms.Padding(4);
             this.scVertical.Name = "scVertical";
             // 
@@ -936,8 +903,8 @@ namespace Movie_File_Merger
             // scVertical.Panel2
             // 
             this.scVertical.Panel2.Controls.Add(this.scVerticalRight);
-            this.scVertical.Size = new System.Drawing.Size(1040, 532);
-            this.scVertical.SplitterDistance = 331;
+            this.scVertical.Size = new System.Drawing.Size(860, 282);
+            this.scVertical.SplitterDistance = 273;
             this.scVertical.SplitterWidth = 5;
             this.scVertical.TabIndex = 7;
             this.scVertical.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.ScVerticalSplitterMoved);
@@ -959,7 +926,7 @@ namespace Movie_File_Merger
             this.lvExisting.Margin = new System.Windows.Forms.Padding(4);
             this.lvExisting.Name = "lvExisting";
             this.lvExisting.ShowItemToolTips = true;
-            this.lvExisting.Size = new System.Drawing.Size(331, 532);
+            this.lvExisting.Size = new System.Drawing.Size(273, 282);
             this.lvExisting.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.lvExisting.TabIndex = 0;
             this.lvExisting.TabStop = false;
@@ -996,8 +963,8 @@ namespace Movie_File_Merger
             // scVerticalRight.Panel2
             // 
             this.scVerticalRight.Panel2.Controls.Add(this.scHorizontalRight);
-            this.scVerticalRight.Size = new System.Drawing.Size(704, 532);
-            this.scVerticalRight.SplitterDistance = 347;
+            this.scVerticalRight.Size = new System.Drawing.Size(582, 282);
+            this.scVerticalRight.SplitterDistance = 286;
             this.scVerticalRight.SplitterWidth = 5;
             this.scVerticalRight.TabIndex = 1;
             this.scVerticalRight.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.ScVerticalSplitterMoved);
@@ -1017,8 +984,8 @@ namespace Movie_File_Merger
             // scHorizontal.Panel2
             // 
             this.scHorizontal.Panel2.Controls.Add(this.lvGarbage);
-            this.scHorizontal.Size = new System.Drawing.Size(347, 532);
-            this.scHorizontal.SplitterDistance = 238;
+            this.scHorizontal.Size = new System.Drawing.Size(286, 282);
+            this.scHorizontal.SplitterDistance = 117;
             this.scHorizontal.SplitterWidth = 5;
             this.scHorizontal.TabIndex = 0;
             // 
@@ -1039,7 +1006,7 @@ namespace Movie_File_Merger
             this.lvWish.Margin = new System.Windows.Forms.Padding(4);
             this.lvWish.Name = "lvWish";
             this.lvWish.ShowItemToolTips = true;
-            this.lvWish.Size = new System.Drawing.Size(347, 238);
+            this.lvWish.Size = new System.Drawing.Size(286, 117);
             this.lvWish.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.lvWish.TabIndex = 1;
             this.lvWish.TabStop = false;
@@ -1079,7 +1046,7 @@ namespace Movie_File_Merger
             this.lvGarbage.Margin = new System.Windows.Forms.Padding(4);
             this.lvGarbage.Name = "lvGarbage";
             this.lvGarbage.ShowItemToolTips = true;
-            this.lvGarbage.Size = new System.Drawing.Size(347, 289);
+            this.lvGarbage.Size = new System.Drawing.Size(286, 160);
             this.lvGarbage.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.lvGarbage.TabIndex = 1;
             this.lvGarbage.TabStop = false;
@@ -1116,8 +1083,8 @@ namespace Movie_File_Merger
             // scHorizontalRight.Panel2
             // 
             this.scHorizontalRight.Panel2.Controls.Add(this.lvExport);
-            this.scHorizontalRight.Size = new System.Drawing.Size(352, 532);
-            this.scHorizontalRight.SplitterDistance = 235;
+            this.scHorizontalRight.Size = new System.Drawing.Size(291, 282);
+            this.scHorizontalRight.SplitterDistance = 117;
             this.scHorizontalRight.TabIndex = 0;
             // 
             // lvImport
@@ -1137,7 +1104,7 @@ namespace Movie_File_Merger
             this.lvImport.Margin = new System.Windows.Forms.Padding(4);
             this.lvImport.Name = "lvImport";
             this.lvImport.ShowItemToolTips = true;
-            this.lvImport.Size = new System.Drawing.Size(352, 235);
+            this.lvImport.Size = new System.Drawing.Size(291, 117);
             this.lvImport.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.lvImport.TabIndex = 0;
             this.lvImport.TabStop = false;
@@ -1178,7 +1145,7 @@ namespace Movie_File_Merger
             this.lvExport.Margin = new System.Windows.Forms.Padding(4);
             this.lvExport.Name = "lvExport";
             this.lvExport.ShowItemToolTips = true;
-            this.lvExport.Size = new System.Drawing.Size(352, 293);
+            this.lvExport.Size = new System.Drawing.Size(291, 161);
             this.lvExport.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.lvExport.TabIndex = 39;
             this.lvExport.Tag = "Export";
@@ -1221,7 +1188,7 @@ namespace Movie_File_Merger
             "World Wide Torrents",
             "Yifi",
             "Zoogle"});
-            this.cobSearchDownload.Location = new System.Drawing.Point(60, 20);
+            this.cobSearchDownload.Location = new System.Drawing.Point(59, 60);
             this.cobSearchDownload.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cobSearchDownload.Name = "cobSearchDownload";
             this.cobSearchDownload.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -1260,7 +1227,7 @@ namespace Movie_File_Merger
             "MRQE",
             "Hollywood.com",
             "CineMaterial"});
-            this.cobSearchInfo.Location = new System.Drawing.Point(865, 21);
+            this.cobSearchInfo.Location = new System.Drawing.Point(790, 61);
             this.cobSearchInfo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cobSearchInfo.Name = "cobSearchInfo";
             this.cobSearchInfo.Size = new System.Drawing.Size(23, 24);
@@ -1275,7 +1242,7 @@ namespace Movie_File_Merger
             this.pbListsHowTo.ErrorImage = null;
             this.pbListsHowTo.Image = ((System.Drawing.Image)(resources.GetObject("pbListsHowTo.Image")));
             this.pbListsHowTo.InitialImage = null;
-            this.pbListsHowTo.Location = new System.Drawing.Point(1000, 7);
+            this.pbListsHowTo.Location = new System.Drawing.Point(819, 47);
             this.pbListsHowTo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbListsHowTo.Name = "pbListsHowTo";
             this.pbListsHowTo.Size = new System.Drawing.Size(41, 54);
@@ -1293,7 +1260,7 @@ namespace Movie_File_Merger
             this.pbListsUserManual.ErrorImage = null;
             this.pbListsUserManual.Image = ((System.Drawing.Image)(resources.GetObject("pbListsUserManual.Image")));
             this.pbListsUserManual.InitialImage = null;
-            this.pbListsUserManual.Location = new System.Drawing.Point(7, 9);
+            this.pbListsUserManual.Location = new System.Drawing.Point(6, 49);
             this.pbListsUserManual.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbListsUserManual.Name = "pbListsUserManual";
             this.pbListsUserManual.Size = new System.Drawing.Size(47, 53);
@@ -1304,6 +1271,31 @@ namespace Movie_File_Merger
             this.pbListsUserManual.Click += new System.EventHandler(this.PbUserManualClick);
             this.pbListsUserManual.MouseEnter += new System.EventHandler(this.PbPictureLinkMouseEnter);
             this.pbListsUserManual.MouseLeave += new System.EventHandler(this.PbPictureLinkMouseLeave);
+            // 
+            // cobCollections
+            // 
+            this.cobCollections.AutoCompleteCustomSource.AddRange(new string[] {
+            "Movies",
+            "Series",
+            "Documentaries",
+            "Miscelaneous",
+            "Adults",
+            "Clips"});
+            this.cobCollections.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cobCollections.FormattingEnabled = true;
+            this.cobCollections.Items.AddRange(new object[] {
+            "Movies",
+            "Series",
+            "Documentaries",
+            "Miscellaneous",
+            "Adult",
+            "Clips"});
+            this.cobCollections.Location = new System.Drawing.Point(9, 14);
+            this.cobCollections.Name = "cobCollections";
+            this.cobCollections.Size = new System.Drawing.Size(130, 24);
+            this.cobCollections.TabIndex = 17;
+            this.ttMovieFileMerger.SetToolTip(this.cobCollections, resources.GetString("cobCollections.ToolTip"));
+            this.cobCollections.SelectedIndexChanged += new System.EventHandler(this.CobCollections_SelectedIndexChanged);
             // 
             // tpLog
             // 
@@ -1918,7 +1910,6 @@ namespace Movie_File_Merger
             // tpSettings
             // 
             this.tpSettings.BackColor = System.Drawing.SystemColors.Control;
-            this.tpSettings.Controls.Add(this.gbTypeSelection);
             this.tpSettings.Controls.Add(this.cobCheckForUpdates);
             this.tpSettings.Controls.Add(this.cobDoubleClickDefault);
             this.tpSettings.Controls.Add(this.pbSeetingsHowTo);
@@ -2064,11 +2055,11 @@ namespace Movie_File_Merger
             | System.Windows.Forms.AnchorStyles.Right)));
             this.rtbSettings.BackColor = System.Drawing.SystemColors.ControlLight;
             this.rtbSettings.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtbSettings.Location = new System.Drawing.Point(8, 454);
+            this.rtbSettings.Location = new System.Drawing.Point(8, 507);
             this.rtbSettings.Margin = new System.Windows.Forms.Padding(4);
             this.rtbSettings.Name = "rtbSettings";
             this.rtbSettings.ReadOnly = true;
-            this.rtbSettings.Size = new System.Drawing.Size(1042, 216);
+            this.rtbSettings.Size = new System.Drawing.Size(1042, 163);
             this.rtbSettings.TabIndex = 3;
             this.rtbSettings.TabStop = false;
             this.rtbSettings.Text = "";
@@ -3199,12 +3190,12 @@ namespace Movie_File_Merger
             this.toolStripContainer1.ContentPanel.AutoScroll = true;
             this.toolStripContainer1.ContentPanel.Controls.Add(this.tcMovieFileMerger);
             this.toolStripContainer1.ContentPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(1062, 719);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(882, 471);
             this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStripContainer1.Location = new System.Drawing.Point(0, 0);
             this.toolStripContainer1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.toolStripContainer1.Name = "toolStripContainer1";
-            this.toolStripContainer1.Size = new System.Drawing.Size(1062, 774);
+            this.toolStripContainer1.Size = new System.Drawing.Size(882, 526);
             this.toolStripContainer1.TabIndex = 2;
             this.toolStripContainer1.Text = "toolStripContainer1";
             // 
@@ -3217,7 +3208,7 @@ namespace Movie_File_Merger
             this.tspbMFM});
             this.ssMFM.Location = new System.Drawing.Point(0, 0);
             this.ssMFM.Name = "ssMFM";
-            this.ssMFM.Size = new System.Drawing.Size(1062, 30);
+            this.ssMFM.Size = new System.Drawing.Size(882, 30);
             this.ssMFM.TabIndex = 0;
             // 
             // tsslMFM
@@ -3247,134 +3238,16 @@ namespace Movie_File_Merger
             // 
             this.ofdTeraCopy.FileName = "C:\\Program Files\\TeraCopy\\TeraCopy.exe";
             // 
-            // gbTypeSelection
-            // 
-            this.gbTypeSelection.Controls.Add(this.rbMiscellaneous);
-            this.gbTypeSelection.Controls.Add(this.rbAdults);
-            this.gbTypeSelection.Controls.Add(this.rbClips);
-            this.gbTypeSelection.Controls.Add(this.rbSeries);
-            this.gbTypeSelection.Controls.Add(this.rbDocumentaries);
-            this.gbTypeSelection.Controls.Add(this.rbMovies);
-            this.gbTypeSelection.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.gbTypeSelection.Location = new System.Drawing.Point(11, 390);
-            this.gbTypeSelection.Margin = new System.Windows.Forms.Padding(4);
-            this.gbTypeSelection.Name = "gbTypeSelection";
-            this.gbTypeSelection.Padding = new System.Windows.Forms.Padding(4);
-            this.gbTypeSelection.Size = new System.Drawing.Size(1037, 56);
-            this.gbTypeSelection.TabIndex = 50;
-            this.gbTypeSelection.TabStop = false;
-            this.gbTypeSelection.Text = "Collections";
-            this.ttMovieFileMerger.SetToolTip(this.gbTypeSelection, resources.GetString("gbTypeSelection.ToolTip"));
-            // 
-            // rbMiscellaneous
-            // 
-            this.rbMiscellaneous.Checked = true;
-            this.rbMiscellaneous.ImageKey = "Miscellaneaous.gif";
-            this.rbMiscellaneous.ImageList = this.ilMovieFileMerger;
-            this.rbMiscellaneous.Location = new System.Drawing.Point(515, 18);
-            this.rbMiscellaneous.Margin = new System.Windows.Forms.Padding(4);
-            this.rbMiscellaneous.Name = "rbMiscellaneous";
-            this.rbMiscellaneous.Size = new System.Drawing.Size(155, 30);
-            this.rbMiscellaneous.TabIndex = 15;
-            this.rbMiscellaneous.TabStop = true;
-            this.rbMiscellaneous.Tag = "Miscellaneous";
-            this.rbMiscellaneous.Text = "Miscellaneous";
-            this.rbMiscellaneous.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ttMovieFileMerger.SetToolTip(this.rbMiscellaneous, "Use this collection for any video of any kind as temporarily collection \r\nto clea" +
-        "n up your collections.");
-            this.rbMiscellaneous.UseVisualStyleBackColor = true;
-            // 
-            // rbAdults
-            // 
-            this.rbAdults.ImageKey = "Adult.gif";
-            this.rbAdults.ImageList = this.ilMovieFileMerger;
-            this.rbAdults.Location = new System.Drawing.Point(400, 18);
-            this.rbAdults.Margin = new System.Windows.Forms.Padding(4);
-            this.rbAdults.Name = "rbAdults";
-            this.rbAdults.Size = new System.Drawing.Size(107, 30);
-            this.rbAdults.TabIndex = 14;
-            this.rbAdults.Tag = "Adults";
-            this.rbAdults.Text = "Adults";
-            this.rbAdults.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ttMovieFileMerger.SetToolTip(this.rbAdults, "An Adult video is telling a fictive story by the use of special actors, \r\nwhich s" +
-        "hould not be watched by persons under 18 years.");
-            this.rbAdults.UseVisualStyleBackColor = true;
-            // 
-            // rbClips
-            // 
-            this.rbClips.ImageKey = "Clips.gif";
-            this.rbClips.ImageList = this.ilMovieFileMerger;
-            this.rbClips.Location = new System.Drawing.Point(678, 18);
-            this.rbClips.Margin = new System.Windows.Forms.Padding(4);
-            this.rbClips.Name = "rbClips";
-            this.rbClips.Size = new System.Drawing.Size(88, 30);
-            this.rbClips.TabIndex = 16;
-            this.rbClips.Tag = "Clips";
-            this.rbClips.Text = "Clips";
-            this.rbClips.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ttMovieFileMerger.SetToolTip(this.rbClips, "A clip is a short video telling the story of a song by using dancers.");
-            this.rbClips.UseVisualStyleBackColor = true;
-            // 
-            // rbSeries
-            // 
-            this.rbSeries.ImageKey = "Series.gif";
-            this.rbSeries.ImageList = this.ilMovieFileMerger;
-            this.rbSeries.Location = new System.Drawing.Point(292, 18);
-            this.rbSeries.Margin = new System.Windows.Forms.Padding(4);
-            this.rbSeries.Name = "rbSeries";
-            this.rbSeries.Size = new System.Drawing.Size(100, 30);
-            this.rbSeries.TabIndex = 13;
-            this.rbSeries.Tag = "Series";
-            this.rbSeries.Text = "Series";
-            this.rbSeries.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ttMovieFileMerger.SetToolTip(this.rbSeries, "Series are a video collection telling a fictive story in multiple parts or \r\nepis" +
-        "odes by the use of actors.");
-            this.rbSeries.UseVisualStyleBackColor = true;
-            // 
-            // rbDocumentaries
-            // 
-            this.rbDocumentaries.ImageKey = "Documentaries.gif";
-            this.rbDocumentaries.ImageList = this.ilMovieFileMerger;
-            this.rbDocumentaries.Location = new System.Drawing.Point(131, 18);
-            this.rbDocumentaries.Margin = new System.Windows.Forms.Padding(4);
-            this.rbDocumentaries.Name = "rbDocumentaries";
-            this.rbDocumentaries.Size = new System.Drawing.Size(155, 30);
-            this.rbDocumentaries.TabIndex = 12;
-            this.rbDocumentaries.Tag = "Documentaries";
-            this.rbDocumentaries.Text = "Documentaries";
-            this.rbDocumentaries.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ttMovieFileMerger.SetToolTip(this.rbDocumentaries, "A documentary is a video that is telling a more real story by the use of presente" +
-        "rs or \r\na movie or a television program that provides a factual record or report" +
-        ".");
-            this.rbDocumentaries.UseVisualStyleBackColor = true;
-            // 
-            // rbMovies
-            // 
-            this.rbMovies.ImageKey = "Movie.gif";
-            this.rbMovies.ImageList = this.ilMovieFileMerger;
-            this.rbMovies.Location = new System.Drawing.Point(16, 18);
-            this.rbMovies.Margin = new System.Windows.Forms.Padding(4);
-            this.rbMovies.Name = "rbMovies";
-            this.rbMovies.Size = new System.Drawing.Size(107, 30);
-            this.rbMovies.TabIndex = 11;
-            this.rbMovies.Tag = "Movies";
-            this.rbMovies.Text = "Movies";
-            this.rbMovies.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ttMovieFileMerger.SetToolTip(this.rbMovies, "A movie is a video telling a fictive story by the use of actors or \r\na story or e" +
-        "vent recorded by a camera as a set of moving images and \r\nshown in a theater or " +
-        "on television; a motion picture.");
-            this.rbMovies.UseVisualStyleBackColor = true;
-            // 
             // MFMForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1062, 774);
+            this.ClientSize = new System.Drawing.Size(882, 526);
             this.Controls.Add(this.toolStripContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MinimumSize = new System.Drawing.Size(845, 566);
+            this.MinimumSize = new System.Drawing.Size(900, 500);
             this.Name = "MFMForm";
             this.Text = "Movie File Merger";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MfFormClosing);
@@ -3446,7 +3319,6 @@ namespace Movie_File_Merger
             this.toolStripContainer1.PerformLayout();
             this.ssMFM.ResumeLayout(false);
             this.ssMFM.PerformLayout();
-            this.gbTypeSelection.ResumeLayout(false);
             this.ResumeLayout(false);
 
 		}
@@ -3511,7 +3383,6 @@ namespace Movie_File_Merger
 		private System.Windows.Forms.StatusStrip ssMFM;
 		private System.Windows.Forms.ToolStripStatusLabel tsslMFM;
 		private System.Windows.Forms.ToolStripProgressBar tspbMFM;
-		private System.Windows.Forms.Button btnStart;
 		private System.Windows.Forms.Button btnCheckNow;
 		private System.Windows.Forms.Label lblLastChecked;
 		private System.Windows.Forms.ComboBox cobCriteria;
@@ -3622,12 +3493,6 @@ namespace Movie_File_Merger
         private System.Windows.Forms.PictureBox pbLogDonateLeft;
         private System.Windows.Forms.Button btnResetColors;
         private System.Windows.Forms.Button btnOrphanAddon;
-        private System.Windows.Forms.GroupBox gbTypeSelection;
-        private System.Windows.Forms.RadioButton rbMiscellaneous;
-        private System.Windows.Forms.RadioButton rbAdults;
-        private System.Windows.Forms.RadioButton rbClips;
-        private System.Windows.Forms.RadioButton rbSeries;
-        private System.Windows.Forms.RadioButton rbDocumentaries;
-        private System.Windows.Forms.RadioButton rbMovies;
+        private System.Windows.Forms.ComboBox cobCollections;
     }
 }
