@@ -260,6 +260,7 @@ namespace Movie_File_Merger {
             InitListViewFromFile( lvGarbage );
             InitListViewFromFile( lvExisting );
             InitListViewFromFile( lvWish );
+            SetStatus("Hi there! Hover with the mouse over any element to show information about it's basic function...");
         }
 
         /// <summary>
@@ -1263,7 +1264,6 @@ namespace Movie_File_Merger {
             if ( lvListView.Items.Count > 0 ) {
                 SetStatus( "Added " + lvListView.Items.Count + " items to " + lvListView.Tag + " " + strCollectionType + "." );
             }
-            ClearStatus( );
         }
 
         #endregion ListView File Import & Export
