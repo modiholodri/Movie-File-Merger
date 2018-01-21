@@ -1428,6 +1428,20 @@ namespace Movie_File_Merger {
             return "";
         }
 
+        string GetMediaInfo ( string sFileName )
+        {
+            string sMediaInfo = "";
+            miThis.Open(sFileName);
+            miThis.Option("Inform", "General;General:  %Duration/String% in %Format% container %Video_Format_List% codec"); // file size
+            sMediaInfo = miThis.Inform();
+            miThis.Option("Inform", "Video;Video:  %Width% x%Height% (%DisplayAspectRatio/String%) at %FrameRate/String% with %BitRate/String%");
+            sMediaInfo += "\n" + miThis.Inform();
+            miThis.Option("Inform", "Audio;Audio:  %Channel(s)/String% at %SamplingRate/String% %Format% %Language/String%");
+            sMediaInfo += miThis.Inform().Replace("Audio: ", "\nAudio: ").Replace("Audio:  ,", "Audio:");
+            miThis.Close();
+            return sMediaInfo;
+        }
+
         /// <summary>
         /// Extracts full information of a file with MediaInfo, but returns only selected information. 
         /// </summary>
@@ -1487,22 +1501,27 @@ namespace Movie_File_Merger {
                 if (File.Exists(fiFile.FullName))
                 { 
                     SetStatus("Getting MediaInfo for " + fiFile.Name);
-                    miThis.Open(fiFile.FullName);
-                    miThis.Option("Inform", "General;General:  %Duration/String% in %Format% container %Video_Format_List% codec"); // file size
-                    sMediaInfo += "\n\n" + miThis.Inform();
-                    miThis.Option("Inform", "Video;Video:  %Width% x%Height% (%DisplayAspectRatio/String%) at %FrameRate/String% with %BitRate/String%");
-                    sMediaInfo += "\n" + miThis.Inform();
-                    miThis.Option("Inform", "Audio;Audio:  %Channel(s)/String% at %SamplingRate/String% %Format% %Language/String%");
-                    sMediaInfo += miThis.Inform().Replace("Audio: ", "\nAudio: ").Replace("Audio:  ,", "Audio:");
-                    miThis.Close();
+                    sMediaInfo = GetMediaInfo(fiFile.FullName);
                 }
                 // Make new tool tip 
-                lviThis.ToolTipText = sFileInfo + sMediaInfo;
+                lviThis.ToolTipText = sFileInfo + "\n\n" + sMediaInfo;
                 SetListViewChanged( lvThis, true );
             }
             else if ( bDifferentFileInfo ) {
-                SetStatus( "Different File Info for " + fiFile.Name );
-                lviThis.ToolTipText = sFileInfo + sMediaInfo;
+                string sOtherFileName = GetMainFilePathFromToolTip(lviThis.ToolTipText);
+                if (File.Exists(sOtherFileName)) {
+                    SetStatus("Dup[licated Main File for " + fiFile.Name);
+                    sMediaInfo = GetMediaInfo(fiFile.FullName);
+                    LogMessage("This File", Color.OrangeRed, fiFile.FullName + "\n" + sMediaInfo.TrimStart());
+                    LogMessage("Other File", Color.Olive, sOtherFileName + "\n" + GetMediaInfo(sOtherFileName).TrimStart());
+                }
+                else
+                {
+                    SetStatus("Different File Info for " + fiFile.Name);
+                    sMediaInfo = GetMediaInfo(fiFile.FullName);
+                }
+
+                lviThis.ToolTipText = sFileInfo + "\n\n" + sMediaInfo;
                 SetListViewChanged( lvThis, true );
             }
         }
@@ -3583,7 +3602,7 @@ namespace Movie_File_Merger {
             }
         }
 
-        private void btnSelectColor_DragDrop(object sender, DragEventArgs e)
+        private void BtnSelectColor_DragDrop(object sender, DragEventArgs e)
         {
             foreach (ListViewItem lviThis in lvDragSource.SelectedItems)
             {
@@ -3603,7 +3622,7 @@ namespace Movie_File_Merger {
             }
         }
 
-        private void btnSelectColor_Click(object sender, EventArgs e)
+        private void BtnSelectColor_Click(object sender, EventArgs e)
         {
             foreach (ListViewItem lviThis in lvLastClicked.SelectedItems)
             {
