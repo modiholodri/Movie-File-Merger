@@ -1510,7 +1510,7 @@ namespace Movie_File_Merger {
             else if ( bDifferentFileInfo ) {
                 string sOtherFileName = GetMainFilePathFromToolTip(lviThis.ToolTipText);
                 if (File.Exists(sOtherFileName)) {
-                    SetStatus("Dup[licated Main File for " + fiFile.Name);
+                    SetStatus("Duplicated Main File for " + fiFile.Name);
                     sMediaInfo = GetMediaInfo(fiFile.FullName);
                     LogMessage("This File", Color.OrangeRed, fiFile.FullName + "\n" + sMediaInfo.TrimStart());
                     LogMessage("Other File", Color.Olive, sOtherFileName + "\n" + GetMediaInfo(sOtherFileName).TrimStart());
@@ -3044,11 +3044,29 @@ namespace Movie_File_Merger {
                     writer.WriteStartElement( "MFMSettings" );  // root exlement
                     writer.WriteEndElement( );  // close the root element
                     writer.WriteEndDocument( );
+                    writer.Close();
                 }
             }
 
             var xmlSettings = new XmlDocument( );
-            xmlSettings.Load( strXmlSettingsFilePath );
+            try
+            {
+                xmlSettings.Load(strXmlSettingsFilePath);
+            }
+            catch(XmlException exThis)
+            {
+                ShowError("Had a problem loading the Settings...\n" + exThis.Message);
+                File.Delete(strXmlSettingsFilePath);
+                using (XmlWriter writer = XmlWriter.Create(strXmlSettingsFilePath)) // create a dummy
+                {
+                    writer.WriteStartDocument();
+                    writer.WriteStartElement("MFMSettings");  // root exlement
+                    writer.WriteEndElement();  // close the root element
+                    writer.WriteEndDocument();
+                    writer.Close();
+                }
+                xmlSettings.Load(strXmlSettingsFilePath);
+            }
 
             // General settings			
             strNickName = ReadXmlSetting( xmlSettings, "/MFMSettings/General/NickName", "Anonymous" );
