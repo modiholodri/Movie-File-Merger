@@ -48,6 +48,8 @@ namespace Movie_File_Merger
             this.ContentPanel = new System.Windows.Forms.ToolStripContentPanel();
             this.tcMovieFileMerger = new System.Windows.Forms.TabControl();
             this.tpSeparateLists = new System.Windows.Forms.TabPage();
+            this.pbMousePointerMFM = new System.Windows.Forms.PictureBox();
+            this.cobCollections = new System.Windows.Forms.ComboBox();
             this.cobMinimumResolution = new System.Windows.Forms.ComboBox();
             this.cbGetHigherRes = new System.Windows.Forms.CheckBox();
             this.rbMove = new System.Windows.Forms.RadioButton();
@@ -88,7 +90,6 @@ namespace Movie_File_Merger
             this.cobSearchInfo = new System.Windows.Forms.ComboBox();
             this.pbListsHowTo = new System.Windows.Forms.PictureBox();
             this.pbListsUserManual = new System.Windows.Forms.PictureBox();
-            this.cobCollections = new System.Windows.Forms.ComboBox();
             this.tpLog = new System.Windows.Forms.TabPage();
             this.pbLodDonateRight = new System.Windows.Forms.PictureBox();
             this.pbLogDonateLeft = new System.Windows.Forms.PictureBox();
@@ -173,9 +174,9 @@ namespace Movie_File_Merger
             this.tspbMFM = new System.Windows.Forms.ToolStripProgressBar();
             this.ttMovieFileMerger = new System.Windows.Forms.ToolTip(this.components);
             this.ofdTeraCopy = new System.Windows.Forms.OpenFileDialog();
-            this.pbMousePointerMFM = new System.Windows.Forms.PictureBox();
             this.tcMovieFileMerger.SuspendLayout();
             this.tpSeparateLists.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMousePointerMFM)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scVertical)).BeginInit();
             this.scVertical.Panel1.SuspendLayout();
             this.scVertical.Panel2.SuspendLayout();
@@ -225,7 +226,6 @@ namespace Movie_File_Merger
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
             this.ssMFM.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMousePointerMFM)).BeginInit();
             this.SuspendLayout();
             // 
             // fbdMovieFileMerger
@@ -374,6 +374,44 @@ namespace Movie_File_Merger
             this.tpSeparateLists.Size = new System.Drawing.Size(874, 436);
             this.tpSeparateLists.TabIndex = 0;
             this.tpSeparateLists.Text = "Lists";
+            // 
+            // pbMousePointerMFM
+            // 
+            this.pbMousePointerMFM.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbMousePointerMFM.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pbMousePointerMFM.Image = ((System.Drawing.Image)(resources.GetObject("pbMousePointerMFM.Image")));
+            this.pbMousePointerMFM.Location = new System.Drawing.Point(367, 52);
+            this.pbMousePointerMFM.Name = "pbMousePointerMFM";
+            this.pbMousePointerMFM.Size = new System.Drawing.Size(158, 49);
+            this.pbMousePointerMFM.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbMousePointerMFM.TabIndex = 57;
+            this.pbMousePointerMFM.TabStop = false;
+            // 
+            // cobCollections
+            // 
+            this.cobCollections.AutoCompleteCustomSource.AddRange(new string[] {
+            "Movies",
+            "Series",
+            "Documentaries",
+            "Miscelaneous",
+            "Adults",
+            "Clips"});
+            this.cobCollections.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cobCollections.FormattingEnabled = true;
+            this.cobCollections.Items.AddRange(new object[] {
+            "Movies",
+            "Series",
+            "Documentaries",
+            "Miscellaneous",
+            "Adult",
+            "Clips"});
+            this.cobCollections.Location = new System.Drawing.Point(9, 14);
+            this.cobCollections.Name = "cobCollections";
+            this.cobCollections.Size = new System.Drawing.Size(130, 24);
+            this.cobCollections.TabIndex = 17;
+            this.ttMovieFileMerger.SetToolTip(this.cobCollections, resources.GetString("cobCollections.ToolTip"));
+            this.cobCollections.SelectedIndexChanged += new System.EventHandler(this.CobCollections_SelectedIndexChanged);
             // 
             // cobMinimumResolution
             // 
@@ -1226,31 +1264,6 @@ namespace Movie_File_Merger
             this.pbListsUserManual.Click += new System.EventHandler(this.PbUserManualClick);
             this.pbListsUserManual.MouseEnter += new System.EventHandler(this.PbPictureLinkMouseEnter);
             this.pbListsUserManual.MouseLeave += new System.EventHandler(this.PbPictureLinkMouseLeave);
-            // 
-            // cobCollections
-            // 
-            this.cobCollections.AutoCompleteCustomSource.AddRange(new string[] {
-            "Movies",
-            "Series",
-            "Documentaries",
-            "Miscelaneous",
-            "Adults",
-            "Clips"});
-            this.cobCollections.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cobCollections.FormattingEnabled = true;
-            this.cobCollections.Items.AddRange(new object[] {
-            "Movies",
-            "Series",
-            "Documentaries",
-            "Miscellaneous",
-            "Adult",
-            "Clips"});
-            this.cobCollections.Location = new System.Drawing.Point(9, 14);
-            this.cobCollections.Name = "cobCollections";
-            this.cobCollections.Size = new System.Drawing.Size(130, 24);
-            this.cobCollections.TabIndex = 17;
-            this.ttMovieFileMerger.SetToolTip(this.cobCollections, resources.GetString("cobCollections.ToolTip"));
-            this.cobCollections.SelectedIndexChanged += new System.EventHandler(this.CobCollections_SelectedIndexChanged);
             // 
             // tpLog
             // 
@@ -2649,19 +2662,6 @@ namespace Movie_File_Merger
             // 
             this.ofdTeraCopy.FileName = "C:\\Program Files\\TeraCopy\\TeraCopy.exe";
             // 
-            // pbMousePointerMFM
-            // 
-            this.pbMousePointerMFM.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbMousePointerMFM.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pbMousePointerMFM.Image = ((System.Drawing.Image)(resources.GetObject("pbMousePointerMFM.Image")));
-            this.pbMousePointerMFM.Location = new System.Drawing.Point(367, 52);
-            this.pbMousePointerMFM.Name = "pbMousePointerMFM";
-            this.pbMousePointerMFM.Size = new System.Drawing.Size(158, 49);
-            this.pbMousePointerMFM.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pbMousePointerMFM.TabIndex = 57;
-            this.pbMousePointerMFM.TabStop = false;
-            // 
             // MFMForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -2679,6 +2679,7 @@ namespace Movie_File_Merger
             this.SizeChanged += new System.EventHandler(this.MainFormSizeChanged);
             this.tcMovieFileMerger.ResumeLayout(false);
             this.tpSeparateLists.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbMousePointerMFM)).EndInit();
             this.scVertical.Panel1.ResumeLayout(false);
             this.scVertical.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.scVertical)).EndInit();
@@ -2733,7 +2734,6 @@ namespace Movie_File_Merger
             this.toolStripContainer1.PerformLayout();
             this.ssMFM.ResumeLayout(false);
             this.ssMFM.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMousePointerMFM)).EndInit();
             this.ResumeLayout(false);
 
 		}
