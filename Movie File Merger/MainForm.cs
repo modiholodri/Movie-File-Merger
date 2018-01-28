@@ -575,8 +575,9 @@ namespace Movie_File_Merger {
             if ( rgxEpisodesId.IsMatch( strName ) || ( cobCollections.Text == "Series" && tpSeparateLists.ContainsFocus ) ) {
                 strSearchWhat = "+TV+Series";
             }
+            string strYear = GetYearFromText(strCleanName);
             strCleanName = CleanName( strCleanName );
-            strCleanName = RemoveEpisodeInfo( strCleanName );
+            strCleanName = RemoveEpisodeInfo( strCleanName ) + " " + strYear;
             strCleanName = strCleanName.Replace( ' ', '+' );
 
             switch ( cobSearchInfo.Text ) {
@@ -691,10 +692,12 @@ namespace Movie_File_Merger {
         /// <param name="strCleanName">The clean name of the item to serach for.</param>
         void SearchDownload( string strCleanName )
         {
-            LogMessage( "Info", Color.Blue, "Searching " + cobSearchDownload.Text + " for " + strCleanName );
-            if ( cobDownloadCriteria.Text != "Don't Care" ) {
-                strCleanName += "+" + cobDownloadCriteria.Text;
+            if (cobDownloadCriteria.Text != "Don't Care")
+            {
+                strCleanName += " " + cobDownloadCriteria.Text;
             }
+            LogMessage( "Info", Color.Blue, "Searching " + cobSearchDownload.Text + " for " + strCleanName );
+            strCleanName = strCleanName.Replace(' ', '+');
             switch ( cobSearchDownload.Text ) {
                 case "Best Below":
                     ExecuteThis( "https://1337x.to/search/" + strCleanName + "/1/" );
@@ -758,6 +761,16 @@ namespace Movie_File_Merger {
         }
 
         /// <summary>
+        /// Get the first string which looks similar to something like a year.
+        /// </summary>
+        /// <param name="sText">The text to search for the first year.</param>
+        /// <returns></returns>
+        string GetYearFromText (string sText)
+        {
+            return Regex.Match(sText, @"[12]\d{3}").Value;
+        }
+
+        /// <summary>
         /// Searches the internet for the selected items of the list view, 
         /// which has been droped on the Search Download droparea.
         /// </summary>
@@ -766,8 +779,9 @@ namespace Movie_File_Merger {
         {
             int iCount = 1;
             foreach ( ListViewItem lviItem in lvListView.SelectedItems ) {
-                string strCleanName = Path.GetFileNameWithoutExtension( lviItem.Text ).Replace( ' ', '+' );
-                SearchDownload( strCleanName );
+                string strCleanName = CleanName( Path.GetFileNameWithoutExtension( lviItem.Text ) );
+                string strYear = GetYearFromText(lviItem.ToolTipText);
+                SearchDownload( strCleanName + " " + strYear );
                 if ( iCount++ % 10 == 0 ) {
                     if ( ShowYesNoQuestion( "You searched for 10 Items already.\nSearch for the next 10?" ) == DialogResult.No ) break;
                 }
@@ -783,9 +797,9 @@ namespace Movie_File_Merger {
         {
             int iCount = 1;
             foreach ( string strPath in strcolToSearch ) {
-                string strCleanName = Path.GetFileNameWithoutExtension( strPath ).Replace( ' ', '+' );
-                LogMessage( "Info", Color.Blue, "Searching " + cobSearchDownloadMaintenance.Text + " for " + strCleanName );
-                SearchDownload( strCleanName );
+                string strCleanName = CleanName(Path.GetFileNameWithoutExtension( strPath ));
+                string strYear = GetYearFromText(strPath);
+                SearchDownload( strCleanName + " " + strYear );
                 if ( iCount++ % 10 == 0 ) {
                     if ( ShowYesNoQuestion( "You searched for 10 Items already.\nSearch for the next 10?" ) == DialogResult.No ) break;
                 }
@@ -801,7 +815,8 @@ namespace Movie_File_Merger {
         {
             int iCount = 1;
             foreach ( ListViewItem lviItem in lvListView.SelectedItems ) {
-                SearchInfo( lviItem.Text );
+                string strYear = GetYearFromText(lviItem.ToolTipText);
+                SearchInfo( lviItem.Text + " " + strYear );
                 if ( iCount++ % 10 == 0 ) {
                     if ( ShowYesNoQuestion( "You searched for 10 Items already.\nSearch for the next 10?" ) == DialogResult.No ) break;
                 }
@@ -817,7 +832,8 @@ namespace Movie_File_Merger {
         {
             int iCount = 1;
             foreach ( string strPath in strcolToSearch ) {
-                SearchInfo( strPath );
+                string strYear = GetYearFromText(strPath);
+                SearchInfo( CleanName( strPath) + " " + strYear );
                 if ( iCount++ % 10 == 0 ) {
                     if ( ShowYesNoQuestion( "You searched for 10 Items already.\nSearch for the next 10?" ) == DialogResult.No ) break;
                 }
@@ -2873,16 +2889,17 @@ namespace Movie_File_Merger {
             foreach ( ListViewItem lviThis in lvMaintenance.SelectedItems ) {
                 strPath = lviThis.Text;
             }
-            string strCleanName = CleanName( Path.GetFileNameWithoutExtension( strPath ) );
+            string strCleanName = CleanName(Path.GetFileNameWithoutExtension(strPath));
+            string strYear = GetYearFromText (strPath);
             switch ( cobDoubleClickDefault.Text ) {
                 case "Play":
                     ExecuteThis( strPath );
                     break;
                 case "Search Info":
-                    SearchInfo( strCleanName );
+                    SearchInfo( strCleanName + " " + strYear);
                     break;
                 case "Search Download":
-                    SearchDownload( strCleanName );
+                    SearchDownload( strCleanName + " " + strYear );
                     break;
                 default:
                     ExecuteThis( strPath );
