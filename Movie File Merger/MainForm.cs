@@ -767,7 +767,11 @@ namespace Movie_File_Merger {
         /// <returns></returns>
         string GetYearFromText (string sText)
         {
-            return Regex.Match(sText, @"[12]\d{3}").Value;
+            int iFirstLineBreak = sText.IndexOf('\n');
+            if (iFirstLineBreak > 0) {
+                sText = sText.Substring(0, iFirstLineBreak);
+            }
+            return Regex.Match(sText, @"19\d{2}|20[0-2]\d").Value;
         }
 
         /// <summary>
