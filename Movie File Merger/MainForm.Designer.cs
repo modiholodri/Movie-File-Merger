@@ -397,6 +397,7 @@ namespace Movie_File_Merger
             "Miscelaneous",
             "Adults",
             "Clips"});
+            this.cobCollections.BackColor = System.Drawing.SystemColors.Control;
             this.cobCollections.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cobCollections.FormattingEnabled = true;
             this.cobCollections.Items.AddRange(new object[] {
@@ -575,7 +576,7 @@ namespace Movie_File_Merger
             // 
             // cobDownloadCriteria
             // 
-            this.cobDownloadCriteria.BackColor = System.Drawing.SystemColors.Control;
+            this.cobDownloadCriteria.BackColor = System.Drawing.SystemColors.ControlDark;
             this.cobDownloadCriteria.DropDownWidth = 130;
             this.cobDownloadCriteria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cobDownloadCriteria.FormattingEnabled = true;
@@ -680,7 +681,7 @@ namespace Movie_File_Merger
             this.cobCriteria.AllowDrop = true;
             this.cobCriteria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cobCriteria.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.cobCriteria.BackColor = System.Drawing.SystemColors.Control;
             this.cobCriteria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cobCriteria.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.cobCriteria.FormattingEnabled = true;
@@ -1163,7 +1164,7 @@ namespace Movie_File_Merger
             // 
             // cobSearchDownload
             // 
-            this.cobSearchDownload.BackColor = System.Drawing.SystemColors.Control;
+            this.cobSearchDownload.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.cobSearchDownload.DropDownWidth = 130;
             this.cobSearchDownload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cobSearchDownload.FormattingEnabled = true;
@@ -1194,7 +1195,7 @@ namespace Movie_File_Merger
             // cobSearchInfo
             // 
             this.cobSearchInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cobSearchInfo.BackColor = System.Drawing.SystemColors.Control;
+            this.cobSearchInfo.BackColor = System.Drawing.SystemColors.ControlDark;
             this.cobSearchInfo.DropDownWidth = 130;
             this.cobSearchInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cobSearchInfo.FormattingEnabled = true;

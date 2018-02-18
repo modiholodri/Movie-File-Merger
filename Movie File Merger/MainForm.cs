@@ -1380,28 +1380,32 @@ namespace Movie_File_Merger {
             return strFilePath.Substring( strFilePath.IndexOf( "] ", StringComparison.CurrentCulture ) + 3 ) + "\\" + strFileName;
         }
 
+        int GetHorizontalRes( string sThisInfo )
+        {
+            int iThisResolution = -1;
+            Match mtExistingResolution = Regex.Match(sThisInfo, "Video:  \\d+");
+            if (mtExistingResolution.Success)
+            {
+                string sThisResolution = Regex.Match(mtExistingResolution.Value, @"\d+").Value;
+                iThisResolution = Int32.Parse(sThisResolution);
+            }
+            return iThisResolution;
+        }
+
         /// <summary>
         /// Checks if the horizoltal resolution in the tool tip of the new list view item is higher.
         /// </summary>
-        /// <param name="lviExisting">Existing ListViewItem</param>
-        /// <param name="lviImport">Import ListViewItem</param>
+        /// <param name="sThisInfo">Info about this file.</param>
+        /// <param name="sOtherInfo">Info about the other file.</param>
         /// <returns>True: if New Item Resolution is higher.</returns>
-        bool HorizontalResolutionIsHigher( ListViewItem lviExisting, ListViewItem lviImport )
+        bool HorizontalResolutionIsHigher( string sThisInfo, string sOtherInfo )
         {
             bool bResolutionIsHigher = false;
 
-            if ( cbGetHigherRes.Checked ) {
-                Match mtExistingResolution = Regex.Match( lviExisting.ToolTipText, "Video:  \\d+" );
-                if ( mtExistingResolution.Success ) {
-                    Match mtImportResolution = Regex.Match( lviImport.ToolTipText, "Video:  \\d+" );
-                    if ( mtImportResolution.Success ) {
-                        string sExistingResolution = Regex.Match( mtExistingResolution.Value, @"\d+" ).Value;
-                        int iExistingResolution = Int32.Parse( sExistingResolution );
-                        string sImportResolution = Regex.Match( mtImportResolution.Value, @"\d+" ).Value;
-                        int iImportResolution = Int32.Parse( sImportResolution );
-                        bResolutionIsHigher = iExistingResolution < iImportResolution;
-                    }
-                }
+            int iThisResolution = GetHorizontalRes ( sThisInfo );
+            int iOtherResoution = GetHorizontalRes ( sOtherInfo );
+            if (iThisResolution != -1 && iOtherResoution != -1) {
+                bResolutionIsHigher = iThisResolution < iOtherResoution;
             }
             return bResolutionIsHigher;
         }
@@ -1463,6 +1467,38 @@ namespace Movie_File_Merger {
         }
 
         /// <summary>
+        /// Get the file size in MIB.
+        /// </summary>
+        /// <param name="fiFle"></param>
+        /// <returns></returns>
+        long GetMib ( FileInfo fiFile )
+        {
+            long lMiB = 0;
+            if (File.Exists(fiFile.FullName))
+            {
+                lMiB = fiFile.Length / 1024 / 1024;
+            }
+            return lMiB;
+        }
+
+        /// <summary>
+        /// Get detailed information about the files for the tool tip.
+        /// </summary>
+        /// <param name="fiFile">The file info of the relvant file.</param>
+        /// <returns></returns>
+        string GetFileInfo ( FileInfo fiFile )
+        {
+            long lMiB = GetMib(fiFile);
+            string sInfo = lMiB + " MiB,  " + fiFile.Extension.ToUpper().Substring(1);
+
+            string sFileInfo = "File:  " + fiFile.Name + "\n" +
+                               "Path:  " + fiFile.DirectoryName + "\n" +
+                               "Info:  " + sInfo +
+                               ", Last Written " + StandardizeDate(fiFile.LastWriteTime);
+            return sFileInfo;
+        }
+
+        /// <summary>
         /// Extracts full information of a file with MediaInfo, but returns only selected information. 
         /// </summary>
         /// <param name="fiFile">The file to analyse.</param>
@@ -1476,28 +1512,18 @@ namespace Movie_File_Merger {
             bool bHasMediaInfo = lviThis.ToolTipText.Contains( "Video: " );
             bool bHasNewMediaInfo = lviThis.ToolTipText.Contains( "General: " );
 
-            string sMediaInfo = "";
+            string sThisMediaInfo = "";
             bool bGetFullDetails = false;
 
-            long lMiB = 0;
-            if (File.Exists(fiFile.FullName))
-            {
-                lMiB = fiFile.Length / 1024 / 1024;
-            }
-            string sInfo = lMiB + " MiB,  " + fiFile.Extension.ToUpper().Substring(1);
-
-            string sFileInfo = "File:  " + fiFile.Name + "\n" +
-                               "Path:  " + fiFile.DirectoryName + "\n" +
-                               "Info:  " + sInfo +
-                               ", Last Written " + StandardizeDate( fiFile.LastWriteTime );
-            bool bDifferentFileInfo = !lviThis.ToolTipText.Contains( sFileInfo );
+            string sThisFileInfo = GetFileInfo ( fiFile );
+            bool bDifferentFileInfo = !lviThis.ToolTipText.Contains( sThisFileInfo );
 
             switch ( strListType ) {
                 case "Import":
                     bool bIsGarbage = FindItem( lvGarbage, lviThis.Text ) != null;
 
-                    sMediaInfo = GetExistingMediaInfo( lviThis.Text, lMiB );
-                    if ( sMediaInfo == "" && !bHasMediaInfo && cbGetHigherRes.Checked && !bIsGarbage ) {
+                    sThisMediaInfo = GetExistingMediaInfo( lviThis.Text, GetMib(fiFile));
+                    if ( sThisMediaInfo == "" && !bHasMediaInfo && cbGetHigherRes.Checked && !bIsGarbage ) {
                         bGetFullDetails = true;
                     }
                     break;
@@ -1521,27 +1547,40 @@ namespace Movie_File_Merger {
                 if (File.Exists(fiFile.FullName))
                 { 
                     SetStatus("Getting MediaInfo for " + fiFile.Name);
-                    sMediaInfo = GetMediaInfo(fiFile.FullName);
+                    sThisMediaInfo = GetMediaInfo(fiFile.FullName);
                 }
                 // Make new tool tip 
-                lviThis.ToolTipText = sFileInfo + "\n\n" + sMediaInfo;
+                lviThis.ToolTipText = sThisFileInfo + "\n\n" + sThisMediaInfo;
                 SetListViewChanged( lvThis, true );
             }
             else if ( bDifferentFileInfo ) {
                 string sOtherFileName = GetMainFilePathFromToolTip(lviThis.ToolTipText);
                 if (File.Exists(sOtherFileName)) {
                     SetStatus("Duplicated Main File for " + fiFile.Name);
-                    sMediaInfo = GetMediaInfo(fiFile.FullName);
-                    LogMessage("This File", Color.OrangeRed, fiFile.FullName + "\n" + sMediaInfo.TrimStart());
-                    LogMessage("Other File", Color.Olive, sOtherFileName + "\n" + GetMediaInfo(sOtherFileName).TrimStart());
+                    sThisMediaInfo = GetMediaInfo(fiFile.FullName).TrimStart();
+                    string sOtherMediaInfo = GetMediaInfo(sOtherFileName).TrimStart();
+                    FileInfo fiOtherFileName = new FileInfo(sOtherFileName);
+                    string sOtherFileInfo = GetFileInfo(fiOtherFileName);
+
+                    int iThisResolution = GetHorizontalRes(sThisMediaInfo);
+                    int iOtherResolution = GetHorizontalRes(sOtherMediaInfo);
+                    Color cThisFileColor = GoodMovieColor;
+                    if (iThisResolution != -1 && iOtherResolution != -1)
+                    {
+                        if (iThisResolution < iOtherResolution) cThisFileColor = BadMovieColor;
+                        else if (iThisResolution == iOtherResolution) cThisFileColor = Color.DarkGray;
+                    }
+
+                    LogMessage("This File", cThisFileColor, sThisFileInfo + "\n" + sThisMediaInfo);
+                    LogMessage("Other File", Color.DarkGray, sOtherFileInfo + "\n" + sOtherMediaInfo);
                 }
                 else
                 {
                     SetStatus("Different File Info for " + fiFile.Name);
-                    sMediaInfo = GetMediaInfo(fiFile.FullName);
+                    sThisMediaInfo = GetMediaInfo(fiFile.FullName);
                 }
 
-                lviThis.ToolTipText = sFileInfo + "\n\n" + sMediaInfo;
+                lviThis.ToolTipText = sThisFileInfo + "\n\n" + sThisMediaInfo;
                 SetListViewChanged( lvThis, true );
             }
         }
@@ -1651,7 +1690,7 @@ namespace Movie_File_Merger {
 					lviImport.BackColor = LowResColor;
 				}
 				else if ( lviExisting != null ) {
- 					lviImport.BackColor = HorizontalResolutionIsHigher ( lviExisting, lviImport ) ? HigherResColor :
+ 					lviImport.BackColor = HorizontalResolutionIsHigher ( lviExisting.ToolTipText, lviImport.ToolTipText ) ? HigherResColor :
 																								ExistingColor;
 				}
 				else {
@@ -1697,8 +1736,8 @@ namespace Movie_File_Merger {
 					lviWish.BackColor = ExistingColor;
 				}
 				if ( lviImport != null ) {
- 					lviImport.BackColor = HorizontalResolutionIsHigher ( lviExisting, lviImport ) ? HigherResColor :
-																								ExistingColor;
+ 					lviImport.BackColor = HorizontalResolutionIsHigher ( lviExisting.ToolTipText, lviImport.ToolTipText ) ? 
+                                                                        HigherResColor : ExistingColor;
 					if ( HorizontalResolutionTooLow ( lviImport ) ) {
 						lviImport.BackColor = LowResColor;
 					}
